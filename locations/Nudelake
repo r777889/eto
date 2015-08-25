@@ -1,0 +1,108 @@
+# Nudelake
+gs'stat'
+
+'<center><b>Nudist beach</b></center>'
+'<center><img src="images/img/Lake/Nudelake.jpg"></center>'
+'Here you can go naked and nobody will condemn.'
+
+if hour >= 6 and hour <= 20:
+	'Here you can <a href="exec:gt''Nudelake'',''zagarat''">sunbathe</a> and <a href="exec:gt''Nudelake'',''swim''">bathe</a>'
+	'And, you can play <a href="exec:gt''Nudelake'',''voleybol''">Beach volleyball</a>'
+end
+
+act 'Go to Main Beach':gt'lake','start'
+
+if katday ! day and kat >= 1:
+	'You see at the beach Cat.'
+
+	act 'To approach the Cat':
+		gt'Katlake','kat'
+	end
+end
+
+if $ARGS[0] = 'voleybol':
+	cls
+	minut += 1
+
+	'<center><img src="images/img/Lake/voleybol.jpg"></center>'
+	'You came to the volleyball court.'
+
+	act 'Watch':gt'Nudelake','smotr'
+	act 'Escape':gt'Nudelake'
+	act 'Play':
+		cla
+		*clr
+		agil += 1
+		react += 1
+		speed += 1
+		minut += 30
+
+		'<center><img src="images/img/Lake/voleybol.jpg"></center>'
+		'You come to play and ask whether it is possible to join, You gladly take the team.'
+
+		act 'Finish':gt'Nudelake'
+	end
+end
+
+if $ARGS[0] = 'zagarat':
+	cls
+	minut += 30
+	sweat = sweat + 1
+	manna = manna + 5
+	gs'stat'
+
+	'<center><img src="images/img/Lake/nudezagarat.jpg"></center>'
+
+	if krem = 0:
+		tan = tan + 1
+
+		'You went to the beach to sunbathe.'
+	elseif krem > 0:
+		krem = krem - 1
+		tan = tan + 3
+
+		'You body is smeared with cream for sunburn and went sunbathing.'
+	end
+
+	nzagrand = RAND(0,100)
+	if nzagrand >= 60 and nzagrand < 70 and kat > 30 and katkey = 0:gt'Katlake','key'
+	if nzagrand >= 70 and nzagrand < 80 and kat = 0 and katday ! day:gt'Katlake'
+	if nzagrand >= 80 and nzagrand < 90:gt'Vnlake1'
+	if nzagrand >= 90:gt'Vnlake2'
+
+	act 'Finish':gt'Nudelake'
+end
+
+if $ARGS[0] = 'swim':
+	cla
+	*clr
+	cumpussy = 0
+	cumbelly = 0
+	cumass = 0
+	cumlip = 0
+	cumface = 0
+	cumfrot = 0
+	minut = minut + 60
+	sweat = -3
+	manna = manna + 5
+	willpower = willpower + 5
+	if stren < 30:stren = stren + 1
+
+	'<center><img src="images/img/Lake/nudeswim.jpg"></center>'
+	'You went to bathe.'
+
+	act 'Finish':gt'Nudelake'
+end
+
+if $ARGS[0] = 'smotr':
+	cls
+	minut += 30
+	gs'stat'
+
+	'<center><img src="images/img/Lake/voleybol.jpg"></center>'
+	'You see how others play.'
+
+	act 'Escape':gt'Nudelake'
+end
+--- Nudelake ---------------------------------
+

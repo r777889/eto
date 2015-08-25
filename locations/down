@@ -1,0 +1,189 @@
+# down
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+palMir = 0
+bordysh = 0
+housrA = 0
+palMir = 0
+obdysh = 0
+tanhouse1 = 0
+obMir = 0
+obLoker = 0
+houseob = 0
+borMir = 0
+borLoker = 0
+gs'dinam'
+gs'stat'
+gs'time'
+
+'<center><b>City center</b></center>'
+if ((month=3 or month=4 or month=5) and hour>=6 and hour<=17) or ((month=6 or month=7 or month=8) and hour>=6 and hour<=19) or ((month=9 or month=10 or month=11) and hour>=6 and hour<=18) or ((month=1 or month=2 or month=12) and hour>=7 and hour<=16):
+	'<center><img src="images/pic/down.jpg"></center>'
+else
+	'<center><img src="images/pic/centern.jpg"></center>'
+end
+
+if shantpopala > 0:
+	cla
+	*clr
+	hour += 8
+	cumbelly += 1
+	cumpussy += 1
+	cumass += 1
+	cumlip += 1
+	cumface += 1
+	cumfrot += 1
+	cumanus += 1
+	fingal += 1
+	guy += 2
+	rape += 1
+	sex += 1
+	bj += 1
+	anal += 1
+	shantpopala -= 1
+
+	'<center><img src="images/img/centr/rape.jpg"></center>'
+	'On the street near you black jeep slows sharply, popping out of it two big boys and dragged you in the car.'
+	'"Your job creation?" shouts one poking you in the nose pictures that you sent yesterday, hoping to profit.'
+	'"No, I do not understand" You tried to justify'
+	'"Do not lie to your bitch calculated" With that, he hits you over the head with the handle and you chop off'
+	'We woke you are somewhere outside the city, related and completely naked, the whole body was covered with sperm vagina and anus with badly hurt.'
+	'Umballa sat nearby and smoked, "On finally woke up, what else Circle, Now flicked, It is fun." He said one of them.'
+	'They got up and came to you, a minute later you regret that woke, these freaks have you as they wanted, You tried to resist but the tape does not allow you to move, soon you lost consciousness again.'
+	'"Well I understood, bitch" You woke up the voice of one of them and immediately got hit in the stomach with a boot. Umballa got into the car and drove away. Before the road was about a hundred meters and you are connected, writhing like a snake crawling towards the road. When you then crawled off again, You woke up to some machine, and that dovezla you home.'
+
+	act 'Escape':gt $curloc
+
+	exit
+end
+
+if hour >= 10 and hour <= 20: temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		minut += 5
+		horny += 20
+		gs'stat'		
+		'<center><img src="images/lmps/downud.jpg"></center>'
+		'You saw how in the middle of town unknown artist shows his art work. On the street walking around Nude and razukrashennye young people  .'
+        'You do not stop for a long time, to stare at this action.'
+            if modelfoto > 0 and bodimodel = 0 and bodimodel1 = 0 or film > 0 and bodimodel = 0  and bodimodel1 = 0: temp = RAND(1,100)
+                if temp >= 90:'You are about to leave, suddenly noticed, that one of the participants left the group and headed in your direction. Walking past the crowd of onlookers, she did not even react to it, that one of the young men touched her by the buttocks, but in the face of everything-as I reflected for a moment contented mine.'
+                    act 'Note':gt 'dibodi','os1'
+
+    act'Escape':gt'down'
+end
+
+if car > 0 and cardrive = 2:
+	cardrive = 2
+
+	'In the parking lot is <a href="exec:GS ''carF'',''start''">your <<$car>></a>.'
+end
+
+if hour >= 8 and hour <= 22:'The stalls sell <a href="exec:dynamic $kiosksig">Cigarettes</a>'
+
+act 'Wait':
+	cla
+	waiting = input ("How many minutes to wait? (Not more 120 minutes)")
+	if waiting <= 0 or waiting > 120:
+		minut = minut + 15
+	elseif waiting > 0 and waiting <= 120:
+		minut = minut + waiting
+	end
+
+	act 'Consult a watch':gt curloc
+end
+
+!gs'taxi'
+
+temp = RAND(1,100)
+if temp >= 90:
+	cls
+	minut += 15
+	horny += 30
+	gs'stat'
+
+	'<center><img src="images/lmps/downud.jpg"></center>'
+	'You have seen how in the midst of the city unknown artist shows his body painting work. Stroll down the street naked and rozukrashennye young people .'
+	'You stopped briefly, to gawk at this action.'
+
+	act 'Further':gt'down'
+end
+
+act 'Taxi':
+	cla
+	*clr
+	minut += 5
+
+	'<center><img src="images/pic/taxi1.jpg"></center>'
+	'You caught a passing taksishku.'
+	'Fare 250 RUB.'
+
+	if $loc ! 'street':
+		act 'Go to the sleeping area':
+			$loc = 'street'
+			dynamic $taxi
+		end
+	end
+
+	if $loc ! 'down':
+		act 'Go to the center':
+			$loc = 'down'
+			dynamic $taxi
+		end
+	end
+
+	if $loc ! 'Nord':
+		act 'Go to the Northern region':
+			$loc = 'Nord'
+			dynamic $taxi
+		end
+	end
+	
+	if $loc ! 'liam':
+		act 'Go to Old Town':
+			$loc = 'liam'
+			dynamic $taxi
+		end
+	end
+
+	act 'Takeout':gt'<<$loc>>'
+end
+
+if tanya > 0 and tanwork = 0 and hour >= 16 and hour <= 21 and tanday ! day: '<a href="exec:gt''tanhouse''">Apartment Thani</a>'
+if tanwork = 1:'<a href="exec:gt''house''">Apartment Thani</a>'
+if izoldaQW >= 1:'<a href="exec:GT ''qwIzoldaApp''">Apartment Isolde</a>'
+if mainQW >= 1:'Secret <a href="exec:GT ''lab'',''start''">Asylum Karina</a>'
+if yaq = 1:'Apartment <a href="exec:GT ''yarik'',''start''">Yaroslav</a>'
+if peter > 0:'Apartment <a href="exec:GT ''peterroom'',''start_door''">Peter</a>'
+if hour >= 9 and hour <= 21:'<a href="exec:minut += 15 & GT ''NewCloShop''">Women`s clothing "Fashion-monger"</a>'
+if hour >= 4 and hour <= 23:'Station <a href="exec:GT ''metro'',''start''">Metro</a> located at 5 walking distance'
+if week >= 4 and hour >= 15:'Fashionable <a href="exec:GT ''club'',''start''">Night club</a> shining lights, attracting young people from all over the city'
+if hour >= 15 or hour <= 2:'Bright <a href="exec:GT ''stripclub'',''start''">Strip Club</a> glittering lights, attracting men from all over the city'
+
+if hour >= 9 and hour <= 20:
+	'In the city center there is a large <a href="exec:gt''torgcentr''">shopping-Entertainment Center</a>'
+	'Popular <a href="exec:GT ''fit'',''start''">Fitness Center</a> in which trained as professional athletes, and wishing to lose weight for beach season'
+	'<a href="exec:GT ''foto'',''start''">Photo Studio</a>'
+	'<a href="exec:GT ''bass'',''start''">Swimming pool</a>'
+end
+
+if hour >= 8 and hour <= 22:'Expensive <a href="exec:GT ''restoran'',''start''">Restaurant</a> around which are luxury cars'
+'Great <a href="exec:GT ''sexshop'',''start''">Sex Toys</a> for perverts all over the city'
+if hour >= 6 and hour <= 23:'Eatery <a href="exec:GT ''burger'',''start''">Bystroeshka</a>'
+if bordel > 0 and hour >= 20 or bordel > 0 and hour <= 3:'In the yards of the entrance to the <a href="exec:GT ''bordel''">brothel</a>'
+if pornstudio >= 1 and hour > 5:'<a href="exec:GT ''pornstudio'',''start''">Studio</a>, which make films for adults'
+if week < 6 and hour >= 7:'Prestigious <a href="exec:GT ''univer'',''start''">University</a> It is the alma mater of almost all the educated people of the city'
+if hour >= 6 and hour <= 23:'University <a href="exec:GT ''dorm'',''start''">Hostel</a> little priglyadnoe, despite the high status of the university'
+if hour >= 9 and hour <= 18:'Primary <a href="exec:GT ''bank'',''start''">Bank</a> in the city'
+if week < 6 and hour >= 8 and hour <= 17:'Biggest <a href="exec:GT ''office'',''start''">Project organization</a> in the city'
+if hour >= 8 and hour <= 18:'<a href="exec:GT ''agentned'', ''start''">Real estate agency</a>'
+
+!if beg >= 50 and begmon ! month and hour >= 6 and hour <= 23:'Go to <a href="exec:GT ''beg1'',''start''">Competitions on the run</a>'
+!end
+
+dynamic $din_street_cum
+
+--- down ---------------------------------
+

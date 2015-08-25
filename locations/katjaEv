@@ -1,0 +1,452 @@
+# katjaEv
+$din_katja_kiss = {
+	act 'Kiss':
+		cls
+		minut += 5
+		manna += 100
+		horny += 10
+		KatjaHorny += 10
+
+		if katjaFirstKiss = 0:
+			katjaFirstKiss = 1
+			KatjaLust = 10
+			KatjaSlut = 10
+			KatjaDom = 50
+			KatjaOTN = 1
+		end
+
+		gs'stat'
+		gs'katjaEvDin'
+		gs'KatjaHomeDin'
+
+		'<center><img src="images/qwest/alter/katja/kiss.jpg"></center>'
+		'You have brought her face to face, and Kate felt her hot breath on his lips. Kate closed her eyes and touched his lips to your lips. In your mouth penetrated nimble tongue Katie that you have started to suck round, then your tongue entered Katin`s mouth and she very gently caressing it with his tongue and sucked. Finally Katya pushed you to your flushed face and licked.'
+
+		if KatjaHorny >= 75:
+			'Kate held out her stick to your chest and gently stroked her finger.'
+
+			act 'Touching breasts':
+				cls
+				minut += 5
+				horny += 10
+				KatjaHorny += 10
+				KatjaLust += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/katja/touch.jpg"></center>'
+				'You touched the tender breasts Katie Kate took a deep breath and biting her lip.'
+
+				katjalustrand = RAND(0,30)
+				if KatjaLust < katjalustrand:
+					'You`re a little touched the breast of each other and Kate moved away from you.'
+
+					act 'Further':gt'KatjaHomeTalk'
+
+					if dom > 0:
+						act 'Grab it':
+							cls
+							minut += 5
+							horny += 10
+							dom -= 1
+							KatjaDom -= 5
+							KatjaHorny -= 10
+							KatjaLust += 1
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/katja/grab.jpg"></center>'
+							'You caught Katya without letting it wriggle.'
+
+							if dom < KatjaDom:
+								'Katya firmly took your hands and removed them from themselves, allowing you to understand, that you have already completed.'
+
+								act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+							else
+								'Kate stopped in your hands, while you stroke her body and kissed her neck.'
+
+								act 'Lick her breasts':
+									cls
+									minut += 5
+									horny += 10
+									KatjaDom -= 1
+									KatjaHorny += 10
+									KatjaLust += 1
+									gs'stat'
+
+									'<center><img src="images/qwest/alter/katja/tits.jpg"></center>'
+									'You got big but not strong chest Katie out of their clothes and began to lick his tongue. Kate closed her eyes with pleasure and bit her lip.'
+
+									if npcSex[14] = 0:
+										'After a while, Kate removed your hands from himself.'
+										act 'Further':gt'KatjaHomeTalk'
+									elseif npcSex[14] > 0:
+										dynamic $d_katja_sex
+									end
+								end
+							end
+						end
+					end
+				else
+					'Katya started stronger stroking your chest and you feel it takes your bra trying to get to your breasts.'
+
+					act 'Allow it':
+						cls
+						minut += 5
+						horny += 10
+						KatjaDom += 1
+						KatjaHorny += 10
+						KatjaLust += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/katja/tits.jpg"></center>'
+						'Kate bared your breasts and touched her with his fingers, then she bowed her head and began to lick your nipple.'
+
+						if npcSex[14] = 0:
+							'Lick your breasts while Kate stood up and turned away started to clean the room.'
+
+							act 'Further':gt'KatjaHomeTalk'
+						elseif npcSex[14]>0:
+							dynamic $d_katja_sex
+						end
+					end
+					act 'Remove her hands':
+						cls
+						dom += 1
+						minut += 5
+						horny += 10
+						KatjaDom -= 1
+						KatjaHorny -= 10
+						KatjaLust += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+						'You removed her hands and smiled cheerfully Katya.'
+
+						act 'Further':gt'KatjaHomeTalk'
+					end
+				end
+			end
+		else
+			'Kate turned and began to collect books pretending, that there was nothing.'
+
+			act 'Say goodbye and go home':gt'gorodok'
+		end
+	end
+}
+
+katjaMeynoldday = day
+gs'stat'
+gs'KatjaHomeDin'
+gs'katjaEvDin'
+
+'<center><b><font color = maroon><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+'Kate looks at you smiling. "Light, go to my, together we`ll learn lessons."'
+
+if fedorKozlovQW >= 10:
+	'To you and Katya fits Fedor. "Hi girls, that they have devised?" Katya said, embarrassed "Here we want to go together to teach lessons. "Fyodor thought a lot and said, "Well. Then, prior to the meeting." Then he turned and walked away.'
+end
+
+'KatjaLust - <<KatjaLust>>'
+'KatjaSlut - <<KatjaSlut>>'
+'KatjaDom - <<KatjaDom>>'
+'KatjaMastr - <<KatjaMastr>>'
+
+act 'Say goodbye and go home':gt'gorodok'
+
+act 'Go with Kate':
+	cls
+	minut += 15
+	manna += 100
+	gs'stat'
+
+	'<center><b><font color = maroon><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
+	'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+	'You walk through the streets of the town, along with Kate to her house. You and chatted about all sorts of trivia and have fun.'
+
+	if albinaQWdance > 0 and AlbinaBlokDance = 0:'Katya keen interest how are you doing with Zvezdushkami. In her opinion it is a very closed team, roam the city very different rumors about the team of Albina.'
+	if kotovLoveQW > 0:'Kate asks you about your relationship with Vityok Kotov, simultaneously expressing an opinion about it. According to her Vitek rough and he is a true bandit.'
+
+	if pirsA = 1 and KatjaKnowPirsA = 0:
+		KatjaKnowPirsA = 1
+		KatjaLust += 5
+
+		'Kate noticed you have a pierced tongue and chattered all the way to finding out you details.'
+	end
+
+	'Finally you come to her house. Private, two story house, with attached garage and a fairly large garden gives the impression of grooming and order. Kate shows you the way to your room'
+
+	act 'Go into the room Katie':
+		cls
+		minut += 15
+		manna += 100
+		gs'stat'
+
+		'<center><b><font color = maroon><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
+		'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+		'The room Katya did not quite clean and range are her things. Katya throws his backpack on the floor and pulls textbooks and notebooks.'
+
+		act 'Engage with Katya':
+			cls
+			minut += 30
+			grupNPC[14] += 10
+			lernHome = 0
+			lern += RAND(2,4)
+			intel += RAND(0,1)
+			katjaLernTimes += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+			'In half an hour, what you are doing with Kate, you are fully learned the lessons learned and pretty good stuff.'
+
+			if katjaLernTimes >= 10:
+				katjaLernQW += 1
+
+				if katjaLernQW < 5:
+					katrand = RAND(0,3)
+					if katrand = 0:'You will notice that Kate stares you in the eye, as if to, something to ask, but turns.'
+					if katrand = 1:'You will notice that Kate blushed and turned away from you.'
+					if katrand = 2:'Kate accidentally puts his palm on your knee, then quickly removes her.'
+					if katrand = 3:'Kate smiles at you completely stupid smile, then turns.'
+				elseif katjaLernQW = 5:
+					'Kate thinks about something, then embarrassed and blushing asks you "Light, and you have kissed boys?"'
+
+					act 'Yes':
+						cls
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+						'You smiled at Kate and said,, which of course you are kissing boys. Katya shy even stronger. "You see the Light, I like a guy, he`s my senior, and I`m afraid, that when we start kissing, I will do, Is there something wrong. Could you teach me how to kiss?"'
+
+						dynamic $din_katja_kiss
+
+						act 'No':
+							cls
+							katjaLernQW = 0
+							katjaLernTimes = 1
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+							'You refused to kiss with Kate and she was mad at you.'
+
+							act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+						end
+					end
+					act 'No':
+						cls
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+						'You shook his head and said,, not kissing. Katya shy even stronger. "You see the Light, I like a guy, he`s my senior, and I`m afraid, that when we start kissing, I will do, Is there something wrong. Maybe we could try to kiss, that to learn?"'
+
+						dynamic $din_katja_kiss
+
+						act 'No':
+							cls
+							katjaLernQW = 0
+							katjaLernTimes = 1
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+							'You refused to kiss with Kate and she was mad at you.'
+
+							act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+						end
+					end
+
+					exit
+				elseif katjaLernQW >= 6:
+					katjaDeystRand = RAND(0,2)
+					if katjaDeystRand = 0:
+						dynamic $d_katjahornykiss
+
+						act 'Say goodbye and go home':minut += 15 & KatjaHorny -= 5 & gt'gorodok'
+
+						exit
+					elseif katjaDeystRand = 1:
+						if npcSex[14] = 1:
+							'Kate offered you a walk in the park.'
+
+							act 'Go to the park':
+								minut += 15
+								KatjaHorny += 5
+								$ev_name = 'Katya'
+								$ev_name_a = 'Katya'
+								$ev_name_om = 'Katya'
+								dick = 0
+								place = 1
+								Frend_num = 14
+								p_lust = KatjaLust
+								p_slut = KatjaSlut
+								p_dom = KatjaDom
+								p_horny = KatjaHorny
+								p_alko = 0
+								gt'placer'
+							end
+
+							act 'Renounce and go home':minut += 15 & KatjaHorny -= 5 & gt'gorodok'
+
+							exit
+						elseif npcSex[14] = 0:
+							KatjaHorny += 5
+							KatjaLust += 1
+
+							'Katya started talking about boys, cosmetics and school with you.'
+
+							act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+						end
+					elseif katjaDeystRand = 2 and sweat > 0:
+						'Kate wrinkled her nose "Sveta, you`re all sweaty, go to the shower?"'
+
+						act 'Walk in shower':
+							cls
+							minut += 15
+							gs'stat'
+
+							if KatjaHorny >= 50:
+								'Kate take you to the showers. She blushed and said, "I, too, that the sweat, Come join Pomo."'
+
+								act 'Wash one':
+									cls
+									dynamic $showerdin
+									minut += 15
+									horny = horny + 1
+									hapri = 1
+									mop = 1
+									sweat = -3
+									if frost > 0:frost = 0
+									gs'stat'
+
+									'<center><img src="images/pics/dush.jpg"></center>'
+									'You kicked out of the shower and Kate closed the door. You got into the shower and began to lather his body sponge. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
+
+									act 'Exit out of the shower':
+										cls
+										gs'stat'
+
+										'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+										'You came out of the shower and walked into the room to Katya. You have chatted and Katya said, that her case.'
+
+										act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+									end
+								end
+								act 'Wash together':
+									cls
+									dynamic $showerdin
+									minut += 15
+									horny = horny + 1
+									hapri = 1
+									mop = 1
+									sweat = -3
+									if frost > 0:frost = 0
+									horny += 10
+									KatjaHorny += 10
+									KatjaLust += 1
+									gs'stat'
+
+									'<center><img src="images/qwest/alter/katja/shower.jpg"></center>'
+									'You undressed and together with Kate climbed into the shower.'
+
+									if lobok <= 0:
+										'Katie`s eyes slid over your body a little lingering on your breasts and pussy. Kate took a shower in his hands and began to pour you.'
+
+										act 'Further':
+											cls
+											gs'stat'
+
+											'<center><img src="images/qwest/alter/katja/shower2.jpg"></center>'
+											'Kate gently shampooed your gel and rinse with warm shower jets.'
+
+											if KatjaLust >= 10 and KatjaHorny >= 90:
+												'Kate washed the soap from your pussy and her breasts with gentle stroking his little palms. Her cheeks were flushed and her eyes glistened.'
+
+												dynamic $katja_shower_kiss
+											else
+												'Finally Kate finished you wash and pomylas itself.'
+
+												act 'Exit out of the shower':
+													cls
+													gs'stat'
+
+													'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+													'You came out of the shower and walked into the room to Katya. You have chatted and Katya said, that her case.'
+
+													act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+												end
+											end
+										end
+									elseif lobok > 0:
+										'Katie`s eyes slid over your body a little lingering on her breasts and pubic hair. Kate smiled "Svetulya, you got such vegetation, it is no longer fashionable, I`ll let your hair sbreyu."'
+
+										act 'Shaving the hair between her legs':
+											cls
+											minut += 5
+											lobok = -3
+											KatjaHorny += 10
+											KatjaLust += 1
+											gs'stat'
+
+											'<center><img src="images/qwest/alter/katja/lobok.jpg"></center>'
+											'Kate sat in the bathroom and you lathered your crotch passing lathered his stomach and chest. She took a razor and began to gently shave your hairs between her legs.'
+
+											if KatjaLust >= 10 and KatjaHorny >= 90:
+												'Kate washed the soap from your pussy and her breasts with gentle stroking his little palms. Her cheeks were flushed and her eyes glistened.'
+
+												dynamic $katja_shower_kiss
+											else
+												'Finally Katya all shaved your hair between her legs and began to wash off the soap with you.'
+
+												act 'Exit out of the shower':
+													cls
+													gs'stat'
+
+													'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+													'You came out of the shower and walked into the room to Katya. You have chatted and Katya said, that her case.'
+
+													act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+												end
+											end
+										end
+									end
+								end
+							elseif KatjaHorny < 50:
+								dynamic $showerdin
+								minut += 15
+								horny = horny + 1
+								hapri = 1
+								mop = 1
+								sweat = -3
+								if frost > 0:frost = 0
+								gs'stat'
+
+								'<center><img src="images/pics/dush.jpg"></center>'
+								'Kate showed you where the toiletries and came out of the shower. You got into the shower and began to lather his body sponge. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
+
+								act 'Exit out of the shower':
+									cls
+									gs'stat'
+
+									'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+									'You came out of the shower and walked into the room to Katya. You have chatted and Katya said, that her case.'
+
+									act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+								end
+							end
+						end
+
+						act 'Renounce and go home':minut += 15 & KatjaHorny -= 5 & gt'gorodok'
+
+						exit
+					elseif katjaDeystRand = 2 and sweat <= 0:
+						dynamic $d_katjaSextalk
+
+						exit
+					end
+				end
+			end
+
+			act 'Say goodbye and go home':minut += 15 & gt'gorodok'
+		end
+	end
+end
+--- katjaEv ---------------------------------
+

@@ -1,0 +1,35 @@
+# TimofeiMetro
+minut += 1
+sosedMetroDay = day
+gs'stat'
+
+!'<center><img src="images/qwest/sosed.jpg"></center>'
+'Timothy saw you and said hello "Hello World."'
+if cumfrot = 0 and cumface = 0 and sosedSlut = 0:'You chatted with Timothy until rode the subway.'
+
+if sosedSlut = 1:
+	'After greeting Timothy his whole appearance shows that he is not interested in your further communication.'
+elseif sosedSlut = 0:
+	if cumfrot > 0 or cumface > 0:
+		sosedSlut = 1
+
+		if cumface > 0:
+			'He puzzled look on your face. "Light, Your face is somewhat smeared." He looked at you, and after a moment he realized, that you cum on her face. "What`s this? Sperm?"'
+		else
+			'He began to talk to you have fun, then suddenly noticed semen on your clothes, His eyes widened considerably "What`s this? Sperm?"'
+		end
+
+		act 'Excuse':
+			cls
+			gs'stat'
+
+			'You began to make excuses, claiming that it is all an accident and you are absolutely innocent. But Timothy frankly do not believe you and listens to you without interest.'
+
+			act 'Get out of the car':gt'metro','start'
+		end
+	end
+end
+
+act 'Get out of the car':gt'metro','start'
+--- TimofeiMetro ---------------------------------
+

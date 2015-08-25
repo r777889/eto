@@ -1,0 +1,10 @@
+# ira
+cls
+minut += 5
+gs'stat'
+'<center><b><font color = maroon>Ira</font></b></center>'
+'<center><img src="images/qwest/alter/sisterQW/ReksHome/Ira.jpg"></center>'
+'Constantly embarrassing Ira'
+act 'Move away':gt'sbReksHome','party_home'
+--- ira ---------------------------------
+

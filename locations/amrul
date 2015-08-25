@@ -1,0 +1,37 @@
+# amrul
+clr
+minut = minut + 5
+kh = 0
+chnch = 0
+mb = 0
+du = 0
+series = 0
+Chi = 100
+x_rul = 100
+gs'stat'
+
+'<center><img src="images/casino/amrul.png"></center>'
+'You bent over the table.'
+
+act 'Place bet':
+	st_1 = input 'Enter the amount'
+	if money < st_1:
+		msg 'You do not have the money'
+		gt'roulette'
+	elseif st_1 < 0:
+		msg 'Wrong, try again'
+		gt'amrul'
+	elseif st_1 > 1000:
+		msg 'Maximum rate 1000 rubles'
+		gt'amrul'
+	end
+
+	money = money-st_1
+
+	gt'rate'
+end
+act 'Move away from the table':
+	gt'roulette'
+end
+--- amrul ---------------------------------
+

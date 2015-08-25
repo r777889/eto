@@ -1,0 +1,35 @@
+# qwloc2
+gs'stat'
+
+'You raised a tube and a male voice said, "Hello World, This Vladimir, Remember we are not met for a long time in the park?"'
+
+act 'Hello, of course I remember':
+	cla
+	vladimirQW = 21
+
+	'(You) - Hello, of course I remember.'
+	'(Vladimir) - My suggestion is to go to the restaurant is still in force. As you look at it?'
+
+	act 'Oh, I have a lot to do, Today I can not get':
+		cla
+		vladimirQW = 20
+		vladimirday = day
+
+		'(You) - Oh, I have a lot to do, I just can not segdnya.'
+		'(Vladimir) - Okay. Then I`ll call you tomorrow 4 evening.'
+
+		act 'Hang up':gt'korr'
+	end
+	act 'I`m not against':
+		cla
+		vladimirQW = 21
+		vladimirday = day
+
+		'(You) - I`m not against.'
+		'(Vladimir) - Great. Then come to the restaurant in 20 hours.'
+
+		act 'Hang up':gt'korr'
+	end
+end
+--- qwloc2 ---------------------------------
+

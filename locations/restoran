@@ -1,0 +1,139 @@
+# restoran
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><b><font color = maroon>Restaurant</font></b></center>'
+	'<center><img src="images/pic/restoran.jpg"></center>'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	!eto It was glamur > 1 and vnesh > 50
+	if glamur >= 1 and mop > 1 and hapri = 1 and sweat <= 0:
+		'The man at the entrance politely interested in a table you prefer VIP room or in the common room'
+
+		if money >= 5000:
+			act 'VIP hall (5 th.RUB)':
+				cla
+				money = money - 5000
+				gt'restoran','vip'
+			end
+		end
+
+		act 'Shared room':gt'restoran','zal'
+	else
+		'To a man for you, and politely tells you, that looks like a restaurant can not.'
+	end
+
+	act 'Exit Restaurant':
+		cla
+		minut = minut + 5
+		gt'down'
+	end
+
+	if vladimirday = day and vladimirQW = 21 and hour = 20:gt'qwmeet'
+end
+
+if $ARGS[0] = 'zal':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Restaurant, common room</font></b></center>'
+	'<center><img src="images/pic/restoran2.jpg"></center>'
+	'The room is quite nice atmosphere. Soft lighting and light furniture. Until you hear the sound of music, the clink of glasses and women`s laughter. You seem, lastly, You can relax a bit.'
+
+	!etogame
+	nastjarand = RAND(0,100)
+	if nastjarand > 80 and nastjaQW = 0 and energy > 15 and nastjaday ! day:
+		cls
+		nastjaday = day
+		gs'stat'
+
+		'<center><img src="images/etogame/nastja1.jpg"></center>'
+		'In the hall you will notice a pretty girl, I wonder why she sits alone. She is quite pleasant appearance. While you looked at the beautiful stranger, she caught your eyes on her, and suddenly looked at you.'
+
+		act 'Downcast eyes':
+			cla
+			'She turned away'
+
+			act 'Escape':gt'restoran','zal'
+		end
+		act 'Smile it':gt'nastja','pos1'
+	end
+
+	if money >= 5000:
+		act 'Eat (5 th.RUB)':
+			cla
+			minut = minut + 60
+			energy = 22
+			fat += 5
+			water = 22
+			willpower += 30
+			manna = manna+80
+			health = health+20
+			money -= 5000
+			gs'stat'
+
+			'On the recommendation of the chef, you ordered a wonderful meal and happily ate in a noisy dining room.'
+
+			act 'Escape':gt'restoran','zal'
+		end
+	end
+
+	act 'Escape':minut = minut + 5 & gt'restoran','start'
+end
+
+if $ARGS[0] = 'vip':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Restaurant, VIP hall</font></b></center>'
+	'<center><img src="images/pic/restoran3.jpg"></center>'
+	'Caught in vip bed you, I caught myself thinking, that involuntarily smile. In the box calm, pleasant atmosphere. Soft lighting and furniture in the Empire style. You hear light music. Lastly, Your new weak female essence, though not for long, but can feel safe.'
+
+	if money >= 5000:
+		act 'Eat (5 th.RUB)':
+			cla
+			minut = minut + 60
+			energy = 22
+			fat += 5
+			water = 22
+			willpower += 30
+			manna = manna+100
+			health = health+20
+			money -= 5000
+			gs'stat'
+
+			'On the recommendation of the chef, you ordered a wonderful meal and happily ate in the cozy vip the restaurant.'
+
+			act 'Escape':gt'restoran','vip'
+		end
+	end
+
+	act 'Escape':
+		cla
+		minut = minut + 5
+		gt'restoran','start'
+	end
+end
+--- restoran ---------------------------------
+

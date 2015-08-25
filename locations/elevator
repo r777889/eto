@@ -1,0 +1,24 @@
+# elevator
+act 'Return':
+	gt'hotel'
+end
+act 'Go to your room':
+	msg 'Sorry, but the elevator is not working'
+	gt'elevator'
+!'
+	if nomer = 0:
+		msg 'You have not paid for this hotel'
+		gt'elevator'
+	elseif nomer = 1:
+		gt'number1'
+	elseif nomer = 2:
+		gt'number2'
+	elseif nomer = 3:
+		gt'number3'
+	elseif nomer = 4:
+		gt'number4'
+	end
+'
+end
+--- elevator ---------------------------------
+

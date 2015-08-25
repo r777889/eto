@@ -1,0 +1,440 @@
+# vokdinvera
+$d_vokzal_vera_talk = {
+	verarand = RAND(0,1)
+	if verakassir = 3 and hour >= 8 and hour <= 20 and verarand = 0:
+		'Near the window a woman smokes in which you will learn cashier Faith.'
+
+		act 'Chat with the cashier':
+			cls
+			!verakassir = 3
+			minut += 5
+			gs'stat'
+
+			'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+
+			if verafrend > 0:
+				verafrend += 1
+
+				'You came to greet her and Faith. Gradually, you began to talk, and you talked with Vera on various topics.'
+
+				veratalkrand = RAND(0,3)
+				if veratalkrand = 0:
+					'Suddenly your conversation flowed smoothly in no great controversy.'
+
+					act 'Establish one`s case':
+						cls
+						dom += 1
+						minut += 5
+						verafrend -= 1
+						gs'stat'
+
+						'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+						'You rushed to prove their case and Faith in a few minutes Vera waved, "Oh, okay something else to argue. As you say."'
+
+						act 'Escape':minut += 1 & gt'vokzalGin'
+					end
+					act 'Agree with Vera':
+						cls
+						sub += 1
+						minut += 5
+						verafrend += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+						'You have decided not to argue with faith and agree with it.'
+
+						act 'Escape':minut += 1 & gt'vokzalGin'
+					end
+
+					exit
+				end
+
+				if verafrend >= 40:
+					if veratalkrand = 1:
+						horny += 10
+
+						'Faith today that it sold out and began to talk about their boyfriends, who were her husband before.'
+
+						if verafrend >= 50:
+							act 'Interested in the details':
+								cls
+								minut += 5
+								horny += 10
+								gs'stat'
+
+								if veraendtalker = 1:
+									veraboyrand += 1
+									if veraboyrand >= 9:veraendtalker = 2
+								elseif veraendtalker = 0:
+									veraendtalker = 1
+									veraboyrand = 0
+								elseif veraendtalker = 2:
+									veraboyrand = RAND(0,8)
+								end
+
+								 if veraboyrand > 8:
+								 '<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+								 'Faith shrugged, Yes, more and there is nothing to tell. I live with my husband, and I feel like virginity slowly coming back to me.'
+								 act 'Escape':minut += 1 & gt'vokzalGin'
+								 end
+								 if veraboyrand <0:
+								 '<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+								 'Faith shrugged, nikchemu stir up the past.'
+								 act 'Escape':minut += 1 & gt'vokzalGin'
+								 end
+
+								if veraboyrand = 0:
+									'<center><img src="images/qwest/vokzal/bvtalk0.jpg"></center>'
+									'Faith says "The first time I was with an adult man, when I was 14 years. I`m born in the village, she know, on one side of the village pernesh, on the other hear, so I did not meet with the local guys. So one day in the village came one adult man, an expensive car, he himself of all such, white trousers. We met, He invited me to his, drinking martinis. I hung up the ears of a fool, and went to him. He really made me drunken martini. Not that I would have drunk, In those days I could calmly drink grams 300 moonshine, but then softened. In general, we started kissing, then he undressed me, I began to lick his chest. It was just fucking nice. And then suddenly bam! It sticks in my own process. It was painful, certainly bearable, but for girls who did not even really knew nothing about sex it was just a shock. I lie under what is a man, with legs, He sweats and romping on me, between the legs dull, throbbing pain. Then he pulls out his hell out of me and cums on my stomach. And here I lie naked, smeared in his stinking slime, from the blood of tortured pussy, and he says to me that I log. Well, you can just ohrenet. I turns out to log and failed to meet his majesty. This stupid kid did not even realize, that he had just robbed me of my innocence. In short, I sent him to the dick and more to him is not met. Well, at least no one would know about it in the village of my adventure. It was terrible just before the horror, there was a feeling after deprivation of virginity, that everything is up to date. I am a month from people hid and did not go for a walk, I was so ashamed."'
+
+									act 'Escape':minut += 1 & gt'vokzalGin'
+								elseif veraboyrand = 1:
+									'<center><img src="images/qwest/vokzal/bvtalk1.jpg"></center>'
+									'Faith says "After his first experience and I look at the guys did not want to. But 17 years, I graduated from high school and went to the city. I even managed to go to college. There I met Oleg undergraduate, all such inflated guy, just like Schwarzenegger. Athlete, Master of Sports in cycling. That I`ll never know how he was able to afford a bicycle frame pump. He invited me to the cafe, we were there having fun and drinking. Oleg suggested to go to it. Well, not that I did not understand, that he should, but as it is not believed, that before this can reach. In general, I agree, we went to it. There`s still drank champagne, We started kissing. He stroked my chest and it was very nice. I myself did not understand what I was doing put his hand on his pants, He is stroking his dick, Then he took it, and for the first time in his life took in the mouth. I sat on his haunches, He sucked his cock and caressed between his legs. And you know what? I for the first time was so good, I began to spit on all. The guy was good, I was also good, what else does it?"'
+
+									act 'And what happened next?':
+										cls
+										minut += 5
+										horny += 10
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/bvtalk11.jpg"></center>'
+										'Vera continued "Oleg turned me and I leaned, He took off my skirt and panties and entered me. Unlike my first time it was fucking, I squealed with delight fingering ass on his cock. And here I was covered! It was such an orgasm, which I have never in my life have been, I almost fainted. When the ability to think back to me, Oleg had finished and my ass was covered with his sperm. I went on padded feet wash. He carried me to the hostel and all the. The more we have not met with him. I tried to stick to it, but he just waved me. From the other girls I knew, that he began to consider me whore. I went to say fuck with a guy, which the first time in his life met, I suck it, and then I ended up on his penis."'
+
+										act 'Are you really the one to blame':
+											cls
+											dom += 1
+											minut += 5
+											verafrend -= 1
+											gs'stat'
+
+											'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+											'You said that the Faith itself to blame, what faith a little irritably replied "As if I do not know. She jumped on a guy dick, That ogrebla."'
+
+											act 'Escape':minut += 1 & gt'vokzalGin'
+										end
+										act 'Yes, he`s just a goat':
+											cls
+											sub += 1
+											minut += 5
+											verafrend += 1
+											gs'stat'
+
+											'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+											'You cheered Faith saying that this kid just Oleg. She sighed sadly "Well yes, goatskins still the."'
+
+											act 'Escape':minut += 1 & gt'vokzalGin'
+										end
+									end
+								elseif veraboyrand = 2:
+									'<center><img src="images/qwest/vokzal/bvtalk2.jpg"></center>'
+									'Faith says "After I met with Oleg Lehoy. Cool guy Laban guitar. Also I lived in a hostel. We had met several times, We are walking together. It is not really insisted on having sex and not much molested me. Over time, I relaxed and we like that drunk as hell in his room. Vyzhrat two boxes screwdriver. And it was all over the bed. No, we did not have sex, and he did not even fucked me, He fought me like a cat. I just whined nails clutching the sheet. It was a strange sensation, pain and pleasure and a sense of, that I simply enjoyed as a piece of meat, spit on me, but I like it. This bastard finished right at me and began to snore on my back. I barely managed to get out from under its carcass. I got dressed and left offended him."'
+
+									act 'You might like this?':
+										cls
+										dom += 1
+										minut += 5
+										verafrend -= 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You said indignantly "You might like this?", what faith a little irritably replied "Well yes. I know that was his only hole, but I do not know why I have a factory."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+									act 'Yes, he`s just a goat':
+										cls
+										sub += 1
+										minut += 5
+										verafrend += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You cheered Faith saying that this kid just Lech. She sighed sadly "Well yes, goatskins still the. I took advantage of a defenseless girl."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+								elseif veraboyrand = 3:
+									'<center><img src="images/qwest/vokzal/bvtalk3.jpg"></center>'
+									'Faith says "I have long ignored Lech, although he molested me and now met another guy in the club. Uh, I do not remember his name, I met him for the first time in my life and the last. I got drunk trying to forget Lech, but he did not go out of my head. And then the guy turned up pretty. He molested me and paw, and suddenly out of the blue. He invited me to go with him to the toilet. I`ve wanted to call him in the face, and then I thought, some own features? Why no? So I went with him to the bathroom and suck it, while fondling her pussy. When he began to cum in my mouth, I covered the orgasm itself. It was nice, he had gone out of the booth, and I was still sitting on the floor with his face smeared semen and depart from orgasm. Then of course I was ashamed of his behavior, but what really. What do you think, I acted like a slut?"'
+
+									act 'Of course! You also vaflersha!':
+										cls
+										dom += 1
+										minut += 5
+										verafrend -= 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You said indignantly "Of course! You`re not just a slut and you`re still vaflersha!", what faith a little irritably replied "Well, I like to suck dicks! I even finish on this, if you still caress yourself. What is wrong?"'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+									act 'Come on, you just have fun':
+										cls
+										sub += 1
+										minut += 5
+										verafrend += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You cheered the Faith said that she was just having fun. She smiled at you "Well, at least someone understands it. Well, I like to suck dicks, I did finish on this, If caresses herself. Nothing is wrong with that."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+								elseif veraboyrand = 4:
+									'<center><img src="images/qwest/vokzal/bvtalk4.jpg"></center>'
+									'Faith says "After the incident at the club, I decided to give a second chance to Lech and we began to meet again. But he is such a person, until the case came to sex it is quite good-natured and funny guy, but when it comes to bed, it becomes a real animal. One day when we were fucked, and we had started to do it almost every day, He began to massage my ass. I tried to resist, but he laid them on my resistance with the device. So I lost a Lekha and anal virginity. At first it hurt. But Lech pecked me in the ass every day and already I`m used to. By, is no risk to fly and I could relax during sex. I even began to cum during anal caressing between her legs."'
+
+									act 'Anal? Phew! It`s disgusting!':
+										cls
+										dom += 1
+										minut += 5
+										verafrend -= 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You said indignantly "Anal? Phew! It`s disgusting!", what faith a little irritably replied "Come on, I also found a hypocrite."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+									act 'Cool!':
+										cls
+										sub += 1
+										minut += 5
+										verafrend += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You cheered Faith saying that it`s even fun. She smiled at you "Well, at least someone understands it. Popa stretched and took a member of the already without tension. I even get an orgasm, what else does it?"'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+								elseif veraboyrand = 5:
+									'<center><img src="images/qwest/vokzal/bvtalk5.jpg"></center>'
+									'Faith says "Once again we booze with Lekha in his room, but this time invited Lech neighbor. I have the time to become accustomed to sex and sat grim, understanding that sex today bummer, Lech suddenly invited me to suck him right in front of his friend. She know, I have my eyes on five kopecks began his offer, Lech but was not joking, He even pulled out his penis. I sighed and tried not to look at his friend, he began to suck. His friend watched a bit of this and invited him to join Lech. I shoved the second term under the nose, I began to suck already have two. Strange feeling to handle two members. Then Lech put me with cancer and began to fuck while I sucked his friend. After that we have already met in the main three I have tried them all. And double penetration, together and fuck me in the ass, and ended on my face. Leszek me then I said again, Do not fight nature, Understand, you whore, There is nothing wrong. This lasted until 4of course. Lech was on course older and graduated. He left for English, without saying goodbye, and I never saw him again."'
+
+									act 'Oh my God! You really damn!':
+										cls
+										dom += 1
+										minut += 5
+										verafrend -= 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You said indignantly "Oh my God! You really damn!", what faith a little irritably replied "Well, I liked Leszek, with him was a pleasure, and his friend for me was a kind of appendage to Leshke and nothing more."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+									act 'Cool!':
+										cls
+										sub += 1
+										minut += 5
+										verafrend += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You cheered Faith saying that it`s even fun. She smiled at you "Well, at least someone understands it. The two guys at the same time it is certainly a little napryazhno, but still it can not be compared with one."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+								elseif veraboyrand = 6:
+									'<center><img src="images/qwest/vokzal/bvtalk6.jpg"></center>'
+									'Faith says "After Leszek left me, I was not myself, I cried into my pillow at night and was ready for him to flee to the edge of the world. I myself is not understood, how I love him really. But running was not much, I have no idea where it went. I decided to find a new boyfriend, and found. Also called Lesco, but he was a firefighter, serious guy with great prospects. I`m cool with it screwed. All went well, until one day I myself a fool not invited him to anal sex and licked his cock after that. Then he can say opened my eyes, before that I was for him a young girl, but it turned out, I have experience already through the roof. We parted after that not even quarreled, but I saw in his eyes."'
+
+									act 'Oh my God! You really damn!':
+										cls
+										dom += 1
+										minut += 5
+										verafrend -= 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You said indignantly "Oh my God! You really damn!", what faith a little irritably replied "Well, I`m just fucking three years with two guys, Besides fucking in all the, I just have got used to everything, and my new guy was not ready."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+									act 'He still does not fit you':
+										cls
+										sub += 1
+										minut += 5
+										verafrend += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You cheered Faith saying what he had still not approached. She smiled at you "Well, at least someone understands it. I fucked three years with two guys at once, Besides fucking in all the, I just have got used to everything, and my new guy was not ready."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+								elseif veraboyrand = 7:
+									'<center><img src="images/qwest/vokzal/bvtalk7.jpg"></center>'
+									'Faith says "After I screwed up big for a firefighter, I decided not to repeat their mistakes, and become acquainted with the new guy Sasha, I have carefully from itself writhes naive girl, for which something other than missionary position is a perversion. And you know? It rolled. My new boyfriend Sasha was so proud of myself when I first agreed to breaking blowjob. I honestly was funny from it all. I could swallow its segment together with eggs, and I had to pose themselves from the girl pretending to play the virgin and embarrassed. Since I graduated from college and Sasha asked me to marry him. And you know? I refused. Tired of it to me worse than a bitter radish, fed up with all this silly game, but to open the map and show him all what I can be ashamed and I just threw it."'
+
+									act 'Well, nothing! Good guy':
+										cls
+										dom += 1
+										minut += 5
+										verafrend -= 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You said indignantly "Well, nothing! Good guy", what faith a little irritably replied "Well, I did not like it. The bed was just a quiet horror, just lick his cock and fucking, flowed molofya. Thirty seconds to pull on me and everything, finished. Still licking and licking between my legs, just one more hole is not creeping. I am a member I want to feel inside, rather than licking."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+									act 'He still does not fit you':
+										cls
+										sub += 1
+										minut += 5
+										verafrend += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You cheered Faith saying what he had still not approached. She smiled at you "Well, at least someone understands it. I fucked three years with two guys at once, Besides fucking in all the, I just have got used to everything, and my new guy was not ready."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+								elseif veraboyrand = 8:
+									'<center><img src="images/qwest/vokzal/bvtalk8.jpg"></center>'
+									'Faith says "After I graduated from college and broke up with Sasha, I stood in front of the selection or to return to his village and there is a cow tails twist to the death or the need to settle in the city. Male me fatally unlucky, luck turned away from me and then I made a very great folly. I decided to have sex for money. Yes Yes. I became a prostitute. I thought a little bit Lift, I earn some money and then throw. Aha, right now. I got into a good stupid trap, I took his passport and lived in a brothel where I even could not get out of cigarettes. And is served by several people a day, sometimes carried on Saturdays, where bandyuki let me around and had fun poking me in the ass and the bottle vagina. I would have died somewhere or they would have killed me bandyuki played enough with me. But I was lucky, ottarabanil year whore, our brothel covered cops. I sat a little in the remand prison, but the court only gave me a fine and was released. The accumulation of money, I had not so much. I went to the provincial town and bought a room here. Then he found a guy and married him to himself."'
+
+									act 'Prostitution? It`s fucked up! How can you?':
+										cls
+										dom += 1
+										minut += 5
+										verafrend -= 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You said indignantly "Prostitution? It`s fucked up! How can you?", what faith a little irritably replied "I was just lazy fool, who thought, her by a pussy that can conquer the world, my life has put in place, and I`m glad, that all ended well, It could be worse."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+									act 'Well, it`s already in the past':
+										cls
+										sub += 1
+										minut += 5
+										verafrend += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+										'You cheered Faith saying that all this is in the past. She smiled at you "Well, at least someone understands it. Yes, I was a whore, but I`m tied to this and do not come back."'
+
+										act 'Escape':minut += 1 & gt'vokzalGin'
+									end
+								end
+							end
+						end
+					elseif veratalkrand = 2:
+						horny += 10
+
+						'Faith today that it sold out and began to talk about the lesbian experience in a hostel uni.'
+
+						if verafrend >= 50:
+							act 'Interested in the details':
+								cls
+								minut += 5
+								horny += 10
+								gs'stat'
+
+								'<center><img src="images/qwest/vokzal/lvtalk.jpg"></center>'
+								'Vera began to tell "We are with a girlfriend like that much and started kissing Census, I had not realized, her head was between my legs. It was cool! I had just remember orgasm, but when it was wet silk under my very nose, I was disgusted. No, I certainly did not break off his girlfriend and licked her. But honestly, I did not like. In general, women do not really like me, they are soft, as the semolina in the package. Tits fucking it all, I just turn up on the udder, and the ass, that men, sturdy little ass and that these loose loaves? No, a woman with a man in bed does not compare."'
+
+								act 'Escape':minut += 1 & gt'vokzalGin'
+							end
+						end
+					elseif veratalkrand = 3:
+						horny += 10
+
+						'Faith today that it sold out and began to talk about her husband, before he was th-th, but now almost impotent'
+
+						if verafrend >= 50:
+							act 'Interested in the details':
+								cls
+								minut += 5
+								horny += 10
+								gs'stat'
+
+								'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+								'Faith tells you "Well Muzhichi, that they take. When we were first married, he could every day, almost all night fuck, and now I`m probably so it become boring, he practically avoids sex."'
+
+								act 'Escape':minut += 1 & gt'vokzalGin'
+							end
+						end
+					end
+				end
+
+				act 'Escape':minut += 1 & gt'vokzalGin'
+			elseif verafrend <= 0:
+				'You came to greet her and Faith. But Vera turned away from you muttered to you "Leave me alone".'
+
+				act 'Apologize to Vera':
+					cls
+					sub += 1
+					minut += 5
+					verafrend += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+					'You began to apologize to the Faith.'
+
+					if verafrend <= 0:
+						'Faith did not react to your apology and turned away.'
+					elseif verafrend > 0:
+						'Faith sighed "Well, perhaps you will forgive."'
+					end
+
+					act 'Escape':minut += 1 & gt'vokzalGin'
+				end
+				act 'Escape':minut += 1 & gt'vokzalGin'
+			end
+		end
+	elseif verakassir = 2 and hour >= 8 and hour <= 20 and verarand = 0:
+		'Near the window a woman smokes in which you will learn cashier Faith.'
+
+		act 'Chat with the cashier':
+			cls
+			verakassir = 3
+			minut += 5
+			verafrend += 10
+			gs'stat'
+
+			'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+			'You came to greet her and Faith. Gradually, you began to talk and open up Vera told you, that sex with her husband does not satisfy.'
+
+			act 'Escape':minut += 1 & gt'vokzalGin'
+		end
+	elseif verakassir = 1 and hour >= 8 and hour <= 20 and verarand = 0:
+		'Near the window a woman smokes in which you will learn cashier Faith.'
+
+		act 'Chat with the cashier':
+			cls
+			verakassir = 2
+			minut += 5
+			verafrend += 10
+			gs'stat'
+
+			'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+			'You came to greet her and Faith. Gradually, you began to talk of you know, Vera is married and has a child.'
+
+			act 'Escape':minut += 1 & gt'vokzalGin'
+		end
+	elseif verakassir = 0 and hour >= 8 and hour <= 20:
+		'Near the window a woman smokes in which you will learn the cashier.'
+
+		act 'Chat with the cashier':
+			cls
+			verakassir = 1
+			minut += 5
+			verafrend += 10
+			gs'stat'
+
+			'<center><img src="images/qwest/vokzal/verasmoke.jpg"></center>'
+			'You came to the cashier, and not knowing how to start a conversation she asked how long. Gradually, you began to talk, and you find out that the cashier name is Faith. She wondered why you began to work as a cleaner, what you have complained about the lack of money, Faith was surprised and told, that station in 11 and in 18 hours of long-distance trains arrive and quirky people vtyuhivayut passengers all garbage, which is bought at the warehouse terminal in the regional center.'
+
+			act 'Escape':minut += 1 & gt'vokzalGin'
+		end
+	end
+}
+--- vokdinvera ---------------------------------
+

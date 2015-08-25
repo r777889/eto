@@ -1,0 +1,96 @@
+# mainQW
+minut = minut + 15
+'<center><img src="images/picQW/main.jpg"></center>'
+'(Karin) - "Hmm, strangely. I think I begin to understand what was going on. Get in the car, go check on you."'
+'You sat on the back seat of a black jeep. Juugo sat behind the wheel, and Karin village near you. Karin took you feel. "Interestingly. I understand you had an orgasm during orgasm of the force Rikudo, male power, transformed into your force."'
+!'(Karin) -'
+
+act 'I am now a magician?':
+	cla
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'(You) - I am now a magician?'
+	'(Karin) - Yeah, and you`re still the world champion on the run, You have the legs and you the juggler, You`ve got your hands. You catch? The magician is a person managing the magic power, you have it, but it does not manage you know how.'
+
+	act 'So teach me!':
+		cla
+		'(You) - So teach me!'
+		'(Karin) - Learn? I am in my life no one taught magic. Besides, I do not battlemage. I have more magic gift. I feel better than all the magic, wherein at any distance. Plus, flying, and I can change the organic life forms. But understand, mostly it is a gift, rather than learning. I`m just learning honed his gift.'
+		'(You) - Well, at least something that you can teach me.'
+		'(Karin) - Just the basics.'
+		'(Juugo) - arrived, get out, ladies.'
+		'You got out of the car and slammed the door. Gone down the alley to the metal doors. They opened Jugha and missed you and Karin forward.'
+
+		act 'Sign on the door':
+			cla
+			*clr
+			health = vital*10
+			willpower = intel*5 + will*5
+			manna = (intel*magik) + vital*5 + rikudo
+			clr
+			gs'stat'
+
+			'<center><img src="images/picQW/lab.jpg"></center>'
+			'The building was a laboratory. A variety of booths with equipment and shelves with a variety of jars and bottles.'
+			'(Karin) - Welcome to my lab. Here I explore and live. Take off your clothes and lie down on the couch, I will search you.'
+
+			act 'Lie down on the couch':
+				cla
+				*clr
+				clr
+				gs'stat'
+				minut = minut + 30
+				killobj
+
+				if oldobjmenu = 0:
+					addobj 'Character'
+					addobj 'See'
+					addobj 'Other'
+					addobj 'Menu'
+				else
+					addobj '<font color = green>Character</font>'
+					addobj 'Skills'
+					addobj 'Statistics'
+					addobj 'Magic'
+					addobj 'Face'
+					addobj 'Body'
+					addobj 'Clothing'
+					addobj 'Tattoos'
+					addobj 'Piercing'
+					addobj 'Notebook'
+					addobj 'Emergency exit'
+					addobj 'Refresh'
+					addobj 'Menu'
+					addobj 'The new menu'
+					addobj 'Cheat menu'
+					if disable_autosave = 1:
+						addobj 'Enable autosave'
+					else
+						addobj 'Disable autosave'
+					end
+				end
+
+				'<center><img src="images/picQW/main1.jpg"></center>'
+				'You undressed and lay on the couch, Karin began to look around you. It applies what that charms you and use a variety of devices. Cherz half hour survey, She sighed and told you to dress.'
+				'You got up from the couch and dressed. You asked Karin "So what? Teach me anything?"'
+				'(Karin) - Okay. But only in theory. Listen carefully and heed, I will not repeat. To begin with talk about magic. The magical energy, in Asian culture it is called chakra, produced by all living organisms. This vital energy, deprived of her body slowly begins to die. A clear sign of the lack of magical energy is a bad mood. This in itself can not kill, but it shakes the mind, exhausting the body and the mind, as a result of either the body does not survive, or mind.'
+				'That is the magical energy there in the grass, and the trees, and others, it is not in the dead matter. It is the energy of life itself, what awakens the still alive. She and you have been and there, the body itself protects itself, prohibiting the use of this energy. This exhausts the body and can kill him. Magee just know how to circumvent the protection of the body and separating themselves from the magical energy transform it into some kind of action. The main task of any magician is the maximum their potential and learn how to draw their energy as much as possible. But the magicians could not scoop up more energy, than they contain. You`re in something lucky, You entered into as much energy, no matter how much one mage no. You only need to learn how to use it. As I have understood, Your orgasms are capable of handling the energy in their own Rikudo. But each new stage will be given harder. Maybe there is a way to recycle some energy in your own Rikudo. But the main thing, your magical energy supply is almost exhausted, Unlike other magicians. Understand, you theoretically the most powerful magician in the world, since Rikudo was the strongest in the history of. Perhaps there are techniques that can work magic with only the power of Rikudo. Most likely in the scrolls are in the dungeon just had some spells.'
+				'(You) - Igor! Igor took one of the rolls!'
+				'(Karin) - Just do not think, I`ll be for you to solve your problems. If you want to look for his own Igor.'
+				'(You) - I have no idea where he lives. It may pay a visit to the trench.'
+				'(Karin) - Do you think the Order of Dawn retreated from such findings? Listen, I see you do not quite understand, What is the Order of Dawn. This is not what the whipping boys. There all the magicians of the highest level. Neither I nor Juugo are not fit even hold a candle to any of them. Any one of them razotret us Juugo without straining. They have the power, their combat experience and unique technology. Do not mess with these guys, they are pros in their field. Their main business of destruction of other magicians and catching demons.'
+				'(You) - What else for demons?'
+				'(Karin) - Demons demons, creature came to us from other worlds. Perhaps a demon and Rikudo, demons but unlike him, being though with terrible force, but blunt and aggressive. What type of animal is woven from pure magic.'
+				'(You) - Guys own. Listen, and you can turn me back into a man?'
+				'(Karin) - Can. But I will not. You have no idea how much energy it took me, I squeezed myself to dry and Juugo. I barely had enough energy. Now I have it physically is not enough because of such a crazy energy consumption, I lost a quarter of its ever. And there`s more to consider that now your body begins to adapt to the magic and I have even harder. This will be possible, Only if you bleed the least is magical 10level and pass me all his energy forever. I can make you the same again, but you`ll never be a magician, This way will be good for you is closed.'
+				'(Karin) - You are not to look too far into the future. Develop body, Learn to fight, Mine magical power, Train your mind. Gradually everything will rise on the places on which all should be.'
+
+				act 'Logout':gt'down'
+			end
+		end
+	end
+end
+--- mainQW ---------------------------------
+

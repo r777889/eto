@@ -1,0 +1,71 @@
+# gopnik_house
+gs'stat'
+
+if gophouse = 0:
+	'You sit in a dirty apartment with shabby wallpaper on a rickety chair at the table. Just sitting at the table <<$kol_man_text>> Drinking and eating.'
+
+	if alko < 6:
+		'You feel, that the very drunk, but still able to think.'
+	elseif alko >= 6:
+		'Did you feel like the beginning of dizzy and the earth started to slip away from under the feet.'
+	end
+
+	'A couple of guys pick up and drag you into the room, there you laid on the couch.'
+
+	act 'Further':
+		rape += 1
+		gang += 1
+		gophouse = 1
+		minut += 5
+		silavag = 0
+		$boy = 'Gopnik'
+		guy += kol_man
+		ciklkm = kol_man
+		if gophouserapeQW = 0:gophouserapeQW = 1
+		gt $curloc
+	end
+elseif gophouse = 1:
+	rand1=rand(0,100)
+	if rand1<10:'<center><img src="images/qwest/alter/placer/gopgang2.jpg"></center>'
+	if rand1>=10:'<center><img src="images/nigma/gor/orgy1,'+rand(0,4)+'.gif"></center>'
+
+	:markgophouserape
+	ciklkm -= 1
+	minut += 15
+	dick = RAND(12,20)
+
+	tiprand = RAND(0,2)
+	if tiprand < 2:
+		dynamic $sexstart2
+		dynamic $sexcum
+	elseif tiprand = 2:
+		dynamic $analsexrude
+	end
+
+	if ciklkm > 0:'Then the space between your legs took the next guy.'
+	gs'stat'
+	if ciklkm > 0:jump'markgophouserape'
+
+	endrandom = RAND (0,1)
+	if endrandom = 0:
+	'Finally, it`s all over, you feel like someone you clothes and buttons you again somewhere dragged.'
+		act 'Look around':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+		
+	elseif endrandom = 1:
+		act 'Open your eyes':
+			cla
+			cls
+			minut += 5
+			body_write = 5
+			face_write = 1
+			podvalwriterand = RAND (1,6)
+			gs 'stat'
+			
+			'<center><img src="images/qwest/alter/placer/podvalwrite<<podvalwriterand>>.jpg"></center>'
+			'With difficulty you come to himself, body aches, head pops, and even someone to mock you, and now you painted obscene words like station toilet.'
+ 			act 'Look around':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+		end  	
+	end
+end
+--- gopnik_house ---------------------------------
+

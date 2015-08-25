@@ -1,0 +1,342 @@
+# igrkart1
+!by Master (blakarchont@gmail.com)
+!BEGINNING OF THE GAME
+clr
+minut = minut + 5
+gs'stat'
+
+if turn = 0:
+	cla
+	'<right><img src="images/casino/stavkabd.jpg"></right>'
+	'Please bid, Gentlemen.'
+
+	act 'Place bet':
+		money = money - deal
+		turn = 1
+
+		deal = input 'Enter the amount'
+		if money < deal:
+			msg 'You do not have the money'
+			gt'igrkart1'
+		elseif deal < 0:
+			msg 'Wrong, try again.'
+			gt'igrkart1'
+		elseif deal > 1000:
+			msg 'Maximum rate 1000 rubles.'
+			gt'igrkart1'
+		end
+
+		gt'igrkart1'
+	end
+	act 'Move away from the table':
+		gt'bldzh'
+	end
+end
+
+!The cards are dealt
+if turn = 1:
+	cla
+	'<right><img src="images/casino/cartbd.jpg"></right>'
+	'The dealer deals the cards:'
+	'...'
+
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$d_card[1] = $number[number] + $suit[suit]
+	d_points = points[number]
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$p_card[1] = $number[number] + $suit[suit]
+	p_points = points[number]
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$p_card[2] = $number[number] + $suit[suit]
+	p_points = p_points + points[number]
+
+	if p_points = 22:
+		p_points = 21
+	elseif p_points < 21:
+		'Map dealer:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+
+		act 'Enough':
+			turn = 3
+			gt'igrkart1'
+		end
+		act 'Another map':
+			turn = 2
+			gt'igrkart1'
+		end
+	elseif p_points = 21:
+		prise = deal*3
+
+		'Map dealer:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+		'Black Jack!!!'
+
+		act 'Pick up the win <<prise>> RUB':
+			money = money + prise
+			turn = 0
+			gt'igrkart1'
+		end
+	end
+end
+
+!Additional cards
+if turn = 2:
+	cla
+	'<right><img src="images/casino/cartbde.jpg"></right>'
+	'The dealer deals one more card:'
+	'...'
+
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$p_card[3] = $number[number] + $suit[suit]
+	p_points = p_points + points[number]
+
+	if p_points <= 21:
+		'Map dealer:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+		' <<$p_card[3]>>'
+
+		act 'Enough':
+			turn = 3
+			gt'igrkart1'
+		end
+		act 'Another map':
+			turn = 22
+			gt'igrkart1'
+		end
+	elseif p_points > 21:
+		'Map dealer:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+		' <<$p_card[3]>>'
+		'Busting! You lost.'
+
+		act '...':
+			turn = 0
+			gt'igrkart1'
+		end
+	end
+end
+
+if turn = 22:
+	cla
+	'<right><img src="images/casino/cartbde.jpg"></right>'
+	'The dealer deals one more card:'
+	'...'
+
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$p_card[4] = $number[number] + $suit[suit]
+	p_points = p_points + points[number]
+
+	if p_points <= 21:
+		'Map dealer:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+		' <<$p_card[3]>>'
+		' <<$p_card[4]>>'
+
+		act 'Enough':
+			turn = 3
+			gt'igrkart1'
+		end
+		act 'Another map':
+			turn = 222
+			gt'igrkart1'
+		end
+	elseif p_points > 21:
+		'Map dealer:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+		' <<$p_card[3]>>'
+		' <<$p_card[4]>>'
+		'Busting! You lost.'
+
+		act '...':
+			turn = 0
+			gt'igrkart1'
+		end
+	end
+end
+
+if turn = 222:
+	cla
+	'<right><img src="images/casino/cartbde.jpg"></right>'
+	'The dealer deals one more card:'
+	'...'
+
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$p_card[5] = $number[number] + $suit[suit]
+	p_points = p_points + points[number]
+
+	if p_points <= 21:
+		'Card bank:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+		' <<$p_card[3]>>'
+		' <<$p_card[4]>>'
+		' <<$p_card[5]>>'
+
+		act 'Enough':
+			turn = 3
+			gt'igrkart1'
+		end
+	elseif p_points > 21:
+		'Map dealer:'
+		' <<$d_card[1]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$p_card[1]>>'
+		' <<$p_card[2]>>'
+		' <<$p_card[3]>>'
+		' <<$p_card[4]>>'
+		' <<$p_card[5]>>'
+		'Busting! You lost.'
+
+		act '...':
+			turn = 0
+			gt'igrkart1'
+		end
+	end
+end
+
+!Transoms card bank
+if turn = 3:
+	cla
+	'<right><img src="images/casino/cartbde.jpg"></right>'
+	'The dealer gets the card:'
+	'...'
+
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$d_card[2] = $number[number] + $suit[suit]
+	d_points = d_points + points[number]
+
+	if p_points = 22:
+		p_points = 21
+	elseif d_points >= 17:
+		'Card bank:'
+		' <<$d_card[1]>>'
+		' <<$d_card[2]>>'
+		'Points dealer: <<d_points>>'
+		'__________________________'
+		'Player Points: <<p_points>>'
+		'__________________________'
+
+		if d_points > p_points:
+			'Casino won'
+
+			act '...':
+				turn = 0
+				gt'igrkart1'
+			end
+		elseif d_points = p_points:
+			'Draw'
+
+			act 'Pick bet':
+				money = money + deal
+				turn = 0
+				gt'igrkart1'
+			end
+		elseif d_points < p_points:
+			prise = deal*2
+
+			'Player wins'
+
+			act 'Pick up the win <<prise>> RUB':
+				money = money + prise
+				turn = 0
+				gt'igrkart1'
+			end
+		end
+	elseif d_points < 17:
+		suit = RAND(1,4)
+		number = RAND(1,13)
+		$d_card[3] = $number[number] + $suit[suit]
+		d_points = d_points + points[number]
+
+		if d_points <= 21:
+			'Maps dealer:'
+			' <<$d_card[1]>>'
+			' <<$d_card[2]>>'
+			' <<$d_card[3]>>'
+			'Points dealer: <<d_points>>'
+			'__________________________'
+			'Player Points: <<p_points>>'
+			'__________________________'
+
+			if d_points > p_points:
+				'Casino won'
+
+				act '...':
+					turn = 0
+					gt'igrkart1'
+				end
+			elseif d_points = p_points:
+				'Draw'
+				act 'Pick bet':
+					money = money + deal
+					turn = 0
+					gt'igrkart1'
+				end
+			elseif d_points < p_points:
+				prise = deal*2
+
+				'Player wins'
+
+				act 'Pick up the win <<prise>> RUB':
+					money = money + prise
+					turn = 0
+					gt'igrkart1'
+				end
+			end
+		elseif d_points > 21:
+			prise = deal*2
+
+			'Maps dealer:'
+			' <<$d_card[1]>>'
+			' <<$d_card[2]>>'
+			' <<$d_card[3]>>'
+			'__________________________'
+			'Busting!!!'
+			'__________________________'
+			'Player wins'
+
+			act 'Pick up the win <<prise>> RUB':
+				money = money + prise
+				turn = 0
+				gt'igrkart1'
+			end
+		end
+	end
+end
+--- igrkart1 ---------------------------------
+

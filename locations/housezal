@@ -1,0 +1,348 @@
+# housezal
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+minut += 5
+gs'stat'
+
+'<center><b>Hall</b></center>'
+'<center><img src="images/img/centr/housezal.jpg"></center>'
+
+act 'In the corridor':gt'house'
+
+housezalrand = RAND(0,10)
+if week < 6 and hour > 8 and hour < 20:
+	act 'Remove':
+		cla
+		minut += 60
+		gs'stat'
+
+		if hour < 14 and housezalrand = 1 and houserab = 1:
+			cla
+			*clr
+			SUB += 1
+
+			'<center><img src="images/img/centr/gosp6.jpg"></center>'
+			'Mistress puts you on all fours, and she sits on top and you hour Kata its room.'
+
+			act 'Escape':gt'housezal'
+		elseif hour < 14 and housezalrand = 2 and houserab = 1:
+			cla
+			*clr
+			SUB += 1
+
+			'<center><img src="images/img/centr/gosp7.jpg"></center>'
+			'Mistress pulls up her skirt and pulls you to whip your ass whipping'
+
+			act 'Escape':gt'housezal'
+		elseif hour < 14 and housezalrand = 3 and houserab = 1:
+			cla
+			*clr
+			SUB += 1
+
+			'<center><img src="images/img/centr/gosp8.jpg"></center>'
+			'Mistress puts you on your knees and pulls a face to her pussy, You dutifully licks its she cums.'
+
+			act 'Escape':gt'housezal'
+		elseif hour < 14 and housezalrand = 4 and houserab = 1:
+			cla
+			*clr
+			SUB += 1
+			sex += 1
+			orgasm += 2
+			horny = 0
+
+			'<center><img src="images/img/centr/gosp9.jpg"></center>'
+			'Mistress puts you cancer and fuck your pussy threesome, simultaneously calling a whore, you begin to like it and it is you fuck you ended up several times.'
+
+			act 'Escape':gt'housezal'
+		elseif hour < 14 and housezalrand = 0 and houserab = 0:
+			cla
+			*clr
+			'<center><img src="images/img/centr/gosp1.jpg"></center>'
+			'Until you remove the hostess tells you where and how to clean, You already rather sick of it, but she did not let up in the end when you`re on all fours crawling on the floor with a rag something hurts her foot.'
+			'"Here you fool armless, I soiled boots and clean them well, quickly" she cried.'
+			'You grabbed a clean cloth and rubbed her boots.'
+			'"That stupid brainless, tongue cleaner, Well froze Move"'
+
+			if DOM > 10:act 'Silently exit':gt'house'
+
+			act 'Lick':
+				cla
+				*clr
+				SUB += 5
+				houserab = 1
+
+				'<center><img src="images/img/centr/gosp2.jpg"></center>'
+				'You carefully lick her boots in the hope that these and end.'
+				'"You did not try, have you flogged"'
+
+				act 'Stand in the position':
+					cla
+					*clr
+					'<center><img src="images/img/centr/gosp3.jpg"></center>'
+					'You get up from the couch and cancer lifts up her skirt, hostess begins to whip your ass, and you just squeaked with each stroke.'
+
+					act 'Further':
+						cla
+						*clr
+						'<center><img src="images/img/centr/gosp4.jpg"></center>'
+						'Finally she was tired, but not yet finished "Here parazitka, from-you I soiled panties, quickly erased" she said, taking off his pants.'
+						'You caught dripping wet pants and gathered to go to the bathroom when suddenly she stopped you:'
+						'"Where are you soaped, mouth wash" With these words she took your pants and shoved into your mouth. You diligently pretended that it tries to wash her panties.'
+
+						act 'Further':
+							cla
+							*clr
+							'<center><img src="images/img/centr/gosp5.jpg"></center>'
+							'"This is done, you can if you want because, and now lick here." With these words the mistress opened her legs. You dutifully began to lick her pussy, Soon she had finished and you carefully licked all the juice from it.'
+
+							act 'Escape':gt'house'
+						end
+					end
+				end
+			end
+		elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid = 1 and niksexday ! day:
+			cla
+			*clr
+			'<center><img src="images/img/centr/nikzal1.jpg"></center>'
+			'Until you remove Nicholas comes to you back and knelt to touch your butt starts.'
+
+			act 'Push off':nik -= 1 & gt'house'
+			act 'Allow':
+				cla
+				*clr
+				niksexday = day
+				bj += 1
+				anal += 1
+				guy += 1
+				nik += 1
+
+				'<center><img src="images/img/centr/nikzal2.jpg"></center>'
+				'Not many polapat your ass he sets in motion a language and you`re feeling it caress your anus, when he pushes it inside you relax his ass and wet tongue inside you Shchekotov.'
+
+				act 'Take in the mouth':
+					cla
+					*clr
+					'<center><img src="images/img/centr/nikzal3.jpg"></center>'
+					'You turn to him bend down to the crotch, You get it around his penis and starts sucking lips, as soon as you feel that he is ready to finish the stop.'
+
+					act 'Lie down on the sofa':
+						cla
+						*clr
+						'<center><img src="images/img/centr/nikzal4.jpg"></center>'
+						'Leisurely, gently swinging her hips, you go to the sofa, Nikolai is yours, You lie on your back and thigh lifts, that-Had he been more convenient to go to you in the ass, his penis is too big for your ass, and you still hurt, when he enters into you, but you are struggling trying not to show it, and only moan when your ass dildo hammer.'
+
+						act 'Further':
+							cla
+							*clr
+							'<center><img src="images/img/centr/nikzal5.jpg"></center>'
+							'When you are the last effort to hold back the cries of pain, his cock before cum blown and you cried out in pain, realizing that you hurt Nicholas takes it and fills your ass sperm.'
+
+							act 'Suck':
+								cla
+								*clr
+								'<center><img src="images/img/centr/nikzal6.jpg"></center>'
+								'You get up on all fours and start licking fading member carefully lick the remnants of sperm, when suddenly he again poured, and again it is ready to fight.'
+
+								act 'Get cancer':
+									cla
+									*clr
+									'<center><img src="images/img/centr/nikzal7.jpg"></center>'
+									'Seeing that he was ready to continue, you get up with cancer, hands pushing the buttocks, Nikolai gently introduces dick in your ass and begins to move slowly at first, then faster and faster, he no longer pays attention to the groans, it lasted about half an hour, You have already ceased to feel his anus when he finally finished you in the ass. This time you decided not to risk and not to clean his penis mouth, and the third row of the anal you have not taken out.'
+
+									act 'Further':
+										cla
+										*clr
+										cumlip += 1
+										cumass += 1
+
+										'<center><img src="images/img/centr/nikzal8.jpg"></center>'
+										'While you are going to continue to stand by the cancer, Nicholas came up to you and put in the ass twisted bill'
+
+										act 'Go with money':
+											money += 1000
+											niksvid = 0
+											nikslut = 1
+											gt'house'
+										end
+										act 'Money back':
+											cla
+											*clr
+											niksvid = 2
+
+											'<center><img src="images/img/centr/nikzal9.jpg"></center>'
+											'You defiantly take out the bill from the anus, lick sperm off her and threw it at his feet, turns and walks away.'
+
+											act 'Escape':gt'house'
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		elseif hour > 17 and hour < 20 and housezalrand >= 3 and housezalrand <= 5 and niksvid > 1 and niksexday ! day:
+			cla
+			*clr
+			niksexday = day
+
+			'<center><img src="images/img/th/n2.jpg"></center>'
+			'As long as you zip over the room with a vacuum cleaner, Nicholas comes and starts sitting on the sofa reading the newspaper. Soon, he looked up from the newspaper and started watching you, As you walk around the room with a vacuum cleaner and occasionally bend down, that would vacuum under furniture, it is not surprising, because every time his eyes appear your bare buttocks, panties you did not clothe. Do you like that he looks at you, and you have already started to bend especially where already vacuumed and even a couple of times got on all fours, pretending, that are trying to push away the vacuum cleaner under the cabinet, thus flaunted your bare ass in front of him. You watched askance as it swallows the saliva, I am looking at you with lust.'
+
+			act 'Continue':
+				cla
+				*clr
+				nik += 1
+				picrand = 78
+
+				'<center><img src="images/img/th/n3.jpg"></center>'
+				'You go back to shine in front of Nikolai, pacing the room, until you feel that your pussy is already flowing and the juice began to flow from it to the hips. Then you come to the couch and start vacuuming in front of him, so you`re a little bend, that your ass is bare back and legs spread slightly fed back, now your pussy a few inches from his face and he was perfectly clear, you already are flowing full. Nicholas did not wait, after a couple of seconds, you felt his hands wrapped around your buttocks and bred in hand. He buried his face between your buttocks, then kissing your pussy, the anus, then he began to lick thighs all that managed to leak out of your pussy. When you have finished with them, Nikolai put his tongue in your vagina and began to move it back, forward. You stood on his feet gave way with pleasure, leaning on vacuum cleaner, until his tongue fuck your pussy. Then he turned his attention to the ass, how to brushing her tongue, he launched into it with two fingers and began to push them a little bit, stretching your anus. When your little ass accustomed to and no longer closed immediately, He took his fingers and their place was taken by his tongue. Nicholas fucked your ass tongue, and hand massaging your clitoris, you moan with pleasure with difficulty holding the handle of a vacuum cleaner, Finally Nicholas pulled you over and you plopped on the couch, and he sat down next to, widely spread your legs, intending to re-do your pussy.'
+
+				act 'Continue':gt'sex','kuni'
+			end
+
+			act 'Finish cleaning':gt'house'
+		end
+
+		'You put it in the room'
+
+		act 'Escape':gt'house'
+	end
+elseif week = 6 and hour > 5 and hour < 10 and housezalrand < 5 and niksvid > 1 and niksexday ! day:
+	cla
+	*clr
+	minut += 30
+	niksexday = day
+
+	'<center><img src="images/img/th/n0.jpg"></center>'
+	'Entering the room you see Nicholas lying on the sofa, clothing. It seems that it is a good idea yesterday gulnul, the smell of the room can be drunk, and the little wife sent him to sleep in the living room.'
+	'"A Light, then pour-anything" he said, opening his eyes and tried to get back immediately collapsed clutching his head. "Her, so can not drink." he articulated.'
+	'You poured into a glass of whiskey and handed him. One gulp to swallow a glass of it once again fell back. "You better?" you ask.'
+	'"Little, Thanks Light, Come to Me." he said without opening his eyes. You felt sorry for him, You even remembered how when something, kicking themselves periodically on Fridays and wife sends you to sleep in another room, how long has it been, I think in another life. Then you remembered, if you manage to persuade his wife to have sex in the morning, or just take her while she`s still sleeping you could not send, it helped quite back to life. "Maybe it will help" He flashed in my head crazy idea.'
+
+	act 'Try help':
+		cla
+		*clr
+		nik += 1
+		picrand = 77
+
+		'<center><img src="images/img/th/n1.jpg"></center>'
+		'You go down with him on his heels and get your hands unbuttoned his pants member, even in the relaxed state, it is quite a decent size. You spend the language around the trunk and begin to tickle the head, Nicholas suddenly revives "Light No, I`m in no condition, and the wife in the bedroom sleeps" he says.'
+		'"Relax, I know, that will help you, and your wife on Saturdays before noon does not rise" You are responsible and absorbs his mouth already swelling body, You liked it swelled in your mouth, and soon you will have worked diligently mouth, but still we tried not to make loud noises, and suddenly it is today his little wife decides to get up early. You are tired of sucking, you thought, it`s been a couple of hours before the jet of hot, viscous liquid hit you in the mouth. You swallowed and already intended to release the cooling of the body cavity, Nikolai, I have come a little said "More, I wish you all."'
+		'You still released his cock from his mouth, but taking his hand began to masturbate, not letting it fall. "Good, but not in the ass" Answer You.'
+		'"Well, maybe a little, floor nubs?" he asked, visibly upset.'
+		'"Come on, Only when my cries come your little wife, you yourself are going to explain to her, that makes your cock in my ass." Answer You. Nicholas agreed with your arguments and you will once again lowered his head to his cock.'
+
+		act 'Continue':gt'sex','minet'
+	end
+
+	act 'Escape':gt'house'
+elseif hour > 17 and hour < 20 and housezalrand >= 3 and housezalrand <= 5 and niksvid > 1 and niksexday ! day:
+	cla
+	*clr
+	minut += 10
+	niksexday = day
+
+	'<center><img src="images/img/th/n4.jpg"></center>'
+	'Entering the room, you see Nikolai, sitting in a chair and talking on the phone. "Sveta, Bring a drink" he asked to see you. You brought him a glass of whiskey, He took the glass and motioned for you to linger. You waited until he finished talking on the phone.'
+	'"Well denёk, sit sit with me" he said, slapping his thigh.'
+
+	act 'Escape':gt'house'
+	act 'Stay':
+		cla
+		*clr
+		nik += 2
+		minut += 30
+		picrand = 79
+		niksexday = day
+
+		'<center><img src="images/img/th/n5.jpg"></center>'
+		'You sit down on his leg and one arm around his neck, Nikolai embraces you by the waist and held her in a chair reclines. You`re almost lying on it, and he does not even try to get into you between the legs, he just pushes you to my way and sitting with his eyes closed. Realizing that he was tired and he wants it-anyone-it was close, you relax and put her head on his shoulder. So half an hour passes, Nikolai sits in a chair clutching you to her, and you listen to him breathe, you like so just relax, head start to climb dream, that if it was yours and you were like that in the evening and rest. You clung to him more tightly, embracing both hands, Nikolai felt as though your desire, and opened his eyes looked at you, after a couple of seconds, you kissed, but not as much as before, with animal passion, as though about to devour each other, and easily and gently, almost touching her lips. Soon, his hands slipped through your body, he raised you, and putting on a chair began to cover your body with kisses, down lower and lower until it reached the hips.'
+
+		act 'Continue':gt'sex','kuni'
+	end
+elseif hour > 17 and hour < 20 and housezalrand < 3 and niksvid > 1 and niksexday ! day:
+	cla
+	niksexday = day
+
+	'Entering the room, you see Nikolai, sitting in a chair "Sveta, you want to watch TV?" he asked.'
+
+	act 'Takeout':gt'house'
+	act 'Agree':
+		cla
+		*clr
+		minut += 40
+		nik += 1
+		picrand = 80
+		niksexday = day
+
+		'<center><img src="images/img/th/n6.jpg"></center>'
+		'You sit next to him on the sofa, Nikolai priobnimaet you and put one hand on her hip, you are ready to, he starts pestering, but then nothing happened, He just sat there and watched TV pressed you to my. You sit back and resting her head on his shoulder, too, started to look, on television showed what that nonsense, but you did not care, And it also looks like. So you sat for half an hour, occasionally exchanging short sentences, you suddenly become so good and comfortable with him, but your idyll interrupted by the football and you yourself did not believe when Nicholas asked to change the channel. "Can, a little bit of a look?" he asked, as if it is your apartment and your TV.'
+
+		act 'Pick up the remote':
+			cla
+			*clr
+			'<center><img src="images/img/th/n7.jpg"></center>'
+			'"Not, do not look" you said, and snatched the remote from his hand.'
+			'"Sveta, Return idler" he said in a stern voice Delano'
+			'"Not-and" You responded playfully.'
+			'"Well, beware" he said, and tried to grab control, but you had to remove his hand and he just fell on you. You began to rage on the couch grabbing the remote from one another, you laughing and fooling around like children, showing each other languages, when they could grab control. During the game your breasts popped out, but neither you, Nicholas did not pay any attention to it. When you are tired and collapsed on the bed, He lay down on his head and you turned on your chest, you were both lying and panting. You began to stroke his hair, soon his lips touched your breasts. He kissed your breasts and nipples, gradually descending lower and lower.'
+
+			act 'Allow':nik += 1 & gt'sex','kuni'
+			act 'Terminate':
+				cla
+				'"No, not here" you said. Nicholas stopped, I kissed you on the lips and left'
+
+				act 'Escape':gt'house'
+			end
+		end
+	end
+elseif hour > 17 and hour < 20 and housezalrand < 3 and nikslut = 1 and niksexday ! day:
+	cla
+	*clr
+	SUB += 1
+	guy += 1
+	minut += 20
+	niksexday = day
+	money += 2000
+	picrand = 35
+
+	'<center><img src="images/img/th/s0.jpg"></center>'
+	'Entering the room you see Nicholas and another man, they sit having imposed documents and arguing about something. "A Light, Bring us tea" He says he saw you. You go to the kitchen to make tea and return back. When you pour the tea into cups, Nicholas put his hand on the buttocks and you said "Well, as you my new maid?" a man in response shrugs "That you know better, she`s at your house to cook and clean."'
+	'"Yes, no, you do not understand, What do you think of her ass, really cool." says Nikolai exposing your buttocks. "A small allowance she gets up it is." Nikolai continues. You, meanwhile, are standing with a bare ass and smiling stupidly looking at man, and Nicholas did not let up "Do you want to show it? A Svetsik you do not mind to serve the host along with his guest?" he says and puts a couple of notes on the table. A man looks at you in his pants and significantly increases the hump in the groin area.'
+	'"With joy" you answer, kneeling.'
+
+	act 'Begin':xgt'sexdvoe','var'
+elseif hour > 17 and hour < 20 and housezalrand > 8 and nikslut = 1 and niksexday ! day:
+	cla
+	*clr
+	SUB += 1
+	guy += 1
+	minut += 20
+	niksexday = day
+	money += 2000
+	picrand = 37
+
+	'<center><img src="images/img/th/s2.jpg"></center>'
+	'Entering the room you see Nicholas and another man, they sit having imposed documents and arguing about something. "A Light, Bring me a drink" you leave the bar, and it is pouring booze hear the conversation, Nicholas does not even try to say that the quieter-have you not heard "That is the light which I told you about."'
+	'"Yes, not bad." responsible man inspecting you from head to toe.'
+	'"Aha, so that, not far-fetched to relax, and even with joy Svetsik you relax" Nikolai continues.'
+	'"Yes I do not know, wife uchuet, It will complete zvizdets, It deprives all, I go begging in the subway" responsible man.'
+	'"Yes, where she learns, thrust took and went, she gave you when, six months ago or a year. He married a rich bitch`s torments" says Nikolai.'
+	'"To hell with it, Call your slut" agrees to a man, you just come up with a glass to Nicholas.'
+	'"Svetik, help a person to relax, I walk away for a few minutes, and then I join you" said Nikolai, I slapped you on the behind and shoving a couple of bills in his hand and left the room.'
+	'"Let no prilyudy, and to strip naked on the floor" the man said.'
+
+	act 'Lie down':
+		cla
+		*clr
+		'<center><img src="images/img/th/s2.jpg"></center>'
+		'You lay on the floor and he lay down behind you, slaver fingers he rubbed your pussy and slowly introduced term in you. You were not excited and a couple of minutes you have been hurt a little vagina is moistened. Few entering into the taste you started it podmahivat. Once you have gathered momentum in the back room Nikolai "Yes, you have everything in full swing, I think I almost missed" he said, starting to undress.'
+
+		act 'Continue':xgt'sexdvoe','var'
+	end
+end
+--- housezal ---------------------------------
+

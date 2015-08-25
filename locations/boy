@@ -1,0 +1,122 @@
+# boy
+!'<<$boy>> <<$boybody>> <<$boybod>> <<$boyface>>.<<$boy>> <<$boyClo>>'
+
+!Randomly male names (Russian)
+boynamerand = RAND(1,38)
+if boynamerand = 1:$boy = 'Alexander'
+if boynamerand = 2:$boy = 'Alexey'
+if boynamerand = 3:$boy = 'Albert'
+if boynamerand = 4:$boy = 'Anatoly'
+if boynamerand = 5:$boy = 'Anton'
+if boynamerand = 6:$boy = 'Arkady'
+if boynamerand = 7:$boy = 'Andrew'
+if boynamerand = 8:$boy = 'Boris'
+if boynamerand = 9:$boy = 'Vadim'
+if boynamerand = 10:$boy = 'Valentine'
+if boynamerand = 11:$boy = 'Valery'
+if boynamerand = 12:$boy = 'Vasily'
+if boynamerand = 13:$boy = 'Victor'
+if boynamerand = 14:$boy = 'Vitali'
+if boynamerand = 15:$boy = 'Vladimir'
+if boynamerand = 16:$boy = 'Vyacheslav'
+if boynamerand = 17:$boy = 'Gennady'
+if boynamerand = 18:$boy = 'Georgy'
+if boynamerand = 19:$boy = 'Gregory'
+if boynamerand = 20:$boy = 'Denis'
+if boynamerand = 21:$boy = 'Eugene'
+if boynamerand = 22:$boy = 'Egor'
+if boynamerand = 23:$boy = 'Ivan'
+if boynamerand = 24:$boy = 'Igor'
+if boynamerand = 25:$boy = 'Kirill'
+if boynamerand = 26:$boy = 'Leonid'
+if boynamerand = 27:$boy = 'Maxim'
+if boynamerand = 28:$boy = 'Michael'
+if boynamerand = 29:$boy = 'Oleg'
+if boynamerand = 30:$boy = 'Paul'
+if boynamerand = 31:$boy = 'Peter'
+if boynamerand = 32:$boy = 'Semen'
+if boynamerand = 33:$boy = 'Sergei'
+if boynamerand = 34:$boy = 'Stepan'
+if boynamerand = 35:$boy = 'Fedor'
+if boynamerand = 36:$boy = 'Edward'
+if boynamerand = 37:$boy = 'Yuri'
+if boynamerand = 38:$boy = 'Jacob'
+$namev = $boy
+
+!Appearance
+boybodyrand = RAND(1,3)
+if boybodyrand = 1:$boybody = 'high'
+if boybodyrand = 2:$boybody = 'average height'
+if boybodyrand = 3:$boybody = 'little'
+
+boybodrand = RAND(1,4)
+if boybodrand = 1:$boybod = 'thin'
+if boybodrand = 2:$boybod = 'Athletic'
+if boybodrand = 3:$boybod = 'thickset'
+if boybodrand = 4:$boybod = 'full'
+
+boyfacerand = RAND(1,3)
+if boyfacerand = 1:$boyface = 'brunet'
+if boyfacerand = 2:$boyface = 'brown-haired person'
+if boyfacerand = 3:$boyface = 'blond'
+
+!size eldy
+grdikrand = RAND(0,100)
+if grdikrand < 80:
+	dick = RAND(12,18)
+elseif grdikrand >= 80 and grdikrand < 90:
+	dick = RAND(8,12)
+elseif grdikrand >= 90:
+	dick = RAND(18,25)
+end
+
+! sexual force
+silaVag = RAND(0,2)
+!variable is responsible for guy
+boyonce = 0
+
+!Variables responsible for which traits like
+!Security, He is responsible for the money and demand
+harakBoy = RAND(0,2)
+
+finance = RAND(0,2)
+if finance = 0:
+	!Gopnik beggar or a hard worker
+	!Initial inspection of the exterior
+	if harakBoy = 0:vneshBoy = RAND(0,2)
+	if harakBoy = 1:vneshBoy = RAND(0,4)
+	if harakBoy = 2:vneshBoy = RAND(0,8)
+
+	$boyClo = 'dressed in baggy tracksuit.'
+elseif finance = 1:
+	!middle peasant
+	!check in appearance
+	if harakBoy = 0:vneshBoy = RAND(0,4)
+	if harakBoy = 1:vneshBoy = RAND(0,6)
+	if harakBoy = 2:vneshBoy = RAND(0,8)
+
+	$boyClo = 'dressed in jeans and a sweater.'
+elseif finance = 2:
+	!middle peasant
+	!check in appearance
+	if harakBoy = 0:vneshBoy = RAND(4,8)
+	if harakBoy = 1:vneshBoy = RAND(6,8)
+	if harakBoy = 2:vneshBoy = RAND(8,10)
+
+	$boyClo = 'dressed in an expensive suit.'
+end
+
+!the requirements of the figure, Breast size, hair color.
+!0 - lower back 80, 1 back from 80 to 100, 2 ass over 100
+figurBoy = RAND(0,2)
+!0 - chest less 3, 1 breast 3-4, 2 breasts bigger 4
+titBoy = RAND(0,2)
+!0 - brunette, 1 - haired, 2 - Redhead, 3 - blonde
+haerBoy = RAND(0,3)
+!character 0 - soft, 1 -norm 2 - aggressor
+
+randizvrat = RAND(0,100)
+if randizvrat < 80:izvrat = 0
+if randizvrat >= 80:izvrat = 1
+--- boy ---------------------------------
+

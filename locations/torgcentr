@@ -1,0 +1,19 @@
+# torgcentr
+gs'stat'
+'<center><b>Commerce-Entertainment Center</b></center>'
+'<center><img src="images/img/centr/torgcentr.jpg"></center>'
+'<a href="exec:GT ''young_shop''">Shop Keys-pussy</a>.'
+
+if hour >= 8 and hour <= 20:
+	'Elitist <a href="exec:GT ''butik'',''start''">Boutique</a> with fashionable and expensive clothes.'
+	'<a href="exec:GT ''salon'',''start''">Beauty salon</a>.'
+	'<a href="exec:GT ''sportShop'',''start''">Sporting goods store</a>.'
+	'<a href="exec:GT ''zoomagazine'',''start''">Pet-shop</a>.'
+	'<a href="exec:GT ''shopdacha''">Shop Stores</a>.'
+	'<a href="exec:gt''bouling''">Bowling</a>, <a href="exec:gt''billiard''">billiards</a> and <a href="exec:gt''kino''">theater</a>.'
+	'On the ground floor is located <a href="exec:GT ''shop'',''start''">supermarket network</a> takoyzhe in a residential area.'
+end
+
+act 'Escape':gt'down'
+--- torgcentr ---------------------------------
+

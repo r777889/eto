@@ -1,0 +1,60 @@
+# gameover
+'<center><b><font color = maroon>GAME finished</font></b></center>'
+
+if over = 1:
+	gs'stat'
+	'You died'
+elseif over = 2:
+	'<center><img src="images/pic/over.jpg"></center>'
+	'Are you mad and started to run naked through the city screaming I`m a man. You quickly twisted psihbrigada and you have taken away in a madhouse. There you put a straitjacket and placed in a room with soft walls. You spent the rest of his days in the happy illusions, about your family, the fact that you are a man again. But the illusion is always just an illusion.'
+	*nl
+	'Hint for the future.'
+	'With the fall of sentiment and a weakening of the mind must be fought. Do not forget, difficult normal peasant not out of phase from the fact that he became a chick. Means for retaining the mood and psyche in an acceptable level of weight, take at least a TV and a psychotherapist. To strengthen the will and intellect, you increase the value of the mood and the mind and the harmful effects will not be as devastating.'
+elseif over = 3:
+	'You have died of hunger. Stupid death, but apparently the consequences of anorexia which you began to suffer.'
+elseif over = 4:
+	'You died from complications during childbirth.'
+elseif over = 5:
+	'You tried to jump, but then found themselves in a strange place, around which-the ragged walls, with indecent inscriptions, You could not move a scream, when suddenly the door opened and entered what that fat guy, he unzipped his pants and turned his back to you arranged your ass over you. Then you realize, Witch kept her promise and turned you into a push at the station.'
+	'So you spent the rest of his days swallowing shit, until later 50 years, at the station have not begun repairs and you just broke and took the pieces in a landfill.'
+elseif over = 6:
+	'You suddenly pierced a sharp pain in the abdomen, then another and. "Greetings to you from the boys" You have heard and seen turning his head retreating figure, downcast eyes you realize that standing in a puddle of his own blood, vytevayuschey from multiple stab wounds in your belly. The last thing you see, Snack is approaching land.'
+elseif over = 7:
+	'The last thing you see, It was a police baton, flying to your face. The girl touched you to death, all attributed to the fact that you fell off the bed and broke his head.'
+elseif over = 8:
+	'<center><img src="images/qwest/sosed/crackwhore7.jpg"></center>'
+	'"At one time it was possible to deviate from this path and whether it was possible?" - You are trying to understand, opening his mouth for the next portion of the golden rain or Cum. AND, without finding an answer, regularly swallow all.'
+elseif over = 9:
+    '<center><img src="images/lmps/deadgirl.jpg"></center>'
+    'You dragged the morgue attendants, pathologist noted death from a drug overdose. Soon your body was handed over to parents...'
+end
+
+act 'End?':gt'gameover','endscreen'
+
+if $ARGS[0] = 'endscreen':
+	SHOWSTAT 0
+	SHOWOBJS 0
+	SHOWINPUT 0
+	FColor = RGB(255,255,255)
+	BColor = RGB(0,0,0)
+	LColor = RGB(106,90,205)
+	cls
+	cla
+
+	*nl & *nl & *nl & *nl & *nl & *nl & *nl & *nl & *nl & *nl & *nl & *nl
+	'<center><h1>END</h1></center>'
+
+	act 'Main menu':gt'start'
+	act 'Upload preservation':OPENGAME
+	act 'Download the latest cars-preservation':gt'gameover','load_autosave'
+end
+
+if $ARGS[0] = 'load_autosave':
+	if StoryLine = 0:
+		OPENGAME 'autosave.sav'
+	elseif StoryLine = 1:
+		OPENGAME 'autosave_alt.sav'
+	end
+end
+--- gameover ---------------------------------
+

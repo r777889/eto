@@ -1,0 +1,246 @@
+# artemhome
+gs'stat'
+
+$boy = 'Artem'
+dick = 16
+silavag = 0
+
+if artemhomemark = 0:
+	'You came to the house Artem Chebotarev.'
+
+	act 'Escape':minut += 15 & gt'gorodok'
+
+	if week < 6:
+		if hour < 16 and hour >= 7:
+			'Artem not at home.'
+		elseif hour >= 16 and hour < 20:
+			'Artem opened the door to you and invited to enter.'
+
+			act 'Login':artemhomemark = 1 & gt $curloc
+		elseif hour >= 20 or hour < 7:
+			'Too late, the time for, that would go to visit.'
+		end
+	elseif week >= 6:
+		if hour < 10:
+			'Too early time, that would go to visit.'
+		elseif hour >= 10 and hour < 20:
+			'Artem opened the door to you and invited to enter.'
+
+			act 'Login':artemhomemark = 1 & gt $curloc
+		elseif hour >= 20 or hour < 5:
+			'Too late, the time for, that would go to visit.'
+		end
+	end
+elseif artemhomemark = 1:
+	if (arthakQW = 1 or (artQW = 4 and arthakQW = 2)) and artomhakday ! daystart and artemblag = 0:
+		!I tell a lie, She refused
+		DimaRudeBlock = 1
+
+		'Artem tells you "There are no words - well, you whore.I was ready to do anything for you. I think after that I saw our relationship will move to another plane. A record pobudet let me - so that your head is not climbed all sorts of foolishness. And now ON KNEES BITCH! Suction - it`s the least you can do that I have not used this entry."Artem very disappointed and angry.It seems he began to despise you.'
+
+		act 'On knees':
+			cls
+			minut += 5
+			bj += 1
+			if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
+			swallow += 1
+			cumlip += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/artom/meet/hack_1.jpg"></center>'
+			'After these words, Artem rigidly fuck you in the mouth, you choke, You feel sick and flowing snot, tears and saliva, Artem long time to stand up and ends you right in the throat. You choking convulsively swallows sperm.'
+
+			act 'Catching his breath':
+				cls
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+				'Artem takes you by the hand and says, "I think that such a bitch are you showed no pity will devote my friend into the secrets of the female body." You shakes his head. "Well, then I spread your post to all social networks - and is unlikely that you will shine in the future... and another copy, I will give your mother.. And if you`re obedient bitch - I promise - that no one will show it and eventually destroy. So do not speak and go."'
+
+				act 'Break and run':
+					artemblok = 1
+					artomhakday = daystart
+					artomvbrosvid = 1
+					gt'gorodok'
+				end
+				act 'Go Artem':
+					cls
+					minut += 15
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+					'You go in the garage with Artem. In the garage you see Pete Klyuyev.'
+					'Artem: "Look who I have here. As I promised you, and Sveta has kindly agreed to teach us all the secrets of the female body. Anatomy Lessons will be held on Mondays. And today`s lesson we will start with...vagina!"'
+					'Artem: "Rastyanika pussy. I can imagine what else you got up Nosov!"'
+
+					act 'Stretch':
+						cls
+						minut += 15
+						vagina += 3
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/artom/fist.jpg"></center>'
+						'Artem: "Here Petruchio see what her capacious pussy. Yes, do not be afraid more - I know what you`re capable!"'
+						'You stretch even further.'
+						'Artem:"And not to be unfounded shove a hand."'
+						'Have you tried but did not get: "Give Vaseline please. It did not get." Artem gets some oil and then throws you "For a whore and it will fit." You grease the hands of those that have and stuff it in yourself.Strangely enough but you feel that begin to be excited by these humiliations.'
+						'Artem:"So let`s go there -here until the end!"'
+						'You do not have to say anything, you are flowing and that`s all about to finish.'
+						'Under the comments guys "Come on! come on!" you end exhausted and lie down on the floor.'
+
+						act 'Open your eyes':
+							cls
+							minut += 15
+							bj += 2
+							if npcSex[2] = 0:npcSex[2] = 1 & guy += 1
+							if npcSex[6] = 0:npcSex[6] = 1 & guy += 1
+							gang += 1
+							cumface += 2
+							facial += 1
+							arthakQW = 10
+							artemblok = 1
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/artom/doublebj.jpg"></center>'
+							'You open your eyes and see how Peter and Artem surrounded you masturbate their cocks.'
+							'Artem: "What looked - Get direct their work - you know how it is good. Petka now you enjoy all the pleasures of professional blow job!"'
+							'Did you get a hand from the vagina and start sucking the guys in turn and they end up on your face.'
+							'You:" You erase record?"'
+							'Artem: "Comp...but not today...we Petka at you a lot of plans. Do not roar.'
+							'It will be our little secret. Okay - until next week."'
+
+							act 'Escape':gt'garmassiv'
+						end
+					end
+				end
+			end
+		end
+		act 'Break and run':
+			artomvbrosvid = 1
+			artemblok = 1
+			artomhakday = daystart
+			gt'gorodok'
+		end
+	elseif (arthakQW = 2 or (arthakQW = 1 and artemblag = 1)) and artomhakday ! daystart:
+		arthakQW = 7
+		!truth
+		DimaRudeBlock = 1
+
+		'Artem tells you "All, I Rushed comp bow and destroyed records."'
+	end
+
+	if artemtimes >= 15 and artQW = 0 and lernHome > 0 and GorSlut < 2:artQW = 1 & gt'artemev2'
+
+	'Artem sits in his room on the bed.'
+
+	artomRand = rand(0,1)
+	if artomRand = 1 and artemtimes >= 45 and artomsex > 0 and artomanal > 0 and artomProgul ! day and (GorSlut < 2 or artemblag = 1):
+		artomProgul = day
+		cla
+		gs 'stat'
+		artomRand = rand(0,1)
+		if artomRand = 0:
+			'"Light, Let`s go for a walk?"'
+			act 'Agree':
+				'You agree, quickly packed up and went for a walk on the square.'
+				act 'Walk':dynamic $artomSkver
+			end
+			act 'Takeout': gt $curloc
+		else
+			'"Light, Let`s go to bibleotek, to write the essay?"'
+			act 'Agree':
+				'You agreed and went with Artem in bibleotek.'
+				act 'Do':dynamic $artomBibl
+			end
+			act 'Takeout': gt $curloc
+		end
+	end
+
+	if artQW = 2:
+		!I took the flowers but not wanker Artem
+		artcooldown += 1
+		if artcooldown >= 10:artcooldown = 0 & artQW = 1 & gt'artemev2'
+	elseif artQW = 3 and artomkissday ! daystart:
+		!wanker Artem
+		'Artem hugs you and kisses'
+		dynamic $artomKiss
+		
+	elseif artQW >= 2 and artQW <= 3 and artemtimes >= 30 and Suspeh >= 90 and GorSlut < 2:
+		artQW = 10
+		gt'artemev2'
+	elseif artQW = 20 and artomkissday ! daystart:
+		'Artem hugs you and kisses'
+		dynamic $artomKiss
+	end
+
+	if dimaFilm > 0 and arthakQW = 0 and vagina > 0:
+		act 'Ask Artem steal the video you shot Dima':
+			cls
+			minut += 15
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+			'You: "Artem we`re more than friends?"'
+			'Artem: "Of course."'
+			'You: "Could you help me in not just a single case? After all, you`re smart, and I had time to notice, well versed in computers?".'
+			'Artem: "Certainly help. Tell."'
+			'You: "Promise? Well, in general have Dimka Nosov has a bad record with me. It stores it on your computer. Can you crack it and destroy this computer record. Just do not see it please!"'
+			'Artem: "Okay, I`ll see what can be done. What about recording?"'
+
+			act 'Lied':
+				cls
+				minut += 5
+				artomhakday = daystart
+				arthakQW = 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+				'"Yes, I dance drunk and he took it on video and promised my mother tell" you lied.'
+
+				if lernHome > 0:
+					dynamic $din_artom_lern
+				else
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+				end
+			end
+			act 'To tell the truth':
+				cls
+				minut += 5
+				artomhakday = daystart
+				arthakQW = 2
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/artom/2.jpg"></center>'
+				'"It seemed to me that I love him and he took off like I`m doing him a blow job - now he is blackmailing me this." you said Artem downcast eyes.'
+
+				if lernHome > 0:
+					dynamic $din_artom_lern
+				else
+					act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+				end
+			end
+		end
+	end
+
+	if lernHome > 0:dynamic $din_artom_lern
+
+	act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+
+	if talkartemday ! daystart:
+		act 'Chatting with Artem':
+			cls
+			artemtimes += 1
+			talkartemday = daystart
+			minut += 60
+			manna += 10
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/npc/<<2>>.jpg"></center>'
+			'You talked for an hour with Artem. Rather you are talking, and Artem listened to your stream of consciousness.'
+
+			act 'Escape':artemhomemark = 0 & minut += 15 & gt'gorodok'
+		end
+	end
+end
+--- artemhome ---------------------------------
+

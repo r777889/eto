@@ -1,0 +1,43 @@
+# motel
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>Motel</H4></center>'
+'<center><img src="images/pic/motel.jpg"></center>'
+'Roadside motel where truckers stop for something to eat and to sleep.'
+
+act 'Exit the highway':minut += 15 & nroad = 14 & gt'road'
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!rebby add in!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+if hour >= 19 and hour < 23:
+	 'lots of trucks are parked around the motel, and a few of the drivers have gathered outside. talking, drinking, gambling'
+		act 'To approach the truckers':
+			cls
+			minut += 5
+			gs'stat'
+			'<center><img src="images/qwest/alter/trfatherQW/trfatherQW_4.jpg"></center>'
+			'You walked up to the men, most of whom seemed to leer at you'
+			'- Hello girlie, what are you doing out this time? You want to earn a quick buck?'
+			act 'refuse':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/trfatherQW/trfatherQW_5.jpg"></center>'
+				'- Go fuck yourselves assholes!.'
+				act 'Escape':minut += 5 & gt $curloc
+			end
+			act 'agree fuck for money':
+				cls
+				gt 'truckerfucker','start'
+				end
+			end
+		end
+	end
+end
+
+--- motel ---------------------------------
+

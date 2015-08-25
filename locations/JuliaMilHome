@@ -1,0 +1,179 @@
+# JuliaMilHome
+if BeInJulMilHome = 0:BeInJulMilHome = 1
+gs'stat'
+
+'<center><b><font color = maroon><<$npcName[12]>> <<$npcSurName[12]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
+'Not a bad room, with quality furnishings, It forced by all the books.'
+
+if lernHome ! 0:
+	'Julia arranges books on the table.'
+
+	act 'Engage with Julia':
+		cls
+		minut += 60
+		!grupNPC[14] += 10
+		lernHome = 0
+		lern += RAND(3,6)
+		intel += RAND(1,2)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
+		'You are within an hour engaged with Julia and lessons learned.'
+
+		act 'Breather':gt $curloc
+	end
+elseif lernHome = 0:
+	'Julia is sitting on her bed.'
+
+	if eatJulMilDay ! daystart:
+		'Julia smiles at you and offers to eat together.'
+
+		act 'Go to the kitchen with Julia':
+			cls
+			minut += 15
+			fat = fat + 3
+			energy = energy + 10
+			water = water +20
+			eatJulMilDay = daystart
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
+			'You went into the kitchen with Julia and ate together. Then we went back to her room'
+
+			act 'Breather':gt $curloc
+		end
+		act 'Takeout':
+			cls
+			eatJulMilDay = daystart
+			gt $curloc
+		end
+	else
+		if wine = 1:
+			act 'Drink wine with Julia':
+				cls
+				minut += 30
+				wine = 0
+				alko += 6
+				JulMilBestFrend += 1
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
+				'You offered Julia a glass of wine and she agreed. Julia brought a corkscrew and a bottle you have printed, then poured the wine by the glass. For half an hour you drink a bottle of wine along with Julia.'
+
+				act 'Breather':gt $curloc
+
+				if horny >= 50:
+					act 'Chat on sexual topics':
+						cls
+						minut += 5
+						if SexTalkJulia < 4:SexTalkJulia += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
+						'You began to discuss sexual topics with Julia'
+
+						if SexTalkJulia = 1:
+							'Suddenly you Julia was quite educated girl.'
+						elseif SexTalkJulia = 2:
+							'Julia while talking boasted that not a virgin.'
+
+							act 'Inquire details':
+								cls
+								minut += 5
+								horny += 10
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/ev2/outdoor.jpg"></center>'
+								'Julia smiled enigmatically and began to tell "I went to summer camp to rest. They met a guy named Vova. We met the whole shift and at the end of the evening shift observed in the forest. It began hugging, kiss, it was so nice, Besides, I was drunk. He first dropped me on my back, but there I was stuck between the shoulder blades is a stone, she did not understand what was on all fours, and even without a skirt and panties. Then he came at me. It was painful. She know, it does not say as the hymen is also a part of the body, and then it burst. To be honest the first time I was just waiting for cancer when it all finally ends. Well at least it did not last long and the guy had finished on the ground."'
+
+								act 'Breather':gt $curloc
+							end
+
+							exit
+						elseif SexTalkJulia = 3:
+							'Julia while talking again remembered his adventures in the camp.'
+
+							act 'Inquire details':
+								cls
+								minut += 5
+								horny += 10
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/ev2/otrad.jpg"></center>'
+								'Julia smiled enigmatically and began to tell "Well, after the first time I have left with the impression is not very. But I still managed to sleep with Vova before leaving the camp. We day when no one was in the bedroom with the slipped Vovka, He again began to harass me. Then I undressed and lay on the bed, terribly afraid that will hurt again, but it was well tolerated, Only in the beginning it was a little painful, but it quickly passed. Although I was unable to be stimulated, I was afraid, now in the squad somebody will go and see us. But there were. After that, I did not see Vovka. He is from the city, I have his telefonchik. But that does not really meet him."'
+
+								act 'Breather':gt $curloc
+							end
+
+							exit
+						elseif SexTalkJulia = 4:
+							'Julia embarrassed and tells you "You`re such a funny girl Light. I`m with you totally feel constraint." She suddenly tilts her face to your wishes and kiss you.'
+
+							act 'Kissing Julia':
+								cls
+								minut += 5
+								horny += 20
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/ev2/julkiss.jpg"></center>'
+								'You kiss with Julia feeling her soft, smelling lips on her lips and her delicate nimble tongue penetrates into your mouth. Her hands gently embrace you and you feel like it grabs your hands your breasts and begins to gently caress.'
+
+								act 'Relax':
+									cls
+									minut += 5
+									horny += 20
+									gs'stat'
+
+									'<center><img src="images/qwest/alter/ev2/jultit.jpg"></center>'
+									'Julia pulls your chest and slowly lowered her kisses. Finally, you feel like she kisses your nipples and caressing his chest. Her fingers you climb between her legs pushing your panties.'
+
+									act 'Relax':
+										cls
+										minut += 15
+										if npcSex[12] = 0:npcSex[12] = 1 & girl += 1
+										lesbian += 1
+										horny = 0
+										orgasm += 1
+										gs'stat'
+
+										'<center><img src="images/qwest/alter/ev2/julick.jpg"></center>'
+										'You with Julia undressed and you lay on your back, Julia threw her leg over your head and buried his face between her legs you, while exposing you to their expiring crack. You touched tongue to juicy vagina and began licking her, feeling while Julia handles the tab between your legs. Soon you covered real fire and your body convulsed orgasm. Julia felt your excitement and also finished her pussy convulsed start to decline in your face, and her body pierced shiver.'
+
+										act 'Breather':gt $curloc
+									end
+								end
+								act 'Oh you Julia, leave me alone':dom += 1 & gt $curloc
+							end
+							act 'Oh you Julia, leave me alone':dom += 5 & gt $curloc
+
+							exit
+						end
+
+						act 'Breather':gt $curloc
+					end
+				end
+			end
+		end
+
+		act 'Chat with Julia':
+			cls
+			minut += 15
+			JulMilBestFrend += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/npc/12.jpg"></center>'
+			'You talked to Julia about any nonsense.'
+
+			tiprand = RAND(0,5)
+			if tiprand = 0:'Julia mentions in passing that the earlier a friend of Natasha Belova, but she constantly took the money and did not give, and Julia got sick.'
+
+			act 'Breather':gt $curloc
+		end
+	end
+end
+
+act 'Going home':gt'gorodok'
+--- JuliaMilHome ---------------------------------
+

@@ -1,0 +1,63 @@
+# placer_sex
+gs'stat'
+
+if dormrape = 0:
+	'You`re lying on the creaking iron bed in a dorm room peteushnoy. Around you are <<$kol_man_text>> and discuss with each other "Well boys, who first fucks this slut?"'
+
+	act 'Further':
+		rape += 1
+		gang += 1
+		dormrape += 1
+		minut += 5
+		silavag = 0
+		$boy = 'Guy'
+		guy += kol_man
+		ciklkm = kol_man
+		if dormrapeQW = 0:dormrapeQW = 1
+		gt $curloc
+	end
+elseif dormrape = 1:
+	rand1=rand(0,100)
+	if rand1<10:'<center><img src="images/qwest/alter/placer/gopgang2.jpg"></center>'
+	if rand1>=10:'<center><img src="images/nigma/gor/orgy1,'+rand(0,4)+'.gif"></center>'
+	:markdormrape
+	ciklkm -= 1
+	minut += 15
+	dick = RAND(12,20)
+
+	tiprand = RAND(0,2)
+	if tiprand < 2:
+		dynamic $sexstart2
+		dynamic $sexcum
+	elseif tiprand = 2:
+		dynamic $analsexrude
+	end
+
+	if ciklkm > 0:'Then the space between your legs took the next guy.'
+	if ciklkm > 0 and cumbelly >= 5:cumbelly -= 4 & cumfrot += 4 & 'One of the guys began to resent "Shit, boys, Cho you like this slut zastruhali? By the same approach to her dumb! In short let her clothes, I though it pizden Wipe" You feel as you wipe the stomach and stuck to the vagina which is cloth.'
+	gs'stat'
+	if ciklkm > 0:jump'markdormrape'
+
+	endrandom = RAND (0,1)
+	if endrandom = 0:
+	'Finally, it`s all over, guys got dressed and left the room. You sluggishly began to brush up.'
+		act 'Escape':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+	
+	elseif endrandom = 1:
+		act 'Ochuhalsya':
+			cla
+			cls
+			minut += 5
+			body_write = 5
+			face_write = 1
+			podvalwriterand = RAND (1,6)
+			gs 'stat'
+			
+			'<center><img src="images/qwest/alter/placer/podvalwrite<<podvalwriterand>>.jpg"></center>'
+			'When you finally came to their senses, then to my shame we discovered that your body is covered with writing all sorts of vulgar and offensive epithets. Guys nice frolic before left the room. You began to frantically brush up. '
+ 			act 'Escape':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+		end  	
+	end
+end
+--- placer_sex ---------------------------------
+

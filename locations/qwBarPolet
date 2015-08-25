@@ -1,0 +1,20 @@
+# qwBarPolet
+minut += 5
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Bar "Flight"</font></b></center>'
+
+if hour >= 10:
+	'<center><img src="images/qwest/kim/bar.jpg"></center>'
+	'At the bar sat a few visitors. The bartender with a face scarred missing pours beer mugs.'
+else
+	'The bar is closed and the inlet written "Opening hours 10 to 24hours."'
+end
+
+act 'Escape':gt'nord'
+--- qwBarPolet ---------------------------------
+

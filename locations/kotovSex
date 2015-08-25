@@ -1,0 +1,253 @@
+# kotovSex
+$din_kotov_bj = {
+	act 'Take in the mouth':
+		cls
+		minut += 5
+		bj += 1
+		bja += 1
+		if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
+		bjrand = RAND(0,6)
+		kotovBJtimes += 1
+		if pirsA = 0:$textsexkotov = 'tongue caressed the head'
+		if pirsA > 0:$textsexkotov = 'tongue caressed the head feeling the rod in your language moves from the blows of a member'
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/ev/kotovBJ<<bjrand>>.jpg"></center>'
+		'You stroked his crotch and Victor felt his cock began to rise. Vitek quickly pulled off his pants and lay on the bed. You sit back and between his legs wrapped around his lips his standing member started to suck. You sucked hard cock to fill the throat from ear to ear, <<$textsexkotov>> and took a member of the cheek. Soon groaned Vitek "Svetik, I`ll finish!"'
+
+		if kotovBJtimes > 5:
+			act 'Continue to suck':
+				cls
+				minut += 5
+				cumlip += 1
+				bjrand = RAND(0,6)
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/ev/kotovBJcum.jpg"></center>'
+				'You have continued to suck and a jet of hot cum hit you in the mouth.'
+
+				act 'Sucking swallowing sperm':
+					cls
+					minut += 5
+					swallow += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/ev/cocksuck2.jpg"></center>'
+					'You suck dick ended up swallowing sperm, as soon as it hits your mouth. Finally Vitek end stops and pulls his dick out of your mouth.'
+
+					act 'Escape':gt'gorodok'
+				end
+
+				if kotovBJtimes > 10:
+					act 'Suck hold semen in the mouth':
+						cls
+						minut += 5
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/ev/kotovBJcum4.jpg"></center>'
+						'You suck dick ends that fills your mouth with sperm. Finally Vitek end stops and pulls his dick out of your mouth.'
+
+						act 'Spit out':
+							cls
+							minut += 5
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/ev/gop8.jpg"></center>'
+							'You quickly went to the bathroom and spit out the sperm in the sink.'
+
+							act 'Escape':gt'gorodok'
+						end
+
+						if kotovBJtimes > 12:
+							act 'Swallow':
+								cls
+								minut += 5
+								swallow += 1
+								vaf += 1
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/ev/kotovBJcum5.jpg"></center>'
+								'Once Vitek member gets out of your mouth, You gulp swallow semen, left behind a sharp aftertaste.'
+
+								act 'Escape':gt'gorodok'
+							end
+						elseif kotovBJtimes > 15:
+							act 'Play with sperm':
+								cls
+								minut += 5
+								swallow += 1
+								vaf += 1
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/ev/kotovBJcum2.jpg"></center>'
+								'Once Vitek member gets out of your mouth, you open your mouth in front of him and begins to play with sperm.'
+
+								act 'Escape':gt'gorodok'
+							end
+						end
+					end
+				end
+			end
+		end
+
+		act 'Remove from the mouth':
+			cls
+			minut += 5
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/ev/kotovHJ.jpg"></center>'
+			'Did you get a member of the mouth and begin to masturbate hand.'
+
+			if kotovBJtimes > 15:
+				act 'Send to the person':
+					cls
+					minut += 5
+					cumface += 1
+					facial += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/ev/kotovFacial.jpg"></center>'
+					'You will be sent to members on its face and a hot jet of sperm hits you in the face. Then another and another jet. Your face is covered with falling over, and Vitek member removes pants.'
+
+					act 'Escape':gt'gorodok'
+				end
+			end
+
+			act 'Cum in his hands':
+				cls
+				minut += 5
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/ev/kotovHJ2.jpg"></center>'
+				'You pinch ends and a member of the palms into your hand starts to whip the sperm out of the penis.'
+
+				act 'Escape':gt'gorodok'
+			end
+		end
+	end
+}
+
+$din_kotov_anal = {
+	act 'Substitute the ass':
+		cls
+		minut += 30
+		cumanus += 1
+		anala += 1
+		anus += 1
+		if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/anal.jpg"></center>'
+
+		dynamic $sexstart
+		dynamic $analsex
+		if dikos = 1:'All Svetik Hare. I can not anymore.'
+
+		if dikos = 0 and horny >= 30: 
+		    act 'Vitya, want more.':
+                dikos = 1
+                gs'stat'
+		        'You said Vitka, what else you want.'
+		        'To which he replied, - "Kick you Svetik insatiable, I figeyu".'    
+		        dynamic $din_kotov_anal
+			    dynamic $din_kotov_sex
+			end
+		end
+
+		act 'Escape':dikos = 0 & gt'gorodok'
+	end
+}
+
+$din_kotov_sex = {
+	act 'Lie on your back':
+		cls
+		minut += 30
+		sexa += 1
+		kotovVagSex += 1
+		if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
+		'You lay on your back. Vitek lay on top and spread your legs.'
+
+		dynamic $sexstart
+		dynamic $sexstart2
+		dynamic $sexcum
+
+		if dikos = 1:'All Svetik Hare. I can not anymore.'
+		
+		if dikos = 0 and horny >= 30: 
+		    act 'Request More':
+		        'You said Vitka, what else you want.'
+		        'To which he replied, - "Kick you Svetik insatiable, I figeyu".'    
+		        dikos = 1
+		        dynamic $din_kotov_anal
+			    dynamic $din_kotov_sex
+			end
+		end
+
+		act 'Escape':dikos = 0 & gt'gorodok'
+	end
+}
+
+dick = 18
+silavag = 2
+$boy = 'Vitek'
+minut += 15
+gs'stat'
+
+'<center><b><font color = maroon><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
+if KotovZverHelp = 1 and lariskaQwestDay = daystart:
+	'You lifted and kisses on the lips Kotova:'
+	'- It`s time to reward my hero'
+end
+'Vitek began to touch and kiss you. "In short Svetsik, undressed."'
+
+if vagina = 0 and sex = 0:
+	if SchoolAtestat = 0:
+		act 'I`m still a girl':
+			cls
+			minut += 5
+			gs'stat'
+
+			'You said Vitka, that you have a girl. He scratched his head "That ambush, but still I did not finish school. Well then take on canine or popets. If cheek take, I`ll fucking, will not tell anyone, that you took in the mouth."'
+
+			dynamic $din_kotov_bj
+			dynamic $din_kotov_anal
+		end
+	else
+		act 'I`m still a girl':
+			cls
+			minut += 5
+			gs'stat'
+
+			'You said Vitka, that you have a girl. He grinned "Come on, garbage, You finished school, Now an adult. Not well, of course you can take on canine or popets."'
+
+			dynamic $din_kotov_bj
+			dynamic $din_kotov_anal
+			dynamic $din_kotov_sex
+		end
+	end
+else
+	act 'Undress':
+		cls
+		minut += 5
+		gs'stat'
+
+		'You quickly took off his clothes and undressed too Vitek.'
+
+		dynamic $din_kotov_sex
+
+		if dom > 0:dynamic $din_kotov_anal
+		if KotovKnowPirsA = 1:dynamic $din_kotov_bj
+	end
+end
+
+if pirsA = 1 and KotovKnowPirsA = 0:
+	KotovKnowPirsA = 1
+
+	'Vitek suddenly looked you in the face. "And what`s that on your language?" You stuck out her tongue and showed post. Vitek grinned "Heh, this, to suck dick better?" You frowned and called Victor vulgar. He grinned "Come Svetsik, I will not tell anyone, if you take the cheek."'
+end
+--- kotovSex ---------------------------------
+

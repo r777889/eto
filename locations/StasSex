@@ -1,0 +1,66 @@
+# StasSex
+if SStip = 0:
+	minut += 5
+	horny += 10
+	gs'stat'
+
+	'<center><img src="images/qwest/sosed/stas.jpg"></center>'
+	'You entered the apartment and Stas razuvshis, immediately dug his lips to yours and you feel his hand covered your breasts started to caress them and compress. He`s not stopping to caress you, It led to your bedroom.'
+
+	act 'Going into the bedroom':
+		cls
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/pov.jpg"></center>'
+		'Stas dropped you on the bed and began to undress you without stopping to caress your breasts and undress himself.'
+
+		act 'Further':
+			cls
+			if StasikSex > 0:StasikSex += 1
+			if StasikSex = 0:StasikSex = 1 & guy += 1
+			!if ValeraSex = 0:ValeraSex = 1 & guy += 1
+			!gang += 1
+			minut += 15
+			gs'stat'
+
+			'<center><img src="images/qwest/sosed/sex.jpg"></center>'
+			'You are relaxed and began to enjoy the caress breasts and pussy.'
+
+			$boy = 'Stas'
+			dick = 15
+			silavag = 1
+			pose = 0
+
+			!dynamic $sexstart
+
+			'You feel how the body Stasik expanded the your legs and rested his hard cock into your soft, expiring pussy juice.'
+
+			dynamic $sexstart2
+			!dynamic $sexcum
+
+			cumpussy = cumpussy + 1
+
+			'<<$boy>> I groaned, and you feel like a jet of sperm hit you inside your body.'
+
+			if tabletki <= 0 and mesec <= 0:
+				gs'preg'
+				manna = manna - 15
+				willpower = willpower - 15
+				'Hell, because after all, you can fly, you thought with horror.'
+			end
+
+			act 'Breathe':
+				cls
+				minut += 5
+				gs'stat'
+
+				'<center><img src="images/qwest/sosed/aftersex.jpg"></center>'
+				'Stas tears with you and is located next to a hand stroking your chest. From your pussy slowly follows the sperm mixed with your vaginal juices. Stas said apologetically "I`m sorry that you had finished, I could not resist." He reached out and began to get out of bed. "Well, I have to go Svetsik."'
+
+				act 'Carry out the door':gt'korr'
+			end
+		end
+	end
+end
+--- StasSex ---------------------------------
+

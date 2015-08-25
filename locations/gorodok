@@ -1,0 +1,306 @@
+# gorodok
+$metka = $ARGS[0]
+$loc = $CURLOC
+$metkaStreet = $ARGS[0]
+$locStreet = $CURLOC
+
+cla
+*clr
+litltown = 1
+alkoblock = 0
+boynumBlock = 0
+music_on = 0
+
+'<center><H4>Town</H4></center>'
+'<center><img src="images/pic/gorodok.jpg"></center>'
+'Quiet provincial town indistinguishable from thousands of others like him towns. The restored church domes rise above the dilapidated shacks that were built more German prisoners.'
+
+if belgangQW=1000 and hour>=16 and hour<21 and daybelisex!daystart:
+daybelisex=daystart
+belrand=rand(1,100)
+     if belrand<=40:
+     'It drives you to the old Mitsubishi Pajero with White and his` brother
+     - Slysh, slut, hop, you go to work off debts.'
+         act'Take the jeep':
+         cls
+         minut+=5
+         gs'stat'
+         'You sat in the backseat of a jeep and drove around the city White.'
+         if month>=4 and month<=8:
+			 tiperand=rand(0,1)
+				 if tiperand=0:
+				 'The car drove out of the city and one of the silent bandyukov deigned to explain
+				 - Picnic we planned for nature.
+				 Finally the car stopped somewhere near the road and got out bandyuki.'
+				 act'Get out of the car':gt'belpicknick'
+				 end
+				 if tiperand=1:
+				 'The car pulled up to the well-groomed private home with high metal fence'
+				 act'Get out of the car':gt'belgang'
+				 end
+			 end
+		 else
+		 'The car pulled up to the well-groomed private home with high metal fence'
+		 act'Get out of the car':gt'belgang'
+         end
+         
+     exit
+     end
+end
+
+if belgangQW=100 and hour>=16 and hour<21 and daybelisex!daystart:
+daybelisex=daystart
+belrand=rand(1,100)
+     if belrand<=40:
+     'It drives you to the old Mitsubishi Pajero and from the open driver`s window looks fat bald mug White.
+     - In short Svetsik, sit down, drive around.'
+         act'Take the jeep':
+         cls
+         minut+=5
+         gs'stat'
+         'You got into the jeep and drove around the city White.'
+         tiperand=rand(1,100)
+             if tiperand<=30:
+             'White said, unbuttoning his pants
+             - Svetik ,I have a little time, so let`s hurry'
+             	 act'Suck':
+				 cls
+				 bj+=1
+				 cumlip+=1
+				 swallow+=1
+				 minut+=5
+				 money+=500
+				 gs'stat'
+				 mrapic=rand(0,5)
+                 !'<<mrapic>>'
+                 '<center><img src="images/lur/sex/carBJ<<mrapic>>.gif"></center>'
+				 'You leaned against a member of the White and began to suck, the fat man did not last long and nasty cum began to shoot you in the mouth. Spits it was nowhere to go, and you began to swallow it. When White cum stopped, he stopped the car and shoving you five hundred shoved you on the street.'
+				 act'Escape':gt $curloc
+				 end
+             else
+             'Soon you approached the ordinary five-storey and white close up of the car will take you to the apartment.'
+				 act'Look around':
+				 cls
+				 minut+=5
+				 gs'stat'
+				 'You visited the apartment. Not bad repair, a minimum of furniture and a complete lack of any decorations and home comfort, likely Apartment Renting. White did not give you long osmatrivatsya and take you closer to him, smelling his tobacco mouth clung to your tender lips and you feel, he shoves his tongue in your mouth.'
+				 act'Tselovatsya':gt 'BelSex'
+				 end
+             end
+         end
+     exit
+     end
+end
+
+if 	belgangQW=9000 and belgangday<daystart:
+'Near the stop you order Mitsubishi Pajero shabby and out climbed lads. White immediately went to you and said,
+- Well, how are you doing Svetlana? There is good news?'
+     if money>=belgangPay:
+         act'Give money':
+         cls
+         gs'stat'
+         'You got the money and handed them over to gangsters. White smile.
+         - I hope it is not necessary to recalculate? And then we can go back.
+         You shook your head.
+         - It`s all the money, And count the better of me.'
+         
+         'White counted the money
+         - Okay, the entire amount on the spot. Well, do not be ill Svetsik.
+         After that, the whole gang sat back in the Jeep and the growling of burnt silencer left.'
+         belgangQW=9999
+         money-=belgangPay
+         gs'stat'
+         act 'Escape':gt $curloc
+         end
+         
+     else
+         act'I do not have that kind of money.':
+         cls
+         gs'stat'
+         'You almost weeping shook their heads.
+         - I do not have that kind of money.
+         The bald man frowned.
+         - Ah ah ah, Svetik, how bad it, Well nothing, I love you in a warm place one Pristrom, there you exhaust me alive.'
+         
+         'You immediately grabbed and force landed in the jeep. The whole gang of village sites and Mitsubishi growling Burned silencer drove on the highway in the direction of the city.'
+         minut+=60
+             belgangQW=10000
+             workDolg=belgangPay
+			 workDolg -= money
+			 money = 0
+			 belgangPay=0
+         'You`ve come to the sauna. Bandits have been dragged into what that room and started to explain. "You will live here and work, until not pay off your debts. All clear? Or try to escape the buzz, all, we`ll put a bullet in the head off and bury you in the woods, truncated?"'
+		 'You nodded fearfully, realizing that they were not kidding.'
+		 act 'Look around':gt'saunaroom'
+         
+         end
+     end
+exit
+end
+
+if AlbFather >= 1:
+	if AlbFaterBlackTime = 0:AlbFaterBlackTime = totminut+2880
+	'In the houses are seen pasted posters. "Boris Barlovsky, Our candidate!"'
+end
+if AlbFaterBlackTime > 0 and AlbFaterBlackTime <= totminut and hour >= 16 and AlbFather = 1:
+	gt'AlbFatherQW'
+end
+
+if hour >= 16 and hour <= 22 and AlbFather = 2 and AlbZaDay+30 < daystart and year > 2010:
+	gt'AlbStarsEnd'
+end
+
+if StoryLine > 0 and hour < 5 and motherWorry = 0 and SchoolAtestat = 0 and age < 18:
+	motherWorry = 1
+end
+
+if NosovRevenge = 2 and daynosovrevenge+1 >= daystart:
+	cls
+	gs'stat'
+
+	'<center><b><font color = maroon><<$npcName[1]>> <<$npcSurName[1]>></font></b></center>'
+	'<center><img src="images/qwest/alter/npc/1.jpg"></center>'
+	'Near the house, waiting for you to suddenly Dima Nosov "Well slut. If you do not want to have that video became public, Now let`s go and talk to me."'
+
+	act 'Go to the Dime':
+		cls
+		NosovRevenge = 3
+		minut += 30
+		gs'stat'
+
+		'You went to the house of Dima. The house where he lives belongs to his parents, This large two-storey, detached house with a manicured lawn and a large garden. Together with Dima you went into his room and he closed the door with a key.'
+
+		act 'Go into the room Dima':gt'dimaHome'
+	end
+
+	exit
+end
+
+dynamic $din_street_cum
+
+gorodokwhorerand = RAND(1,5)
+if GorSlut = 3 and gorodokwhorerand >= 4:'You catch the eyes of people, Some try to find out who is in you-then, maybe, and learn. Occasionally you hear the laughter of people. It seems, who-I learn something about your adventures.'
+if GorSlut = 4 and gorodokwhorerand >= 4:'People look at you with a smile, who-It is doing something vulgar gestures toward you, Some allude to your adventures.'
+if GorSlut >= 5 and gorodokwhorerand >= 4:'All around you will recognize whore. Some, passing, slap you on the ass. Grandma on the benches name-calling you whore.'
+
+gorodokstreetsexrand = RAND(1,10)
+if GorSlut > 5 and gorodokstreetsexrand = 10:
+	'To you I approached the guy and offered to move into the bushes for a hundred fuck'
+
+	act 'Agree':gt'gevent','5'
+	act 'Takeout':gt $curloc
+	exit
+end
+
+gs'stat'
+gs'time'
+
+$cartext = ''
+if car > 0 and cardrive = 20:
+	cardrive = 20
+
+	$gcartext = 'Around the house is a parking lot <a href="exec:GS ''carF'',''start''">your <<$car>></a>'
+end
+
+if StoryLine = 1 and ParHomeBlock = 0:'The old five etazhke, in <a href="exec:minut += 2 & GT ''pod_ezd'',''etaj_1''">entrance number1</a> is located <a href="exec:minut += 15 & GT ''korrPar''">apartment</a> your parents. <<$gcartext>>'
+
+if rexCar = 1 and rexCarDay = daystart and hour >= 21 and hour < 23 and rexSisTalk = 3:
+	'At the entrance you expect Rex.'
+	act 'Sit in the car':gt'reks','avto'
+end
+if rexCar = 1 and rexCarDay = daystart and hour = 21 and rexSisTalk = 4:
+	'At the entrance you expect Rex.'
+	act 'Sit in the car':gt'reks','avto2'
+end
+
+if ArtomBeInHome > 0 and artemblok = 0:'Apartment <a href="exec:minut += 15 & GT ''artemhome''">Artem Chebotarev</a>'
+if LariskaHomeIn > 0: 'Apartment <a href="exec:minut += 15 & GT ''LariskaHome''">Lariska Gruzdevaya</a>'
+
+'<a href="exec:minut += 15 & GT ''vokzalG''">Railway station</a>, which is located near the car <a href="exec:GT ''zaprF'',''start''">filling</a>'
+
+if hour >= 8 and hour <= 20:
+	$gapteka = 'next to which is <a href="exec:minut += 15 & GT ''gaptek'',''start''">pharmacy</a>'
+else
+	$gapteka = 'next to it is a pharmacy'
+end
+'District <a href="exec:minut += 15 & GT ''gpoli''">policlinic</a>, <<$gapteka>>'
+
+'District <a href="exec:GT ''gdk''">House of Culture</a>'
+
+if SchoolBlock = 0:'Local <a href="exec:GT ''gschool''">school</a>'
+if hour >= 7 and hour <= 18:'<a href="exec:GT ''etoexhib'',''pos20''">Vocational School.</a>'
+if hour >= 8 and hour <= 20:'The only major store in town <a href="exec:GT ''shop'',''start''">supermarket</a>'
+if hour >= 9 and hour <= 19:'Local <a href="exec:minut += 5 & GT ''barbershop'',''start''">barbershop</a>. One and only'
+
+if hour >= 8 and hour <= 22:
+	$gkiosk = 'At the booth next to him sell <a href="exec:dynamic $kiosksig">Cigarettes</a>.'
+else
+	$gkiosk = 'Near the kiosk located.'
+end
+'Small city <a href="exec:GT ''gskver'',''park''">square</a>, where people rest. <<$gkiosk>>'
+
+'Apart from residential buildings is <a href="exec:minut += 5 & GT ''garmassiv''">garage array</a>'
+
+'A small <a href="exec:GT ''Glake''">lake</a> lurking behind Township.'
+'Urban development enterprise <a href="exec:minut += 15 & GT ''Gshveyfab'',''start''">Sewing Factory named after the Paris Commune</a>'
+
+if DimaBeHomeOnce = 1 and DimaRudeBlock = 0:'Private house in which he lives <a href="exec:minut += 15 & GT ''dimaGoHome2''">Dima Nosov</a>'
+if katjaFirstKiss >= 1:'Private house in which he lives <a href="exec:minut += 15 & GT ''KatjaHome''">Katya Meynold</a>'
+
+if BeInNatBelHome = 1:
+	if hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:
+		'The house where the apartment <a href="exec:minut += 15 & GT ''NatBelHome''">Natasha Belova</a>'
+	end
+end
+
+if BeInJulMilHome = 1:
+	if hour >= 18 and hour <= 20 and week < 6 or hour >= 8 and hour <= 20 and week >= 6:
+		'The house where the apartment <a href="exec:minut += 15 & GT ''JuliaMilHome''">Julia Milova</a>'
+	end
+end
+
+if beinalbinahome > 0:'Luxury house in which he lives <a href="exec:minut += 15 & GT ''albinaporog''">Albina Barlovskaya</a>'
+
+if workPTU > 2:act '<b>Go to the hostel</b>':gt'etoexhib','pos40'
+
+act 'Wait':
+	cla
+	waiting = input ("How many minutes to wait? (Not more 120 minutes)")
+	if waiting <= 0 or waiting > 120:
+		minut = minut + 15
+	elseif waiting > 0 and waiting <= 120:
+		minut = minut + waiting
+	end
+
+	act 'Consult a watch':gt curloc
+end
+
+if StoryLine = 1 and hour >= 8 and hour < 23:
+	if cumface > 0:
+		sosedrand = RAND(0,3)
+		if sosedrand = 0 and sosedday ! day:
+			cls
+			if sosedknow = 0:
+				sosedknow = 1
+				sosedday = day
+				gs'stat'
+
+				'Suddenly someone calls out to you "Sveta." You turn around and see a neighbor uncle Misha, he looks at your face with surprise "It`s in your face?" You blush and hesitate, trying his hand to wipe off the face of sperm. He grins "Oh well, all clear." and goes on about his business.'
+
+				act 'Further':gt curloc
+
+				exit
+			elseif sosedknow > 0:
+				sosedday = day
+
+				'Once again you are confronted face to face with Uncle Misha, your neighbor, He chuckled looking at you "Well, she asks you and the whore."'
+
+				act 'Further':gt curloc
+			end
+		end
+	end
+end
+
+!act 'Rating':gt'ratinglist'
+--- gorodok ---------------------------------
+

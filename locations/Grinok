@@ -1,0 +1,247 @@
+# Grinok
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>Mall</H4></center>'
+'<center><img src="images/pic/Grinok.jpg"></center>'
+'A small market is located near <a href="exec:minut += 3 & GT ''vokzalG''">Station</a>'
+
+if hour >= 12 and hour <= 18:
+	'In the market the sellers of goods and beckoning shoppers.'
+
+	act 'Wander on the market':
+		cls
+		minut += 15
+		gs'stat'
+
+		'You 15five minutes hang market among buyers.'
+
+		if intel >= 100:rinmaxrand = 2
+		if intel >= 75 and intel < 100:rinmaxrand = 4
+		if intel >= 50 and intel < 75:rinmaxrand = 6
+		if intel >= 25 and intel < 50:rinmaxrand = 8
+		if intel < 25:rinmaxrand = 10
+
+		rinevrand = RAND(0,rinmaxrand)
+		if rinevrand = 0:
+			rinevtip = RAND(0,6)
+			if rinevtip = 0:
+				kosmpayrand = RAND(3,8)
+				kosmpay = kosmpayrand*100
+
+				'You see what they sell quite cheap cosmetics for <<kosmpay>> rubles'
+
+				if money >= kosmpay:
+					act 'Buy':
+						cls
+						minut += 15
+						money -= kosmpay
+						kosmetica += RAND(10,40)
+						gs'stat'
+						gt $curloc
+					end
+				end
+			elseif rinevtip = 1:
+				tovpayrand = RAND(2,5)
+				tovpay = tovpayrand*100
+
+				'You see they sell for Vitaminka <<tovpay>> rubles'
+
+				if money >= tovpay:
+					act 'Buy':
+						cls
+						minut += 15
+						vitamin += 20
+						money -= tovpay
+						gt $curloc
+					end
+				end
+			elseif rinevtip = 2:
+				tovpayrand = RAND(2,8)
+				tovpay = tovpayrand*10
+
+				'You see that sell condoms for <<tovpay>> rubles'
+
+				if money >= tovpay:
+					act 'Buy':
+						cls
+						minut += 15
+						prezik += 5
+						money -= tovpay
+						gt $curloc
+					end
+				end
+			elseif rinevtip = 3:
+				tovpayrand = RAND(5,10)
+				tovpay = tovpayrand*100
+
+				'You see that selling lip balm for <<tovpay>> rubles'
+
+				if money >= tovpay:
+					act 'Buy':
+						cls
+						minut += 15
+						lipbalm += 20
+						money -= tovpay
+						gt $curloc
+					end
+				end
+			elseif rinevtip = 4:
+				tovpayrand = RAND(1,5)
+				tovpay = tovpayrand*1000
+
+				'You see they sell for handbag <<tovpay>> rubles'
+
+				if bag = 0:
+					if money >= tovpay:
+						act 'Buy':
+							cls
+							minut += 15
+							bag = 1
+							money -= tovpay
+							gt $curloc
+						end
+					end
+				elseif bag > 0:
+					'Hmm, you already have a bag, Why do you need another.'
+				end
+			elseif rinevtip = 5:
+				if pornmarkonce = 0:pornmarkonce = 1
+
+				'Strolling on the market you happen to wander into the far corner where they sell porn.'
+
+				act 'Step up':gt'Gpornmark'
+			elseif rinevtip = 6:
+				if arturKnow = 0:
+					'Suddenly you hail "Hey devyushka, tangerine want skyushat?"'
+
+					act 'Look back':gt'arturRinok','start'
+				elseif arturKnow > 0:
+					'Suddenly you hail "Hey Svetsik, come here, skyushay tangerine."'
+
+					act 'Step up':gt'arturRinok','start'
+				end
+			end
+		else
+			'Nothing unusual you do not come across, trash, buckets, granny gowns, sneakers, breeches and waistcoats with pockets.'
+		end
+
+		act 'Go further':gt $curloc
+	end
+
+	if pornmarkonce = 1:
+		act 'Go to the corner with porn':gt'Gpornmark'
+	end
+
+	if arturKnow = 1 and arturQW = 0:
+		act 'Go to Arthur':gt'arturRinok','start'
+	elseif arturQW = 1 and (week = 6 or week = 7):
+		if hour = 12 or hour = 13:
+			act 'Go to Arthur':gt'arturRinok','work_1'
+		end
+	elseif arturQW = 2:
+		if hour = 16 and minut >= 0 and minut <= 30:
+			act 'Go to Arthur':gt'arturRinok','work_2'
+		elseif hour < 16:
+			act 'Wait Arthur':hour = 16 & minut = 0 & gt'Grinok'
+		end
+	end
+
+	act 'Go to the book tray':
+		cls
+		minut += 15
+		gs'stat'
+
+		'On the counter is a very entertaining fantasy book, that is all 150 rubles and women`s novels are in paperback standing 300 rubles.'
+
+		if money >= 150:
+			act 'Buy a book of fantasy 150r':
+				cls
+				minut += 15
+				money -= 150
+				f_book += 1
+				gs'stat'
+
+				'You bought the book for fantasy 150 rubles.'
+
+				act 'Escape':gt $curloc
+			end
+		end
+
+		if money >= 300:
+			act 'Buy ladies for romance 300r':
+				cls
+				minut += 15
+				money -= 300
+				w_book += 1
+				gs'stat'
+
+				'You bought the novel for the ladies 300 rubles.'
+
+				act 'Escape':gt $curloc
+			end
+		end
+
+		act 'Escape':gt $curloc
+	end
+	
+	 if gobelen>0 and gobQW=0:
+	     act'Sell ​​tapestry':
+	     cls
+	     gobQW=1
+	     minut+=15
+	     gs'stat'
+	     'You get up quietly at the entrance to the market and waiting for customers deploying Tapestry. To you immediately together buyers fit man and tells you, that the illegal trade in banned in the market, but it can buy you in any number of tapestries, on 500 rubles apiece.'
+	     act 'Escape':gt $curloc
+	     end
+	 end
+	 if gobelen>0 and gobQW>=1:
+	     act'Sell ​​tapestry':
+	     cls
+	     minut+=15
+	     gs'stat'
+	     'You go to a man who offered to buy you for tapestries 500 rubles. You have been spotted smiling.'
+	     	 if gobQW=2:
+	         'Roman welcomes you interested and businesslike, that you have for sale.'
+	         end
+	         if gobQW=1:
+	         gobQW=2
+	         'Man greets you and seems Roman, you just answer, that your name is Sveta. After greeting the Roman busily interested, that you have for sale.'
+	         end
+	             act'Show tapestry':
+	             cls
+	             gobelen-=1
+	             money+=500
+	             gs'stat'
+	             'You show tapestry Roman and he gives you five hundred for it. You take the money and give him a tapestry.'
+	             act 'Escape':gt $curloc
+	             end
+	             
+	             if gobelen>1:
+	             	 act'Sell ​​all tapestries':
+					 cls
+					 kolgob=gobelen
+					 gobelen=0
+					 moneyGob=kolgob*500
+					 money+=moneyGob
+					 gs'stat'
+					 'You show tapestries novels and it gives you <<moneyGob>> rubles for them. You take the money and give him a tapestry.'
+					 act 'Escape':gt $curloc
+					 end
+	             end
+	     act 'Escape':gt $curloc
+	     end
+	 end
+else
+	'In the market there is no one.'
+	
+	if arturQW = 1 and (week = 6 or week = 7) and hour < 12:
+		act 'Wait Arthur':hour = 12 & minut = 0 & gt'Grinok'
+	end
+end
+--- Grinok ---------------------------------
+

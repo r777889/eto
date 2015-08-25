@@ -1,0 +1,314 @@
+# rinok
+if $ARGS[0] = 'start':
+	$rinbuy1 = {
+		cla
+		*clr
+
+		portion = input ("How much do you want to buy?")
+		if portion <= 0:portion = 1
+		if portion*50 > money:'You do not have enough money.'
+		if portion*50 <= money:
+			fairy += portion
+			money = money - portion*50
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid the cashier and bought dishwashing detergent.'
+		end
+
+		act 'Move away from the counter':gt'rinok','start'
+	}
+
+	$rinbuy2 = {
+		cla
+		*clr
+
+		portion = input ("How much do you want to buy?")
+		if portion <= 0:portion = 1
+		if portion*150 > money:'You do not have enough money.'
+		if portion*150 <= money:
+			poroshok += portion
+			money = money - portion*150
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid the cashier and bought washing powder.'
+		end
+
+		act 'Move away from the counter':gt'rinok','start'
+	}
+
+	$rinbuy3 = {
+		cla
+		*clr
+
+		portion = input ("How much do you want to buy?")
+		if portion <= 0:portion = 1
+		if portion*150 > money:'You do not have enough money.'
+		if portion*150 <= money:
+			cltarelka += portion*3
+			money = money - portion*150
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid in cash and bought a plate.'
+		end
+
+		act 'Move away from the counter':gt'rinok','start'
+	}
+
+	$rinbuy4 = {
+		cla
+		*clr
+
+		portion = input ("How much do you want to buy?")
+		if portion <= 0:portion = 1
+		if portion*500 > money:'You do not have enough money.'
+		if portion*500 <= money:
+			kosmetica += portion*25
+			money = money - portion*500
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid the cashier and bought cosmetics.'
+		end
+
+		act 'Move away from the counter':gt'rinok','start'
+	}
+
+	$rinbuy5 = {
+		cla
+		*clr
+
+		portion = input ("How much do you want to buy?")
+		if portion <= 0:portion = 1
+		if portion*200 > money:'You do not have enough money.'
+		if portion*200 <= money:
+			stanok += portion*10
+			money = money - portion*200
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid in cash and bought a razor.'
+		end
+
+		act 'Move away from the counter':gt'rinok','start'
+	}
+
+	$rinbuy6 = {
+		cla
+		*clr
+
+		portion = input ("How much do you want to buy?")
+		if portion <= 0:portion = 1
+		if portion*150 > money:'You do not have enough money.'
+		if portion*150 <= money:
+			tampon += portion*20
+			money = money - portion*150
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid the cashier and buy tampons.'
+		end
+
+		act 'Move away from the counter':gt'rinok','start'
+	}
+
+	$rinbuy7 = {
+		cla
+		*clr
+
+		portion = input ("How much do you want to buy?")
+		if portion <= 0:portion = 1
+		if portion*200 > money:'You do not have enough money.'
+		if portion*200 <= money:
+			clrbelo += portion
+			money = money - portion*200
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid the cashier and bought underwear.'
+		end
+
+		act 'Move away from the counter':gt'rinok','start'
+	}
+
+	$rinbuy8 = {
+		if money >= 1000 and bikini < 1:
+			cla
+			*clr
+			money = money - 1000
+			bikini = 1
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid in cash and bought a swimsuit.'
+
+			act 'Move away from the counter':gt'rinok','start'
+		else
+			'You do not have enough money.'
+		end
+	}
+
+	$rinbuy9 = {
+		if money >= 1000 and umbrella < 1:
+			cla
+			*clr
+			money = money - 1000
+			umbrella = 1
+
+			'<center><img src="images/pic/kassa2.jpg"></center>'
+			'You paid the cashier and bought an umbrella.'
+
+			act 'Move away from the counter':gt'rinok','start'
+		else
+			'You do not have enough money.'
+		end
+	}
+
+	cla
+	*clr
+	minut = minut + 5
+	mag = 1
+
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	'<center><b><font color = maroon>Mall</font></b></center>'
+	'<center><img src="images/pic/rinok.jpg"></center>'
+	'<a href="exec: dynamic $rinbuy1 ">dishwashing liquid - 50 r</a> <a href="exec: dynamic $rinbuy2 ">washing powder - 150 r</a> <a href="exec: dynamic $rinbuy3 ">a set of 3x plates - 150 r</a> <a href="exec: dynamic $rinbuy4 ">cosmetics - 500 r</a> <a href="exec: dynamic $rinbuy5 ">razor - 200 r</a> <a href="exec: dynamic $rinbuy6 ">tampons - 100 r</a> <a href="exec: dynamic $rinbuy7 ">linen - 200 r</a>'
+	if bikini < 1:'<a href="exec: dynamic $rinbuy8 ">swimsuit - 1000r</a>'
+	if umbrella < 1:'<a href="exec: dynamic $rinbuy9 ">umbrella - 1000r</a>'
+	'<a href="exec: dynamic booksbuy ">Books</a>'
+	'In one of the tents hanging Ads <a href="exec:GT ''loker2'',''start''">"We accept things for implementation"</a>'
+	'<a href="exec:numdres = 1 & payclo = 1500 & GT ''loker'',''jeans''">Inspect Jeans number1</a> <a href="exec:numdres = 2 & payclo = 1500 & GT ''loker'',''jeans''">Inspect Jeans. Number2</a> <a href="exec:numdres = 3 & payclo = 1500 & GT ''loker'',''jeans''">Inspect Jeans. Number3</a> <a href="exec:numdres = 4 & payclo = 1500 & GT ''loker'',''jeans''">Inspect Jeans. Number4</a> <a href="exec:numdres = 5 & payclo = 1500 & GT ''loker'',''jeans''">Inspect Jeans. Number5</a>'
+
+	if analplugIN = 1 and tanga = 0 and ski = 1 or analplugIN = 1 and tanga = 0 and glamur = 1:
+		nurand = RAND(0,100)
+		if nurand >= 80:
+			manna = manna - 5
+			SUB = SUB + 1
+			horny = horny + SUB
+			nudity = nudity+1
+
+			'Do you feel that someone-then gently touched <a href="exec:GT ''etoexhib'',''pos15''">your priests hand!</a>'
+		end
+	end
+
+	clr
+	gs'stat'
+	gs'time'
+
+	act 'Logout':
+		cla
+		minut = minut + 5
+		gt'street'
+	end
+
+	if workrin = 1:
+		if week = 2 or week = 4 or week = 6:
+			if hour < 9:
+				'Arthur merchandise is waiting for you.'
+
+				act '<b>Take goods</b>':
+					cla
+					*clr
+					hour = 9
+					minut = 0
+					prodpayum = 1200
+
+					'Arthur unloaded stuff from his ushatannoy Shokhi to the tray and gave you. You started to hang clothes tent.'
+					'Before leaving Arthur gives you instructions. "Sell ​​what you like, but that night I would have given to each item sold on the 1000. And to gain by selling no less than <<arturplan>> rubles."'
+
+					act 'Work':gt'rinwork','start'
+				end
+			end
+		end
+
+		act 'Dismissed from work':
+			cla
+			work = 0
+			workrin = 0
+
+			'You resigned from their jobs and took labor.'
+
+			act 'Logout':gt'rinok','start'
+		end
+	end
+
+	if (work = 0 and workrin = 0 and cheatWork = 0) or (workrin = 0 and cheatWork = 1):
+		nl
+		'In one of the tents hanging Ads "We need women sellers. Salary is more."'
+
+		act 'To approach the owner of the tent ad':
+			cla
+			*clr
+			'Hello, My name is Arthur. I am the master of the tent, I need a saleswoman. I do not cope. Well? Will you go?'
+			'I`ll pay a percentage of earned. Work will be on Tuesday, Thursdays and Saturdays. C 8of up to 14.'
+			'Work on employment.'
+
+			act 'Logout':gt'rinok','start'
+			act 'Apply for job':
+				cla
+				work = 1
+				workrin = 1
+				arturplan = 5000
+
+				'You got a job to Arthur and gave him a career.'
+
+				act 'Logout':gt'rinok','start'
+			end
+		end
+	end
+
+	act 'Go to the book tray':
+	cls
+	minut += 15
+	gs'stat'
+
+	'On the counter is a very entertaining fantasy book, that is all 150 rubles and women`s novels are in paperback standing 300 rubles.'
+
+	if money >= 150:
+		act 'Buy a book of fantasy 150r':
+			cls
+			minut += 15
+			money -= 150
+			f_book += 1
+			gs'stat'
+
+			'You bought the book for fantasy 150 rubles.'
+
+			act 'Escape':gt'rinok','start'
+		end
+	end
+
+	if money >= 300:
+		act 'Buy ladies for romance 300r':
+			cls
+			minut += 15
+			money -= 300
+			w_book += 1
+			gs'stat'
+
+			'You bought the novel for the ladies 300 rubles.'
+
+			act 'Escape':gt'rinok','start'
+		end
+	end
+
+	act 'Escape':gt'rinok','start'
+end
+	
+	if palto < 1:
+		'The market for selling winter jackets 5000 rubles.'
+
+		if money >= 5000:
+			act 'Buy jacket':
+				cla
+				money -= 5000
+				palto = 1
+				$palto = 'Chinese jacket'
+
+				'You bought a down jacket.'
+
+				act 'Logout':gt'rinok','start'
+			end
+		end
+	end
+end
+--- rinok ---------------------------------
+

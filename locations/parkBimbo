@@ -1,0 +1,38 @@
+# parkBimbo
+if $ARGS[0] = 'pos1':
+	cla
+	*clr
+	minut += 10
+	horny += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/parkBimbo1.jpg"></center>'
+	'The old man pointed to you on his pants, and there you saw a wrinkled, but standing member.'
+	'- A, what? 67 years and he is in 18. And the thing is charging and pouring, young lady!'
+
+	if horny > 50:act 'Take the old man`s dick in his hand':gt'parkBimbo','pos2'
+	act 'Wagged his finger to his temple':gt'gskver'
+end
+
+if $ARGS[0] = 'pos2':
+	cla
+	*clr
+	minut += 10
+	horny += 10
+	cumlip += 1
+	bj += 1
+	gs'stat'
+	'<center><img src="images/nigma/village/old0,'+rand(0,3)+'.jpg"></center>'
+	'You took the old man`s cock and took him to a tree. He was taken aback and began to turn his head in search help. But nowhere to go.'
+	'Having got it behind a tree, you immediately began to suck his dick.'
+	'It did not take long, and soon he began to finish.'
+	'Oh, oh girl, this is my present for you presented in your old age.'
+
+	horand = RAND(1,100)
+	if horand > horny:horny = horny + 10 & 'You were not satisfied'
+	if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+
+	act 'Finish':gt'gskver'
+end
+--- parkBimbo ---------------------------------
+

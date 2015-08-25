@@ -1,0 +1,87 @@
+# yesgorslut
+if GorSlut > 0:
+	if grupTipe[numnpc] = -1:
+		!rogue
+		bonusotnG = vnesh/2
+		if bonusotnG <= 0:bonusotnG = 1
+		grupNPC[numnpc] += bonusotnG
+
+		if npcPol[numnpc] = 0:
+			!guy
+			'You are chatting about any nonsense and <<$npcName[numnpc]>> you willingly assents.'
+		elseif npcPol[numnpc] > 0:
+			!girl
+			'You are chatting about any nonsense and <<$npcName[numnpc]>> you willingly assents.'
+		end
+	elseif grupTipe[numnpc] = 0:
+		!norm
+		if npcPol[numnpc] = 0:
+			!guy
+			'You are trying to talk to the guy, but <<$npcName[numnpc]>> with an absent look on his face looking at you.'
+		elseif npcPol[numnpc] > 0:
+			!girl
+			'You are trying to talk to a girl, but <<$npcName[numnpc]>> He turns away and does not want to talk to you. "Get out! And still think, we are friends."'
+		end
+	elseif grupTipe[numnpc] = 1:
+		!nerds
+		if npcPol[numnpc] = 0:
+			!guy
+			'You are trying to talk to the guy, but <<$npcName[numnpc]>> you stare at boobs. And chuckles.'
+		elseif npcPol[numnpc] > 0:
+			!girl
+			'You are trying to talk to a girl, but <<$npcName[numnpc]>> He turns away and does not want to talk to you.'
+		end
+	elseif grupTipe[numnpc] = 2:
+		!sportiki
+		if numnpc = 18:
+			!Christine Zvereva
+			if kristinaSex = 0 and swinbeggor = 0:
+				'You are trying to talk to a girl, but <<$npcName[numnpc]>> making squeamish grimace "Get out of here <<$gnikname>>!"'
+			elseif kristinaSex = 0 and swinbeggor > 0:
+				'Christine hate looking at you. "You filthy slut has zadolbala spinning beneath my feet!"'
+			elseif kristinaSex > 0:
+				'Christine smiles at you and says quietly "Not bad the last time we entertained, you are so sexy, just zakachaeshsya."'
+			end
+		elseif npcPol[numnpc] = 0:
+			!guy
+			'You are trying to talk to a guy, but <<$npcName[numnpc]>> shrugs off you. "I`m busy right now."'
+		elseif npcPol[numnpc] > 0 and numnpc ! 18:
+			!girl
+			'You are trying to talk to a girl, but <<$npcName[numnpc]>> making squeamish grimace "Get out of here <<$gnikname>>!"'
+		end
+	elseif grupTipe[numnpc] = 3:
+		!cool
+		if numnpc ! 14:
+			if npcPol[numnpc] = 0:
+				!guy
+				'You are trying to talk to a guy, but <<$npcName[numnpc]>> shrugs off you. "Listen, I`m busy right now. Come back later or never."'
+			elseif npcPol[numnpc] > 0:
+				!girl
+				if AlbFrend >= 1 and numnpc = 23:
+					'<<$npcName[numnpc]>> with a smile, talking to you.'
+				else
+					'You are trying to talk to a girl, but <<$npcName[numnpc]>> making squeamish grimace "Get out of here!"'
+				end
+			end
+		elseif numnpc = 14:
+			!Katya Meynold
+			'You chat with Kate and she brings your entire conversation to the rumors about you and your reputation. Rumor, what do you <<$gnikname>>.'
+		end
+	elseif grupTipe[numnpc] = 4:
+		!Gopnik
+		if npcPol[numnpc] = 0:
+			!guy
+			if numnpc = 9:
+				!Kotov
+				'You are trying to talk to Vityok, but he responds to you "Slysh! Get lost."'
+			elseif numnpc ! 9:
+				'<<$npcName[numnpc]>> He is laughing at you "Ha ha <<$gnikname>> came. Still want huytsa?"'
+			end
+		elseif npcPol[numnpc] > 0:
+			!girl
+			'<<$npcName[numnpc]>> disgust face contorts "Phew, <<$gnikname>>. Get off the creature!"'
+		end
+	end
+end
+--- yesgorslut ---------------------------------
+

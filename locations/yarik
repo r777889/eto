@@ -1,0 +1,261 @@
+# yarik
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Apartment businessman Jaroslav</font></b></center>'
+	'<center><img src="images/yaroslav/360911_paradniy_pod-ezd.jpg"></center>'
+
+	act 'Call at the door':
+		cla
+		if hour >= 16 and hour <= 17 and yaq = 1:
+			'You have reached the door and you discover'
+
+			act 'Go to the apartment':gt'yarik','yaqw'
+		else
+			'You have reached the door but no one answers.'
+
+			act 'Escape':
+				cla
+				minut = minut + 5
+				gt'down'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'yaqw':
+	cla
+	*clr
+	'<center><img src="images/yaroslav/1365154132_studentka-ischet-rabotu-1.jpg" width = 750 height = 450 ></center>'
+	'Oh, Sveta! Hello! Come. - Said Jaroslav.'
+
+	act 'Come and listen to Yaroslav':
+		cla
+		*clr
+		'<center><img src="images/yaroslav/1365154130_studentka-ischet-rabotu-2.jpg" width = 750 height = 450 ></center>'
+		'I need you wiped the dust, She removed her socks, and wash clothes.'
+
+		act 'Okay':
+			cla
+			clr
+			minut = minut + 20
+			gs'stat'
+
+			'<b>You cleaned the apartment to Yaroslav, while he was sitting at what-the papers and read them.</b>'
+			'Suddenly he came to you. Svetik, you can go to wipe the tile in the bathroom?'
+
+			act 'Sorry, I can not, need to run':
+				cla
+				minut = minut + 120
+				manna = manna + 50
+				money = money + 2000
+				uborkayar = uborkayar + 1
+
+				'Do not you dare delay. Here`s your 2 pieces. Come again, if you want to. Visit.'
+
+				gt'down'
+			end
+			act 'Good':
+				cla
+				*clr
+				minut = minut + 10
+
+				'<center><img src="images/yaroslav/1365154198_studentka-ischet-rabotu-3.jpg" width = 750 height = 450 ></center>'
+				'Damn it. He made me scrub his bathroom, Well, rabotenka, to which I sunk - I grumbled to myself - My manicure, my clothes - all messed up, Well, at least though the money on the club to earn.'
+
+				act 'Scrub the floor':
+					cla
+					*clr
+					minut = minut + 5
+
+					'<center><img src="images/yaroslav/1365154197_studentka-ischet-rabotu-4.jpg" width = 750 height = 450 ></center>'
+					'Apparently deciding to check how I cope, Jaroslaw came to the bathroom, and stood in the entrance, but when he saw me, sexy embarked crustaceans and nadraivat foam sponge floor, all thoughts about the quality of flew out of his head.'
+
+					act 'Rebelled':
+						cla
+						*clr
+						'<center><img src="images/yaroslav/1365154177_studentka-ischet-rabotu-5.jpg" width = 750 height = 450 ></center>'
+						'- Hey! - I whirled - that you pyalites on my ass? - I cried indignantly, However, immediately I appreciate the richness of the men I had a plan for earning tips.'
+
+						act 'Up':
+							cla
+							*clr
+							'<center><img src="images/yaroslav/1365154183_studentka-ischet-rabotu-6.jpg" width = 750 height = 450 ></center>'
+							'I began to defend Yaroslav stopped, He stood up to his full height and making eyes householder, He began to rub the transparent wall. Listen, I`m here, I want to earn a little tip, that would be enough for me to new fashions. I hope you do not mind? - I defiantly said Yaroslav.'
+
+							act 'Become dirty':
+								cla
+								*clr
+								'<center><img src="images/yaroslav/1365154181_studentka-ischet-rabotu-7.jpg" width = 750 height = 450 ></center>'
+								'- But I do not know how to really - I said, squeezing the sponge with soapy water - So you see, All soiled, where I am now in a wet T-shirt, it will have to withdraw and wait until dry.'
+
+								act 'Remove the T-shirt':
+									cla
+									*clr
+									'<center><img src="images/yaroslav/1365154123_studentka-ischet-rabotu-8.jpg" width = 750 height = 450 ></center>'
+									'With that, I pulled off his soaked shirt and impressive her bra, then squeeze the remaining foam asked Yaroslav - Can you help me, I need to dry, and I so wet...'
+
+									act 'Listen Yaroslav':
+										cla
+										*clr
+										'<center><img src="images/yaroslav/1365154153_studentka-ischet-rabotu-9.jpg" width = 750 height = 450 ></center>'
+										'It has long been understood what I am, overexcited Yaroslav, taking out a fat wallet from his pants, appeals to me - You said that you did not have enough money - I suggest you combine business with pleasure.'
+
+										act 'See what`s next':
+											cla
+											*clr
+											minut = minut + 10
+
+											'<center><img src="images/yaroslav/1365154194_studentka-ischet-rabotu-10.jpg" width = 750 height = 450 ></center>'
+											'Taking cock from his pants he continues - Show what you can do with their hands and get a good tip.'
+
+											act 'Take a member':
+												cla
+												*clr
+												'<center><img src="images/yaroslav/1365154141_studentka-ischet-rabotu-13.jpg" width = 750 height = 450 ></center>'
+												'Pleased, I could so easily dissolve a man on the headstock, I, taking his penis in his pen, I began to drive it up-down, It is accelerating the pace slowing, She leaned her pink lips to lips lascivious men and sticking tongue, He stuffed in his mouth.'
+
+												act 'Scroll down':
+													cla
+													*clr
+													'<center><img src="images/yaroslav/1365154216_studentka-ischet-rabotu-12.jpg" width = 750 height = 450 ></center>'
+													'Then I slowly dropped to her knees and began to swallow his farm to his sensual mouth, licking it like ice cream. Yaroslav did not expect such abilities at such a young girl moaned with pleasure, sprayed stronger, wanting to push the member is not in your mouth, and my tender pussy.'
+
+													act 'Sucking dick':
+														cla
+														*clr
+														minut = minut + 20
+
+														'<center><img src="images/yaroslav/1365154178_studentka-ischet-rabotu-11.jpg" width = 750 height = 450 ></center>'
+														'- Do you want to earn even more? - the man asked me. In response, I moaned and never stopped to swallow a member, fiercely nodded.'
+
+														act 'Up':
+															cla
+															*clr
+															'<center><img src="images/yaroslav/1365154172_studentka-ischet-rabotu-14.jpg" width = 750 height = 450 ></center>'
+															'- Fine, I knew you were a good girl. Having said that, He stuck his phallus out of my mouth and took me in his arms, I sat on the countertop.'
+
+															act 'Extend the legs':
+																cla
+																*clr
+																'<center><img src="images/yaroslav/1365154194_studentka-ischet-rabotu-15.jpg" width = 750 height = 450 ></center>'
+																'Taking off his pants, he began flexing my vagina, thrusting his strong male hands into my crack.'
+
+																act 'Enjoy':
+																	cla
+																	*clr
+																	'<center><img src="images/yaroslav/1365154144_studentka-ischet-rabotu-16.jpg" width = 750 height = 450 ></center>'
+																	'However, not long to endure, He rubbed his penis to the lips sex, and after cutting inside his vognul.'
+
+																	act 'Moan':
+																		cla
+																		*clr
+																		'<center><img src="images/yaroslav/1365154203_studentka-ischet-rabotu-17.jpg" width = 750 height = 450 ></center>'
+																		'Grabbing me comfortably, he became a force to push his penis into my pussy very young, I moaned from such pressure, clinging to their feet nails, to escape from the pain that delivers huge penis males, developing my pussy.'
+
+																		act 'Enjoy':
+																			cla
+																			*clr
+																			minut = minut + 20
+
+																			'<center><img src="images/yaroslav/1365154147_studentka-ischet-rabotu-18.jpg" width = 750 height = 450 ></center>'
+																			'Big Penis Yaroslav continued to ram my pussy. I was moaning and panting.'
+
+																			act 'Ask':
+																				cla
+																				*clr
+																				minut = minut + 20
+
+																				'<center><img src="images/yaroslav/1365154175_studentka-ischet-rabotu-19.jpg" width = 750 height = 450 ></center>'
+																				'- I hope you will not forget to thank me for my abilities - I asked. In response Jaroslav nodded and stuck a member only stronger in the warmer, wet cunt, working it like a piston.'
+
+																				act 'Deploy':
+																					cla
+																					*clr
+																					'<center><img src="images/yaroslav/1365154194_studentka-ischet-rabotu-20.jpg" width = 750 height = 450 ></center>'
+																					'<center><img src="images/yaroslav/1365154188_studentka-ischet-rabotu-21.jpg" width = 750 height = 450 ></center>'
+																					'Unfolding me, He grabbed me by the leg and began pulling me to him, in unison with the movements of the pelvis, other hand penetrated into my sexy mouth ajar.'
+
+																					act 'Breathe':
+																						cla
+																						*clr
+																						minut = minut + 20
+
+																						'Finally, sticking his, he heard my sigh of disappointment,and a member of the playing near the swarthy ring anus, several times drove the head of the penis to my razdrochenny valve.'
+																						'<center><img src="images/yaroslav/1365154232_studentka-ischet-rabotu-22.jpg" width = 750 height = 450 ></center>'
+																						'<center><img src="images/yaroslav/1365154212_studentka-ischet-rabotu-23.jpg" width = 750 height = 450 ></center>'
+																						'<center><img src="images/yaroslav/1365154145_studentka-ischet-rabotu-24.jpg" width = 750 height = 450 ></center>'
+
+																						act 'Get down':
+																							cla
+																							*clr
+																							'<center><img src="images/yaroslav/1365154164_studentka-ischet-rabotu-26.jpg" width = 750 height = 450 ></center>'
+																							'<center><img src="images/yaroslav/1365154143_studentka-ischet-rabotu-25.jpg" width = 750 height = 450 ></center>'
+																							'Then put me on the floor, He lay on his back, and I began to pull on his dick, I stretched my bread. I moved the pelvis, poprygivaya periodically on its bolts and re-tucking it into the full depth.'
+
+																							act 'Get off and substitute face':
+																								cla
+																								*clr
+																								minut = minut + 5
+																								horny = horny = 0
+																								vagina = vagina + 1
+																								throat = throat + 1
+																								orgasm = orgasm + 1
+
+																								'<center><img src="images/yaroslav/1365154169_studentka-ischet-rabotu-27.jpg" width = 750 height = 450 ></center>'
+																								'As soon as the feeling began to moan loudly Yaroslav, and how to increase it in the final impulse member, I jumped out of the man and kneeling, eagerly opened her mouth in anticipation of, as I will splash warm thick liquid of the male penis, It gives me so many pleasant minutes. And finally escaped from the phallus jet seed, Fill in all my face and chest.'
+
+																								act 'In the bathroom':
+																									cla
+																									*clr
+																									minut = minut + 20
+																									sweat = sweat = 0
+																									hapri = 0
+
+																									'<center><img src="images/yaroslav/1365154231_studentka-ischet-rabotu-28.jpg" width = 750 height = 450 ></center>'
+																									'- Good girl, you are a good worker, ran up to me after class, I`ll help you with earnings. And now go and I`ll rinse pay for your excellent work - said Yaroslav.'
+
+																									act 'Dress and go':
+																										cla
+																										money = money + 3000
+																										uborkayar = uborkayar + 1
+																										minut = minut + 25
+																										gt'down'
+																									end
+																								end
+																							end
+																						end
+																					end
+																				end
+																			end
+																		end
+																	end
+																end
+															end
+														end
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+		act 'Escape':gt'down'
+	end
+	act 'Escape':gt'down'
+end
+--- yarik ---------------------------------
+

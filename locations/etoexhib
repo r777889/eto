@@ -1,0 +1,2301 @@
+# etoexhib
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+if $ARGS[0] = 'pos1':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/solar1.jpg"></center>'
+	'You walk into the room with a solarium. The room has dim lights and quiet, It seems no one except the solarium there is no administrator. You`re looking at the door.'
+
+	act 'Close the door':
+		cla
+		*clr
+		'<center><img src="images/etogame/solar8.jpg"></center>'
+		'You close the door of the castle and stripped down to goal, Arrange the solarium prone.'
+
+		act 'Further':
+			cla
+			*clr
+			manna += 10
+			gs'stat'
+
+			'<center><img src="images/etogame/solar9.jpg"></center>'
+			'You are tanned and relaxed. Pleased, You choose from a solarium, and dressed out in the hall interior.'
+
+			act 'Escape':gt'salon','start'
+		end
+	end
+	act 'Leave the door ajar':
+		cla
+		*clr
+		manna += 10
+		horny += 10
+		gs'stat'
+
+		'<center><img src="images/etogame/solar1.jpg"></center>'
+		'You decide to fool around a bit and leave the door ajar to the room. You start to undress slowly, When you shoot a bra and exposes breasts, light shivers run through your bare back. Suddenly now someone-some will go and see my breasts, he think of me?'
+
+		act 'Undress':
+			cla
+			*clr
+			horny += 10
+			gs'stat'
+
+			'<center><img src="images/etogame/solar2.jpg"></center>'
+			'You continue to undress and now your ass is bare. Suddenly there is a feeling, that someone behind you-is watching. You breath quickens, and waves of excitement. If yours truly who-the spies, you decide to strip as much as possible erotic. You do not know why, just tells your female nature.'
+
+			act 'Undress before the goal':
+				cla
+				*clr
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/etogame/solar4.jpg"></center>'
+				'You stripped down to goal and went to the solarium. Face just to the door. Out of curiosity, do you attach to the legs bent to the side and peered into the darkness the door ajar. And you really see the glimpse of a shadow or hear a-the puffing. Can be no doubt, obviously someone behind you-is watching. One of awareness, that someone behind you-is following, while you are lying completely naked, your body starts to shiver. Abdomen appears pleasant feeling. And you are excited to such an extent, that start to push the legs in different directions. The joy of the mysterious stranger.'
+
+				act 'Extend the legs':
+					cla
+					*clr
+					horny += 10
+					gs'stat'
+
+					'<center><img src="images/etogame/solar5.jpg"></center>'
+					'"I spread her legs as a lustful bitch. What does he think of me. What if he was not one, and all the staff have fled to me to see. Jesus! What if they take me to the camera and tomorrow I`ll be all over the internet." - thoughts rushing in your head, but the excitement is already large, and there is no force to stop.'
+
+					act 'Masturbate':
+						cla
+						*clr
+						horny += 20
+						gs'stat'
+
+						'<center><img src="images/etogame/solar6.jpg"></center>'
+						'You start furiously rubbing her pussy, to finally finish his shameless adventure. And gradually become excited to a degree, you can not hold back emotions. You start to moan and push the labia with your fingers, stranger showing her pussy in all its glory.'
+
+						act 'Further':
+							cla
+							*clr
+							orgasm += 1
+							horny -= 50
+							manna += 200
+							if exhibi = 2:exhibi = 3
+							gs'stat'
+
+							'<center><img src="images/etogame/solar7.jpg"></center>'
+							'Lastly, you cover powerful orgasm subsides and you weaken. Sniff longer also not heard, It seems the secret observer finished with you.'
+							''
+							'Gradually, you come to himself and dressed, out of the booth.'
+
+							act 'Escape':gt'salon','start'
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'pos2':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/1dachi.jpg"></center>'
+	'You walked through the alleys. Basically, society is not very crowded. Occasionally there are gardeners poking around on beds. Where-I hear the clang of the saw. On the outskirts of the forest can be seen. At the end of the alley is an artificial body of water. Some areas with houses sold.'
+	if etoexhib = 0:'You do not know anybody here and truckers did not work any opinion about you.'
+	if etoexhib = 10:'Go to <a href="exec:GT ''etoexhib'',''pos9''">clang saws</a>.'
+
+	act 'Going to the woods':gt'etoexhib','pos3'
+	act 'To go down to the lake':gt'etoexhib','pos16'
+
+	act 'Escape':gt'dachi'
+end
+
+if $ARGS[0] = 'pos3':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+	foresrand = RAND(1,100)
+
+	'<center><img src="images/etogame/1fores.jpg"></center>'
+	'Livstvenny forest.'
+
+	if foresrand < 30:
+		cla
+		*clr
+		'<center><img src="images/etogame/1fores.jpg"></center>'
+		'Livstvenny forest.'
+		'In the distant you see a mushroom picker.'
+
+		act 'To attract his attention':gt'etoexhib','pos4'
+	elseif foresrand > 90 and exhibi > 2:
+		cla
+		*clr
+		'<center><img src="images/etogame/1fores.jpg"></center>'
+		'Livstvenny forest.'
+
+		act 'Undress':gt'etoexhib','pos5'
+	end
+
+	act 'Escape':gt'dachi'
+end
+
+if $ARGS[0] = 'pos4':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'You mushroomer waving pen and he stopped looking at you.'
+
+	act 'Show pussy':
+		cla
+		*clr
+		minut += 5
+		horny += sub
+		if exhibi = 2:exhibi = 3
+		gs'stat'
+
+		'<center><img src="images/etogame/2fores.jpg"></center>'
+		'Smiling, mushroomer you show her pussy. He stands stock-still and staring at you, not knowing what is going on.'
+
+		act 'Escape':gt'dachi'
+	end
+end
+
+if $ARGS[0] = 'pos5':
+	cla
+	*clr
+	minut += 5
+	horny += sub
+	if exhibi = 3:exhibi = 4
+	gs'stat'
+
+	'<center><img src="images/etogame/3fores.jpg"></center>'
+	'I stripped down to goal and went for a walk in the woods. His heart was pounding in my chest. Fresh air, gentle warm breeze caresses me. Summer... The sun warms me. When was, I thought that freeze quickly, but it was hot summer sun prompted, I was wrong. Wondering exactly. I do not get lost. Clothing remains on the ground, and if I can not find it! These are collected only pickers. But, if I met them? Which is a shame! I stumbled on a good clearing. The wind died.'
+
+	act 'Further':
+		cla
+		*clr
+		'<center><img src="images/etogame/4fores.jpg"></center>'
+		'Lie, sunbathing naked in a meadow. So anyone not met. Good or bad - it was nice, though a bit extreme. Well all, I plan completed. We must return, find clothing.'
+
+		act 'Escape':gt'dachi'
+	end
+end
+
+if $ARGS[0] = 'pos6':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><img src="images/etogame/rodnik.jpg"></center>'
+	'The spring with spring water.'
+
+	act 'Drink':
+		if water >= 20:
+			'Water you no longer climbs.'
+		elseif water < 20:
+			water += 20
+
+			'You gladly drank spring water.'
+		end
+
+		act 'Escape':gt'dachi'
+	end
+end
+
+if $ARGS[0] = 'pos7':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><img src="images/etogame/stolbik.jpg"></center>'
+	'Also funny inscriptions on the column there is also useful information.'
+	'Aunt Nina on 3 alley sells goat milk 300r/liter'
+
+	if money >= 300:
+		act 'Buy milk':
+			cla
+			*clr
+			money -= 300
+			minut += 30
+			frost = 0
+			edahot = 0
+			health = health + 10
+			manna = manna + 20
+			gs'stat'
+
+			if energy >= 30:
+				fat = fat + 2
+
+				'You do not want to drink.'
+			elseif energy >= 20 and energy < 30:
+				fat = fat + 1
+				energy = energy + 10
+
+				'You through the power of drink goat`s milk.'
+			elseif energy < 20:
+				energy = energy +20
+
+				'You will be happy to drink goat`s milk.'
+			end
+
+			act 'Escape':gt'dachi'
+		end
+	end
+
+	act 'Escape':gt'dachi'
+end
+
+if $ARGS[0] = 'pos8':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><img src="images/etogame/dachakuz.jpg"></center>'
+	'The neighbor`s cottage.'
+
+	if etoexhib < 10:
+		act 'Call out to neighbors':
+			cla
+			*clr
+			minut += 15
+			etoexhib = 10
+			gs'stat'
+
+			'<center><img src="images/etogame/kuzmich.jpg"></center>'
+			'You: -Hello! Sveta, I`m your new neighbor, let`s get acquainted.'
+			'Neighbor: - Hello. My name is all Kuzmich. So will the neighbors.'
+			'You: - Can you help me, I understand the whole garden was overgrown with weeds. And so I would like to bring it into order.'
+			'Kuzmich: - Well, hire local men. They will all plow. Anyway bestolku the alleys stagger.'
+
+			act 'Escape':gt'dachi'
+		end
+		act 'Escape':gt'dachi'
+	end
+
+	act 'Escape':gt'dachi'
+end
+
+if $ARGS[0] = 'pos9':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><img src="images/etogame/dachastroy.jpg"></center>'
+	'Villa under construction. As construction workers go and drag the board.'
+
+	act 'Ask the workers of excavation':
+		cla
+		*clr
+		minut += 15
+		gs'stat'
+
+		'<center><img src="images/etogame/dachastroy.jpg"></center>'
+		'You: -Hello! I need to dig a vegetable garden. You take? And how much will it cost?'
+		'Working: - Shoveled. For 3000 agree.'
+
+		act 'Agree':
+			cls
+			etoexhib = 11
+			gs'stat'
+
+			'<center><img src="images/etogame/dachastroy.jpg"></center>'
+			'You have agreed with the workers, About, that they will put in order your garden.'
+
+			act 'Escape':gt'dachi'
+		end
+		act 'Escape':gt'dachi'
+	end
+	act 'Escape':gt'dachi'
+end
+
+if $ARGS[0] = 'pos10':
+	cla
+	*clr
+	minut += 30
+	horny += 10
+	temp = day
+	etoexhib = 12
+	gs'stat'
+
+	'<center><img src="images/etogame/dachabust.jpg"></center>'
+	'You went into the garden and going to work, asked:'
+	'- Well, Boys? How`s?'
+	'- Normally, hostess. We make the best.'
+
+	act 'Escape':gt'dachamy'
+end
+
+if $ARGS[0] = 'pos11':
+	cla
+	*clr
+	minut += 15
+	etoexhib = 13
+	horny += 10
+	temp = day
+	gs'stat'
+
+	'<center><img src="images/etogame/dachaex.jpg"></center>'
+	'You pretend, that was hanging laundry out to dry. You see, that through the mall on the site swarm your neighbor Kuzmich and sneak glances at you. Lightly tied robe is not able to hide your delicious form. But, You do not hide them and, and you give your neighbor enjoy beauty.'
+
+	act 'Leaving the house':gt'dachamy'
+end
+
+if $ARGS[0] = 'pos12':
+	cla
+	*clr
+	minut += 15
+	horny += 10
+	gs'stat'
+
+	'<center><img src="images/etogame/dachabust2.jpg"></center>'
+	'Outside in the garden, you hear talk of his job and decided to eavesdrop.'
+	'- A housewife-then, hot stuff. Seen, her robe in the kitchen garden paced - just fire!'
+	'- I would vdul!'
+	'- Yes, okay. Dreaming. This city bitch you too tough!'
+	'- I tell you, it needs a good fuck, and that`s what it is in our backwoods forgotten!'
+	'- Okay, good tryndet.'
+
+	act 'Approach to work':
+		cla
+		*clr
+		minut += 15
+		gs'stat'
+
+		'<center><img src="images/etogame/dachabust3.jpg"></center>'
+		'You: - Common greetings! I see the work is progressing, but how-then slowly. Hustler need guys!'
+		'Working: - So in fact we had no advance work. Motivation needs hostess.'
+
+		act 'To disagree':
+			cls
+			etoexhib = 15
+			temp = day
+			gs'stat'
+
+			'<center><img src="images/etogame/dachabust3.jpg"></center>'
+			'You: - While all do not do, You get nothing.'
+
+			act 'Escape':gt'dachi'
+		end
+		act 'Agree and give half of the amount':
+			cls
+			money -= 1500
+			etoexhib = 14
+			temp = day
+			gs'stat'
+
+			'<center><img src="images/etogame/dachabust3.jpg"></center>'
+			'Good, here`s a half. But, that tomorrow morning is all finished.'
+
+			act 'Escape':gt'dachi'
+		end
+	end
+	act 'Escape':gt'dachi'
+end
+
+if $ARGS[0] = 'pos13':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/etogame/dachagang.jpg"></center>'
+	'You get up in the middle of the garden and start to undress.'
+	'Guys eyes on the forehead climb from such a spectacle.'
+	'- Boys, You did a good job and deserved the award!'
+
+	act 'Undress completely':
+		cla
+		*clr
+		gs'stat'
+
+		'<center><img src="images/etogame/dachagang1.jpg"></center>'
+		'You`re standing naked and stripped to his guys podmanivaya.'
+		'- Well, I do 100% percent discount?'
+
+		act 'Surrender':
+			cla
+			*clr
+			minut += 120
+			etoexhib = 16
+			horny += 50
+			gang += 1
+			cumass += 1
+			cumlip += 1
+			vagina += 1
+			gs'stat'
+
+			'<center><img src="images/etogame/dachagang4.jpg"></center>'
+			'The boys jumped on you and after some caresses have become greedy in all holes.'
+
+			horand = RAND(1,100)
+			if horand > horny:horny = horny + 10 & 'You were not satisfied'
+			if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+
+			'When it was over, you raised clothes, wearing shorts and ran into the house.'
+
+			act 'Further':gt'dachain'
+		end
+	end
+end
+
+if $ARGS[0] = 'pos14':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/etogame/dachagang2.jpg"></center>'
+	'Drunken guys have surrounded you on all sides.'
+	'- Look, and here is our princess! You`re just in time for beauty, but come on guys, the hostess gave our love!'
+	'You: - What are you doing?'
+
+	act 'Further':
+		cla
+		*clr
+		gs'stat'
+
+		'<center><img src="images/etogame/dachagang3.jpg"></center>'
+		'The guys grabbed you and began to undress and grope.'
+
+		act 'Surrender':
+			cla
+			*clr
+			minut += 120
+			etoexhib = 16
+			horny += 50
+			gang += 1
+			cumass += 1
+			cumlip += 1
+			vagina += 1
+			gs'stat'
+
+			'<center><img src="images/etogame/dachagang4.jpg"></center>'
+			'The boys jumped on you and after some caresses have become greedy in all holes.'
+
+			horand = RAND(1,100)
+			if horand > horny:horny = horny + 10 & 'You were not satisfied'
+			if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+
+			'When it was over, you raised clothes, wearing shorts and ran into the house.'
+
+			act 'Further':gt'dachain'
+		end
+	end
+end
+
+if $ARGS[0] = 'pos15':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/etogame/rinokplug.jpg"></center>'
+	'You feel nice, even the heady scent of expensive men`s eau de toilette. Abdomen immediately "zazudelo", I passed through the body heat of excitement.'
+	'Behind was a guy with a purpose - He was a lover of the ladies feel, and now I wanted to touch your ass.'
+	'A hand, meanwhile, turned and laid his hand on one half of your ass.'
+
+	act 'Move away':gt'rinok','start'
+	act 'Stand':
+		cla
+		*clr
+		minut += 10
+		orgasm += 1
+		horny = 0
+		gs'stat'
+
+		'<center><img src="images/etogame/butplag.jpg"></center>'
+		'Guy Fart: "victim" He showed no displeasure, and his actions were closed on the surrounding, people did not care about him, all groaning under the heat.'
+		'He moved his hand to the other "muffin", I stopped in the middle, A little below. I had begun to compress the ass in his hands. "Victim" did not react. Then he began to promote his fingers through the fabric skirt depth, to the hillocks between the legs.'
+		'He felt, that "victim" He started, but not of surprise. He was also a skilled, he understood, the lady excited and already "floats".'
+		'You really sailed. Were you already are beyond itself. You want, the guy crawled under her skirt and put member... Feeling grabs you, It was filled with excitement. You restrained, not to begin to groan and moan...'
+		'And the guy, Meanwhile, I pulled her skirt up, got a hand to the cut and skillful movement got under her skirt. His hand was on the bottom wet with perspiration ass and fingers touched the butt plug between the legs.'
+		'You can even just shaken; no one noticed in the crush, Besides the tempter. He paused a little, It seems shocked by, the girl here and so could walk around without panties on the market and with a stopper in the pope.'
+		'In my head you all circled, you were at the peak of excitement; a bit more - and you end.'
+		'The guy certainly was not enough. He penetrated into the vagina with your fingers, and began their input and output. And then you began to tremble, We made some noisy, deep breaths, and fingers guy stood out moisture.'
+		'- Wow!... - the guy did not expect such a reaction from the ladies, and even got cold feet, that he may be "kindle".'
+		'Indeed, a woman approaching retirement age to ask you:'
+		'- Devonki, you feel bad?'
+		'- No, thank you, everything is gone - Having met with the forces response you.'
+		'Apparently startled female pervert. As for you, no one was.'
+
+		act 'Further':gt'rinok','start'
+	end
+end
+
+if $ARGS[0] = 'pos16':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Lake</font></b></center>'
+	'<center><img src="images/etogame/lake.jpg"></center>'
+
+	if temper >= 20 and bikini > 0 and hour >= 6 and hour <= 20:
+		act 'To bathe in a bathing suit':
+			cla
+			*clr
+			cumpussy = 0
+			cumbelly = 0
+			cumass = 0
+			cumlip = 0
+			cumface = 0
+			cumfrot = 0
+			minut = minut + 60
+			sweat = -3
+			manna = manna + 5
+			willpower = willpower + 5
+			if stren < 30:stren = stren + 1
+
+			'<center><img src="images/pics/swim.jpg"></center>'
+			'You swim in the lake, Water refreshes and invigorates.'
+
+			act 'Get out of the water':gt'etoexhib','pos16'
+		end
+	end
+
+	if temper >= 20 and hour >= 6 and hour <= 20:
+		act 'Swim naked':
+			cla
+			*clr
+			cumpussy = 0
+			cumbelly = 0
+			cumass = 0
+			cumlip = 0
+			cumface = 0
+			cumfrot = 0
+			minut = minut + 60
+			sweat = -3
+			manna = manna + 5
+			willpower = willpower + 5
+			horny += 10
+			if stren < 30:stren = stren + 1
+
+			'<center><img src="images/etogame/lakenude.jpg"></center>'
+			'You swim in the lake completely naked, Water refreshes and invigorates.'
+
+			act 'Get out of the water':gt'etoexhib','pos16'
+		end
+	end
+
+	act 'Back at the mall':gt'etoexhib','pos2'
+end
+
+if $ARGS[0] = 'pos17':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>The House of Culture</font></b></center>'
+
+	if hour >= 9 and hour < 20:
+		'<center><img src="images/etogame/dk.jpg"></center>'
+		'On Fridays, Saturdays and Sundays 20.00 to 23.00 dancing. Entrance 25 rubles.'
+	elseif hour >= 20 and hour <= 23:
+		'<center><img src="images/etogame/dk_night.jpg"></center>'
+		'At the entrance to the recreation center is full of youth, guys just stand and smoke, joke, and someone-then look out for. Small groups of girls 2-3 man, that-then discuss, who-simply thumps in the bushes.'
+
+		act 'Log club':money -= 25 & minut += 15 & gt'etoexhib','pos18'
+	end
+
+	act 'Back to the train station':gt'gorodok'
+end
+
+if $ARGS[0] = 'pos18':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Discotheque</font></b></center>'
+
+	if hour < 23:
+		temp = RAND(1,100)
+		if temp >= 1 and temp < 35:
+			minut += 30
+
+			'<center><img src="images/etogame/club_yaho.jpg"></center>'
+			'On the dance floor full of people. All dancing and having fun.'
+
+			act 'Dance':
+				cla
+				*clr
+				minut += 30
+				fat -= 1
+				if dance < 50 and agil >= dance:dance += 1
+				manna += 10
+				willpower += 10
+				frost = 0
+
+				'<center><img src="images/etogame/club_dance.jpg"></center>'
+				'Music is quite old, but catchy. And you have fun dancing in the dance, not paying any attention to anybody.'
+
+				act 'Further':gt'etoexhib','pos18'
+			end
+			act 'Further':gt'etoexhib','pos18'
+		elseif temp >= 35 and temp < 65:
+			minut += 30
+
+			'<center><img src="images/etogame/club_pusto.jpg"></center>'
+			'On the dance floor nobody. It is cold and sad. You perching on space.'
+
+			if temp >= 35 and temp < 65:
+				'Here and there some runs-the boy with a camera and fotkaet girls.'
+
+				act 'Posed for pictures':
+					cla
+					*clr
+					gs'stat'
+
+					if alko < 3 and vnesh >= 5 and vnesh < 30:
+						'<center><img src="images/etogame/club_foto.jpg"></center>'
+						'You poziruete for "Novice" Photographer, trying to look as attractive as possible.'
+
+						act 'Further':gt'etoexhib','pos18'
+					elseif alko < 3 and vnesh >= 30:
+						temp = RAND(1,2)
+						if temp = 1:'<center><img src="images/etogame/club_foto1.jpg"></center>'
+						if temp = 2:'<center><img src="images/etogame/club_foto2.jpg"></center>'
+
+						'You poziruete for the novice photographer, trying to look as attractive as possible.'
+
+						act 'Further':gt'etoexhib','pos18'
+					end
+
+					if horny > 10 and alko > 1:
+						'<center><img src="images/etogame/club_glam.jpg"></center>'
+						'You ride up the leg to the table. You seem, so get erotic photos.'
+					end
+				end
+				act 'Further':gt'etoexhib','pos18'
+			end
+		elseif temp >= 65 and temp <= 100:
+			minut += 30
+
+			'<center><img src="images/etogame/club_yaho1.jpg"></center>'
+			'On the dance floor full of people. All dancing and having fun.'
+
+			act 'Dance':
+				cla
+				*clr
+				minut += 30
+				fat -= 1
+				if dance < 50 and agil >= dance:dance += 1
+				manna += 10
+				willpower += 10
+				frost = 0
+
+				'<center><img src="images/etogame/club_dance.jpg"></center>'
+				'Music is quite old, but catchy. And you have fun dancing in the dance, not paying any attention to anybody.'
+
+				act 'Further':gt'etoexhib','pos18'
+			end
+			act 'Further':gt'etoexhib','pos18'
+		end
+	else
+		'The club closes. The lights, the music fades and all begin to diverge.'
+	end
+
+	act 'Go outside':gt'etoexhib','pos17'
+end
+
+if $ARGS[0] = 'pos19':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Hall</font></b></center>'
+	'<center><img src="images/etogame/ptu_holl.jpg"></center>'
+	'Lyceum Hall. It is quite clean and quiet. At the table sits technicals. On the wall hangs a timetable.'
+
+	if workPTU = 2:
+		cls
+		manna -= 100
+		workPTU = 1
+		teachlevel = 0
+		gs'stat'
+
+		'<center><b><font color = maroon>Management</font></b></center>'
+		'<center><img src="images/etogame/ptu_angdir.jpg"></center>'
+		'Such a shame, Svetlana! You disgrace, assigned to you honorable mission of the teacher! So you have no place in our ranks! Take your documents. You`re fired!'
+
+		act 'Further':gt'etoexhib','pos20'
+
+		exit
+	end
+
+	if teachlevel = 0 and hour >= 9 and hour <= 18 and week < 6:'You could not explain the technicals to whom you come, and then the personnel department, it does not let you.'
+	if teachlevel >= 1 and teachlevel < 10:'You do not deserve to be a teacher.'
+	if teachlevel >= 10 and teachlevel < 20:'Treat you as a young, inexperienced intern.'
+	if teachlevel >= 20 and teachlevel < 30:'You already have a certain reputation.'
+	if teachlevel >= 30 and teachlevel < 50:'You deserve respect for the teacher.'
+	if teachlevel >= 50 and teachlevel < 70:'For you to seek advice.'
+	if teachlevel >= 70 and teachlevel < 90:'Your experience and knowledge known outside the Lyceum.'
+	if teachlevel >= 90:'You personify education.'
+
+	if workPTU > 2:
+		act 'The corridor on the floor':gt'etoexhib','pos22'
+		act 'On the second floor':gt'etoexhib','pos23'
+		act 'On the third floor':gt'etoexhib','pos24'
+	elseif workPTU ! 1 and hour >= 9 and hour <= 18 and week < 6:
+		act 'Call Human Resources':
+			if workPTU > 2:
+				cla
+				*clr
+				minut += 5
+				gs'stat'
+
+				'<center><b><font color = maroon>Human Resources Department</font></b></center>'
+				'<center><img src="images/etogame/ptu_cadr.jpg"></center>'
+
+				act 'Dismissed':
+					cla
+					workPTU = 0
+
+					'Now you are no longer working.'
+
+					act 'Exit the hall':gt'etoexhib','pos19'
+				end
+				act 'Exit the hall':gt'etoexhib','pos19'
+			elseif workPTU = 0:
+				cla
+				*clr
+				minut += 15
+				gs'stat'
+
+				'<center><b><font color = maroon>Human Resources Department</font></b></center>'
+				'<center><img src="images/etogame/ptu_cadr.jpg"></center>'
+				'Good afternoon! Welcome you girl Personnel. She told, they require a certified teacher for doing electives. Working days from Monday to Saturday, with 14.00 to 16.00. Payment 300 rubles per one day of classes. For nonresident provided Dorm room. Terms piecework, t.to. for the full salary, at the moment, No free bets. Dress code is strict, business. It is also not recommended for bright makeup, Strong spirits.'
+
+				if diplom = 0 and fakediplom = 0:
+					'You reported, they can not take you to work without a diploma of higher pedagogical education.'
+				elseif diplom = 1 or fakediplom = 1:
+					act 'He is interviewed for a job':
+						cla
+						*clr
+						minut = minut + 60
+						gs'stat'
+
+						'<center><b><font color = maroon>Human Resources Department</font></b></center>'
+						'<center><img src="images/etogame/ptu_cadr.jpg"></center>'
+						'You have passed an oral interview, leave a copy of the diploma and other documents in the personnel department, where you are told, that can take you to work.'
+
+						act 'Apply for a job teaching':
+							cla
+							workPTU = 3
+							teachlevel = 16
+
+							'You have got the work book and said, that you can go to work the next business day.'
+
+							act 'Exit the hall':gt'etoexhib','pos19'
+						end
+					end
+				end
+
+				act 'Exit the hall':gt'etoexhib','pos19'
+			end
+		end
+	end
+
+	act 'Outside':gt'etoexhib','pos20'
+end
+
+if $ARGS[0] = 'pos20':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><b><font color = maroon>Lyceum</font></b></center>'
+	'<center><img src="images/etogame/lizey.jpg"></center>'
+	'On the door hangs Ads: "Vocational School students is set on the basis of 11 school classes by function: (an extensive list). Besides that, carried out training of employees of enterprises. The college created the optimal conditions for professional and personal formation of students, a modern material-technical base."'
+	if workPTU > 2:'Sport <a href="exec:GT ''etoexhib'',''pos21''">area.</a>'
+
+	if teachlevel > 0 and teachlevel < 10:workPTU = 2
+
+	if hour >= 7 and hour <= 21:act 'Sign in Lyceum':gt'etoexhib','pos19'
+	act 'Go into town':gt'gorodok'
+end
+
+if $ARGS[0] = 'pos21':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Playground</font></b></center>'
+	'<center><img src="images/etogame/stadion.jpg"></center>'
+	'You see everything, what remained of the football field. Sorry sight. Nonetheless, guys still, happy to play here in football.'
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		gs'stat'
+
+		'<center><img src="images/etogame/ptu_fight.jpg"></center>'
+		'You see a group of girls, mock bedridden man.'
+
+		act 'To stand up for a Man':
+			cls
+			teachlevel += 1
+
+			'- What are you doing?! Immediately stop, I`ll call the police! Throws you at the girls. And they, Snorting: "Moron, own fault!" Man is left alone.'
+			'You set a good example, helping a defenseless person. This has a positive impact on your reputation.'
+
+			act 'Further':gt'etoexhib','pos21'
+		end
+		act 'Disregard':gt'etoexhib','pos21'
+	end
+
+	act 'Return':gt'etoexhib','pos20'
+end
+
+if $ARGS[0] = 'pos22':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Corridor (1 floor)</font></b></center>'
+	'<center><img src="images/etogame/ptu_1korr.jpg"></center>'
+	'On the first floor honey. cabinet, gymnasium, dining room and classrooms.'
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		horny += 5
+		gs'stat'
+
+		'<center><img src="images/etogame/PTU_rand.jpg"></center>'
+		'You had met Olga L., foreign language teachers. Hmm, She dressed pretty sexy, and this is against the rules.'
+
+		act 'Further':gt'etoexhib','pos22'
+	end
+
+	if hour >= 9 and hour <= 18:act 'To the gym':gt'etoexhib','pos33'
+	if hour >= 9 and hour <= 18:act 'In the medical office':gt'etoexhib','pos36'
+	if hour >= 9 and hour <= 18:act 'The dining room':gt'etoexhib','pos37'
+	act 'The Hall':gt'etoexhib','pos19'
+end
+
+if $ARGS[0] = 'pos23':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Corridor (2 floor)</font></b></center>'
+	'<center><img src="images/etogame/ptu_2korr.jpg"></center>'
+	'On this floor there are classes, Account Director, library, teacher toilet.'
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		horny += 10
+		gs'stat'
+
+		'<center><img src="images/etogame/ptu_korr1.jpg"></center>'
+		'One of the students, He is sitting on the windowsill. You struck by her revealing outfits and cheeky behavior.'
+
+		act 'Further':gt'etoexhib','pos23'
+	end
+
+	if hour >= 9 and hour <= 18:act 'The principal`s office':gt'etoexhib','pos28'
+	if hour >= 9 and hour <= 18:act 'To the library':gt'etoexhib','pos38'
+	if hour >= 7 and hour <= 20:act 'The toilet':gt'etoexhib','pos39'
+	act 'The Hall':gt'etoexhib','pos19'
+end
+
+if $ARGS[0] = 'pos24':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Corridor (3 floor)</font></b></center>'
+	'<center><img src="images/etogame/ptu_3korr.jpg"></center>'
+	'On this floor there is a class electives.'
+
+	if hour >= 9 and hour <= 13:act 'The Class':gt'etoexhib','pos25'
+	if hour >= 14 and hour < 15:act 'In lesson':gt'etoexhib','pos26'
+	if hour >= 15 and hour <= 18:act 'The Class':gt'etoexhib','pos25'
+	if hour >= 7 and hour <= 20:act 'Teachers':gt'etoexhib','pos24tk'
+
+	act 'The Hall':gt'etoexhib','pos19'
+end
+
+if $ARGS[0] = 'pos24tk':
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+	cla
+	*clr
+	gs'stat'
+	minut +=10
+	'<center><b><font color = maroon>Teachers</font></b></center>'
+	'<center><img src="images/etogame/ptu_tk.jpg"></center>'
+	'Place where all teachers are employed in the classroom.'
+	'On the wall near the front door hanging <a href="exec:GT ''mirror'',''start''">mirror</a>.'
+	'In the corner is a small old sofa.'
+
+	$prositdirizv = {
+		cls
+		cla
+		gs'stat'
+		set izvad = 1
+		set pzptu = 1
+		'<center><img src="images/etogame/ptu_angdir.jpg" ></center>'
+		'You get up in the red-hot before the director to apologize for his act.'
+		'The director tells you, what you need will come to her office in his spare time.'
+		act 'Escape':gt'etoexhib','pos24'
+	}
+
+    act 'Logout':gt'etoexhib','pos24'
+	act 'Lie down on the couch':
+		cla
+		minut += 30
+
+		if son < 30:
+		son += 5
+		else
+		son = 29
+		end
+		'I relaxed sitting on the couch.'
+
+		act 'Pull':gt'etoexhib','pos24tk'
+	end
+	
+	    if hour >= 9 and hour <= 12 and workPTU > 2:
+        temp = RAND(1,100)
+        if temp >= 90:
+	    cla
+	    *clr
+	    minut += 60
+	    teachlevel += 2
+	    gs'stat'
+	    '<center><img src="images/etogame/21ptu.jpg"></center>'
+	    'You are approached by a student and asked you to work out with her.'
+		act 'Do':gt'etoexhib','pos24tk'
+	end
+
+   	if hour >= 14 and hour <= 15 or hour >= 16 and hour <= 18:
+        temp = RAND(1,100)
+        if temp >= 95:
+	   	    cls
+		    minut += 6
+		    manna -= 10
+		    willpower -= 10
+		    gs'stat'
+		    '<center><img src="images/etogame/ptu_angdir.jpg"></center>'
+		    'Svetlana, you go where? You know in General, what is happening now in your class, you are obliged now to be?'
+		    'And I can tell you, there confusion, walking and, pardon the expression, Orgy.'	
+		    'Go immediately to the class calm and spend the remaining time of a lesson though as expected.'
+		    elseif DOM < SUB and izvad = 0:
+				cla
+				*clr
+				minut = minut + 5
+				gs'stat'
+				'<center><img src="images/etogame/ptu_angdir.jpg"></center>'
+				'You are trying to confused and vaguely justified, on the director with undisguised smile looking at you.'
+				act 'Further':dynamic $prositdirizv
+			end	
+			elseif DOM > SUB and izvad = 0:
+				cla
+				*clr
+				minut = minut + 5
+				gs'stat'
+				'<center><img src="images/etogame/ptu_angdir.jpg"></center>'
+				'Do you agree with his mistake, speak, that in the future will not happen again .'
+				act 'Escape':gt'etoexhib','pos24' & teachlevel -= 3
+				exit
+			end		
+		end	
+	end
+	
+	if hour >= 16 and hour <= 17 and workPTU > 2:
+        temp = RAND(1,100)
+        if temp >= 70 and temp <= 90:
+	        cla
+	        *clr
+	        minut += 60
+	        gs'stat'
+	        '<center><img src="images/lmps/keope.jpg"></center>'
+	        'You spent in the classroom and sat tests to check them.'
+		    act 'Check tests':gt'etoexhib','pos24tk'
+		end
+	end
+
+	if hour >= 9 and hour <= 12:
+		temp = RAND(1,100)
+		if temp >= 90:
+			cla
+			*clr
+			minut += 60
+			teachlevel += 2
+			gs'stat'
+			'<center><img src="images/etogame/21ptu.jpg"></center>'
+			'To you I approached the schoolgirl and asked you to work out with her.'
+			act 'Do':gt'etoexhib','pos24tk'
+		end
+	end
+
+	act 'In the corridor':gt'etoexhib','pos24'
+end
+
+if $ARGS[0] = 'pos25':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Cabinet</font></b></center>'
+	'<center><img src="images/etogame/ptu_klass.jpg"></center>'
+	'Your class.'
+
+	if workPTU = 3:
+		cls
+		hour = 14
+		workPTU = 4
+		gs'stat'
+
+		'<center><img src="images/etogame/PTU_starosta.jpg"></center>'
+		'Inna: - Hello, Svetlana! (Inna greets you Robski - steward 657 A student group and round)'
+		'Inna: - Today you look so chic!'
+		'You: - Thank you, Inna.'
+
+		act 'Further':gt'etoexhib','pos25'
+	elseif workPTU = 4 and gor_dorm = 4:
+		cls
+		hour = 14
+		gor_dorm = 5
+		gs'stat'
+
+		'<center><img src="images/etogame/cera_nerd2.jpg"></center>'
+		'You see, that Eugene Eisenberg (botany and Zauchka) on the nose that-It is written.'
+		'You: - Hello, Zhenya! '
+		'Zhenya: - Hello, Svetlana! (He blushed a little and looks at the floor)'
+		'You: - Zhenya, where do you think-then smeared nose, to hold a mirror.'
+		'(Jack looks in the mirror and pull you became red as a lobster)'
+		'Zhenya: - This is what we play with the boys, sorry, thank you... (he began vigorously rubbing his nose)'
+		'(It seems classmates make fun of this guy, it would be necessary as a-something to cheer.)'
+		'You: - Do not worry you so, better tell how you`re doing? Girl you got? Every young man your age is a girl.'
+		'Zhenya: - No, I am not acquainted with the girls, They always throw me... I hurt my feelings.'
+		'You: - Well, as you like, can be a hobby? Movies, play?'
+		'Zhenya: - (Then he perked up noticeably, and started to tell you about their favorite fighters and shooters.)'
+		'You: - Okay, I have to go. It was nice to chat.'
+		'(Jack looks at you with burning eyes.)'
+
+		act 'Further':gt'etoexhib','pos25'
+	end
+
+	if teachlevel > 10: act 'Read the school magazine':gt'etoexhib','pos90'
+
+	act 'Exit the corridor':gt'etoexhib','pos24'
+end
+
+if $ARGS[0] = 'pos26':
+	cla
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><b><font color = maroon>Cabinet</font></b></center>'
+	if pzptu = 0:
+		'<center><img src="images/etogame/PTU_lesson0.jpg"></center>'
+		'You went to class and ready to start exercising. Pupils, divided into groups, They talk to each other, who-the laughs, who-chatting on the phone, who-then buried in the plate. Generally regular youth.'
+
+		act 'Post activity':
+			cla
+			minut = 0
+			hour = 14
+			gt'etoexhib','pos27'
+		end
+	end
+
+	if pzptu = 1:
+		'<center><img src="images/etogame/PTU_lesson1xl.jpg"></center>'
+		'You went to class and from what he saw ofigeli, in the class of creatures madness and chaos. '
+
+		act 'Post activity':
+			cla
+			minut += 5
+			pzptu = 0
+			gt'etoexhib','pos27'
+		end	
+	end
+end
+
+if $ARGS[0] = 'pos27':
+	cla
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><b><font color = maroon>Cabinet</font></b></center>'
+	'<center><img src="images/etogame/lesson1.jpg"></center>'
+	'You hold classes, Silence in the classroom and the students listen attentively to you.'
+
+	if horny > 30:
+		temp = RAND(1,100)
+		if temp >= 95:
+			act 'Sexually raise pencil!':
+				cls
+				horny += 40
+				minut += 60
+				teachlevel -= 3
+				gs'stat'
+
+				'<center><b><font color = maroon>Cabinet</font></b></center>'
+				'<center><img src="images/etogame/ptu_karandash.jpg"></center>'
+				'Pacing between rows, you go down on his haunches, pretending, which raises the fallen pencil. Nonetheless, sitting in the back row overlook your legs under the skirt. According to both eyes widened at one of the guys, you understand, the work is done.'
+				if tanga = 0:
+					temp = RAND(1,100)
+					if temp >= 90:
+						manna = manna - 5
+						teachlevel -= 2
+						'You`ve heard the faint whisper - "In glya! Svetlana... He walks without panties and shaved pussy!"'
+						'You feel, that a person begins to burn with shame after hearing you.'
+						'All further part of the lesson takes place in the fight against their own conscience and trying to convey the material to the students.'
+						act'Further':gt'etoexhib','pos27'
+					end
+				end
+
+				act 'Further':gt'etoexhib','pos27'
+			end
+  		end
+		if temp >= 85 and temp < 90:
+			act 'Climb on the table':
+				cls
+				horny += 40
+				minut += 60
+				teachlevel -= 1
+				gs'stat'
+
+				'<center><b><font color = maroon>Cabinet</font></b></center>'
+				'<center><img src="images/etogame/ptu_urok1.jpg"></center>'
+				'Explaining material, you, if the charter, sit on the edge of the table. Wherein, Overlooking the whole class to your feet.'
+
+				act 'Further':gt'etoexhib','pos27'
+			end
+	    end
+		if temp >= 75 and temp < 80:
+			act '"Drop" chalk':
+				cls
+				horny += 40
+				minut += 60
+				teachlevel -= 3
+				gs'stat'
+
+				'<center><b><font color = maroon>Cabinet</font></b></center>'
+				'<center><img src="images/etogame/ptu_rak.jpg"></center>'
+				'Explaining material, you, unintentionally, drop the chalk. Wherein, you raise it so, that any porn star obzaviduetsya. First you lean, But to understand that Mel does not get it, get down on all fours, He raised his ass like someone podmanivaya-then. Those, who was sitting next, We have witnessed an unforgettable show.'
+				if tanga = 0:
+					temp = RAND(1,100)
+					if temp >= 90:
+						manna = manna - 5
+						teachlevel -= 2
+						'You`ve heard the faint whisper - "In glya! Svetlana... He walks without panties and shaved pussy!"'
+						'You feel, that a person begins to burn with shame after hearing you.'
+						'All further part of the lesson takes place in the fight against their own conscience and trying to convey the material to the students.'
+						act'Further':gt'etoexhib','pos27'
+					end
+				end
+
+				act 'Further':gt'etoexhib','pos27'
+			end
+		end	
+		if temp >= 65 and temp < 70:
+			act 'Sexy sit on the table':
+				cls
+				horny += 40
+				minut += 60
+				teachlevel -= 2
+				gs'stat'
+
+				'<center><b><font color = maroon>Cabinet</font></b></center>'
+				'<center><img src="images/etogame/ptu_nastol.jpg"></center>'
+				'Explaining material, you, if the charter, sit on the edge of the table. Wherein, Overlooking the whole class to your feet.'
+
+				act 'Further':gt'etoexhib','pos27'
+			end
+	    end
+		if temp >= 55 and temp < 60:
+			act 'Show stockings':
+				cls
+				horny += 40
+				minut += 60
+				teachlevel -= 2
+				gs'stat'
+
+				'<center><b><font color = maroon>Cabinet</font></b></center>'
+				'<center><img src="images/etogame/ptu_urok2.jpg"></center>'
+				'When, you approached the student, to show presentation, you, how-casually crossed his legs, showing student, elastic stockings. Immediately after answering the poor man asked to go to the toilet. I suppose Fingering.'
+
+				act 'Further':gt'etoexhib','pos27'
+			end
+		end
+	end
+
+	if hour < 16:
+		act 'Teach':
+			cls
+			minut = minut + 60
+			manna = manna - 5
+			if intel < 80:intel += 1
+			if ofclo = 1 and mop = 1 or ofclo = 1 and mop = 2 and teachlevel < 70:teachlevel += 1
+			if mop = 4:teachlevel -= 1
+			money += 150
+			gs'stat'
+
+			'<center><img src="images/etogame/lesson.jpg"></center>'
+			'You spend a lesson. Students listen attentively to you.'
+
+			act 'Further':gt'etoexhib','pos27'
+		end
+	end
+	if hour >= 16:
+		act 'Finish the lesson':
+			cls
+			hapri = 0
+			willpower -= 10
+			'<center><img src="images/etogame/lesson.jpg"></center>'
+			'The lesson ends and students hurry to leave the classroom.'
+
+			act 'Escape':
+				cla
+				minut = minut + 5
+				gt'etoexhib','pos24'
+			end
+		end
+	end
+
+	act 'Get out of class':gt'etoexhib','pos24'
+end
+
+if $ARGS[0] = 'pos28':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Management</font></b></center>'
+	'<center><img src="images/etogame/PTU_dir.jpg"></center>'
+	if izvad = 0:
+		'- Greetings, Svetlana! Hope, you like to work for us. If you have any-any questions to me, I`m listening.'
+	end
+
+	if izvad = 1:
+        cla
+        *clr
+        '<center><img src="images/etogame/ptu_angdir.jpg"></center>'
+        '- Hello again, Svetlana - Said director, strictly looking at you.'
+        act 'Lower the head':gt'etoexhib','pos28dir'
+	end
+
+    if izvad = 2:
+        cla
+        *clr
+        '<center><img src="images/etogame/ptu_angdir.jpg"></center>'
+        
+    end
+	act 'Get out of the office':gt'etoexhib','pos23'
+end
+
+if $ARGS[0] = 'pos28dir':
+	cla
+	*clr
+	gs'stat'
+    '<center><b><font color = maroon>Management</font></b></center>'
+	'<center><img src="images/etogame/ptu_angdir.jpg"></center>'
+	'From the look of you became director neposebe, at least in his eyes there was no threat.'
+    'The look was not a threat, but I felt the force, power, excellence, but not haughtily. Gradually narostalo feeling rabbit breeds wolf.'
+	'You, as the shock struck, When this idea has settled in your brain, as a kind of sticky substance pinned down all the movements and actions of a.'
+	'Do you even think it became unbearable, and all consciousness before his eyes drew a picture: You are absolutely naked, such a small fragile standing on knees, on the arm of your headmistress and see in front of her crotch klatsat teeth.'
+	'You came from, the director shakes for you <a href="exec:GT ''etoexhib'',''pos28dirk''">shoulder</a> -- Light, Light, what`s wrong?'
+	
+	act 'Get out of the office':gt'etoexhib','pos28dirk'
+end	
+
+if $ARGS[0] = 'pos28dirk':
+	cla
+	*clr
+	gs'stat'
+	FColor = RGB(0,0,0)
+    BColor = RGB(255,255,255)
+    LColor = RGB(106,90,205)
+    
+    '<center><b><font color = maroon>Clinic</font></b></center>'
+    '<center><img src="images/pic/poli.jpg"></center>'
+    'You reported, you fainted in the office of the Director, although the latter is your recollection, you checked the tests after school pupils and went home.'
+		
+	act 'Exit hospital':izvad = 2 & pzptu = 0 & hour += 1 & willpower -= 250 & gt'gorodok'
+end		
+	
+if $ARGS[0] = 'pos33':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Gymnasium</font></b></center>'
+	'<center><img src="images/etogame/sportzal.jpg"></center>'
+	'Facilities for team sports.'
+
+	act 'Women shower':gt'etoexhib','pos34'
+	act 'Men`s shower':gt'etoexhib','pos35'
+	act 'The Hall':gt'etoexhib','pos19'
+end
+
+if $ARGS[0] = 'pos34':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><b><font color = maroon>Women shower</font></b></center>'
+	'<center><img src="images/etogame/ptu_jen.jpg"></center>'
+	'Shower room.'
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		minut += 15
+		horny += 20
+		gs'stat'
+
+		'<center><b><font color = maroon>Women shower</font></b></center>'
+		'<center><img src="images/etogame/ptu_dush.jpg"></center>'
+		'- Oh! Svetlana, exit, please, we do not wear! - two girls screamed, shower.'
+
+		act 'Further':gt'etoexhib','pos33'
+	end
+
+	act 'Take a shower':gt'ptu_dush','pos1'
+	act 'The Hall':gt'etoexhib','pos33'
+end
+
+if $ARGS[0] = 'pos35':
+	cla
+	*clr
+	minut += 15
+	teachlevel -= 1
+	gs'stat'
+
+	'<center><b><font color = maroon>Men`s shower</font></b></center>'
+	'<center><img src="images/etogame/ptu_muz.jpg"></center>'
+	'Shower for boys. You should not be here. This will affect your reputation.'
+
+	act 'The Hall':gt'etoexhib','pos33'
+end
+
+if $ARGS[0] = 'pos36':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><b><font color = maroon>Medicine cabinet</font></b></center>'
+	'<center><img src="images/etogame/ptu_medkab.jpg"></center>'
+	'There is first aid, conducted medical examinations and vaccinations.'
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		minut += 15
+		horny += 10
+		gs'stat'
+
+		'<center><b><font color = maroon>Medicine cabinet</font></b></center>'
+		'<center><img src="images/etogame/ptu_med1.jpg"></center>'
+		'When you walk into a medical office, nurses amused, that fotkali and robe themselves in seductive poses. But then lay out the pictures in the social network.'
+
+		act 'Further':gt'etoexhib','pos36'
+	end
+
+	act 'In the corridor (1 Floor)':gt'etoexhib','pos22'
+end
+
+if $ARGS[0] = 'pos37':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><b><font color = maroon>Dining room</font></b></center>'
+	'<center><img src="images/etogame/ptu_stolovaya.jpg"></center>'
+	'You can have lunch or a snack.'
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		act 'Say hello to the Director':
+			cls
+			minut += 15
+			teachlevel += 1
+			gs'stat'
+
+			'<center><b><font color = maroon>Dining room</font></b></center>'
+			'<center><img src="images/etogame/ptu_stoldir.jpg"></center>'
+			'You had met the director places. You politely greeted her, nezabyvaya pay a compliment.'
+
+			act 'Further':gt'etoexhib','pos37'
+		end
+	end
+
+	act 'Buy lunch (100 rubles)':
+		cla
+		*clr
+		money -= 100
+		minut += 30
+		gs'stat'
+		frost = 0
+		edahot = 0
+		health = health + 10
+		manna = manna + 20
+
+		if energy >= 30:
+			fat = fat + 5
+
+			'You can no longer have.'
+		elseif energy >= 20 and energy < 30:
+			fat = fat + 3
+			energy = energy + 10
+
+			'You pushed through the power of a meal.'
+		elseif energy < 20:
+			energy = energy +20
+			fat = fat + 1
+
+			'You will be happy to eat food.'
+		end
+
+		if water >= 20:
+			'Tea in you no longer climbs.'
+		elseif water < 20:
+			water = water +20
+
+			'You will be happy to drink a cup of tea.'
+		end
+
+		act 'Finish':gt'etoexhib','pos37'
+	end
+	act 'In the corridor (1 Floor)':gt'etoexhib','pos22'
+end
+
+if $ARGS[0] = 'pos38':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><b><font color = maroon>Library</font></b></center>'
+	'<center><img src="images/etogame/ptu_lib.jpg"></center>'
+	'Here, students receive textbooks and books. There is also a computer lab with Internet access.'
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		minut += 15
+		horny += 10
+		gs'stat'
+
+		'<center><b><font color = maroon>Library</font></b></center>'
+		'<center><img src="images/etogame/ptu_ups.jpg"></center>'
+		'You have become accidental witness, as a librarian lighted his seductive crotch. But there were people in the hall, It is interesting to intentionally or accidentally?!'
+
+		act 'Further':gt'etoexhib','pos38'
+	end
+
+	if gor_dorm = 5:
+		act 'Search the Internet "Tetrodotoxin"':
+			cls
+			minut += 120
+			gor_dorm = 6
+			gs'stat'
+
+			'<center><img src="images/etogame/ptu_comp.jpg"></center>'
+			'Everything, you could find about this stuff, is that it is used in experimental and Pharmacology.'
+
+			act 'Further':gt'etoexhib','pos38'
+		end
+	end
+
+	act 'In the corridor':gt'etoexhib','pos23'
+end
+
+if $ARGS[0] = 'pos39':
+	cla
+	*clr
+	minut += 15
+	gs'stat'
+
+	'<center><b><font color = maroon>Female toilet</font></b></center>'
+	'<center><img src="images/etogame/ptu_toilet_w.jpg"></center>'
+	'Toilet, which in theory, Teachers can use only.'
+
+	if tanga = 1:
+		act 'Remove underwear':tanga = 0 & gt $locM,$metkaM
+	end
+
+	if tampon > 0 and mesec > 0 and isprok = 0:
+		act 'Change swab':
+			cla
+			*clr
+			tampon = tampon - 1
+			isprok = 1
+			minut = minut + 5
+			manna = manna - 5
+			'<center><img src="images/pics/wash3.jpg"></center>'
+			'You have changed the swab.'
+			act 'Finish':gt $locM,$metkaM
+		end
+	end
+
+	temp = RAND(1,100)
+	if temp >= 90:
+		cls
+		minut += 15
+		horny += 10
+		gs'stat'
+
+		'<center><b><font color = maroon>Female toilet</font></b></center>'
+		'<center><img src="images/etogame/ptu_zanato.jpg"></center>'
+		'Whoops! Sorry, it is necessary to close.'
+
+		act 'Further':gt'etoexhib','pos23'
+		exit
+	end
+
+	act 'In the corridor':gt'etoexhib','pos23'
+end
+
+if $ARGS[0] = 'pos40':
+	cla
+	*clr
+	minut += 60
+	gs'stat'
+
+	'<center><b><font color=maroon>Town</font></b></center>'
+	'<center><img src="images/etogame/dom_gor.jpg"></center>'
+	'A room in a hostel, Dedicated to you a school of, in poor condition, but still better than nothing. In the courtyard, a washing line and a shed for storing rubbish. Strangely only, that is almost invisible tenants, Hostels are usually packed to capacity.'
+
+	if gor_dorm > 0:act 'To the room':gt'dom_gor'
+	if gor_dorm = 0:act 'The commandant':gt'comendant','pos1'
+	if gor_dorm = 2:act 'Search Commandant':gt'comendant','pos3'
+	if gor_dorm >= 3:act 'Inspect the barn':gt'etoexhib','pos43'
+
+	act 'Escape':gt'gorodok'
+end
+
+if $ARGS[0] = 'pos41':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+
+	'<center><b><font color=maroon>Shared Bathroom</font></b></center>'
+	'<center><img src="images/etogame/comm_vann.jpg"></center>'
+	'Bathroom just in a terrible state, dirty walls, a mess on the floor, old plumbing, and the water hardly flows. From pipe comes a strange smell, but there are so many, if only I were smarter.'
+
+	if shampoo = 0:'Curse, how to wash if you do not shampoo?'
+
+	if dirtbelo > 0 and poroshok > 0:
+		act 'Wash clothes':
+			cla
+			*clr
+			minut = minut + dirtbelo*5
+			clrbelo += dirtbelo
+			poroshok -= 1
+			dirtbelo = 0
+			manna = manna - 10
+
+			'<center><img src="images/pic/stir.jpg"></center>'
+			'You soaked clothes in the basin and poured the powder to, then you become a wash clothes, until it finally became clear.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if tampon > 0 and mesec > 0 and isprok = 0:
+		act 'Change swab':
+			cla
+			*clr
+			tampon = tampon - 1
+			isprok = 1
+			minut = minut + 5
+			manna = manna - 5
+
+			'<center><img src="images/pics/wash3.jpg"></center>'
+			'You have changed the swab.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if cumpussy > 0 and clrbelo > 0 or cumbelly > 0 and clrbelo > 0 or cumass > 0 and clrbelo > 0 or cumanus > 0 and clrbelo > 0:
+		act 'Substitution 5 min':
+			cla
+			*clr
+			cumpussy = 0
+			cumbelly = 0
+			cumass = 0
+			cumlip = 0
+			cumface = 0
+			cumanus = 0
+			cumfrot = 0
+			sweat = sweat - 1
+			minut = minut + 5
+			clrbelo = clrbelo - 1
+			dirtbelo = dirtbelo + 1
+
+			'<center><img src="images/pics/wash5.jpg"></center>'
+			'You carefully washed sperm in the bathroom.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if cumlip > 0 or cumface > 0:
+		act 'Wash off with facial cum 5 min':
+			cla
+			*clr
+			mop = 1
+			cumlip = 0
+			cumface = 0
+			sweat = sweat - 1
+			minut = minut + 5
+
+			'<center><img src="images/pic/facesp.jpg"></center>'
+			'You carefully washed sperm from the face.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if mop ! 1:
+		act 'Rinse cosmetics':
+			cla
+			mop = 1
+			minut = minut + 15
+
+			'You have washed off cosmetics.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if shampoo > 0:
+		act 'Take a shower 15 min':
+			cla
+			*clr
+			shampoo -= 1
+			minut = minut + 15
+			horny = horny + 1
+			hapri = 0
+			mop = 1
+			sweat = -3
+
+			if tanga = 1:
+				clrbelo = clrbelo - 1
+				dirtbelo = dirtbelo + 1
+			end
+
+			dynamic $showerdin
+
+			if frost > 0:frost = 0
+
+			'<center><img src="images/pics/dush.jpg"></center>'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if leghair > 0 and stanok > 0 or lobok > 0 and stanok > 0:
+		act 'Shaving legs and crotch':
+			cla
+			*clr
+			minut = minut + 30
+			leghair = -5
+			lobok = -5
+			horny = horny + 10
+			stanok = stanok - 2
+!'
+			if obdysh = 1 and obbritinvent = 0:
+				britrand = RAND(0,5)
+				if britrand = 5:gt'vann','brit1'
+			end
+'
+			'<center><img src="images/pics/shave.jpg"></center>'
+			'You rinsed razor, Blades which will suffice for <<stanok>> time.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if intel > 50 and gor_dorm = 1:act 'Inspect pipes':gt'etoexhib','pos42'
+	act 'Back in the room':gt'dom_gor'
+end
+
+if $ARGS[0] = 'pos42':
+	cla
+	*clr
+	minut += 10
+	gor_dorm = 2
+	gs'stat'
+
+	'<center><b><font color=maroon>Corroded pipes</font></b></center>'
+	'<center><img src="images/etogame/comm_tru.jpg"></center>'
+	'All pipes are rusted through, it is a clear violation by the Commandant. Besides that, a smell of pipe-the chemistry.'
+
+	act 'Back in the room':gt'dom_gor'
+end
+
+if $ARGS[0] = 'pos43':
+	cla
+	*clr
+	minut += 10
+	if gor_dorm = 3:gor_dorm = 4
+	gs'stat'
+
+	'<center><b><font color=maroon>Shed hostel</font></b></center>'
+	'<center><img src="images/etogame/gor_saray.jpg"></center>'
+	'In addition to the incredible amount of junk. On the floor, a lot of containers-the chemistry, on one of the cans you see the sign of chemical hazards and the inscription "Tetrodotoxin". It is better not to touch it.'
+	'Hmm.. Is there a place dangerous chemicals. It is necessary to find out more about this substance.'
+
+	act 'Back in the room':gt'dom_gor'
+end
+
+if $ARGS[0] = 'pos49':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color=maroon>Shared Bathroom</font></b></center>'
+	'<center><img src="images/etogame/vann_gor.jpg"></center>'
+	'Bathroom at the hostel.'
+
+	if shampoo = 0:'Curse, how to wash if you do not shampoo?'
+
+	if dirtbelo > 0 and poroshok > 0:
+		act 'Wash clothes':
+			cla
+			*clr
+			minut = minut + dirtbelo*5
+			clrbelo += dirtbelo
+			poroshok -= 1
+			dirtbelo = 0
+			manna = manna - 10
+
+			'<center><img src="images/pic/stir.jpg"></center>'
+			'You soaked clothes in the basin and poured the powder to, then you become a wash clothes, until it finally became clear.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if tampon > 0 and mesec > 0 and isprok = 0:
+		act 'Change swab':
+			cla
+			*clr
+			tampon = tampon - 1
+			isprok = 1
+			minut = minut + 5
+			manna = manna - 5
+
+			'<center><img src="images/pics/wash3.jpg"></center>'
+			'You have changed the swab.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if cumpussy > 0 and clrbelo > 0 or cumbelly > 0 and clrbelo > 0 or cumass > 0 and clrbelo > 0 or cumanus > 0 and clrbelo > 0:
+		act 'Substitution 5 min':
+			cla
+			*clr
+			cumpussy = 0
+			cumbelly = 0
+			cumass = 0
+			cumlip = 0
+			cumface = 0
+			cumanus = 0
+			cumfrot = 0
+			sweat = sweat - 1
+			minut = minut + 5
+			clrbelo = clrbelo - 1
+			dirtbelo = dirtbelo + 1
+
+			'<center><img src="images/pics/wash5.jpg"></center>'
+			'You carefully washed sperm in the bathroom.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if cumlip > 0 or cumface > 0:
+		act 'Wash off with facial cum 5 min':
+			cla
+			*clr
+			mop = 1
+			cumlip = 0
+			cumface = 0
+			sweat = sweat - 1
+			minut = minut + 5
+
+			'<center><img src="images/pic/facesp.jpg"></center>'
+			'You carefully washed sperm from the face.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if mop ! 1:
+		act 'Rinse cosmetics':
+			cla
+			mop = 1
+			minut = minut + 15
+
+			'You have washed off cosmetics.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if shampoo > 0:
+		act 'Take a shower 15 min':
+			cla
+			*clr
+			shampoo-=1
+			minut = minut + 15
+			horny = horny + 1
+			hapri = 0
+			mop = 1
+			sweat = -3
+
+			if tanga = 1:
+				clrbelo = clrbelo - 1
+				dirtbelo = dirtbelo + 1
+			end
+
+			dynamic $showerdin
+
+			if frost > 0:frost = 0
+
+			'<center><img src="images/pics/dush.jpg"></center>'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	if leghair > 0 and stanok > 0 or lobok > 0 and stanok > 0:
+		act 'Shaving legs and crotch':
+			cla
+			*clr
+			minut = minut + 30
+			leghair = -5
+			lobok = -5
+			horny = horny + 10
+			stanok = stanok - 2
+!'
+			if obdysh = 1 and obbritinvent = 0:
+				britrand = RAND(0,5)
+				if britrand = 5:gt'vann','brit1'
+			end
+'
+			'<center><img src="images/pics/shave.jpg"></center>'
+			'You rinsed razor, Blades which will suffice for <<stanok>> time.'
+
+			act 'Finish':gt'etoexhib','pos41'
+		end
+	end
+
+	act 'To the room':gt'dom_gor'
+end
+
+if $ARGS[0] = 'pos50':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'Denounced by votes, you went straight to a group of teenagers, who are here, to smoke, chat, drink beer. They were 7 People of different ages, from 18 to 20 years. They watched with interest for you, It appeared from unknown destinations and waiting, what do you say.'
+	'You obviously did not expect, that they would be so much, and instead of a back seat, to severely chastise them for, that can start a fire, bleated, so they would not come here and, so they immediately went on here. Teens first looked at each other, and then laughed.'
+	'You began to back away, but not here - then it was. You are surrounded on all sides and began to look at the views of the sebaceous. You felt uneasy. Teenagers began to speak platitudes to your address, touch clothing, and one, standing behind, I pulled up your blouse. Blouse soared, showing your breasts in a bra. Laughter intensified and insults rained from all sides.'
+	'You have tried to correct clothes, but, It surrounds you with teenagers. Constantly we are pushing and pulling you in different directions. You begged release, speak, that most will never come here, and all that jazz. But teens just laughed and has openly paw you. You suddenly felt, that behind whose-it took up arms pants and pulled sharply to force them together with clothes. And another villain pulled her bra and blouse residues.'
+	'Now, you were standing in front of them completely naked. You began to push much-in the depths of the attic, and only now you saw a huge old sofa legs oblomlennymi. I am going to the sofa you stopped and tried again to soften teens, but they do not even pay attention to it. You pushed and you dramatically flopped on the sofa. Teenagers began to unbutton his jeans. First you came powerfully built man, roughly pushed by the shoulders and you fall on your back, He unceremoniously, and roughly spread your feet, and lay on top, directing his penis in the right hole, and abruptly entered her.'
+
+	act 'Further':
+		cla
+		*clr
+		'<center><img src="images/etogame/cherdak1.jpg"></center>'
+		'He fucked you in a fast and intense pace. After, he finished his place was taken 2-Oh, and it was the same burly both 1-th. After him, you fucked everything turns. And then, while those, who lacked once.'
+
+		act 'Further':
+			cla
+			*clr
+			minut += 120
+			horny += 50
+			gang += 1
+			cumass += 1
+			cumlip += 1
+			vagina += 1
+			gs'stat'
+
+			'<center><img src="images/etogame/cherdak0.jpg"></center>'
+			'After the last finished in the mouth, Teens buttoned his pants and left, laughing loudly and talking just happened. And you, picked up clothes, put it, and slowly walked to his apartment.'
+
+			horand = RAND(1,100)
+			if horand > horny:horny = horny + 10 & 'You were not satisfied'
+			if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+
+			act 'The apartment':gt'korr'
+		end
+	end
+end
+
+if $ARGS[0] = 'pos51':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/podezd.jpg"></center>'
+	'Access 5storey building in which you live. Castle, closing the door on the technical floor, or attic, broken.'
+
+	if sosedQW = 0:
+		'Suddenly, you are facing at the entrance with a young guy, which almost ran flew up the stairs. He leaped from you and distinctly embarrassed. "Oh sorry, I did not see you. You are in 69First settled apartment?"'
+
+		act 'Yes, I live in 69th':
+			cls
+			sosedQW = 1
+			minut += 5
+			gs'stat'
+
+			'You nod your head confirming that live in 69First apartment. The guy was visibly delighted and said,. "Great. previously lived there Petrovich, wino rare. All entrance tortured. My name is Timothy way, and you?"'
+
+			act 'Sveta':
+				cls
+				gs'stat'
+
+				'You said that you were a guy named Sveta. He nodded his head and began to get the key to open the door 68First apartment. "Very nice. I am as you see in the neighboring apartment living." The guy opened the door and on the threshold appeared a curious face of an old woman. She sent you a sharp nose, and you became curious to inspect. Timothy entered the apartment and said irritably "Mom, Well, enough already hanging around the front door!" I shut the door.'
+
+				act '...':gt'etoexhib','pos51'
+			end
+		end
+
+		exit
+	elseif sosedQW > 0 and hour >= 16 and sosedDay ! day:
+		sosedrand = RAND(0,100)
+		if sosedrand >= 70:
+			'On site is your neighbor, young guy <a href="exec:Gt ''Timofei''">Timothy</a> and smoking a cigarette, flicking ashes in a jar.'
+		end
+	end
+
+	act 'Outside':
+		cls
+
+		if sick <= 72 and nude = 0:
+			xgt'street'
+		elseif nude = 0:
+			'<b><font color = red>YOU TOO MUCH THAT sick to walk down the street.</font></b>'
+
+			xgt $curloc
+		else
+			'<b><font color = red>You need to get dressed.</font></b>'
+
+			xgt $curloc
+		end
+	end
+	act 'In the attic':gt'etoexhib','pos52'
+	act 'Home':gt'korr'
+end
+
+if $ARGS[0] = 'pos52':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/cherdak.jpg"></center>'
+	'Flight of stairs leads to the roof through the attic. Dark and scary. There is clearly no place for a decent girl.'
+
+	temp = RAND(1,100)
+	if temp > 90:'In the depths of the attic you hear <a href="exec:GT ''etoexhib'',''pos50''">cackling youth</a>. It seems they have not noticed.'
+
+	act 'On the roof':
+		cla
+		*clr
+		gs'stat'
+		gt'etoexhib','pos53'
+	end
+	act 'The entrance':gt'etoexhib','pos51'
+end
+
+if $ARGS[0] = 'pos53':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/roof.jpg"></center>'
+	'Roof.'
+
+	if temper >= 20 and bikini > 0 and hour >= 6 and hour <= 20:
+		act 'Sunbathe 1 h':
+			cla
+			*clr
+			minut = minut + 60
+			sweat = sweat + 1
+			manna = manna + 5
+
+			'<center><img src="images/etogame/zagar1.jpg"></center>'
+
+			if krem = 0:
+				tan = tan + 1
+
+				'You went to sunbath.'
+			elseif krem > 0:
+				krem = krem - 1
+				tan = tan + 3
+
+				'You body is smeared with cream for sunburn and went sunbathing.'
+			end
+
+			act 'Up':gt'etoexhib','pos53'
+		end
+	end
+
+	act 'In the attic':
+		cls
+		gt'etoexhib','pos52'
+	end
+end
+
+if $ARGS[0] = 'pos54':
+	cla
+	*clr
+	minut+=5
+	gs'stat'
+
+	'<center><img src="images/etogame/spy.jpg"></center>'
+	'Suspicious man. One can see, he constantly looks. Occasionally, approach it any-the people and that-he has taken. After looking carefully, you understand, it sells gas station receipts. All clear, trades forged documents. Maybe I`ll find him that-something useful.'
+
+	if diplom = 0 and fakediplom = 0 and money > 100000:
+		act 'Buy fake diploma (100 th.RUB)':
+			cla
+			*clr
+			minut += 10
+			money -= 100000
+			fakediplom = 1
+
+			'<center><img src="images/etogame/spy.jpg"></center>'
+			'You bought a fake diploma.'
+
+			act 'Escape':gt'vokzal'
+		end
+	end
+
+	act 'Escape':
+		cls
+		gt'vokzal'
+	end
+end
+
+if $ARGS[0] = 'pos90':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/memory.jpg"></center>'
+	'Your school magazine.'
+
+	if teachlevel > 40 and gor_dorm = 6:
+		act 'Lonely Heart':
+			cla
+			*clr
+			minut += 120
+			gor_dorm = 7
+
+			'<center><img src="images/etogame/ptu_tech.jpg"></center>'
+			'Once, biting you in the teachers asked Eugene A., chemistry teacher.'
+			'- Sveta, you are always so attractive. You must have a lot of familiar men.'
+			'- I think I understand what you mean? Want to someone-introduce a.'
+			'- Do not get me wrong, I understand soon 30, a married because no one takes. Yes, and they are not, men in our backwoods.'
+			'- I see, skinte do so by e-mail me your most beautiful pictures, Erotica does not hurt a bit. And I will find you a good husband on a dating site.'
+			'- Erotica! Oh, you think, it`s necessary?'
+			'- It is necessary, a man at the sight of a beautiful female body lose their heads.'
+			'- Good, I`ll try to take a picture as possible erotic.'
+
+			act 'Finish':gt'etoexhib','pos24'
+		end
+	end
+
+	act 'Escape':
+		cls
+		gt'etoexhib','pos24'
+	end
+end
+
+if $ARGS[0] = 'pos91':
+	cla
+	*clr
+	minut += 5
+	gor_dorm = 8
+	gs'stat'
+
+	'<center><img src="images/etogame/ptu_tech.jpg"></center>'
+	'- Good afternoon, Svetlana! As you requested, I tried to take a picture as possible erotic. I hope I have not overdone. Or maybe the other way around, photos do not quite erotic. Please, write me, if anything-something wrong.'
+
+	act 'See next photo':
+		cla
+		*clr
+		minut += 5
+
+		'<center><img src="images/etogame/ptu_tech1.jpg"></center>'
+		'Wow, her stunning figure.'
+
+		act 'See next photo':
+			cla
+			*clr
+			minut += 5
+
+			'<center><img src="images/etogame/ptu_tech2.jpg"></center>'
+			'Wow, Eugene A.! Hmm... But she wanted to send more candid photos, it is for the dating site! Apparently the girl quite desperate.'
+			'Now you can go to the site and help her find the man of her dreams.'
+			'or'
+			'But such photos I require it, All I want!'
+
+			act 'Login to the site':gt'Komp','znak'
+		end
+	end
+	act 'Quit your browser':gt'Komp','start'
+end
+
+if $ARGS[0] = 'os2':
+	cla
+	*clr
+	gs'stat'
+	gs'time'
+	'<center><img src="images/lmps/photo.jpg"></center>'
+	'Campaign Svetik categorically does not recognize them, He added another.'
+	if SUB > DOM:
+		act 'And what now?':
+	        cla
+            *clr
+	       '<center><img src="images/lmps/photo.jpg"></center>'
+	        'Right, Light, free pussy. Pomatsat das?'
+	        act'No, and do not dream.':
+                cla
+	            *clr
+	            '<center><img src="images/lmps/photo.jpg"></center>'
+	            'And the crowd picked up - Sveta Meanie'
+                act 'Lower the head':
+	                cla
+	                *clr
+	                gs'stat'
+	                SUB = SUB + 1
+                    nudity = nudity + 1
+	                lesbimar = 1
+	                tusnyakday = day
+	                '<center><img src="images/lmps/photo.jpg"></center>'
+	                'And one of devchenok, named Marina, He said, - I Dogadov, that she had, campaign and I`m right.'
+                    'The boys hooted, to say, but said Marina, what the girls do not spray all around'
+	                act '...':gt'liames' & hour = 22
+					
+				end	
+	        end            
+	    end  
+    end
+	if DOM > SUB:
+	    act 'A head-on?':
+	        cla
+	        *clr
+	        '<center><img src="images/lmps/photo.jpg"></center>'
+	        'In-at-at-boomed from the crowd and who-then he added,, and light in the mouth do not put your finger.'
+	        'Another guy - TA-dah, Although Mona check.'
+	            
+			if stren > 80:
+	            act 'Escape':gt'etoexhib','os4'
+			end
+				
+            if stren < 80 and stren > 50:
+            	act 'Escape':gt'etoexhib','os5'
+		    end
+				
+			if stren < 50:
+			    act 'Escape':gt'etoexhib','os6'
+            end
+	    end
+	end
+end	
+
+if $ARGS[0] = 'os3':
+	cla
+	*clr
+	gs'stat'
+	gs'time'
+	'<center><img src="images/lmps/photo.jpg"></center>'
+    'Yes, you were given my funk - Answer You - Th so there is no more of gab?'
+	act 'Further':gt'liames' & hour = 22
+end
+
+	
+if $ARGS[0] = 'os4':
+	cla
+	*clr
+	gs'stat'
+	gs'time'
+	tusnyakday = day
+
+    '<center><img src="images/lmps/photo.jpg"></center>'
+    'SchA how to check the teeth - you said.'
+        act 'Further':
+	        cla
+	        *clr
+	        gs'stat'
+	        DOM = DOM + 1
+	        nudity = nudity + 1
+	        hour = 22
+	        '<center><img src="images/lmps/photo.jpg"></center>'
+	        'Sema, schA you in the teeth teen nasuёt, - quipped one of the guys, - On the other itvetil - Zavala slurp...'
+	        'You stand and laugh with this skirmish.'
+	    	act '...':gt'liames'
+        end		
+    end
+
+if $ARGS[0] = 'os5':
+	cla
+	*clr
+	gs'stat'
+	gs'time'	
+    DOM = DOM + 1
+	nudity = nudity + 1
+	tusnyakday = day
+	'<center><img src="images/lmps/photo.jpg"></center>'
+	'More Th missed - Answer You.'
+	act '...':gt'liames' & hour = 22
+   
+end
+	
+if $ARGS[0] = 'os6':
+	cla
+	*clr
+	gs'stat'
+	gs'time'
+    cla
+    *clr
+    '<center><img src="images/lmps/photo.jpg"></center>'
+    'Are you here-the back seat.'
+    act 'Maybe not?':
+        cla
+        *clr
+        gs'stat'
+        SUB = SUB + 1
+        nudity = nudity + 1
+        '<center><img src="images/lmps/photo.jpg"></center>'
+        'Come pepontuysya, we joke.'
+        act '...':gt'liames' & hour = 22
+    end
+end
+
+--- etoexhib ---------------------------------
+

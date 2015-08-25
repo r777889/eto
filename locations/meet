@@ -1,0 +1,572 @@
+# meet
+if $ARGS[0] = 'start':
+	minut = minut + 15
+	dayA = dayA + 1
+	svidanieA = 0
+	giftNum = giftNumA
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	$boy = $boyA
+	$namev = $boy
+	$boybody = $boybodyA
+	$boybod = $boybodA
+	$boyface = $boyfaceA
+
+	!long term
+	dick = dickA
+	!! sexual power from the 0 to 2
+	silaVag = silaVagA
+	!!Security, He is responsible for the money and demand 0 beggar, 1 middle peasant 2 rich
+	finance = financeA
+	!!check in appearance, a parameter vnesh
+	vneshBoy = vneshBoyA
+
+	$boyClo = $boyCloA
+	!0 - lower back 80, 1 back from 80 to 100, 2 ass over 100
+	figurBoy = figurBoyA
+	!0 - chest less 3, 1 breast 3-4, 2 breasts bigger 4
+	titBoy = titBoyA
+	!favorite hair color 0 - brunette, 1 - haired, 2 - Redhead, 3 - blonde
+	haerBoy = haerBoyA
+	!character 0 - soft, 1 -norm 2 - aggressor
+	harakBoy = harakBoyA
+	!perversity
+	izvrat = izvratA
+
+	if love = 3:
+		'<center><img src="images/img/hasb/WeddingCar.jpg"></center>'
+		'You met <<$boyA>> and I put them in a hired wedding limousine.'
+
+		act 'Take the limousine':
+			cla
+			'You got into a limo, and <<$boyA>> I got into another car. Soon the limo pulled up to the Palace of Marriages.'
+
+			act 'Marry':
+				cla
+				minut = minut + 60
+				love = 0
+				bfA = 0
+				husband = 100
+				husbanday = 0
+
+				$husName = $boyA
+				$husHair = $boyfaceA
+				$husBody = $boybodyA
+				$husFat = $boybodA
+
+				husDick = dickA
+				harakHusb = harakBoyA
+				izvratH = izvratA
+				silavagH = silavagA
+				husbFin = financeA
+				husbandMark = 1
+
+				'The wedding took place in a cafe. Guests were not many and certainly only by the groom. There were many congratulations, toast, merrymaking and cries bitterly. By the evening all you got drunk and with a souped husband took home.'
+
+				act 'Wedding night':gt'husbsex','room'
+			end
+		end
+
+		exit
+	elseif love = 2:
+		'<<$boyA>> He looks very excited and suddenly pulls the ring out of the box.'
+		'(<<$boyA>>) - Sveta. I offer you my hand and heart, Come out for my husband.'
+
+		act 'No (Parting)':
+			minut = minut + 60
+			bfA = 0
+			pregtalk = 0
+			gt $locM, $metkaM
+		end
+		act 'Yes':
+			cla
+			'You agreed and put a ring on your finger. <<$boyA>> I rejoiced and hugged you kissed.'
+			'(<<$boyA>>) - Now we go choose your Wedding Dress.'
+
+			act 'Go for a fee':
+				cla
+				minut = minut + 60
+				love = 3
+
+				'You got into a taxi with his bride and went to the store to choose a dress. There you have chosen an expensive and luxurious dress <<$boyA>> I paid for its purchase.'
+				'After all these winding through the city and you`re tired <<$boyA>> I drove you home, warning, that at the next meeting you are married.'
+
+				act 'Escape':gt $locM, $metkaM
+			end
+		end
+
+		exit
+	end
+
+	if mop > 1 and glamur = 1 and curly > 0 and love = 1 and harakBoyA = 0:
+		'<<$boyA>> It looks very worried, Look around you, he decided, that you are willing to appear before his mom.'
+
+		act 'To go to the parents':gt'love','mother'
+
+		exit
+	elseif mop > 1 and glamur = 1 and curly > 0 and love = 1 and harakBoyA = 1 and tanga = 1:
+		'<<$boyA>> Look around you decided, that you are willing to appear before his friends.'
+
+		act 'Go to friends':gt'love','frends'
+
+		exit
+	end
+
+	if skin = 0:bfa = bfa - 2 & $meetskin = 'It is looking down at his feet'
+	if skin = 1:bfa = bfa - 1 & $meetskin = 'throws at you view'
+	if skin = 2:$meetskin = 'Looking at you'
+	if skin = 3:bfa = bfa + 1 & $meetskin = 'He is smiling at the sight of you'
+	if skin = 4:bfa = bfa + 2 & $meetskin = 'He is smiling at the sight of you'
+
+	if harakBoyA = 0:
+		if mop <= 2 and mop > 0:bfA = bfA + 1 & $meetmop = 'today you are so beautiful.'
+		if mop = 4:bfA = bfA - 1 & $meetmop = 'great weather today.'
+	elseif harakBoyA = 1:
+		if mop <= 3 and mop > 0:bfA = bfA + 1 & $meetmop = 'today you are so beautiful.'
+		if mop = 4:bfA = bfA - 1 & $meetmop = 'clearly you nakrasili, not like Halloween.'
+	elseif harakBoyA = 2:
+		if mop = 4:bfA = bfA + 1 & $meetmop = 'today you are so beautiful.'
+		if mop <= 2 and mop > 0:bfA = bfA - 1 & $meetmop = 'great weather today.'
+	end
+
+	if mop = 0:bfA = bfA - 1 & $meetmop = 'Emm, you cosmetics flowed.'
+	if hapri = 1 and curly > 0:bfA = bfA + 2 & $meethair = 'You have very beautiful hair.'
+	if hapri = 1 and curly = 0:bfA = bfA + 1 & $meethair = 'You have nice hair.'
+	if hapri = 0:bfA = bfA - 1 & $meethair = 'I look at you in a hurry to our meeting.'
+	if harakBoyA = 0:$meet = '"Hello favorite! I`m glad to see you, <<$meetmop>> <<$meethair>>"'
+	if harakBoyA = 1:$meet = '"Hello World! I`m glad to see you, <<$meetmop>> <<$meethair>>"'
+	if harakBoyA = 2:$meet = '"Hello Svetsik! I`m glad to see you, <<$meetmop>> <<$meethair>>"'
+	$meetcol = ''
+
+	if dayA > 10 and harakBoy = 2:
+		if haerBoyA ! hcol:
+			bfA = bfA - 5
+			if haerBoyA = 0:$meetcol = '<<$boyA>> speaks, you would go black hair.'
+			if haerBoyA = 1:$meetcol = '<<$boyA>> speaks, you would have gone brown hair color.'
+			if haerBoyA = 2:$meetcol = '<<$boyA>> speaks, you would have gone red hair.'
+			if haerBoyA = 3:$meetcol = '<<$boyA>> speaks, you would go lighter hair color.'
+		elseif haerBoyA = hcol:
+			bfA = bfA + 1
+
+			'<<$boyA>> speaks, that you have a beautiful hair color.'
+		end
+	end
+
+	if dayA > 20 and harakBoy = 1:
+		if haerBoyA ! hcol:
+			bfA = bfA - 5
+			if haerBoyA = 0:$meetcol = '<<$boyA>> speaks, you would go black hair.'
+			if haerBoyA = 1:$meetcol = '<<$boyA>> speaks, you would have gone brown hair color.'
+			if haerBoyA = 2:$meetcol = '<<$boyA>> speaks, you would have gone red hair.'
+			if haerBoyA = 3:$meetcol = '<<$boyA>> speaks, you would go lighter hair color.'
+		elseif haerBoyA = hcol:
+			bfA = bfA + 1
+
+			'<<$boyA>> speaks, that you have a beautiful hair color.'
+		end
+	elseif dayA > 30 and harakBoy = 0:
+		if haerBoyA ! hcol:
+			bfA = bfA - 5
+			if haerBoyA = 0:$meetcol = '<<$boyA>> speaks, you would go black hair.'
+			if haerBoyA = 1:$meetcol = '<<$boyA>> speaks, you would have gone brown hair color.'
+			if haerBoyA = 2:$meetcol = '<<$boyA>> speaks, you would have gone red hair.'
+			if haerBoyA = 3:$meetcol = '<<$boyA>> speaks, you would go lighter hair color.'
+		elseif haerBoyA = hcol:
+			bfA = bfA + 1
+
+			'<<$boyA>> speaks, that you have a beautiful hair color.'
+		end
+	end
+
+	if lip = 0:$meetlip = 'thin lips'
+	if lip = 1:$meetlip = 'soft lips'
+	if lip = 2:$meetlip = 'plump lips'
+	if lip = 3:$meetlip = 'big, full lips'
+	if lip = 4:$meetlip = 'thick lips and enormous'
+
+!!!!!!!!!!!!
+!!!DIALOGUE!!!
+!!!!!!!!!!!!
+
+	'At the entrance <<$meetskin>> <<$boyA>>. Seeing you, he comes to you and says,. <<$meet>> <<$meetcol>>'
+
+	if financeA = 0:$clom = 'dressed in a cheap tracksuit.'
+	if financeA = 1:$clom = 'dressed in jeans and a sweater.'
+	if financeA = 2:$clom = 'dressed in a respectable and expensive jacket.'
+
+	if harakBoyA = 0:'<<$boyA>> It looks timid and self-confident young man <<$clom>>'
+	if harakBoyA = 1:'<<$boyA>> He looks confident and calm young man <<$clom>>'
+	if harakBoyA = 2:'<<$boyA>> It looks cocky and brash young man <<$clom>>'
+
+	if dayA >= 2 and financeA = 2 and giftDay < (dayA - giftNum):
+		giftrand = RAND(0,2)
+		if giftrand <= financeA:
+			giftDayA = dayA
+			giftNum = giftNum + 1
+			gift = RAND(bfa*20,bfa*30)
+			if gift > 2500:gift = 2500
+			giftNumA = giftNum
+			money = money + gift
+
+			'<<$boyA>> He reached into his pocket and pulled out a gift for you to <<gift>> rubles.'
+		end
+	elseif dayA >= 5 and financeA = 1 and giftDay < (dayA - giftNum):
+		giftrand = RAND(0,2)
+		if giftrand <= financeA:
+			giftDayA = dayA
+			giftNum = giftNum + 1
+			gift = RAND(bfa*10,bfa*20)
+			if gift > 1500:gift = 1500
+			giftNumA = giftNum
+			money = money + gift
+
+			'<<$boyA>> He reached into his pocket and pulled out a gift for you to <<gift>> rubles.'
+		end
+	elseif dayA >= 10 and financeA = 0 and giftDay < (dayA - giftNum):
+		giftrand = RAND(0,2)
+		if giftrand <= financeA:
+			giftDayA = dayA
+			giftNum = giftNum + 1
+			gift = RAND(bfa*5,bfa*10)
+			if gift > 500:gift = 500
+			giftNumA = giftNum
+			money = money + gift
+
+			'<<$boyA>> He reached into his pocket and pulled out a gift for you to <<gift>> rubles.'
+		end
+	end
+
+	'<<$boybody>> <<$boybod>> <<$boyface>> It comes to you and wants to kiss you.'
+
+	if venera < 4 and cumface = 0:
+		!cumlip
+		act 'Kiss with tongue':
+			cla
+			if cumlip = 0:
+				'<center><img src="images/pic/kiss.jpg"></center>'
+
+				if harakBoyA = 0:bfa = bfa - 2 & 'You pressed your <<$meetlip>> a solid guy lips and mouth slightly open stuck his tongue in his mouth. <<$boyA>> She blushed and pulled away.'
+				if harakBoyA = 1:bfa = bfa - 1 & 'You pressed your <<$meetlip>> a solid guy lips and mouth slightly open stuck his tongue in his mouth. <<$boyA>> gently sucked your language.'
+				if harakBoyA = 2:bfa = bfa + 2 & 'You pressed your <<$meetlip>> a solid guy lips and mouth slightly open stuck his tongue in his mouth. <<$boyA>> aggressively pushed his tongue in your mouth, and almost began to fuck you in the mouth with his tongue.'
+
+				act 'Finish Kiss':xgt'meet','a'
+
+				exit
+			elseif cumlip > 0:
+				'<center><img src="images/pic/cumlip.jpg"></center>'
+				'<<$boyA>> I kissed you in your smelling sperm <<$meetlip>> and pulled. "What is it?" he asked "You mouth sperm smells."'
+
+				if izvrat = 1:
+					bfa = bfa + 5
+					DOM = DOM + 1
+
+					'<<$boyA>> She blushed and lowered his eyes, you will clearly see how he formed mound on trousers.'
+
+					act 'Finish Kiss':xgt'meet','a'
+
+					exit
+				else
+					bfa = 0
+
+					'<<$boyA>> angry you threw myself "Oh, you dirty whore! Get out, that I would not see you anymore, we`re through!"'
+
+					act 'Escape':gt $locM, $metkaM
+
+					exit
+				end
+			end
+		end
+		act 'Kiss on the lips':
+			cla
+			if cumlip = 0:
+				'<center><img src="images/pic/kiss1.jpg"></center>'
+
+				if harakBoyA = 0:'You have substituted for kissing lips <<$boyA>> a little embarrassed kissed you.'
+				if harakBoyA = 1:bfa = bfa + 2 & 'You have substituted for kissing lips <<$boyA>> You quickly smacked.'
+				if harakBoyA = 2:bfa = bfa - 1 & 'You have substituted for kissing lips <<$boyA>> relish I kissed you, pushing his firm lips to your <<$meetlip>>.'
+
+				act 'Finish Kiss':xgt'meet','a'
+
+				exit
+			elseif cumlip > 0:
+				'<center><img src="images/pic/cumlip.jpg"></center>'
+				'<<$boyA>> I kissed you in your smelling sperm <<$meetlip>> and pulled. "What is it?" he asked "You mouth sperm smells."'
+
+				if izvrat = 1:
+					bfa = bfa + 5
+					DOM = DOM + 1
+
+					'<<$boyA>> She blushed and lowered his eyes, you will clearly see how he formed mound on trousers.'
+
+					act 'Finish Kiss':xgt'meet','a'
+
+					exit
+				else
+					boya = 0
+
+					'<<$boyA>> angry you threw myself "Oh, you dirty whore! Get out, that I would not see you anymore, we`re through!"'
+
+					act 'Escape':gt $locM, $metkaM
+
+					exit
+				end
+			end
+		end
+		act 'Give a kiss on the cheek':
+			cla
+			DOM = DOM + 1
+
+			'<center><img src="images/pic/kiss2.jpg"></center>'
+
+			if harakBoyA = 0:bfa = bfa + 1 & 'You framed and cheek <<$boyA>> timidly kissed you.'
+			if harakBoyA = 1:'You framed and cheek <<$boyA>> you kissed.'
+			if harakBoyA = 2:bfa = bfa - 2 & 'You framed and cheek <<$boyA>> kissed you discouraged with views.'
+
+			if giftDayA = dayA:
+				bfa = bfa - 3
+				if harakBoyA = 0:'<<$boyA>> It looks upset.'
+				if harakBoyA = 1:'<<$boyA>> It looks offended.'
+				if harakBoyA = 2:'<<$boyA>> He looks angry.'
+			end
+
+			act 'Finish Kiss':xgt'meet','a'
+
+			exit
+		end
+		act 'Do not kiss':
+			cla
+			DOM = DOM + 2
+
+			if harakBoyA = 0:bfa = bfa - 1 & 'You nod and say hello, <<$boyA>> effaced and slightly flushed.'
+			if harakBoyA = 1:bfa = bfa - 2 & 'You nod and say hello, <<$boyA>> I frowned slightly.'
+			if harakBoyA = 2:bfa = bfa - 3 & 'You nod and say hello, <<$boyA>> He chuckled and grinned.'
+
+			if giftDayA = dayA:
+				bfa = bfa - 3
+				if harakBoyA = 0:'<<$boyA>> It looks upset.'
+				if harakBoyA = 1:'<<$boyA>> It looks offended.'
+				if harakBoyA = 2:'<<$boyA>> He looks angry.'
+			end
+
+			act 'Further':xgt'meet','a'
+
+			exit
+		end
+	elseif venera >= 4:
+		bfa = 0
+
+		'<center><img src="images/pic/venera.jpg"></center>'
+		'<<$boyA>> I looked at you and said, "What have you got with the lips? They all ulcers. What`s this, genital herpes? I`d better go, I do not want to catch. Adieu."'
+
+		act 'Escape':gt $locM, $metkaM
+
+		exit
+	elseif cumface > 0:
+		'<center><img src="images/pic/cumface.jpg"></center>'
+		'<<$boyA>> I looked at you and said, "What have you got stuck in her hair? What`s this, sperm?"'
+
+		if izvrat = 1:
+			bfa = bfa + 5
+			DOM = DOM + 1
+
+			'<<$boyA>> She blushed and lowered his eyes, you will clearly see how he formed mound on trousers.'
+
+			act 'Yes, it`s sperm, More questions have?':
+				cla
+				gs'stat'
+
+				'(You) - Yes, it`s sperm, More questions have?'
+				'<<$boyA>> He shook his head.'
+
+				xgt'meet','a'
+			end
+
+			exit
+		else
+			boya = 0
+
+			'<<$boyA>> angry you threw myself "Oh, you dirty whore! Get out, that I would not see you anymore, we`re through!"'
+
+			act 'Escape':gt $locM, $metkaM
+
+			exit
+		end
+	end
+end
+
+if $ARGS[0] = 'a':
+	if cumfrot > 0:
+		'"Hey, but what are you smeared?" I asked <<$boyA>> looking at your ass. "That`s sperm!"'
+
+		if izvrat = 1:
+			bfa = bfa + 5
+			DOM = DOM + 1
+
+			'<<$boyA>> She blushed and lowered his eyes, you will clearly see how he formed mound on trousers.'
+		else
+			bfa = 0
+
+			'<<$boyA>> angry you threw myself "Oh, you dirty whore! Get out, that I would not see you anymore, we`re through!"'
+
+			act 'Escape':gt $locM, $metkaM
+
+			exit
+		end
+	end
+
+	if financeA = 0:
+		if glamur = 1:
+			bfa = bfa - (harakBoyA + 1)
+
+			'"And you dress smartly" skeptically noticed <<$boyA>> looking at your expensive dress.'
+		end
+
+		if skirt = 1 or sport = 1:
+			bfa = bfa + (harakBoyA + 1)
+
+			'"Cool outfit" I noticed <<$boyA>>'
+		end
+
+		mesorand = RAND(0,1)
+		if mesorand = 0:
+			'<<$boyA>> I offered you a beer at the entrance.'
+
+			act 'Sorry, but I urgently need to escape':
+				cla
+				bfa = bfa - (harakBoyA + 1)
+				gt $locM, $metkaM
+			end
+			act 'Come':gt'podezdM','start'
+
+			exit
+		elseif mesorand = 1:
+			'<<$boyA>> I suggest you take a walk in the park.'
+
+			act 'Sorry, but I urgently need to escape':
+				cla
+				bfa = bfa - (harakBoyA + 1)
+				dynamic $brodilr
+			end
+			act 'Come':gt'parkM','start'
+
+			exit
+		end
+	elseif financeA = 1:
+		if glamur = 1 or skirt = 1:
+			bfa = bfa - (harakBoyA + 1)
+
+			'"Excellent wear" admiringly noticed <<$boyA>>.'
+		end
+
+		if sport = 1:
+			bfa = bfa - (harakBoyA + 1)
+
+			'"And you`re athletic girl" skeptically noticed <<$boyA>> looking at your clothes.'
+		end
+
+		mesorand = RAND(0,2)
+		if mesorand = 0:
+			'<<$boyA>> suggest you go to the movies.'
+
+			act 'Sorry, but I urgently need to escape':
+				cla
+				bfa = bfa - (harakBoyA + 1)
+				dynamic $brodilr
+			end
+			act 'Come':gt'kinoM','start'
+
+			exit
+		elseif mesorand = 1:
+			'<<$boyA>> I suggest you take a walk in the park.'
+
+			act 'Sorry, but I urgently need to escape':
+				cla
+				bfa = bfa - (harakBoyA + 1)
+				gt'street'
+			end
+			act 'Come':gt'parkM','start'
+
+			exit
+		elseif mesorand = 2:
+			'<<$boyA>> I invited you to sit in a cafe.'
+
+			act 'Sorry, but I urgently need to escape':
+				cla
+				bfa = bfa - (harakBoyA + 1)
+				dynamic $brodilr
+			end
+			act 'Come':gt'kafeM','start'
+
+			exit
+		end
+	elseif financeA = 2:
+		if glamur = 1:
+			bfa = bfa + (harakBoyA + 1)
+
+			'"You have a great taste in clothes" admiringly noticed <<$boyA>> looking at your expensive dress.'
+		elseif glamur = 0:
+			bfa = bfa - (harakBoyA + 1)
+
+			'"Cute naryadets" skeptically noticed <<$boyA>> looking at your sleek clothes.'
+		end
+
+		mesorand = RAND(0,1)
+		if mesorand = 0:
+			'<<$boyA>> suggest you go to the cafe.'
+
+			act 'Sorry, but I urgently need to escape':
+				cla
+				bfa = bfa - (harakBoyA + 1)
+				dynamic $brodilr
+			end
+			act 'Come':gt'kafeM','start'
+
+			exit
+		elseif mesorand = 1:
+			'<<$boyA>> suggest you go to a restaurant.'
+
+			act 'Sorry, but I urgently need to escape':
+				cla
+				bfa = bfa - (harakBoyA + 1)
+				dynamic $brodilr
+			end
+			act 'Come':gt'restoranM','start'
+
+			exit
+		end
+	end
+end
+--- meet ---------------------------------
+
+# Menu.{Treatment}
+ARGS[0] = otg_Menu_Compliance[ARGS[0]-1]
+!----------
+if ARGS[0] = 0: exit
+!----------
+$ARGS[0] = dyneval("$Result = $<<$otg_Menu_Current>>_Parameters['<<ARGS[0]>>_F']")
+$ARGS[1] = dyneval("$Result = $<<$otg_Menu_Current>>_Parameters['<<ARGS[0]>>_M']")
+!----------
+dynamic "
+	if $ARGS[1] <> '' or ($ARGS[0] <> '' and LOC $ARGS[0]):
+		<<$otg_Menu_Current>>_Time = MSECSCOUNT-<<$otg_Menu_Current>>_Time
+		otg_Menu_Time = <<$otg_Menu_Current>>_Time
+		<<$otg_Menu_Current>>_Selected = -1
+		<<$otg_Menu_Current>>_VybrannyyPunkt = <<ARGS[0]>>
+		!----------
+		$ARGS[3] = $<<$otg_Menu_Current>>_ModuliSobyty['when you select']
+		if $ARGS[3] <> '': dynamic $ARGS[3],$<<$otg_Menu_Current>>_Parameters['<<ARGS[0]>>_W']"+dyneval("$Result = $<<$otg_Menu_Current>>_Parameters['<<ARGS[0]>>_P']")+"
+		!----------
+		if $ARGS[1] <> '':
+			dynamic $ARGS[1]"+dyneval("$Result = $<<$otg_Menu_Current>>_Parameters['<<ARGS[0]>>_P']")+"
+		else
+			GS $ARGS[0]"+dyneval("$Result = $<<$otg_Menu_Current>>_Parameters['<<ARGS[0]>>_P']")+"
+		end
+	else
+		MSG 'Location ''<<$ARGS[0]>>'' Found!'
+end
+",$ARGS[0],$ARGS[1]
+--- Menu.{Treatment} ---------------------------------
+

@@ -1,0 +1,292 @@
+# vokBimbo
+if $ARGS[0] = 'pos1':
+	cla
+	*clr
+	minut += 30
+	horny += 10
+	gs'stat'
+
+	if cumlip = 0:
+	gs'stat'
+		if rand1<10:'<center><img src="images/etogame/vokBimbo1.jpg"></center>'
+		if rand1>=10 and rand1<25:'<center><img src="images/nigma/gor/bimbo/bimbo.stay0.gif"></center>'
+		if rand1>=25:'<center><img src="images/nigma/gor/bimbo/bimbo.stay'+rand(0,5)+'.jpg"></center>'
+		'You are standing in the midst of the station men`s room in a rather revealing outfits. What did you just think.'
+	elseif cumlip > 0:
+		'<center><img src="images/etogame/vokBimbo11.jpg"></center>'
+		'You are standing in the midst of the station men`s room, all battered and male sperm.'
+	end
+
+	temp = RAND(1,10)
+	if temp > 8:
+		'The toilet door opens and in comes a young guy. Seeing you, he was taken aback by surprise.'
+
+		act 'To pretend, that straightens hair':gt'vokBimbo','pos4'
+
+		if horny > 50:
+			act 'Look at him with lust': gt'vokBimbo','pos2'
+		end
+	elseif temp < 3:
+		'The toilet door opens and he comes, little man in his fifties.'
+
+		act 'To pretend, that straightens hair':gt'vokBimbo','pos4'
+
+		if horny > 50:
+			act 'See a stranger with lust':gt'vokBimbo','pos3'
+		end
+	elseif temp = 5:
+		'The toilet door opens and he comes in the company of local drunks.'
+
+		act 'To pretend, that straightens hair':gt'vokBimbo','pos4'
+
+		if horny > 70:
+			act 'View them in the eye with lust':gt'vokBimbo','pos6'
+		end
+	end
+
+	act 'Wait for men':gt'vokBimbo','pos1'
+	act 'Logout':gt'vokzalGin'
+end
+
+if $ARGS[0] = 'pos2':
+	cla
+	*clr
+	minut += 30
+	horny += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/vokBimbo2.jpg"></center>'
+	'An unknown man blushed and went into the booth.'
+
+	act 'To come to his booth':gt'vokBimbo','pos22'
+	act 'Logout':gt'vokzalGin'
+end
+
+if $ARGS[0] = 'pos22':
+	cla
+	*clr
+	gs'stat'
+	if rand1<40:'<center><img src="images/nigma/gor/bimbo/bimbo.boy0.jpg"></center>'
+	if rand1>=40:'<center><img src="images/nigma/gor/bimbo/bimbo.knees'+rand(0,6)+'.jpg"></center>'
+	'You bursts without knocking into the booth. Man standing with unbuttoned pants and looking at you. You get up on his knees and grabs him. '
+		act'Suck':
+		cla
+		*clr
+		gs'stat'
+		minut += 30
+		horny += 20
+		cumlip += 1
+		bj += 1
+		if rand1<10:'<center><img src="images/etogame/vokBimbo22.jpg"></center>'
+		if rand1>=10 and rand1<40:'<center><img src="images/nigma/gor/bimbo/bimbo.boy0,'+rand(0,5)+'.jpg"></center>'
+		if rand1>=40:'<center><img src="images/nigma/gor/bimbo/bimbo0,'+rand(0,13)+'.gif"></center>'
+		'First he otbrykivatsya, but soon you manage to take in his mouth has got stronger penis and you takes hard sucking. After a while a guy starts moaning, missing your head and starts to cum.'
+			act 'Sucking swallowing sperm':
+				cls
+				swallow += 1
+				water -= 10
+				minut += 10
+				gs'stat'
+				'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+				'You have continued to suck dick and cums swallow sperm hits you in the mouth. Sperm was so much, you do not have time to swallow it all flows out of your mouth for a member. Lastly <<$bname>> ceases to finish and you pull your cock out smelling sperm mouth. In the mouth disgusting taste of Cum, obliznuvshis you know, your <<$liptalk3>> wet with sperm.'
+					act 'Get out of the stall':gt'vokBimbo','pos1'
+			end
+			act 'Remove from the mouth':
+				cls
+				cumface += 1
+				facial += 1
+				minut += 10
+				gs'stat'
+				if rand1<49:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+				if rand1=>50:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+				'You took out a member of his mouth and a jet of sperm immediately slapped you in the face. You squeezed her eyes shut for fear of, that the sperm gets into your eyes and feel as another jet of hot Cum landed on your face.'
+					act 'Get out of the stall':gt'vokBimbo','pos1'
+			end
+			
+		end
+		act'Give':
+		cla
+		*clr
+		gs'stat'
+		minut += 30
+		horny += 20
+		$boy='guy'
+		if rand1<30:'<center><img src="images/nigma/gor/bimbo/bimbo.boy1,'+rand(0,5)+'.jpg"></center>'
+		if rand1>=30:'<center><img src="images/nigma/gor/bimbo/bimbo.boy1,'+rand(0,8)+'.gif"></center>'
+		dynamic $sexstart
+		dynamic $sexstart2
+		dynamic $sexcum
+		horand = RAND(1,100)
+		if horand > horny:horny = horny + 10 & 'You were not satisfied'
+		if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+			act 'Get out of the stall':gt'vokBimbo','pos1'
+		end
+	
+
+	act 'Get out of the stall':gt'vokBimbo','pos1'
+end
+
+if $ARGS[0] = 'pos3':
+	cla
+	*clr
+	minut += 30
+	horny += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/vokBimbo2.jpg"></center>'
+	'Little man smiled and went toward you unbuttoning his pants.'
+
+	act 'Kneel down':
+	*clr
+	cla
+	'<center><img src="images/nigma/gor/bimbo/bimbo.knees'+rand(0,6)+'.jpg"></center>'
+	'You go down to her knees.'
+		act'Suck':gt'vokBimbo','pos33'
+		act 'Ran out of toilet':gt'vokzalGin'
+	end
+end
+
+if $ARGS[0] = 'pos33':
+	cla
+	*clr
+	minut += 30
+	horny += 10
+	gs'stat'
+
+	if rand1<10:'<center><img src="images/etogame/vokBimbo33.jpg"></center>'
+	if rand1>=10:'<center><img src="images/nigma/gor/bimbo/bimbo0,'+rand(0,13)+'.gif"></center>'
+	'A guy came up to you in a dense and you smiled at him, and he did not stand on ceremony added a member to your mouth and began to push through force cock deep throat. You could not breathe, but fortunately he loosened his grip and you could dial the air. A man went to fuck you in the mouth simultaneously stripping.'
+
+	act 'Drain panties and masturbate':gt'vokBimbo','pos333'
+end
+
+if $ARGS[0] = 'pos333':
+	cla
+	*clr
+	minut += 30
+	horny += 10
+	cumlip += 1
+	bj += 1
+	gs'stat'
+
+	if rand1<20:'<center><img src="images/etogame/vokBimbo333.jpg"></center>'
+	if rand1>=20 and rand1<60:'<center><img src="images/nigma/gor/bimbo/bimbo.strip'+rand(0,6)+'.gif"></center>'
+	if rand1>=60:'<center><img src="images/nigma/gor/bimbo/bimbo.strip'+rand(0,5)+'.jpg"></center>'
+	'An unknown man released you and you slipped on a dirty floor men`s room in the same shoes. In your clothes lying everywhere.'
+	'- But you`re hot! Well, Now`s try your ass girl, but then I Manka anywhere except my forehand did not give.'
+
+	act 'Further':gt'vokBimbo','pos3333'
+end
+
+if $ARGS[0] = 'pos3333':
+	cla
+	*clr
+	minut += 30
+	horny += 10
+	cumass += 1
+	anal += 1
+	gs'stat'
+
+	horand = RAND(1,100)
+	if horand > horny:horny = horny + 10 & 'You were not satisfied'
+	if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+
+	if rand1<10:'<center><img src="images/etogame/vokBimbo3333.jpg"></center>'
+	if rand1>=10:'<center><img src="images/nigma/gor/bimbo/bimbo3,'+rand(0,7)+'.gif"></center>'
+	'Barker turned your face to the wall and came sharply in the ass. A sharp pain hit you like a shock. Tears streamed from his eyes, and you tried to escape, but strong arms hold your delicate female body. Bastard continued furiously peck your poor ass and pain gradually began to recede. A guy fuck you for a long time, you even wondered how he could so long to finish. Finally, and you managed to get the pleasure and pain receded. You started to moan softly.'
+	'- Please, yes, girl? Come here often, be my toilet whore, ha-ha!'
+	'C dork these words began to twitch, and you finish in the ass. He let you exhausted.'
+
+	act 'Further':gt'vokBimbo','pos33333'
+end
+
+if $ARGS[0] = 'pos33333':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	if rand1<40:'<center><img src="images/etogame/vokBimbo33333.jpg"></center>'
+	if rand1>=40:'<center><img src="images/nigma/gor/bimbo/bimbo.cum.body0.gif"></center>'
+	'You slipped on a dirt floor is not even move forces, A man still continued to squeeze the remnants Cum you on the body.'
+	'- What are you a slut, wallow here in the toilet. I had no idea what happens.'
+	'C these words, a strange man pulls a marker and wrote to you on the chest "Dressing Slut".'
+	'- That`s the way it will be clear, who you really, ha-ha-ha!'
+	'Lastly, mocking at you, a stranger comes out of the closet.'
+
+	act 'Get dressed':gt'vokBimbo','pos1'
+end
+
+if $ARGS[0] = 'pos4':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/etogame/vokBimbo4.jpg"></center>'
+	'You pretend, nothing notice. It should be thought about you, that you are so stupid, that confused the men`s room with the female.'
+
+	act 'Wait':gt'vokBimbo','pos1'
+	act 'Logout':gt'vokzalGin'
+end
+
+if $ARGS[0] = 'pos5':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/etogame/vokBimbo1.jpg"></center>'
+	'You ran into the toilet stall and closed. Such a shame, suddenly someone-some saw as you were here. His heart pounding.'
+
+	act 'Ran out of toilet':gt'vokzalGin'
+end
+
+if $ARGS[0] = 'pos6':
+	cla
+	*clr
+	minut += 10
+	horny += 5
+	gs'stat'
+	'<center><img src="images/nigma/gor/bimbo/bimbo.stay'+rand(0,5)+'.jpg"></center>'
+	'- Well ka, who is here with us! - hear drunken jubilation of the crowd.'
+	act'Undress':
+	cla
+	*clr
+	'<center><img src="images/nigma/gor/bimbo/bimbo.strip'+rand(0,6)+'.gif"></center>'
+	'You dropped off her clothes.'
+		act 'Further':gt'vokBimbo','pos66'
+	end
+	act 'Ran out of toilet':gt'vokzalGin'
+end
+
+if $ARGS[0] = 'pos66':
+	cla
+	*clr
+	minut += 10
+	horny += 30
+	cloth_vid = 0
+	mop = 0
+	gang += 1
+	cumass += 1
+	cumlip += 1
+	vagina += 1
+	horand = RAND(1,100)
+	gs'stat'
+
+	if horand > horny:horny = horny + 10 & 'You were not satisfied'
+	if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+
+	if rand1<10:'<center><img src="images/etogame/vokBimbo66.jpg"></center>'
+	if rand1>=10:'<center><img src="images/nigma/gor/bimbo/bimbo.orgy'+rand(0,4)+'.gif"></center>'
+	'A crowd of local drunks, fuck you in all the cracks, Commenting on the vulgar jokes in your address. Pinching and poking your dirty fingers into the anus and mouth.'
+	'- To fuck you`re beautiful! I had no such beauties fucked.'
+	'- Ltd., I`m straight into her pussy nakonchal, shit I last 5 years ago and the guy fucked in the area.'
+	'("Fu how disgusting!" - do you think. "The man fucking man in the anal canal, and now fucks my tender pussy. Oh Nooo!")'
+	'You raped a crowd of men, who seems-then he entered the bathroom and removes those who have already satisfied. So you lost track of the men.'
+	'Lastly, all filled with sperm, you are left alone in the toilet. With some difficulty climbing you collect items scattered on the floor.'
+
+	act 'Get dressed':gt'vokBimbo','pos1'
+end
+--- vokBimbo ---------------------------------
+

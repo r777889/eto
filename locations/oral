@@ -1,0 +1,59 @@
+# oral
+if $ARGS[0] = 'start':
+	frost = 0
+
+	'You`re a little caress fingers <<dick>> inch dick, then cupped his mouth and began to suck.'
+
+	if harakBoy = 0:
+		'<<$nameV>> He closed his eyes in pleasure and enjoying the caress of your lips.'
+	elseif harakBoy = 1:
+		'<<$nameV>> He looks you in the face until your lips slide over his hard dick.'
+	elseif harakBoy = 2:
+		if mop > 1:mop = 0
+		hapri = 0
+		throat = throat + 1
+		'<<$nameV>> I take you by the hair and began to fuck you in the mouth, by members beat you to the throat tears flowed from the eyes.'
+	end
+
+	horny = horny + throat + SUB + VAF - DOM
+
+	if horny >= 100:
+		VAF = VAF + 1
+		orgasm = orgasm + 1
+		horny = 20
+		manna = manna + 15
+		willpower = willpower + 15
+		lipkoef = lipkoef + 1
+
+		if lipkoef > 50:
+			lipkoef = 0
+			lip = lip + 1
+		end
+
+		'Unexpectedly, you you started sucking dick cum themselves. Between the legs blazing fire and waves of pleasure covered body, You groaned but did not release a member of his mouth continuing to suck.'
+	end
+
+	'Lastly <<$nameV>> groaned and you realize, now he will start to finish.'
+end
+
+if $ARGS[0] = '0':
+	horny = horny + throat + SUB + VAF - DOM
+
+	if horny >= 100:
+		VAF = VAF + 1
+		orgasm = orgasm + 1
+		horny = 20
+		manna = manna + 15
+		willpower = willpower + 15
+		lipkoef = lipkoef + 1
+
+		if lipkoef > 50:
+			lipkoef = 0
+			lip = lip + 1
+		end
+
+		'Unexpectedly, you you started sucking dick cum themselves. Between the legs blazing fire and waves of pleasure covered body, You groaned but did not release a member of his mouth continuing to suck.'
+	end
+end
+--- oral ---------------------------------
+

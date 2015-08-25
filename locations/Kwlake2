@@ -1,0 +1,52 @@
+# Kwlake2
+clr
+gs'stat'
+
+'<center><img src="images/img/Lake/kwlake2/kwlake1.jpg"></center>'
+'Taking a walk on the beach, you notice a man sitting alone.'
+'"Let`s sit here not much" Katya offers.'
+
+act 'No, go from here':gt'Nudelake'
+act 'Come on':
+	cla
+	*clr
+	kat += 5
+
+	'<center><img src="images/img/Lake/kwlake2/kwlake2.jpg"></center>'
+	'You sit near a man, Kate begins to stroke your pussy and kissing his chest, corner of your eye you are watching a man, seeing this presentation, he perked up, He rolled over on his stomach and put his hand under him.'
+
+	act 'Catboat, enough, go here':gt'Nudelake'
+	act 'Call man':
+		cla
+		*clr
+		kat += 5
+		kuni += 1
+		bj += 1
+
+		'<center><img src="images/img/Lake/kwlake2/kwlake3.jpg"></center>'
+		'When Kate begins to lick your pussy, you beckon man, he quickly jumps up and runs to you, taking off her pants. Running up the man next to you falls to his knees, poking his cock in your face. Only you had opened her mouth, he immediately put his penis into it and not waiting when you start sucking, I began to fuck your mouth.'
+
+		act '...':
+			cla
+			*clr
+			sex += 1
+
+			'<center><img src="images/img/Lake/kwlake2/kwlake4.jpg"></center>'
+			'When he tired of your mouth, He lay on his back, but you put on yourself, back to itself. Kate stood over you substituting your pussy to your mouth. While the man process your vagina, Kat and you lick it soon bore fruit. Kate squeezed you tight pressed to her pussy and you feel like she shuddered and her juices began to flow into your mouth.'
+
+			act '...':
+				cla
+				*clr
+				cumlip += 1
+				orgasm += 1
+
+				'<center><img src="images/img/Lake/kwlake2/kwlake5.jpg"></center>'
+				'Soon, the man took you to himself and put on her knees again put his dildo in your mouth. Kate is perched beneath you, tongue caressing your clitoris. You feel like your bosom pleasant warmth spreads, you pressed harder to Cat, literally pushing its head in the sand. A member in your mouth, too, began to tremble and you finished almost simultaneously, man poured your mouth with his sperm, and your juices flowed in her mouth Katie.'
+
+				act 'Escape':gt'Nudelake'
+			end
+		end
+	end
+end
+--- Kwlake2 ---------------------------------
+

@@ -1,0 +1,82 @@
+# IvanEv
+ivansportday = day
+gs'stat'
+
+'<center><b><font color = maroon><<$npcName[3]>> <<$npcSurName[3]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/3.jpg"></center>'
+
+if $loc = 'gdksport':
+	'Ivan grinned to see you "Hello World, you are here, too, engage in sports?" You have confirmed his words. Ivan nodded. "I`ve been to the gym boxing go. Soon competition."'
+
+	act 'Escape':gt'gdksport'
+
+	if kotovVSprohorov = 1:
+		!
+	elseif kotovVSprohorov = 0:
+		'Ivan thought about it and said, "I now sparring with Kotov from our class. Want to see?"'
+
+		act 'Want to':
+			cls
+			kotovVSprohorov = 1
+			gs'stat'
+
+			'You entered the room where trained local boxing club. The room was ineradicable smell of old leather and sweat pears. Some guys hit on pears practicing punches, several mirrors before practiced movement. In the ring he was already Cats, shorts, helmet and gloves. "Hey Proshka! I`ll wait for you as? Go to the ring!" Prokhorov grinned, quickly pulled the helmet on his head, I put on gloves and stepped into the ring. You sat on the bench. Many of the men also began to look, what will happen in the ring.'
+
+			act 'Watch':
+				cls
+				minut += 3
+				dom += 1
+				gs'stat'
+
+				'Immediately struck, Ivan is much higher, Vitek than Kotov, Kotov but broader in the shoulders and much Defined. Guys knocked gloves in salute, and went from one another arose in the rack. Cats like the wind lashed at Ivan. Ivan began to retreat fighting jabs. So much, Cats that can be embedded in strikes, but can not get Ivan. Ivan is not strong blows of his left hand almost immediately began to fall cats in head. Here there was a loud bang, Kotov and his head jerked, Witek and he took a step back. Strike the right hand of Ivan was very sharp and detailed. Vitek began to retreat and fight. Roles in the ring changed, Ivan now put pressure and pressed Kotova. So much, that Victor already pouring perspiration, and he began to choke. And Ivan, meanwhile, shot Kotova sharp and accurate strikes from a distance. Vitek also fighting could not get Prokhorov. There was another loud bang and my head snapped to the side Victor, and he swayed noticeably. Coach whistle whistle "So at the corners, the end of the round. Victor! What the hell are you you`re going as a tank Ivan? Ivan class above you. Use the jab, Finti, if you will shove, I can not catch you to separate, then you will treat a concussion." Vitek standing in the corner of sweating and tried prodyshatsya. Ivan looked fresh and not tired. Finally, the coach whistle whistle "Second round."'
+
+				act 'Watch':
+					cls
+					minut += 3
+					dom += 1
+					gs'stat'
+
+					'In the second round, Ivan became easy on your feet moving around the circle and beat Victor easy blows with his left hand, almost all the blows fell cats in the head, but Victor did not react to them, trying to get closer Ivan, Suddenly he threw a left hook to the head of Ivan, Prokhorov managed to raise their hands and close the head, but then a second blow Kotova landed with a loud bang in the stomach Ivan. Ivan noticeably bent down and began to retreat and move from side to side. Kotov was delighted and began to settle on Ivan throwing hands with incredible speed. Here he was able to get to the head of Ivan and Ivan legs buckled. Coach again whistled the whistle. "Ivan, keep it at a distance, do not let close!" It was evident from both the nose bleeds Ivan he wipes a glove. Coach whistle again "Third round."'
+
+					act 'Watch':
+						cls
+						minut += 3
+						dom += 1
+						gs'stat'
+
+						'Ivan began to move easily on his feet throwing his left arm which regularly ran head constantly attacking Kotov. Victor threw hand, but Ivan managed to remove the head from bumps and knocks over his arm Kotova, there was a loud bang and Kotov got ass to the ring. Someone watching match of the guys noticed with admiration "Excellent cross struck Vanya." Long and nasty whistle whistle trainer. "Ivan, well done, well caught in the cross. Victor, are you okay?" Witek got to his feet and angrily looked at Ivan through clenched teeth. "I`m very well." The coach nodded "Well, then continue." The boys went back to the center of the ring and greeted each other kick started the fight gloves. Vitek was noticeably quieter and more tried to go away from the blows Prokhorov. Ivan was moving his legs and threw but unsuccessful, many of which hit the target. Suddenly Vitek intensified and tucked in the corner of Ivan, Two powerful blow immediately hit in the stomach and Ivan Prokhorov clutching Victor hung on it. There was a whistle trainer "Ivan, defend housing. Okay, relax a bit." Men stood in their corners, it was evident that they are both covered in sweat and panting. Ivan wiped the blood flowing from the nose, and Victor kneaded his hands. Coach whistle whistle "Fourth round"'
+
+						act 'Watch':
+							cls
+							minut += 3
+							dom += 1
+							gs'stat'
+
+							'The fourth round, and Victor began circling around the ring trying to drive into the corner of Ivan. Ivan noticeably tired and his movements in the ring began to slowly, but his still regularly fetched Kotova. Suddenly there was cotton, and Ivan staggered, Victor still got it in his head. Ivan began to retreat to close the hands of Kotova, Vitek and with renewed vigor for the Protection of Ivan thrashed. Suddenly, one of the blows to the stomach Prokhorov slapped and he bent, Cats hit uppercut, and the head of Ivan swung. Ivan hung on Victor. Coach whistle whistle "Ivan, move on his feet, Bey jab, do not sleep in the ring." Coach whistled again and the boys continued. Vitek were pressing on Ivan, but Ivan has recovered and fought back light and quick strokes. Here the head of Ivan jerked from a powerful strike and Ivan recoiled hanging on the ropes, Kotov immediately rushed to Ivan with a view to finish it, but the whistle blew trainer. "Okay, let us call it a day. Ivan, get some rest and legs, We will practice defense corps. You weak this component." Vitek nabychilsya, "What I do?" The coach shrugged "Think of something, not small."'
+
+							act 'Ask the coach who won':
+								cls
+								minut += 3
+								gs'stat'
+
+								'You asked an elderly coach who won. The coach looked at you, like you just saw. "This sparring, there are no winners. But if it was a real battle, it would certainly be defeated Ivan. The battle is considered the number of beats, their strength does not matter. Ivan struck a dozen times more punches." Cats coach heard zabubnil "Of course, otpizdish in shit, and then also lose. Proshka is broken, if not whistle, I would put it. Master of sport fucking." On the coach remarked irritably "Kotov, you`re not in the alley, a sport, and he has the right, according to the rules you lose, learn not to expose his head off everywhere." Kotov irritably off his gloves and went to the area, where were the bar and weights. The coach looked into his footprint "That alone can, swing." Prokhorov has regained consciousness and went to the coach. The coach began to wear long leather paws on his hands.'
+
+								act 'Can I be like training?':
+									cls
+									minut += 3
+									gs'stat'
+
+									'You asked an elderly trainer whether you can also train. The coach grinned. "You see, there is no other girls. Who are you going to stand in sparring? And no this is not sparring, boxing will, a children`s game." You offered to put you in sparring with guys. It surrounds you guys giggled. He smiled even coach. "You saw the fight, Imagine, that will happen to you, If some sort of Kotov you accidentally hit in full force. I`m not old age, still in jail to get, for, that you were in training, somebody accidentally maim."'
+
+									act 'Escape':gt'gdksport'
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- IvanEv ---------------------------------
+

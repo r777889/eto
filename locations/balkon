@@ -1,0 +1,53 @@
+# balkon
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><b><font color=maroon>Balcony Apartment</font></b></center>'
+
+	if nude = 0:
+		'<center><img src="images/etogame/clo_balcon.jpg"></center>'
+	elseif nude = 1:
+		if tanga = 0:'<center><img src="images/etogame/nude_balcon.jpg"></center>'
+		if tanga = 1:'<center><img src="images/etogame/tanga_balcon.jpg"></center>'
+	end
+
+	'You went to the balcony.'
+
+	if hour >= 0 and hour <= 6:
+		'Dark outside, lantern illuminates the street.'
+	elseif hour = 7:
+		'On the street the morning dawn, birds sing.'
+	elseif hour >= 8 and hour <= 19:
+		'On the street a clear day.'
+	elseif hour >= 20 and hour <= 23:
+		'At dusk the street.'
+	end
+
+	if nude = 1:
+		if sosedBalDay ! day:temp = RAND(1,4)
+		if sosedBalDay = day:temp = RAND(1,3)
+
+		if temp = 1:
+			'For you, no one pays attention.'
+		elseif temp = 2:
+			'For you, no one pays attention.'
+		elseif temp = 3:
+			'For you, no one pays attention.'
+		elseif temp = 4:
+			'The neighbor went to the balcony to the left, and looks at you naked.'
+
+			act 'View a neighbor':gt'balkon2','sosed'
+		end
+	end
+
+	if sigaret >= 1:act 'Lit a cigarette':gt'balkon2','kurit'
+
+	act 'View Down':gt'balkon2','niz'
+	act 'Leaving from the balcony':dynamic $brodils
+end
+--- balkon ---------------------------------
+

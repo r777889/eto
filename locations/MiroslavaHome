@@ -1,0 +1,773 @@
+# MiroslavaHome
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+minut += 5
+gs'stat'
+gs'time'
+
+'<center><H4>Yard Miroslava</H4></center>'
+!'miraQW <<miraQW>>'
+!'miragopQW <<miragopQW>>'
+
+if hour >= 8 and hour <= 22:
+	'<center><img src="images/qwest/gadukino/MiraHome.jpg"></center>'
+	temp = RAND(0,30)
+	if temp < 5:'Near the house engaged in economic Affairs  <a href="exec: dynamic $mirafather ">father Worlds</a>.'
+	if month >= 5 and month <= 9 and hour >= 18 and hour <= 21 and temp >= 20:'Briefly came on his motorcycle out of the city  <a href="exec: dynamic $mirabrother ">brother Worlds</a>.'
+	
+	act 'Call Miroslav':
+		cls
+		minut += 2
+		gs 'stat'
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		'You call Miroslav and a minute later she comes to you.'
+		if miragopQW = 11:
+			act 'Talk':
+				minut += 10
+				horny += 10
+				miragopQW = 12
+				gs 'stat'
+				'You long silent, not knowing where to start, Miroslav and all the while looking down at his feet and hard red. Finally you decide to speak and Peace, haltingly and-still not looking you in the eye, speaks, that does not know, that she then found, but she herself did not control. Whether it is drunk to the point, or something like that, but she is now ready to sink into the ground with shame. You something-How to calm her and say,, it all happens in life, you just have to step and move on. World sincerely thank you for your support, but his eyes still not looking...'
+				act 'Escape':gt 'gadukino'
+			end
+		else
+			act 'Chat':dynamic $miratalk
+			act 'Suggest a walk together':
+				cls
+				minut += 40
+				if miraQW < 15:miraQW += 1
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/street.jpg"></center>'
+				'You offer it along wander through the village, and she gladly accepts, then you walk together at a small village, telling each other stories of life.'
+				act 'Finish':gt 'gadukino'
+					 if temper >= 30 and sunWeather = 1 and miragopQW = 7:
+					 'When you walk along with Mira, accidentally notice, that she was without panties.'
+						 act 'Remind her of the second desired':
+						cls
+						miraQW = 1
+						minut += 15
+						gs 'stat'
+						if miragopQW = 0:
+							'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+						elseif miragopQW > 0 and miragopQW < 4:
+							'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+						elseif miragopQW >= 4 and miragopQW < 8:
+							'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+						elseif miragopQW >= 8 and miragopQW < 12:
+							'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+						elseif miragopQW >= 12 and miragopQW < 20:
+							'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+						elseif miragopQW >= 20:
+							'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			end	
+						'You a few seconds of silently staring at her, and then unceremoniously asked, why is she without panties. Miroslav, pushing eyes, wrinkled from foot and leg, explaining, what happened, very hot, and here it is... You remind her of her second wish, and ask to sit down. Miroslav reluctantly agrees, and when he sits down, you order her, she`ll show you the crotch, and then you are considered bad. The girl mumbles that-incoherently, but then for half a minute lifts up her skirt and gives you a good look at my crotch.'
+						act 'Watch':
+							cls
+							minut += 2
+							horny += 15
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/Mirawish2.jpg"></center>'
+							'You enjoy the view, then you comes to mind is a crazy idea and you decide to make a second wish. The world says sadly, that thought, if this was your second wish, but you are responsible, that just could not resist, then the she speaks, to followed you.'
+							act 'Exit to the road':
+								cls
+								minut += 45
+								miragopQW = 8
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/Mirawish2_1.jpg"></center>'
+								'Out on the road you say Miroslav, so she posed as a prostitute, this will be the second desire. The world nods sadly, looks around and seeing, the street was quiet, fulfills your desire...'
+								act 'Escape':gt'gadukino'
+							end
+						end
+					 end
+				 end
+			end	
+			if meadow = 1:
+				act 'Show her your secret place':
+					cls
+					minut += 30
+					miraQW += 5
+					meadow = 2
+					mirainmeadow = 1
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/trail_meadow.jpg"></center>'
+					'The world you drive through the dense thickets to a hidden glade and all the way, it does not stop, fun chattering and telling stories from the past of city life.'
+					act 'Came':gt 'meadow'
+				end
+			elseif meadow > 1 and hour >= 8 and hour < 19:
+				act 'Offer to go to the Glade':
+					cls
+					minut += 30
+					if miraQW < 50:miraQW += 1
+					mirainmeadow = 1
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/trail_meadow.jpg"></center>'
+					'Do you offer Miroslava walk into your secret places, and she readily agrees. On the way you will be happy to tell each other stories.'
+					act 'Further':gt 'meadow'
+				end
+			end
+			if miraQW >= 15 and hour >= 20 and miragopQW = 0:
+				act 'Ask, know whether it has with the village':
+					cls
+					minut += 2
+					if miraQW < 50:miraQW += 1
+					miraingop = 1
+					miragopQW = 1
+					gs 'stat'
+					if miragopQW = 0:
+						'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+					elseif miragopQW > 0 and miragopQW < 4:
+						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+					elseif miragopQW >= 4 and miragopQW < 8:
+						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 8 and miragopQW < 12:
+						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+					elseif miragopQW >= 12 and miragopQW < 20:
+						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 20:
+						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+					end
+					'You ask Miroslav, all she had met in the village, and when it meets, what no, you propose to introduce her to the local guys and she readily agrees, I am asking you to wait a couple of minutes, until she change clothes, then quickly hiding in izbenke. When she goes, you and go to Buchan`s near your home Kompashki...'
+					act 'Further':minut += 15 & temp = 0 & miralko = 0 & gt 'mitkabuh'
+				end
+			elseif miraQW >= 15 and hour >= 20 and miragopQW > 0:
+				act 'Suggest pobuhat with the village':
+					cls
+					minut += 5
+					if miraQW < 50:miraQW += 1
+					miraingop = 1
+					gs 'stat'
+					if miragopQW = 0:
+						'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+					elseif miragopQW > 0 and miragopQW < 4:
+						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+					elseif miragopQW >= 4 and miragopQW < 8:
+						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 8 and miragopQW < 12:
+						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+					elseif miragopQW >= 12 and miragopQW < 20:
+						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 20:
+						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+					end
+					if miragopQW = 5:
+						'Do you offer Miroslava pobuhat with the village and she sadly agrees, whisper telling you, so you wait, when they leave Mitya, and then went to the home Mit`kin.'
+					else
+						'Do you offer Miroslava pobuhat with the village, and she readily agrees, and then asks you to wait a couple of minutes, until she change clothes. When she goes, you and go to Buchan`s near your home Kompashki...'
+					end
+					act 'Further':minut += 15 & temp = 0 & miralko = 0 & gt 'mitkabuh'
+				end	
+			elseif miraQW >= 30 and week = 6 and miragopQW < 4 and hour > 18 and hour < 22:
+				act 'Suggest take a steam bath':
+					cls
+					minut += 10
+					miraQW += 2
+					gs 'stat'
+					if miragopQW = 0:
+						'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+					elseif miragopQW > 0 and miragopQW < 4:
+						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+					elseif miragopQW >= 4 and miragopQW < 8:
+						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 8 and miragopQW < 12:
+						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+					elseif miragopQW >= 12 and miragopQW < 20:
+						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 20:
+						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+					end
+					'Do you offer Miroslava together to warm up your bath. She hesitates for a long time, but then still agrees and you go to you in the yard...'
+					act 'Undress':
+						cls
+						minut += 10
+						horny += 10
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraBan.jpg"></center>'
+						'You undress, corner of my eye watching takes off her panties Miroslava.'
+						act 'Watch, how to clean Miroslava':
+							cls
+							minut += 10
+							horny += 15
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/MiraBan1.jpg"></center>'
+							'You, feeling, as the hot steam penetrates your pores, blissfully watching lather Mira. It sometimes throws at you a short glance and hesitantly smiles...'
+							act 'Sweating':
+								cls
+								minut += 120
+								dynamic $showerdin
+								hapri = 0
+								mop = 1
+								sweat = -3
+								horny += 20
+								if frost > 0:frost = 0
+								skinvan += 5
+								if skinvan >= 20:skinvan = 0 & skin = skin + 1
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraBan2.jpg"></center>'
+								'Finally wash and World ends this business takes you. Soon after you join razomlevshie friend and all the rest of you are bathing in a bath, occasionally exchanging meaningless phrases...'
+								act 'Finish':gt 'gaddvor'
+							end
+						end
+					end	
+				end
+			end
+			if sunWeather = 1 and temper >= 20 and month >= 5 and month <= 9:
+				act 'Offer to go to the river':
+					cls
+					minut += 2
+					miraQW += 1
+					mirainriver = 1
+					gs 'stat'
+					if miragopQW = 0:
+						'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+					elseif miragopQW > 0 and miragopQW < 4:
+						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+					elseif miragopQW >= 4 and miragopQW < 8:
+						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 8 and miragopQW < 12:
+						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+					elseif miragopQW >= 12 and miragopQW < 20:
+						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 20:
+						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+					end
+					'Do you offer her to go to the river to swim or sunbathe and she readily agrees.'
+					act 'Go to the river':minut += 15 & gt 'Gadriver', 'Gadbitch'
+				end
+			end
+			if miragopQW >= 20 and mirasextimes >= 30 and piratsuka >= 30 and hour < 19 and month >= 5 and month <= 9 and mirapirat = 0:
+				act 'Put forth third wish':
+					cls
+					minut += 2
+					mirapirat = 1
+					gs 'stat'
+					if miragopQW = 0:
+						'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+					elseif miragopQW > 0 and miragopQW < 4:
+						'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+					elseif miragopQW >= 4 and miragopQW < 8:
+						'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 8 and miragopQW < 12:
+						'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+					elseif miragopQW >= 12 and miragopQW < 20:
+						'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+					elseif miragopQW >= 20:
+						'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+					end
+					'You remind of a third world desire and she reluctantly nodding your head, Reaffirming, he remembers about it. You, mysterious and sinister smile, You order it to follow you...'
+					act 'Go to your barn':
+						cls
+						minut += 10
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/PiratMira.jpg"></center>'
+						'You lead the World to his barn, where you joyfully greets excited Pirate. His bloodshot and swollen dick huge shnyaga dangles between his legs. Of the world, without stopping, She looks at him and quickly blush...'
+						act 'Ordered her to suck Pirate':
+							cls
+							minut += 2
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/PiratMira.jpg"></center>'
+							'You uverennnym demanding voice order Miroslava suck Pirate, adding, that this is your last wish, After you forgive her for her betrayal. She slowly jaw drops and she looks at you, as insane.'
+							' - Come on, you like a girl, - sniffed you, - because we both know, you`re still a whore, and she can not live without members. And here - you just Look, what is it, - huge, solid, hot! It is hardly compares to Mit`kin, is not it?'
+							'World stares at you then, to a member of the Pirate pogavkivayuschego demanding and can not be solved. You decide to push it and say,, it`s only the first time themselves have already tried more than once. Girl after this statement looks at you with round eyes, like a saw for the first time.'
+							act 'Confirm your words':
+								cls
+								minut += 5
+								horny += RAND(5,15)
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/PiratMira2.jpg"></center>'
+								'As proof of his words you sit down near Buccaneer, who immediately tries to knock down you, take in hand, and that a member of his tongue, quick fumble tip of his penis... World stunned gasps, and you immediately get up and saying, "You see!" demanding a voice repeat the offer, that just made yourself. She hesitates a moment uncertainly from foot to foot, then finally decides...'
+								act 'Watch':
+									cls
+									minut += 5
+									horny += RAND(25,30)
+									gs 'stat'
+									'<center><img src="images/qwest/gadukino/PiratMira1.jpg"></center>'
+									'World hesitantly crouches near Buccaneer, which with interest looks at her, and a minute later noisily exhales and finally decided... She bends down even lower and gently, hand hesitantly takes his cock, and a minute later, sticking his tongue, He begins to lick it... You talk to her, she was there to be careful, but schlock, and carefully doing her job.'
+									act 'Watch':
+										cls
+										minut += 15
+										horny += RAND(25,50)
+										gs 'stat'
+										'<center><img src="images/qwest/gadukino/PiratMira3.jpg"></center>'
+										'That a couple of minutes, pulls the tongue tip of his penis, then, with a sigh she lies on her back and took her hands over the dog hind legs, fully starts sucking his cock, crawl over hot lips tensed flesh. A minute later she pulls back and you see, she grimaced vyplevaet his mouth profusely current lubrication. You talk to her, to swallow every drop, including sperm. She sighs with resignation and continues to suck... Soon Pirate starts to cum and choking his sperm World, but swallow it whole fails - Part stems from her mouth and trickled over his lips and chin, muddies the neck and chest...'
+										act 'Finish':gt 'gaddvor'
+									end
+								end
+							end
+						end
+					end				
+				end
+			end	
+		end
+	end	
+else
+	'<center><img src="images/qwest/gadukino/MiraHome.jpg"></center>'
+	'Too late, Family Miroslava, most, sleeps, there is no need to wake up people unnecessarily.'
+end
+act 'Escape':gt 'gadukino'
+
+$miratalk = {
+	if miragopQW = 0:
+		cls
+		minut += 10
+		if miraQW < 10:miraQW += 1
+		gs 'stat'
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		'You ten minutes to chat about all sorts of fun trivia.'
+		act 'Finish':gt 'gadukino'
+	elseif miragopQW = 1:
+		cls
+		minut += 10
+		miraQW += 1
+		gs 'stat'
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		'You ten minutes to chat about all sorts of fun trivia, sometimes remembering, how you got drunk with the village parnyaga...'
+		if mirasextimes > 3:
+			act 'Ask about her and Mitya':
+				cls
+				minut += 2
+				horny += 10
+				miraQW += 1
+				miragopQW = 2
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+				'You ask the World, is there-between her and Mitya and she, hesitated, answers, what yes, is. For all further inquiries or she remained silent or evades, so you decide to leave it to a more appropriate time...'
+				act 'Finish':gt 'gadukino'
+			end
+		end
+		act 'Finish':gt 'gadukino'
+	elseif miragopQW = 2 or miragopQW = 3:
+		cls
+		minut += 10
+		miraQW += 1
+		gs 'stat'
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		'You ten minutes to chat about all sorts of fun trivia, Peace and sometimes blush, that-then remembering...'
+		if miragopQW = 3:
+			act 'Say, seen, she fucked in the meadow Mitka':
+				cls
+				minut += 2
+				horny += 10
+				miraQW += 1
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+				'You cold tell Miroslava, seen, she spreads her legs before Mitya on your clearing and quote her words about, she swore not to tell anyone about your secret place. World blushes and eye potuplivaet, muttering, that she was very sorry, that it happened, and then asks, is there-then, what it can do for you, to make amends. You will immediately remind her about three wishes, she promised to do, if someone-then tell, and she obsequious nods your head, that, pier, yes, she remembers and is ready to make amends.'
+				act 'Let removes her panties, It will show you the crotch and tell, how she fuck with Mitya in your glade':
+					cls
+					minut += 5
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+					'You speak, you want to see, What is valuable because of its front, that it has exchanged his friendship with you. World opeshivaet of such words and looks at you blankly, but you do not give it time to recover and continue to emphasize further, Recalling, that the agreement has an arrangement, and if it is not to keep his word, then this is your friendship and over. Miroslav thick red and hesitant shifting from foot to foot and you, deciding to move in-bank, turns around and starts to walk away...'
+					' - Billeting, - She cries softly behind you Miroslava, but you pretend, not to notice and go on. After a couple of seconds, she catches up with you and crimson face grabs you by the hand and drags where-the rickety barn.'
+					act 'Go for it':
+						cls
+						minut += 10
+						horny += 15
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/Mirawish1.jpg"></center>'
+						'You, mentally exulting, let it drag yourself hand, and when she stops and turns to you, then do as much as possible cold face. Miroslav another couple of long seconds hesitantly headway, and then, heavy sigh, starts to take off her panties. '
+						act 'Watch':
+							cls
+							minut += 15
+							horny += 50
+							miragopQW = 4
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/Mirawish1_1.jpg"></center>'
+							'Taking off his briefs, Miroslav turns to you ass and lifted her skirt, Low bends. You, not holding back, smiling broadly as possible and indifferent voice tells her to push her hands buttocks. World reluctantly fulfills your requirement, then you need to tell you, what the fuck she was Mitka on your glade. She tries to straighten up, but you, ryknuv it, speak, to tell in this humiliating and it will be punished for it, that came loose your secret. The next five minutes, pushing in front of you your buttocks, Miroslav tells you in detail, she felt, when her fucked Mitya...'
+								act 'Turn around and go':gt 'gadukino'
+						end
+					end
+				end
+				act 'Say, that you want to see, Mitya would like to tear her ass':
+					cls
+					minut += 5
+					horny += 10
+					miragopQW = 5
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+					'You speak, you want to see, Mitya otderet like it in the ass for, she blabbed your secret. World opeshivaet of such words and looks at you blankly, but you do not give it time to recover and continue to emphasize further, Recalling, that the agreement has an arrangement, and if it is not to keep his word, then this is your friendship and over. Miroslav thick red and hesitant shifting from foot to foot and you, deciding to move in-bank, turns around and starts to walk away...'
+					' - Billeting, - She cries softly behind you Miroslava, but you pretend, not to notice and go on.'
+					' - Good, Sveta, - After a long couple of seconds before you heard a hysterical cry Miroslava, - I what-figure something out!'
+					act 'Escape':gt 'gadukino'
+				end
+			end
+		end
+		act 'Finish':gt 'gadukino'
+	end
+	if miragopQW >= 4 and miragopQW < 7:
+		cls
+		minut += 10
+		horny += 10
+		gs 'stat'
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		'You ten minutes chatting about various trifles, sometimes with the World, blushing, It tells you some intimate details of her relationship with Mitka.'
+		if miragopQW = 6:
+			act 'Say, that the first wish fulfilled':
+				cls
+				minut += 10
+				horny += 15
+				miragopQW = 7
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+				'You say Miroslava, seen, how Mitka tore her ass and asking sarcastically, whether she liked it. To your surprise, it, blushing and embarrassed, speaks, a little... Are you frustrated grunt, reminds her, that there are still two wishes, for the performance of which you will be able to forget her betrayal. World obsequious nods his head and says you, it is ready to make amends. You answer, that is the desire to think about a second, and turning, leave...'
+				act 'Escape':gt 'gadukino'
+			end
+		end
+		act 'Finish':gt 'gadukino'
+	end
+	if miragopQW >= 7 and miragopQW < 12:
+		cls
+		minut += 10
+		horny += 10
+		!
+		miraQW+=1
+		gs 'stat'
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		'You sluggish ten minutes chatting about various trifles, while the world is trying not to meet with your eye.'
+		act 'Finish':gt 'gadukino'
+	end
+	if miragopQW >= 12:
+		cls
+		minut += 10
+		gs 'stat'
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		if miragopQW < 20:
+			'You sluggish ten minutes chatting about various trifles, thus you do not frequently calls her by name, and you call a whore, what it pretends, if nothing notices.'
+		elseif miragopQW >= 20 and miragopQW < 30:
+			'You sluggish ten minutes chatting about various trifles, while the world in general does not look you in the eye and the whole I agree with you, thinking about-then his.'
+		elseif miragopQW >= 30:
+			'You sluggish ten minutes chatting about various trifles, but the world in general does not listen, her conversations are reduced to sex.'
+		end
+		act 'Finish':gt 'gadukino'
+	end
+}
+
+$mirafather = {
+	cls
+	minut += 2
+	gs 'stat'
+	'<center><img src="images/qwest/gadukino/MiraFather.jpg"></center>'
+	
+	act 'Escape':gt 'miroslavahome'
+}
+
+$mirabrother = {
+	cls
+	minut += 2
+	gs 'stat'
+	
+	'<center><img src="images/qwest/gadukino/MiraBrother.jpg"></center>'
+	
+	act 'Ask prokatnut a motorcycle':
+		cls
+		minut += 2
+		gs 'stat'
+		
+		'<center><img src="images/qwest/gadukino/MiraBrother.jpg"></center>'
+		'You ask the brother Worlds prositute you on his motorcycle.'
+		if vnesh < 5:
+			if miraQW > 20:
+				'He appraising glance looks you up and down and answers, what how-some other time.'
+			else
+				'He udivleeniem couple of seconds looking at you, and then asks, Who you do this...'
+			end
+			act 'Escape':gt 'gadukino'
+		elseif vnesh >= 5 and vnesh<20:
+			if tanga > 0:
+				' - No problem, - he says to you, Glancing you a strange look. - But my bike to ride on the girls themselves but without panties, and nothing I can do about it, harmful I have it, chertyaka...'
+				act 'Escape':gt 'gadukino'
+			else
+				' - No problem, - answers you man, and then added with a malicious smile: - But first sit down on it, He checks... Well, you know, What I have it pickiest...'
+				act 'Sit on the bike':
+					cls
+					horny += 10
+					minut += 2
+					gs 'stat'
+					
+					'<center><img src="images/qwest/gadukino/MiraBroMoto.jpg"></center>'
+					'You, his legs, quick to shovel it through the iron horse and get on the bike, putting hands on the wheel. Brother Worlds with a satisfied smile stares you in the crotch, which opens him an excellent view of your naked pussy.'
+					' - Fine, - smiling guy, - just perfect! You cool pussy, I think, my boyfriend do not mind it for yourself prokatnut. Nuu, you realize, yes? A ride with your dashing breeze, if you do then I am pleased to mouth...'
+					
+					act 'Agree':
+						cls
+						horny += 10
+						minut += 2
+						sub += 1
+						gs 'stat'
+						
+						'<center><img src="images/qwest/gadukino/MiraBroMoto.jpg"></center>'
+						' - Well, then get up, Now you`ll get a helmet.'
+						
+						act 'Up':
+							cls
+							minut += 2
+							gs 'stat'
+							
+							'<center><img src="images/qwest/gadukino/MiraBroMoto1.jpg"></center>'
+							'You get up from a motorcycle and he, throwing harnesses, He gets another helmet and hands you. You don a helmet and the guy immediately sat down on a motorcycle, head nodding, make you sit behind him.'
+							
+							act 'Sit':
+								cls
+								hour = 22
+								manna = manna + 100
+								gs 'stat'
+								
+								'<center><img src="images/qwest/gadukino/MiraBroMoto2.jpg"></center>'
+								'You sit on the bike and the guy immediately gets it, then at breakneck speed down the highway rolls you, until it finally turns into Gadyukino and stops. '
+								
+								act 'Up':
+									cls
+									horny += RAND(5,15)
+									minut += 2
+									gs 'stat'
+								
+									'<center><img src="images/qwest/gadukino/MiraBroMoto3.jpg"></center>'
+									'He gets off the bike after coming up behind you and, confidence starts to touch you...'
+									
+									act 'Stand':
+										cls
+										horny += RAND(5,15)
+										minut += 2
+										gs 'stat'
+									
+										'<center><img src="images/qwest/gadukino/MiraBroMoto4.jpg"></center>'
+										'You, Mindful of persuasion, Obediently standing, until his hands imperiously crumple your chest and stroked the crotch.'
+										
+										act 'Stand':
+											cls
+											horny += RAND(5,15)
+											minut += 2
+											gs 'stat'
+										
+											'<center><img src="images/qwest/gadukino/MiraBroMoto5.jpg"></center>'
+											'You feel, his palm t your crotch, fingering labia. A minute later the guy spins you to her and persistently presses on your shoulders...'
+											
+											act 'To squat':
+												cls
+												horny += RAND(5,15)
+												minut += 2
+												gs 'stat'
+											
+												'<center><img src="images/qwest/gadukino/MiraBroMoto6.jpg"></center>'
+												'You obediently sit down in front of him down and unbutton his pants. Lowered them with shorts, you see right in front of his face his swelling member...'
+												act 'Suck':
+													cls
+													horny += RAND(10,20)
+													minut += 5
+													gs 'stat'
+												
+													'<center><img src="images/qwest/gadukino/MiraBroMoto7.jpg"></center>'
+													'You have a couple of seconds, fascinated look, he is gaining strength, and then, mouth wide open, gently absorbs it into itself and then release, then you take in hand and begin to suck it at the same time nadrachivat hand.'
+													
+													act 'Swallow':
+														cls
+														horny += RAND(15,25)
+														minut += 5
+														cumlip += 1
+														swallow += 1
+														bja += 1
+														if mirabrosextime = 0:mirabrosextime = 1 & guy += 1
+														gs 'stat'
+													
+														'<center><img src="images/qwest/gadukino/MiraBroMoto8.jpg"></center>'
+														'A few minutes later your mouth suddenly hits the warm sticky sperm and you quickly begin to swallow it. Miroslavin brother a moment worth, blissfully closed his eyes, while you suck his dick, and then buttons pants, He sits on the bike and rides...'
+														
+														act 'Going home':gt 'Gadhouse'
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end					
+					act 'Takeout':gt 'gadukino'
+				end
+			end
+		 else
+		 'He looked looks you up and down and his gaze lingers especially on your chest and legs
+		 - Sit baby, I go for a drive'
+			 act 'Get on the bike':
+			 cls
+			 horny += 10
+			 minut += 15
+			 gs 'stat'
+			 'You sat on the back seat of a motorcycle and the man sat down in front of you and started a motorcycle. The engine roared and the bike literally flew along a country road. After some time, the motorcycle stopped somewhere on the side of the road and the guy turned to you.'
+			 '- Baby, motorcycle does not want to go until you show her breasts'
+			     act 'You do ofigel?':
+			     cls
+			     dom+=1
+			     gs'stat'
+			     'You rebelled and brother Worlds you simply put off the bike.
+			     - Well, how can she want dobiratsya.'
+			         act 'Well, to hell with you! Sama find my way!':
+			         cls
+			         dom+=2
+			         nroad=rand(1,19)
+			         gs'stat'
+			         'You cursed the guy and turned away from him. Motorcycle engine immediately roared and disappeared from sight.'
+			         act 'Look around':gt'road'
+			         end
+			         
+			         
+			     end
+			     
+			     act 'Show':
+			     cls
+			     sub+=1
+			     gs'stat'
+			     '<center><img src="images/picb/t<<tits>>.jpg"></center>'
+			     'You reluctantly lowered his clothes and showed his chest guy. He looked with interest at your chest and suddenly grabbed his fingers reaching your nipples.
+			     - Very best boobs, Babe.
+			     The guy smiled and said brazenly putting your hand on his shoulder and pushing him.
+			     - Sit on his heels '
+			         act 'You do ofigel?':
+					 cls
+					 dom+=1
+					 gs'stat'
+					 'You rebelled and brother Worlds you simply put off the bike.
+					 - Well, how can she want dobiratsya.'
+						 act 'Well, to hell with you! Sama find my way!':
+						 cls
+						 dom+=2
+						 nroad=rand(1,19)
+						 gs'stat'
+						 'You cursed the guy and turned away from him. Motorcycle engine immediately roared and disappeared from sight.'
+						 act 'Look around':gt'road'
+						 end
+						 
+						 
+					 end
+					 
+					 act 'To squat':
+					 cls
+					 horny += RAND(5,15)
+					 minut += 2
+					 gs 'stat'
+					
+						'<center><img src="images/qwest/gadukino/MiraBroMoto6.jpg"></center>'
+						'You obediently sit down in front of him on his haunches and unzip his pants. Opened them together with cowards, you see right in front of my face on his swelling member...'
+						act 'Suck':
+							cls
+							horny += RAND(10,20)
+							minut += 5
+							gs 'stat'
+						
+							'<center><img src="images/qwest/gadukino/MiraBroMoto7.jpg"></center>'
+							'You have a few seconds, transfixed, watching, as he grows in power, and then, mouth wide open, gently absorb it into himself and then release, then take in hand and begin to suck on it and at the same time nadrachivat hand.'
+							
+							act 'Swallow':
+								cls
+								horny += RAND(15,25)
+								minut += 5
+								cumlip += 1
+								swallow += 1
+								bj+=1
+								bja += 1
+								if mirabrosextime = 0:mirabrosextime = 1 & guy += 1
+								gs 'stat'
+							
+								'<center><img src="images/qwest/gadukino/MiraBroMoto8.jpg"></center>'
+								'After a couple of minutes you in the mouth strikes unexpectedly warm sticky cum and you quickly begin to swallow. Miroslava brother for another minute stands, blissfully closed his eyes, while you are sucking his cock, and then zips up pants, sits on a motorcycle and drives away...'
+								
+								act 'Going home':gt 'Gadhouse'
+							end
+						end
+					end
+			     end
+			 end
+		 act 'I have changed my mind':gt 'gadukino'
+		end
+	end
+	act 'Escape':gt 'miroslavahome'
+	
+
+}
+--- MiroslavaHome ---------------------------------
+

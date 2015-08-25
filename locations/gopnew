@@ -1,0 +1,1156 @@
+# gopnew
+$gopsexboy1 = {
+	cla
+
+	if VasanTut = 3:
+		$guygop = 'Vasya'
+		if vasansex = 0:vasansex = 1 & guy += 1
+	end
+	if BerezaTut = 3:
+		if berezasex = 0:berezasex = 1 & guy += 1
+		$guygop = 'Birch'
+	end
+	if VitekTut = 3:
+		if viteksex = 0:viteksex = 1 & guy += 1
+		$guygop = 'Vitek'
+	end
+	if KostilTut = 3:
+		if kostilsex = 0:kostilsex = 1 & guy += 1
+		$guygop = 'Crutch'
+	end
+	if UdmurtTut = 3:
+		if udmurtsex = 0:udmurtsex = 1 & guy += 1
+		$guygop = 'Udmurt'
+	end
+	if SeriTut = 3:
+		if serisex = 0:serisex = 1 & guy += 1
+		$guygop = 'Gray'
+	end
+
+	act 'Give':gt'gopnew','1'
+	act 'Suck':gt'gopnew','11'
+	act 'Writing in the ass':gt'gopnew','12'
+}
+
+if $ARGS[0] = 'start':
+	'<center><b>YARD The house</b></center>'
+	'<center><img src="images/pic/dvor.jpg"></center>'
+	'You walk slowly across the yard, you go to a meeting a couple of guys kind gopnicheskogo, with pivasom, Semko and caps.'
+
+	gtalkrand = RAND(0,10)
+	if gtalkrand = 0:$goptalk = 'vaflersha'
+	if gtalkrand = 1:$goptalk = 'waffle-iron'
+	if gtalkrand = 2:$goptalk = 'shkvarnaya'
+	if gtalkrand = 3:$goptalk = 'whore'
+	if gtalkrand = 4:$goptalk = 'tvarina'
+	if gtalkrand = 5:$goptalk = 'nipple'
+	if gtalkrand = 6:$goptalk = 'sheep'
+	if gtalkrand = 7:$goptalk = 'Shmarev'
+	if gtalkrand = 8:$goptalk = 'slut'
+	if gtalkrand = 9:$goptalk = 'huesoska'
+	if gtalkrand = 10:$goptalk = 'blyadushka'
+
+	gtalkrand = RAND(0,10)
+	if gtalkrand = 0:$goptalk2 = 'Today many cocks sucked?'
+	if gtalkrand = 1:$goptalk2 = 'you want to take a canine?'
+	if gtalkrand = 2:$goptalk2 = 'you fucked on struhnya.'
+	if gtalkrand = 3:$goptalk2 = 'Why are you silent? Full mouth Cum scored?'
+	if gtalkrand = 4:$goptalk2 = 'and your mouth is already Ssali? Or not?'
+	if gtalkrand = 5:$goptalk2 = 'a hollow you have more? Ass or pussy?'
+	if gtalkrand = 6:$goptalk2 = 'I came out of shock, and forgot to wipe the ass, podlizhesh tongue?'
+	if gtalkrand = 7:$goptalk2 = 'come to me, a ride on a scooter hairy.'
+	if gtalkrand = 8:$goptalk2 = 'you in the mouth berushka? Or a beggar in the ass?'
+	if gtalkrand = 9:$goptalk2 = 'want in your mouth Nass, to smell the sea?'
+	if gtalkrand = 10:$goptalk2 = 'do you like to lick struhnyu?'
+
+	gs'gopwho'
+	gs'goplust'
+
+	if opusk > 0:
+		'Hey <<$goptalk>>, <<$goptalk2>> <<$gopnik>>'
+
+		act 'Wait until suitable Gopnik':
+			cla
+			'To you came Gopnik'
+
+			if gopopusday ! day:
+				'You brought us babosy?.'
+
+				if money >= 2000:
+					act 'Give money':
+						cla
+						money -= 2000
+						gopopusday = day
+
+						'You gave money goparyam.'
+						act 'Escape':gt'street'
+
+						if GLust > 0:
+							cla
+							'<<$gopnik>>'
+							'Come with us, a stick of tea.'
+
+							act 'Go with Gopnik':gt'gopnew','sexstart'
+						end
+					end
+				else
+					act 'Children, please, I have no money':
+						cla
+						'You prayed "Children, please, I have no money", you immediately embedded in the stomach, ebalo Zavala bitch. I see you`re not vkurivaesh the seriousness of your situation. Soot this filth in the car, We go punish her.'
+
+						act 'In the car':gt'gopnew','degrading'
+					end
+				end
+			elseif gopopusday = day:
+				if GLust > 0:
+					cla
+					'<<$gopnik>>'
+					'Come with us, a stick of tea.'
+
+					act 'Go with Gopnik':gt'gopnew','sexstart'
+				else
+					'Okay, stamp your here, while we are good.'
+
+					act 'Escape':gt'street'
+				end
+			end
+		end
+		act 'To pretend, that you did not notice':
+			cla
+			'You have tried to make it look, that do not see Gopnik and went to his house.'
+
+			if gopopusday = day:
+				'Gopnik neighing "look how rushed. Probably her there a fresh dick kisnet, and we divert it."'
+
+				act 'Ran to the apartment':gt'street'
+			elseif gopopusday ! day:
+				'Gopnik immediately surrounded and caught up with you. "You slut struhnya in the ears that you got? Not slyshish that appeal to you."'
+				'You brought us babosy?.'
+
+				if money >= 2000:
+					act 'Give money':
+						cla
+						money -= 2000
+						gopopusday = day
+
+						'You gave money goparyam.'
+
+						act 'Escape':gt'street'
+
+						if GLust > 0:
+							cla
+							'<<$gopnik>>'
+							'Come with us, a stick of tea.'
+
+							act 'Go with Gopnik':gt'gopnew','sexstart'
+						end
+					end
+				else
+					act 'Children, please, I have no money':
+						cla
+						'You prayed "Children, please, I have no money", you immediately embedded in the stomach, ebalo Zavala bitch. I see you`re not vkurivaesh the seriousness of your situation. Soot this filth in the car, We go punish her.'
+
+						act 'In the car':gt'gopnew','degrading'
+					end
+				end
+			end
+		end
+
+		exit
+	end
+
+	if sipovka > 0:
+		'Hey, you cry sipovka Gopnik. <<$gopnik>>'
+
+		if GLust > 0:
+			cla
+			'Come with us, a stick of tea.'
+
+			act 'Go with Gopnik':gt'gopnew','sexstart'
+			act 'Escape':gt'street'
+		else
+			'Okay, stamp your here, while we are good.'
+
+			act 'Escape':gt'street'
+		end
+
+		exit
+	end
+
+	if rosetka > 0:
+		'Hey, you cry outlet Gopnik. <<$gopnik>>'
+
+		if GLust > 0:
+			cla
+			'Come with us, a stick of tea.'
+
+			act 'Go with Gopnik':gt'gopnew','sexstart'
+			act 'Escape':gt'street'
+		else
+			'Okay, stamp your here, while we are good.'
+
+			act 'Escape':gt'street'
+		end
+
+		exit
+	end
+
+	if loh > 0:
+		'Hey, you cry lohushka Gopnik. <<$gopnik>>'
+
+		if gopdolg > 0 and gopdaydolg > daystart:
+			'Do not forget, of duty.'
+		elseif gopdolg > 0 and gopdaydolg <= daystart:
+			'Well, whore, earned money?'
+
+			if money >= gopdolg:
+				act 'Checkout':
+					cla
+					money -= gopdolg
+					gopdolg = 0
+
+					'You gave <<gopdolg>> rubles Gopnik.'
+
+					act 'Escape':gt'street'
+				end
+			else
+				'You have admitted that you have no money, that would pay Gopnik. They chuckled, then kneel, whore.'
+
+				act 'Kneel before Gopnik':gt'gopnew','rapebj'
+			end
+
+			exit
+		end
+
+		act 'Escape':gt'street'
+
+		exit
+	end
+
+	if gnewQW = 4:
+		'!Hey, Sveta Sweetie, go pivas drink? <<$gopnik>>'
+
+		act 'I would like to, but I hasten':
+			cla
+			'(You) - Sorry, but I hasten'
+			'(Vasya) - Yes, okay, sit half an hour, chat, have time.'
+
+			act 'Drink pivasika':gt'gopnew','pivas'
+			act 'Go':gt'street'
+		end
+		act 'Drink pivasika':gt'gopnew','pivas'
+	elseif gnewQW = 3:
+		gopota += 5
+		gnewQW = 4
+
+		'Awesome, Light you say cops swept, but you`ve done no one passed, How did you tell a seat. <<$gopnik>>'
+		'You sat down and began to tell Gopnik, omitting some details. When you`re finished, He said one of Gopnik "We find this Cop bitch on a leash and you are hiding, You shall have a cool dog" they began to laugh, and you, too, laughed along with them.'
+
+		act 'Escape':gt'street'
+	elseif gnewQW = 2:
+		'Hey, Sveta Sweetie, go pivas drink, or you can walk through the park in good suckers pootzhimat? <<$gopnik>>'
+
+		act 'I would like a beer, but I hasten':
+			cla
+			'(You) - Sorry, but I hasten'
+			'(Vasya) - Yes, okay, sit half an hour, chat, have time.'
+
+			act 'Drink pivasika':gt'gopnew','pivas'
+			act 'Escape':gt'street'
+		end
+		act 'Drink pivasika':gt'gopnew','pivas'
+		act 'Go to delyugu':
+			*clr
+			cla
+			'<center><img src="images/pic/park.jpg"></center>'
+
+			goprandwork = RAND(1,100)
+			if goprandwork < 75:
+				cla
+				minut += 60
+				gopota += 1
+
+				'You poshlyatsya with Kompashki, but suckers will not see.'
+
+				act 'Going home':gt'street'
+			elseif goprandwork >= 75 and goprandwork < 95:
+				cla
+				gopstop += 1
+				gopota += 1
+				minut += 60
+
+				'You boys overcame mobilku, but passing Mobil pawnshop you got money only for pivas.'
+
+				act 'Going home':gt'street'
+			elseif goprandwork >= 95:
+				cla
+				gopstop += 1
+				gopota += 1
+				minut += 60
+				randmon = RAND(50,500)
+				money = money + randmon
+
+				'You boys have pressed suckers money and mobile telephones, surrendering to the pawnshop, you shared money, you got <<randmon>> rubles.'
+
+				act 'Going home':gt'street'
+			end
+		end
+	elseif gnewQW = 1:
+		'Hey, Sveta Sweetie, go pivas drink? <<$gopnik>>'
+
+		act 'I would like to, but I hasten':
+			cla
+			'(You) - Sorry, but I hasten'
+			'(Vasya) - Yes, okay, sit half an hour, chat, have time.'
+
+			act 'Drink pivasika':gt'gopnew','pivas'
+			act 'Go':gt'street'
+		end
+		act 'Drink pivasika':gt'gopnew','pivas'
+	elseif gnewQW = 0:
+		'One adjusting cap, thieves step is sent to you. "Hello! Are you cool chick, will pivas of acquaintance?"'
+
+		act 'Drink pivasika':gt'gopnew','pivas'
+		act 'No':
+			cla
+			'You shook your head and come to move on, but Gopnik was not going to give up so easy.'
+			'(Gopnik) - Yes, Relax you, no you will not do anything wrong, We are decent boys, rather than what the thugs.'
+
+			act 'Okay, go popem beer':gt'gopnew','pivas'
+			act 'I told, no':
+				cla
+				*clr
+				'You have denied hooligan sharper, implying, they do not intend to drink beer with them. Gopar viciously squinted, "Brezguesh our society?"'
+
+				act 'Okay, go popem beer':gt'gopnew','pivas'
+				act 'Leave me alone':
+					cla
+					'You said roughly hooligan fork, but he grabbed you by the hand and angrily hissed. "You`re not right bitch, We come to you with good intentions, and you are rude. I`ll ask to you for it."'
+					'Gopar took you by the hand and pulled into the driveway.'
+
+					act 'Resist':
+						cla
+						'You tried to snatch her hand from his grasp, and immediately received a resounding slap, which almost knocked you to the ground.'
+						'He roughly pulled into the driveway and you are against the wall.'
+
+						act 'What do you want from me?':gt'gopnew','bazar'
+					end
+					act 'Submit':
+						cla
+						'You dutifully trudged for Gopnik. He roughly pulled into the driveway and you are against the wall.'
+
+						act 'What do you want from me?':gt'gopnew','bazar'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'pivas':
+	minut += 30
+	gs'stat'
+
+	'<center><b>YARD The house</b></center>'
+	'<center><img src="images/pic/dvor.jpg"></center>'
+	'You and the guys went to the playground, which sat on the bench.'
+
+	if cumface > 0 or cumlip > 0 or cumfrot > 0:
+		'Vasya looked closer to you, "fuck, yes you`re in struhne, ohuet zaforshmachennaya and sat down with us to drink pivas, go bitch, it is necessary to talk"'
+
+		act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+		exit
+	end
+
+	if gnewQW > 0:
+		'You sat down with the guys on the bench and began to drink beer.'
+		'For the playground came Udmurt burly shaven bald and gray.'
+
+		if film > 0:
+			pfknowrand = RAND(0,100)
+			if film >= pfknowrand:filmknow = 1
+		end
+
+		if filmknow = 1:
+			'Udmurt sat on the bench and keep an eye you. Suddenly, he turned to you a rough voice sipyaschim "Slysh, where I could see you before?"'
+			'You shrugged, But you never know where, I live here. Udmurt scratched his head. "Epta, tochnyak, Look boys." Udmurt got mobile and began to show that the kid.'
+			'Do you hear from the speakers as the phone a woman`s groans and sucking sounds. Guys with one voice to squeeze out "Ohuet, you`re a whore."'
+			'Udmurt silently turned the phone`s screen to you and you will see, that it is a video where you suck dick.'
+			'Bob angrily threw a beer bottle towards. "You bastard obschakovoe beer its whorish mouth zafarshmachila. Come, Bazaar for you there."'
+
+			act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+			exit
+		end
+
+		if kavslut >= 3:
+			kavknowrand = RAND(0,100)
+			if kavknowrand >= 95:kavslutknow = 1
+		end
+
+		if kavslutknow = 1:
+			'Gray looked at you and evil grin. "Wait a minute boys, I will now tell a prikolyuh. In short, I cook Ashot, Well, from the local rygalovki, they told Givi, waitress in all holes after work zhuchat. He showed me the Shmarev. In short, you are now with her pivas Buchau, ha ha, prikinte, it you schA struhnyu Ashot in bottle pivasom let, and?"'
+			'Bob angrily threw a beer bottle towards. "You bastard obschakovoe beer its whorish mouth zafarshmachila. Come, Bazaar for you there."'
+
+			act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+			exit
+		end
+
+		if frot >= 3:
+			frotknowrand = RAND(0,100)
+			if frot >= frotknowrand:frotknow = 1
+		end
+
+		if frotknow = 1:
+			'Gray looked at you and evil grin. "Wait a minute boys, I will now tell a prikolyuh. In short, I for one huylo pogonyalom Grater, such prikolyuh told, he rides on the subway and Babskii zhoptsam sticks, that would rub on them. So, He said the subway was got trouble-free slut ass always ready suffering substitute for friendship. He it on mobile sfotkal. So this is your Light is the very slut Underground, in so funny?'
+			'Bob angrily threw a beer bottle towards. "You bastard obschakovoe beer its whorish mouth zafarshmachila. Come, Bazaar for you there."'
+
+			act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+			exit
+		end
+	elseif gnewQW = 0:
+		gnewQW = 1
+
+		'The boys introduce themselves, the one who invited you call Bob Nail, long blond Birch, small, swarthy and apelike Vitek, and a skinny guy named Crutch.'
+		'Vasya tore baklashku with pivasom and drank from it, then handed circularly baklashku.'
+		'For the playground came not tall and burly shaven bald guy with gold teeth.'
+		'Fortress introduced Udmurtia, and zolotozuby turned gray.'
+
+		if film > 0:
+			pfknowrand = RAND(0,100)
+			if film >= pfknowrand:filmknow = 1
+		end
+
+		if filmknow = 1:
+			'Udmurt sat on the bench and keep an eye you. Suddenly, he turned to you a rough voice sipyaschim "Slysh, where I could see you before?"'
+			'You shrugged, But you never know where, I live here. Udmurt scratched his head. "Epta, tochnyak, Look boys." Udmurt got mobile and began to show that the kid.'
+			'Do you hear from the speakers as the phone a woman`s groans and sucking sounds. Guys with one voice to squeeze out "Ohuet, you`re a whore."'
+			'Udmurt silently turned the phone`s screen to you and you will see, that it is a video where you suck dick.'
+			'Bob angrily threw a beer bottle towards. "You bastard obschakovoe beer its whorish mouth zafarshmachila. Come, Bazaar for you there."'
+
+			act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+			exit
+		end
+
+		if kavslut >= 3:
+			kavknowrand = RAND(0,100)
+			if kavknowrand >= 95:kavslutknow = 1
+		end
+
+		if kavslutknow = 1:
+			'Gray looked at you and evil grin. "Wait a minute boys, I will now tell a prikolyuh. In short, I cook Ashot, Well, from the local rygalovki, they told Givi, waitress in all holes after work zhuchat. He showed me the Shmarev. In short, you are now with her pivas Buchau, ha ha, prikinte, it you schA struhnyu Ashot in bottle pivasom let, and?"'
+			'Bob angrily threw a beer bottle towards. "You bastard obschakovoe beer its whorish mouth zafarshmachila. Come, Bazaar for you there."'
+
+			act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+			exit
+		end
+
+		if frot >= 3:
+			frotknowrand = RAND(0,100)
+			if frot >= frotknowrand:frotknow = 1
+		end
+
+		if frotknow = 1:
+			'Gray looked at you and evil grin. "Wait a minute boys, I will now tell a prikolyuh. In short, I for one huylo pogonyalom Grater, such prikolyuh told, he rides on the subway and Babskii zhoptsam sticks, that would rub on them. So, He said the subway was got trouble-free slut ass always ready suffering substitute for friendship. He it on mobile sfotkal. So this is your Light is the very slut Underground, in so funny?'
+			'Bob angrily threw a beer bottle towards. "You bastard obschakovoe beer its whorish mouth zafarshmachila. Come, Bazaar for you there."'
+
+			act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+			exit
+		end
+
+		if bomjshet >= 3:
+			bomjknowrand = RAND(0,100)
+			if bomjknowrand >= 95:bomjknow = 1
+		end
+
+		if bomjknow = 1:
+			'Grey for several minutes watching something on you, the phone, squinting, if that-then examined. After he gave the kid a mobile phone and said, "Listen, pozyrte, I immediately threw garbage, and there is some woman-the homeless showed boobs, it, not?". Phone walked hand, then looked at him, then you. You blushed, then Bob said, "Shit, Yes exactly it!"'
+			'Bob angrily threw a beer bottle towards. "You do bomzhiha ohuel us yashkatsya? Come, Bazaar for you there."'
+
+			act 'Go through the gate with the boys':gt'gopnew','bazar'
+
+			exit
+		end
+	end
+
+	gopota += 1
+
+	'You sat on a bench and drank beer with Gopnik.'
+	'<<$gopnik>>'
+
+	if gnewQW > 1:
+		if VasanTut = 2 or BerezaTut = 2 or VitekTut = 2 or KostilTut = 2 or UdmurtTut = 2 or SeriTut = 2:gt'gopnew','sexstart'
+	end
+
+	act 'Go':gt'street'
+end
+
+if $ARGS[0] = 'bazar':
+	'You are fearfully mumbled "What do you want from me?". And at that moment it hit you in the stomach. "Shut up bitch."'
+	'The first goparyu joined by his three cronies and surrounded you.'
+	'(Gopar) - You bitch specifically wrong. I`m Bob Nail. I know everyone in the neighborhood, and you cheeky slut particularly rude. You owe me!'
+	'Bob roughly shook you by the shoulders "You agree bitch?"'
+	if magic > 0:'At this point you feel someone-the wicked and mighty magical powers, which suppresses your and does not use against Gopnik.'
+
+	act 'I agree':
+		cla
+		*clr
+		'Bob turned to buddies. "Everyone has heard? She is agree, it should be me and that she`s a bitch."'
+
+		act 'I am not a bitch!':
+			cla
+			*clr
+			'Who snitch, that in the mouth fuck?'
+
+			act 'Yes':
+				cla
+				*clr
+				'Then you waiting huyli? Take on the canine, because you pizdobolka. Eyewitnesses confirm. You do agree that you bitch and napizdela us, you`re not a bitch. Also agreed that pizdobolov in the mouth fuck.'
+
+				act 'Kneel before Gopnik':gt'gopnew','rapebj'
+				act 'Takeout':
+					cla
+					*clr
+					'You said firmly, no. And then in the head as if the shell burst. Bob hit you in the face with his fist. You flew from his shock and strong neck kissed the wall. Legs become like cotton and strength to stand left.'
+
+					act 'Kneel before Gopnik':gt'gopnew','rapebj'
+				end
+			end
+			act 'No':
+				cla
+				*clr
+				'You ohuel? Pizdabolka! Immediately you strongly embedded in the stomach and strength to stay on his feet no more.'
+
+				act 'Kneel before Gopnik':gt'gopnew','rapebj'
+			end
+			act 'I do not pizzhu!':
+				cla
+				*clr
+				'You bitch twice napizdela! Boys, you heard? The boys readily confirmed. Bob turned to you. "I`ll knock your teeth bitch now!, If you will still complain."'
+				'You agree, you pizdobolka?'
+
+				act 'I agree':
+					cla
+					*clr
+					'You agree not seeing the other way. Bob nodded and said, "Well, if agreed, while on his knees, I`m your fucking mouth shoving his dick, to complain could no longer."'
+
+					act 'Kneel before Gopnik':gt'gopnew','rapebj'
+				end
+				act 'No':
+					cla
+					*clr
+					'You ohuel? Pizdabolka! Immediately you strongly embedded in the stomach and strength to stay on his feet no more.'
+
+					act 'Kneel before Gopnik':gt'gopnew','rapebj'
+				end
+			end
+		end
+		act 'Keep silent':
+			cla
+			*clr
+			'So understood. You bitch, and specifically nakosyachila. Now you owe me.'
+
+			act 'How many?':gt'gopnew','dolg'
+		end
+	end
+	act 'No!':
+		cla
+		*clr
+		'Explain why you do not agree. You what? I think pizdobolom?'
+
+		act 'Yes, You pizdobol':
+			cla
+			*clr
+			'You ohuel? Pizdabolka! Immediately you strongly embedded in the stomach and strength to stay on his feet no more.'
+
+			act 'Kneel before Gopnik':gt'gopnew','rapebj'
+		end
+		act 'No, you do not pizdobol':
+			cla
+			*clr
+			'Well, then it turns out, you bitch and pizdobolka.'
+
+			act 'Agree':
+				cla
+				'So understood. You bitch, pisdobolka and specifically nakosyachila. Now you owe me.'
+
+				act 'How many?':gt'gopnew','dolg'
+			end
+			act 'Disagree':
+				cla
+				'You Th bitch, hardheaded. After it roar Bob punched you in the face with his fist.'
+
+				act 'Fall on your knees before Gopnik':gt'gopnew','rapebj'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'rapebj':
+	minut += 3
+	rape += 1
+
+	'<center><img src="images/pictures/rapebj.jpg"></center>'
+	'Bob took out his penis and not washed put it a few inches in front of your face. He growled "Hula you bitch tupish? Razevat ebalo."'
+
+	act 'Clasp member lips':
+		cla
+		*clr
+		if vasansex = 0:vasansex = 1 & guy += 1
+		bj += 1
+
+		'<center><img src="images/pictures/rapebj1.jpg"></center>'
+		'You cupped lips crimson member Bob which is before your face seemed just huge and slowly began to suck.'
+		'Bob growled at you "What is this garbage? Suck on normal, vaflersha."'
+
+		act 'Try':gt'gopnew','tf'
+		act 'Suck sucking':gt'gopnew','tf'
+	end
+	act 'Lick a member of the language':
+		cla
+		*clr
+		if vasansex = 0:vasansex = 1 & guy += 1
+		bj += 1
+
+		'<center><img src="images/pictures/rapebj2.jpg"></center>'
+		'You open your mouth and gently touched to a hot tongue member.'
+		'Bob growled at you "What is this garbage? Suck on normal, vaflersha."'
+
+		act 'Suck':gt'gopnew','tf'
+		act 'Lick on':gt'gopnew','tf'
+	end
+	act 'No!':
+		cla
+		*clr
+		if vasansex = 0:vasansex = 1 & guy += 1
+		bj += 1
+
+		'<center><img src="images/pictures/rapebj3.jpg"></center>'
+		'Bob grabbed you by the hair with one hand, and another severely squeezed her throat and planted your mouth on his hat.'
+
+		act 'Choke':gt'gopnew','tf'
+	end
+end
+
+if $ARGS[0] = 'tf':
+	minut += 3
+	throat += 1
+
+	'<center><img src="images/pictures/rapebjt2.jpg"></center>'
+	'Bob holding your hair began to fuck you in the mouth. His cock hit you in the throat causing gagging reaction and causing tears to flow from the eyes.'
+	'You choke on these impacts in a throat.'
+
+	act '...':
+		cla
+		*clr
+		minut += 3
+
+		'<center><img src="images/pictures/rapebjt.jpg"></center>'
+		'Suddenly Bob severe blow member drove it down your throat to the ground and began to hold you for a head. You feel, that you are going to throw up.'
+
+		act '...':
+			cla
+			*clr
+			minut += 3
+			facial += 1
+			cumface += 1
+			if mop ! 1:mop = 0
+			gs'stat'
+
+			'<center><img src="images/pictures/rapebjcum.jpg"></center>'
+			'Bob abruptly pulled out of your throat cock and began to finish on your face, covering it with sperm. He growled at you "What are you waiting for, slut lowered? Clean Language."'
+
+			act 'Clean Language':
+				cla
+				*clr
+				minut += 3
+				swallow += 1
+				cumlip += 1
+				gs'stat'
+
+				'<center><img src="images/pictures/rapebjcum2.jpg"></center>'
+				'You wrapped around his lips smeared with warm sperm head and began to suck her cum swallowing.'
+				'Soon Vasyanya is tired and he tore your mouth on his penis clean "Now listen here Shmarev. You lowered vaflersha, fuck, slut and proshmandovka, Now as an apology will come every day and pay me two mower, and fuck me like you earned it, clear? If you do not bring, I`ll shove a bottle in the pussy and in the belly will give pendalya, that she would burst your pizden tearing to shreds. And do not try to hide from me, I`ll fetch out of the ground, and mentovku Claim, My pals in the woods you will remove, vobyut ass handle of a shovel, and then buried with this shovel ass. You all clear?"'
+				'And do not forget bitch, you are my own and do not have the right to vote. My pals can have fun with you when they want, clear? Whore.'
+
+				act 'Yes':
+					cla
+					*clr
+					minut += 3
+					opusk = 1
+
+					'<center><img src="images/pictures/spit.jpg"></center>'
+					'Bob grabbed you with his hands and spit in your face, and then it hits you in the stomach, and you fell.'
+					'Someone of the guys said, "Vasya, come on, enough already with this whore." Bob growled "Use boys, slut."'
+					'The driveway ran some guy and hissed "Atas boys, waste" Lightning from the gateway Gopnik resolved leaving you lying on the pavement in Koncha, saliva, snot and tears.'
+
+					act 'Escape':gt'street'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'dolg':
+	minut += 3
+	loh += 1
+	gopdolg = money+stolmoney+karta+10000
+	gopdaydolg = daystart+10
+
+	'Through 10 days you give <<gopdolg>> rubles. And I do not fuck where you are going to take them, though by a pussy while trading, I FSUs, money to be. Where to find us you know, if she does not come, Then we come to you and deal with you harshly. Truncated? Now get out of here slut.'
+
+	act 'Escape':gt'street'
+	act 'Guys, it`s too much, I do not have that kind of money':
+		cla
+		'(You) - Guys, it`s too much, I do not have that kind of money'
+		'(Vasya) - And who is fuck?'
+
+		act 'Escape':gt'street'
+		act 'Maybe something like a different take?':
+			cla
+			'(You) - Maybe something like a different take?'
+			'(Vasya) - Well, you can work out the debt in kind.'
+
+			act 'Escape':gt'street'
+			act 'Payment in kind':
+				sipovka += 1
+				gopdolg = 0
+				VasanTut = 3
+				gt'gopnew','sexstart'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'sexstart':
+	!rosetka
+	!sipovka
+	minut += 3
+
+	if opusk > 0 or sipovka > 0:
+		if GLust = 1:
+			if tiprand = 0:gt'gopnew','1'
+			if tiprand = 1:gt'gopnew','11'
+			if tiprand = 2:gt'gopnew','12'
+		end
+		if GLust = 2:gt'gopnew','2'
+		if GLust = 3:gt'gopnew','3'
+		if GLust = 4:gt'gopnew','4'
+		if GLust = 5:gt'gopnew','5'
+		if GLust = 6:gt'gopnew','6'
+	elseif opusk = 0 and sipovka = 0:
+		if GLust = 2:
+			'Two Gopnik suggest you to go with them into the driveway'
+
+			act 'Agree to fuck with two':sipovka += 1 & gt'gopnew','2'
+		elseif GLust = 3:
+			'Three Gopnik suggest you to go with them into the driveway'
+
+			act 'Agree to fuck with three':sipovka += 1 & gt'gopnew','2'
+		elseif GLust = 4:
+			'Four Gopnik suggest you to go with them into the driveway'
+
+			act 'Agree to fuck with four':sipovka += 1 & gt'gopnew','2'
+		elseif GLust = 5:
+			'Five Gopnik suggest you to go with them into the driveway'
+
+			act 'Agree to fuck with five':sipovka += 1 & gt'gopnew','2'
+		elseif GLust = 6:
+			'Six Gopnik suggest you to go with them into the driveway'
+
+			act 'Agree to fuck with six':sipovka += 1 & gt'gopnew','2'
+		end
+
+		if VasanTut = 2:
+			'Bob offers to go with him into the driveway'
+
+			act 'Go to Vasyanya':VasanTut = 3 & dynamic $gopsexboy1
+		end
+		if BerezaTut = 2:
+			'Birch offers to go with him into the driveway'
+
+			act 'Go to Birch':BerezaTut = 3 & dynamic $gopsexboy1
+		end
+		if VitekTut = 2:
+			'Witek offers to go with him into the driveway'
+
+			act 'Go to Vityok':VitekTut = 3 & dynamic $gopsexboy1
+		end
+		if KostilTut = 2:
+			'Crutch offers to go with him into the driveway'
+
+			act 'Go with crutch':KostilTut = 3 & dynamic $gopsexboy1
+		end
+		if UdmurtTut = 2:
+			'Udmurt offers to go with him into the driveway'
+
+			act 'Go to Udmurtia':UdmurtTut = 3 & dynamic $gopsexboy1
+		end
+		if SeriTut = 2:
+			'Gray offers to go with him into the driveway'
+
+			act 'Go to Gray':SeriTut = 3 & dynamic $gopsexboy1
+		end
+
+		act 'Escape':gt'street'
+	end
+end
+
+if $ARGS[0] = '1':
+	minut += 15
+	vagina += 1
+	sex += 1
+	cumass = cumass + 1
+	gs'stat'
+
+	picrand = RAND(1,6)
+	if picrand = 1:'<center><img src="images/pics/gopslut.jpg"></center>'
+	if picrand = 2:'<center><img src="images/pics/gopslut2.jpg"></center>'
+	if picrand = 3:'<center><img src="images/pics/gopslut3.jpg"></center>'
+	if picrand = 4:'<center><img src="images/pics/gopslut4.jpg"></center>'
+	if picrand = 5:'<center><img src="images/pics/gopslut5.jpg"></center>'
+	if picrand = 6:'<center><img src="images/pics/gopslut6.jpg"></center>'
+
+	'<<$guygop>> It turns you into a secluded place, which puts a pose and fucks.'
+
+	horand = RAND(1,100)
+	if horand > horny:
+		horny = horny + 10
+
+		'You were not satisfied'
+	else
+		horny = 0
+		orgasm += 1
+
+		'You covered the orgasm'
+	end
+
+	'<<$guygop>> It kills you on the ass and wiped his penis on your ass. Then dress pants and goes on to thump.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = '11':
+	minut += 15
+	bj += 1
+	throat = throat + 1
+	gs'stat'
+
+	picrand = RAND(1,10)
+	if picrand = 1:'<center><img src="images/pics/bj.jpg"></center>'
+	if picrand = 2:'<center><img src="images/pics/bj2.jpg"></center>'
+	if picrand = 3:'<center><img src="images/pics/bj3.jpg"></center>'
+	if picrand = 4:'<center><img src="images/pics/bj4.jpg"></center>'
+	if picrand = 5:'<center><img src="images/pics/bj5.jpg"></center>'
+	if picrand = 6:'<center><img src="images/pics/bj6.jpg"></center>'
+	if picrand = 7:'<center><img src="images/pics/bj7.jpg"></center>'
+	if picrand = 8:'<center><img src="images/pics/bj8.jpg"></center>'
+	if picrand = 9:'<center><img src="images/pics/bj9.jpg"></center>'
+	if picrand = 10:'<center><img src="images/pics/bj10.jpg"></center>'
+
+	'Did you get a member of Gopnik and take it in your mouth carefully sucking.'
+!'
+	horand = RAND(1,100)
+	if horand > oral:
+		horny = horny + 10
+
+		'You were not satisfied'
+	elseif horand <= oral:
+		horny = 0
+		orgasm += 1
+
+		'You covered the orgasm'
+	end
+
+	'Do you feel that <<$guygop>> Now finish'
+'
+
+	gs'oral','0'
+
+	act 'Continue to suck':
+		cla
+		*clr
+
+		picrand = RAND(1,10)
+		if picrand = 1:'<center><img src="images/pics/cum.jpg"></center>'
+		if picrand = 2:'<center><img src="images/pics/cum2.jpg"></center>'
+		if picrand = 3:'<center><img src="images/pics/cum3.jpg"></center>'
+		if picrand = 4:'<center><img src="images/pics/cum4.jpg"></center>'
+		if picrand = 5:'<center><img src="images/pics/cum5.jpg"></center>'
+		if picrand = 6:'<center><img src="images/pics/cum6.jpg"></center>'
+		if picrand = 7:'<center><img src="images/pics/cum7.jpg"></center>'
+		if picrand = 8:'<center><img src="images/pics/cum8.jpg"></center>'
+		if picrand = 9:'<center><img src="images/pics/cum9.jpg"></center>'
+		if picrand = 10:'<center><img src="images/pics/cum10.jpg"></center>'
+
+		'A powerful jet of sperm hits you in the mouth'
+
+		act 'Swallow':
+			cla
+			cumlip = cumlip + 1
+			swallow = swallow+1
+
+			'You swallow semen, <<$guygop>> He wipes a member of your lips and leaves.'
+
+			act 'Escape':gt'street'
+		end
+		act 'Spit out':
+			cla
+			cumlip = cumlip + 1
+
+			'You spat semen on the ground.'
+
+			act 'Escape':gt'street'
+		end
+	end
+	act 'Remove from the mouth':
+		cla
+
+		picrand = RAND(1,5)
+		if picrand = 1 and bjrand = 1:'<center><img src="images/pics/facial.jpg"></center>'
+		if picrand = 2 and bjrand = 1:'<center><img src="images/pics/facial2.jpg"></center>'
+		if picrand = 3 and bjrand = 1:'<center><img src="images/pics/facial3.jpg"></center>'
+		if picrand = 4 and bjrand = 1:'<center><img src="images/pics/facial4.jpg"></center>'
+		if picrand = 5 and bjrand = 1:'<center><img src="images/pics/facial5.jpg"></center>'
+
+		bjrand = RAND(0,1)
+		if bjrand = 0:'You have time to take out a member of his mouth and <<$guygop>> It ends up by you.'
+		if bjrand = 1:cumface = cumface + 1 & '<<$guygop>> I end up on your face.'
+		if bjrand = 1:'All of your face in hot and sticky sperm, Gopnik wipes a member of your lips and leaves.'
+
+		act 'Escape':gt'street'
+	end
+end
+
+if $ARGS[0] = '12':
+	minut += 15
+	anal += 1
+	anus += 1
+	cumass = cumass + 1
+	gs'stat'
+
+	picrand = RAND(1,6)
+	if picrand = 1:'<center><img src="images/pics/gopslut.jpg"></center>'
+	if picrand = 2:'<center><img src="images/pics/gopslut2.jpg"></center>'
+	if picrand = 3:'<center><img src="images/pics/gopslut3.jpg"></center>'
+	if picrand = 4:'<center><img src="images/pics/gopslut4.jpg"></center>'
+	if picrand = 5:'<center><img src="images/pics/gopslut5.jpg"></center>'
+	if picrand = 6:'<center><img src="images/pics/gopslut6.jpg"></center>'
+
+	'<<$guygop>> It turns you into a secluded place, which puts a pose and fucks.'
+
+	horand = RAND(1,100)
+	if horand > horny:
+		horny = horny + 10
+
+		'You were not satisfied'
+	else
+		horny = 0
+		orgasm += 1
+
+		'You covered the orgasm'
+	end
+
+	'<<$guygop>> It kills you on the ass and wiped his penis on your ass. Then dress pants and goes on to thump.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = '2':
+	minut += 30
+	gs'stat'
+
+	if VasanTut = 3:
+		$namgop = 'Vasya'
+	else
+		$namgop = ''
+	end
+	if BerezaTut = 3:
+		$namgop2 = 'Birch'
+	else
+		$namgop2 = ''
+	end
+	if VitekTut = 3:
+		$namgop3 = 'Vitek'
+	else
+		$namgop3 = ''
+	end
+	if KostilTut = 3:
+		$namgop4 = 'Crutch'
+	else
+		$namgop4 = ''
+	end
+	if UdmurtTut = 3:
+		$namgop5 = 'Udmurt'
+	else
+		$namgop5 = ''
+	end
+	if SeriTut = 3:
+		$namgop6 = 'Gray'
+	else
+		$namgop6 = ''
+	end
+
+	$namgopsum = '<<$namgop>> <<$namgop2>> <<$namgop3>> <<$namgop4>> <<$namgop5>> <<$namgop6>> They took out their members and began to strip off your clothes.'
+
+	if GLust ! 2:tiprand = RAND(0,1)
+	if tiprand = 0 and GLust ! 2:
+		bj = bj + 3
+		gang = gang+1
+		throat = throat + 3
+		cumlip = cumlip + 2
+		cumface = cumface + 1
+		gs'stat'
+
+		picrand = RAND(1,11)
+		if picrand = 1:'<center><img src="images/pics/tri.jpg"></center>'
+		if picrand = 2:'<center><img src="images/pics/tri2.jpg"></center>'
+		if picrand = 3:'<center><img src="images/pics/tri3.jpg"></center>'
+		if picrand = 4:'<center><img src="images/pics/tri4.jpg"></center>'
+		if picrand = 5:'<center><img src="images/pics/tri5.jpg"></center>'
+		if picrand = 6:'<center><img src="images/pics/tri6.jpg"></center>'
+		if picrand = 7:'<center><img src="images/pics/tri7.jpg"></center>'
+		if picrand = 8:'<center><img src="images/pics/tri8.jpg"></center>'
+		if picrand = 9:'<center><img src="images/pics/tri9.jpg"></center>'
+		if picrand = 10:'<center><img src="images/pics/tri10.jpg"></center>'
+		if picrand = 11:'<center><img src="images/pics/tri11.jpg"></center>'
+
+		'<<$namgopsum>>. They put you on his haunches and began to beat their members in the face and you in turn have you in the mouth.'
+
+		horand = RAND(1,100)
+		if horand > horny:
+			horny = horny + 10
+
+			'You were not satisfied'
+		else
+			horny = 0
+			orgasm += 1
+
+			'You covered the orgasm'
+		end
+
+		'They obkonchalsya you all face and mouth.'
+
+		act 'Escape':gt'street'
+	elseif tiprand = 1 or GLust = 2:
+		bj = bj + 1
+		vagina += 1
+		sex += 1
+		anal += 1
+		anus += 5
+		gang = gang+1
+		throat = throat + 3
+		cumlip = cumlip + 2
+		cumface = cumface + 1
+		gs'stat'
+
+		picrand = RAND(1,15)
+		if picrand = 1:'<center><img src="images/pics/gang.jpg"></center>'
+		if picrand = 2:'<center><img src="images/pics/gang2.jpg"></center>'
+		if picrand = 3:'<center><img src="images/pics/gang3.jpg"></center>'
+		if picrand = 4:'<center><img src="images/pics/gang4.jpg"></center>'
+		if picrand = 5:'<center><img src="images/pics/gang5.jpg"></center>'
+		if picrand = 6:'<center><img src="images/pics/gang6.jpg"></center>'
+		if picrand = 7:'<center><img src="images/pics/gang7.jpg"></center>'
+		if picrand = 8:'<center><img src="images/pics/gang8.jpg"></center>'
+		if picrand = 9:'<center><img src="images/pics/gang9.jpg"></center>'
+		if picrand = 10:'<center><img src="images/pics/gang10.jpg"></center>'
+		if picrand = 11:'<center><img src="images/pics/gang11.jpg"></center>'
+		if picrand = 12:'<center><img src="images/pics/gang12.jpg"></center>'
+		if picrand = 13:'<center><img src="images/pics/gang13.jpg"></center>'
+		if picrand = 14:'<center><img src="images/pics/gang14.jpg"></center>'
+		if picrand = 15:'<center><img src="images/pics/gang15.jpg"></center>'
+
+		'<<$namgopsum>>. They began to fuck you in all holes by turns.'
+
+		horand = RAND(1,100)
+		if horand > horny:
+			horny = horny + 10
+
+			'You were not satisfied'
+		else
+			horny = 0
+			orgasm += 1
+
+			'You covered the orgasm'
+		end
+
+		'You otimeli in all holes and from all directions obkonchalsya.'
+
+		act 'Escape':gt'street'
+	end
+end
+
+if $ARGS[0] = 'degrading':
+	minut += 120
+	vagina += 10
+	anus += 10
+	anal += 1
+	sex += 1
+	rape += 1
+	gopopusday = day
+	gs'stat'
+
+	if VasanTut = 3 and vasansex = 0:vasansex = 1 & guy += 1
+	if BerezaTut = 3 and berezasex = 0:berezasex = 1 & guy += 1
+	if VitekTut = 3 and viteksex = 0:viteksex = 1 & guy += 1
+	if KostilTut = 3 and kostilsex = 0:kostilsex = 1 & guy += 1
+	if UdmurtTut = 3 and udmurtsex = 0:udmurtsex = 1 & guy += 1
+	if SeriTut = 3 and serisex = 0:serisex = 1 & guy += 1
+
+	if VasanTut = 3:
+		$namgop = 'Vasya'
+	else
+		$namgop = ''
+	end
+	if BerezaTut = 3:
+		$namgop2 = 'Birch'
+	else
+		$namgop2 = ''
+	end
+	if VitekTut = 3:
+		$namgop3 = 'Vitek'
+	else
+		$namgop3 = ''
+	end
+	if KostilTut = 3:
+		$namgop4 = 'Crutch'
+	else
+		$namgop4 = ''
+	end
+	if UdmurtTut = 3:
+		$namgop5 = 'Udmurt'
+	else
+		$namgop5 = ''
+	end
+	if SeriTut = 3:
+		$namgop6 = 'Gray'
+	else
+		$namgop6 = ''
+	end
+
+	$namgopsum = '<<$namgop>> <<$namgop2>> <<$namgop3>> <<$namgop4>> <<$namgop5>> <<$namgop6>> They took out their members and began to strip off your clothes.'
+
+	degrand = RAND(0,8)
+	if degrand = 0:'<center><img src="images/pictures/deg.jpg"></center>'
+	if degrand = 1:'<center><img src="images/pictures/deg1.jpg"></center>'
+	if degrand = 2:'<center><img src="images/pictures/deg2.jpg"></center>'
+	if degrand = 3:'<center><img src="images/pictures/deg3.jpg"></center>'
+	if degrand = 4:'<center><img src="images/pictures/deg4.jpg"></center>'
+	if degrand = 5:'<center><img src="images/pictures/deg5.jpg"></center>'
+	if degrand = 6:'<center><img src="images/pictures/deg6.jpg"></center>'
+	if degrand = 7:'<center><img src="images/pictures/deg7.jpg"></center>'
+	if degrand = 8:'<center><img src="images/pictures/deg8.jpg"></center>'
+
+	'Gopota mocks you, You beat her cheeks and breasts. Shoves in pussy different objects and spit in your face. After playing Gopnik let you.'
+
+	act 'Escape':gt'street'
+end
+--- gopnew ---------------------------------
+

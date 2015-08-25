@@ -1,0 +1,321 @@
+# gschool
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+gs'stat'
+gs'time'
+
+'<center><b><font color = maroon>School</font></b></center>'
+'<center><img src="images/qwest/alter/gschool.jpg"></center>'
+'Ordinary school in which local children learn.'
+
+act 'Logout':gt'gorodok'
+
+if zverRageQW = 1:
+	cls
+	zverRageQW = 2
+	gs'stat'
+	gs'time'
+
+	'You went out to the school yard after school, suddenly you someone filled up a powerful Pendel in the ass, you dumbfounded turned and saw Christina Zverev contorted with rage face. She yelled at you "You ohuel, whether that bitch, about me any garbage chat? Now I`ll break mug!"'
+
+	$nameV = 'Christina'
+	!The stats
+	strenV = 85
+	speedV = 75
+	agilV = 75
+	reactV = 75
+	vitalV = 95
+	intelV = 45
+	willV = 45
+	!Skills
+	magikV = 95
+	boxingV = 35
+	shootV = 95
+	!Parameters
+	healthV = vitalV*10 + strenV*5
+	mannaV = intelV*10 + magikV*10
+	willpowerV = willV*10
+	BonusAtakV = 0
+	BonusDefV = 0
+	!Action Programme
+	program = 0
+	ZverevaFight = 1
+	if spellavtoklon = 1:klon = 3
+	if spellbefshild = 1:defence = 500
+	round = 0
+
+	act 'Fight':gt'fight','start'
+
+	exit
+end
+
+if day = 29 and month = 12 and year = 2010 and StoryLine = 1:
+	if hour = 14:
+		'Near the school are already well-dressed girls and boys in your class. Someone called you "Sveta, You did not hand over a thousand in the new year"'
+
+		if money >= 1000:act 'Go to the party (1000r)':money -= 1000 & gt'sny'
+	end
+end
+
+if week = 6 and schoolSorev = 2 and hour = 10:
+	'Near the school there are students from different schools and athletes preparing for competitions in the run.'
+
+	act 'To participate in city competitions on run':
+		cls
+		minut += 30
+		gs'stat'
+
+		'You came to the athletes and he wrote you. After this athlete finished all the preparations for the competition and the boys took to the start. The guys went over and as expected won Ivan Prokhorov. After the guys finished the turn of girls.'
+
+		if swinbeggor = 0:
+			'Ready to start Kristina Zvereva, one of the girls in your class. She scoff at you "You can never defeat me."'
+		elseif swinbeggor = 1:
+			'Ready to start Kristina Zvereva, one of the girls in your class. She angrily looking at you "You`re ahead of me once, but now you will not work."'
+		elseif swinbeggor = 2:
+			'Ready to start Kristina Zvereva, one of the girls in your class. She looks at you with hatred "Again came a hitch? Well, nothing, This time I`ll do!"'
+		end
+
+		act 'Go to start':
+			cls
+			kolsorev += 1
+			minut += 30
+			schoolSorev = 0
+			gs'stat'
+
+			'<center><img src="images/pic/begsor.jpg"></center>'
+			'Girls, running on 400 m. You change clothes and go to the track. You get up to the start. You hear the starting shot.'
+
+			begplus = beg + speed + vital + RAND(1,20)
+			begminus = salo + RAND(1,20)
+			begresult = begplus - begminus
+			if begresult <= 0:'You barely managed to reach the finish line, What is really there a place, Of course you are the last.'
+			if begresult > 0 and begresult < 70:'You ran not bad, for dilettante course, since the latter took 8 place.'
+			if begresult >= 70 and begresult < 80:'You fought hard, but only managed to take the penultimate 7 place.'
+			if begresult >= 80 and begresult < 90:'You fought hard, but only managed to take 6 place.'
+			if begresult >= 90 and begresult < 100:'You fought hard, but only managed to take 5 place.'
+			if begresult >= 100 and begresult < 110:'You fought hard, but only managed to take 4 place.'
+			if begresult >= 110 and begresult < 120:'You fought hard, and we were able to take 3 place. Fizruk congratulate you on your success.'
+			if begresult >= 120 and begresult < 130:'You fought hard, and we were able to take 2 place. Fizruk congratulate you on your success.'
+			if begresult >= 130:swinbeggor += 1 & dom += 1 & 'You fought hard, and we were able to take 1 place. Fizruk congratulate you on winning the contest.'
+
+			beg = beg + 1
+			fat = fat - 10
+
+			if swinbeggor = 3 and razradbeg = 1:
+				razradbeg = 2
+				grupNPC[18] = 0
+				zverevaQW = 1
+				'You have won three times on the city competitions and Fizruk announces you that, that he intercede and your hand 2First sports category on the run. Christine Zvereva stands apart clenched his hands into fists, and with hatred looking at you.'
+			elseif swinbeggor = 2 and begresult >= 130:
+				grupNPC[18] = 0
+				'At the finish line is Christina Zvereva and tries to catch his breath, it could not have come to pass, and the second. Kristina growls through his teeth on you "That bitch!"'
+			elseif swinbeggor = 1 and begresult >= 130:
+				grupNPC[18] = 0
+				'At the finish line is Christina Zvereva and tries to catch his breath, it could not have come to pass, and the second. Christina tries not to look in your eyes.'
+			end
+
+			gs'stat'
+
+			act 'Logout':gt'gorodok'
+		end
+	end
+end
+
+if week = 6 and schoolSorev = 1 and hour = 10:
+	'Near the school there are students of different classes and Fizkulturnik preparing for the competitions in running.'
+
+	act 'Participate in school running race':
+		cls
+		minut += 30
+		gs'stat'
+
+		'You came to the athletes and he wrote you. After this athlete finished all the preparations for the competition and the boys took to the start. The guys went over and as expected won Ivan Prokhorov. After the guys finished the turn of girls.'
+
+		act 'Go to start':
+			cls
+			minut += 30
+			schoolSorev = 0
+			kolsorev += 1
+			gs'stat'
+
+			'<center><img src="images/pic/begsor.jpg"></center>'
+			'Girls, running on 400 m. You change clothes and go to the track. You get up to the start. You hear the starting shot.'
+
+			begplus = beg + speed + vital + RAND(1,20)
+			begminus = salo + RAND(1,20)
+			begresult = begplus - begminus
+			if begresult <= 0:'You barely managed to reach the finish line, What is really there a place, Of course you are the last.'
+			if begresult > 0 and begresult < 10:'You ran not bad, for dilettante course, since the latter took 8 place.'
+			if begresult >= 10 and begresult < 20:'You fought hard, but only managed to take the penultimate 7 place.'
+			if begresult >= 20 and begresult < 30:'You fought hard, but only managed to take 6 place.'
+			if begresult >= 30 and begresult < 40:'You fought hard, but only managed to take 5 place.'
+			if begresult >= 40 and begresult < 50:'You fought hard, but only managed to take 4 place.'
+			if begresult >= 50 and begresult < 60:'You fought hard, and we were able to take 3 place. Fizruk congratulate you on your success.'
+			if begresult >= 60 and begresult < 70:'You fought hard, and we were able to take 2 place. Fizruk congratulate you on your success.'
+			if begresult >= 70:swinbeg += 1 & dom += 1 & 'You fought hard, and we were able to take 1 place. Fizruk congratulate you on winning the contest.'
+
+			beg = beg + 1
+			fat = fat - 10
+
+			if swinbeg = 3 and razradbeg = 0:
+				razradbeg = 1
+
+				'You won the three school competitions and Fizruk announces you that, that he intercede and your hand 3First sports category on the run.'
+			end
+
+			gs'stat'
+
+			act 'Logout':gt'gorodok'
+		end
+	end
+end
+
+if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 4 and month = 5 and day >= 25 and age = 17:
+	'Today you will be prom.'
+
+	act 'Going to the prom':
+		cls
+		SchoolAtestat = 1
+		intel += 10
+		gs'stat'
+
+		'Your class built on the line and teachers congratulate you on the successful completion of school.'
+
+		act 'Logout':gt'gorodok'
+		act 'Going to the prom':
+			cls
+			minut += 120
+			alko += 5
+			gs'stat'
+
+			!gee gee, no normal outlet
+			'At the graduation all get drunk in the asshole. You almost do not remember anything, just that, that bathed in the fountain as a paratrooper.'
+
+			act 'Logout':gt'gorodok'
+		end
+	end
+end
+
+if hour <= 8 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 0:
+	if Sforma > 0:
+		act 'Go to school':gt'gschool2'
+	else
+		'You do not wear uniforms, and you are not allowed in school.'
+	end
+end
+
+if hour >= 16 and GorSlut >= 3 and SchoolGossip > 0 and afterschoolday ! day:
+	aftgopbjrand = RAND(0,2)
+	if aftgopbjrand = 0:
+		cla
+		'On leaving the school you were waiting for the boys, led by Kotov. "Well nipple? Ready to work even their fucking mouth? Let`s go to school."'
+
+		act 'Going beyond school':
+			cls
+			afterschoolday = day
+			SchoolGossip += 1
+			minut += 60
+			gs'stat'
+
+			'You took over the school where the boys giggling looking at you. Kotov said "I do not understand, huesoska why you still did not take the cheek?"'
+
+			act 'Suck':
+				cls
+				minut += 60
+				bj += 3
+				if npcSex[9] = 0:npcSex[9] = 1 & guy += 1
+				if npcSex[10] = 0:npcSex[10] = 1 & guy += 1
+				if npcSex[11] = 0:npcSex[11] = 1 & guy += 1
+				sub += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/Ev/toiletBJtreesome.jpg"></center>'
+				'You dutifully sat on his haunches and Vitek took his penis out of his pants sports. You wrapped around his own <<$liptalk3>> hard cock and began to suck. Dan and Bob Ryzhov Shulgin came to you and got its members. You took turns to handle cocks his mouth caressing those, it is not in your mouth with your hands.'
+
+				act 'Suck':
+					cls
+					minut += 60
+					bj += 3
+					cumlip += 1
+					cumface += 1
+					cumfrot += 1
+					sub += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/toiletBJcum.jpg"></center>'
+					'Finally, one of the members discharged semen into your mouth. Looking at how the sperm flows out of your mouth remaining guys started to cum on your face. You closed your eyes and dutifully waited until the boys do not stop to finish. Finally they ended up laughing at you and left.'
+
+					act 'Logout':gt $curloc
+				end
+			end
+		end
+
+		exit
+	end
+end
+
+if LinaSlut > 0 and hour = 16 and week < 6 and kanikuli = 0:
+	randLina = rand(1,10)
+	if randLina < 3:'You see how Lin Ryzhov and Shulgin gone for school.'
+end
+
+if LariskaHomeIn > 0 and hour = 16 and week < 6 and kanikuli = 0:
+	'In the courtyard of the school walks <a href="exec:minut += 1 & GT ''LariskaGo''">Lariska Gruzdev</a>'
+end
+
+if JuliaMilLernQW >= 1 and hour = 16 and week < 6 and kanikuli = 0:
+	'In the courtyard of the school walks <a href="exec:minut += 1 & GT ''JuliaMilGo''">Julia Milov</a>'
+end
+
+if NatBelLernQW >= 1 and hour = 16 and week < 6 and kanikuli = 0:
+	'In the courtyard of the school walks <a href="exec:minut += 1 & GT ''NatBelGo''">Natasha Belova</a>'
+end
+
+if artomLernQW >= 1 and hour = 16 and week < 6 and kanikuli = 0 and artomVitokQW ! 2 and artemblok = 0:
+	'In the school yard you have to expect <a href="exec:minut += 15 & GT ''artemEv''">Artem Chebotarev</a>'
+end
+
+if week = 1 and kanikuli = 0 and arthakQW >= 10 and apmeetday ! daystart and hour >= 16 and apmeet < 6:
+	gt'artgar'
+end
+
+if hour = 16 and albinaCarday ! day and week < 6 and kanikuli = 0:
+	if DanceWhore > 0 or AlbinaLast > 0 or AlbinaBlokDance > 0:
+		!'You see standing in the school yard BMW X5 and <a href="exec:minut += 15 & GT ''albinaEv''">Albina Barlovskuyu</a> sitting behind the wheel'
+	end
+	if AlbFrend >= 1 and albrideday ! daystart:
+		'Near a large black SUV parked near the school is <a href="exec:minut += 15 & GT ''albinaRide''">Albina Barlovskaya</a>'
+	end
+end
+
+if hour = 16 and week < 6 and kanikuli = 0 and katjaMeynoldday ! day and meynoldQW >= 2:
+	'In the courtyard of the school walks <a href="exec:minut += 15 & GT ''katjaEv''">Katya Meynold</a>'
+end
+
+if DimaRudeQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and dimarudeday ! day and DimaRudeBlock = 0:
+	'In the school yard is worth considering <a href="exec:minut += 15 & GT ''dimaGoHome''">Dima Nosov</a>'
+end
+
+if IgorLoverQW > 0 and hour = 16 and week < 6 and kanikuli = 0 and igorkruglovday ! day and IdorBlock = 0:
+	'In the courtyard of the school walks <a href="exec:minut += 15 & GT ''IgorEv''">Igor Kruglov</a>'
+end
+
+if fedorKozlovQW >= 10 and hour = 16 and week < 6 and kanikuli = 0:
+	'not far from the entrance of the school is <a href="exec:minut += 15 & GT ''FedorEv''">Fedor Kozlov</a>, You see, he was delighted and went to you.'
+end
+
+if strelaDay ! day and strelaQW = 1 and hour = 16:
+	cls
+	gs'stat'
+
+	'I drove up to the school and BMW Mitsubishi Pajero. From cars out strong, inflated guys in leather jackets and tracksuits. They went to a meeting Cats, Red and Shulga. They talked about something and then walked out of school Fedor Kozlov with a swollen face, bruised. Kotov waved your hand, "Sveta, come here, you witness."'
+
+	act 'Start at arrow':gt'strela'
+
+	exit
+end
+
+gs'family'
+--- gschool ---------------------------------
+

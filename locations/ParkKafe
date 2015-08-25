@@ -1,0 +1,325 @@
+# ParkKafe
+if $ARGS[0] = 'food':
+	if money < 100:
+		'You do not have enough money for cafe.'
+		act 'Escape':gt'park','start'
+		exit
+	end
+
+	cla
+	health = health + 10
+	money = money - 100
+	manna = manna + 5
+	willpower = willpower + 5
+
+	if energy >= 30:
+		fat = fat + 5
+		'You can no longer have.'
+	elseif energy >= 20 and energy < 30:
+		fat = fat + 3
+		energy = energy + 10
+		'You pushed through the power of a meal.'
+	elseif energy < 20:
+		energy = energy +20
+		fat = fat + 1
+		'You will be happy to eat food.'
+	end
+
+	if water >= 20:
+		'Tea in you no longer climbs.'
+	elseif water < 20:
+		water = water +20
+
+		'You will be happy to drink a cup of tea.'
+	end
+
+	arand = RAND(1,7)
+	if arand = 1:'You are viewing the visitors cafes and strolling company notice <a href="exec:GT ''ParkKafe'',''youth''">youth</a>'
+	if arand = 2:'You look around and notice the cafe visitors sitting alone young <a href="exec:GT ''ParkKafe'',''guy''">Man</a>'
+	if arand = 3:'You are viewing the visitors cafes and notice the campaign students <a href="exec:GT ''ParkKafe'',''negros''">Africans</a>'
+	if arand = 4:'You look around and notice the cafe visitors <a href="exec:GT ''ParkKafe'',''woman''">woman</a> domineering type'
+	if arand = 5:'You look around and notice the visitors cafe solid <a href="exec:GT ''ParkKafe'',''man''">man</a> aged'
+	if arand = 6:'You are viewing the visitors cafes and notice two <a href="exec:GT ''ParkKafe'',''Armenians''">Armenians</a> sitting at a table'
+	if arand = 7:'You are viewing the visitors cafes and notice two <a href="exec:GT ''ParkKafe'',''guys''">guys sporty</a> sitting at a table and drinking beer'
+
+	'You sat down at a table in a summer cafe. Soon you will bring your order.'
+
+	act 'Escape':gt'park','start'
+end
+
+if $ARGS[0] = 'guys':
+	cla
+
+	rrand = RAND(1,2)
+	if rrand = 1:
+		'You studied them intently, but it seems you do not notice.'
+
+		act 'Going home':gt'park','start'
+	elseif rrand = 2:
+		if parkara > 0:
+			'Zhora and Senya you noticed, but continued to drink beer together.'
+			act 'Escape':gt'park','start'
+		elseif parkara = 0:
+			'Your views were seen guys and one of them drove up to you and asked to join them.'
+
+			act 'Escape':gt'park','start'
+			act 'Drink beer with the guys':
+				cla
+				'You drink with the guys for a beer, guys ordered another. One of the guys quietly slipped you something in a glass. You get drunk and you guys were taken to a nearby grove.'
+
+				deyrand = RAND(1,2)
+				if deyrand = 1:
+					if parkara = 0:guy = guy + 2 & parkara = 1
+					sex = sex + 1
+					bj = bj + 2
+					cumlip = cumlip + 2
+
+					'<center><img src="images/klof/022.jpg"></center>'
+					'Guys put you on your knees and take out their cocks. You do not understand what is going on at once starts to suck both members.'
+
+					horand = RAND(1,100)
+					if horand <= bj:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+					if horand > bj:horny = horny + 10 & 'You were not satisfied'
+
+					'They end up in your mouth, you greedy swallow semen'
+
+					act 'Become acquainted':gt'parkkafe','klof 1'
+				elseif deyrand = 2:
+					if parkara = 0:guy = guy + 2 & parkara = 1
+					sex = sex + 1
+					cumpussy = cumpussy + 1
+					vagina = vagina + 1
+					gang = gang+1
+					cumass = cumass + 1
+					anus += 1
+					anal += 1
+
+					'<center><img src="images/klof/004.jpg"></center>'
+					'The guy fucks you in the pussy. Another time, too, does not lose his penis and pushes you in the ass.'
+
+					horand = RAND(1,100)
+					if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+					if horand > horny:horny = horny + 10 & 'You were not satisfied'
+
+					'One of them ends up in you, and the other is discharged you on the ass.'
+
+					act 'Become acquainted':gt'parkkafe','klof 1'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'klof 1':
+	cla
+	*clr
+	minut = minut + 5
+	klofQW = 1
+	clr
+	gs'stat'
+
+	'<center><img src="images/klof/11_1.jpg"></center>'
+	'The rose from the grass in front of the guys legs and arms were shaking from sex, between my legs itched all. "You like it baby?" I asked one of the guys.'
+
+	act 'Yes':gt'event','klof 2'
+	act 'Escape':gt'park','start'
+end
+
+if $ARGS[0] = 'Armenians':
+	cla
+
+	rrand = RAND(1,2)
+	if rrand = 1:
+		'You studied them intently, but it seems you do not notice.'
+
+		act 'Going home':gt'park','start'
+	elseif rrand = 2:
+		'Your views were seen by Armenians and one of them pulled up to your table with a bottle of champagne.'
+
+		act 'Escape':gt'park','start'
+		act 'Drink together':
+			cla
+			*clr
+
+			'You drank champagne with Armenian. His friend has moved smoothly for your table. You were drinking and having fun. You get drunk and Armenians took you into the back room Cafe.'
+
+			deyrand = RAND(1,2)
+			if deyrand = 1:
+				if parkarman = 0:guy = guy + 2 & parkarman = 1
+				bj += 2
+				cumlip = cumlip + 2
+
+				'<center><img src="images/pics2/ara.jpg"></center>'
+				'Armenians put you on your knees and pull out their mighty members. Together they poke them in your face, you start to suck at once both members.'
+
+				horand = RAND(1,100)
+				if horand <= bj:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+				if horand > bj:horny = horny + 10 & 'You were not satisfied'
+
+				'They end up in your mouth, and go with laughter'
+
+				act 'Escape':gt'park','start'
+			elseif deyrand = 2:
+				if parkarman = 0:guy = guy + 2 & parkarman = 1
+				sex = sex + 1
+				bj += 1
+				gang = gang+1
+				cumlip = cumlip + 1
+				cumass = cumass + 1
+				vagina += 1
+
+				'<center><img src="images/pics2/ara2.jpg"></center>'
+				'Armenians bends you and puts you one cock in her mouth. Another time, too, does not lose his penis and pushes you into the vagina.'
+
+				horand = RAND(1,100)
+				if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+				if horand > horny:horny = horny + 10 & 'You were not satisfied'
+
+				'One of them ends up in your mouth and swallow all makes, and the other is discharged you on the ass.'
+
+				act 'Escape':gt'park','start'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'man':
+	cla
+
+	mrand = RAND(1,2)
+	if mrand = 1:
+		'You sneaking glances at the man solid, but it seems you did not notice.'
+
+		act 'Escape':gt'park','start'
+	elseif mrand = 2:
+		cla
+		'A man comes to you and invites you to dance.'
+
+		act 'Dance':
+			cla
+			'He dances well and confidently leads you into the dance. After the dance, you sit down at a table with a man, he orders expensive wines and various snacks, you relax with gallant compliments showered on you.'
+			'Cavalier offers to go to the sauna.'
+
+			act 'In the sauna':
+				cla
+				if saunasex = 0:saunasex = 1 & guy = guy + 1
+				sex = sex + 1
+				!oral = oral + 1
+				cumlip = cumlip + 1
+				cumass = cumass + 1
+				horny = 0
+				vnesh = vnesh + 1
+				vagina += 1
+
+				'<center><img src="images/pics2/sauna.jpg"></center>'
+				'In the sauna, the two of you completely naked, have fun and entertain, gradually turns into a very passionate sex'
+
+				if horny > 75:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+				if horny <= 75:horny = horny + 10 & 'You were not satisfied'
+
+				act 'Escape':gt'street'
+			end
+		end
+		act 'Escape':gt'park','start'
+	end
+end
+
+if $ARGS[0] = 'woman':
+	cla
+	'You glanced surreptitiously at the imperious woman, but it seems you did not notice.'
+
+	act 'Escape':gt'park','start'
+end
+
+if $ARGS[0] = 'youth':
+	cla
+
+	rrand = RAND(1,2)
+	if rrand = 1:
+		'You keep an eye on the campaign secretly merry youth, but it seems you do not notice.'
+
+		act 'Escape':gt'park','start'
+	elseif rrand = 2:
+		'To you drunk guy came up and invited you to the company.'
+
+		act 'Escape':gt'park','start'
+		act 'Company':
+			cla
+			'You sat at the table where walking cheerful and noisy company of young people, it was a lot of fun and at the end of the party style company went to continue the fun at the apartment'
+
+			act 'Escape':gt'park','start'
+			act 'To go along with all':
+				cla
+				*clr
+				'<center><img src="images/pics2/Student.jpg"></center>'
+				'You have continued to revel in the apartment. Most returned to their homes, but there was one girl and six boys. Men began to kiss her and she sat on his knees in front of them guys got members, woman caressed with their hands, and guys masturbate on members of the girl`s face'
+
+				act 'Escape':gt'park','start'
+				act 'Kneel down next to the girl in the lap of the guys':
+					cla
+					*clr
+					hour = 22
+					son = 0
+					if studentsex = 0:studentsex = 1 & guy = guy + 6
+					bj = bj + 6
+					cumlip = cumlip + 6
+					swallow = swallow+6
+
+					'<center><img src="images/pics2/Student2.jpg"></center>'
+					'Men masturbate to your face, and you and she caresses and kisses members, Finally the boys began to descend you in their mouths. Your co-worker is also nakonchal mouthful, she turns to you with a mouthful of sperm and wants to kiss you.'
+
+					act 'Kissing Woman':
+						cla
+						*clr
+						'<center><img src="images/pics2/Student3.jpg"></center>'
+						'You kiss a girl, you have two mouthfuls of sperm and you are sharing it with a kiss, Finally, you get tired and you both swallow cum in your mouths.'
+
+						act 'Escape':gt'street'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'negros':
+	cla
+
+	rrand = RAND(1,2)
+	if rrand = 1 or afra >= 1:
+		'You glanced surreptitiously Africans, but it seems you do not notice.'
+
+		act 'Escape':gt'park','start'
+	elseif rrand = 2 and afra = 0:
+		afra = 1
+		obs = 1
+
+		'To fit your table a few Africans, they behave not quite restrained, a lot of talk in English, grabs your ass and breasts. One of the Africans introduced DeMarcus tells you that they are students from Africa and lived in a hostel, as he tells you how to get to the hostel and find them.'
+
+		act 'Escape':gt'park','start'
+	end
+end
+
+if $ARGS[0] = 'guy':
+	cla
+
+	rrand = RAND(1,2)
+	if rrand = 1 and gosh = 0:
+		'You sneaking glances at the young guy, but it seems you did not notice.'
+
+		act 'Escape':gt'park','start'
+	elseif rrand = 2 and gosh = 1:
+		'You sneaking glances at the young guy. It Ghosh, but it seems you did not notice.'
+
+		act 'Escape':gt'park','start'
+	elseif rrand = 2 and gosh = 0:
+		gosh = 1
+		obs = 1
+
+		'To your table fit young man and presented as Gosha, you`re familiar with it, He is a student and lives in a hostel. Ghosh tells you how to get to the hostel and how to find it.'
+
+		act 'Escape':gt'park','start'
+	end
+end
+--- ParkKafe ---------------------------------
+

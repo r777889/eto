@@ -1,0 +1,140 @@
+# butik
+if $ARGS[0] = 'start':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	cla
+	clr
+	*clr
+	mag = 1
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Boutique</font></b></center>'
+	'<center><img src="images/pic/butik.jpg"></center>'
+
+	evrand = RAND(0,100)
+	if evrand >= 80 and skin > 0 and lesbiQW = 0:
+		'The boutique you see a stylish and slim woman forty years.'
+
+		act 'Stare at a woman':gt'event','lesbi'
+	end
+
+	if QWdogreiqTimer = 0 and QWdogReiq = 1 and week = 7 and qwdogiventday ! day:
+		qwdogiventday = day
+		'Going into the boutique you start to consider hanging clothes on hangers. Taking a casual one, you try on his back and hang with a slight grimace of disgust.Suddenly, your attention is drawn to one of the dresses,He began to study more closely how you feel-strange feeling if you are looking for:'
+
+		act 'Disregard':gt'butik','start'
+		act 'Look around':dynamic $butikreiqdi
+
+		exit
+	end
+
+	if RimmaSex > 0:
+		if rimmaday ! day:
+			'Apartment <a href="exec:GT ''RimmaSexQW''">Rimma</a> You smiled and bit his lip started shooting eyes in your direction.'
+		else
+			'Rima smiled and you took matters.'
+		end
+	end
+
+	if palto < 3:
+		'The boutique sells fur coat for winter. 50000 RUB'
+
+		if money >= 50000:
+			act 'Buy a fur coat':
+				cla
+				money -= 50000
+				palto = 3
+				$palto = 'fur coat'
+
+				'You bought a fur coat.'
+
+				act 'Logout':gt'butik','start'
+			end
+		end
+	end
+
+	if money >= 25000:
+		if dress[1] = 0:
+			act 'Inspect 1e dress (25 th.RUB)':numdres = 1 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[2] = 0:
+			act 'Inspect 2e dress (25 th.RUB)':numdres = 2 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[3] = 0:
+			act 'Inspect 3e dress (25 th.RUB)':numdres = 3 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[5] = 0:
+			act 'Inspect 5e dress (25 th.RUB)':numdres = 5 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[6] = 0:
+			act 'Inspect 6e dress (25 th.RUB)':numdres = 6 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[7] = 0:
+			act 'Inspect 7e dress (25 th.RUB)':numdres = 7 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[8] = 0:
+			act 'Inspect 8e dress (25 th.RUB)':numdres = 8 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[9] = 0:
+			act 'Inspect 9e dress (25 th.RUB)':numdres = 9 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[10] = 0:
+			act 'Inspect 10e dress (25 th.RUB)':numdres = 10 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[11] = 0:
+			act 'Inspect 11e dress (25 th.RUB)':numdres = 11 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[12] = 0:
+			act 'Inspect 12e dress (25 th.RUB)':numdres = 12 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[13] = 0:
+			act 'Inspect 13e dress (25 th.RUB)':numdres = 13 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[14] = 0:
+			act 'Inspect 14e dress (25 th.RUB)':numdres = 14 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[15] = 0:
+			act 'Inspect 15e dress (25 th.RUB)':numdres = 15 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[16] = 0:
+			act 'Inspect 16e dress (25 th.RUB)':numdres = 16 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[17] = 0:
+			act 'Inspect 17e dress (25 th.RUB)':numdres = 17 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[18] = 0:
+			act 'Inspect 18e dress (25 th.RUB)':numdres = 18 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[19] = 0:
+			act 'Inspect 19e dress (25 th.RUB)':numdres = 19 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[20] = 0:
+			act 'Inspect 20e dress (25 th.RUB)':numdres = 20 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[21] = 0:
+			act 'Inspect 21e dress (25 th.RUB)':numdres = 21 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[22] = 0:
+			act 'Inspect 22e dress (25 th.RUB)':numdres = 22 & payclo = 25000 & gt'loker','dress'
+		end
+		if dress[23] = 0:
+			act 'Inspect 23e dress (25 th.RUB)':numdres = 23 & payclo = 25000 & gt'loker','dress'
+		end
+	end
+
+	act 'Exit Boutique':
+		cla
+		minut = minut + 5
+		gt'torgcentr'
+	end
+end
+--- butik ---------------------------------
+

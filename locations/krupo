@@ -1,0 +1,52 @@
+# krupo
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+frost = 0
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Sewing circle</font></b></center>'
+'<center><img src="images/lur/kru/krupo.jpg"></center>'
+if tkan>=0:'Your cloth will suffice for <<tkan>> lessons.'
+if poSkill<50:
+porost=intel/10
+porostmin=intel/20
+porostitog=rand(porostmin,porost)
+poSkill+=porostitog
+minut+=60
+'You are within an hour studying the theory of art of sewing.'
+end
+if poSkill>40 and poSkill<50:'The teacher tells you, that further studies will need fabric, you`ll need to buy in the store.'
+if poSkill>=50 and tkan<=0:
+'The teacher reminds you, that in order to further improve the skills necessary for tissue praktikovatsya, you need to buy their own.'
+     if tkanfirst=0:
+     tkanfirst=1
+     tkan=1
+     'This time she gave you the fabric, but next time you will have to have its.'
+     end
+end
+if tkan>0 and poSkill>=50:
+minut+=60
+tkan-=1
+porost=intel/10
+porostmin=intel/20
+porostitog=rand(porostmin,porost)
+poSkill+=porostitog
+'Within an hour you practice on the learning you purchased fabric cutting and sewing.'
+end
+if poSkill>=100 and poTalk=0:
+poTalk=1
+'A teacher with a satisfied smile tells you, now you can precisely alter clothes for your size. But this does not mean, that further studies are useless. Then you can learn how to embroider tapestries, who are not poor demand, although very laborious.'
+end
+if poSkill>=200 and poTalk=1:
+'The teacher is quite nods and tells you, now you will be able to embroider a tapestry, even simple, not without flaws, but the quality of the growing skills.'
+end
+
+gs'stat'
+act 'Logout':gt'gdkkru'
+--- krupo ---------------------------------
+

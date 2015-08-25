@@ -1,0 +1,94 @@
+# boylove
+if $ARGS[0] = 'haer':
+	if haerBoyA ! hcol:
+		bfA = bfA - 1
+
+		if haerBoyA = 0:'<<$boyA>> speaks, you are very beautiful, although he likes brunettes.'
+		if haerBoyA = 1:'<<$boyA>> speaks, you are very beautiful, although he likes haired.'
+		if haerBoyA = 2:'<<$boyA>> speaks, you are very beautiful, although he likes redheads.'
+		if haerBoyA = 3:'<<$boyA>> speaks, you are very beautiful, although he likes blondes.'
+	elseif haerBoyA = hcol:
+		bfA = bfA + 1
+
+		'<<$boyA>> speaks, that you have beautiful hair.'
+	end
+end
+
+if $ARGS[0] = 'figure':
+	if figurBoyA = 0:
+		if bedra < 80:
+			bfA = bfA + 1
+
+			'<<$boyA>> It tells you, that you have a perfect figure.'
+		elseif bedra >= 80:
+			bfA = bfA - 1
+
+			'<<$boyA>> speaks, that you really like him despite the fact, that he always met with hudyshku.'
+		end
+	elseif figurBoyA = 1:
+		if bedra > 80 and bedra < 100:
+			bfA = bfA + 1
+
+			'<<$boyA>> It tells you, that you have a perfect figure.'
+		elseif bedra <= 80:
+			bfA = bfA - 1
+
+			'<<$boyA>> asks, whether you have anorexia.'
+		elseif bedra >= 100:
+			bfA = bfA - 1
+
+			'<<$boyA>> asks, are you going to go on a diet.'
+		end
+	elseif figurBoyA = 2:
+		if bedra >= 100:
+			bfA = bfA + 1
+
+			'<<$boyA>> It tells you, that you have a perfect figure.'
+		elseif bedra < 100:
+			bfA = bfA - 1
+
+			'<<$boyA>> speaks, you are beautiful, but a woman should be in the body.'
+		end
+	end
+end
+
+if $ARGS[0] = 'tits':
+	!titBoyA
+	if titBoyA = 0:
+		if tits < 3:
+			bfA = bfA + 1
+
+			'<<$boyA>> It tells you, that you have beautiful breasts.'
+		elseif tits >= 3:
+			bfA = bfA - 1
+
+			'<<$boyA>> speaks, that you really like him despite the fact, that he prefers small breasts.'
+		end
+	elseif titBoyA = 1:
+		if tits >= 3 and tits <= 4:
+			bfA = bfA + 1
+
+			'<<$boyA>> It tells you, that you have perfect breasts.'
+		elseif tits < 3:
+			bfA = bfA - 1
+
+			'<<$boyA>> speaks, that you have a beautiful, Although small breasts.'
+		elseif tits > 4:
+			bfA = bfA - 1
+
+			'<<$boyA>> speaks, that you have a really huge breasts.'
+		end
+	elseif titBoyA = 2:
+		if tits > 4:
+			bfA = bfA + 1
+
+			'<<$boyA>> It tells you, that you have great breasts.'
+		elseif tits <= 4:
+			bfA = bfA - 1
+
+			'<<$boyA>> speaks, that you have a beautiful, Although small breasts.'
+		end
+	end
+end
+--- boylove ---------------------------------
+

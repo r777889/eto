@@ -1,0 +1,245 @@
+# RimmaSexQW
+cls
+minut += 15
+rimmaday = day
+gs'stat'
+
+'You came to Rimma that you smiled affably. And she said,, I`ll finish, you can go to?'
+
+act 'Sorry, but I still have things to do':gt'butik','start'
+
+if money >= 250:
+	act 'Go with Rimma to your home':
+		cls
+		minut += 30
+		money -= 250
+		gs'stat'
+
+		'Rima left work and you caught a taxi. The machine quickly dovezla you home and you went into the apartment, along with Rima.'
+
+		act 'Sex':dynamic $rimmasexdi
+	end
+end
+
+$rimmasexdi = {
+	cls
+	minut += 30
+	lesbian += 1
+	RimmaSex += 1
+	if RimmaSex > 21:RimmaSex = 21 & RimmaEndEvent = 1 & RimmaRandEvent = RAND(2,21)
+	orgasm = orgasm + 1
+	horny = 0
+	gs'stat'
+
+	if RimmaSex = 23:
+		'<center><img src="images/zoo/rimma14.jpg"></center>'
+		'Rima pulled the strap of her purse and put it. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma23.jpg"></center>'
+			''
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 22:
+		'<center><img src="images/zoo/rimmaBJ.jpg"></center>'
+		'Rima pulled the strap of her purse and necklace with chain leash employee. You put a collar and chain handed Rimma already dressed Strap. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma22.jpg"></center>'
+			''
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 21 or RimmaEndEvent = 1 and RimmaRandEvent = 21:
+		'<center><img src="images/zoo/rimma21.jpg"></center>'
+		'Rima told you squat down and stood over you. Your face was between her legs, suddenly it hits you in the face stream of urine. Rima without warning just sank and help you. You sat motionless in shock while the jet of warm urine running down your face. After that Rima told you to lick her. You began to lick and finished simultaneously with Rimma.'
+	elseif RimmaSex = 20 or RimmaEndEvent = 1 and RimmaRandEvent = 20:
+		'<center><img src="images/zoo/rimma14.jpg"></center>'
+		'Rima pulled the strap of her purse and put it. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			anus += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma20.jpg"></center>'
+			'Rimma bent you and it came strap your ass, she began to fuck you, you from that swept this orgasm, you mess. Rima laughed at you.'
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 19 or RimmaEndEvent = 1 and RimmaRandEvent = 19:
+		'<center><img src="images/zoo/rimmaBJ.jpg"></center>'
+		'Rima pulled the strap of her purse and necklace with chain leash employee. You put a collar and chain handed Rimma already dressed Strap. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			anus += 1
+			vagina += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma19.jpg"></center>'
+			'Rima put you cancer and began to peck in the pussy, then took out a strap-on and you put him in the ass, You groaned held by the throat collar. Finally you are finished.'
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 18 or RimmaEndEvent = 1 and RimmaRandEvent = 18:
+		'<center><img src="images/zoo/rimma14.jpg"></center>'
+		'Rima pulled the strap of her purse and put it. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			anus += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma18.jpg"></center>'
+			'Rima put you cancer and you feel like you strap rested in the anus, You moan and try to relax. Strap entered Rimma you and you start to fuck in the ass. She grabbed you by the hair and arm lifted your face while continuing to batter you. Finally you are finished.'
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 17 or RimmaEndEvent = 1 and RimmaRandEvent = 17:
+		'<center><img src="images/zoo/rimma14.jpg"></center>'
+		'Rima pulled the strap of her purse and put it. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			vagina += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma17.jpg"></center>'
+			'Rimma cancer and put you drove you to strap in pussy began furiously fuck you and clap your hands in the ass, until you are not finished.'
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 16 or RimmaEndEvent = 1 and RimmaRandEvent = 16:
+		'<center><img src="images/zoo/rimma14.jpg"></center>'
+		'Rima pulled the strap of her purse and put it. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			vagina += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma16.jpg"></center>'
+			'Rima put you on your back and spread your legs, She drove strap you in the pussy and began to furiously fuck you, until you are covered orgasm.'
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 15 or RimmaEndEvent = 1 and RimmaRandEvent = 15:
+		'<center><img src="images/zoo/rimma14.jpg"></center>'
+		'Rima pulled the strap of her purse and put it. She put you on your knees and slipped the strap you in the mouth, you began to suck lubricating saliva.'
+
+		act 'Further':
+			cls
+			cls
+			minut += 30
+			vagina += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/rimma15.jpg"></center>'
+			'Rima does not put you over and drove you wet with your saliva strap pussy, she began furiously fuck you and soon you covered orgasm.'
+
+			act 'Carry it':gt'korr'
+		end
+
+		exit
+	elseif RimmaSex = 14 or RimmaEndEvent = 1 and RimmaRandEvent = 14:
+		anus += 8
+
+		'<center><img src="images/zoo/rimma13.jpg"></center>'
+		'Rima put you cancer and grease-lubricated anus you enter you immediately became both hands, gradually she managed it and she started to fuck your ass hands until you have not finished.'
+	elseif RimmaSex = 13 or RimmaEndEvent = 1 and RimmaRandEvent = 13:
+		anus += 8
+
+		'<center><img src="images/zoo/rimma12.jpg"></center>'
+		'Rima put you on your back and lifting your ass thoroughly greased your anus. Her hand came easily to you and Rima was next to you in the ass to thrust his other arm. Soon the two arms were you in the ass and started to fuck your Rimma priest. Soon you left off.'
+	elseif RimmaSex = 12 or RimmaEndEvent = 1 and RimmaRandEvent = 12:
+		anus += 6
+		vagina += 5
+
+		'<center><img src="images/zoo/rimma11.jpg"></center>'
+		'Rima put you back on the bed and began to thrust one hand you in the ass, and the other hand into the vagina. Soon his hands were inside you and Rima began to fuck you hand, You could not stand such pressure and finished.'
+	elseif RimmaSex = 11 or RimmaEndEvent = 1 and RimmaRandEvent = 11:
+		anus += 6
+
+		'<center><img src="images/zoo/rimma10.jpg"></center>'
+		'Rima put you cancer and began to thrust his hand to you in the ass, Soon it was entirely in the palm of your ass, and she began to actively fuck your ass its river, you could not last long and roughly finished.'
+	elseif RimmaSex = 10 or RimmaEndEvent = 1 and RimmaRandEvent = 10:
+		anus += 6
+
+		'<center><img src="images/zoo/rimma9.jpg"></center>'
+		'Rima put you cancer and began to fuck your ass fingers sometimes spitting on hole. Soon she was able to shove into your ass all out and you`re finished.'
+	elseif RimmaSex = 9 or RimmaEndEvent = 1 and RimmaRandEvent = 9:
+		anus += 5
+
+		'<center><img src="images/zoo/rimma8.jpg"></center>'
+		'Expanding convenient for you, Rima started to fuck your ass fingers, soon from her skillful actions have covered an orgasm.'
+	elseif RimmaSex = 8 or RimmaEndEvent = 1 and RimmaRandEvent = 8:
+		anus += 3
+
+		'<center><img src="images/zoo/rimma7.jpg"></center>'
+		'Rima put you on his back and began to caress your clitoris tongue simultaneously massaging your ass handed. Soon you covered orgasm.'
+	elseif RimmaSex = 7 or RimmaEndEvent = 1 and RimmaRandEvent = 7:
+		vagina += 5
+
+		'<center><img src="images/zoo/rimma6.jpg"></center>'
+		'Rima put you on his back and began to introduce your fingers into the vagina until her whole hand was not inside you. After that, she began to fuck you with one hand caressing your body second. You started moaning in orgasm and Rimma passionately grabbed you by the throat.'
+	elseif RimmaSex = 6 or RimmaEndEvent = 1 and RimmaRandEvent = 6:
+		vagina += 5
+
+		'<center><img src="images/zoo/rimma5.jpg"></center>'
+		'Rima put you on his back and began to lick your clitoris. You felt her fingers penetrate into your pussy and begin to fuck you. Rima gradually introduce new fingers and now she began to fuck your pussy with his fist, you broke and finished.'
+	elseif RimmaSex = 5 or RimmaEndEvent = 1 and RimmaRandEvent = 5:
+		vagina += 2
+
+		'<center><img src="images/zoo/rimma4.jpg"></center>'
+		'Rima put you on his back and began to lick your clitoris. You felt her fingers penetrate into your pussy and begin to fuck you. Soon you covered orgasm.'
+	elseif RimmaSex = 4 or RimmaEndEvent = 1 and RimmaRandEvent = 4:
+		'<center><img src="images/zoo/rimma3.jpg"></center>'
+		'Rima put you on the back and sat on top of substituting his sweaty pussy. You started to lick her and caress her arms, Rimma soon strongly pressed against your face finished his crotch, You also covered an orgasm.'
+	elseif RimmaSex = 3 or RimmaEndEvent = 1 and RimmaRandEvent = 3:
+		'<center><img src="images/zoo/rimma2.jpg"></center>'
+		'Rima sat on the couch legs spread, You fell to his knees and began to lick her pussy with his tongue, while not forgetting to caress her pussy fingers. Rima began to moan in bliss and taking your hair stronger pressed to her pussy, until the beginning of the fight in an orgasm, at this time you also swept orgasm.'
+	elseif RimmaSex = 2 or RimmaEndEvent = 1 and RimmaRandEvent = 2:
+		'<center><img src="images/zoo/rimma.jpg"></center>'
+		'Rimma fell on you from above and offered her pussy, began to lick your passion. You my tongue began to caress pussy Rima and soon enveloped you heavenly bliss ended with orgasm.'
+	end
+
+	act 'Carry it':gt'korr'
+}
+--- RimmaSexQW ---------------------------------
+

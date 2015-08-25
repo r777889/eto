@@ -1,0 +1,279 @@
+# bobka
+if bobrand = 0:
+	minut += 5
+	bj += 1
+	swallow += 1
+	cumlip += 1
+	gs'stat'
+
+	dynamic $venerasiak
+	'<center><img src="images/qwest/sosed/bj.jpg"></center>'
+	'You need so much dope, you flopped down in front of a guy on his knees and began to suck his flaccid penis. Finally, a member stood up slowly in your mouth and you become more active to handle it his tongue and lips. Suddenly, you feel like a jet of sperm hit you in the mouth. You continued sucking swallowing sperm. Bobok dried up and took his penis in your mouth. He tucked his dick in his pants and threw you a syringe.'
+
+	act 'Shirnutsya':
+		cls
+		minut += 5
+		StrongNarkota += 25
+		SNarkTimes += 1
+		NarkShmaraTimes += 1
+		gs'stat'
+
+		'You grabbed a syringe from his foolishness and injected into a vein yourself shaking hands. Bobok with a smile looking at you.'
+
+		act 'Escape':minut += 15 & dynamic $snkayf1
+	end
+elseif bobrand = 1:
+	minut += 5
+	bj += 1
+	gs'stat'
+
+	dynamic $venerasiak
+
+	'<center><img src="images/qwest/sosed/bj.jpg"></center>'
+	'You need so much dope, you flopped down in front of a guy on his knees and began to suck his flaccid penis. Finally, a member stood up slowly in your mouth and you become more active to handle it his tongue and lips. Bobok said "Arise cancer".'
+
+	act 'Get cancer':
+		cls
+		minut += 5
+		sex += 1
+		$boy = 'Bobok'
+		dick = 16
+		silavag = 1
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/doggy.jpg"></center>'
+
+		dynamic $sexstart
+		dynamic $sexstart2
+		dynamic $sexcum
+
+		act 'Shirnutsya':
+			cls
+			minut += 5
+			StrongNarkota += 25
+			SNarkTimes += 1
+			NarkShmaraTimes += 1
+			gs'stat'
+
+			'You grabbed a syringe from his foolishness and injected into a vein yourself shaking hands. Man with a smile looking at you.'
+
+			act 'Escape':minut += 15 & dynamic $snkayf1
+		end
+	end
+elseif bobrand = 2:
+	minut += 5
+	bj += 1
+	gs'stat'
+
+	dynamic $venerasiak
+
+	'<center><img src="images/qwest/sosed/bj.jpg"></center>'
+	'You need so much dope, you flopped down in front of a guy on his knees and began to suck his flaccid penis. Finally, a member stood up slowly in your mouth and you become more active to handle it his tongue and lips. Bobok said "Arise cancer".'
+
+	act 'Get cancer':
+		cls
+		minut += 5
+		$boy = 'Bobok'
+		dick = 16
+		silavag = 1
+		cumanus += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/anal.jpg"></center>'
+
+		dynamic $sexstart
+		dynamic $analsex
+
+		'Finally Bobok fades and you feel like your ass fills the warm sperm.'
+
+		act 'Shirnutsya':
+			cls
+			minut += 5
+			StrongNarkota += 25
+			SNarkTimes += 1
+			NarkShmaraTimes += 1
+			gs'stat'
+
+			'You grabbed a syringe from his foolishness and injected into a vein yourself shaking hands. Man with a smile looking at you.'
+
+			act 'Escape':minut += 15 & gt'street'
+		end
+	end
+elseif bobrand = 3:
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/qwest/sosed/rimming.jpg"></center>'
+	'You need so much dope, you flopped down in front of a guy on his knees and froze in indecision. Bobok lay back and lifting your legs pulled up to his face said the fifth point "Come lick already, Hare rebate".'
+
+	act 'Reluctantly licking': gt'bobka','rimming2'
+	act 'Carefully lick': gt'bobka','rimming3'
+elseif bobrand = 4:
+	minut += 5
+	pee += 1
+	gs'stat'
+
+	'<center><img src="images/qwest/sosed/knees.jpg"></center>'
+	'You need so much dope, you flopped down on his knees in front of a guy. "If you swallow - Nakin steward top." - He grinning offered you Bobok'
+
+	act 'Substitute person': gt'bobka','peeface'
+	act 'Open mouth': gt'bobka','peeswallow'
+end
+
+if $ARGS[0] = 'rimming2':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/rimming2.jpg"></center>'
+	'You looked at him pleadingly, but do nothing, breaking unbearable and you doomed kneels. Clasping her hands buttocks, you`re just a little bit, and parted them with his tongue out gingerly licked his hairy point. From the terrible smell and taste you almost puked, but the effort of will you contain and began listlessly drive tongue around his hole. - «You Th zhopolizka, I slept there? Let`s normal operating their whorish language» - He yelled at you, reinforcing its claim slap. Tears gushed out of your eyes and you, fearfully looking up at him, It becomes hard to handle every millimeter of his dirty ass, do not forget to kiss and suck periodically covered with sweat eggs. «That`s better» - Bobok grinned and suddenly with the force of your face pressed to his ass. «Now shove his dirty language to, where he belongs»'
+
+	act 'Moo and working language.':gt'bobka','rimming4'
+end
+
+if $ARGS[0] = 'rimming3':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/rimming3.jpg"></center>'
+	'Understanding, it is useless to argue you knelt down and began to polish his hole hard, not forgetting about the neighborhood. You were like a cat, lick his balls. Lang quickly tired of this hard work, nasty taste and smell of shit made you wince, but you patiently continued to clean his unwashed hairy mezhduzhopie, not forgetting pripadat juicy lips and kissed each corner. «Ha yes you are a born zhopolizka, seen like this business» - Bobok laughed and suddenly pushed the your face in your ass. «It`s time for you to stick to your foul language, where it should be» - He grinned Bobok.'
+
+	act 'Moo and working language.':gt'bobka','rimming4'
+end
+
+if $ARGS[0] = 'rimming4':
+	cla
+	cls
+	minut += 5
+	SUB += 1
+	gs'stat'
+
+	'<center><img src="images/qwest/sosed/rimming4.gif"></center>'
+	'Your face is so hard pressed to reeking of sweat and stale than the crotch Bobkov, hair with his pubis intertwined with your nose. Slightly swollen lips flattened ring of sphincter. You choke, pitifully mychite and the last effort to push its charter carefully tongue in his anus. «I want, that you thoroughly cleaned me out there, otherwise, then you know that for a long time not to wash, hot water nebylo, and why, when there are zhopolizki» - mockingly said Bobok understanding, nadrachivat continuing his already hard standing member. By the throat again drove com nausea, but the idea, you can not get drugs even worse and you, with tears in his eyes, suppressed desires, bravely continued to move his tongue in the ass. «If only he quickly finished» - It beats you up with the idea, in those moments, when you`re with smeared makeup and tongue in the ass, slurred mychite and pleading look at him from under eggs.'
+
+	act 'Come':gt'bobka','rimming5'
+end
+
+if $ARGS[0] = 'rimming5':
+	cla
+	cls
+	minut += 5
+	cumlip += 1
+	cumface = cumface + 1
+	gs'stat'
+
+	'<center><img src="images/qwest/sosed/rimming5.jpg"></center>'
+	'Lastly, unable to bear it with a strangled wheeze became abundantly finish, watering your face and hair hearty sperm, you stand in a humiliating position with his eyes closed and his head down. In teeth stuck several hard black hairs. «Hey Shmarev, and who will clean?» - Bobok, I poked your flaccid penis for a nose. You have meekly in his mouth and brushed his fallen body, otliza anus after the taste of semen was almost pleasant, and with hope looked at him, expecting dose. «Che so sour? Get used to it, zhopolizka, heroin whore should not be squeamish». - With these words and nasty smile Bobok tossed you a syringe.'
+
+	act 'Shirnutsya':
+		cla
+		cls
+		minut += 5
+		StrongNarkota += 25
+		SNarkTimes += 1
+		NarkShmaraTimes += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/PeredDozoy.jpg"></center>'
+		'You grabbed a syringe from his foolishness and injected into a vein yourself shaking hands. Man with a smile looking at you.'
+
+		act 'Escape':minut += 15 & dynamic $snkayf1
+	end
+end
+
+if $ARGS[0] = 'peeface':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/peeface.jpg"></center>'
+	'Bobok pulled out his flaccid penis and a hot stream of urine dramatically splattered on your face. You`re a little twitch. "Do not you turn away and turn a blind eye, I look into the eyes of a bitch."- he shouted at you'
+
+	act 'Look in your eyes':gt'bobka','peeface2'
+end
+
+if $ARGS[0] = 'peeface2':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/peeface2.jpg"></center>'
+	'You look in the eyes obediently, trying not to blink and keep the person well, that the spray does not impinge on the nose. You hold firmly, ignoring the fluttering spray in your face and disgusting smell. You desperately need a dose. A trickle of urine running down your face, sisechki and form a puddle under you. Finally, the flow has dried up, You are sitting in a pool of stunned urine. You feel that your entire body impregnated with this disgusting smell, at least the person exactly. In your head fights awareness, that you are just like pissing torn blotter, one side, breaking buzz and anticipation on the other. Wiping his eyes from the spray you are looking to stretch Bobkov and shaking hands on the break-up of a syringe. '
+
+	act 'Streamlined':gt'bobka','peeface3'
+end
+
+if $ARGS[0] = 'peeface3':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/peeface3.jpg"></center>'
+	'Bobok slowly shakes off the last drops on your face and wipes his penis on your hair. «Well opuschenka, you like a shower? Just right for a heroin whore, how are you. Keep your dose» - grinning and holding a syringe guy says, seeing your status.'
+
+	act 'Grab syringe':gt'bobka','peewhore'
+end
+
+if $ARGS[0] = 'peeswallow':
+	cla
+	cls
+	minut += 5
+	money += 100
+	water += 10
+
+	'<center><img src="images/qwest/sosed/peeswallow.jpg"></center>'
+	'Golden brackish liquid sharply hit you in the mouth, you almost choked and coughed, involuntary grimacing from a sharp odor.'
+
+	act 'Coughed':gt'bobka','peeswallow2'
+end
+
+if $ARGS[0] = 'peeswallow2':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/peeswallow2.gif"></center>'
+	'Bobok wait until you coughed again open your mouth, and then proceeded to urinate. Your mouth quickly filled with warm nasty moisture, you take a drink, suppressed a gag reflex, again and then, but the flow has not dried up. From the corner of her mouth and ran down his chin excess, «Slurp every drop, and you will not get the money, creature» sternly shouted at you dope dealer. Realizing, You do not have time to swallow, You open your mouth a little wider, making it in the manner of the urinal. In the mouth you immediately zazhurchal and even seemed to foam bubbles, you have done a few sips, and then, his head thrown back, just passed urine flows directly into the stomach, not swallowing. Your stomach filled quickly, and treacherously swollen belly.'
+
+	act 'Carefully swallow':gt'bobka','peeswallow3'
+end
+
+if $ARGS[0] = 'peeswallow3':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/peeswallow3.jpg"></center>'
+	'Finally, the flow has dried up, but then you stuck in his mouth slack dirty dick, forcing suck the last drops.'
+
+	act 'Take in the mouth':gt'bobka','peeswallow4'
+end
+
+if $ARGS[0] = 'peeswallow4':
+	cla
+	cls
+	minut += 5
+
+	'<center><img src="images/qwest/sosed/peeswallow4.jpg"></center>'
+	'You dutifully suck residues, not wincing taste. Finished brushing member, You pull his hand for a syringe, I am trying not to think about, for the sake of it, you just allowed to piss in your mouth, and even carefully all swallowed. Kaif is near. «I enjoy working urinal? Get used to it, opustehi type for you, This is a good lesson» - I laughed Bobok - «Keep your dose and as promised a hundred top».'
+
+	act 'Grab syringe':gt'bobka','peewhore'
+end
+
+if $ARGS[0] = 'peewhore':
+	cla
+	cls
+	minut += 5
+	StrongNarkota += 25
+	SNarkTimes += 1
+	NarkShmaraTimes += 1
+	gs'stat'
+
+	'<center><img src="images/qwest/sosed/peewhore.jpg"></center>'
+	'Even without having washed you eagerly grabbed the syringe and injected with foolishness it into my vein shaking hands. Man with a smile looking at you.'
+
+	act 'Escape':minut += 10 & dynamic $snkayf1
+end
+--- bobka ---------------------------------
+

@@ -1,0 +1,243 @@
+# Cafe2
+if $ARGS[0] = 'beginning':
+	cla
+	*clr
+	'<<$boybody>> <<$boybod>> <<$boyface>> introduced himself as <<$boy>>.'
+
+	deyst = RAND(1,100)
+	if deyst <= 25:
+		'<<$boy>> I invited you to dance.'
+
+		act 'Dance':gt'Cafe2','dance'
+		act 'Otshit':gt'street'
+	elseif deyst > 25 and deyst <= 50:
+		'<<$boy>> I sat down at your table and ordered a drink and snack.'
+
+		act 'Drink':gt'Cafe2','booze'
+		act 'Otshit':gt'street'
+	elseif deyst > 50 and deyst <= 75:
+		'<<$boy>> I invited you to join the party on which he walks.'
+
+		act 'Agree':gt'Cafe2','kompashka'
+		if horny < 75:
+			act 'Otshit':gt'street'
+		end
+	elseif deyst > 75:
+		'<<$boy>> I began to stick to you and try to remove. <<$boy>> I offered to go with him to the toilet.'
+
+		act 'Agree':gt'Cafe3','toilet'
+		if horny < 75:
+			act 'Otshit':gt'street'
+		end
+	end
+end
+
+if $ARGS[0] = 'dance':
+	cla
+	if dance < 50 and agil >= dance:dance += 1
+	minut += 3
+	gs'stat'
+
+	'<center><img src="images/pic/dance.jpg"></center>'
+
+	deyst = RAND(1,100)
+	if deyst <= 25:
+		'During the dance <<$boy>> confident and well-led, and you did not stick. His strong hands firmly hold your waist. Finally the song ended.'
+		act 'Finish dance':gt'Cafe2','dance2'
+	elseif deyst > 25 and deyst <= 80:
+		horny = horny + 5
+		clr
+		gs'stat'
+
+		if dick > 15 and dick < 18:
+			$didanc = 'During the dance, you feel like that-something hard between his legs pressed to your stomach.'
+		elseif dick >= 18:
+			$didanc = 'During the dance, you feel his cock resting in your belly hardens and grows, you feel that he is a big, vskidku about <<dick>> centimeters.'
+		elseif dick <= 15:
+			$didanc = ''
+		end
+
+		'During the dance <<$boy>> gently hugging you and stroking your back down to the hips. His strong hands pressed against your frail body to it, vzhimaya your soft breasts <<tits>> the size of his body. <<$didanc>> Finally, the song ends.'
+
+		act 'Finish dance':gt'Cafe2','dance2'
+	elseif deyst > 80:
+		horny = horny + 8
+		clr
+		gs'stat'
+
+		'During the dance <<$boy>> paw you for your ass, Firmly push you to your vzhimaya your tender breasts and wants her to kiss you.'
+
+		act 'Kiss':
+			cla
+			if lip = 0:$lipdance = 'thin lips'
+			if lip = 1:$lipdance = 'lips'
+			if lip = 2:$lipdance = 'plump lips'
+			if lip = 3:$lipdance = 'full lips'
+			if lip = 4:$lipdance = 'thick lips'
+
+			'<<$boy>> your kisses <<$lipdance>> pushing them and poking his wet tongue in your mouth.'
+
+			act 'Suck language':
+				cla
+				horny = horny + 8
+				if lip = 0:$lipdance = 'thin lips'
+				if lip = 1:$lipdance = 'lips'
+				if lip = 2:$lipdance = 'plump lips'
+				if lip = 3:$lipdance = 'full lips'
+				if lip = 4:$lipdance = 'thick lips'
+
+				if dick > 15 and dick < 18:
+					$didanc = 'pants he becomes firmly and <<$boy>> pressed to your stomach its embarked member.'
+				elseif dick >= 18:
+					$didanc = 'his penis resting you in the belly hardens and grows, he is big, vskidku about <<dick>> centimeters.'
+				elseif dick <= 15:
+					$didanc = 'his trousers that the increased'
+				end
+
+				'You started a passionate guy and suck tongue kiss his own <<$lipdance>>. You feel like <<$didanc>>'
+				'Finally, the song ends and you break the kiss.'
+
+				deyst = RAND(1,100)
+				if deyst <= 75:
+					'Keeping your waist and hold <<$boy>> He offers to go to his home.'
+
+					act 'Agree':gt'Cafe3','house'
+					if horny < 75:
+						act 'Otshit':gt'street'
+					end
+				elseif deyst > 75:
+					'Keeping your waist and hold <<$boy>> I suggest you go to the toilet and continue.'
+
+					act 'Agree':gt'Cafe3','toilet'
+					if horny < 75:
+						act 'Otshit':gt'street'
+					end
+				end
+			end
+			act 'Avoid kissing':
+				cla
+				horny = horny + 8
+				if lip = 0:$lipdance = 'thin lips'
+				if lip = 1:$lipdance = 'lips'
+				if lip = 2:$lipdance = 'plump lips'
+				if lip = 3:$lipdance = 'full lips'
+				if lip = 4:$lipdance = 'thick lips'
+
+				if dick > 15 and dick < 18:
+					$didanc = 'pants he becomes firmly and <<$boy>> pressed to your stomach its embarked member.'
+				elseif dick >= 18:
+					$didanc = 'his penis resting you in the belly hardens and grows, he is big, vskidku about <<dick>> centimeters.'
+				elseif dick <= 15:
+					$didanc = 'his trousers that the increased'
+				end
+
+				'You behave passively and try to clean your mouth away from the annoying guy language, but it`s not enough and it stops you feel like his hands tightly squeeze your ass, then raised his hands higher and it takes you to his chest. You feel like <<$didanc>>'
+				'Finally, the song ends and you break the embrace.'
+
+				deyst = RAND(1,100)
+				if deyst <= 75:
+					'Keeping your waist and hold <<$boy>> He offers to go to his home.'
+
+					act 'Agree':gt'Cafe3','house'
+					if horny < 75:
+						act 'Otshit':gt'street'
+					end
+				elseif deyst > 75:
+					'Keeping your waist and hold <<$boy>> I suggest you go to the toilet and continue.'
+
+					act 'Agree':gt'Cafe3','toilet'
+					if horny < 75:
+						act 'Otshit':gt'street'
+					end
+				end
+			end
+		end
+
+		if horny < 75:
+			act 'Stop and go dancing':gt'street'
+		end
+	end
+end
+
+if $ARGS[0] = 'dance2':
+	cla
+	deyst = RAND(1,70)
+	if deyst >= vnesh:
+		'The dance ended and <<$boy>> I kissed you goodbye'
+
+		act 'Say goodbye':
+			gt'kafe','start'
+		end
+	elseif deyst < vnesh:
+		'The dance ended and <<$boy>> I offered to go to him'
+
+		act 'Agree':gt'Cafe3','house'
+		if horny < 75:
+			act 'Otshit':gt'street'
+		end
+	end
+end
+
+if $ARGS[0] = 'booze':
+	cla
+	minut += 30
+	gs'stat'
+
+	'Do you drink a man and <<$boy>> He tells a lot of interesting and interested in you.'
+
+	deyst = RAND(1,100)
+	if deyst < 75:
+		'I think you`ve had enough and should go home. <<$boy>> I kissed you goodbye'
+
+		act 'Say goodbye':
+			gt'kafe','start'
+		end
+	elseif deyst >= 75 and deyst < 95:
+		'It seems you`ve had enough and should go home. <<$boy>> I offered to go to him'
+
+		act 'Agree':gt'Cafe3','house'
+		if horny < 75:
+			act 'Otshit':gt'street'
+		end
+	elseif deyst >= 95:
+		'You got drunk to pig squeal and <<$boy>> I began to stick to you. He kissed and caressed you, and then he offered to go with him to the toilet.'
+
+		act 'Agree':gt'Cafe3','toilet'
+		if horny < 75:
+			act 'Otshit':gt'street'
+		end
+	end
+end
+
+if $ARGS[0] = 'kompashka':
+	cla
+	minut += 30
+	gs'stat'
+
+	'Do you drink in a society of boys and girls. <<$boy>> obschaetsya and flirts with you.'
+
+	deyst = RAND(1,100)
+	if deyst < 60:
+		'It seems, You`ve had enough and should go home. <<$boy>> I kissed you goodbye'
+
+		act 'Say goodbye':
+			gt'kafe','start'
+		end
+	elseif deyst >= 60 and deyst < 90:
+		'It seems, You`ve had enough and should go home. <<$boy>> I offered to go to him'
+
+		act 'Agree':gt'Cafe3','house'
+		if horny < 75:
+			act 'Otshit':gt'street'
+		end
+	elseif deyst >= 90:
+		'You got drunk to pig squeal and <<$boy>> I began to stick to you. He kissed and caressed you, and then he offered to go to rest with the company.'
+
+		act 'Agree':gt'Cafe3','kompashka'
+		if horny < 75:
+			act 'Otshit':gt'street'
+		end
+	end
+end
+--- Cafe2 ---------------------------------
+

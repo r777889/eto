@@ -1,0 +1,283 @@
+# Voltrener
+$din_trener_bj = {
+	act 'Make a blowjob':
+		cls
+		bj += 1
+		if trenerSex>0:trenerSex += 1
+		if trenerSex = 0:trenerSex = 1 & guy += 1
+		if volleysostav>0:trenerepa += 2
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/ev/tren.jpg"></center>'
+		'You sit down in front of the coach and stroked his crotch and felt the, both got his dick. You reached into his sweat pants elastic holding his other hand and groped hot cock trainer. You pulled standing member of the sports pants and leaned toward him wrapped around his lips.'
+
+		if trenerSex >= 5:
+		end
+
+		if tipTrsex = 0:
+			cumlip += 1
+			swallow += 1
+			gs'stat'
+
+			'Coach slightly groaned and squirted into your mouth warm jet of sperm. You began to swallow the warm liquid fills your mouth.'
+		end
+
+		if volleysostav = 0:
+			volleysostav = 1
+			trenerepa = 20
+
+			'Coach bosses dick in his pants. "Okay Lebedev, you are very diligent girl, It may come out a lot about you, count, you`re already on the team, but certainly in the Substitutes Player."'
+		end
+
+		if tipTrsex = 0:act 'Escape':tipTrsex = 0 & gt'gdksport'
+	end
+}
+
+$din_trener_gorslut = {
+	gs'stat'
+
+	'You reluctantly nodded his head "It`s true, I really <<$gnikname>>. And what does this have to volleyball?" The coach grinned, "Indirect attitude, very indirect, we`re now discussing how did you get into the team. And I wonder, What you can do. Do you understand what I`m saying?"'
+
+	act 'No':
+		cls
+		gs'stat'
+
+		'You shook his head and said coach, you do not understand, Coach sighed "And you do not mind bleschesh, is not it? Well, I`m a lonely man, and all around a pretty young girl. So clear?"'
+
+		act 'Escape':gt'gdksport'
+
+		dynamic $din_trener_bj
+	end
+	act 'Put your hand on the knee trainer':
+		cls
+		gs'stat'
+
+		'You`re a little bent forward and put her palm on his knee trainer, You grin whispered "Need a little demonstration of my other skills? I understand you correctly?" The coach sat on a chair "And you clever girl Light, continue."'
+
+		dynamic $din_trener_bj
+	end
+}
+
+gs'stat'
+
+'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
+'You went into the room coach, in which there are cups, Balls, different sports equipment and a table behind which sometimes sits trainer and fills a variety of paper. Coach Mikhail Vlasov is engaged not only in the amateur section and also coached a professional team volleyball.'
+
+if volleysostav > 0:
+	if trenerepa < 20:'The coach does not want you any longer.'
+	if trenerepa >= 20 and trenerepa < 40:'Coach barely tolerate you.'
+	if trenerepa >= 40 and trenerepa < 60:'You have a normal relationship with the coach.'
+	if trenerepa >= 60 and trenerepa < 80:'You have a good relationship with the coach.'
+	if trenerepa >= 80:'The coach in you doted.'
+	if trenerepa <= 0:
+		volleysostav = -1
+		'Coach threatening appeals to you. "All Lebedev, You make me sick with their flourishes. I`ll exclude from the team!"'
+
+		act 'Escape':gt'gdksport'
+
+		exit
+	end
+end
+
+if lariskaTrenerTalk > 0:
+	'"A, Lebedev and Gruzdev, chevo wanted?"'
+	if lariskaTrenerTalk = 1:
+		'You and Lariska tried to persuade the coach to take Lariska, but he threw all of your arguments to deny you.'
+	elseif lariskaTrenerTalk = 2:
+		if dom >= 10:
+			'You managed to convince the coach to take a team Lariska.'
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take Lariska, but he refused to you.'
+		end
+	elseif lariskaTrenerTalk = 3:
+		if dom >= 20:
+			'You managed to convince the coach to take you both to the team.'
+			volleysostav = 1
+			trenerepa = 30
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take you both to the team, but he threw all of your arguments to deny you.'
+		end
+	elseif lariskaTrenerTalk = 4:
+		if trenerepa >= 60:
+			'You managed to convince the coach to take a team Lariska.'
+			LariskaProfi = 1
+		else
+			'You and Lariska tried to persuade the coach to take Lariska, but he refused to you.'
+		end
+	end
+	if LariskaProfi = 1:
+		$npcText[13] = 'Lariska athletic girl, but it is very dependent on other people`s opinions. Larissa has changed a lot, Her sparkle in the eyes, and almost always in a good mood.  After joining the team quickly went into the main part and is now one of the best players'
+		'When you come out of the coach Lariska hugged you and said,: "Thank you, Light!"'
+		grupNPC[13] += 20
+	end
+	minut += 10
+	gs'stat'
+
+	lariskaTrenerTalk = 0
+	act 'Escape':gt'gdksport'
+	exit
+end
+
+act 'Talk with the coach':
+	cls
+	gs'stat'
+	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
+	if volleysostav = -1:
+		if trenerSex = 0:
+			'The coach looked at you "Lebedev. Do not even come near me. I`m not including you in command!"'
+		elseif trenerSex > 0:
+			'The coach looked at you "Lebedev. Do not even come near me. I`m not including you in command!"'
+		end
+	elseif volleysostav = 0:
+		if volleyboll < 25:
+			'The coach looked at you "But Lebedev. Do not distract me from the Minister."'
+		elseif volleyboll >= 25 and volleyboll < 50:
+			'The coach looked at you "But Lebedev. You need to devote more time to training, you are all very bad."'
+		elseif volleyboll >= 50 and volleyboll < 75:
+			'The coach looked at you "But Lebedev. You`re certainly not a bad game, but not bad for an amateur. The higher level you are not potyanesh."'
+		elseif volleyboll >= 75:
+			'The coach looked at you "But Lebedev. Do you have the makings of athletes, although I`m not sure, that at the professional level, you get that either."'
+
+			act 'Asks in the pros':
+				cls
+				gs'stat'
+
+				!if GorSlut = 0:
+					if volleyboll < 100:
+						'You started to ask the trainer to include you in command, but he shook his head. "Lebedev, Do not bury, you have a good amateur level. But you do not potyanesh."'
+					elseif volleyboll >= 100:
+						'You started to ask the trainer to include you in command, Coach thought. "Of course you can try to enable you to spare, but I do not know, whether."'
+
+						act 'Convince':
+							cls
+							dom -= 1
+							gs'stat'
+
+							if dom >= 10:
+								!if volleysostav > 0:trenerepa -= 1
+								volleysostav = 1
+								trenerepa = 20
+
+								'You started to prove coach, that you want to include in team, coach tried to argue, but your head was so convincing, that in the end he gave up. "Okay Lebedev, I`ll put you in command, It is naturally only in replacement players."'
+							else
+								'You started to prove coach, that you want to include in team, but failed to show enough aggressiveness and the coach threw all your arguments to deny you.'
+							end
+
+							act 'Escape':gt'gdksport'
+						end
+					end
+				!"elseif GorSlut > 0:
+					'You started to ask the coach to include you in the. Coach thought "Listen Lebedev, then the other girls about you say different things. For example you <<$gnikname>>. It`s true?"'
+
+					act 'It`s all lies':
+						cls
+						gs'stat'
+
+						if dom > 0:
+							'You started to prove coach, that the rumors about you, it`s all lies and dismiss envious. You said quite clearly and it seems the coach believed.'
+
+							act 'Make sure to include the team':
+								cls
+								dom -= 1
+								gs'stat'
+
+								if dom >= 10:
+									!if volleysostav > 0:trenerepa -= 1
+									volleysostav = 1
+									trenerepa = 20
+									'You started to prove coach, that you want to include in team, coach tried to argue, but your head was so convincing, that in the end he gave up. "Okay Lebedev, I`ll put you in command, It is naturally only in replacement players."'
+								else
+									'You started to prove coach, that you want to include in team, but failed to show enough aggressiveness and the coach threw all your arguments to deny you.'
+								end
+
+								act 'Escape':gt'gdksport'
+							end
+						else
+							'You started to prove coach, that the rumors about you, it`s all lies and dismiss envious. You said not very convincing and coach you frankly do not believe. "Lebedev, Stop lying! You hold me for a fool?"'
+
+							act 'Okay, it`s true, I <<$gnikname>>':
+								cls
+								gs'stat'
+								dynamic $din_trener_gorslut
+							end
+						end
+
+						act 'Escape':gt'gdksport'
+					end
+					act 'It`s true, I <<$gnikname>>':
+						cls
+						gs'stat'
+
+						dynamic $din_trener_gorslut
+					end"
+				!end
+
+				act 'Escape':gt'gdksport'
+			end
+		end
+	elseif volleysostav > 0:
+		if trenerSex > 0:
+			'The coach looked at you "But Lebedev. Well done for coming."'
+
+			act 'Put your hand on the knee trainer':
+				cls
+				gs'stat'
+
+				'You`re a little bent forward and put her palm on his knee trainer, You grin whispered "Need a little demonstration of my skills? I understand you correctly?" The coach sat on a chair "And you clever girl Light, continue."'
+
+				dynamic $din_trener_bj
+			end
+		end
+		if trenerSex > 0:
+			'"Your skills of volleyball <<volleyboll>> , A team statistics: Number of games <<volsesongame>>, Win - <<volsesonwin>>, defeats - <<volsesonloss>>, draws - <<volsesondraw>>."'
+		else
+			'The coach looked at you "But Lebedev. Your volleyball skills  <<volleyboll>> , And team stats: Number of games <<volsesongame>>, Win - <<volsesonwin>>, defeats - <<volsesonloss>>, draws - <<volsesondraw>>."'
+			 if volleysostav=1 and trenerepa>=50:
+			     act'Please include you in the first team':
+			     cls
+			     volleysostav=2
+			     gs'stat'
+			     'You begged the coach to include you in the basic structure and some thought he decided to give you a chance and turned you into the main part.'
+			     act 'Escape':gt'gdksport'
+			     end
+			 end
+		end
+		n=20-volsesongame
+		if n=1:
+			$okonc='at'
+		elseif n=>2 and n<=4:
+			$okonc='s'
+		else 
+			$okonc=''
+		end
+		'To travel to the district Youth Cup we need:'
+		r=volsesonloss-volsesonwin
+		if r=1:
+			$okonc1='at'
+		elseif r=>2 and r<=4:
+			$okonc1='s'
+		else 
+			$okonc1=''
+		end
+		if volsesongame<20:
+			'Eshte play a minimum of <<n>> games<<$okonc>>, Win and statistics should be higher than the statistics of defeats'
+		elseif volsesongame=>20 and volsesonwin=>volsesonloss:
+			'Play in the same vein, do not relax, we have good statistics, You have fulfilled the conditions but we need to improve teamwork team, that the competition does not look like boots.'
+		elseif volsesongame=>20 and volsesonwin<volsesonloss:	
+			'Defeat more <<r>> wins<<$okonc1>>, and yet manages not to lose so we need to get together and make every effort.'
+		end	
+		i=rand(0,3)
+		if i=0:
+			trenerskaia=1
+			dynamic  $din_trener_Speak
+		end
+	end
+
+	act 'Escape':gt'gdksport'
+end
+
+act 'Escape':gt'gdksport'
+--- Voltrener ---------------------------------
+

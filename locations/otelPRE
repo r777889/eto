@@ -1,0 +1,156 @@
+# otelPRE
+minut = minut + 30
+clr
+gs'statPRE'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+money = money - 3000
+
+'<center><img src="images/picPRE/otelPRE.jpg"></center>'
+'You uneventful found sparkling lights and the hotel put the car went to the bar, to get a room.'
+'Available rooms in the hotel were only two people, you paid guestroom, what would you have settled inadvertently nobody.'
+
+act 'Climb in the Room':
+	cla
+	*clr
+	minut = minut + 5
+	clr
+	gs'statPRE'
+
+	'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
+	'You lay down on the bed. And they ponder, over occurred. And what a mysterious amulet you found there. After him, you feel just great.'
+
+	act 'Call Director':
+		cla
+		*clr
+		minut = minut + 30
+		clr
+		gs'statPRE'
+
+		'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
+		'You dialed the number of Roman Vsevolodovich and after a few rings he responded. You told, that the excavation under some sort of ancient tomb, bones, what-the vessels, Scrolls. Director pokumekat little while and decided to stop construction. He instructed you to remain, watch and wait for further instructions.'
+
+		act 'Go to bed':
+			cla
+			*clr
+			minut = minut + 600
+			clr
+			gs'statPRE'
+
+			'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
+			'You lay down on the bed and fell asleep. In the dream you saw as an amulet of some sort of a shadowy force comes into you and gives, what is unimaginable. Have you seen the moon my bloody eyes looking at the world, and people see the world not as what it is. Suddenly, in the dream, you feel, in the room someone has.'
+
+			act 'Open your eyes':
+				cla
+				*clr
+				minut = minut + 5
+				clr
+				gs'statPRE'
+
+				'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+				'Opening his eyes, you saw a black figure beside him. A man in a long black cloak with an orange mask on the face in which there was only one hole for the eyes. A man came up to you and asked, "Where statue?"'
+
+				act 'Who are you?':
+					cla
+					*clr
+					minut = minut + 5
+					clr
+					gs'statPRE'
+
+					'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+					'"Who are you?" We asked you wondering. "Listen, muzhik, do not look for yourself the problems out of the blue, Give the statue and close construction. This place belongs to us." said an unknown firm voice.'
+					'You are thinking, Who is it, and what it all means. "I can see without a little show of force, we do not reach an agreement." the man said, and at that moment you feel so, as if the stranger saw you through and felt a strong desire to give him a statue.'
+
+					act 'Give him a statue':
+						cla
+						*clr
+						minut = minut + 5
+						clr
+						gs'statPRE'
+
+						'<center><img src="images/picPRE/otelPRE1.jpg"></center>'
+						'You got out of bed and gave him a statue. The man picked it up, and then turned it around his eyes like a whirlwind formed tightening it in your eyes the same, in funnel. For a few seconds and the man disappeared. You rubbed their eyes, "what the hell is going on here. Me, This dream. Well no, I do not like a lunatic, that would walk around the room in a dream, and the statue disappeared." You speculated.'
+						'At this point, knock on the door. You came to the door and asked who was there. A woman`s voice from behind the door you said that she was the administrator of the hotel and wants to talk to you on an urgent matter.'
+
+						act 'Open the door':
+							cla
+							*clr
+							minut = minut + 5
+							clr
+							gs'statPRE'
+
+							'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+							'You opened the door and entered the room confident step is not a big girl with red hair and glasses. She walked into the room quickly examined the situation and finally fixed his eyes on you.'
+							'"Michael? I believe correctly?", You nod. "Last night, you find a place and took out something very valuable and powerful." she said stroking your eyes.'
+
+							act 'Listen, Comrade came here already in this regard':
+								cla
+								*clr
+								minut = minut + 5
+								clr
+								gs'statPRE'
+
+								'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+								'You embraced slight irritation, these idiots that can not even agree among themselves who come and take the statue? Therefore, you blurted out the girl "Listen, You have already started to bother me. That one comes with that damn statue, else, administrator, how."'
+								'The girl looked at you with surprise. How? Before I already came to someone? Who was it?'
+
+								act 'Share':
+									cla
+									*clr
+									minut = minut + 5
+									clr
+									gs'statPRE'
+
+									'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+									'"What a man in a black cloak with red clouds and orange mask with one hole to the eye. He`s already picked up a statue." Answer You.'
+									'The girl`s face lengthened. "Curse. Ahead. Okay Michael, we will continue the conversation in a different place. Juugo, vyazhi it." said the girl at the door.'
+									'The tall man entered the room.'
+
+									act 'Prepare to fight':
+										cla
+										*clr
+										minut = minut + 5
+										clr
+										gs'statPRE'
+
+										'<center><img src="images/picPRE/jugoPRE.jpg"></center>'
+										'The man across the right side of his face was visible tattoo. Red hair stood up on end.'
+
+										$nameV = 'Juugo'
+										!The stats
+										strenV = 600
+										speedV = 60
+										agilV = 60
+										reactV = 50
+										vitalV = 200
+										intelV = 50
+										willV = 50
+										!Skills
+										magikV = 100
+										boxingV = 100
+										shootV = 100
+										!Parameters
+										healthV = vitalV*10 + strenV*5
+										mannaV = intelV*10 + magikV*10
+										willpowerV = willV*10
+										BonusAtakV = 0
+										BonusDefV = 0
+										!Action Programme
+										program = 0
+										jugoFight = 1
+
+										act 'Fight':gt'fight','start'
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- otelPRE ---------------------------------
+

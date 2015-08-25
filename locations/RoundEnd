@@ -1,0 +1,52 @@
+# RoundEnd
+round += 1
+rMin = 8
+stoper = 0
+
+if round = Formula+1:
+	'The bout ended with a competitor and you call for verdict'
+
+	if point > pointE:
+		!win[1] += 1
+		!loss[i] += 1
+		resultFight = 1
+
+		'The referee raises your hand as a sign of your victory.'
+	elseif point < pointE:
+		!win[i] += 1
+		!loss[1] += 1
+		resultFight = 3
+
+		'The referee raises his hand in a sign of its rival wins.'
+	elseif point = pointE:
+		!draw[1] += 1
+		!draw[i] += 1
+		resultFight = 2
+
+		'The referee raises your hand and arm rival announcing a draw.'
+	end
+
+	act '...':gt'EndFight'
+elseif round < Formula+1:
+	endur += lustw*25/100
+	endurE += lustwe*25/100
+
+	if crouch = 1 and croonce = 0:crouch = 0 & croonce = 1
+	if crouch = 0 and croonce = 0:crouch = 1 & croonce = 1
+
+	croonce = 0
+
+	'<center><b>The break between rounds</b></center>'
+
+	if crouch = 1:$text = 'Stand your opponent on all fours, and you catch him from behind.'
+	if crouch = 0:$text = 'Stand on your knees, and your opponent catch him from behind.'
+
+	'You rest for a while and you hear a whistle the referee announces the beginning of the next round.'
+	'The referee ordered <<$text>>'
+
+	act 'Run indication referee':
+		gt'FightCrouch'
+	end
+end
+--- RoundEnd ---------------------------------
+

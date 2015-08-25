@@ -1,0 +1,51 @@
+# gtelefon
+boyinday[numnpcboy] = day
+Gcall = 0
+minut += 3
+gs'stat'
+
+'You take the phone "Hello."'
+
+if boyvstre[numnpcboy] > 0:
+	'Male voice on the phone says, "Hello I Svetsik, <<$nameBoyfrend[numnpcboy]>>, let`s go for a walk to somewhere."'
+elseif boyvstre[numnpcboy] = 0:
+	'The tube male voice says "Hello. Can Light?"'
+	'You are responsible interlocutor, that you are the Light. The man was delighted "I <<$nameBoyfrend[numnpcboy]>>, you and I met in a disco. Remember? Let`s go for a walk."'
+end
+
+act 'I`m busy today':
+	cls
+	minut += 3
+	if boyvstre[numnpcboy] = 0:otnBoyFrend[numnpcboy] -= 10
+	if boyvstre[numnpcboy] > 0:otnBoyFrend[numnpcboy] -= 5
+	gs'stat'
+
+	''
+
+	if otnBoyFrend[numnpcboy] > 20:
+		!otnBoyFrend[numnpcboy] = 0
+		'<<$nameBoyfrend[numnpcboy]>> upset. "Well, then how else the next time."'
+	elseif otnBoyFrend[numnpcboy] <= 20:
+		otnBoyFrend[numnpcboy] = 0
+		'<<$nameBoyfrend[numnpcboy]>> angry. "And then you went on dick." And she hung up.'
+	end
+
+	act 'Hang up':gt'korrPar'
+end
+
+if GvstreBoy = 0:
+	act 'Let`s meet in the park':
+		cls
+		minut += 3
+		GvstreBoy = 1
+		GvstreBoyAfter[numnpcboy] = 1
+		SkverBoy = numnpcboy
+		gs'stat'
+
+		'You are invited to meet in the park.'
+
+		act 'Hang up':gt'korrPar'
+	end
+end
+--- gtelefon ---------------------------------
+

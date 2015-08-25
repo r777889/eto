@@ -1,0 +1,431 @@
+# frot
+if $ARGS[0] = 'a':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/picV/frot.jpg"></center>'
+	'Did you feel that you rests what is hard in the ass, Stir you understand, that rests between the buttocks to you gets up member.'
+
+	act 'Go somewhere else':gt'frot','fin'
+	act 'Disregard':
+		cla
+		*clr
+		horny = horny + 10
+		clr
+		gs'stat'
+
+		'<center><img src="images/picV/frot1.jpg"></center>'
+		'The guy standing behind casually touches your priests his hand and pressed his cock harder you to the pope.'
+
+		act 'Go somewhere else':gt'frot','fin'
+		act 'Disregard':
+			cla
+			*clr
+			horny = horny + 10
+			clr
+			gs'stat'
+
+			'<center><img src="images/picV/frot2.jpg"></center>'
+			'Did you feel like a man behind you took and became a member of rubbing them on your ass clinging to you and squeezing your buttocks with his hands.'
+
+			act 'Go somewhere else':gt'frot','fin'
+			act 'Disregard':
+				cla
+				*clr
+				horny = horny + 10
+				frot = frot + 1
+				cumfrot = cumfrot + 1
+				SUB = SUB + 5
+				gs'starenie'
+				clr
+				gs'stat'
+
+				'<center><img src="images/picV/frot3.jpg"></center>'
+				'The man jerked back and you feel like something warm and viscous flowed for you. The guy you left off on your ass, then he moved on to another place.'
+
+				act 'Get out of the car':gt'frot','fin2'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'b':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/picV/frot.jpg"></center>'
+	'Did you feel that you rests what is hard in the ass, Stir you understand, that rests between the buttocks to you gets up member.'
+
+	act 'Go somewhere else':gt'frot','fin'
+	act 'Disregard':
+		cla
+		*clr
+		horny = horny + 10
+		clr
+		gs'stat'
+
+		'<center><img src="images/picV/frot1.jpg"></center>'
+		'The guy standing behind your buttocks squeezes his hands and pressed his cock harder you to the pope.'
+
+		act 'Go somewhere else':gt'frot','fin'
+		act 'Disregard':
+			cla
+			*clr
+			horny = horny + 10
+			clr
+			gs'stat'
+
+			'<center><img src="images/picV/frotA1.jpg"></center>'
+			'The man pulled your skirt and began to fondle your naked buttocks with his strong hands.'
+
+			act 'Disregard':
+				cla
+				*clr
+				horny = horny + 10
+				clr
+				gs'stat'
+
+				'<center><img src="images/picV/frotA2.jpg"></center>'
+				'The man lowered your panties and between your naked buttocks stuck his hand, which I began to caress your wet pussy.'
+
+				act 'Disregard':
+					cla
+					*clr
+					horny = horny + 10
+					clr
+					gs'stat'
+					horny = horny + 10
+					frot = frot + 1
+					cumfrot = cumfrot + 1
+					SUB = SUB + 1
+					gs'starenie'
+					clr
+					gs'stat'
+
+					'<center><img src="images/picV/frot3.jpg"></center>'
+					'The man went down the lower your skirt at your panties fell in your lap, and he took my hand your hand. He forced you to take your cock your hand. You wrapped around hot and hard cock and began to masturbate him. When you feel like a man kills you on the skirt.'
+
+					act 'Get out of the car':gt'frot','fin2'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'c':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/picV/frotP.jpg"></center>'
+	'Did you feel like a man standing behind you began to thrust his hand into the pants you.'
+
+	act 'Go somewhere else':gt'frot','fin'
+	act 'Disregard':
+		cla
+		*clr
+		horny = horny + 10
+		clr
+		gs'stat'
+
+		'<center><img src="images/picV/frotP1.jpg"></center>'
+		'You will become a pleasure of caressing the stranger under your ass pants, Suddenly you see how he pulled out a small pair of scissors to cut the ribbon you want a bra.'
+
+		act 'Go somewhere else':gt'frot','fin'
+		act 'Disregard':
+			cla
+			*clr
+			horny = horny + 10
+			clrbelo = clrbelo - 1
+			SUB = SUB + 1
+			clr
+			gs'stat'
+
+			'<center><img src="images/picV/frotP2.jpg"></center>'
+			'The man cut the ribbon to your bra and removed it from you. Freeing you from the bra, he began to fondle your breasts'
+
+			act 'Enjoy':
+				cla
+				*clr
+				horny = horny + 10
+				clr
+				gs'stat'
+
+				'<center><img src="images/picV/frotP3.jpg"></center>'
+				'The man bent forward and you began to fondle your ass, you feel that his hands clutching into your pants trying to break them.'
+
+				act 'Go somewhere else':gt'frot','fin'
+				act 'Let him':
+					cla
+					*clr
+					SUB = SUB + 1
+					horny = horny + 10
+					clr
+					gs'stat'
+					horny = horny + 10
+					!frot = frot + 1
+					cumfrot = cumfrot + 1
+					SUB = SUB + 5
+					gs'starenie'
+					gs'starenie'
+					gs'starenie'
+					gs'starenie'
+					gs'starenie'
+					clr
+					gs'stat'
+
+					'<center><img src="images/picV/frotP4.jpg"></center>'
+					'The man tore your pants you between the legs, thereby exposing your wet pussy.'
+
+					act 'Let him':
+						cla
+						*clr
+						SUB = SUB + 1
+						horny = horny + 10
+						guy = guy + 1
+						sex = sex + 1
+						vagina = vagina + 1
+						clr
+						gs'stat'
+
+						'<center><img src="images/picV/frotP5.jpg"></center>'
+						'He turned you face him and cocked up your leg came into your sweaty pussy with his hard cock.'
+
+						if horny >= 100:
+							horny = 0
+							manna = manna + 15
+							willpower = willpower + 15
+							orgasm = orgasm + 1
+							'You started to cum almost immediately he came in you.'
+						elseif horny < 100:
+							'You cover wild excitement of sex with a stranger in a public place.'
+						end
+
+						act 'Further':
+							cla
+							*clr
+							horny = horny + 10
+							frot = frot + 1
+							cumfrot = cumfrot + 1
+							frot = frot + 1
+							cumpussy += 1
+							gs'preg'
+							SUB = SUB + 1
+							gs'stat'
+
+							'<center><img src="images/picV/frotP6.jpg"></center>'
+							'Stranger, not pulling out your juices flowing pussy dick, Short straight in. You feel like you are hitting the jet of sperm into the uterus.'
+
+							act 'Get out of the car':gt'frot','fin2'
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'd':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/picV/frotP.jpg"></center>'
+	'Did you feel like a man standing behind you began to thrust his hand into the pants you.'
+
+	act 'Go somewhere else':gt'frot','fin'
+	act 'Disregard':
+		cla
+		*clr
+		horny = horny + 10
+		clr
+		gs'stat'
+
+		'<center><img src="images/picV/frotD.jpg"></center>'
+		'The man pulled the pants off you leaving you with a bare ass in a crowded subway car, he took your hand and led you to take his penis with his hand.'
+
+		act 'Go somewhere else':gt'frot','fin'
+		act 'Jerk off his penis':
+			cla
+			*clr
+			horny = horny + 10
+			hj = hj + 1
+			cumass = cumass + 1
+			SUB = SUB + 1
+			frot = frot + 1
+			clr
+			gs'stat'
+
+			'<center><img src="images/picV/frotD1.jpg"></center>'
+			'You fingers caress his cock and rub it on your bare skin, Member tense and out of your bare ass began splashing sperm. After the man was satisfied, you pulled the pants right on drained from your priests sperm.'
+
+			act 'Get out of the car':gt'frot','fin2'
+		end
+	end
+end
+
+if $ARGS[0] = 'e':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/picV/frotP.jpg"></center>'
+	'Did you feel like a man standing behind you began to thrust his hand into the pants you.'
+
+	act 'Go somewhere else':gt'frot','fin'
+	act 'Disregard':
+		cla
+		*clr
+		horny = horny + 60
+		clr
+		gs'stat'
+
+		'<center><img src="images/picV/frotE.jpg"></center>'
+		'The man pulled the pants off you leaving you with a bare ass in a crowded subway car, you feel his hand gets you between the legs and begins to masturbate your pussy.'
+
+		!act 'Go somewhere else':gt'frot','fin'
+		if horny >= 90:
+			horny = 0
+			manna = manna + 15
+			willpower = willpower + 15
+			orgasm = orgasm + 1
+
+			'You can no longer tolerate you and covers a powerful orgasm. Your legs give way.'
+
+			act 'To squat':
+				cla
+				*clr
+				horny = horny + 10
+				SUB = SUB + 1
+				clr
+				gs'stat'
+
+				'<center><img src="images/picV/frotE1.jpg"></center>'
+				'You could no longer stand and sat down on his haunches. The man pulled out a member who was standing right in front of your face and taking you behind the head to direct your face has become a member.'
+
+				act 'Take in the mouth':
+					cla
+					*clr
+					horny = horny + 10
+					bj = bj + 1
+					guy = guy + 1
+					!cumface = cumface + 1
+					SUB = SUB + 1
+					frot = frot + 1
+					clr
+					gs'stat'
+
+					'<center><img src="images/picV/frotE2.jpg"></center>'
+					'The man held his cock your lips several times then sent a purple head between your lips, you obediently opened his mouth and took it hard cock. You sit on his haunches in the middle of a crowded subway car and sucked dick from a stranger.'
+
+					act 'Continue to suck':
+						cla
+						*clr
+						horny = horny + 10
+						!bj = bj + 1
+						!guy = guy + 1
+						cumface = cumface + 1
+						facial = facial + 1
+						SUB = SUB + 1
+						!frot = frot + 1
+						clr
+						gs'stat'
+
+						'<center><img src="images/picV/frotE3.jpg"></center>'
+						'The man pulls his penis out of your mouth and ends at your lips, hot cum dripping on your lips on the chin.'
+
+						act 'Sit on the floor':
+							cla
+							*clr
+							horny = horny + 10 + SUB + VAF
+							cumlip = cumlip + 1
+							swallow = swallow + 1
+							SUB = SUB + 5
+							gs'stat'
+
+							'<center><img src="images/picV/frotE4.jpg"></center>'
+							'Man fingers collects sperm from your face and shoves them into your mouth, and you dutifully licks them with sperm and swallow.'
+
+							act 'Get out of the car':gt'frot','fin2'
+						end
+					end
+				end
+			end
+			exit
+		elseif horny < 90:
+			'You are very excited and you thought comes to mind masturbate his penis.'
+
+			act 'Jerk off his penis':
+				cla
+				*clr
+				horny = horny + 10
+				hj = hj + 1
+				cumass = cumass + 1
+				SUB = SUB + 1
+				frot = frot + 1
+				clr
+				gs'stat'
+
+				'<center><img src="images/picV/frotD1.jpg"></center>'
+				'You fingers caress his cock and rub it on your bare skin, Member tense and out of your bare ass began splashing sperm. After the man was satisfied, you pulled the pants right on drained from your priests sperm.'
+
+				act 'Get out of the car':gt'frot','fin2'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'd1':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/picV/frotD2.jpg"></center>'
+	'Did you feel like a man standing behind you to lift up your skirt became.'
+
+	act 'Go somewhere else':gt'frot','fin'
+	act 'Disregard':
+		cla
+		*clr
+		horny = horny + 10
+		clr
+		gs'stat'
+
+		'<center><img src="images/picV/frotD.jpg"></center>'
+		'The man pulled the pants off you leaving you with a bare ass in a crowded subway car, he took your hand and led you to take his penis with his hand.'
+
+		act 'Go somewhere else':gt'frot','fin'
+		act 'Jerk off his penis':
+			cla
+			*clr
+			horny = horny + 10
+			hj = hj + 1
+			cumass = cumass + 1
+			SUB = SUB + 1
+			frot = frot + 1
+			clr
+			gs'stat'
+
+			'<center><img src="images/picV/frotD1.jpg"></center>'
+			'You fingers caress his cock and rub it on your bare skin, Member tense and out of your bare ass began splashing sperm. After the man was satisfied, you pulled the pants right on drained from your priests sperm.'
+
+			act 'Get out of the car':gt'frot','fin2'
+		end
+	end
+end
+
+if $ARGS[0] = 'fin':
+	cla
+	'<center><img src="images/pic/vagonFull.jpg"></center>'
+	'You barely squeezed in another place, away from horny jerk. After a while you come to your station'
+
+	act 'Get out of the car':gt'metro','start'
+end
+
+if $ARGS[0] = 'fin2':
+	gt'metro','start'
+end
+--- frot ---------------------------------
+

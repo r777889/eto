@@ -1,0 +1,122 @@
+# bouling
+$sexloc = $CURLOC
+
+gs'stat'
+
+'<center><b>Bowling</b></center>'
+'<center><img src="images/img/centr/boul.jpg"></center>'
+
+act 'Escape':gt'torgcentr'
+
+if hour >= 8 and hour <= 20:
+	act 'Play 300 rubles per hour':
+		if money < 300:
+			'You have no money'
+		elseif money >= 300:
+			money -= 300
+			minut += 60
+			boulvar = 0
+			boulingnav += RAND(0,3)
+
+			boulrand = RAND(0,9)
+			if boulrand = 0:
+				cla
+				'To suit you two guys and offer to play with them'
+
+				act 'Play for Money, rate 2000':boulvar = 1 & gt'bouling','randwin'
+				act 'Escape':gt'torgcentr'
+			elseif boulrand = 1:
+				cla
+				'To you approach two women and offer them to play against two guys, prize 5000, at a loss of sex.'
+
+				act 'Play':boulvar = 2 & gt'bouling','randwin'
+				act 'Escape':gt'torgcentr'
+			elseif boulrand > 1:
+				cla
+				'You play billiards'
+
+				act 'Escape':gt'torgcentr'
+			end
+		end
+	end
+
+	if money >= 300:
+		act 'Play for Money':
+			money -= 300
+			minut += 60
+			boulvar = 0
+			gt'bouling','randwin'
+		end
+	end
+end
+
+if $ARGS[0] = 'randwin':
+	cla
+	if boulingnav < 10:boulwin = RAND(0,10)
+	if boulingnav >= 10 and boulingnav < 20:boulwin = RAND(0,12)
+	if boulingnav >= 20 and boulingnav < 30:boulwin = RAND(0,14)
+	if boulingnav >= 30 and boulingnav < 40:boulwin = RAND(0,16)
+	if boulingnav >= 40 and boulingnav < 50:boulwin = RAND(0,18)
+	if boulingnav >= 50 and boulingnav < 60:boulwin = RAND(0,20)
+	if boulingnav >= 60 and boulingnav < 70:boulwin = RAND(0,22)
+	if boulingnav >= 70 and boulingnav < 80:boulwin = RAND(0,24)
+	if boulingnav >= 80 and boulingnav < 90:boulwin = RAND(0,26)
+	if boulingnav >= 90:boulwin = RAND(0,28)
+
+	if boulwin > 10 and boulvar = 0:
+		money += 300
+
+		'You won and got 300 RUB.'
+
+		act 'Escape':gt'torgcentr'
+	elseif boulwin > 10 and boulvar = 1:
+		money += 2000
+
+		'You won and got 2000 RUB.'
+
+		act 'Escape':gt'torgcentr'
+	elseif boulwin > 10 and boulvar = 2:
+		money += 5000
+
+		'You won and got 5000 RUB.'
+
+		act 'Escape':gt'torgcentr'
+	elseif boulwin <= 10 and boulvar = 0:
+		money -= 300
+
+		'You lose and pay 300 RUB.'
+
+		act 'Escape':gt'torgcentr'
+	elseif boulwin <= 10 and boulvar = 1:
+		picrand = 14
+
+		if money >= 2000:
+			'You lose and have to pay 2000 RUB.'
+
+			act 'Suggest kind':xgt'sexdvoe','var'
+			act 'Pay':
+				money -= 2000
+				gt'torgcentr'
+			end
+		elseif money < 2000:
+			'You lost, but you do not have the money to pay off, payment method, only one.'
+
+			act 'In kind':xgt'sexdvoe','var'
+		end
+	elseif boulwin <= 10 and boulvar = 2:
+		picrand = 11
+
+		'You lost, will have to push the legs.'
+
+		act 'Pay':gt'sexorg','var'
+	end
+end
+
+if $ARGS[0] = 'start':
+	'<center><b>Bowling</b></center>'
+	'<center><img src="images/img/centr/boul.jpg"></center>'
+
+	act 'Escape':gt'bouling'
+end
+--- bouling ---------------------------------
+

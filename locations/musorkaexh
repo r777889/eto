@@ -1,0 +1,249 @@
+# musorkaexh
+if $ARGS[0] = 'pos2':
+	cla
+	*clr
+	bumtolik = 1
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/bum.jpg"></center>'
+	'You see the kind of hangover homeless. You looked at him angry look and turned away.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'pos3':
+	cla
+	*clr
+	bumtolik = 2
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/bum.jpg"></center>'
+	'You see the kind of hangover homeless.'
+	'Homeless: - It`s you, young lady, Fear not the old man! - with a predatory smile, said homeless.'
+
+	act 'Ask what he needs':gt'musorkaexh','pos4'
+	act 'Escape':gt'dis21'
+end
+
+if $ARGS[0] = 'pos4':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><img src="images/etogame/bum.jpg"></center>'
+	'You see the kind of hangover homeless.'
+	'You: - What do you want from me?'
+	'Homeless: - Ah, good lady. Total anything, you know, there such a thing, today is holiday, I broke...'
+	'You: - In short, if I give money, you get behind me?'
+	'Homeless: - Yes,yes. Money.'
+
+	act 'Give him a trifle (20 rubles)':gt'musorkaexh','pos5'
+	act 'Give him 100 rubles':gt'musorkaexh','pos6'
+	act 'Escape':gt'trashplace'
+end
+
+if $ARGS[0] = 'pos5':
+	cla
+	*clr
+	minut += 5
+	bumtolik = 2
+	money -= 20
+	gs'stat'
+
+	'<center><img src="images/etogame/bum.jpg"></center>'
+	'You see the kind of hangover homeless.'
+	'Homeless: - Oh, young lady, this is so touching. I never helped anybody. I`m so unhappy. My whole life has just beaten. Can I, in appreciation, I kiss your hand? Allow, old man, the last time in my life?'
+	'(He looks at you with her tearful eyes)'
+
+	act 'Allow and lend a hand for a kiss':gt'musorkaexh','pos7'
+	act 'Of course, no! Phew, nasty old man!':gt'street'
+end
+
+if $ARGS[0] = 'pos6':
+	cla
+	*clr
+	minut += 5
+	bumtolik = 2
+	money -= 100
+	gs'stat'
+
+	'<center><img src="images/etogame/bum.jpg"></center>'
+	'You see the kind of hangover homeless.'
+	'Homeless: - Wow, so much. Have napit... uh, ie to buy gifts for the grandchildren, cough-cough.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'pos7':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/etogame/bum_kiss.jpg"></center>'
+	'You see the kind of hangover homeless.'
+	'Homeless, carefully, disbelief, It stretches moist lips to your snow-white arm and kisses her. It is all thrills and closes his eyes in pleasure. But when opened, you notice the bad lights in his eyes...'
+
+	act 'Further':
+		cls
+		gs'stat'
+
+		'<center><img src="images/etogame/bum_gra.jpg"></center>'
+		'Suddenly, pulling your hand to yourself, He grabs your buttocks and starts, straight through clothes, furiously kiss and sniff you between the legs.'
+		'Homeless: - Argh, what a beauty!'
+		
+		act 'Freak Nasty!(Post a slap in the face)':gt'street'
+	end
+end
+
+if $ARGS[0] = 'pos8':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/etogame/bum.jpg"></center>'
+	'You see the kind of hangover homeless.'
+	'Homeless: - Understand, cares. How would you say. I gathered some money, and spend them to me except on the booze, yes no place for grub. I`ve been watching you, you`re a girl business. Besides beautiful, already taking heat!'
+	'But I`m a man, though not young, but the beauty of a woman as a pleasure appreciate.'
+	'You: - You allude to that?!'
+	'Homeless: - Do not think of anything, I just wanted to offer money in exchange for beauty. You tell me that-any show, I only look. Yes, more money and give, All that for a week scraped. As many as 300 rubles!'
+
+	act 'Agree':
+		cls
+		bomjqw=1
+		money += 100
+		bumtolik = 3
+		bomjshet = bomjshet + 1
+		if exhibi = 2:exhibi = 3
+		gs'stat'
+
+		'<center><img src="images/etogame/bumt1.jpg"></center>'
+		'Looking around and making sure, that there is no one near you show tramp breasts and panties. Homeless man looks at you with round eyes and violently pulls his dick. You get scared, suddenly someone-would come to throw out the trash.'
+		'Homeless: - Argh, wait let me finish!'
+		'Finally starting to bum out loud sniff and collapses on the cartons.'
+		'You: - Money, give money! - with this cry, you have homeless grabs all his money and carried away laughing.'
+
+		act 'Escape':gt'street'
+	end
+	act 'Takeout':gt'street'
+end
+
+if $ARGS[0] = 'pos9':
+	cla
+	*clr
+	minut = minut+5
+	bumtolik = 4
+	gs'stat'
+
+	'<center><img src="images/etogame/bumt4.jpg"></center>'
+	'It turned, that a girl named Olga. And it works in the service of the disadvantaged.'
+	'Olga: - I certainly never thought, that I will do it. I was sent here Court, for public works, as a punishment for an administrative offense. Although in principle the right thing, and for the karma helpful, help people. If you`re interested, Take a business card, people we really need.'
+	'(On the business card is written "Mercy Clinic". Address indicates the Northern region.'
+
+	act 'Escape':gt'street'
+end
+if $ARGS[0] = 'pos10':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/etogame/bum.jpg"></center>'
+	'You see the kind of hangover homeless.'
+	'Homeless: - Understand, cares. How would you say. I gathered some money, and spend them to me except on the booze, yes no place for grub. I`ve been watching you, you`re a girl business. Besides beautiful, already taking heat!'
+	'But I`m a man, though not young, but the beauty of a woman as a pleasure appreciate.'
+	'You: - You allude to that?!'
+	'Homeless: - Do not think of anything, I just wanted to offer money in exchange for beauty. You tell me that-any show, I only look. Yes, more money and give, All that for a week scraped. As many as 100 rubles!'
+
+	act 'Agree':
+		cls
+		money += 100
+		horny+=10
+		gs'stat'
+
+		'<center><img src="images/etogame/bumt1.jpg"></center>'
+		'Looking around and making sure, that there is no one near you show tramp breasts and panties. Homeless man looks at you with round eyes and violently pulls his dick. You get scared, suddenly someone-would come to throw out the trash.'
+		'Homeless: - Argh, wait let me finish!'
+		'Finally starting to bum out loud sniff and collapses on the cartons.'
+		'You: - Money, give money! - with this cry, you have homeless grabs all his money and carried away laughing.'
+		if bomjqw>0:
+			'Homeless:-thank you very much once again, but if you agree to one more service...'
+			'You: - Which other services?'
+			'Homeless: - Could you help an old man his lovely mouth? I`m not going to owe, well, what do you say?'
+				if horny<50:
+					clr
+					cla
+					'No, so disgusting!'
+					'You turned around and walked away from the trash.'
+					gt'street'
+				end
+				if horny>50:
+					act'On knees':
+					cla
+					*clr
+					gs'stat'
+					horny+=10
+					money+=500
+					minut+=3
+					bomjhet+=1
+						'<center><img src="images/nigma/village/old0,'+rand(0,3)+'.jpg"></center>'
+						'"It is so disgusting" - You think about yourself. But the money are not redundant, And what`s wrong with that? Once you can bear'
+						'You go down on his knees before the old, smelly homeless. It, Nevers has his luck, leisurely pulls member.'
+						'Member of the dirty and stinks so, if it is not washed a few centuries.'
+						'You have a member of the vagabond into his mouth and began to suck leisurely.'
+						act'Suck harder':
+						cla
+						'You start sucking enthusiastically, and your efforts are paying off. The old man is ready to cum'
+							act'In the mouth':
+							cla
+							*clr
+							gs'stat'
+							minut+=3
+							cumlip+=1
+							horny+=10
+							'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+							' A few minutes later he finished Homeless, Gulf of your mouth and nasty stinking sperm.'
+								act'Escape':gt'street'
+							end
+							act'On the face':
+							cla
+							*clr
+							gs'stat'
+							horny+=5
+							cumface+=1
+							minut+=1
+							'<center><img src="images/nigma/gor/publф0,'+rand(0,3)+'.jpg"></center>'
+							' A few minutes later he finished Homeless, Gulf of your face and nasty stinking sperm.'
+								act'Escape':gt'street'
+							end
+						end
+					end
+					if bomjqw>=10:
+						act'Give the homeless':
+						cla
+						*clr
+						dick = 14
+						$nameV = 'Homeless'
+						$boy = 'Homeless'
+						money+=700
+						minut+=15
+						bomjshet+=1
+						'<center><img src="images/nigma/village/old1,'+rand(0,2)+'.jpg"></center>'
+						'You are not the first time you are dealing with such people. Even already learned to overcome an aversion. So you decided to make the homeless than-then by-Better to just blow job.
+						You took off her panties and threw them to the homeless. It, of course, I was shocked by this. But the shock did not last long. After throwing off his pants full of holes, The old man moved on you.'
+						dynamic $sexstart
+						dynamic $sexstart2
+						dynamic $sexcum
+							act'Escape':gt'street'
+						end
+					end
+				end
+		end
+				
+		act 'Escape':gt'street'
+	end
+	act 'Takeout':gt'street'
+end
+--- musorkaexh ---------------------------------
+

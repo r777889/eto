@@ -1,0 +1,187 @@
+# garfather
+fatherAge=age+30 
+gs'stat'
+gs 'dinfather'
+
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+'<center><B><font color=maroon>Stepfather Vladimir Skryabin</font></B></center>'
+'<center><img src="images/qwest/alter/father.jpg" ></center>'
+'Your stepfather gray and a little flabby man worked as a driver. He <<fatherAge>> years. Your mother divorced your father and married Vladimir Mikhailovich when you were one year. Your real father you do not remember and have never seen.'
+
+dynamic $fatherRep
+act '<B>Move away</B>':gt $loc, $metka
+
+act 'Chat':
+	cls
+	minut+=rand(10,15)
+	gs'stat'
+	'<center><B><font color=maroon>Stepfather Vladimir Skryabin</font></B></center>'
+	'<center><img src="images/qwest/alter/father.jpg" ></center>'
+	'Stepfather sitting on a chair and twists in the hands of some-the dirty detail. You sat next to him on a nearby chair.'
+	
+	dynamic $fatherRep
+	if hour>=20 and hour<21:
+		act '<B>Move away</B>':gt $loc, $metka
+	else
+		act '<B>Further</B>':gt $locM, $metkaM
+	end
+
+	if father<20:
+		dynamic $d_fathergar[1]
+	elseif father>=20 and father<40:
+		dynamic $d_fathergar[2]
+	elseif father >=40:
+		if vnesh<=15:
+			dynamic $d_fathergar[3]
+		end
+		if vnesh>15:
+			dynamic $d_fathergar[4]
+		end
+	end
+end
+
+act 'Help':
+	cls
+	minut+=60
+	sweat+=1
+	gs'stat'
+	'<center><B><font color=maroon>Stepfather Vladimir Skryabin</font></B></center>'
+	'<center><img src="images/qwest/alter/father.jpg" ></center>'
+	'Stepfather sitting on a chair and twists in the hands of some-the dirty detail. You sat next to him on a nearby chair.'
+	
+	dynamic $fatherRep
+	if hour>=20 and hour<21:
+		act '<B>Move away</B>':gt $loc, $metka
+	else
+		act '<B>Further</B>':gt $locM, $metkaM
+	end
+
+	if father<20:
+		dynamic $d_fatherhelp[1]
+	elseif father>=20 and father<40:
+		dynamic $d_fatherhelp[2]
+	elseif father >=40:
+		if vnesh<=15:
+			dynamic $d_fatherhelp[3]
+		end
+		if vnesh>15:
+			dynamic $d_fatherhelp[4]
+		end
+	end
+end
+if horny>50 and hadsexwithfather=1:
+
+	act'Seduce':
+		cla
+		*clr
+		'<center><img src="images/nigma/gor/father/gar/father.gar.pre'+rand(0,5)+'.jpg" ></center>'
+		'You came to gazelki, and took a sponge. You tilt, to wash the car, putting the ass on display stepfather.'
+		'"- Oh... - Stepfather did not expect this from you, but his involuntary exhalation and kindled eyes you know, he is, least, very pleasant.'
+		'My stepfather came from behind and put his hands on your ass. He leisurely began to knead your bread.'
+		act'On knees':
+			cla
+			*clr
+			horny+=5
+			minut+=3
+			gs'stat'
+			'<center><img src="images/nigma/gor/bimbo/bimbo.knees'+rand(1,3)+'.jpg" ></center>'
+			'You fell on his knees in front of her stepfather and placed her palm on his crotch. You felt already standing member, and began to caress him through the fabric. You then got into his pants and pulled out a member of his stepfather out. You take it with one hand nadrachivat.'
+			act'In the mouth':
+				cla
+				*clr
+				gs'stat'
+				horny+=10
+				$boy='stepfather'
+				minut+=5
+				'<center><img src="images/nigma/gor/father/gar/father.gar.0,'+rand(0,4)+'.jpg" ></center>'
+				'Stepfather opened the door gazelki, and I sat in the passenger seat. He pulled your head to yourself, and planted his mouth on your dick.'
+				'You leisurely aspirated her stepfather, caress his balls language, and again absorbs cock in her mouth. Soon the cock began to throb, giving signs of an early end.'
+				act 'Sucking swallowing sperm':
+					cls			
+					if father<100:father+=2
+					fatherSuck+=1
+					cumlip+=1
+					swallow += 1
+					water -= 10
+					minut += 10
+					gs'stat'
+					'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+					'You have continued to suck dick and cums swallow sperm hits you in the mouth. Sperm was so much, you do not have time to swallow it all flows out of your mouth for a member. Lastly <<$boy>> ceases to finish and you pull your cock out smelling sperm mouth. In the mouth disgusting taste of Cum, obliznuvshis you know, your <<$liptalk3>> wet with sperm.'
+					act '<B>Move away</B>':gt'gargazel'
+				end
+					
+				act 'Remove from the mouth':
+					cls
+					if father<100:father+=2
+					fatherSuck+=1
+					cumface += 1
+					facial += 1
+					minut += 10
+					gs'stat'
+					if rand1<49:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+					if rand1=>50:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+					'You took out a member of his mouth and a jet of sperm immediately slapped you in the face. You squeezed her eyes shut for fear of, that the sperm gets into your eyes and feel as another jet of hot Cum landed on your face.'
+					act '<B>Move away</B>':gt'gargazel'
+				end
+			end
+	
+			act'Give':
+				cla
+				*clr
+				minut+=20
+				horny+=20
+				dick=17
+				$boy='Stepfather'
+				'<center><img src="images/nigma/gor/father/gar/father.gar.1,'+rand(0,2)+'.jpg" ></center>'
+				'Stepfather raised you from knees, and turned to face the gazelki. You Opperly hands on the car, substituting his ass.After, He began to massage your pussy.'
+				dynamic $sexstart
+				dynamic $sexstart2
+				act'Further':
+					cla
+					*clr
+					gs'stat'
+					if father<100:father+=3
+					cumpussy+=1
+					guy+=1
+					FatherSex+=1
+					'<center><img src="images/nigma/gor/father/gar/father.gar.cum1,0.jpg" ></center>'
+					'Lastly, you feel like a member begins to throb within you. Stepfather takes a few shocks, and then bore down on you all over, filling your pussy with his sperm.'
+					horand = RAND(1,100)
+					if horand > horny:horny = horny + 10 & 'You were not satisfied'
+					if horand <= horny:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+					act '<B>Move away</B>':gt'gargazel'
+				end
+			end
+		end
+	end
+end
+
+if fatherdrunk=1:
+	cla
+	cls
+	minut+=60
+	gs'stat'
+	'<center><B><font color=maroon>Stepfather Vladimir Skryabin</font></B></center>'
+	'<center><img src="images/qwest/alter/father.jpg" ></center>'
+	'Your stepfather gray and a little flabby man worked as a driver. He <<fatherAge>> years. Your mother divorced your father and married Vladimir Mikhailovich when you were one year. Your real father you do not remember and have never seen.'
+	
+	dynamic $fatherRep	
+	act '<B>Move away</B>':gt $loc, $metka
+
+	if father<20:
+		dynamic $d_fatherdrunk[1]
+	elseif father>=20 and father<40:
+		dynamic $d_fatherdrunk[2]
+	elseif father >=40:
+		if vnesh<=15:
+			dynamic $d_fatherdrunk[3]
+		end
+		if vnesh>15:
+			dynamic $d_fatherdrunk[4]
+		end
+	end
+end
+--- garfather ---------------------------------
+

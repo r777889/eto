@@ -1,0 +1,33 @@
+# spusk
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+if $ARGS[0]='start':
+    cla
+    *clr
+    gs'stat'
+    gs'time'
+    '<center><H4>Descent<H4></center>'
+    '<center><img src="images/pic/liam1.jpg" ></center>'
+    'Here transportation does not go, and the air is clean, the atmosphere of antiquity fills the air is not the usual flavors'
+
+    act 'Go to the bottom':minut += 10 & gt'liames'
+    act 'Back to Subway':minut += 10 & gt'liam'
+    
+'Close to the narrow <a href="exec:GT ''dvor'',''start''">street</a> looping between houses.'
+'Saw <a href="exec:GT ''ugol'',''start''">passage</a> between the houses into the courtyards.'
+
+end
+
+if $ARGS[0]='dvr':
+    cla
+    *clr
+    set minut = minut + 1
+    gs'stat'
+    gs'time'
+!    '<center><img src="images/lmps/liamel.jpg" ></center>'
+
+end
+
+--- spusk ---------------------------------
+

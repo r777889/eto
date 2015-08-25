@@ -1,0 +1,70 @@
+# furisex
+minut += 5
+gs'stat'
+
+if furisex = 0:
+	'The driver sat in the wagon and started the engine. The car moved off and went hard on the road. Within minutes 15 The driver stopped the car on the roadside.'
+
+	act 'Look on the driver':furisex = 1 & gt $curloc
+elseif furisex = 1:
+	'You looked at the cage, he grinned "Hatched? It`s time to work out a trip. Take off your clothes and climb into the sleeping bag."'
+
+	act 'Undress and get into the sleeping bag':furisex = 2 & gt $curloc
+elseif furisex = 2:
+	'You undressed in front of a carrier, and climbed into a sleeping bag. The driver climbed up to you and pulled off his sweat pants. "Put on a condom"'
+	prezik -= 1
+
+	act 'Wear a condom hands':furisex = 3 & gt $curloc
+	act 'Wear a condom mouth':furisex = 4 & gt $curloc
+elseif furisex = 3:
+	'<center><img src="images/qwest/alter/ev2/condomput.jpg"></center>'
+	'You have printed a condom and pulled it to the guy standing member.'
+
+	act 'Suck':furisex = 5 & gt $curloc
+elseif furisex = 4:
+	'<center><img src="images/qwest/alter/ev2/condomput2.jpg"></center>'
+	'You have printed a condom and stuck it in his mouth himself between holding lip, then they began to wear a condom on mouth standing member, gradually you get.'
+
+	act 'Suck':furisex = 5 & gt $curloc
+elseif furisex = 5:
+	bj += 1
+	guy += 1
+	furibj += 1
+
+	if rand1<=10:'<center><img src="images/qwest/alter/ev2/condombj.jpg"></center>'
+	if rand1>10:'<center><img src="images/nigma/city/taxi/тк0,'+rand(0,3)+'.gif"></center>'
+	'You began to suck cock in a condom lubricant feeling on your lips, Finally the man broke down and ended in a condom.'
+
+	act 'Get dressed':furisex = 6 & gt $curloc
+elseif furisex = 6:
+	'The guy took off the condom to the penis and dressed sat behind the wheel and the car started soon you go.'
+
+	act 'Logout':
+		furisex = 0
+		if nroad = 0:nroad = 20 & gt'gorodok'
+		if nroad = 20:nroad = 0 & gt'nord'
+	end
+elseif furisex = 100:
+	'The driver sat in the wagon and started the engine. The car moved off and went hard on the road. He drove his head turned to you "Huyli vypyalilas? Tips and suck."'
+
+	act 'Suck':furisex = 101 & gt $curloc
+elseif furisex = 101:
+	bj += 1
+	guy += 1
+	furibj += 1
+	venrand = RAND(0,100)
+	if venrand >= 70:dynamic $veneradinitog
+	cumlip += 1
+
+	if rand1<=10:'<center><img src="images/qwest/alter/ev2/furibj.jpg"></center>'
+	if rand1>10:'<center><img src="images/nigma/city/taxi/тк0,'+rand(0,3)+'.gif"></center>'
+	'You tilt the driver and took his penis, then they took it into his mouth and began to suck. I drove habitually led a truck on the road, and smacking his lips on his penis. Finally, the carrier has run into your mouth Gulf of it all his Concha. There was nowhere to spit out and you swallow his sperm. Finally I drove the van stopped and said,, that you have arrived.'
+
+	act 'Logout':
+		furisex = 0
+		if nroad = 0:nroad = 20 & gt'gorodok'
+		if nroad = 20:nroad = 0 & gt'nord'
+	end
+end
+--- furisex ---------------------------------
+

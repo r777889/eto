@@ -1,0 +1,63 @@
+# Gpornmark
+gs'stat'
+
+'On the tray on a variety of porn magazines. Near the tray turns salesman with shifty eyes.'
+
+act 'Escape':gt'Grinok'
+
+if pornMagazine > 1:
+	'You already have a log and once again wander near the tray with a similar item you have no desire.'
+elseif pornMagazine = 1:
+	'Have you read his magazine to the holes and it would be not bad to buy a new.'
+
+	if money >= 500:
+		act 'Buy':
+			cls
+			minut += 5
+			money -= 500
+			pornMagazine = 50
+			TimesBuyPorno += 1
+			gs'stat'
+
+			'You are trying not to look into the eyes of the seller counted the money and took it quickly hid the magazine.'
+
+			act 'Escape':gt'Grinok'
+		end
+	end
+elseif pornMagazine = 0:
+	'In the stunned look at magazines where photographed half-naked girls, guys with standing members ready and then how they can engage with.'
+end
+
+if TimesBuyPorno = 0:
+	'Sold with interest and looks at you expectantly.'
+
+	act 'Ask For Price':
+		cls
+		minut += 5
+		manna = manna/2
+		gs'stat'
+
+		'Desperate blushing to the tips of hair you have come to the seller and a broken voice asked him the price. Seller you smiled and said,. All magazines 500 rubles.'
+
+		if money >= 500:
+			act 'Buy':
+				cls
+				minut += 5
+				money -= 500
+				pornMagazine = 50
+				TimesBuyPorno += 1
+				gs'stat'
+
+				'You are trying not to look into the eyes of the seller counted the money and took it quickly hid the magazine.'
+
+				act 'Escape':gt'Grinok'
+			end
+		end
+
+		act 'Escape':gt'Grinok'
+	end
+elseif TimesBuyPorno > 0:
+	'Seller is suitable to you "Would you buy a magazine? Only 500 rubles.".'
+end
+--- Gpornmark ---------------------------------
+

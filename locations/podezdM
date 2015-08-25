@@ -1,0 +1,318 @@
+# podezdM
+if $ARGS[0] = 'start':
+	minut = minut + 15
+
+	'<<$boyA>> said "Let`s go to the kiosk, pivasika buy"'
+
+	act 'Walking arm in arm':
+		cla
+
+		if harakBoyA = 0:bfa = bfa + 2
+		if harakBoyA = 1:bfa = bfa + 1
+		if harakBoyA = 2:bfa = bfa - 1
+
+		'<center><img src="images/pic/boygo.jpg"></center>'
+		'You go up to the kiosk embracing, there <<$boyA>> buys a beer and chips, and you go to the nearest staircase.'
+
+		gt'podezdM','kiosk'
+	end
+	act 'Going hand in hand':
+		cla
+
+		if harakBoyA = 0:bfa = bfa + 1
+		if harakBoyA = 1:bfa = bfa + 2
+		if harakBoyA = 2:bfa = bfa - 1
+
+		'<center><img src="images/pic/boygo1.jpg"></center>'
+		'You go hand in hand to stall, there <<$boyA>> buys a beer and chips, and you go to the nearest staircase.'
+
+		gt'podezdM','kiosk'
+	end
+	act 'Go close':
+		cla
+
+		if harakBoyA = 0:bfa = bfa - 1
+		if harakBoyA = 1:bfa = bfa + 1
+		if harakBoyA = 2:bfa = bfa + 2
+
+		'<center><img src="images/pic/boygo2.jpg"></center>'
+		'You go up to the kiosk, there <<$boyA>> buys a beer and chips, and you go to the nearest staircase.'
+
+		gt'podezdM','kiosk'
+	end
+end
+
+if $ARGS[0] = 'kiosk':
+	cla
+	*clr
+	minut = minut + 30
+	fat = fat + 1
+	manna = manna + 10
+	willpower = willpower + 10
+	podrand = RAND(5,100)
+
+	'<center><img src="images/pic/podezdM.jpg"></center>'
+	'At the entrance you guy opens a bottle of beer and delivers it to you.'
+
+	act 'Drink a little':
+		cla
+		alko += 1
+		gs'stat'
+
+		if podrand < 9:
+			xgt'podezdM','kiosk1'
+		elseif podrand >= 9:
+			gt'podezdM','grup'
+		end
+	end
+	act 'Drink a bottle':
+		cla
+		alko += 2
+		fat = fat + 1
+		manna = manna + 10
+		willpower = willpower + 10
+		gs'stat'
+
+		if podrand < 9:
+			gt'podezdM','kiosk1'
+		elseif podrand >= 9:
+			gt'podezdM','grup'
+		end
+	end
+end
+
+if $ARGS[0] = 'kiosk1':
+	cla
+	*clr
+
+	if dayA > 15 and harakBoyA = 2:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 1:gs'boylove','tits'
+	if dayA > 25 and harakBoyA = 0:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 2:gs'boylove','figure'
+	if dayA > 25 and harakBoyA = 1:gs'boylove','figure'
+	if dayA > 30 and harakBoyA = 0:gs'boylove','figure'
+
+	gs'anekdot'
+
+	'<<$boyA>> drinking beer and tells you the anecdote <<$anek>>'
+
+	act 'Laugh':
+		cla
+		SUB = SUB + 1
+		bfa = bfa + 1
+		gt'podezdM','kiosk2'
+	end
+	act 'Smile':
+		cla
+		gt'podezdM','kiosk2'
+	end
+	act 'Not funny':
+		cla
+		DOM = DOM + 1
+		bfa = bfa - 1
+		gt'podezdM','kiosk2'
+	end
+end
+
+if $ARGS[0] = 'kiosk2':
+	cla
+	*clr
+
+	if harakBoyA = 0:
+		if daya < 20 and boyonceA = 0:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		elseif daya >= 20 and boyonceA = 0:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		elseif boyonceA = 1:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		end
+	elseif harakBoyA = 1:
+		if daya < 10 and boyonceA = 0:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		elseif daya >= 10 and boyonceA = 0:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		elseif boyonceA = 1:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		end
+	elseif harakBoyA = 2 and izvrat = 0:
+		if daya < 3 and boyonceA = 0:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		elseif daya >= 3 and boyonceA = 0:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		elseif boyonceA = 1:
+			'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		end
+	elseif harakBoyA = 2 and izvrat = 1:
+		if daya < 3 and boyonceA = 0:
+			'<<$boyA>> He drank beer and threw the bottle said to you. "Svetik, you`re so juicy, I want you!" With these words he came to you and hugged the waist dug his lips to your, It penetrated his tongue in your mouth.'
+
+			act 'Break':
+				cla
+				'You broke out of his grip of, and he rudely told you "Well you break, You want to do this myself."'
+
+				act 'Fok you!':
+					cla
+					DOM = DOM + 1
+					bfA = 0
+					gt'street'
+				end
+				act 'Kiss':
+					cla
+					'<<$boyA>> kisses you and his hands down to your waist and held her ass squeeze.'
+
+					gt'sexm','startPod'
+				end
+			end
+			act 'Kiss':
+				cla
+				SUB = SUB + 1
+
+				'<<$boyA>> kisses you and his hands down to your waist and held her ass squeeze.'
+
+				gt'sexm','startPod'
+			end
+
+			exit
+		elseif daya >= 3 and boyonceA = 0:
+			'<<$boyA>> He drank beer and suggested we go to your house and fuck you in all the cracks.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		elseif boyonceA = 1:
+			'<<$boyA>> He drank beer and suggested we go to your house and fuck you in all the cracks.'
+
+			act 'To go along with the guy to her house':gt'sexm','start'
+
+			exit
+		end
+	end
+end
+
+if $ARGS[0] = 'grup':
+	cla
+	*clr
+	'<center><img src="images/pic/podezdM1.jpg"></center>'
+	'The entrance includes a couple of guys, they came to your guy and greeted him. Guys have brought vodka and snacks.'
+
+	act 'Refused to drink':
+		cla
+		if harakBoyA = 0:bfa = bfa + 1
+		if harakBoyA = 1:bfa = bfa - 1
+		if harakBoyA = 2:bfa = bfa - 2
+		gt'podezdM','grup1'
+	end
+	act 'Drink a little':
+		cla
+		alko += 1
+		gs'stat'
+		if harakBoyA = 0:bfa = bfa + 1
+		if harakBoyA = 1:bfa = bfa + 2
+		if harakBoyA = 2:bfa = bfa + 1
+		gt'podezdM','grup1'
+	end
+	act 'Buha guys':
+		cla
+		alko += 2
+		fat = fat + 1
+		manna = manna + 10
+		willpower = willpower + 10
+		gs'stat'
+		if harakBoy = 0:bfa = bfa - 1
+		if harakBoy = 1:bfa = bfa + 1
+		if harakBoy = 2:bfa = bfa + 2
+		gt'podezdM','grup2'
+	end
+end
+
+if $ARGS[0] = 'grup1':
+	cla
+	*clr
+	gs'stat'
+
+	'You tusite at the entrance to the guys, They poison jokes, thumps and gogochut.'
+	'<<$boyA>> I drank beer and offered to escort you to the house.'
+
+	act 'To go along with the guy to her house':gt'sexm','start'
+end
+
+if $ARGS[0] = 'grup2':
+	cla
+	*clr
+	gs'stat'
+
+	'You distribute the hard floor and floats beneath your feet, one of the guys have embraced the waist, that you would not have fallen.'
+	'Another man guffawed and began to paw your chest.'
+
+	if harakBoyA = 0:
+		'<<$boyA>> I began to mumble "Guys, that you, not the same as!"'
+		'What drunken guys just laughed and began to pull off your clothes.'
+
+		act 'Resist':gt'sexm','gangrape'
+		act 'Surrender':gt'sexm','gangbang'
+
+		exit
+	elseif harakBoyA = 1:
+		'<<$boyA>> I stood up and barked "Hey, ohreneli you something? That`s my chick, He removed his hands."'
+		'Guys take a back seat and loosened his grip.'
+
+		act 'To go along with the guy to her house':gt'sexm','start'
+		act 'Shut up, I decide for itself with whom I sleep, Come here boys':gt'sexm','gangbang'
+
+		exit
+	elseif harakBoyA = 2 and izvrat = 0:
+		'<<$boyA>> He stood silently smashed a bottle on the head guy who you paw at his chest, man fell to the floor and groaned. <<$boyA>> quietly and confidently said, "Even somebody wants?"'
+		'Guys let you instantly and walked away.'
+
+		act 'To go along with the guy to her house':gt'sexm','start'
+		act 'Or all together..?':gt'sexm','gangbang'
+
+		exit
+	elseif harakBoyA = 2 and izvrat = 1:
+		'<<$boyA>> whinnied "Let this whore around Empty!"'
+		'Drunken guys were enthusiastic about the proposal and began pulling off your clothes.'
+
+		act 'Resist':gt'sexm','gangrape'
+		act 'Surrender':gt'sexm','gangbang'
+
+		exit
+	end
+end
+--- podezdM ---------------------------------
+

@@ -1,0 +1,15 @@
+# KGDfight
+'Your party'
+'First line. <<$kgdplace>> <<$kgdplace2>> <<$kgdplace3>>'
+'Second line. <<$kgdplace4>> <<$kgdplace5>> <<$kgdplace6>>'
+''
+'The party of the enemy'
+''
+'First line. <<$kgdplacev>> <<$kgdplacev2>> <<$kgdplacev3>>'
+'Second line. <<$kgdplacev4>> <<$kgdplacev5>> <<$kgdplacev6>>'
+
+act 'Escape':gt'KGDgame'
+
+!here I am and crap, niasilil Group battle
+--- KGDfight ---------------------------------
+

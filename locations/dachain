@@ -1,0 +1,66 @@
+# dachain
+clr
+gs'stat'
+gs'time'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Dacha</font></b></center>'
+'<center><img src="images/etogame/dachain.jpg"></center>'
+'Your favorite summer residence.'
+
+if hour >= 6 and hour <= 20 and etoexhib = 11:'Working in the garden kopashatsya, huh... can both-anything <a href="exec:GT ''etoexhib'',''pos10''">motivate</a> their, to work quicker and smarter.'
+if hour >= 6 and hour <= 20 and etoexhib = 12:'Exit in <a href="exec:GT ''etoexhib'',''pos11''">vegetable garden in his underwear and dressing gown.</a>'
+if hour >= 6 and hour <= 20 and etoexhib = 13 and temp ! day:'Interestingly, as there is in <a href="exec:GT ''etoexhib'',''pos12''">garden</a>'
+
+if hour < 23:
+	act 'Lie down on the couch':
+		cla
+		minut += 60
+
+		if son < 30:
+			son += 5
+		else
+			son = 29
+		end
+
+		'I relax lying on the couch.'
+
+		act 'Pull':gt'dachain'
+	end
+end
+
+if hour >= 23:
+	act 'Sleeping in bed':
+		cla
+		*clr
+		tanga = 1
+		health = health + 5
+		hapri = 0
+		InSleep = 1
+		cloth_vid = 0
+
+		'<center><img src="images/pics/son.jpg"></center>'
+		if analplugIN = 1:analplugIN = 0 & 'Before going to bed, you took out a butt plug.'
+		if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed, you took out a vibrator.'
+		if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
+
+		gs'stat'
+
+		'You slept'
+
+		act 'Up':
+			cla
+			InSleep = 0
+			minut += 480
+			son = 30
+			gt'dachain'
+		end
+	end
+end
+
+act 'Go outside':minut += 15 & gt'dachamy'
+--- dachain ---------------------------------
+

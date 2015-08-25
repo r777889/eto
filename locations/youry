@@ -1,0 +1,63 @@
+# youry
+$roomyour = {
+	$nameV = 'Yuri'
+	$boy = $nameV
+	dick = 18
+	silavag = 2
+	harakBoy = 1
+	NoGuy = 1
+	GoToGuy = 1
+	finance = 1
+	act 'On the bed':gt'BDsex','start'
+}
+
+clr
+minut = minut + 5
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Apartment George</font></b></center>'
+'<center><img src="images/peter/peterdoor.jpg"></center>'
+
+act 'Logout':
+	cla
+	minut = minut + 5
+	gt'nord'
+end
+
+act 'Call at the door':
+	cla
+
+	if hour > 16:
+		'You rang the bell. The door opened very quickly, Yuri stood on the threshold. He has invited you to sign.'
+
+		act 'Login to Jury':
+			cls
+			minut += 15
+			gs'stat'
+
+			'You entered the apartment to Jury, He will escort you into the hall and sat on a chair. I went to the kitchen and brought a bottle of champagne with grapes.'
+
+			act 'Drinking Yuri':
+				cls
+				minut += 15
+				gs'stat'
+
+				'You are listening to Yuri praises your sex skills drank champagne. Yuri offered to go to bed.'
+
+				dynamic $roomyour
+			end
+		end
+
+		exit
+	else
+		'You rang the bell, but you no one opened.'
+	end
+
+	act 'Move away from the door':gt $curloc
+end
+--- youry ---------------------------------
+

@@ -1,0 +1,98 @@
+# start
+KILLALL
+CLOSE ALL
+!ADDQST 'car.qsp'
+
+USEHTML = 1
+DEBUG = 1
+SHOWSTAT 0
+SHOWOBJS 0
+SHOWINPUT 0
+DISABLESCROLL = 1
+!NOSAVE 0
+
+$ONGLOAD = 'loadg'
+$ONGSAVE = 'saveg'
+$ONNEWLOC = 'LOCA'
+$onobjsel = 'onobjsel'
+$counter = 'counter'
+$USERCOM = 'ObrabotkaVvoda'
+
+$FNAME = 'Tahoma'
+FSIZE = 12
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+!$backimage = 'content/pic/achtung.jpg'
+'<center><B>Version 1.1.8 by Y4enik + 1.2.0 by Lur + Rebbys add on + 1.1.7biz_12.08.15 by arvurdd</B></center>'
+*nl
+'<hr align="left" color="red" size="3" width="1200">'
+!'<center><h2>THIS</h2></center>'
+'<center><img src="images/pic/start2.jpg"></center>'
+'<hr align="left" color="red" size="3" width="1200">'
+*nl
+!'<center>Development of the game is closed</center>'
+*nl
+!'<center><img src="images/studia/car.gif"></center>'
+!*nl
+!'<center><img src="images/pic/start.jpg"></center>'
+!*nl
+
+StoryLine = 0
+MagikDostup = 0
+
+'<center>http://albedo.fludilka.su/ and DeGross</center>'
+'<center><font color = maroon>Life simulator with elements of RPG, Strategy, porn. <b>Children up 18 s strictly forbidden to play in IS.</b></font></center>'
+
+$name = 'Michael'
+$surname = 'Kuznetsov'
+age = 35
+vidage = 35
+year = 2010
+month = 5
+week = 1
+hour = 7
+day = 25
+!body
+rost = 186
+fat = 130
+dick = 0
+energy = 15
+water = 15
+son = 16
+!The stats
+stren = 160
+speed = 50
+agil = 50
+vital = 160
+intel = 50
+will = 100
+react = 50
+health = vital*10
+willpower = intel*5 + will*5
+manna = (intel*magik) + vital*5
+BDSMfilm = 0
+pornstudio = 0
+pfilmSTOP = 0
+
+money = 1500
+opPRE = 1
+tanga = 1
+clrbelo = 1
+
+act '<center><b>Begin</b></center>':
+	cla
+	gt'begin'
+end
+
+if music_on = 0:
+	inited = 1
+	music_on = 1
+	volume = 100
+	$music_theme = 'sukizaebali'
+	gs'init_music'
+end
+--- start ---------------------------------
+

@@ -1,0 +1,177 @@
+# aptek
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+	gs'time'
+
+	'<center><b><font color = maroon>Pharmacy</font></b></center>'
+	'<center><img src="images/pic/aptek.jpg"></center>'
+	'Condoms - 100 RUB'
+	'Pregnancy test - 200 RUB'
+	'Birth control pills - 500 RUB'
+	'Medicine - 500 RUB'
+	'Vitamins - 500 RUB'
+	if klisma = 0:'Enema - 500 RUB'
+	'Ointment for calluses - 600 RUB'
+	'Moisturizing Lip Balm - 1000 RUB'
+	'Weight loss - 1500 RUB'
+	if KandidNapr = 1:'Tablets from yeast - 1500 RUB'
+
+	if money >= 100:
+		act 'Buy condoms (100 RUB)':
+			cla
+			*clr
+			portion = input ("How many packages you want to buy?")
+			if portion*100 > money:'You do not have enough money.'
+			if portion*100 <= money:
+				prezik = prezik + portion*5
+				money = money - portion*100
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You bought condoms and paid the money in cash.'
+			end
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+	end
+
+	if money >= 200:
+		act 'Buy a pregnancy test (200 RUB)':
+			cla
+			*clr
+			money = money - 200
+			pregtest += 2
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought the test and paid the money in cash.'
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+	end
+
+	if money >= 500:
+		act 'Buy birth control pills (500 RUB)':
+			cla
+			*clr
+			portion = input ("How many packages you want to buy?")
+			if portion*500 > money:'You do not have enough money.'
+			if portion*500 <= money:
+				tabletki = tabletki + portion*28
+				money = money - portion*500
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You bought the pill and get paid in cash.'
+			end
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+		act 'Buy drugs (500 RUB)':
+			cla
+			*clr
+			portion = input ("How many packages you want to buy?")
+			if portion*500 > money:'You do not have enough money.'
+			if portion*500 <= money:
+				lekarstvo += portion*10
+				money = money - portion*500
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You bought the drugs and the money paid in cash.'
+			end
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+		act 'Buy Vitamins (500 RUB)':
+			cla
+			*clr
+			portion = input ("How many packages you want to buy?")
+			if portion*500 > money:'You do not have enough money.'
+			if portion*500 <= money:
+				vitamin += portion*20
+				money = money - portion*500
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You bought vitamins and paid the money in cash.'
+			end
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+
+		if klisma = 0:
+			act 'Buy enema (500 RUB)':
+				cla
+				*clr
+				klisma = 1
+				money = money - 500
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You bought an enema and paid the money in cash.'
+
+				act 'Move away from the counter':gt'aptek','start'
+			end
+		end
+	end
+
+	if money >= 600:
+		act 'Buy ointment from corns (600 RUB)':
+			cla
+			*clr
+			money = money - 600
+			mosolmaz += 10
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought the ointment, and the money paid in cash.'
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+	end
+
+	if money >= 1000:
+		act 'Buy a moisturizing lip balm (1000 RUB)':
+			cla
+			*clr
+			lipbalm += 25
+			money = money - 1000
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought vitamins and paid the money in cash.'
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+	end
+
+	if money >= 1500:
+		act 'Buy fat burners (1500 RUB)':
+			cla
+			*clr
+			fatdel = fatdel + 1
+			money = money - 1500
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought a fat burning capsule, and paid the money in cash.'
+
+			act 'Move away from the counter':gt'aptek','start'
+		end
+
+		if KandidNapr = 1:
+			act 'Buy pills for thrush (1500 RUB)':
+				cla
+				*clr
+				money = money - 1500
+				Kandidoz = 0
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You bought a tablet and paid the money in cash.'
+				'Immediately some cash you drink tablet.'
+
+				act 'Move away from the counter':gt'aptek','start'
+			end
+		end
+	end
+
+	act 'Logout':gt'street'
+end
+--- aptek ---------------------------------
+

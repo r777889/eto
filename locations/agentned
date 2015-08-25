@@ -1,0 +1,118 @@
+# agentned
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+	gs'dina'
+
+	'<center><b><font color = maroon>Agentsvo property</font></b></center>'
+	'<center><img src="images/pic/agenstvo.jpg"></center>'
+	'The head office of the largest real estate agencies in the area.'
+	'At the reception you notice Banner, which is written in large print:'
+	'"SW. clients! Please note, that all transactions of purchase-sales made exclusively through non-cash means of payment."'
+	''
+	if ArendHouseSL > 0:'You have <B><<ArendHouseSL>> days</B> rental.' 
+	if BuyHous ! 1 and money >= 6000 and ArendHouseSL = 0: '<a href="exec:GT ''agentned'',''rent''">Rent an apartment in a residential area</a>'
+	if BuyHous ! 1 and money >= 6000 and ArendHouseSL = 0: '<a href="exec:GT ''agentned'',''rent2''">Rent an apartment in the old town</a>'
+	if karta >= 2000000 and BuyHous < 1 or karta >= 2000000 and BuyHous > 1:'<a href="exec:GT ''agentned'',''buy''">To buy an apartment</a> for 2 million. rubles.'
+	if BuyHous = 1 and housr = 1:'<a href="exec:GT ''agentned'',''sell''">Sell ​​apartment</a> for 1 million. rubles.'
+	if karta >= 30000 and dachaest = 0:'<a href="exec:GT ''agentned'',''buy_dacha''">Buy cottage</a> for 30 th.RUB.'
+	if karta >= 1500000 and placeMansion = 0:'<a href="exec:GT ''agentned'',''buy_Mansion''">Buy land for cottage</a> for 1,5 million.RUB.'
+	''
+
+	act '<B>Logout</B>':gt'down'
+end
+
+if $ARGS[0] = 'buy':
+	cla
+	*clr
+	minut += 30
+	karta -= 2000000
+	housr = 1
+	BuyHous = 1
+	gs'stat'
+	'<center><b><font color = maroon>Agentsvo property</font></b></center>'
+	'<center><img src="images/pic/agenstvo_paperwork.jpg"></center>'
+	'You fill half an hour all the necessary documents to buy an apartment in a residential area. From your bank account removed 2 000 0000 rubles.'
+
+	act '<B>Logout</B>':gt'agentned', 'start'
+end
+
+if $ARGS[0] = 'sell':
+	cla
+	*clr
+	minut += 30
+	karta += 1000000
+	housr = 0
+	BuyHous = 0
+	gs'stat'
+	'<center><b><font color = maroon>Agentsvo property</font></b></center>'
+	'<center><img src="images/pic/agenstvo_paperwork.jpg"></center>'
+	'You fill half an hour all the necessary documents for the sale of apartments in a residential area. On your bank account entered translation 1 000 0000 rubles.'
+
+	act '<B>Logout</B>':gt'agentned', 'start'
+end
+
+if $ARGS[0] = 'rent':
+	cla
+	*clr
+	minut += 30
+	money -= 6000
+	housr = 1
+	BuyHous = 2
+	ArendHouseSL += 30
+	gs'stat'
+	'<center><b><font color = maroon>Agentsvo property</font></b></center>'
+	'<center><img src="images/pic/agenstvo_paperwork.jpg"></center>'
+	'You fill half an hour all the necessary documents for the rental of an apartment in a residential area. Now you <B><<ArendHouseSL>> days</B> rental days.'
+
+	act '<B>Logout</B>':gt'agentned', 'start'
+end
+
+if $ARGS[0] = 'rent2':
+	cla
+	*clr
+	minut += 30
+	money -= 6000
+	housr = 2
+	BuyHous = 2
+	ArendHouseSL += 30
+	gs'stat'
+	'<center><b><font color = maroon>Agentsvo property</font></b></center>'
+	'<center><img src="images/pic/agenstvo_paperwork.jpg"></center>'
+	'You fill half an hour all the necessary documents for the rental of an apartment in a residential area. Now you <B><<ArendHouseSL>> days</B> rental days.'
+
+	act '<B>Logout</B>':gt'agentned', 'start'
+end
+
+if $ARGS[0] = 'buy_dacha':
+	cla
+	*clr
+	minut += 30
+	karta -= 30000
+	dachaest = 1
+	etoexhib = 0
+	gs'stat'
+	'<center><b><font color = maroon>Agentsvo property</font></b></center>'
+	'<center><img src="images/pic/agenstvo_paperwork.jpg"></center>'
+	'You fill half an hour all the necessary documents for the purchase of a housef with a garden in a cottage on the co-op 5 km. the north road. From your bank account removed 30 0000 rubles.'
+
+	act '<B>Logout</B>':gt'agentned', 'start'
+end
+
+if $ARGS[0] = 'buy_Mansion':
+	cla
+	*clr
+	minut += 30
+	karta -= 1500000
+	placeMansion = 1
+	gs'stat'
+	'<center><b><font color = maroon>Agentsvo property</font></b></center>'
+	'<center><img src="images/pic/agenstvo_paperwork.jpg"></center>'
+	'You fill half an hour all the necessary documents for the purchase of land for cottage on 1 km. the north road. From your bank account removed 1 500 0000 rubles.'
+
+	act '<B>Logout</B>':gt'agentned', 'start'
+end
+--- agentned ---------------------------------
+

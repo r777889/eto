@@ -1,0 +1,80 @@
+# magik
+!Selecting magic attack
+if round >= 0:
+	if spelltuman > 0:'Cover the area fog <a href="exec:GT ''spell'',''tuman''">create a spell</a>'
+	if spellklon > 0:'Override clone of yourself <a href="exec:GT ''spell'',''klon''">create a spell</a>'
+	if spellstun > 0:'Checkmate <a href="exec:GT ''spell'',''stun''">create a spell</a>'
+	if spellweap > 0 and weapon > 0:'Invest energy into a weapon <a href="exec:GT ''spell'',''weap''">create a spell</a>'
+	if spellwind > 0:'Blow away the fog <a href="exec:GT ''spell'',''wind''">create a spell</a>'
+	if spellklon2 > 0:'Substitute itself clones (3 pieces) <a href="exec:GT ''spell'',''klon2''">create a spell</a>'
+	if spellenergo > 0:'Create a weak energy shield <a href="exec:GT ''spell'',''energo''">create a spell</a>'
+	if spellinit > 0:'Create a slight delay of time <a href="exec:GT ''spell'',''init''">create a spell</a>'
+	if spellhel > 0:'Treat yourself <a href="exec:GT ''spell'',''hel''">create a spell</a>'
+	if spellhand > 0:'Smashing palm <a href="exec:GT ''spell'',''hand''">create a spell</a>'
+	if spellreset > 0 or spellunmat > 0:'<b><font color = red>POWER Rikudo</font></b>'
+	if spellreset > 0:'Strength Rikudo "Podcherpnut collected energy" <a href="exec:GT ''spell'',''reset''">create a spell</a>'
+	if spellunmat > 0:'Strength Rikudo "Not material" <a href="exec:GT ''spell'',''unmat''">create a spell</a>'
+	if spellfire1 > 0:'<b><font color = red>SCHOOL FIRE</font></b>'
+	if spellfire1 > 0:'Flame <a href="exec:GT ''spell'',''fire1''">create a spell</a>'
+
+	if round >= 3:
+		if spellfire2 > 0:'The release of fire <a href="exec:GT ''spell'',''fire2''">create a spell</a>'
+		if spellfire3 > 0:'Fire Barrier <a href="exec:GT ''spell'',''fire3''">create a spell</a>'
+	end
+	if round >= 6:
+		if spellfire4 > 0:'Firestorm <a href="exec:GT ''spell'',''fire4''">create a spell</a>'
+		if spellfire5 > 0:'Flame Shield <a href="exec:GT ''spell'',''fire5''">create a spell</a>'
+	end
+
+	if spellele1 > 0:'<b><font color = red>SCHOOL OF ELECTRICITY</font></b>'
+	if spellele1 > 0:'Category <a href="exec:GT ''spell'',''ele1''">create a spell</a>'
+
+	if round >= 3:
+		if spellele2 > 0:'Lightning <a href="exec:GT ''spell'',''ele2''">create a spell</a>'
+		if spellele3 > 0:'Electric barrier <a href="exec:GT ''spell'',''ele3''">create a spell</a>'
+	end
+	if round >= 6:
+		if spellele4 > 0:'Dance of thousands of birds <a href="exec:GT ''spell'',''ele4''">create a spell</a>'
+		if spellele5 > 0:'Dancing Sphere <a href="exec:GT ''spell'',''ele5''">create a spell</a>'
+	end
+
+	if spellert1 > 0:'<b><font color = red>SCHOOL OF EARTH</font></b>'
+	if spellert1 > 0:'Quicksand <a href="exec:GT ''spell'',''ert1''">create a spell</a>'
+
+	if round >= 3:
+		if spellert2 > 0:'Active protection <a href="exec:GT ''spell'',''ert2''">create a spell</a>'
+		if spellert3 > 0:'Abyss <a href="exec:GT ''spell'',''ert3''">create a spell</a>'
+	end
+	if round >= 6:
+		if spellert4 > 0:'Absolute protection <a href="exec:GT ''spell'',''ert4''">create a spell</a>'
+		if spellert5 > 0:'Sando <a href="exec:GT ''spell'',''ert5''">create a spell</a>'
+	end
+
+	if spellwind1 > 0:'<b><font color = red>SCHOOL WIND</font></b>'
+	if spellwind1 > 0:'Wind gust <a href="exec:GT ''spell'',''wind1''">create a spell</a>'
+
+	if round >= 3:
+		if spellwind2 > 0:'The horrific pressure <a href="exec:GT ''spell'',''wind2''">create a spell</a>'
+		if spellwind3 > 0:'Vacuum protection sphere <a href="exec:GT ''spell'',''wind3''">create a spell</a>'
+	end
+	if round >= 6:
+		if spellwind4 > 0:'Vacuum shells <a href="exec:GT ''spell'',''wind4''">create a spell</a>'
+		if spellwind5 > 0:'Devouring vacuum <a href="exec:GT ''spell'',''wind5''">create a spell</a>'
+	end
+
+	if spellwater1 > 0:'<b><font color = red>SCHOOL WATER</font></b>'
+	if spellwater1 > 0:'Creek manna <a href="exec:GT ''spell'',''water1''">create a spell</a>'
+
+	if round >= 3:
+		if spellwater2 > 0:'Flooding <a href="exec:GT ''spell'',''water2''">create a spell</a>'
+		if spellwater3 > 0:'Blister <a href="exec:GT ''spell'',''water3''">create a spell</a>'
+	end
+	if round >= 6:
+		if spellwater4 > 0:'Water shark rocket <a href="exec:GT ''spell'',''water4''">create a spell</a>'
+		if spellwater5 > 0:'The Great Flood <a href="exec:GT ''spell'',''water5''">create a spell</a>'
+	end
+end
+
+act 'Physical Attack':gt'boxing'
+--- magik ---------------------------------
+

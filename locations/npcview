@@ -1,0 +1,51 @@
+# npcview
+'<center><b><<$nikname[i]>></b></center>'
+'Rating <<rating[i]>>'
+
+if i > 0:'Record <<win[i]>> Win - <<loss[i]>> defeats - <<draw[i]>> draws <<SubWin[i]>> wins by submission/<<SubLoss[i]>> defeats surrender'
+if i = 0:'Record <<winw[i]>> Win - <<lossw[i]>> defeats - <<draww[i]>> draws <<SubWin[i]>> wins by submission/<<SubLoss[i]>> defeats surrender'
+
+''
+''
+'Power <<musle[i]>>'
+'Flexibility <<flex[i]>>'
+'Endurance <<stamina[i]>>'
+'Moralnovolevye quality <<wipo[i]>>'
+''
+'Throwing techniques <<Bteh[i]>>'
+'Hold Technique <<Uteh[i]>>'
+'Safety equipment <<Zteh[i]>>'
+''
+if slut[i] > 0 and porno = 1:'Packed full of a brand whore.'
+''
+''
+''
+'<<$spisok[i]>>'
+'Test <<i>>'
+
+act 'Logout':gt $loc
+
+if i ! 1:
+	act 'To fight with you':gt'beforeFW'
+end
+
+if i ! 1:
+	if predlog > 0 and predlog ! i and predlog2 = 0:
+		act 'Suggest a fight with <<$nikname[predlog]>>':
+			cls
+			a = predlog
+			'In the red corner <<$nikname[a]>> <<win[a]>>-<<loss[a]>>-<<draw[a]>> <<SubWin[a]>>/<<SubLoss[a]>>'
+			!i = predlog2
+			'In the blue corner <<$nikname[i]>> <<win[i]>>-<<loss[i]>>-<<draw[i]>> <<SubWin[i]>>/<<SubLoss[i]>>'
+			gs'Autofight'
+			predlog = 0
+			predlog2 = 0
+
+			act 'Further':gt $loc
+		end
+	elseif predlog = 0:
+		act 'Suggest fight':predlog = i & gt $loc
+	end
+end
+--- npcview ---------------------------------
+

@@ -1,0 +1,85 @@
+# restoranM
+if $ARGS[0] = 'start':
+	minut = minut + 30
+
+	'You`ve come to the restaurant and sat at a table. <<$boyA>> I ordered the waiter food and good wine. You have to wait when you bring food.'
+
+	if dayA > 15 and harakBoyA = 2:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 1:gs'boylove','tits'
+	if dayA > 25 and harakBoyA = 0:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 2:gs'boylove','figure'
+	if dayA > 25 and harakBoyA = 1:gs'boylove','figure'
+	if dayA > 30 and harakBoyA = 0:gs'boylove','figure'
+
+	gs'anekdot'
+
+	'<<$boyA>> anecdote tells you <<$anek>>'
+
+	act 'Laugh':
+		cla
+		SUB = SUB + 1
+		bfa = bfa + 1
+		xgt'restoranM','a'
+	end
+	act 'Smile':
+		cla
+		!bfa = bfa - 1
+		xgt'restoranM','a'
+	end
+	act 'Not funny':
+		cla
+		DOM = DOM + 1
+		bfa = bfa - 1
+		xgt'restoranM','a'
+	end
+end
+
+if $ARGS[0] = 'a':
+	minut = minut + 30
+	fat = fat + 1
+
+	'Finally, you brought food. <<$boyA>> I pour you some wine and offered a toast to love.'
+
+	act 'There are':
+		cla
+		xgt'restoranM','b'
+	end
+end
+
+if $ARGS[0] = 'b':
+	minut = minut + 30
+	fat = fat + 1
+
+	if energy >= 30:
+		fat = fat + 5
+
+		'You can no longer have.'
+	elseif energy >= 20 and energy < 30:
+		fat = fat + 3
+		energy = energy + 10
+
+		'You pushed through the power of a meal.'
+	elseif energy < 20:
+		energy = energy +20
+		fat = fat + 1
+
+		'You will be happy to eat food.'
+	end
+
+	if water >= 20:
+		'Tea in you no longer climbs.'
+	elseif water < 20:
+		water = water +20
+
+		'You will be happy to drink a cup of tea.'
+	end
+
+	alko += 2
+	gs'stat'
+
+	'After some time, with food and wine was finished and <<$boyA>> He proposed to hold you.'
+
+	act 'Home':gt'sexm','start'
+end
+--- restoranM ---------------------------------
+

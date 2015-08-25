@@ -1,0 +1,78 @@
+# Pavsearjil
+if $ARGS[0]='start':
+set minut += 10
+gs'stat'
+
+end
+
+if $ARGS[0]='0a':
+cla
+*clr
+gs'stat'
+psiha = 1
+minut += 5
+'<center><img src="images/pic/pavserjil.jpg" ></center>'
+'You screamed and instinctively raised his hand to his mouth, She bit her fingers.'
+    act 'Who you are?':
+        cla
+        *clr
+        '<center><img src="images/pic/pavserjil.jpg" ></center>'
+        '- Who you are? -exhaled, slowly retreating to the door and tried to pull myself together. - You scared me, - continued You,trying to stop shaking voice.At this point, you have learned it:man in the park on the lawn - How did you get here? '
+        '- Through the door.'
+        'His voice was deep and sonorous. You stopped at the door. Paul did not move; you have only to leave, but why-then hesitated.'
+        act 'I`m a fool Fool...':
+            cla
+            *clr
+            '<center><img src="images/pic/pavserjil.jpg" ></center>'
+            '- Fool me, fool, - you said. - Leave the door open. But I did not hear, you entered.'
+            '- I went before. - His voice slipped a note zveschaya.'
+            'As you arouse the curiosity - Like this? A key, and then you took it...'
+            '- He told me he gave it to me, - he corrected, continuing to examine Jeanne derisively.'
+            'Her surprised, that it is so easy to communicate with him, and not gone directly from this Strange.'
+            act '- I draw old houses, - you said - ...':
+                cla
+                *clr
+                gs'stat'
+                hapri = 1
+                
+                '<center><img src="images/pic/pavserjil.jpg" ></center>'
+                'You purely mechanically straightened hair, using the TV screen instead of a mirror.'
+                'And in my head I stirred instant thought - I`m a fool Fool... and here-It is instantly ulutuchilas.'
+                'Paul turned indifferently, saying nothing, and I began farming inspection apartments, You kept him at a distance.'
+                'He went to the kitchen, at least two and pretended, the apartment takes you more, than meeting.'
+                act 'Go to the kitchen':gt 'Pavsearjil'',''1a'
+                act 'Go into the corridor':gt'koncepodxl','krr2x'
+                end
+            end
+        end
+    end
+
+	
+if $ARGS[0]='1a':
+cla
+*clr
+set minut = minut + 5
+gs'stat'
+'<center><B><font color=maroon>Kitchen</font></B></center>'
+'<center><img src="images/lmps/ur1033.jpg" ></center>'
+
+end
+
+if $ARGS[0]='2a':
+cla
+*clr
+set minut = minut + 1
+gs'stat'
+
+end
+
+if $ARGS[0]='3a':
+cla
+*clr
+set minut = minut + 1
+gs'stat'
+
+end
+
+--- Pavsearjil ---------------------------------
+

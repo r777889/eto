@@ -1,0 +1,39 @@
+# husb
+if $ARGS[0] = 'start':
+	clr
+	gs'stat'
+
+	if week < 6:
+		if hour > 22 or hour < 7:
+			'Your husband <<$husName>> lying in bed eyes open. "What do you want? Night had, go to sleep."'
+		elseif hour = 7:
+			'<<$husName>> He is sitting at the kitchen table.'
+		elseif hour = 17:
+			'<<$husName>> He is sitting at the kitchen table.'
+		elseif hour > 17 and hour <= 22:
+			'<<$husName>> He is sitting on the couch and watching TV.'
+		end
+	else
+		if hour > 22 or hour < 7:
+			'Your husband <<$husName>> lying in bed eyes open. "What do you want? Night had, go to sleep."'
+		elseif hour = 7:
+			'<<$husName>> He is sitting at the kitchen table.'
+		elseif hour > 7 and hour < 17:
+			'<<$husName>> He is sitting on the couch and watching TV.'
+		elseif hour = 17:
+			'<<$husName>> He is sitting at the kitchen table.'
+		elseif hour > 17 and hour <= 22:
+			'<<$husName>> He is sitting on the couch and watching TV.'
+		end
+	end
+
+	if nude = 1:'Your husband, I see you naked, said - "You are very beautiful."'
+
+	act 'Escape':gt $loc, $metka
+
+	if husbandsexday < 4:
+		act 'Sex with her husband':gt'husbsex','room'
+	end
+end
+--- husb ---------------------------------
+

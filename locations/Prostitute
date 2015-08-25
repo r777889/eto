@@ -1,0 +1,283 @@
+# Prostitute
+if $ARGS[0] = 'start':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	$metkaSex = $ARGS[0]
+	$locSex = $CURLOC
+
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+	gs'time'
+
+	'<center><b><font color = maroon>Prostitute</font></b></center>'
+	'<center><img src="images/pic/park2.jpg"></center>'
+
+	if hour >= 16 and hour <= 23:
+		if whoreQW = 2:
+			'Prostitutes look at you with curiosity.'
+		elseif whoreQW = 1:
+			'Prostitutes are looking at you with interest.'
+
+			act 'Talk':
+				cla
+				whoreQW = 2
+
+				'You went to a prostitute and asked her how things are done here at all. She began to explain. "We are all free, We do not work on anyone, but because of the many problems. Stella with her friends sometimes beat us and rob, sometimes petty thugs come and rob us money. If you want to work here, you will have to pay, and Stella and bandyukov. You certainly cool, you can try to besiege Stella and her bridesmaids, but the bandits do not advise to contact. And more, at you do not peck customers, if you are not dressed like a whore, you can buy some clothes in a sex shop."'
+
+				act 'Move away':gt'prostitute','start'
+			end
+		elseif whoreQW = 0:
+			'Hey, you are not one of us, have brought down in our, and the teeth do not gather.'
+
+			act 'Fuck you!':
+				cla
+				minut = minut + 15
+				$nameV = 'Stoned prostitute'
+				!The stats
+				strenV = 20
+				speedV = 30
+				agilV = 30
+				reactV = 30
+				vitalV = 50
+				intelV = 10
+				willV = 10
+				!Skills
+				magikV = 10
+				boxingV = 10
+				shootV = 10
+				!Parameters
+				healthV = vitalV*10 + strenV*5
+				mannaV = intelV*10 + magikV*10
+				willpowerV = willV*10
+				BonusAtakV = 0
+				BonusDefV = 0
+				!Action Programme
+				program = 0
+				prostitutFight = 1
+				if spellavtoklon = 1:klon = 3
+				if spellbefshild = 1:defence = 500
+				gt'fight','start'
+			end
+			act 'How to become one of your?':
+				cla
+				'How to become one of your? Inquired you. The prostitute smiled insolently, spat. To do this, you have to pay Stella.'
+
+				act 'Move away':gt'prostitute','start'
+				act 'I agree':
+					cla
+					whoreQW = 2
+
+					'You agree. The prostitute told you, you need to buy appropriate clothing in a sex shop. Then customers will immediately realize that you are a prostitute.'
+
+					act 'Move away':gt'prostitute','start'
+				end
+			end
+		end
+		if whoreQW > 1 and hook = 1 and son => 0:
+			act 'Standing on the panel 15 min':
+				cla
+				gs'stat'
+				minut = minut + 10
+				prosrand = RAND(0,(vnesh+hour)*2)
+				if prosrand < 20:
+					'No you are not interested in.'
+
+					act 'Escape':gt'prostitute','start'
+				elseif prosrand >= 20:
+					'To you drove the car.'
+
+					!proseventrand = RAND(0,110)
+					proseventrand = rand(0,110)
+					if proseventrand <= 5:
+						'To you drove a black jeep, I opened the window and leaned out healthy impudent face. "Hey, slut, it is time to pay tribute to. Come here and Wali Shtukar continue to work."'
+
+						if money >= 1000:
+							act 'Give money':
+								cla
+								money = money - 1000
+
+								'You give money to big man in the jeep. He put them in his pocket and left.'
+
+								act 'Move away':gt'prostitute','start'
+							end
+						elseif money < 1000:
+							act 'I still do not earn as much':
+								cla
+								money = 0
+
+								'You began to explain big man, that you have not earned, he grabbed you by the arm and threw him into a jeep, there you have it brushed his pockets and said that he will teach you, how to work.'
+
+								act 'Work':
+									$nameV = 'bandit'
+									$boy = 'Bandit'
+									dick = RAND(18,21)
+									gt'blowPR','start'
+								end
+							end
+						end
+
+						act 'Fok you!':
+							cla
+							minut = minut + 15
+							$nameV = 'Bandit'
+							!The stats
+							strenV = 200
+							speedV = 30
+							agilV = 20
+							reactV = 20
+							vitalV = 150
+							intelV = 10
+							willV = 10
+							!Skills
+							magikV = 10
+							boxingV = 10
+							shootV = 10
+							!Parameters
+							healthV = vitalV*10 + strenV*5
+							mannaV = intelV*10 + magikV*10
+							willpowerV = willV*10
+							BonusAtakV = 0
+							BonusDefV = 0
+							!Action Programme
+							program = 0
+							prostitutFight = 2
+							if spellavtoklon = 1:klon = 3
+							if spellbefshild = 1:defence = 500
+							gt'fight','start'
+						end
+					elseif proseventrand > 5 and proseventrand <= 30:
+						klient_needs = 0
+						prosti = 0
+						KlientMON = RAND(1,10)
+
+						'The client wants a blowjob and asks how much it will cost.'
+					elseif proseventrand > 30 and proseventrand <= 50:
+						klient_needs = 1
+						prosti = 0
+						KlientMON = RAND(3,25)
+
+						'The client wants sex and asks how much it will cost.'
+					elseif proseventrand > 50 and proseventrand <= 70:
+						klient_needs = 2
+						prosti = 0
+						KlientMON = RAND(5,40)
+
+						'The client wants anal and asks how much it will cost.'
+					elseif proseventrand > 70 and proseventrand <= 80:
+						klient_needs = 3
+						prosti = 0
+						KlientMON = RAND(5,40)
+
+						'Near your machine stopped'
+						'Nurse ran to the car, there is always a little bit and jerked to you -:"The client you, asks - as you stand?"'
+					elseif proseventrand > 80 and proseventrand <= 90:
+						klient_needs = 4
+						prosti = 0
+						KlientMON = RAND(5,40)
+
+						'Near your machine stopped'
+						'Nurse ran to the car, there is always a little bit and jerked to you -:"The client you, asks - as you stand?"'
+					elseif proseventrand > 90 and proseventrand <= 100:
+						klient_needs = 5
+						prosti = 0
+						KlientMON = RAND(5,40)
+
+						'Near your machine stopped'
+						'Nurse ran to the car, there is always a little bit and jerked to you -:"The client you, asks - as you stand?"'
+					end
+
+					if proseventrand > 0 and proseventrand <= 110:
+						klienVNPR = RAND(0,30)
+
+						act 'Escape':gt'prostitute','start'
+
+						if ProsMoney > 0:
+							act '<<ProsMoney*100>> rubles':
+								cls
+								dynamic $universalklient
+							end
+						end
+
+						act 'Assign price':
+							cls
+							gs'stat'
+
+							ProsMoney = input("Assign a price of hundreds")
+							if ProsMoney < 1:
+								'The customer looked at you in amazement and murmured "Fucked some sort." Then I started the car and drove away.'
+
+								act 'Escape':gt'prostitute','start'
+							else
+								dynamic $universalklient
+							end
+						end
+					elseif proseventrand > 95:
+						'To you I approached a prostitute. "Slysh, slut, If you do not want problems, you have to pay Stella. Come here and Wali pyatihatnik continue to work."'
+
+						if money >= 500:
+							act 'Give money':
+								cla
+								money = money - 500
+
+								'You gave money to a prostitute, She turned and walked away.'
+
+								act 'Move away':gt'prostitute','start'
+							end
+						elseif money < 500:
+							act 'I still do not earn as much':
+								cla
+								money = 0
+
+								'You have started to complain that it is not earned as much money. Prostitute search you took everything of value and left.'
+
+								act 'Move away':gt'prostitute','start'
+							end
+						end
+
+						act 'Fuck you!':
+							cla
+							minut = minut + 15
+							$nameV = 'Prostitute'
+							!The stats
+							strenV = 50
+							speedV = 50
+							agilV = 40
+							reactV = 30
+							vitalV = 60
+							intelV = 10
+							willV = 10
+							!Skills
+							magikV = 10
+							boxingV = 10
+							shootV = 10
+							!Parameters
+							healthV = vitalV*10 + strenV*5
+							mannaV = intelV*10 + magikV*10
+							willpowerV = willV*10
+							BonusAtakV = 0
+							BonusDefV = 0
+							!Action Programme
+							program = 0
+							prostitutFight = 3
+							if spellavtoklon = 1:klon = 3
+							if spellbefshild = 1:defence = 500
+							gt'fight','start'
+						end
+					end
+				end
+			end
+		end
+	end
+
+	act 'Escape':
+		cla
+		minut = minut + 5
+		prosta = 0
+		gt'park','start'
+	end
+end
+--- Prostitute ---------------------------------
+

@@ -1,0 +1,187 @@
+# LCporn
+if $ARGS[0] = 'firsttime':
+	cla
+	*clr
+	JenyaLCfirst = 1
+	gs'stat'
+
+	'<center><img src="images/LakeCafe/LakeFirstTime.jpg"></center>'
+	'You enter the kitchen, then fold into the pantry. Jack looks at you and says, look awkward:'
+	'-It may scare you a little bit, but you had when- anything is found...'
+	'It is lower a little skirt and you see... member! Jack begins to caress his fingers, looking at you. She touches your chest.'
+
+	act 'Proceed':
+		cla
+		*clr
+		randlcpic = RAND(1,7)
+		!sex = sex + 1
+		sexfuta = sexfuta + 1
+		!cumass = cumass + 1
+		!cumpussy = cumpussy + 1
+		JenyaLC = JenyaLC + 5
+		minut = minut + 40
+		$nameV = 'Zhenya'
+		$boy = 'Zhenya'
+		dick = 17
+		silavag = 1
+		pose = 1
+		gs'stat'
+
+		if randlcpic = 1:'<center><img src="images/LakeCafe/RandSex1/1.jpg"></center>'
+		if randlcpic = 2:'<center><img src="images/LakeCafe/RandSex1/2.jpg"></center>'
+		if randlcpic = 3:'<center><img src="images/LakeCafe/RandSex1/3.jpg"></center>'
+		if randlcpic = 4:'<center><img src="images/LakeCafe/RandSex1/4.jpg"></center>'
+		if randlcpic = 5:'<center><img src="images/LakeCafe/RandSex1/5.jpg"></center>'
+		if randlcpic = 6:'<center><img src="images/LakeCafe/RandSex1/6.jpg"></center>'
+		if randlcpic = 7:'<center><img src="images/LakeCafe/RandSex1/7.jpg"></center>'
+
+		'You allow it to continue. She takes off your clothes and lie down with you on the mattress.'
+
+		dynamic $sexudo
+		dynamic $sexcum
+
+		act 'Logout':gt'Lakecafe','main'
+	end
+	act 'Escape':
+		cla
+		*clr
+		JenyaLC = JenyaLC - 10
+		minut = minut + 7
+		gs'stat'
+
+		'Frightened, you run away from the barbecue.'
+
+		act '...':gt'nord'
+	end
+end
+
+if $ARGS[0] = 'sex':
+	cla
+	*clr
+	'<center><img src="images/LakeCafe/LakeFirstTime.jpg"></center>'
+	'Eugene leads you to the pantry and in anticipation of watching you.'
+
+	act 'Vaginal':
+		cla
+		*clr
+		sexfuta = sexfuta + 1
+		JenyaLC = JenyaLC + 5
+		minut = minut + 40
+		horand = RAND(1,100)
+		$nameV = 'Zhenya'
+		$boy = 'Zhenya'
+		dick = 17
+		silavag = 1
+		pose = 1
+
+		randlcpic = RAND(1,7)
+		if randlcpic = 1:'<center><img src="images/LakeCafe/RandSex1/1.jpg"></center>'
+		if randlcpic = 2:'<center><img src="images/LakeCafe/RandSex1/2.jpg"></center>'
+		if randlcpic = 3:'<center><img src="images/LakeCafe/RandSex1/3.jpg"></center>'
+		if randlcpic = 4:'<center><img src="images/LakeCafe/RandSex1/4.jpg"></center>'
+		if randlcpic = 5:'<center><img src="images/LakeCafe/RandSex1/5.jpg"></center>'
+		if randlcpic = 6:'<center><img src="images/LakeCafe/RandSex1/6.jpg"></center>'
+		if randlcpic = 7:'<center><img src="images/LakeCafe/RandSex1/7.jpg"></center>'
+
+		'You undress Zhenya, and then lie down on the mattress.'
+
+		dynamic $sexudo
+		dynamic $sexcum
+
+		gs'stat'
+
+		act 'Logout':gt'Lakecafe','main'
+	end
+	act 'Oral':
+		cla
+		*clr
+		bj = bj + 1
+		sexfuta = sexfuta + 1
+		JenyaLC = JenyaLC + 5
+		minut = minut + 20
+		cumface = cumface + 1
+		facial = facial + 1
+		minut = minut + 40
+		$nameV = 'Zhenya'
+		$boy = 'Zhenya'
+		horand = RAND(1,100)
+
+		randlcpic = RAND(1,7)
+		if randlcpic = 1:'<center><img src="images/LakeCafe/RandSex2/1.jpg"></center>'
+		if randlcpic = 2:'<center><img src="images/LakeCafe/RandSex2/2.jpg"></center>'
+		if randlcpic = 3:'<center><img src="images/LakeCafe/RandSex2/3.jpg"></center>'
+		if randlcpic = 4:'<center><img src="images/LakeCafe/RandSex2/4.jpg"></center>'
+		if randlcpic = 5:'<center><img src="images/LakeCafe/RandSex2/5.jpg"></center>'
+		if randlcpic = 6:'<center><img src="images/LakeCafe/RandSex2/6.jpg"></center>'
+		if randlcpic = 7:'<center><img src="images/LakeCafe/RandSex2/7.jpg"></center>'
+
+		'You undress Zhenya, then you bow lips of its members. Jack takes the vases by the hair and fuck you in the mouth. Groaning, Jack pulled out his cock and cum on your face, then I got dressed and went out of the closet.'
+
+		gs'oral','0'
+		gs'stat'
+
+		act 'Logout':gt'Lakecafe','main'
+	end
+end
+
+if $ARGS[0] = 'toiletsex':
+	cla
+	*clr
+	gs'stat'
+	dick = 14
+	hj = hj + 1
+	$nameV = 'Muzhik'
+	$boy = 'Muzhik'
+	'You came back and hugged a man. After going down to his penis, you started it nadrachivat. The man stopped you, He took her hand and led through the back door to the street.'
+		act'On knees':
+		cla
+		*clr
+		gs'stat'
+		'<center><img src="images/nigma/gor/bimbo/bimbo.knees'+rand(0,6)+'.jpg"></center>'
+		'You fell in front of a man on his knees.'
+			act'Suck':
+			*clr
+			cla
+			gs'stat'
+			minut+=10
+			horny+=10
+			'<center><img src="images/nigma/city/street0,'+rand(0,2)+'.jpg"></center>'
+			'You bow lips his dick. You suck dick, loud smacking. It seems, that a man is ready to cum.'
+				act 'Sucking swallowing sperm':
+				cls
+				swallow += 1
+				water -= 10
+				minut += 10
+				gs'stat'
+				'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+				'You have continued to suck dick and cums swallow sperm hits you in the mouth. Sperm was so much, you do not have time to swallow it all flows out of your mouth for a member. Lastly <<$bname>> ceases to finish and you pull your cock out smelling sperm mouth. In the mouth disgusting taste of Cum, obliznuvshis you know, your <<$liptalk3>> wet with sperm.'
+					act 'Escape':gt'laketoilet','main'
+				end
+				act 'Remove from the mouth':
+				cls
+				cumface += 1
+				facial += 1
+				minut += 10
+				gs'stat'
+				if rand1<49:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+				if rand1=>50:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+				'You took out a member of his mouth and a jet of sperm immediately slapped you in the face. You squeezed her eyes shut for fear of, that the sperm gets into your eyes and feel as another jet of hot Cum landed on your face.'
+					act 'Escape':gt'laketoilet','main'
+				end
+			end
+		
+		end
+		act'Give him':
+		cla
+		*clr
+		gs'stat'
+		minut+=20
+		horny+=20
+		'<center><img src="images/nigma/city/street1,'+rand(0,3)+'.gif"></center>'
+		dynamic $sexudo
+		dynamic $sexcum
+			act 'Escape':gt'laketoilet','main'
+		end
+end
+--- LCporn ---------------------------------
+

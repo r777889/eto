@@ -1,0 +1,228 @@
+# saunawork
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+$metkaBroom = $ARGS[0]
+$locBroom = $CURLOC
+
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+saunaYouRoom = 1
+if paymamka = 0:paymamka = 300
+if workDolg > 0:paymamka = 300
+if workDolg <= 0:paymamka = 500
+gs'stat'
+
+'<center><b><font color = maroon>Sauna</font></b></center>'
+'<center><img src="images/pic/sauna1.jpg"></center>'
+'On the walls full <a href="exec:GT ''mirror'',''start''">Mirrors</a>.'
+
+if saunaWorkNow = 1:
+	saunaWorkNow = 0
+	money -= paymamka
+
+	'Nurse came to you and took you to <<paymamka>> rubles per customer.'
+end
+
+if money > 0 and workDolg > 0:workDolg -= money & money = 0
+if workDolg > 0:'Your duty is <<workDolg>> rubles'
+
+gs'stat'
+
+if workDolg <= 0:act 'Escape':gt'sauna'
+if workDolg > 0:act 'Go to your room':gt'saunaroom'
+
+if hour > 8 and hour < 12 and whorehour ! hour:
+	whorehour = hour
+
+	klientrand = RAND(0,100)
+	if klientrand >= 80:saunaWorkKlient = 1
+elseif hour >= 12 and hour < 16 and whorehour ! hour:
+	whorehour = hour
+
+	klientrand = RAND(0,100)
+	if klientrand >= 50:saunaWorkKlient = 1
+elseif hour >= 16 and hour < 21 and whorehour ! hour:
+	whorehour = hour
+
+	klientrand = RAND(0,100)
+	if klientrand >= 10:saunaWorkKlient = 1
+elseif hour >= 21 and whorehour ! hour:
+	whorehour = hour
+	saunaWorkKlient = 1
+end
+
+if saunaWorkKlient = 1:
+	cls
+	gs'stat'
+
+	'<center><img src="images/pic/saunawhore.jpg"></center>'
+	'The client came sauna, girls lined up what would the client could choose your favorite.'
+
+	if mop > 1 and hapri = 1 and sweat <= 0 and leghair <= 0 and lobok <= 0:
+		whorerand = RAND(0,25)
+		if whorerand < vnesh:
+			'The customer pointed at you finger "This one."'
+
+			act 'Going to the sauna with the client':saunaWorkKlient = 0 & gt'saunawhore'
+		else
+			'The customer looked picky eye and turned away you chose another girl.'
+
+			act 'Logout':saunaWorkKlient = 0 & gt $curloc
+		end
+	else
+		'After looking at your client immediately I turned away and chose another girl.'
+
+		act 'Logout':saunaWorkKlient = 0 & gt $curloc
+	end
+
+	exit
+end
+
+if vnesh = -10 or SLomka > 0:
+	cls
+	workDolg += 1500
+	gs'stat'
+
+	'You beckoned nurse. "Hey, come here slut."'
+	'You came up to her and she demanded to bare your arm. You have done the required and she took a syringe with the trash. "Sit quietly, Now I make a shot and bring you to the normal view."'
+
+	act 'Logout':StrongNarkota += 25 & SNarkTimes += 1 & minut += 10 & gt $curloc
+	exit
+end
+
+act 'Sitting on the couch (1 h)':
+	cls
+	minut += 60
+	gs'stat'
+
+	'<center><img src="images/pic/saunawork.jpg"></center>'
+	'You are within an hour sitting on the couch waiting for customers.'
+
+	act 'Logout':gt $curloc
+end
+
+if clenerSauna ! day:
+	act 'Clean toilets (1 h)':
+		cla
+		*clr
+		minut = minut + 60
+		clenerSauna = day
+		manna = manna - 25
+		workDolg -= 100
+		sweat = sweat + 3
+
+		'<center><img src="images/pic/clener2.jpg"></center>'
+		'You are within an hour scrubbed toilets in the sauna to shine.'
+
+		act 'Logout':gt $curloc
+	end
+end
+
+if clenerSauna2 ! day:
+	act 'Scrubbing floors (1 h)':
+		cla
+		*clr
+		minut = minut + 60
+		clenerSauna2 = day
+		manna = manna - 25
+		workDolg -= 100
+		sweat = sweat + 3
+
+		'<center><img src="images/pic/clener1.jpg"></center>'
+		'You are within an hour mop floors scrubbed to a shine.'
+
+		act 'Logout':gt $curloc
+	end
+end
+
+act 'Take a shower 15 min':
+	cla
+	*clr
+	minut = minut + 15
+	sweat = -3
+	horny = horny + 1
+	hapri = 0
+	mop = 1
+	dynamic $showerdin
+	if frost > 0:frost = 0
+
+	'<center><img src="images/pics/dush.jpg"></center>'
+	'You got into the bathroom and turned on the shower. Lathered body and washed off in the shower.'
+
+	act 'Get razor':dynamic $saunabrit
+
+	if horny >= 90:
+		act 'Point the shower pussy':
+			cla
+			*clr
+			horny = 0
+			minut = minut + 30
+			mastr = mastr + 1
+			orgasm = orgasm + 1
+			manna = manna + 15
+			willpower = willpower + 15
+
+			'<center><img src="images/pics/wash2.jpg"></center>'
+			'You sent a shower pussy and tight jet of warm water began to caress you. Soon you will feel like a warm wave covers your entire body and you began to shudder in orgasm.'
+
+			act 'Exit the bathroom and get dressed':gt $curloc
+		end
+	elseif horny >= 40 and hormy < 90:
+		act 'Point the shower pussy':
+			cla
+			*clr
+			horny = horny + 5
+			minut = minut + 30
+			manna = manna + 10
+			willpower = willpower + 10
+
+			'<center><img src="images/pics/wash2.jpg"></center>'
+			'You sent a shower pussy and tight jet of warm water began to caress you. First, you were very nice, but after a while it became even as it hurts. The excitement subsided and you stop masturbating.'
+
+			act 'Exit the bathroom and get dressed':gt $curloc
+		end
+	end
+
+	act 'Exit the bathroom and get dressed':gt $curloc
+end
+
+$saunabrit = {
+	cls
+	'You rinsed razor, Blades which will suffice for <<stanok>> time.'
+
+	if leghair > 0:
+		act 'Shaving legs 15 min':
+			cla
+			*clr
+			minut = minut + 15
+			leghair = -5
+			horny = horny + 5
+
+			'<center><img src="images/pics/shave.jpg"></center>'
+			'You lathered and shaved off his feet with their hair.'
+
+			act 'Takeout machine':dynamic $saunabrit
+		end
+	end
+
+	if lobok > 0:
+		act 'Shaved 15 min':
+			cla
+			*clr
+			minut = minut + 15
+			lobok = -5
+			horny = horny + 5
+
+			'<center><img src="images/pics/shave3.jpg"></center>'
+			'You lathered pubis, then shaved all the hair off his.'
+
+			act 'Takeout machine':dynamic $saunabrit
+		end
+	end
+
+	act 'Exit the bathroom and get dressed':gt $curloc
+}
+--- saunawork ---------------------------------
+

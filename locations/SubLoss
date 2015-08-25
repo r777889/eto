@@ -1,0 +1,12 @@
+# SubLoss
+!win[i] += 1
+!SubWin[i] += 1
+!loss[1] += 1
+!SubLoss[1] += 1
+resultFight = 4
+
+'You give a signal the Referee, it can no longer continue to fight and surrender.'
+
+act '...':gt'EndFight'
+--- SubLoss ---------------------------------
+

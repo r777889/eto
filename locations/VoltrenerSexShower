@@ -1,0 +1,264 @@
+# VoltrenerSexShower
+minut += 20
+gs'stat'
+$din_trener_voyeur0= {
+*clr 
+'<center><img src="images/qwest/alter/volley/VoltrenerSexShower1.jpg"></center>'
+'You heard what that suspicious noise.'
+act 'See that`s the buzz':
+	 *clr  &cla
+	 '<center><img src="images/qwest/alter/volley/VoltrenerSexShower2.jpg"></center>'
+	 'Rubbing the glass shower, you saw only men vaguely familiar shape. The man hurriedly moved out of the shower, and discuss who it is you could not.'
+	 VoltrenerVoyeur+=1
+	 act 'Finish mytsya':gt'gdksport'	
+	end
+}
+$din_trener_voyeur1= {	
+*clr 
+'<center><img src="images/qwest/alter/volley/VoltrenerSexShower1.jpg"></center>'
+'You heard what that suspicious noise. Rubbing the glass shower, you saw that the coach through the steam shower and a glass darkly spying on you.'
+	act 'Cried':
+		*clr &cla
+		'<center><img src="images/qwest/alter/volley/VoltrenerSexShower4.jpg"></center>'
+		'You screamed with fright and neozhidonnosti, that seems to bother trainer, and he hurried out of the shower'
+		act 'Finish mytsya':gt'gdksport'	
+	end
+    if guy>25 and horny>=60 or GorSlut > 1: 
+		act 'Mytsya more':
+			trenerepa += 1
+			*clr & cla 
+			'<center><img src="images/qwest/alter/volley/VoltrenerSexShower6.jpg"></center>'
+			'You smiled Mikhail, and continued to bathe, diligently sticking out the ass the breast, to coach them could get a better look.'
+			VoltrenerVoyeur+=1
+			horny += 10
+			gs'stat'
+			act'Wipe':
+				*clr & cla 
+				'<center><img src="images/qwest/alter/volley/VoltrenerSexShower5.gif"></center>'
+				'Stepping out of the shower you, not at all embarrassed coach who continued to stare at you.  Wiped with a towel and asked:  «Michael N., you, that-something like»,- on the coach just shook his head, like sleeves obsession, and walked out of the shower. '
+			    act 'Finish mytsya':gt'gdksport'	
+			end    
+		end
+	end
+}	
+$din_trener_voyeur2= {	
+*clr 		
+	'<center><img src="images/qwest/alter/volley/VoltrenerSexShower1.jpg"></center>'
+	'You heard what that suspicious noise.Rubbing the glass you see a coach who nadraivat his penis, peering into your silhouette ...'
+	act 'Threatened her finger':
+		*clr & cla
+		'<center><img src="images/qwest/alter/volley/VoltrenerSexShower7.jpg"></center>'
+		'After threatening finger trainer, and turning away from this picture you indifferent domylis, and not looking at his dick play coach got dressed and came out of the shower. "It looks like he did not have time to finish",- several maliciously thought you."'
+	act 'Escape':gt'gdksport'
+	end	
+	if guy>30 and horny>=70 or  GorSlut > 1: 
+		act 'Mastrubirovat':
+			trenerepa += 1
+			minut += 10
+			gs'stat'
+			*clr & cla
+			'<center><img src="images/qwest/alter/volley/VoltrenerSexShower8.jpg"></center>'
+			'You stopped, and it seemed, We fell into a stupor for a few seconds, from this picture the fire in your belly zabusheval with even more passion. You were curious, and you are mesmerized by this picture touched her pussy. He said: «Do not be afraid, I`ll do nothing, just see, Well you`re a big girl». '
+			act 'Watch':
+				*clr & cla
+				'<center><img src="images/qwest/alter/volley/VoltrenerSexShower9.gif"></center>'
+				'You look as if spellbound... At the same time caressing her clitoris, and barely holding back moans. You`re looking at the arm member nadrachivat, it appears as the head, disappears. How to shake his balls... Then coach groaned, and splashed out of the penis, getting right at you. Spray sperm, got on your body, tore avalanche, you shakin `in a powerful orgasm. Through waves of orgasm you hardly heard the words of the coach: «Yes, there is already a masturbation will not be enough».'
+				VoltrenerVoyeur+=1
+				orgasm += 1
+				manna = mannamax
+				horny = 0
+				sopr=0
+				gs'stat'
+				act 'Wash sperm':gt'gdksport'
+			end
+		end
+	end	
+}
+$din_trener_voyeur3= {
+*clr 
+'<center><img src="images/qwest/alter/volley/VoltrenerSexShower10.jpg"></center>'
+'Opera on the glass and sticking out his ass, You moan from pecking your ass member. And then you see what-then stir in a glass...'
+	act 'Consider better':
+		*clr & cla
+		'<center><img src="images/qwest/alter/volley/VoltrenerSexShower19.jpg"></center>'
+		'You notice the coach sitting in the dark, and watch how Vanya fucks you in the ass,  when he came here and I saw before, you do not know, but it seems that look out of the darkness in you has created a wave of shame and excitement. You are literally thrown into the paint, you try to get off the Vanino member. But shaky legs do not give. Whether from Vanino actions, whether from the fact that the coach is watching you, and maybe on another and you become rapidly finish comes rhythmically screaming and clutching his classmate dick anus. From what he, too, could not resist and began, pours into your ass, that only heightened orgasm.  Feeling, that after you watch, It was new, sharp, attached wild excitement. He fell to the ground you walk helplessly lay there for a while.'
+		orgasm += 1
+		analorgasm +=1
+		manna = mannamax
+		horny = 0
+		minut += 10
+		gs'stat'
+		act 'Recover':
+		 	*clr & cla
+			'<center><img src="images/qwest/alter/volley/VoltrenerSexShower20.gif"></center>'
+			'Opening his eyes, you saw standing next coach.  He said rather unceremoniously: «Spreading rolls» '
+            act 'Extend the ass':
+				VoltrenerVoyeur+=1
+				trenerepa += 2
+				*clr & cla	
+				'<center><img src="images/qwest/alter/volley/VoltrenerSexShower11.gif"></center>'
+				'You eagerly grasping the handles in the ass and stretch it, opening kind of coach to your holes. The trainer comes to you, and you pulled out a sigh of disappointment, only a few times twitching target, Mikhail finished you on the ass, adding to his Vanina sperm. '
+				act 'Wash ass':gt'gdksport'
+			end
+            act 'Ispugatsya':
+             *clr & cla	
+				'<center><img src="images/qwest/alter/volley/VoltrenerSexShower12.jpg"></center>'
+				'Are you afraid Cover your ass hands and eyes «frightened doe», see Mikhail Nikolayevich. He throws evil: «As Prokhorov ass to expose so much she whines of joy, a native coach voltage remove, oh so scared».  To the consternation in the eyes of added wine, but hands off you ass and she is not removed. Coach evil spat and left.'
+				act 'Wash ass':gt'gdksport'
+            end
+		act 'Wash ass':gt'gdksport'
+		end
+	end
+}
+$din_trener_voyeur4= {
+'<center><img src="images/qwest/alter/volley/VoltrenerSexShower10.jpg"></center>'
+'Opera on the glass and sticking out his ass, You moan from pecking your ass member. And then you see what-then stir in a glass...'
+	act 'Consider better':
+		*clr & cla
+		'<center><img src="images/qwest/alter/volley/VoltrenerSexShower19.jpg"></center>'
+		'It seems, Mikhail decided to again enjoy as your classmate fuck your ass, Vanya seems so busy with your ass not to notice. You hesitate a little tease coach ...'
+		act 'Release on his knees':
+			*clr & cla
+			'<center><img src="images/qwest/alter/volley/VoltrenerSexShower14.gif"></center>'
+			'You let go on my knees and began to chew thoroughly Vanin member, who had just been in your ass.  Surprised-a satisfied sniff on both sides showed, and that the participants and spectators, It seems, like what, what`s happening. Accidentally pushed the door to the shower, You plow, the coach did not miss anything from you planned further.'
+			act 'Lick eggs':
+				*clr & cla
+				'<center><img src="images/qwest/alter/volley/VoltrenerSexShower15.gif"></center>'
+				'Pulling out a member of his mouth and turning, you become a frenzy of excitement explicable only happening to lick eggs classmate.  Launching the one, then the other into his mouth, kissing them passionately and rubbing his hands.  You ducked under their nose and gently licked between the buttocks.'
+				act 'Substitute person':
+					*clr & cla
+					facial+=1
+					'<center><img src="images/qwest/alter/volley/VoltrenerSexShower16.gif"></center>'
+					'It seems, Vanya did not expect such a, but the jet began to beat a fountain of sperm out of the penis, and heavy, warm drops falling on your face, We told you about, that Van liked.'	
+					act 'Wrap':
+						*clr & cla
+						'<center><img src="images/qwest/alter/volley/VoltrenerSexShower17.jpg"></center>'
+						'Seeing the wide eyes of the partner, who looked somewhere behind you , and gradually jaw drops. You remembered the coach, and turned. The coach was a little lost views. While Vania, It seems, do not understand, what is involved in this kind of Mikhail Nikolayevich, hastily hiding behind, I grabbed belongings and jumped out of the shower. As soon as Ivan closed the door, Coach came closer to you, He pulled out a member of his pants and pointed it at you. You are your own, without giving Report, passion and lust cocoon envelops you, I grabbed a member of coach. But here, you`re out of luck, It seems the coach was on the verge and began to finish, as soon as you touched his trunk. Gulf of your breasts cum trainer, Member tucked in his pants and left.'
+						VoltrenerVoyeur+=1
+						horny = 100
+						facial+=1
+						minut += 15
+						trenerepa += 2
+						gs'stat'
+						act'Mastrubirovat':
+							*clr & cla
+							'<center><img src="images/qwest/alter/volley/VoltrenerSexShower18.jpg"></center>'
+							'You almost crying whining overwhelming sense of dissatisfaction ,all covered with sperm, and think about, that all men goats, young that old. You lie down on a bench next to the shower room and caressed her pussy, They brought themselves to orgasm.  Of course, it was not so cool, as it could be. But consoled himself with the thought, the next time you`re so over a mock, do not give. And forced at least one of them, and take care of you, or maybe just two. The thought you again warmed in the stomach. Blushing from such platitudes, You wash your face and jumped out of the shower.'
+							orgasm += 1
+							horny = 0
+							gs'stat'
+							act 'Wash your face':gt'gdksport'
+						end
+						act 'Wash your face':gt'gdksport'
+					end
+				end	
+			end
+		end 
+	end
+}
+
+$din_trener_voyeur5= {
+'<center><img src="images/qwest/alter/volley/VoltrenerSexShower10.jpg"></center>'
+'Opera on the glass and sticking out his ass, You moan from pecking your ass member. And then you see what-then stir in a glass...'
+	act 'Consider better':
+	*clr & cla
+	 '<center><img src="images/qwest/alter/volley/VoltrenerSexShower19.jpg"></center>'
+	 'Through the glass you see, Mikhail Nikolaevich with a determined look approaching stall, and Vanya nothing, seeing, tears up your ass, you frantically try to close the stall door of the castle, It seems that Ivan did not shut. But the dick in the ass and pushes Ivan does not give you do it, door burst open, Coach snarled: «Again fuck. Prokhorov tell your coach, you then regime blyudesh, and are preparing for a competition». From these words, Ivan cringed his cock opal and easily fell out of your ass: «Do not Mikhail anyone say anything, please. I`ll help you with hall, well, there is a grid hang, Girls hold after leaving»,- he, sideways covering their dignity, clutching their belongings, He came out of the shower.'
+		if horny < 80:
+			act'Close the door shower':
+				*clr & cla
+				'<center><img src="images/qwest/alter/volley/VoltrenerSexShower21.jpg"></center>'
+				'You and stand with Vanya did not want to,  today you were unusually cold, so do not be the least bit upset disappearance Wani, looked indifferently at the coach and, closing the door to the booth, started to do something for which you came into the shower to wash ....'
+				act 'Escape':gt'gdksport'
+			end 
+		else
+			act'Seduce trainer':
+				*clr & cla
+				sopr=0 &! Close action in shower
+				trenerepa += 3
+				VoltrenerVoyeur+=1
+				ShowerIvan=0 & ! close sex with the coach in the shower
+				'<center><img src="images/qwest/alter/volley/VoltrenerSexShower22.jpg"></center>'
+				'I do not get that which actually was not closing the door shower. And terribly unhappy with this you get to coach in such a position... that any fool will understand what you would like. It looks like the coach thought about your words said earlier, so he undressed and climbed into the shower to you.' 
+				act'On knees':
+					*clr & cla
+					'<center><img src="images/qwest/alter/volley/VoltrenerSexShower23.jpg"></center>'
+					'You should let your knees, front of your face rocked pretty impressive bolt trainer, admiring this picture, and delighted at the thought, that the main part is getting closer, you began to work vigorously tongue, carefully licking the first head of the penis then a member of the whole.'
+					act'Take in the mouth':
+						*clr & cla
+						horny += 10
+						bj+=1
+						minut += 10
+						throat+=1
+						gs'stat'
+						'<center><img src="images/qwest/alter/volley/VoltrenerSexShower24.gif"></center>'
+						' Kissing head, you took it in his mouth and began to caress the tongue, gently sucking, Then you tried to take it deep in her mouth, but coach, stop you, he became a member of the move, fucking your mouth, while acting rather cautiously, not shoving a member of the full length of, how does it Vanya.'
+						act'His feet':
+							*clr & cla
+							minut += 15
+							$boy = 'Michael N.'
+							silavag = 2
+							dick = 18
+							pose = 0
+							finrand=1
+							if trenerSex = 0:trenerSex = 1 & guy += 1
+							gs'stat'
+							'Trainer, pulling the penis out of your mouth, put you on your back, He raised and spread slightly bent knees almost to his chest. In this position your holes were unceremoniously put on display. Bailiffs your fingers holes, He began to introduce his fingers at the same time in the ass and pussy.'	
+							if vagina = 0 and sex = 0: 
+								'<center><img src="images/qwest/alter/volley/VoltrenerSexShower26.gif"></center>'
+								'For a moment, slipped regret virginity, but in the first excitement is not let`s focus on this idea,  and the dream of the so comforting. But then the coach stopped and said with surprise: "Are you a virgin?". It seems, one of his fingers stumbled on an obstacle. He pulled his finger out of pussy, he focused on the ass, saying:  « No deprive you of virginity, I will not,  Ivan won you have or someone else, besides you there are beautiful,  young holes, which can be planted». From play your anus finger coach and his words have stronger rising tide of lust. Already whining with desire, you wheezed: "Fuck me".'
+							elseif vagina <= 15: 
+								'<center><img src="images/qwest/alter/volley/VoltrenerSexShower26.gif"></center>'
+								'After trying to stick you finger in the vagina, coach ran into some difficulties, It seems, Narrow your pussy did not miss a finger trainer. He pulled his finger out of pussy, he focused on the ass, saying:  «Yes, as long as you narrow, Well, the first time in a hurry, we will not,  besides you there are beautiful,  young holes, which can be planted». From play your anus finger coach and his words have stronger rising tide of lust. Already whining with desire, you wheezed: "Fuck me".'
+							elseif vagina > 15 and mesec <= 0: 
+								'<center><img src="images/qwest/alter/volley/VoltrenerSexShower25.gif"></center>'
+								'Thrusting one finger in the ass the other in the pussy, Coach began play them simultaneously in two holes, you feel, they rub against each other through the thin partition between them. That in turn, then simultaneously rushing inland, they drive you crazy, making moan and squirm. Stone becomes almost cry. «Fuck me, fuck, Fuck ...», - you shout completely losing the mind of desire.'
+								act 'Jump on a member':
+									*clr & cla
+									'<center><img src="images/qwest/alter/volley/VoltrenerSexShower27.jpg"></center>'
+									$sexstart2orgazm5 = 'Literally exhausted from the desire of members within you, you just bring down the coach on the floor and do sit down with all his strength on his penis. The head parted lips, and member swung entered the pussy, upershis, what- inside which only brought a new wave of pleasure. Began to move it up - down, from side to side, You sit down on his cock himself.  Mikhail caresses your neck, breast and waves of pleasure run from the nipple, where-then down...hand coach you squeezed the nipple, by surprise, You like electric shock, you cried, and huddled in orgasm.'
+									dynamic $sexstart2
+									dynamic $sexcum
+									finrand=0
+									act 'Escape':gt'gdksport'
+								end
+							end	
+							act 'Substitute the ass':
+								*clr & cla
+								anus+=1
+								'<center><img src="images/qwest/alter/volley/VoltrenerSexShower28.jpg"></center>'
+								'You feel, ass put her in the head member. Head of the penis was the pressure, trying to get inside, you feel a slight pain and tried to relax the ass.'
+								act 'Loosen the ass':
+									*clr & cla
+									'<center><img src="images/qwest/alter/volley/VoltrenerSexShower29.gif"></center>'
+									$analsexrudeorgazm2='You feel, as a member enters your ass, as the head stretches the sphincter ring, rushing inland. You breath,  thought, he will tear you. Hands caressed your breasts, stroking pussy. He slowly pulled out of your dick, Then again began to enter it, stretching your hole. I came to the end and came out again. Slightly burned, but gradually disappeared burning, It was very nice, your anus adapted. Member slid in the ass, pushing stenochki, that tightly encircled him, and every movement brings you a wave of pleasant sensations. «What a sweet ass»,- you hear. '
+									$analsexrudeorgazm3=$analsexrudeorgazm2
+									dynamic $analsexrude
+									act 'Escape':gt'gdksport'
+								end
+							end	
+						end	
+					end
+				end	
+			end  
+		end
+	end		
+}
+
+if ShowerIvan<>1:
+'<center><img src="images/qwest/alter/volley/VoltrenerSexShower.jpg"></center>'
+	act 'Mytsya': 
+		clr & cla
+		if VoltrenerVoyeur=0:dynamic $din_trener_voyeur0
+		if VoltrenerVoyeur=1:dynamic $din_trener_voyeur1
+		if VoltrenerVoyeur=2:dynamic $din_trener_voyeur2
+	end
+else
+	if VoltrenerVoyeur=3:dynamic $din_trener_voyeur3
+	if VoltrenerVoyeur=4:dynamic $din_trener_voyeur4
+	if VoltrenerVoyeur=5:dynamic $din_trener_voyeur5
+end
+
+act 'Escape':gt'gdksport'
+--- VoltrenerSexShower ---------------------------------
+

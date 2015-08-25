@@ -1,0 +1,113 @@
+# roomPRE
+clr
+gs'statPRE'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Apartment</font></b></center>'
+'<center><img src="images/picPRE/room.jpg"></center>'
+
+if pre = 0:
+	pre = 1
+
+	'Rang Service. My wife Luda only stolidly turned over. Habitual movements you have it turned off. Christ, how can you not want to work. Okay, enough rassusolivat.'
+
+	act 'Going to the bathroom':
+		cla
+		*clr
+		minut = minut + 30
+		clr
+		gs'statPRE'
+
+		'<center><img src="images/picPRE/self.jpg"></center>'
+		'Soft, that would not wake up daughter, you`ve gone to the bathroom and began to brush up.'
+
+		act 'Get out of the apartment':
+			cla
+			*clr
+			minut = minut + 5
+			clr
+			gs'statPRE'
+
+			'<center><img src="images/picPRE/carPRE1.jpg"></center>'
+			'In the parking lot near the house was your machine. You went to her and pressed the button on the remote control to open the lock and removing the central alarm.'
+
+			act 'Drive to work':
+				cla
+				*clr
+				minut = minut + 25
+				clr
+				gs'statPRE'
+
+				'<center><img src="images/picPRE/carPRE.jpg"></center>'
+				'You sit behind the wheel, We started the car and drove to work. On the road, as always I am going to plug you like something dragged themselves on to the traffic office.'
+
+				act 'Parked at the office':
+					cla
+					*clr
+					minut = minut + 60
+					clr
+					gs'statPRE'
+
+					'<center><img src="images/picPRE/officePRE.jpg"></center>'
+					'You put the car in the parking lot near the office and went into the building. Say hello to the security guard and went upstairs to his office.'
+					'To you came secretary and director of the travel documents brought to you by. You looked at her in surprise. "Did I go to business trip?" you ask. "Probably yes. Gromov on the ears is in the morning, a state of emergency on the construction of the complex. More I do not know." said Oksana. You have prepared travel documents, now it is necessary to sign the director.'
+
+					act 'By Director':
+						cla
+						*clr
+						minut = minut + 20
+						clr
+						gs'statPRE'
+
+						'<center><img src="images/picPRE/man.jpg"></center>'
+						'Going into the office of the Director, you said hello to him and feeds the paper to sign sat in the chair. Roman Gromov ran the text and paper podmahnul wide authoritative stroke.'
+						'"Glavbukh probably already in place, convergence Get travel. I have yet to make a couple of calls, and then come back to me, discuss your trip." the director said thoughtfully.'
+
+						act 'Going to the chief accountant of travel':
+							cla
+							*clr
+							minut = minut + 30
+							money = money + 15000
+							clr
+							gs'statPRE'
+
+							'<center><img src="images/picPRE/glavbuh.jpg"></center>'
+							'Marina was already in his office, you filed her application, She grumbled a bit, but to give you the money. You took, They signed the statements, and came out of her office.'
+
+							act 'Going to the Director':
+								cla
+								*clr
+								minut = minut + 15
+								clr
+								gs'statPRE'
+
+								'<center><img src="images/picPRE/man.jpg"></center>'
+								'When you entered the director Roman Gromov gestured to a chair you, and he continued to talk on the phone.'
+								'"Yes, I understand. Once all questions utryasem, so I immediately send you Michael, my deputy. Tell workers, they output. Igor, put a guard at the pit and let no one go with no fuss, take care of, that no one would have got wind, You know yourself, may prohibit the construction of, and this can not be allowed. Okay, Let`s make." Roman put the phone.'
+								'He turned and spoke to you. "Tonight, during excavation works in our building complex workers stumbled upon a room that. The excavator broke the wall to. Good Igor was close and stop the excavations realized. Hell, it is not clear what we did stumble. Can thrown bunker or something. But in any case there is any voids under excavation, further construction of the complex may not be possible. So you need as quickly as possible to go to the construction site. Deal, what`s what. Zanochuesh hotel. Generally, up to you, on the situation."'
+
+								act 'I need to meet at least':
+									cla
+									*clr
+									minut = minut + 5
+									clr
+									gs'statPRE'
+
+									'<center><img src="images/picPRE/man.jpg"></center>'
+									'"I at least have to meet" We had begun to pull you bagpipes, but you interrupted Director. "Michael, you what, not catch up? We collected loans to the ears on the construction site, we still have not even agreed on a construction project, and we already dig pit. You understand, nay, that if under the excavation void, we can not continue to build and will be on the brink of ruin, so we could still some important object destroyed, then still under the court zagremit. The situation should be solved urgently. This force majeure. I have to be here, that would be the case which make it in time to grease someone should, so you go."'
+
+									act 'Okay, then I will not waste time':gt'roadPRE'
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- roomPRE ---------------------------------
+

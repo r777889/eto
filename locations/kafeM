@@ -1,0 +1,190 @@
+# kafeM
+if $ARGS[0] = 'start':
+	minut = minut + 30
+
+	'You`ve come to the cafe and sat at a table. <<$boyA>> I ordered the waiter food and wine. You have to wait when you bring food.'
+
+	if dayA > 15 and harakBoyA = 2:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 1:gs'boylove','tits'
+	if dayA > 25 and harakBoyA = 0:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 2:gs'boylove','figure'
+	if dayA > 25 and harakBoyA = 1:gs'boylove','figure'
+	if dayA > 30 and harakBoyA = 0:gs'boylove','figure'
+
+	gs'anekdot'
+
+	'<<$boyA>> anecdote tells you <<$anek>>'
+
+	act 'Laugh':
+		cla
+		SUB = SUB + 1
+		bfa = bfa + 1
+		xgt'kafeM','a'
+	end
+	act 'Smile':
+		cla
+		xgt'kafeM','a'
+	end
+	act 'Not funny':
+		cla
+		DOM = DOM + 1
+		bfa = bfa - 1
+		xgt'kafeM','a'
+	end
+end
+
+if $ARGS[0] = 'a':
+	minut = minut + 30
+	fat = fat + 1
+
+	'Finally, you brought food. <<$boyA>> I pour you some wine and offered a toast to you.'
+
+	act 'There are':
+		cla
+		xgt'kafeM','b'
+	end
+end
+
+if $ARGS[0] = 'b':
+	minut = minut + 30
+	fat = fat + 1
+
+	if energy >= 30:
+		fat = fat + 5
+
+		'You can no longer have.'
+	elseif energy >= 20 and energy < 30:
+		fat = fat + 3
+		energy = energy + 10
+
+		'You pushed through the power of a meal.'
+	elseif energy < 20:
+		energy = energy +20
+		fat = fat + 1
+
+		'You will be happy to eat food.'
+	end
+
+	if water >= 20:
+		'Tea in you no longer climbs.'
+	elseif water < 20:
+		water = water +20
+
+		'You will be happy to drink a cup of tea.'
+	end
+
+	alko += 2
+	gs'stat'
+
+	'The café and the music started <<$boyA>> offered to dance.'
+
+	act 'Dance':
+		cla
+		bfa = bfa + 1
+		xgt'kafeM','dance'
+	end
+	act 'Takeout':
+		cla
+		bfa = bfa - 1
+		xgt'kafeM','end'
+	end
+end
+
+if $ARGS[0] = 'dance':
+	minut = minut + 5
+
+	'<center><img src="images/pic/dance.jpg"></center>'
+	'You went out with a guy on the dance floor and <<$boyA>> I hug you, then you started to dance together.'
+
+	if harakBoyA = 0:
+		'<<$boyA>> very correct in dance, He embraces you and frankly embarrassed.'
+
+		act 'Finish dance':
+			cla
+			bfa = bfa + 1
+			xgt'kafeM','end'
+		end
+	elseif harakBoyA = 1:
+		'<<$boyA>> very confident leading you in a dance.'
+
+		act 'Finish dance':
+			cla
+			bfa = bfa + 1
+			xgt'kafeM','end'
+		end
+	elseif harakBoyA = 2:
+		'<<$boyA>> It grabs your ass while dancing and pressed to you, you feel through the fabric, his hard cock rests on you in the stomach.'
+		'He whispers to you, go to the toilet.'
+
+		act 'Finish dance':
+			cla
+			bfa = bfa + 1
+			xgt'kafeM','end'
+		end
+		act 'Going to the bathroom':xgt'kafeM','tualet'
+	end
+end
+
+if $ARGS[0] = 'tualet':
+	minut = minut + 30
+	horny = horny + 10
+
+	'<<$boyA>> You pulled the toilet and began to knead already open your chest and between the legs to climb to you.'
+
+	act 'Make a blowjob':gt'kafeM','bj'
+	act 'Bend over the toilet':gt'kafeM','sex'
+end
+
+if $ARGS[0] = 'sex':
+	*clr
+	sex = sex + 1
+	sexa += 1
+	vagina = vagina + 1
+	horny = horny + SUB
+	bfa = bfa + 2
+	gs'brosok'
+
+	'<center><img src="images/picVA/kafe.jpg"></center>'
+	'You got his penis out of his pants and masturbate him to start, <<$boyA>> He took out a condom and put on the penis, Then he made you cancer over the toilet and drove to your quivering pussy a <<$dick>> inch dick.'
+
+	if horny >= 90:
+		horny = 0
+		manna = manna + 15
+		willpower = willpower + 15
+		orgasm = orgasm + 1
+
+		'You feel like something is growing inside of you and all of your bottom turned into a blazing fire pleasant fire, a minute later smooth movements on the penis you had to plug his mouth with his hand, that would not scream of orgasm.'
+	end
+
+	'Soon <<$boyA>> I broke down and ended in a condom.'
+
+	act 'Further':gt'kafeM','end'
+end
+
+if $ARGS[0] = 'bj':
+	*clr
+	bj = bj + 1
+	bja += 1
+	swallow = swallow + 1
+	cumlip = cumlip + 1
+	horny = horny + SUB
+	bfa = bfa + 2
+	gs'brosok'
+
+	'<center><img src="images/picVA/kafe1.jpg"></center>'
+	'You got his penis out of his pants and masturbate him to start, then squatted in front of him, and around his lips slowly began to suck it <<$dick>> inch dick in the toilet.'
+	'Soon <<$boyA>> I broke down and finished in your mouth, I stuffed it with his tart sperm, you swallow sperm, but it still poured out of your mouth and ran down her lips and chin.'
+	'You devotedly looked into the eyes of a guy with his semen smeared face.'
+
+	act 'Further':gt'kafeM','end'
+end
+
+if $ARGS[0] = 'end':
+	minut = minut + 30
+
+	'<<$boyA>> He proposed to hold you.'
+
+	act 'Home':gt'sexm','start'
+end
+--- kafeM ---------------------------------
+

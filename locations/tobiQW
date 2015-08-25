@@ -1,0 +1,157 @@
+# tobiQW
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	tobiQW = 1
+	minut = minut + 60
+
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(Toby) - Hello Mishan, how`s it going?'
+	'You simply dumbfounded by surprise, in your bedroom is Toby and he obviously knows who you are.'
+
+	act 'How did you find me?':gt'tobiQW','1'
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - How did you find me?'
+	'(Toby) - Oh, okay, not that it was difficult to. Our organization has always greatly underestimated. Even the owner Karin miscalculated.'
+
+	act 'The owner Karin?':gt'tobiQW','2'
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - The owner Karin?'
+	'(Toby) - Oh, holy simplicity. Of course, Karin saved you from the evil Toby and teaching you magic. She is good, Toby bad and the ugly. What naivety. Karin a pawn in someone else`s game.'
+	'(Toby) - sit down, we have a long conversation, I kill you I`m not going, if going, would not you sharpen fritters.'
+	'You sat on the bed. Toby began to tell.'
+	'(Toby) - When I took the amulet, I`m not taking you miscalculated, I did not know that the power passed to you. When I got back to the room, you were gone, There was no trace, someone obviously very well cleaned up all traces. This someone, not weaker than me. Remember this fact, Karin silenok not enough so close to me.'
+	'(Toby) - The next day I find out about your alleged death. And this is where the owner Karin made his biggest mistake.'
+	'(You) - which? Everything seems to go smoothly.'
+	'(Toby) - Yes, all passed smoothly, we waited for the funeral of the body and then it got. Perfect copy, masterful, Karin can not do it, but I did not even know about its existence.'
+	'(Toby) - But the owner, Karin, though many know about the Order of Dawn, but still not enough. He did not know, that Payne, He has the ability to find the souls of the dead and bring them back to life. We brought the body to life, and it turned out, that this man does not have anything to do with you. Someone just took a passer-by in the street, I made him your looks and killed him. Payne also has the ability to see everything in person, even the time of his birth, and the eyes of the man, Unfortunately this spell kills guinea. Payne saw all.'
+	'(You) - Nifiga Statement, What`s that for a Payne?'
+	'(Toby) - Payne, the true owner of everything, that is in the tomb. He is a true master of the force, that you. He avatar Rikudo, the living embodiment of God, capable of destroying a city traffic, raise the dead, see through people, change his body as he pleases, have as many bodies at the same time, control the weather, gravity, live in several worlds, see his eyes the entire continent, so, even the mouse does not slip from his sight, and God knows what he has, it is incomprehensible even to me.'
+	'You shake your head in puzzlement. Guy this very Payne, It has managed to me to go his way.'
+
+	act 'So who is the owner of Karin and that he should?':gt'tobiQW','3'
+end
+
+if $ARGS[0] = '3':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - So who is the owner of Karin and that he should?'
+	'(Toby) - This is the most interesting! But to continue the order. When Payne checked memory depicting a corpse you, he did not see the face magician, but I heard his voice, vile snake hiss, it could only be Orochimaru.'
+	'(You) - Orochimaru? I never heard of such a.'
+	'(Toby) - Not surprising. He was not looking, that would head off tear off only the dead mages and lazy. But his name does not even try to say out loud, and then suddenly courted him on his head, He is a real threat to the strong magicians. We once they were friendly with him, he was a Dawn.'
+	'(Toby) - He is an exceptionally gifted magician, very wise, ancient and immortal sorcerer. It owns nearly all the possible techniques of magic, many of his techniques beyond comprehension.'
+	'(Toby) - But Orochimaru pay dearly for immortality. There is no eternal life without eternal pay for it. His real body is already dead, he lives in other people`s bodies. These donors are called vessels bodies, They receptacle of his soul. However, vessels do not live long, all three, four years, then the vessel rejects the soul of Orochimaru. And the power of Orochimaru is limited by the vessel.'
+	'(Toby) - So, after inspection body, It becomes clear, you out from under our nose led Orochimaru. We began to track it, Payne can see everything, that is the rain, it was he who sheds it as often. We tracked down this way Orochimaru, he once showed his snake`s face in the rain. But there was no sign of, he took power himself. We concluded, you`re still alive, Orochimaru technology enable the most unexpected turn the focus.'
+	'(You) - So you tracked me and what I need Orochimaru.'
+	'(Toby) - Oh stupid youth. Yes Orochimaru wants your body to make a vessel for your soul. He`s using you, Karin coached and developed, what would your body came into full force, do not forget, its level is tied to the strength of the vessel.'
+	'(Toby) - Karin wanted to spit on you, it develops your body, for, What would her master Orochimaru could use it as a new vessel. Do you realize what fate has prepared you Karin? You simply erase and take your place Orochimaru.'
+	'You think "Damn, I was between a rock and a hard place Toby as Orochimaru, and what to do now?"'
+	'(Toby) - By changing your floor Orochimaru made you useless to me and Payne, We do not need or do not need. Frankly, Now we spit on you. I kept looking for you, Only the desire to understand the situation. Understand Orochimaru plans to this effect.'
+	'(Toby) - It was necessary to use as a spy and Seetzen and strength Payne that all magicians would track, We found Karin, but we do not know, but we found Juugo, and only then we will know for sure that he is is. It is an experiment of Orochimaru.'
+	'(Toby) - Then you saw Payne. How do you go to Karin and she teaches you, Payne saw you you ride through the levels magicity. Any magician decades to grow your current level. And how much do you have time for this needed? You are learning the art of the hour, and magicians over the years they are taught. It became clear, you imagine yourself. So I came to your house.'
+
+	act 'And you can not make me a man again?':gt'tobiQW','4'
+end
+
+if $ARGS[0] = '4':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - And you can not make me a man again?'
+	'Toby shook his head.'
+	'(Toby) - Do not think, that magicians are all the same, that if one could then, else can accurately. No, I have no idea how Orochimaru did, what he did to you. And it was he, instead Karin. You did not surprise, she even treat you can not? She was too weak for such tricks the body.'
+	'(Toby) - And now to the main. Yes, you are not interested in us, we really can not now take your power. But this does not mean, we just give up such a powerful vessel Orochimaru.'
+	'(Toby) - I would have already tried to kill Orochimaru, Payne or sent to do it, I think Payne easily have killed him in battle. The problem is, that`s fine, too, Orochimaru and he is able to avoid battle.'
+	'(Toby) - We corny can not get close to it in order, that would kill him.'
+
+	act 'I doubt that I could do it':gt'tobiQW','5'
+end
+
+if $ARGS[0] = '5':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - I doubt that I could do it'
+	'(Toby) - And I have no doubt. You can not do it. But we have this from you, and do not require. We want to drive into the trap Orochimaru.'
+	'(Toby) - Will you continue as if nothing had happened will learn Karin. We will prepare you in parallel, that you could cope with Karin and Juugo. When the time comes, you go and kill Karin and Juugo. If it does anyone any of the Dawn, Orochimaru will understand, as well as himself, he will try to grab you. You need it as a vessel, and so it just from you not to unhook.'
+	'(Toby) - Here is what we will lay the ancient serpent, We put an end to its history. Well Plan?'
+
+	act 'And if I refuse?':gt'tobiQW','6'
+end
+
+if $ARGS[0] = '6':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - And if I refuse?'
+	'(Toby) - Then I`m sorry, nothing personal, but I will kill you right now!. Orochimaru did not want you to give me, I do not want you to give him.'
+
+	act 'If Orochimaru dies, I`ll always be a woman?':gt'tobiQW','7'
+end
+
+if $ARGS[0] = '7':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - If Orochimaru dies, I`ll always be a woman?'
+	'(Toby) - Anyway, forever you`ll be a woman. Orochimaru would never give up the temptation to take power into their own hands Rikudo and return you to your previous form would mean for him to give me the strength, what he will not do, even on pain of death.'
+
+	act 'What about Tsukuemi? It`s true?':gt'tobiQW','8'
+end
+
+if $ARGS[0] = '8':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - What about Tsukuemi? It`s true?'
+	'(Toby) - I have no idea what you wove Karin. Just tell the truth. Our Order of Dawn is not rigid structure, rather, we followers. Payne and I take strategic decisions, the rest for various reasons perform them.'
+	'(Toby) - We are all united by one goal, maintaining operational Tsukuemi, For this, we regularly have to catch demons in other worlds and fill them with the power Tsukuemi. It`s hard and rewarding work. And we`re doing it for the sake of humanity that would have existed.'
+	'(Toby) - Yes, You heard right, we do it for the people. We remember those days, when people knew about magic, This was a time of constant war, humanity chokes the blood. Magee went to war at the age of 6 - 10 years, survived at least until 16 units. All they fought against all. Violence begets violence. Me in 7 years during the fight broke up the right side of the face. I lost my eye and became compelled to hide it, what was left of my face behind the mask. I went out the mighty magician, who then killed. All the people I knew and loved, I killed and I could not do anything about it. You just can not imagine a world in which almost all the magicians with the forces capable of destroying entire cities. Banal drunken brawl in a tavern is wrapped in a bloody mess with thousands of victims. People ran wild and destroy each other. Mankind fell on the edge of the abyss. Then I decided to put an end to this endless slaughter.'
+	'(Toby) - I founded the Order of Dawn. In the beginning we were just mercenaries, We need the money, we have been in the order of only a very powerful magicians, then I met Payne, he, too, wanted to stop the eternal war mages. We have joined forces, They captured the demons and I created Tsukuemi.'
+	'(Toby) - Tsukuemi causes people not to believe in magic, it makes forget about it. Gradually decreasing the number of magicians. Finally, forget about magic at all.'
+	'(Toby) - Of course, this situation is not like other magicians. Therefore we are in a constant struggle. At the Dawn no friends, Only enemies. We have shouldered this burden and bear your cross for the sake of humanity as a whole.'
+
+	act 'You`re going to teach me?':gt'tobiQW','9'
+end
+
+if $ARGS[0] = '9':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - What about Tsukuemi? It`s true?'
+	'(Toby) - I have no idea what you wove Karin. Just tell the truth. Our Order of Dawn is not rigid structure, rather, we followers. Payne and I take strategic decisions, the rest for various reasons perform them.'
+	'(Toby) - We are all united by one goal, maintaining operational Tsukuemi, For this, we regularly have to catch demons in other worlds and fill them with the power Tsukuemi. It`s hard and rewarding work. And we`re doing it for the sake of humanity that would have existed.'
+	'(Toby) - Yes, You heard right, we do it for the people. We remember those days, when people knew about magic, This was a time of constant war, humanity chokes the blood. Magee went to war at the age of 6 - 10 years, survived at least until 16 units. All they fought against all. Violence begets violence. Me in 7 years during the fight broke up the right side of the face. I lost my eye and became compelled to hide it, what was left of my face behind the mask. I threw a dying friend, but I did not die, I went out the mighty magician, who then killed. All the people I knew and loved, I killed and I could not do anything about it. Then I decided to put an end to this carnage passed away.'
+	'(Toby) - I founded the Order of Dawn. In the beginning we were just mercenaries, We need the money, we have been in the order of only a very powerful magicians, then I met Payne, he, too, wanted to stop the eternal war mages. We have joined forces, They captured the demons and I created Tsukuemi.'
+	'(Toby) - Tsukuemi causes people not to believe in magic, it makes forget about it. Gradually decreasing the number of magicians. Finally, forget about magic at all. I stripped the magic world of magic. People are not ready for this level of forces.'
+	'(Toby) - Of course, this situation is not like other magicians. Therefore we are in a constant struggle. At the Dawn no friends, Only enemies, besides we still have a whole bunch of magicians who managed to escape the influence of Tsukuemi, For example, save a Hidden Order Foliage, they are at every opportunity we try to insert a stick in the wheel. But we have charged this burden voluntarily and bear your cross for the sake of humanity as a whole, rather than a handful of magicians who want to assert themselves. Especially zealous magicians, going to the seizure of power we consume, those who try to interfere in the work we are also destroying Tsukuemi. The rest do not touch, until they are on the rampage. Well, except for the order hidden in the foliage, with them we implacable war.'
+
+	act 'You`re going to teach me?':gt'tobiQW','10'
+end
+
+if $ARGS[0] = '10':
+	cla
+	*clr
+	'<center><img src="images/picPRE/tobiPRE.jpg"></center>'
+	'(You) - You`re going to teach me?'
+	'(Toby) - With this there is something which problems. My techniques you can not learn. They are too high level. Force Payne generally something otherworldly, What can you can learn something from him, but not now. I would like to, what would you teach Kakuzu. But he has a very nasty character. He will not teach you for free, Even if I ask. He is the oldest of living on the planet, and the most greedy, I will ask him, that he taught you, but it zli, and he will kill you, no kidding. I`m not just talking, Kakuzu that the old man of the most harmful of all living, he did not just kill his teammates. I forgive him everything only from the fact, he was the only one in the world has simultaneously by all schools of magic.'
+	'(Toby) - This is harmful to this old man, I want you to send. You will find him in the northern region. Here`s a piece of paper with his address. And I have to go.'
+	'After these words around the eye Toby creates a vortex in which he was involved in a matter of seconds.'
+
+	act 'Off to bed':gt'bedr'
+	act 'Try to sleep':gt'bed2','dosip'
+end
+--- tobiQW ---------------------------------
+

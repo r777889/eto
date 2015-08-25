@@ -1,0 +1,158 @@
+# dinsister
+$narkosisterspalila = {
+	cls
+	cla
+	gs'stat'
+	!'sister slept on drugs.'
+	'<center><img src="images/qwest/alter/sister.jpg"></center>'
+    ' - Perhaps it Dogadov, I junked, - We think you - it is necessary to-do something, so as not burned.'
+    'And then my sister asks you a question - Light, you stoned?'
+    act'Answer: - No':
+	    cla
+	    set narkossister = 1
+	    set narkosstrah = 1
+	    !set narkosis_count = 3
+	    gs'stat'
+	    'You adversely waving head - "No," - and then move away ,whatever sister did not notice, you stoned'
+        act '<B>Move away</B>':gt $loc, $metka
+	end
+	act'Share':
+		    cls
+		    set narkossista = 1
+		    gs'stat'
+		    '<center><img src="images/qwest/alter/sister.jpg"></center>'
+		    'You tell sister, what did you learn about that, where to buy drugs, and you wanted to try terribly, that is randomly and just once and will no longer.'
+		    'Sister strictly looked at you and said, - Light I`m not a mother kazhu, but the first and last time, it was not worth it at all to do. If you continue, then your zhiz will not be worth a damn.'
+            act '<B>Move away</B>':gt $loc, $metka
+        exit
+	end
+}
+
+$d_sister[1]={
+!scandal with her sister
+'You are trying to talk to her sister, but she refuses to talk to you.'
+	if sistersorryday!daystart:
+		act'Apologize':
+		cla
+		sistersorryday=daystart
+		sister+=(intel/10)+(vnesh/5)
+		gs'stat'
+		'You apologize to my sister and she, it seems, I forgive you.'
+		act '<B>Move away</B>':gt $loc, $metka
+		end
+	end
+}
+$d_sister[2]={
+!strained relations
+'You are trying to talk to her sister, but she talks to you dry.'
+	if sistersorryday!daystart:
+		act'Trying to smooth relations':
+		cla
+		sistersorryday=daystart
+		sister+=(intel/10)+(vnesh/5)
+		gs'stat'
+		'You suck up to my sister and she, it seems, It begins to treat you better.'
+		act '<B>Move away</B>':gt $loc, $metka
+		end
+	end
+}
+$d_sister[3]={
+	!good relationship
+	'You have decided to talk to my sister.'
+	sisterTalk = rand (1,18)
+	if sisterTalk = 1:
+		'You chat with a sister and she says,, it is possible to rent an apartment in the city and live, work there, but it is in the town are satisfied.'
+	end
+	if sisterTalk = 2 and trfatherQW = 0:
+		trfatherQW = 1
+		'You asked about the real father Ani. She grinned: "Light, I was 4 the year when they broke up. I do not remember ever seen. Nurse does not like to talk details. But like you as our real father went away-in another town. I also remember, he worked as a truck driver on large wagons, maybe sometimes it is passing by our town."'
+	elseif sisterTalk = 2 and trfatherQW >= 1:
+		sisterTalk += 1
+	end
+	if sisterTalk = 3:
+		'You asked about Anna University. She grinned: "I almost came, gleaning points. Who scored, the fig need it the whole university. What I will give this piece of paper?"'
+	end
+	if sisterTalk = 4:
+		'You asked Annie about her boyfriend. She smiled: "Well, I have a boyfriend. Although nothing serious. He told me more than a friend."'
+	end
+	if sisterTalk = 5:
+		'You started talking with Anya, It tells you about the boys, she met, about parties, about cosmetics.'
+	end
+	if sisterTalk = 6:
+		'You chat with a sister, It tells you about the new dress, who brought to the store today.'
+	end
+	if sisterTalk = 7:
+		'You chat with a sister, movie stars discussing and sharing fantasies about what, with any of them would like to have sex.'
+	end
+	if sisterTalk = 8:
+		'Anna talks about sports clubs in the House of Culture, and is recognized, that sport is good for the figure, but she was too lazy to go there.'
+	end
+	if sisterTalk = 9:
+		'Anya says, that one of her friends flew from Man, who did not manage to get out of it. And he says, that we should be smarter, but because you recognized, What to buy in the pharmacy pill.'
+	end
+	if sisterTalk = 10:
+		'Anya says, she once winter came out without a coat and a bad cold.'
+	end
+	if sisterTalk = 11:
+		'You chat with a sister, discussing the latest trends in fashion.'
+	end
+	if sisterTalk = 12:
+		'Anya recognized, that before she was fond of diets, but they are deteriorated skin and went pryshi, and the start of this match, so now it cracks for three and it only gets more beautiful.'
+	end
+	if sisterTalk = 13:
+		'You chat with a sister and she tells you, that went before the dance, but she quickly tired.'
+	end
+	if sisterTalk = 14:
+		'You chat with a sister and she advises you where-some earn.'
+	end
+	if sisterTalk = 15:
+		'You chat with a sister and she tells you, if wander through the market, you can find a lot of interesting and cheap.'
+	end
+	if sisterTalk = 16:
+		'Anya tells you the horror stories about, as one pretty girl not washed or shaved legs, and then I became so terrible, that its per kilometer all obbegat, and advises you to take care of body.'
+	end
+	if sisterTalk = 17:
+		'You chat with a sister, she says, that her ex-boyfriend was a weirdo: "How-He told me, pier, I love you as much, how to shit in the sea. On the sea together, we do not go..."'
+	end
+	if sisterTalk = 18:
+		'You chat with a sister, Anya asks, do not you think, that her left eyebrow much sexual rights?'
+	end
+}
+$d_sistersexstories[1]={
+gs'stat'
+sisterStories = rand (1,8)
+	if sisterStories = 1:
+	'<center><img src="images/qwest/alter/sister/sister1.jpg"></center>'
+	'Sister shows off your, how good her boyfriend in bed.'
+	end
+	if sisterStories = 2:
+	'<center><img src="images/qwest/alter/sister/sister2.jpg"></center>'
+	'Sister tells you the story of, it with my girlfriend sucked his friend on his birthday.'
+	end
+	if sisterStories = 3:
+	'<center><img src="images/qwest/alter/sister/sister3.jpg"></center>'
+	'My sister recognized you, that just loves in the ass: - My mother just checking reference, so I cheated a little... - add a little blush: - and I enjoyed it very much.'
+	end
+	if sisterStories = 4:
+	'<center><img src="images/qwest/alter/sister/sister4.jpg"></center>'
+	'Sister tells you, it makes blowjob her boyfriend: - Oh, You should have seen his face!'
+	end
+	if sisterStories = 5:
+	'<center><img src="images/qwest/alter/sister/sister5.jpg"></center>'
+	'Sister tells you, in school classmate helped her with the study of a foreign language.'
+	end
+	if sisterStories = 6:
+	'<center><img src="images/qwest/alter/sister/sister6.jpg"></center>'
+	'My sister recognized you, that just loves, when she was fucked in the mouth.'
+	end
+	if sisterStories = 7:
+	'<center><img src="images/qwest/alter/sister/sister7.jpg"></center>'
+	'My sister recognized you, that one of the parties gave herself just two of.'
+	end
+	if sisterStories = 8:
+	'<center><img src="images/qwest/alter/sister/sister8.jpg"></center>'
+	'My sister recognized you, that wants to have sex with a black man.'
+	end
+}
+--- dinsister ---------------------------------
+

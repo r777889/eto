@@ -1,0 +1,12 @@
+# sosedMisha
+gs'stat'
+gs 'dinfather'
+'<center><B><font color=maroon>Neighbor Uncle Misha</font></B></center>'
+'<center><img src="images/qwest/alter/Misha.jpg" ></center>'
+'Your neighbor Misha, He lives with you on the same floor. My mother always forbid you to communicate with him, speaking, that he was a-the former local crime boss, but he was always polite to you and benevolent.'
+''
+
+act '<B>Move away</B>':gt'gargazel'
+
+--- sosedMisha ---------------------------------
+

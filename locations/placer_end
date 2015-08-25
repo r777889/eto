@@ -1,0 +1,26 @@
+# placer_end
+gs'stat'
+
+if Frend_num = 14:
+	KatjaHorny += 10
+
+	'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+
+	if KatjaOhrenet > 0:
+		if KatjaOhrenet = 1:'Katya goes all the way in silence, then mutters "Ohrenet possible, I just fucked quite familiar guy."'
+		if KatjaOhrenet = 2:'Katya goes all the way in silence, then mutters "Ohrenet possible, I just fucked two little friends Man."'
+		if KatjaOhrenet = 3:'Katya goes all the way in silence, then mutters "Ohrenet possible, together we just fuck a whole pack Gopnik."'
+		if KatjaOhrenet = 4:'Katya goes all the way in silence, then mutters "Ohrenet possible, we both like complete sluts fucking with strange guys."'
+		if KatjaOhrenet = 5:'Katya goes all the way in silence, then mutters "Ohrenet possible, we both just fucked with the unfamiliar guy."'
+		KatjaOhrenet = 0
+	end
+
+	'You said goodbye to Katya, and she went to his home.'
+
+	act 'Escape':
+		Frend_num = 0
+		gt'gorodok'
+	end
+end
+--- placer_end ---------------------------------
+

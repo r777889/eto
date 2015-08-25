@@ -1,0 +1,33 @@
+# volAndGev
+gs'stat'
+
+if andGevknow = 0:
+	if vnesh < 15:
+		'The boy mumbled something unintelligible, his words you understand only words bowlegged cow.'
+	else
+		'The boy smiled looking at you.'
+	end
+
+	if dom > 0:
+		act 'Swear Man':
+			cls
+			gs'stat'
+
+			'You cursed Man, for what he roughly pushed you.'
+
+			if vnesh < 15:
+				'What a guy showed you factor and grinned.'
+			else
+				'To which the guy just shrugged.'
+			end
+
+			act 'Escape':gt'gdksport'
+		end
+	end
+elseif andGevknow > 0:
+	!
+end
+
+act 'Escape':gt'gdksport'
+--- volAndGev ---------------------------------
+

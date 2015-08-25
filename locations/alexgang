@@ -1,0 +1,92 @@
+# alexgang
+minut += 30
+horny += 10
+gs'stat'
+
+'Arriving at the apartment Lech that hour dragged various alcohol and made snack, Then you sit down at a table in the hall talking to each other.'
+'At that moment the doorbell rang, Lech went to open. You heard a man`s voice in the hallway "Hello Lech, I`m not too late?" Lech said "Come."'
+
+if alexgangbang = 0:
+	'You`re a little surprised, Who could it be. At this moment I entered the room Alexander E., nightclub owner. He greeted you and sat on a chair.'
+	'Alex began pouring alcohol you drink three steel.'
+	'Finally Alex put down the bottle aside and pulled out a member pants. "Crawl here" You looked at him in surprise and looked at Sasha. Lech urged you "Come on, not tushuysya, all right."'
+else
+	'Alexander entered the room E., nightclub owner. He greeted you and sat on a chair.'
+	'Alex began pouring alcohol you drink three steel.'
+	'Finally Alex put down the bottle aside and pulled out a member pants. "Crawl here"'
+end
+
+act 'Kneel down and take in the mouth':
+	cls
+	alexgangbang += 1
+	horny += 10
+	bj += 1
+	minut += 10
+	gs'stat'
+
+	picrand = RAND(0,13)
+	if picrand = 0:'<center><img src="images/qwest/alexey/bj.jpg"></center>'
+	if picrand = 1:'<center><img src="images/qwest/alexey/bj1.jpg"></center>'
+	if picrand = 2:'<center><img src="images/qwest/alexey/bj2.jpg"></center>'
+	if picrand = 3:'<center><img src="images/qwest/alexey/bj3.jpg"></center>'
+	if picrand = 4:'<center><img src="images/qwest/alexey/bj4.jpg"></center>'
+	if picrand = 5:'<center><img src="images/qwest/alexey/bj5.jpg"></center>'
+	if picrand = 6:'<center><img src="images/qwest/alexey/bj6.jpg"></center>'
+	if picrand = 7:'<center><img src="images/qwest/alexey/bj7.jpg"></center>'
+	if picrand = 8:'<center><img src="images/qwest/alexey/bj8.jpg"></center>'
+	if picrand = 9:'<center><img src="images/qwest/alexey/bj9.jpg"></center>'
+	if picrand = 10:'<center><img src="images/qwest/alexey/bj10.jpg"></center>'
+	if picrand = 11:'<center><img src="images/qwest/alexey/bj11.jpg"></center>'
+	if picrand = 12:'<center><img src="images/qwest/alexey/bj12.jpg"></center>'
+	if picrand = 13:'<center><img src="images/qwest/alexey/bj13.jpg"></center>'
+
+	'You knelt before him and clasped his dick <<$liptalk>> We started sucking. Alex sat relaxed and caught the buzz, Finally he dismissed you from the penis and resulted in the bed.'
+
+	gs'oral','0'
+
+	'Lech you raised and moved to the bed where Sasha was sitting. He put you on all fours facing Sasha.'
+
+	act 'Take in the mouth Sasha':
+		cls
+		if sashaclubsex = 0:sashaclubsex = 1 & guy += 1
+		gang += 1
+		alexgangbang += 1
+		horny += 10
+		bj += 1
+		minut += 10
+		$nameV = 'Alexey'
+		$boy = $nameV
+		dick = 20
+		silavag = 2
+		pose = 1
+		cumlip += 1
+		swallow += 1
+		gs'stat'
+
+		picrand = RAND(0,9)
+		if picrand = 0:'<center><img src="images/qwest/alexey/gang.jpg"></center>'
+		if picrand = 1:'<center><img src="images/qwest/alexey/gang1.jpg"></center>'
+		if picrand = 2:'<center><img src="images/qwest/alexey/gang2.jpg"></center>'
+		if picrand = 3:'<center><img src="images/qwest/alexey/gang3.jpg"></center>'
+		if picrand = 4:'<center><img src="images/qwest/alexey/gang4.jpg"></center>'
+		if picrand = 5:'<center><img src="images/qwest/alexey/gang5.jpg"></center>'
+		if picrand = 6:'<center><img src="images/qwest/alexey/gang6.jpg"></center>'
+		if picrand = 7:'<center><img src="images/qwest/alexey/gang7.jpg"></center>'
+		if picrand = 8:'<center><img src="images/qwest/alexey/gang8.jpg"></center>'
+		if picrand = 9:'<center><img src="images/qwest/alexey/gang9.jpg"></center>'
+
+		'Standing on all fours, you began to suck Sasha. He was not a great and soft dick hard standing in your mouth. But the hard work you made him a member of the strain.'
+
+		dynamic $sexstart
+
+		'Your body shakes his ass from the blows of the frictions at Lehi and nebylo you need to move your head during a blowjob, only had enough work sponges grasping member snugly.'
+
+		dynamic $sexstart2
+
+		'Sasha also finished your mouth. Sperm was not much and you can easily swallow all.'
+
+		act 'Escape':gt'nord'
+	end
+end
+--- alexgang ---------------------------------
+

@@ -1,0 +1,20 @@
+# NatBelGo
+gs'stat'
+
+'<center><b><font color = maroon><<$npcName[16]>> <<$npcSurName[16]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/16.jpg"></center>'
+'You went up to Natasha and she asked you, Will you go to her house, teach lessons.'
+
+act 'To go with Natasha':
+	cls
+	minut += 15
+	gs'stat'
+
+	'<center><b><font color = maroon><<$npcName[14]>> <<$npcSurName[16]>></font></b></center>'
+	'<center><img src="images/qwest/alter/npc/16.jpg"></center>'
+	'You 15 minutes walking down the street to Natasha`s house discussing all the small stuff.'
+
+	act 'Log in to the apartment':gt'NatBelHome'
+end
+--- NatBelGo ---------------------------------
+

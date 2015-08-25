@@ -1,0 +1,63 @@
+# FightE2
+$resultUderDinE = {
+	cls
+
+	if Aktiv > Passiv:
+		pointE += 1
+		KuE += 1
+
+		'<center><img src="images/pic/fight/f1u.jpg"></center>'
+		'<<$nameE>> You have successfully captures'
+
+		act '...':stoper = 0 & gt'fightE1'
+	elseif Aktiv < Passiv:
+		point += 1
+		Kz += 1
+
+		'<center><img src="images/pic/fight/f1u1.jpg"></center>'
+		'<<$nameE>> you can not do anything and you turn.'
+
+		act '...':stoper = 0 & gt'fightE3'
+	elseif Aktiv = Passiv:
+		'<center><img src="images/pic/fight/f1u2.jpg"></center>'
+		'You have two little turns and you are struggling without success.'
+
+		act '...':gt $curloc
+	end
+}
+
+!You from the bottom on the back after throwing -15%
+!Opponent top
+
+koef = 85
+koefE = 100
+rMin -= 1
+stoper += 1
+gs'fightStat'
+
+'<center><img src="images/pic/fight/f1.jpg"></center>'
+'You lie below a little stunned after throwing, and <<$nameE>> He is sitting on you.'
+
+if endur <= 0 or lustw <= 0:gt'SubLoss'
+if endurE <= 0 or lustwE <= 0:gt'SubWin'
+
+if stoper < 3:
+	if rMin > 0:
+		dynamic $uderdinE
+		dynamic $resultUderDinE
+
+		exit
+	else
+		'The referee blows a whistle and throws you. End of round.'
+
+		act 'Up':gt'RoundEnd'
+	end
+elseif stoper >= 3:
+	point += 1
+
+	'The referee blows a whistle and throws you. Time to attack rival left. You get one point.'
+
+	act 'Up':gt'RoundStop'
+end
+--- FightE2 ---------------------------------
+

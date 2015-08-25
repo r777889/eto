@@ -1,0 +1,32 @@
+# strela
+gs'stat'
+
+'You came to the car and greeted the bandits. Those nod your head. You looked around and saw, that about six trucks worth of strong guys, lean ringleader of the gang, nicknamed White, Kotov, Red, Shulga, but on the whole against the company is the only one Fedor. White went to Fyodor "I understand, you are alone and no one of you will say?" Fyodor frowned and nodded. White said quietly "Guys neponyatkah, They come to me, We outlined the situation. You`re the girl decided to discourage Kotova, This of course is nonsense, It is to decide for yourself, together. But you particularly rude kid, this is no longer the order. So I`m asking you, You agree, that sent boys?" Fyodor muttered "Sent, but they first started!" White calmly explained "You recognized, that the rude kid. And you guys teach the mind to reason, but apparently bad to learn. You have not yet realized their error. Now you are aware or not?" Fyodor gloomy kinvul "Realized." White noticed "Well, good. You specifically rude kid, now you`re aware of it. During his rudeness is necessary to pay. In short, with you 30 pcs, till tomorrow, if you do not bring it up tomorrow, then turn on the meter, and for each day you will have more in pieces." Fedor paled "How do I kind of money? I was just a schoolboy?" White shrugged "I think before I had, before that, beginning the rude kid, and now pay." Fyodor completely wilted and depressed silent, Shulga jumped him "What, boys, let us make him a discount, Now suck me and ask him the favor, anyway, this rogue will not be able to scrape together even cleaver, not that much thirty mowers." White grinned and turned to the red-haired, "Well, your buddy and raisers. But in principle, if you guys do not mind such a decision, I, too,." Kotov shrugged "Do not care." Red grinned "I do not mind. Well, Fyodor, 30 pcs, or currently have otsosesh Shulga?" Fyodor turned pale and stepped back "What do you mean? I`m not a fag!" Shulga went over to him and mischievously said, "Nobody said, you fagot. You have offered to pay the debt immediately, the easy. Sosnesh now and you will not have to do, and refuse, then preparing thirty tonight, and then put on the counter, then your parents and hut sell, what would your duty to pay. Now you know what situation you?" Fedor broke down and cried "Guys, Well, it is not necessary! I do not have that kind of money! I did not know, so that everything will turn out!" The boys looked at with indifference Fedka. White noted with disgust "Snot erase, and then looking disgusted, decides, I give you one minute." Shulga unbuttoned his pants "Come on, Do not be dismayed, a couple of minutes and no debt." Fyodor hesitated openly. White grinned looking at fluctuations Fedor "Look those ka, and he has range."'
+
+act 'See what is happening':
+	cls
+	$npcText[5] = 'Fedka lowered the schoolyard. He slammed into her mouth Shulga. Now everyone calls only Fyodor Masha.'
+	grupNPC[5] = 50
+	grupTipe[5] = -1
+	fedorKozlovQW = -10
+	gs'stat'
+
+	'Fedor even stronger wept and knelt before Shulga. Member Shulga instantly cured and he buried his lips Fedor, Fedor started to suck dick. Shulga hyenas cackled with laughter "Bite, knock your teeth! Wafers.". Hefty lads smiled exchanging glances "Well Shulga, a circus arranged." Cats turned away in disgust. Red grinned and pulled out a cell phone "Zashkvarili kid, it is necessary to click on the memory." Finally Shulga muffled groan and began to cum in her mouth Fedor. "Swallow fag! Do not try to drop a drop!" Shulga took out a member of his mouth and Fyodor Fyodor pulled away wiping his mouth with his hand. "Well cocksucker? It is now your name will be? Fedor is a man`s name, and you`re not a kid, You Shmarev. Will is now Masha! And you all polzovat may at any time. And if you fag least something vyaknesh, fucking you. You`re no longer a man, you cocksucker! Well, I understood my place?" Fyodor nodded grimly "Understood." Shulga, lifted his leg and spent the dirty soles on the face Fedor "Statement will speak in the feminine, clear?" Fyodor nodded, wiping the dirt from his face and muttered, "I understood everything." Shulga spat in the face Fede "What`s your name Shmarev?" Fyodor said "My name is Masha." White smiled and went to BMW, "Okay Tale, go, let the boys continue to play with his toy." `Brother got into the car and drove away. Shulga mocking Fyodor made him collect harchok face and lick it, Shulga finally played enough left alone Fyodor and boys went to drink a beer in the park.'
+
+	act 'Escape':gt'gorodok'
+end
+
+if money >= 30000:
+	act 'To pay money for Fedor':
+		cls
+		money -= 30000
+		dom += 10
+		gs'stat'
+
+		'You said "I`ll give him the money." White looked at you squinted "Why?" Have you looked into his eyes and answered "See disgusting." White sighed and said, "Well, that you take, you are a woman, and many do not understand, but if you so wish, then give me the money." You got the money and handed it to White, he counted them and put it in your pocket, then he turned to his bandits. "Okay boys, go." The entire team got into the car and drove away. Kotov said angrily "Okay boys, go drink beer." The boys went to the side of the square. Theodore came up to you and babbled "Thank Svetochka, you saved me, I`ll give the money, Do not worry, not immediately, piecemeal, but give!"'
+
+		act 'Escape':gt'gorodok'
+	end
+end
+--- strela ---------------------------------
+

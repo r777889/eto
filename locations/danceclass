@@ -1,0 +1,82 @@
+# danceclass
+clr
+minut = minut + 5
+razdtumbler = 0
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Dance Class</font></b></center>'
+'<center><img src="images/pic/danceclass.jpg"></center>'
+'Modern room with good lighting and mirrors for the development of dance skills.'
+
+act 'Modern club dances':
+	cla
+	*clr
+	minut = minut + 120
+	fat = fat - 5
+	speed += RAND(1,3)
+	manna = manna - 5
+	sweat = sweat + 3
+	dance += RAND(5,15)
+
+	'<center><img src="images/pic/fit1.jpg"></center>'
+	if dance < 100:'You were taught modern dance club, which are very popular in discos.'
+	if dance >= 100:'You have tried to learn something new in modern club dancing, but you already know very well.'
+
+	act 'Escape':gt'fit','razd'
+end
+act 'Stritiz':
+	cla
+	*clr
+	minut = minut + 120
+	fat = fat - 5
+	agil += RAND(1,3)
+	manna = manna - 8
+	sweat = sweat + 3
+	!stripdance += 1
+
+	'<center><img src="images/pic/stripdance.jpg"></center>'
+
+	if dance >= 100:
+		stripdance += RAND(2,10)
+
+		'You were taught to undress passionately dancing to the music.'
+		if stripdance >= 100:'But you could not learn anything new, all that you have and know how well you know.'
+	elseif dance < 100:
+		dance += RAND(5,15)
+
+		'Striptease for you too complex, you can not perform the dance moves combining them strip. The teacher encourages you to learn how to start an ordinary club dances.'
+	end
+
+	act 'Escape':gt'fit','razd'
+end
+act 'Dancing on the pole':
+	cla
+	*clr
+	minut = minut + 120
+	fat = fat - 10
+	stren += RAND(1,3)
+	vital += RAND(1,3)
+	manna = manna - 5
+	sweat = sweat + 3
+	!poledance += 1
+
+	'<center><img src="images/pic/poledance.jpg"></center>'
+
+	if dance >= 100 and stripdance >= 100 and stren >= 80:
+		poledance += RAND(2,5)
+
+		'You were taught various acrobatics on the pole.'
+		if poledance >= 100:'But you could not learn anything new, all that you have and know how well you know.'
+	elseif dance < 100 or stripdance < 100 or stren < 80:
+		'Already in the first exercise, you crashed a pole. It seems this kind of dance you until the teeth'
+		if stren < 80:'The teacher explained to you that dances on a pole, in addition to the ability to dance, require more physical strength.'
+	end
+
+	act 'Escape':gt'fit','razd'
+end
+--- danceclass ---------------------------------
+

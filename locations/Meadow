@@ -1,0 +1,468 @@
+# Meadow
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>Meadow</H4></center>'
+'<center><img src="images/qwest/gadukino/meadow.jpg"></center>'
+'Quiet deserted place, well hidden by green bushes civilization.'
+if mirainmeadow = 1:'In a clearing enthusiastically spinning <a href="exec: dynamic $mirameadow ">Of the world</a>.'
+if meadow = 3 and mirainmeadow = 0:temp = RAND(0,20)
+if meadow = 3 and mirainmeadow = 0 and mirasextimes < 15 and temper >= 15 and sunWeather = 1 and temp = 0:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">Peace</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 2 and temper >= 20 and sunWeather = 1 and temp = 1:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">World Mitiok</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 8 and temper >= 20 and sunWeather = 1 and temp = 2:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">World Mitiok</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 10 and sunWeather = 1 and temp = 3:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">Peace with Kolyamboy</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 10 and sunWeather = 1 and temp = 4:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">Peace with Vasyanya</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 30 and sunWeather = 1 and temp = 5:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">Peace with Vasyanya</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 15 and sunWeather = 1 and temp = 6:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">World Mitiok, Vasyanya and Kolyamboy</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 20 and temper >= 15 and sunWeather = 1 and temp = 7:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">Peace with Vasyanya and Kolyamboy</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 30 and temper >= 25 and sunWeather = 1 and temp = 8:
+	'In a clearing you notice <a href="exec: dynamic $mirameadow ">A bunch of half-naked men village</a>.'
+end
+if meadow = 3 and mirainmeadow = 0 and miragopQW >= 20 and temper >= 30 and sunWeather = 1 and temp = 9:
+	'In a clearing you see <a href="exec: dynamic $mirameadow ">Peace</a>.'
+end
+act 'Escape':minut += 30 & mirainmeadow = 0 & gt'Gaddvor'
+
+!meadow = 1 'You`ve found a clearing'
+!meadow = 2 'You first brought it World'
+!meadow = 3 'You are allowed to come to her world without you'
+!meadow = 4 'You are forbidden to come to her world without you'
+
+$mirameadow = {
+	cls
+	minut += 2
+	gs 'stat'
+	if meadow = 2:
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		' - And I`m, Though short-lived here, but this place did not know, - cheerfully tells you Miroslava. - Now I know, where to retire, when he wants to be alone, you do not mind, truth?'
+		act 'Allow it to come here the most':
+			cls
+			meadow = 3
+			minut += 2
+			gs 'stat'
+			if miragopQW = 0:
+				'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+			elseif miragopQW > 0 and miragopQW < 4:
+				'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+			elseif miragopQW >= 4 and miragopQW < 8:
+				'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			elseif miragopQW >= 8 and miragopQW < 12:
+				'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			elseif miragopQW >= 12 and miragopQW < 20:
+				'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			elseif miragopQW >= 20:
+				'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			end
+			'You answer, you do not mind and she can come here, when it pleases, but require her promise, that she did not tell anyone about this place. Miroslava, rather like an elephant, actively nodding your head and says, that will take this secret to the grave, And if not, then, Jin, perform any three of your wishes...'
+			act 'Finish':gt 'meadow'
+		end
+		act 'Not allow':
+			cls
+			meadow = 4
+			minut += 2
+			gs 'stat'
+			if miragopQW = 0:
+				'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+			elseif miragopQW > 0 and miragopQW < 4:
+				'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+			elseif miragopQW >= 4 and miragopQW < 8:
+				'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+			elseif miragopQW >= 8 and miragopQW < 12:
+				'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+			elseif miragopQW >= 12 and miragopQW < 20:
+				'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+			elseif miragopQW >= 20:
+				'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+			end
+			'You answer it, you do not want to, so she went herself here, because that you have found this place, but you offer it to come here together. Miroslav looks pretty pained, though trying not to show it, but still polite thank you.'
+			act 'Finish':gt 'meadow'
+		end
+	elseif mirainmeadow = 1:
+		if miragopQW = 0:
+			'<center><img src="images/qwest/gadukino/Mira.jpg"></center>'
+		elseif miragopQW > 0 and miragopQW < 4:
+			'<center><img src="images/qwest/gadukino/Mira3.jpg"></center>'
+		elseif miragopQW >= 4 and miragopQW < 8:
+			'<center><img src="images/qwest/gadukino/mira0,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 8 and miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/mira1,'+rand(0,2)+'.jpg"></center>'
+		elseif miragopQW >= 12 and miragopQW < 20:
+			'<center><img src="images/qwest/gadukino/mira2,'+rand(0,5)+'.jpg"></center>'
+		elseif miragopQW >= 20:
+			'<center><img src="images/qwest/gadukino/mira3,'+rand(0,3)+'.jpg"></center>'
+		end
+		'- Wonderful place, there are so cozy and sunny!'
+		if horny >= 60 and miragopQW > 15 and temper >= 25 and sunWeather = 1:
+			act 'I Otlizhi!':
+				cls
+				minut += 5
+				if miralick = 0:miralick = 1 & girl += 1
+				orgasm += 1
+				gs 'stat'
+				if tanga = 1:
+					'<center><img src="images/qwest/gadukino/MiraLick.jpg"></center>'
+					'Peace immediately willing to sit on the grass and waited, until you get rid of excess clothing, reaching out, gently pushes it your panties...'
+					act 'Further':
+						cls
+						minut += 5
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraLick1.jpg"></center>'
+						'You enjoy, Peace is gently stroking your finger between the jaws, barely touching the clitoris...'
+						act 'Further':
+							cls
+							minut += 5
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/MiraLick2.jpg"></center>'
+							'After a couple of minutes you will eagerly get rid of panties and eyes closed, wait for, until World, pulling his tongue your clitoris, It brings you to orgasm.'
+							act 'Finish':gt 'meadow'
+						end
+					end
+				else
+					act 'Further':
+						cls
+						minut += 5
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraLick2.jpg"></center>'
+						'World and crouches submissively , pulling his tongue your clitoris, It brings you to orgasm.'
+						act 'Finish':gt 'meadow'
+					end
+				end
+			end
+		end
+		act 'Finish':gt 'meadow'
+	end
+	if meadow = 3 and mirainmeadow = 0 and mirasextimes < 15 and temper >= 15 and temper < 25 and sunWeather = 1 and temp = 0:
+		cls
+		minut += 2
+		'<center><img src="images/qwest/gadukino/MiraMeadowMastr.jpg"></center>'
+		'You`ve already gathered was to approach her, but he was surprised to notice, she unzips his pants... You, obeying the eternal feminine curiosity, You decide to watch it...'
+		act 'Watch':
+			cls
+			minut += 2
+			horny += 5
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowMastr1.jpg"></center>'
+			'Miroslava, with the power lifting panties so, they bump between her labia, furtively looks around, but you, of course, from-for dense thickets notices, and therefore continues...'
+			act 'Watch':
+				cls
+				minut += 2
+				horny += 5
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/MiraMeadowMastr2.jpg"></center>'
+				'It is a couple of seconds, slowly stoke his stomach, and then, staring eyes where-in the void, as it slowly dives into his underpants, starting stroking crotch.'
+				act 'Watch':
+					cls
+					minut += 1
+					horny += 5
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/MiraMeadowMastr3.jpg"></center>'
+					'Suddenly, she pulls out a hand and drop crotch pants Statement, that-there looking for.'
+					act 'Watch':
+						cls
+						minut += 2
+						horny += 10
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraMeadowMastr4.jpg"></center>'
+						'But soon she is bored and she takes off her jacket, and her blouse and, exposing you to their small elastic breast.'
+						act 'Watch':
+							cls
+							minut += 2
+							horny += 10
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/MiraMeadowMastr5.jpg"></center>'
+							'After removing the jacket, Why it-then again, he puts on his jacket and running the one hand his pants, begins to caress the other breast.'
+							act 'Watch':
+								cls
+								minut += 10
+								horny += 20
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraMeadowMastr6.jpg"></center>'
+								'A minute later she privalivaetsya back to the nearest tree, her pants drop to his knees and she, continuing with one hand to knead and squeeze her breasts, another brings herself to orgasm. You are looking at a few more minutes in the hope of continued, but the world has come to life and begins to dress, so you decide to hastily retreat...'
+								act 'Escape':minut += 30 & gt 'gadukino'
+							end
+						end
+					end
+				end
+			end
+		end			
+	elseif meadow = 3 and mirainmeadow = 0 and mirasextimes < 15 and temper >= 25 and temper < 30 and sunWeather = 1 and temp = 0:
+		cls
+		minut += 2
+		horny += 10
+		gs 'stat'
+		'<center><img src="images/qwest/gadukino/MiraMeadowMastr7.jpg"></center>'
+		'World worth, leaning against a tree and caresses herself.'
+		act 'Watch':
+			cls
+			minut += 5
+			horny += 10
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowMastr8.jpg"></center>'
+			'It continues to play a few minutes with him, and then stops and a moment pensively looking at the log next to wallow...'
+			act 'Watch':
+				cls
+				minut += 2
+				horny += 5
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/MiraMeadowMastr9.jpg"></center>'
+				'Lastly, deciding, She approaches him and starts to take off her panties.'
+				act 'Watch':
+					cls
+					minut += 1
+					horny += 5
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/MiraMeadowMastr10.jpg"></center>'
+					'Removing Panties, she carefully sits down on a log and tries to swing it a little, checking, see, Strength...'
+					act 'Watch':
+						cls
+						minut += 10
+						horny += 20
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraMeadowMastr11.jpg"></center>'
+						'Satisfied, that the accident did not fall from it, Peace starts caressing herself, while not forgetting to look around, while, lastly, not bring herself to orgasm... You are looking at a few more minutes in the hope of continued, but the world has come to life and begins to dress, so you decide to hastily retreat...'
+						act 'Escape':minut += 30 & gt 'gadukino'
+					end
+				end
+			end
+		end
+	elseif meadow = 3 and mirainmeadow = 0 and mirasextimes < 15 and temper >= 30 and sunWeather = 1 and temp = 0:
+		cls
+		minut += 2
+		'<center><img src="images/qwest/gadukino/MiraMeadowMastr12.jpg"></center>'
+		'You have time just for fun. The world stands on the stump, near which the veil lying rastelennoe, and lifted up her blouse higher, enjoying the cool breeze, hand stroking himself crotch.'
+		act 'Watch':
+			cls
+			minut += 2
+			horny += 10
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowMastr13.jpg"></center>'
+			'But soon she is bored and she, as if on purpose, Turning to your ass, She pulls her skirt.'
+			act 'Watch':
+				cls
+				minut += 5
+				horny += 15
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/MiraMeadowMastr14.jpg"></center>'
+				'By doing this, She sits down on a stump and continued to fondle himself, but after a couple of minutes and it is a little...'
+				act 'Watch':
+					cls
+					minut += 1
+					horny += 5
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/MiraMeadowMastr15.jpg"></center>'
+					'Walking up from the stump covered, World disclaims blouse and remains only in shorts.'
+					act 'Watch':
+						cls
+						minut += 10
+						horny += 30
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraMeadowMastr16.jpg"></center>'
+						'Which immediately removes the following blouse and remain in the buff, squatting brings herself to orgasm. You are looking at a few more minutes in the hope of continued, but the world has come to life and begins to dress, so you decide to hastily retreat...'
+						act 'Escape':minut += 30 & gt 'gadukino'
+					end
+				end
+			end
+		end		
+	end	
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 2 and temper >= 20 and sunWeather = 1 and temp = 1:
+		cls
+		minut += 2
+		horny += 15
+		gs 'stat'
+		'<center><img src="images/qwest/gadukino/MiraMeadowSex.jpg"></center>'
+		'They talk to each other, simultaneously undressing, but what they say, you can not hear from-for distances.'
+		act 'Watch':
+			cls
+			minut += 15
+			horny += 25
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowSex1.jpg"></center>'
+			'A few minutes later Miroslav lies before Mitya invitingly on the bedspread and puts his feet in front of him. The, not forcing myself to wait, immediately is attached between her legs and begins to brutally and heavily hammer in her his penis, why she starts to groan loudly and podvizgivat.'
+			act 'Watch':
+				cls
+				minut += 5
+				horny += 15
+				if miragopQW = 2:miragopQW = 3
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/MiraMeadowSex2.jpg"></center>'
+				'Fifteen minutes later Miroslav Mitya finally ends in the stomach and a little more rested, They begin to gather...'
+				act 'Escape':minut += 30 & gt 'gadukino'
+			end
+		end
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 8 and temper >= 20 and sunWeather = 1 and temp = 2:
+		cls
+		minut += 2
+		horny += RAND(15,30)
+		temp = RAND(0,1)
+		gs 'stat'
+		if temp = 0:
+			'<center><img src="images/qwest/gadukino/MiraMeadowAnal.jpg"></center>'
+			'Mirka ass jumps on cock Mit`kin, each time flopping on his hips buttocks, and loudly yells.'
+		else
+			'<center><img src="images/qwest/gadukino/MiraMeadowAnal1.jpg"></center>'
+			'Mirka, apart arms buttocks, It is on all fours and loud gasps, when Mitya, fully taking, drives her ass unbuttoned his penis.'
+		end
+		act 'Watch':
+			cls
+			minut += 10
+			horny += RAND(15,30)
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowAnal2.jpg"></center>'
+			'A few minutes later Mitya strongly smacks her on the ass and the world rapidly unfolding, He stands in front of him on his knees and his tongue far, He takes on his face his warm sperm...'
+			act 'Escape':minut += 30 & gt 'gadukino'
+		end
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 10 and sunWeather = 1 and temp = 3:
+		cls
+		minut += 2
+		horny += 15
+		gs 'stat'
+		if temper < 20:
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ.jpg"></center>'
+			'She enthusiastically sucks his dick and see holes in her cheeks, when she draws him to her throat...'
+			act 'Watch':
+				cls
+				minut += 2
+				horny += RAND(15,30)
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/MiraMeadowBJ1.jpg"></center>'
+				'But, apparently, You`re a little late, because after a couple of minutes Kolyamba Miroslava puts his hand on his head and a sharp jerk on skewer. At first she chokes and coughs otneozhidannosti, but then still coping with gagging and tongue sticking slightly, dutifully swallows his sperm...'
+				act 'Escape':minut += 30 & gt 'gadukino'
+			end
+		else
+			minut += 10
+			horny += 30
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ2.jpg"></center>'
+			'It is in some slippers cancer, sticking just to your side your ass, and loud gasps, when Kolyamba spanks her crotch on his eggs, will drive in her vagina his penis. Miroslav scrubbing his hands on the ground and bends like a cat, wherein that-something in between OHANI saying Kolyambe. But the, it seems. It is not paying absolutely no attention, continuing to hammer away at her pussy, and soon bring the girl to orgasm, and a minute later kills himself...'
+			act 'Escape':minut += 30 & gt 'gadukino'
+		end
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 10 and sunWeather = 1 and temp = 4:
+		cls
+		minut += 5
+		horny += 10
+		gs 'stat'
+		if temper < 15:
+			minut += 5
+			horny += 50
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ5.jpg"></center>'
+			'Bob enthusiastically drives cock in her mouth tied to a tree Miroslava. She chokes and coughs, but at the same time the head moves towards the member. A few minutes later Bob throws back his head and ends with a blissful roar in her mouth...'
+			act 'Escape':minut += 30 & gt 'gadukino'
+		elseif temper >= 15 and temper < 20:
+			minut += 5
+			horny += 40
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ3.jpg"></center>'
+			'They were both completely naked and Peace, far sticking ass, with sense sucks Kaif Vasyanya. A few minutes later you see, Miroslav is pushed as a head on his cock and subsides, swallowing sperm...'
+			act 'Escape':minut += 30 & gt 'gadukino'
+		elseif temper >= 20 and  temper < 25:
+			minut += 5
+			horny += 30
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ4.jpg"></center>'
+			'They were both completely naked and with lustful squeals World, like mad, Rides on Vaskina member. That long this pace can not stand and unceremoniously throwing off the rider, cums on her buttocks...'
+			act 'Escape':minut += 30 & gt 'gadukino'
+		elseif temper >= 25:
+			minut += 5
+			horny += 40
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ6.jpg"></center>'
+			'Completely naked Miroslava, bent, Vasyanya is facing hard and substitutes his ass, which he drives his cock. Judging by her lustful moans, quite like it, that it has in the ass, but after a couple of minutes, Bob pulls out his penis and she pulls her buttocks...'			
+			act 'Escape':minut += 30 & gt 'gadukino'
+		end
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 30 and sunWeather = 1 and temp = 5:
+		cls
+		minut += 5
+		horny += 20
+		gs 'stat'
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 15 and sunWeather = 1 and temp = 6:
+		cls
+		minut += 15
+		horny += 25
+		gs 'stat'
+		if temper < 25:
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ7.jpg"></center>'
+			'World kneeling between three buddies and having fun sucking their members. You watch, they in turn spukayut she who in her mouth, who on his chest, and who is just on the face...'
+		else
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ8.jpg"></center>'
+			'World squatting sitting between three cronies and pleased by their members champs. You watch, they in turn spukayut she who in her mouth, and who is just on the face...'
+		end
+		act 'Escape':minut += 30 & gt 'gadukino'
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 11 and temper >= 15 and sunWeather = 1 and temp = 7:
+		cls
+		minut += 15
+		horny += 25
+		miragopQW += 1
+		gs 'stat'
+		if temper < 20:
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ11.jpg"></center>'
+			'World squatting sitting in front of one of the boys and just takes it into his mouth his sperm. Licking and tucked in his pants his dick, It is the same with another prozhelyvaet...'
+		elseif temper >= 20 and temper < 30:
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ10.jpg"></center>'
+			'Boys, World fucking together in the mouth and pussy, about what-then, with a laugh talk to each other. Miroslav also echoed his own moans and plyamkanyami... Fifteen minutes later they end and begin to gather...'
+		else
+			'<center><img src="images/qwest/gadukino/MiraMeadowBJ9.jpg"></center>'
+			'All three of them almost naked, and one of them just sucks World, and second, all appearances, had finished, but because a paw her breasts, and stirring until a hand between her legs lasciviously rasstalvennyh...'
+		end
+		act 'Escape':minut += 30 & gt 'gadukino'
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 30 and temper >= 25 and sunWeather = 1 and temp = 8:
+		cls
+		minut += 30
+		horny += 25
+		miragopQW += 1
+		gs 'stat'
+		'<center><img src="images/qwest/gadukino/MiraMeadowBJ12.jpg"></center>'
+		'Worlds of ihnimi bodies almost invisible, Only a piece of bare backside so rocking sneakers legs. You half an hour to watch the, as the guys take turns fuck limp and tired Miroslav, but then you get tired and you decide to leave...'
+		act 'Escape':minut += 30 & gt 'gadukino'
+	end
+	if meadow = 3 and mirainmeadow = 0 and miragopQW >= 20 and temper >= 30 and sunWeather = 1 and temp = 9:
+		cls
+		minut += 30
+		horny += 25
+		gs 'stat'
+		'<center><img src="images/qwest/gadukino/MiraMeadowS.jpg"></center>'
+		'She is on all fours back to you, and painful, but rather moaning, Fingering her ass Kocani maize.'
+		act 'Escape':minut += 30 & gt 'gadukino'
+	end
+}
+--- Meadow ---------------------------------
+

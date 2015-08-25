@@ -1,0 +1,216 @@
+# cfnm
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	horny = horny + 5
+	minut = minut + 15
+	money = money - 50
+	gs'stat'
+
+	'<center><img src="images/picVA/cfnm.jpg"></center>'
+	'Strippers bared your breast and began licking your nipples.'
+
+	if hour < 23:
+		act 'Enjoy':gt'cfnm','tits'
+		act 'Hand to touch his penis':gt'cfnm','hand'
+	end
+
+	act 'Move away':gt'stripclub','stolW'
+end
+
+if $ARGS[0] = 'tits':
+	cla
+	clr
+	*clr
+	horny = horny + 10
+	minut = minut + 15
+	gs'stat'
+
+	'<center><img src="images/picVA/cfnm1.jpg"></center>'
+	'Strippers sucking and biting your nipples.'
+
+	if horny < 90:
+		if hour < 23:
+			act 'Enjoy':gt'cfnm','eat'
+			act 'Hand to touch his penis':gt'cfnm','hand'
+		end
+
+		act 'Move away':gt'stripclub','stolW'
+	elseif horny >= 90:
+		act 'Surrender':gt'cfnm','sex'
+	end
+end
+
+if $ARGS[0] = 'hand':
+	cla
+	clr
+	*clr
+	horny = horny + 5
+	minut = minut + 15
+	fotoCFNMblowjob += 1
+	gs'stat'
+
+	'<center><img src="images/picVA/cfnmHand.jpg"></center>'
+	'You have a member of the stripper arm and began to fondle him in front of other girls.'
+
+	act 'Take in the mouth':gt'cfnm','blow'
+	act 'Terminate':gt'cfnm','eat'
+end
+
+if $ARGS[0] = 'eat':
+	cla
+	clr
+	*clr
+	horny = horny + 10
+	minut = minut + 15
+	gs'stat'
+
+	'<center><img src="images/picVA/cfnm2.jpg"></center>'
+	'Strippers covered your towel from others put his penis in your hand.'
+
+	if horny < 90:
+		if hour < 23:
+			act 'Take in the mouth':gt'cfnm','blow'
+			act 'Masturbate him':gt'cfnm','hand'
+		end
+
+		act 'Away from stripper':gt'stripclub','stolW'
+	elseif horny >= 90:
+		act 'Surrender':gt'cfnm','sex'
+	end
+end
+
+if $ARGS[0] = 'blow':
+	cla
+	clr
+	*clr
+	horny = horny + 10
+	minut = minut + 15
+	bj = bj + 1
+	if stripguy = 0:stripguy = 1 & guy += 1
+	gs'stat'
+
+	'<center><img src="images/picVA/cfnmBlow.jpg"></center>'
+	'You have a member in the mouth hidden from prying eyes for a towel stripper. Other girls interested concealed from their eyes and removed the towel stripper.'
+
+	if horny < 90:
+		if hour < 23:
+			act 'Suck in front of everyone':gt'cfnm','blow2'
+			act 'Stop sucking':gt'cfnm','hand'
+		end
+
+		act 'Away from stripper':gt'stripclub','stolW'
+	elseif horny >= 90:
+		act 'Surrender':gt'cfnm','sex'
+	end
+end
+
+if $ARGS[0] = 'blow2':
+	cla
+	clr
+	*clr
+	horny = horny + 10
+	minut = minut + 15
+	fotoCFNMblowjob += 1
+	gs'stat'
+
+	'<center><img src="images/picVA/cfnmBlow2.jpg"></center>'
+	'Strippers removed the towel, You blushed with shame, but he continued to suck in front of laughing at you girls.'
+
+	if horny < 90:
+		act 'Cum on face':gt'cfnm','blow4'
+		act 'Cum in mouth':gt'cfnm','blow3'
+
+		if DOM > 0:
+			act 'Leaving on the floor':gt'cfnm','end'
+		end
+	elseif horny >= 90:
+		act 'Surrender':gt'cfnm','sex'
+	end
+end
+
+if $ARGS[0] = 'blow3':
+	cla
+	clr
+	*clr
+	horny = horny + 10
+	minut = minut + 15
+	cumlip = cumlip + 1
+	swallow = swallow + 1
+	!cumface = cumface + 1
+	!facial = facial + 1
+	SUB = SUB + 1
+	fotoCFNMblowjobCum += 1
+	gs'stat'
+
+	'<center><img src="images/picVA/swallow.jpg"></center>'
+	'Stripper removes the member from your mouth and fingering it in front of your face, you humbly stand before him on his knees with his mouth open, Finally viscous semen jet landing in your mouth, You licks and licks tart sperm from their lips, You burn with shame when surrounding spectators whooped you.'
+
+	act 'Away from stripper':gt'stripclub','stolW'
+end
+
+if $ARGS[0] = 'blow4':
+	cla
+	clr
+	*clr
+	horny = horny + 10
+	minut = minut + 15
+	!cumlip = cumlip + 1
+	!swallow = swallow + 1
+	cumface = cumface + 1
+	facial = facial + 1
+	SUB = SUB + 1
+	fotoCFNMblowjobCum += 1
+	gs'stat'
+
+	'<center><img src="images/picVA/facial.jpg"></center>'
+	'Stripper removes the member from your mouth and fingering it in front of your face, you humbly stand before him on his knees, Finally viscous semen jet land you on the cheek, you blush with shame when surrounding spectators whooped you.'
+
+	act 'Away from stripper':gt'stripclub','stolW'
+end
+
+if $ARGS[0] = 'end':
+	cla
+	clr
+	*clr
+	horny = horny + 10
+	minut = minut + 15
+	!cumlip = cumlip + 1
+	!swallow = swallow + 1
+	gs'stat'
+
+	'<center><img src="images/picVA/end.jpg"></center>'
+	'You take away the stripper member on its behalf, and it ends on the floor.'
+
+	act 'Away from stripper':gt'stripclub','stolW'
+end
+
+if $ARGS[0] = 'sex':
+	cla
+	clr
+	*clr
+	horny = 0
+	minut = minut + 15
+	!cumlip = cumlip + 1
+	!swallow = swallow + 1
+	!cumface = cumface + 1
+	!facial = facial + 1
+	sex = sex + 1
+	cumass = cumass + 1
+	SUB = SUB + 5
+	fotoCFNMsex += 1
+	if stripguy = 0:stripguy = 1 & guy += 1
+	manna = manna + 15
+	willpower = willpower + 15
+	orgasm = orgasm + 1
+	vagina = vagina + 1
+	gs'stat'
+
+	'<center><img src="images/picVA/sex.jpg"></center>'
+	'Strippers expands you and raises cancer, his cock ramming your expiring moisture pussy, you instantly falls orgasm. You moans and squeals, the crowd hooted and stripper puts his fingers in your mouth, you suck them in ecstasy, and finally stripper removes his penis from you and kills you in the ass.'
+
+	act 'Away from stripper':gt'stripclub','stolW'
+end
+--- cfnm ---------------------------------
+

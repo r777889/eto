@@ -1,0 +1,250 @@
+# stihi
+strand = RAND(0,10)
+if strand = 0:
+	$stihi = '
+	You - sunlight in my dark!
+	You - my happiness among a heap of misery!
+	You - meaning, which I would like to find.
+	You - muse. Not that, that one day will die.
+
+	You - despite the stimulus fight around!
+	You - world, from which there is no escape!
+	Magic warmth of your gentle hands
+	I warm up, probably, thousands of years!
+
+	You - faith, leading to light tops!
+	You - pain, without which love does not know.
+	You - life among the stale, soulless machines!
+	Worst of all - you become a stranger to me!
+
+	I`m afraid,that one day will burn all bridges.
+	But I believe: with me forever your light!
+	I now understood. Paradise there, where have you!
+	And Hell - is there, where you do not have with me.
+	'
+elseif strand = 1:
+	$stihi = '
+	Why go against fate,
+	It moves much a foregone conclusion for us,
+	Confess, we met among dreams,
+	Love opened the gates of the sacred.
+
+	Trust me, bolder, not tushuy,
+	I, as you, from feeling slightly confused,
+	Just one let me kiss,
+	To turn the time spatial.
+
+	I`ll be your guide here,
+	Easy to sleep, that this world is beautiful,
+	Do not argue, You lit a fire in me
+	And her amber hair captivated.
+
+	Oh, nowhere to paint your figure,
+	Understandably so, gods with his blind,
+	In these eyes I saw the ocean,
+	His love intoxicated with happiness.
+
+	Let me stay with you forever
+	And the waves of love wander century,
+	Let me whisper verses for you
+	And enjoy the beauty queen.
+	'
+elseif strand = 2:
+	$stihi = '
+	You know very well,
+	What am I without you I can,
+	I`ll go a little crazy,
+	Captivated by thy smile.
+
+	I am speechless, where,
+	Instead angel eyes,
+	I always ready to repeat:
+	"You are the best, point".
+
+	With you light and easy,
+	You impossible not to love,
+	Off high - high,
+	On the cloud sat cautiously.
+
+	Do not be afraid, I always close,
+	And in sorrow and in joy will,
+	Together transcend cold,
+	Code miracle trust.
+
+	You know very well,
+	But I repeat it again,
+	What I`m from you crazy,
+	I do not need another fortune.
+	'
+elseif strand = 3:
+	$stihi = '
+	Tears streamed down his cheek,
+	When I think of you night.
+	I want to be with you quickly,
+	Protect your kitten my.
+
+	I thank God for you,
+	And most of my life, I love you.
+	Thank you for having us with you svёl,
+	Love to you I gained eternal.
+
+	Now we wake up together forever
+	And no one will separate,
+	Your love in my little heart,
+	And never fly.
+	'
+elseif strand = 4:
+	$stihi = '
+	I love you! My Dear!
+	You, like a timid flower!
+	With you I`m not alone
+	You breathe, you live
+	and these lines I write for nothing,
+	I want to, to know you - My dear!
+	I am very happy, that our fate tied!
+	I sincerely love you,soul,
+	You deserve me,
+	Such love and respect!
+	I want to hear your sweet voice,
+	I always want to be near you!
+	I want to hold you tight,
+	And touch your lips,I dearly!
+	I want to look into your beautiful eyes,
+	Watching them,I like in a fairy tale...
+	Lace and rejoicing with you,
+	Under the starry sky and the moon!
+	I can not without you,
+	like an angel without love,
+	as the sun without the sky,
+	like a sea without water...
+	'
+elseif strand = 5:
+	$stihi = '
+	Help me understand the love
+	How to understand the feelings,
+	Teach me to fly,
+	By the clouds in time to climb.
+	Help catch the wave,
+	But keep your hand firmly,
+	I`m afraid to go to the bottom,
+	As fear of the heart with a knife cuts.
+	Help meet the dawn
+	In the open field Cornflower,
+	Whispered to you "Hello",
+	Enjoying thee.
+	Help me to forget the sadness
+	And believe word "happiness",
+	But remains, promise
+	Do not break up the love on the part of.
+	I`m open to your soul,
+	I am ready to embark on a given,
+	Your voice sounds within me,
+	His eyes shone night.
+	Help. It`s not going to die.
+	Without love in the heart is empty,
+	Angel, I love you,
+	Help me understand the feelings.
+	'
+elseif strand = 6:
+	$stihi = '
+	I love to write not stop,
+	With you I will again walk in the garden.
+	In your eyes you look just green,
+	The whole body will throw in a sweet shiver again.
+
+	I do not hold back in the hands of the soul unrest,
+	A heart beats the pendulum of love.
+	My angel - I`ll bestow moments
+	You have this sweet again in the night catch.
+
+	Let your eyes radiate love again,
+	A lip, whisper gentle words.
+	Hands with each other hugs,
+	Go crazy with happiness head.
+
+	Let the dream was this feeling,
+	Are you extend the night a great folly.
+	Love to you, a special kind of art,
+	In my heart I was passionate feelings of courage.
+	'
+elseif strand = 7:
+	$stihi = '
+	If only you were here,
+	Near everywhere and always,
+	Warm and affectionate glance,
+	I basked in the cold.
+
+	If only the lip relatives,
+	Gently woken in the morning,
+	Thoughts, love sick,
+	Steel verses yesterday.
+
+	Life is beautiful is not necessary,
+	If you are not near,
+	If only you were pleased,
+	At dawn meeting.
+
+	If only happiness shone,
+	Eyes of my princess,
+	If only senses breathing,
+	Light your love.
+	'
+elseif strand = 8:
+	$stihi = '
+	Mad wind of change,
+	It tears my head is dangerous.
+	I just ask him to return,
+	Make my life beautiful.
+
+	It`s so nice to be alive,
+	With a smile, greet the new day.
+	And be happy in the world,
+	With Pet, The morning begins.
+
+	Go crazy, when apart,
+	Insanely new appointment wait.
+	And the message in the notebook,
+	Inevitably gain.
+
+	But it is not possible, that`s for sure,
+	About feelings just write.
+	Perceiving all cardio,
+	Just have to wait and wait.
+	'
+elseif strand = 9:
+	$stihi = '
+	The flow of rivers I am ready to change,
+	And sometimes change continents.
+	Ready to conquer the mountain peaks,
+	And down at the bottom of the ocean.
+	And every day, to give you happiness.
+	Ready to love you till the end of time,
+	And embrace the moonlight standing.
+	I want,so you know it all,
+	After all,, These are not empty words!
+	'
+elseif strand = 10:
+	$stihi = '
+	In the desperate battle,
+	We relocate forward.
+	And drowning in prayers,
+	What awaits us?
+
+	The path most difficult,
+	We have chosen.
+	Each step cautious,
+	To the top of destiny.
+
+	We will not give up,
+	Not one step back.
+	Everything bad forget,
+	Is important because the result.
+
+	We love her,
+	In the century swept.
+	And a happy life,
+	We`ll Live to a hundred years...
+	'
+end
+--- stihi ---------------------------------
+

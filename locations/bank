@@ -1,0 +1,72 @@
+# bank
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Bank</font></b></center>'
+	'<center><img src="images/pic/bank.jpg"></center>'
+
+	if karta > 0:'On bank account <<karta>> rubles'
+
+	if BankPapper = 1 and dayBankPapper = day:
+		act 'Give documents':
+			cls
+			minut = minut + 15
+			BankPapper = 2
+			gs'stat'
+
+			'You went into the office and gave the documents to the manager.'
+
+			act 'Escape':minut += 5 & gt'down'
+		end
+	end
+
+	if money > 0:
+		act 'Put the money on the account':
+			cla
+			minut = minut + 5
+
+			kartaIN = input ("How much money you want to deposit?")
+			if kartaIN <= 0 or kartaIN > money:
+				'Not correct operation.'
+			else
+				karta = karta + kartaIN
+				money = money - kartaIN
+
+				'You put on the account <<kartaIN>> rubles, Now your account <<karta>> rubles.'
+			end
+
+			act 'Move away':gt'bank','start'
+		end
+	end
+
+	if karta > 0:
+		act 'Withdraw money':
+			cla
+			minut = minut + 5
+
+			kartaOUT = input ("How much money you want to withdraw?")
+			if kartaOUT <= 0 or kartaOUT > karta:
+				'Not correct operation.'
+			else
+				karta = karta - kartaOUT
+				money = money + kartaOUT
+
+				'You removed from the account <<kartaOUT>> rubles, Now your account <<karta>> rubles.'
+			end
+
+			act 'Move away':gt'bank','start'
+		end
+	end
+
+	act 'Logout':gt'down'
+end
+--- bank ---------------------------------
+

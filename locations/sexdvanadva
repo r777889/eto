@@ -1,0 +1,164 @@
+# sexdvanadva
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	guy += 2
+	girl += 1
+	gang += 1
+	minut += 30
+	sweat += 1
+	gs'stat'
+	picrand = RAND(0,1)
+	xgt'sexdvanadva','var'
+end
+
+if $ARGS[0] = 'var':
+	sexdvarand = RAND(0,6)
+	if pikrand = 11:sexdvarand = RAND(0,5)
+	if pikrand = 14:sexdvarand = RAND(0,4)
+	if sexdvarand = 0:
+		cla
+		*clr
+		horny += 10
+		minut += 10
+		sexvar += 1
+
+		if dvdvsxbj = 0:
+			bj += 1
+			dvdvsxbj = 1
+		end
+
+		'<center><img src="images/img/sexdvanadva/minet<<picrand>>.jpg"></center>'
+		'You two suck their members.'
+
+		if sexvar < 3:act 'Another':xgt'sexdvanadva','var'
+		if sexvar >= 3:act 'Finish':gt'sexdvanadva','end'
+	elseif sexdvarand = 1:
+		cla
+		*clr
+		horny += 10
+		minut += 10
+		sexvar += 1
+
+		'<center><img src="images/img/sexdvanadva/vag<<picrand>>.jpg"></center>'
+		'While she is enjoying a member in her pussy, You also do not remain without male attention.'
+
+		if sexvar < 3:act 'Another':xgt'sexdvanadva','var'
+		if sexvar >= 3:act 'Finish':gt'sexdvanadva','end'
+	elseif sexdvarand = 2:
+		cla
+		*clr
+		horny += 10
+		minut += 10
+		sexvar += 1
+
+		if dvdvsxsex = 0:
+			sex += 1
+			dvdvsxsex = 1
+		end
+
+		'<center><img src="images/img/sexdvanadva/uvag<<picrand>>.jpg"></center>'
+		'It is part of you, his penis moves inside your pussy bringing you pleasure, at this time, too, it is not alone.'
+
+		if sexvar < 3:act 'Another':xgt'sexdvanadva','var'
+		if sexvar >= 3:act 'Finish':gt'sexdvanadva','end'
+	elseif sexdvarand = 3:
+		cla
+		*clr
+		horny += 10
+		minut += 10
+		sexvar += 1
+
+		'<center><img src="images/img/sexdvanadva/anal<<picrand>>.jpg"></center>'
+		'Do you like the kind of cock in her ass and while she sweetly yells trying to absorb all of it you too busy with interesting process.'
+
+		if sexvar < 3:act 'Another':xgt'sexdvanadva','var'
+		if sexvar >= 3:act 'Finish':gt'sexdvanadva','end'
+	elseif sexdvarand = 4:
+		cla
+		*clr
+		horny += 10
+		minut += 10
+		sexvar += 1
+
+		if dvdvsxanal = 0:
+			anal += 1
+			dvdvsxanal = 1
+		end
+
+		'<center><img src="images/img/sexdvanadva/uanal<<picrand>>.jpg"></center>'
+		'When it comes to you in the ass you a little sick, but soon the pain goes away and its place is taken by a pleasant sensation, until his move dildo in your ass it is not sitting idly by.'
+
+		if sexvar < 3:act 'Another':xgt'sexdvanadva','var'
+		if sexvar >= 3:act 'Finish':gt'sexdvanadva','end'
+	elseif sexdvarand = 5:
+		cla
+		*clr
+		horny += 10
+		minut += 10
+		sexvar += 1
+
+		if dvdvsxsex = 0:
+			sex += 1
+			dvdvsxsex = 1
+		end
+
+		if dvdvsxanal = 0:
+			anal += 1
+			dvdvsxanal = 1
+		end
+
+		'<center><img src="images/img/sexdvanadva/udp<<picrand>>.jpg"></center>'
+		'Both men belong to you and you moan with pleasure feeling both dildo moving inside.'
+
+		if sexvar < 3:act 'Another':xgt'sexdvanadva','var'
+		if sexvar >= 3:act 'Finish':gt'sexdvanadva','end'
+	elseif sexdvarand = 6:
+		cla
+		*clr
+		horny += 10
+		minut += 10
+		sexvar += 1
+
+		'<center><img src="images/img/sexdvanadva/dp<<picrand>>.jpg"></center>'
+		'When they are in it together you get a little jealous seeing how she enjoys.'
+
+		if sexvar < 3:act 'Another':xgt'sexdvanadva','var'
+		if sexvar >= 3:act 'Finish':gt'sexdvanadva','end'
+	end
+end
+
+if $ARGS[0] = 'end':
+	cla
+	*clr
+	minut += 10
+	dvdvsxbj = 0
+	dvdvsxsex = 0
+	dvdvsxanal = 0
+	cumlip = 1
+	sexvar = 0
+
+	if horny >= 80:
+		horny = 0
+		orgasm += 1
+	end
+
+	'<center><img src="images/img/sexdvanadva/cum<<picrand>>.jpg"></center>'
+	'When they end up spilling your sperm, you lick it off each other, kissing and exchanging finally swallow.'
+
+	act 'Escape':
+		if kafesexrand = 1:
+			kafesexrand = 0
+			gt'kafe','workPred'
+		end
+
+		if kazsexdva = 1:
+			kazsexdva = 0
+			gt'kazinosvid','3'
+		end
+
+		gt'<<$sexloc>>','start'
+	end
+end
+--- sexdvanadva ---------------------------------
+

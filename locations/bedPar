@@ -1,0 +1,84 @@
+# bedPar
+$metka = $ARGS[0]
+$loc = $CURLOC
+gs'stat'
+
+if nude = 0:'<center><img src="images/pics/bed.jpg"></center>'
+if nude = 1:'<center><img src="images/pics/son.jpg"></center>'
+'You`re lying on the bed. Alarm clock wound on <<timer>> hours, <<timerM>> minutes. (<<$budilnikInfo>>)'
+
+act 'Start the Service':gt'budilnik','start'
+
+!if son < 10:
+act 'Undress and go to bed':
+	if disable_autosave = 0:
+		if StoryLine = 0:
+			SAVEGAME 'autosave.sav'
+		else
+			SAVEGAME 'autosave_alt.sav'
+		end
+	end
+
+	cls
+	notathomesleep=0
+	health = health + 5
+	hapri = 0
+	InSleep = 1
+	:loopson
+	minut = minut + 1
+	stime = stime + 1
+	if stime = 60:stime = 0 & son = son + 3
+	clr
+	cls
+	gs'stat'
+
+	'<center><img src="images/pics/son.jpg"></center>'
+	if analplugIN = 1:analplugIN = 0 & 'Before going to bed, you took out a butt plug.'
+	if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed, you took out a vibrator.'
+	if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
+	'You sleep and you do not dream.'
+
+	if hour = timer and minut = timerM and budilnikOn = 1:
+		manna = manna - 10
+
+		'Alarum'
+
+		act 'Get out of bed and get dressed (15 minutes)':
+			cla
+			!numdress = odedosna
+			InSleep = 0
+			minut += 15
+			tanga = 1
+			!nude = 0
+			gt $locM, $metkaM
+		end
+
+		exit
+	end
+
+	if son > 23 and dosip = 0:
+		'You woke up on, that slept'
+
+		act 'Get out of bed and get dressed (15 minutes)':
+			cla
+			!numdress = odedosna
+			InSleep = 0
+			minut += 15
+			tanga = 1
+			!nude = 0
+			gt $locM, $metkaM
+		end
+
+		exit
+	end
+
+	jump 'loopson'
+end
+!end
+
+act 'Off to bed':
+	cla
+	gt $locM, $metkaM
+end
+--- bedPar ---------------------------------
+

@@ -1,0 +1,40 @@
+# gskino
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><img src="images/gevent/kinoteatr.jpg"></center>'
+'Small Theater, in which there is only one small room. A movie ticket costs 100 rubles.'
+
+$kinoevent = {
+	act 'Turn your head and look':
+		cls
+		horny += 3
+		gs'stat'
+		'<center><img src="images/zsoft/kino/kino.gif"></center>'
+		'You saw on the back of the girl sucking guy, nobody hesitate to loud smacking the whole cinema.'	
+		act 'Exit the room':gt'gskver'		
+	end
+}
+
+if money >= 100:
+	act 'Go to the cinema':
+		cla
+		*clr
+		money = money - 100
+		minut = minut + 120
+		manna = manna+ RAND(60,90)
+
+		randkino=rand(1,100)
+		if randkino>10:	'You quietly watched the film, then came out of the cinema.'
+		if randkino<=10: 'You quietly watched the movie, but suddenly heard behind what-strange sounds.' & dynamic $kinoevent
+
+		act 'Exit the room':gt'gskver'
+	end
+end
+
+act 'Exit Theater':minut = minut+5 & gt'gskver'
+--- gskino ---------------------------------
+

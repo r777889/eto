@@ -1,0 +1,525 @@
+# carF
+$enddrive = {
+	if cardrive = 1:gt'street'
+	if cardrive = 2:gt'down'
+	if cardrive = 3:gt'Nord'
+	if cardrive = 4:gt'lake','start'
+	if cardrive = 5:gt'park','start'
+	if cardrive = 6:gt'zaprF','start'
+	if cardrive = 7:gt'autoservisF','start'
+	if cardrive = 8:gt'autosalonF','start'
+	if cardrive = 9:gt'autotraidF','start'
+	if cardrive = 10:gt'park','whore'
+	if cardrive = 11:gt'sauna'
+	if cardrive = 12:gt'liam'
+	if cardrive = 18:gt'youplace'
+	if cardrive = 19:gt'vokzal'
+	if cardrive = 20:gt'gorodok'
+	if cardrive = 21:gt'zaprF','start'	
+	if cardrive = 22:gt'road'
+	if cardrive = 23:gt'Gaddvor'
+	if cardrive = 24:gt'obekt'
+}
+
+if $ARGS[0] = 'start':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	clr
+	*clr
+	minut = minut + 1
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><<$car>></b></center>'
+	if car = 1:'<center><img src="images/picar/car.jpg"></center>'
+	if car = 2:'<center><img src="images/picar/car2.jpg"></center>'
+	if car = 3:'<center><img src="images/picar/car3.jpg"></center>'
+	if car = 4:'<center><img src="images/picar/car4.jpg"></center>'
+	if car = 5:'<center><img src="images/picar/car5.jpg"></center>'
+	if car = 6:'<center><img src="images/picar/car6.jpg"></center>'
+	if car = 7:'<center><img src="images/picar/car7.jpg"></center>'
+	if car = 8:'<center><img src="images/picar/car8.jpg"></center>'
+	if car = 9:'<center><img src="images/picar/car9.jpg"></center>'
+	if car = 10:'<center><img src="images/picar/car10.jpg"></center>'
+	if car = 11:'<center><img src="images/picar/car11.jpg"></center>'
+	if car = 12:'<center><img src="images/picar/car12.jpg"></center>'
+	if car = 13:'<center><img src="images/picar/car13.jpg"></center>'
+	if car = 14:'<center><img src="images/picar/car14.jpg"></center>'
+	if car = 15:'<center><img src="images/picar/car15.jpg"></center>'
+	if car = 16:'<center><img src="images/picar/car16.jpg"></center>'
+	if car = 17:'<center><img src="images/picar/car17.jpg"></center>'
+	if car = 18:'<center><img src="images/picar/car18.jpg"></center>'
+	if car = 19:'<center><img src="images/picar/car19.jpg"></center>'
+	if car = 20:'<center><img src="images/picar/car20.jpg"></center>'
+	if car = 21:'<center><img src="images/picar/car21.jpg"></center>'
+	if car = 22:'<center><img src="images/picar/car22.jpg"></center>'
+	if car = 23:'<center><img src="images/picar/car23.jpg"></center>'
+	if car = 24:'<center><img src="images/picar/car24.jpg"></center>'
+	if car = 25:'<center><img src="images/picar/car25.jpg"></center>'
+	if car = 26:'<center><img src="images/picar/car26.jpg"></center>'
+	if car = 27:'<center><img src="images/picar/car27.jpg"></center>'
+	if car = 28:'<center><img src="images/picar/car28.jpg"></center>'
+	if car = 29:'<center><img src="images/picar/car29.jpg"></center>'
+	if car = 30:'<center><img src="images/picar/car30.jpg"></center>'
+	if car = 95:'<center><img src="images/picar/car95.jpg"></center>'
+	if car = 96:'<center><img src="images/picar/car96.jpg"></center>'
+	if car = 97:'<center><img src="images/picar/car97.jpg"></center>'
+	if car = 98:'<center><img src="images/picar/car98.jpg"></center>'
+	if car = 99:'<center><img src="images/picar/car99.jpg"></center>'
+	if car = 100:'<center><img src="images/picar/car100.jpg"></center>'
+	if car = 101:'<center><img src="images/picar/car101.jpg"></center>'
+
+	act 'Move away from the machine':dynamic $enddrive
+
+	if kanistra > 0:
+		'In the trunk <<kanistra>> Pieces. five-liter jerry cans with gasoline.'
+
+		if benz <= 35:
+			act 'Fill the canister to the tank':
+				cla
+				benz = benz + 5
+				kanistra = kanistra - 1
+
+				'You have filled a canister of gasoline into the tank.'
+
+				act 'Move away':gt'carF','start'
+			end
+		end
+	end
+
+	act 'Sit in the car':gt'carF','salon'
+end
+
+if $ARGS[0] = 'salon':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	clr
+	*clr
+	minut = minut + 1
+	gs'stat'
+
+	if car = 1:'<center><img src="images/picar/salon.jpg"></center>'
+	if car = 2:'<center><img src="images/picar/salon2.jpg"></center>'
+	if car = 3:'<center><img src="images/picar/salon3.jpg"></center>'
+	if car = 4:'<center><img src="images/picar/salon4.jpg"></center>'
+	if car = 5:'<center><img src="images/picar/salon5.jpg"></center>'
+	if car = 6:'<center><img src="images/picar/salon6.jpg"></center>'
+	if car = 7:'<center><img src="images/picar/salon7.jpg"></center>'
+	if car = 8:'<center><img src="images/picar/salon8.jpg"></center>'
+	if car = 9:'<center><img src="images/picar/salon9.jpg"></center>'
+	if car = 10:'<center><img src="images/picar/salon10.jpg"></center>'
+	if car = 11:'<center><img src="images/picar/salon11.jpg"></center>'
+	if car = 12:'<center><img src="images/picar/salon12.jpg"></center>'
+	if car = 13:'<center><img src="images/picar/salon13.jpg"></center>'
+	if car = 14:'<center><img src="images/picar/salon14.jpg"></center>'
+	if car = 15:'<center><img src="images/picar/salon15.jpg"></center>'
+	if car = 16:'<center><img src="images/picar/salon16.jpg"></center>'
+	if car = 17:'<center><img src="images/picar/salon17.jpg"></center>'
+	if car = 18:'<center><img src="images/picar/salon18.jpg"></center>'
+	if car = 19:'<center><img src="images/picar/salon19.jpg"></center>'
+	if car = 20:'<center><img src="images/picar/salon20.jpg"></center>'
+	if car = 21:'<center><img src="images/picar/salon21.jpg"></center>'
+	if car = 22:'<center><img src="images/picar/salon22.jpg"></center>'
+	if car = 23:'<center><img src="images/picar/salon23.jpg"></center>'
+	if car = 24:'<center><img src="images/picar/salon24.jpg"></center>'
+	if car = 25:'<center><img src="images/picar/salon25.jpg"></center>'
+	if car = 26:'<center><img src="images/picar/salon26.jpg"></center>'
+	if car = 27:'<center><img src="images/picar/salon27.jpg"></center>'
+	if car = 28:'<center><img src="images/picar/salon28.jpg"></center>'
+	if car = 29:'<center><img src="images/picar/salon29.jpg"></center>'
+	if car = 30:'<center><img src="images/picar/salon30.jpg"></center>'
+	if car = 95:'<center><img src="images/picar/salon95.jpg"></center>'
+	if car = 96:'<center><img src="images/picar/salon96.jpg"></center>'
+	if car = 97:'<center><img src="images/picar/salon97.jpg"></center>'
+	if car = 98:'<center><img src="images/picar/salon98.jpg"></center>'
+	if car = 99:'<center><img src="images/picar/salon99.jpg"></center>'
+	if car = 100:'<center><img src="images/picar/salon100.jpg"></center>'
+	if car = 101:'<center><img src="images/picar/salon101.jpg"></center>'
+
+	'Gasoline - <<benz>> l, Fuel tank capacity 40 l.'
+
+	if teh <= 0:teh = 0 & wrek = 1
+	if teh <= 0 or wrek = 1:$teh = 'The car will not start, it needs repair.'
+	if teh >= tehcar*75/100 and wrek = 0:$teh = 'The car is in excellent condition.'
+	if teh < tehcar*75/100 and teh >= tehcar*50/100 and wrek = 0:$teh = 'When moving the machine have any extraneous noise'
+	if teh < tehcar*50/100 and teh >= tehcar*25/100 and wrek = 0:$teh = 'The car rumbles and barely goes.'
+	if teh < tehcar*25/100 and wrek = 0:$teh = 'As the toilet can still go, It is a mystery even for designers.'
+
+	'<<$teh>>'
+
+	if cardrive = 1:'Through the windshield you see sleeping area.'
+	if cardrive = 2:'Through the windshield, you can see the city center.'
+	if cardrive = 3:'Through the windshield you see Northern region.'
+	if cardrive = 12:'Through the windshield, you can see the Old Town.'
+	if cardrive = 4:'Through the windshield, you can see the lake.'
+	if cardrive = 5:'Through the windshield, you can see the park.'
+	if cardrive = 19:'Through the windshield you see Station.'
+	if cardrive = 23:'Through the windshield you see huts of the village Gadyukino.'
+
+	if prava = 0:'You are not authorized.'
+
+	act 'Get out of the car':dynamic $enddrive
+
+	if benz > 0 and wrek = 0 and prava > 0:
+		if teh >= tehcar*75/100 and wrek = 0:
+			wrekrand = RAND(0,1000)
+			if wrekrand = 1000:wrek = 1
+		elseif teh < tehcar*75/100 and teh >= tehcar*50/100 and wrek = 0:
+			wrekrand = RAND(0,100)
+			if wrekrand = 100:wrek = 1
+		elseif teh < tehcar*50/100 and teh >= tehcar*25/100 and wrek = 0:
+			wrekrand = RAND(0,100)
+			if wrekrand >= 80:wrek = 1
+		elseif teh < tehcar*25/100 and wrek = 0:
+			wrekrand = RAND(0,100)
+			if wrekrand >= 40:wrek = 1
+		elseif wrek = 1:
+			'Something rattled loudly and stalled engine.'
+
+			act 'Fuck':gt'carF','salon'
+		end
+
+		if alko > 0:
+			dpsrand = RAND(0,100)
+			if dpsrand <= alko:
+				'A policeman stops you, He looks at your situation and asking to breathe into a tube. You breathe and on the unit lights up red light.'
+				'Traffic police officer snorts and says something in his cell, and then shows you. It is written with the number sms 50000'
+				'Or let`s make the report. Now the acts of deprivation of rights for all is not driving sober.'
+
+				if money >= 50000:
+					act 'To bribe 50 pcs':
+						cla
+						money = money-50000
+
+						'You pay and the police warns you, whatever you did not go anywhere in this state.'
+
+						act 'In Salon':gt'carF','salon'
+					end
+				end
+				act 'Come on, all under the law':
+					cla
+					prava = 0
+
+					'You disempower, for driving while not sober.'
+
+					act 'In Salon':gt'carF','salon'
+				end
+
+				exit
+			end
+		elseif alko >= 10:
+			avarand = RAND(0,100)
+			if avarand >= 50:
+				teh = teh/2
+				wrek = 1
+
+				'You drunk crashed into a tree, crashed the car into smithereens.'
+
+				act 'In Salon':gt'carF','salon'
+
+				exit
+			end
+		end
+
+		if wrek = 0:
+			if cardrive >= 20:
+				if cardrive ! 3:
+					act 'Go to town':
+						cla
+						minut = minut + 75
+						benz = benz - 3
+						teh = teh - RAND(3,6)
+						cardrive = 3
+
+						'You drive more than an hour on the highway that would get to the city.'
+
+						dynamic $enddrive
+					end
+				end
+
+				if cardrive ! 21:
+					act 'Go to the gas station':
+						cla
+						minut = minut + 15
+						benz = benz - 1
+						teh = teh - RAND(1,3)
+						cardrive = 21
+						litltown = 1
+
+						'For you 15 minutes, get to your destination.'
+
+						dynamic $enddrive
+					end
+				end
+			end
+
+			if placeMansion > 0 and cardrive ! 18:
+				act 'Go to your site':
+					cla
+
+					if cardrive >= 20:
+						minut = minut + 60
+						benz = benz - 2
+						teh = teh - RAND(1,3)
+						cardrive = 18
+					else
+						minut = minut + 15
+						benz = benz - 2
+						teh = teh - RAND(1,3)
+						cardrive = 18
+					end
+
+					'You got to his land.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 1 and cardrive < 20:
+				act 'Go to the sleeping area':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 1
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 2 and cardrive < 20:
+				act 'Go to the center of the city':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 2
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 3 and cardrive < 20:
+				act 'Go to the Northern region':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 3
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 19 and cardrive < 20:
+				act 'Go to the station':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 19
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 4 and cardrive < 20:
+				act 'Go to the lake':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 4
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 5 and cardrive < 20:
+				act 'To go to the park':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 5
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 6 and cardrive < 20:
+				act 'Go to the gas station':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 6
+					litltown = 0
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 7 and cardrive < 20:
+				act 'To go to the car wash':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 7
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 8 and cardrive < 20:
+				act 'Go to the auto show':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 8
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 9 and cardrive < 20:
+				act 'Riding on the car market':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 9
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 24:
+				act 'To go to the object':
+					cla
+					if cardrive < 20:
+						minut += 60
+						'You get an hour to your destination.'
+					else
+						minut += 15
+						'For you 15 minutes, get to your destination.'
+					end
+					benz = benz - 2
+					teh = teh - RAND(2,5)
+					cardrive = 24
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 20:
+				act 'Go to town':
+					cla
+					benz = benz - 3
+					teh = teh - RAND(3,6)
+					cardrive = 20
+
+					if cardrive < 20:
+						minut += 75
+						'You eat more than an hour on the highway to the town.'
+					else
+						minut += 15
+						'For you 15 minutes, get to your destination.'
+					end
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 23:
+				act 'To go to the countryside Gadyukino':
+					cla
+					benz = benz - 3
+					teh = teh - RAND(3,6)
+					cardrive = 23
+
+					if cardrive < 20:
+						minut += 75
+						'You eat more than an hour on the highway to the town.'
+					else
+						minut += 15
+						'For you 15 minutes, get to your destination.'
+					end
+
+					dynamic $enddrive
+				end
+			end
+
+			if cardrive ! 12 and cardrive < 20:
+				act 'Go to Old Town':
+					cla
+					minut = minut + 15
+					benz = benz - 1
+					teh = teh - RAND(1,3)
+					cardrive = 12
+
+					'For you 15 minutes, get to your destination.'
+
+					dynamic $enddrive
+				end
+			end	
+
+			act 'Take the track (1 h)':
+				cla
+				'You go on the road.'
+
+				numberRoad = input("In what city will stop (from 0 to 20)")
+				if numberRoad >= 0 and numberRoad <= 20:
+					cardrive = 22
+					nroad = numberRoad
+					ncarroad = numberRoad
+				end
+
+				xgt'carF','salon'
+			end
+			act 'To drive on the highway (1 h)':
+				cla
+				minut = minut + 60
+				benz = benz - 4
+				teh = teh - RAND(2,6)
+				manna = manna + 20
+				wipo = wipo+10
+
+				'You go on the road and having fun Likhachev, then turn back.'
+
+				act 'Finish':xgt'carF','salon'
+			end
+		end
+	end
+end
+--- carF ---------------------------------
+

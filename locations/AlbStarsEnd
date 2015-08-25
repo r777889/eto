@@ -1,0 +1,14 @@
+# AlbStarsEnd
+ZvezdEnd = 1
+AlbFather = 10
+AlbinaInPrison = 1
+AlbCopDay = daystart
+grupTipe[23] = -10
+Chernov = 10
+gs'stat'
+
+'You go down the street and see Albina Barlovskuyu. Near it stops the machine out people run out and put her face to the ground setting the stage for her hands behind her back and wearing handcuffs. Albina outraged, but it shows the documents for her arrest for organizing a brothel. After the search, it gets to his feet and literally zashvyrivayut a police car, then take away.'
+
+act 'Escape':gt'gorodok'
+--- AlbStarsEnd ---------------------------------
+

@@ -1,0 +1,245 @@
+# sex
+if $ARGS[0] = 'start':
+	guy += 1
+	gs'stat'
+	picrand = RAND(0,1)
+	xgt'sex','var'
+end
+
+if $ARGS[0] = 'var':
+	cla
+	gs'stat'
+	textrand = RAND(1,4)
+
+	act 'Blow job':gt'sex','minet'
+	if picrand ! 12 and picrand ! 28 and picrand ! 29 and picrand ! 30 and picrand ! 34 and picrand ! 35 and picrand ! 50 and picrand ! 55 and picrand ! 76 and picrand ! 81 and picrand ! 87:act 'Cooney':gt'sex','kuni'
+	if picrand ! 31 and picrand ! 33 and picrand ! 36:act 'Extend the legs':gt'sex','vag'
+	if picrand ! 15 and picrand ! 28 and picrand ! 29 and picrand ! 32:act 'Horsewoman':gt'sex','nae'
+	act 'Get cancer':gt'sex','rak'
+	if picrand ! 13 and picrand ! 36 and picrand ! 39 and picrand ! 75:act 'On the side':gt'sex','bok'
+	if picrand ! 15 and picrand ! 16 and picrand ! 22 and picrand ! 17 and picrand ! 44 and picrand ! 51 and picrand ! 52 and picrand ! 61 and picrand ! 74 and picrand ! 77 and picrand ! 80:act 'In the ass':gt'sex','anal'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'minet':
+	cla
+	*clr
+	horny += 10
+	minut += 10
+	sexvar += 1
+
+	if sxbj = 0:
+		if svidboysex = 1:bja += 1
+		bj += 1
+		sxbj = 1
+	end
+
+	'<center><img src="images/img/sex/minet<<picrand>>.jpg"></center>'
+	if textrand = 1:'You have a member of the hand, drew off skin, He licked his lips and sucked in her mouth naked penis. You vigorously sucking dick her soft wet sponge, I played with him tongue, We played with bridle. It, smiling blissfully, He did not take his eyes off you sucking his dick. He was shaking and moaning'
+	if textrand = 2:'You knelt, and picked up this great and gentle barrel. Then slowly he began to work hand, gradually leading him to my insatiable jaws, and that he had drowned in your mouth.'
+	if textrand = 3:'Your tongue walked around the trunk from the testicles to the end of the head. Your hot lips captured his gentle head and your mouth slid down the barrel of his penis. Your palm was a continuation of her mouth and tightly cover the remainder of the phallus. You then accelerated pace, then slowed, your sponge is filled with resilient, it becomes extremely soft.'
+	if textrand = 4:'Taking the hand of his hard dick, You sent him into his hot mouth. That introducing it at all, to the very throat, then caressing one head, you stared him in the face, stretching his pleasure, your hands caressing the body of Man.'
+
+	if sexvar < 3:act 'Another':xgt'sex','var'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'kuni':
+	cla
+	*clr
+	horny += 10
+	minut += 10
+	sexvar += 1
+
+	if sxkuni = 0:
+		kuni += 1
+		sxkuni = 1
+	end
+
+	'<center><img src="images/img/sex/kuni<<picrand>>.jpg"></center>'
+	if textrand = 1:'Man holds his tongue over your hips, kisses pubis and goes down to the vagina, his tongue slides over your crotch caressing the clitoris is getting inside.'
+	if textrand = 2:'You feel, as the tongue deep in your pussy wielded, He got up there is, you ran like crazy. You had a feeling, he ignored, I have not left any zakoulochkam, in your hot pussy. At the same time you are so run down, that you thought, he choke. But it was not there, his tongue, not only get you deep in pussy, but he still had time to lick it, that you tried to run on the thighs'
+	if textrand = 3:'He fell down at your current hole. The nose rested against the clitoris, a large and long tongue plunged inside, where I began to lick smazochki stenochek vagina. You are so podmahivat, language that popped out of your hole. Then he grabbed you buttocks and squeezed, and stretched the entire length of the language, I began to fuck you.'
+	if textrand = 4:'His tongue gently began to lick lips sex, Entrance to the fold, touch klitorok. "Ah, so cool!" - You thought. Gradually, more and more attention he paid to your clitoris. His tongue, how easy fast butterfly, fluttering over it.'
+
+	if sexvar < 3:act 'Another':xgt'sex','var'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'vag':
+	cla
+	*clr
+	horny += 10
+	minut += 10
+	sexvar += 1
+	vagina += 1
+
+	if sxsex = 0:
+		if svidboysex = 1:sexa += 1
+		sex += 1
+		sxsex = 1
+	end
+
+	'<center><img src="images/img/sex/vag<<picrand>>.jpg"></center>'
+	if textrand = 1:'It slowly and deeply entered into you. You were, relaxed. As your body enjoy it, I can easily read on his face. It, literally melted, moaning, dissolving in your bosom. How is it, all-nevertheless it was cool!'
+	if textrand = 2:'Hard cock hard and deep into the bosom of your. Peel it lifts up moist and tender, but hard head so nice sliding, He rubbed against wet cunt'
+	if textrand = 3:'Going to the full depth, he did not stop, and I began to move back, smearing the entire length of the accumulated moisture. Fearing completely out of caves so desired, He stalled half the length, and at a higher rate, again I began to sink into the abyss beckoning. Movement became more intense and deeper. His hips zashlёpali for your thighs.'
+	if textrand = 4:'Your pisya squelched and slurp, You ёrzali and twirled his ass petrified banana, all the more intense and aggressive hammering his bottomless hole.'
+
+	if sexvar < 3:act 'Another':xgt'sex','var'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'nae':
+	cla
+	*clr
+	horny += 10
+	minut += 10
+	sexvar += 1
+	vagina += 1
+
+	if sxsex = 0:
+		if svidboysex = 1:sexa += 1
+		sex += 1
+		sxsex = 1
+	end
+
+	'<center><img src="images/img/sex/nae<<picrand>>.jpg"></center>'
+	if textrand = 1:'It slowly and deeply entered into you. You were, relaxed. As your body enjoy it, I can easily read on his face. It, literally melted, moaning, dissolving in your bosom. How is it, all-nevertheless it was cool!'
+	if textrand = 2:'Hard cock hard and deep into the bosom of your. Peel it lifts up moist and tender, but hard head so nice sliding, He rubbed against wet cunt'
+	if textrand = 3:'Going to the full depth, he did not stop, and I began to move back, smearing the entire length of the accumulated moisture. Fearing completely out of caves so desired, He stalled half the length, and at a higher rate, again I began to sink into the abyss beckoning. Movement became more intense and deeper. His hips zashlёpali for your thighs.'
+	if textrand = 4:'Your pisya squelched and slurp, You ёrzali and twirled his ass petrified banana, all the more intense and aggressive hammering his bottomless hole.'
+
+	if sexvar < 3:act 'Another':xgt'sex','var'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'rak':
+	cla
+	*clr
+	horny += 10
+	minut += 10
+	sexvar += 1
+	vagina += 1
+
+	if sxsex = 0:
+		if svidboysex = 1:sexa += 1
+		sex += 1
+		sxsex = 1
+	end
+
+	'<center><img src="images/img/sex/rak<<picrand>>.jpg"></center>'
+	if textrand = 1:'It slowly and deeply entered into you. You were, relaxed. As your body enjoy it, I can easily read on his face. It, literally melted, moaning, dissolving in your bosom. How is it, all-nevertheless it was cool!'
+	if textrand = 2:'Hard cock hard and deep into the bosom of your. Peel it lifts up moist and tender, but hard head so nice sliding, He rubbed against wet cunt'
+	if textrand = 3:'Going to the full depth, he did not stop, and I began to move back, smearing the entire length of the accumulated moisture. Fearing completely out of caves so desired, He stalled half the length, and at a higher rate, again I began to sink into the abyss beckoning. Movement became more intense and deeper. His hips zashlёpali for your thighs.'
+	if textrand = 4:'Your pisya squelched and slurp, You ёrzali and twirled his ass petrified banana, all the more intense and aggressive hammering his bottomless hole.'
+
+	if sexvar < 3:act 'Another':xgt'sex','var'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'bok':
+	cla
+	*clr
+	horny += 10
+	minut += 10
+	sexvar += 1
+	vagina += 1
+
+	if sxsex = 0:
+		if svidboysex = 1:sexa += 1
+		sex += 1
+		sxsex = 1
+	end
+
+	'<center><img src="images/img/sex/bok<<picrand>>.jpg"></center>'
+	if textrand = 1:'It slowly and deeply entered into you. You were, relaxed. As your body enjoy it, I can easily read on his face. It, literally melted, moaning, dissolving in your bosom. How is it, all-nevertheless it was cool!'
+	if textrand = 2:'Hard cock hard and deep into the bosom of your. Peel it lifts up moist and tender, but hard head so nice sliding, He rubbed against wet cunt'
+	if textrand = 3:'Going to the full depth, he did not stop, and I began to move back, smearing the entire length of the accumulated moisture. Fearing completely out of caves so desired, He stalled half the length, and at a higher rate, again I began to sink into the abyss beckoning. Movement became more intense and deeper. His hips zashlёpali for your thighs.'
+	if textrand = 4:'Your pisya squelched and slurp, You ёrzali and twirled his ass petrified banana, all the more intense and aggressive hammering his bottomless hole.'
+
+	if sexvar < 3:act 'Another':xgt'sex','var'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'anal':
+	cla
+	*clr
+	horny += 10
+	minut += 10
+	sexvar += 1
+	anus += 1
+
+	if sxanal = 0:
+		if svidboysex = 1:anala += 1
+		anal += 1
+		sxanal = 1
+	end
+
+	'<center><img src="images/img/sex/anal<<picrand>>.jpg"></center>'
+	if textrand = 1:'You are pushing the buttocks inviting him in his ass, the guy did not hesitate and threw a dildo in your point, you scream at every jolt, and it is only whet he moves faster with each thrust penetrating deeper into your anus, making you scream louder.'
+	if textrand = 2:'Cock slowly, but surely making its way into your ass. For he had entered full depth. Are you struggling clutching the entrance to his ass, and from this member, thought, even more strained, thickens and grows in size. - Yes, so very cool! Do not let go!! How cool!!! - He moaned. Its steel member is strongly moved there-here, bringing you pleasure.'
+	if textrand = 3:'At the same moment, you felt, like that-something big and fat enters your narrow opening. You cried out in pain, but he, not paying attention to you, It becomes hollow like a wound. Pain where-then disappeared, and you began to receive fabulous fun.'
+	if textrand = 4:'You are pushing the buttocks inviting him in his ass, the guy did not hesitate and threw a dildo in your point, you scream at every jolt, and it is only whet he moves faster with each thrust penetrating deeper into your anus, making you scream louder.'
+
+	if sexvar < 3:act 'Another':xgt'sex','var'
+	if sexvar >= 3:act 'Finish':gt'sex','end'
+end
+
+if $ARGS[0] = 'end':
+	cla
+	*clr
+	svidboysex = 0
+	minut += 10
+	sexvar = 0
+	sxkuni = 0
+	sxbj = 0
+	sxsex = 0
+	sxanal = 0
+	cumlip += 1
+
+	if horny >= 80:
+		horny = 0
+		orgasm += 1
+	end
+
+	'<center><img src="images/img/sex/cum<<picrand>>.jpg"></center>'
+	'You take it dildo in her mouth and suck furiously until he cums.'
+
+	act 'Escape':
+		if picrand >= 54 and picrand <= 73:gt'office','work'
+		if picrand >= 74 and picrand <= 76:gt'vann','start'
+		if picrand >= 77 and picrand <= 80:gt'house'
+		if picrand >= 81 and picrand <= 82:gt'down'
+		if picrand >= 83 and picrand <= 84:dynamic $brodila
+		if picrand >= 85 and picrand <= 86:gt'down'
+		if picrand = 87 or picrand = 90:dynamic $brodilk
+		if picrand = 88:dynamic $brodilk
+		if picrand = 89:gt'bed','start'
+
+		if svidboykino = 1:
+			svidboykino = 0
+			gt'torgcentr'
+		end
+		if svidboypark = 1:
+			svidboypark = 0
+			gt'park','start'
+		end
+		if svidboypark1 = 1:
+			svidboypark1 = 0
+			gt'svidboy','parksvid21'
+		end
+		if svidboypark2 = 1:
+			svidboypark2 = 0
+			gt'svidboy','parksvid22'
+		end
+		if svidboykafe = 1:
+			svidboykafe = 0
+			gt'down'
+		end
+
+		gt'<<$sexloc>>','start'
+	end
+end
+--- sex ---------------------------------
+

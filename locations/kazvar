@@ -1,0 +1,19 @@
+# kazvar
+clr
+minut = minut + 10
+gs'stat'
+
+'<right><img src="images/casino/stolcw.jpg"></right>'
+'You are standing at the table games Casino War'
+
+act 'To approach the dealer':
+	gt'croupier2'
+end
+act 'Sit down':
+	gt'igrkart2'
+end
+act 'Move away from the table':
+	gt'cards'
+end
+--- kazvar ---------------------------------
+

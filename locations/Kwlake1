@@ -1,0 +1,75 @@
+# Kwlake1
+clr
+gs'stat'
+
+'<center><img src="images/img/Lake/kwlake1/kwlake1.jpg"></center>'
+'Taking a walk along the beach you will notice a stone of unusual shape, resembling a dildo.'
+'"Look how cool" you interrupt the story of Kate about some guy, pointing to the stone.'
+'Kate picks up a stone, examines and laughing shoves it in his mouth portraying blowjob'
+
+act 'Laugh':gt'Kwlake1','end'
+act 'Fondle her':
+	cla
+	*clr
+	kat += 5
+	lesbian += 1
+
+	'<center><img src="images/img/Lake/kwlake1/kwlake2.jpg"></center>'
+	'You touch the pubis Katie, Get down and his hand beneath his fingers in her pussy. Kat puts little feet, you go down on your knees and kiss her crotch, gradually moving to the pussy and starting to caress her tongue.'
+
+	act 'Lie down':
+		cla
+		*clr
+		kuni += 1
+
+		'<center><img src="images/img/Lake/kwlake1/kwlake3.jpg"></center>'
+		'You lie on the sand, Kat gives you a stone, and she spends the language of your flushed the body from neck to crotch and begins to fondle your language. You are so excited, that without noticing take a stone in his mouth and begin to suck it. You and Kate are so enthusiastic with each other that are not noticed approached Man, He, meanwhile, have their play eldu, a few minutes later you notice it.'
+
+		act 'Escape':gt'Nudelake'
+		act 'Called Man':
+			cla
+			*clr
+			kat += 5
+			mastr += 1
+			orgasm += 1
+
+			'<center><img src="images/img/Lake/kwlake1/kwlake4.jpg"></center>'
+			'You beckon Man, he comes and stops undecided, not knowing who to approach you or Cat. But Kate did not give him a long time to come in thought, Kate turned to his lips wrapped around his cock, leaving your expiring pussy alone, but you are not taken aback by inserting a stone at her, began masturbating, We have not yet brought herself to orgasm.'
+
+			act 'To approach the Cat':
+				cla
+				*clr
+				'<center><img src="images/img/Lake/kwlake1/kwlake5.jpg"></center>'
+				'While you masturbated Katia has straddled Man, you come to it apply the stone to his pubis, Kate smiled enough stone lips licking your juices from it.'
+
+				act '...':
+					cla
+					*clr
+					anal += 1
+
+					'<center><img src="images/img/Lake/kwlake1/kwlake6.jpg"></center>'
+					'The guy puts on all fours and Katja enters her ass, You also get up on all fours ass turning to Kate and give her the stone. Kate without hesitation puts a stone in your anus.'
+
+					act '...':
+						cla
+						*clr
+						'<center><img src="images/img/Lake/kwlake1/kwlake7.jpg"></center>'
+						'Sated Katina ass, the guy puts her on her knees and ends in the mouth'
+
+						act 'Escape':gt'Nudelake'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'end':
+	cla
+	'"Pervert" laughing at you'
+	'"What, easy blowjob stone god, It can make my boyfriend eternal riser." Kate laughs, He throws a stone and returns to his story.'
+
+	act 'Finish':gt'Nudelake'
+end
+--- Kwlake1 ---------------------------------
+

@@ -1,0 +1,1054 @@
+# poli
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+
+	cla
+	*clr
+	clr
+	hosprand = RAND(0,10)
+	minut = minut + 5
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Clinic</font></b></center>'
+	'<center><img src="images/pic/poli.jpg"></center>'
+	'The doctor is 1000 rubles.'
+	'The reception at the psychotherapist is 1000 rubles.'
+	'The reception is at Venereology 1000 rubles.'
+	''
+	'About Cabinet venereologist hanging ads.'
+	'Private Sexually Transmitted Infection Clinic offers the following services.'
+	'Complete recovery from yeast 50 thousand.'
+	'Complete recovery from herpes 150 thousand.'
+	'Complete cure of syphilis 350 thousand.'
+	''
+	'On the issue of hospitalization come Monday, to 10 of every month'
+	''
+	'Abortion at a woman`s request can be made to the 84 days gestation.'
+	'The cost of an abortion 20 thousand.'
+	'We warn, abortion is dangerous to health. There is always a risk of complications and the ability to get pregnant in the future.'
+
+	if workhosp = 1 and hour >= 8 and hour <= 9 and week < 6:act 'Exit replaced':gt'poli','beginwork'
+
+	act 'Exit Clinics':gt'street'
+	
+	if glassqw=1:
+		act'It seems the optometrist':
+			cla
+			*clr
+			hour+=1
+			minut+=35
+			gs'stat'
+			'You have passed a series of tests.
+	"Well. The vision you have fallen significantly. I have to write you a goggles. While I`ll write you a simple little rimmed glasses, pohzhe and you can choose to his liking, or to make corrections. Truth, the procedure is not cheap.'
+			nerdism+=1
+			glassqw=2
+			glass=1
+			blizoruk+=1
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if money >= 1000:
+		if health < (vital*10 + stren*5):
+			act 'Treat health (1000 RUB)':
+				cla
+				money = money - 1000
+				minut = minut + 60
+				health = vital*10 + stren*5+1000
+				if hosprand = 0:gt'poli','0'
+				if hosprand = 1:gt'poli','1'
+				if hosprand = 2:gt'poli','2'
+
+				'The doctor give you an injection and you immediately felt much better'
+
+				act 'Logout':gt'poli','start'
+			end
+		end
+
+		if willpower < intel*5 + will*5:
+			act 'Going to a therapist (1000 RUB)':
+				cla
+				money = money - 1000
+				minut = minut + 60
+				willpower = intel*5 + will*5+1000
+				manna = (intel*magik) + magik*100 + vital*10 + rikudo
+				if hosprand = 0:gt'poli','0'
+				if hosprand = 1:gt'poli','1'
+				if hosprand = 2:gt'poli','2'
+
+				'You lie down on a couch in the therapist and told him about his troubles and you will immediately become much happier.'
+
+				act 'Logout':gt'poli','start'
+			end
+		end
+
+		if venosm = 0:
+			act 'Go to Venereology (1000 RUB)':gt'venta','ven'
+		end
+		
+		if venosm = 1:
+			venosm = 0
+			act 'Go to Venereology':
+				cla
+				*clr
+				minut = minut + 6
+				gs'stat'
+				'<center><img src="images/ginek/bg28qy97.jpg"></center>'
+
+			'You took the tests and after a short wait in the doctor`s office called you.'
+
+			if venera > 0:venosm = 0 & 'The doctor pulled a mournful mine and reported, that you are not going smoothly with analyzes.'
+
+			if GerpesOnce = 1:
+				'You found genital herpes. This disease is not curable and can only turn off for a while.'
+
+				if Gerpes >= 3:
+					if GerpesNapr = 0:GerpesNapr = 3 & 'Here you have the direction of shots from herpes. Necessary 3 injection, you will have to pay the cost of medicines, this 1000 rubles.'
+					if GerpesNapr > 0:'Go for shots herpes, I have issued a direction.'
+				else
+					'Herpes you in inactive stage, take vitamins, and it has not shown itself.'
+				end
+			end
+
+			if SifacOnce = 1:
+				'You found syphilis. It is not curable, a deadly disease that nowadays have learned to restrain, but no more.'
+
+				if Sifilis < 15:
+					'Now you have syphilis in the inactive stage. Therefore, no special meaning in therapy.'
+				elseif Sifilis >= 15:
+					if SifNapr = 0:SifNapr = 10 & 'Here you have the direction of shots from syphilis. Required rate of 10tee shots, each will be worth a shot 5000 rubles.'
+					if SifNapr > 0:'Go for shots of syphilis. The course is long, 10 days. But it is necessary, serious illness.'
+				end
+			end
+
+			if TriperOnce = 1:
+				'You found gonorrhea. In principle, this curable disease has already.'
+
+				if TriperNapr = 0:TriperNapr = 5 & 'Here you have the direction of injections for gonorrhea. Necessary 5be pricks, each prick 1500 rubles'
+			end
+
+			if KandidozOnce = 1:
+				'You found candidiasis. Or, as it is called in the people, thrush. Thing is not curable, but not very dangerous, to easily suppressed.'
+
+				if KandidNapr = 0:KandidNapr = 1 & 'The pharmacy can buy pills.'
+				if Kandidoz < 30:'Now you candidiasis in an inactive stage, take vitamins, and it has not shown itself.'
+			end
+
+				if venera <= 0:venosm = 0 & 'Doctor please you so that you do not have sexually transmitted diseases.'
+
+			act 'Logout':gt'poli','start'
+		end
+		end
+
+		if GerpesNapr > 0 and GerpesUkolDay ! day:
+			act 'Go for shots herpes (1000 RUB). You`re <<GerpesNapr>> injection in the direction':
+				cla
+				*clr
+				money = money - 1000
+				minut = minut + 60
+				GerpesUkolDay = day
+				GerpesNapr -= 1
+				gs'stat'
+				'<center><img src="images/ginek/at12xa77.jpg"></center>'
+
+				'You made a very painful injection in the ass.'
+
+				if GerpesNapr = 0:Gerpes = -10 & 'It was the last stab'
+
+				act 'Logout':gt'poli','start'
+			end
+		end
+	end
+
+	if money >= 1500 and TriperNapr > 0 and TriperUkolDay ! day:
+		act 'Go to injections for gonorrhea (1500 RUB). You`re <<TriperNapr>> injection in the direction':
+			cla
+			*clr
+			money = money - 1500
+			minut = minut + 60
+			TriperUkolDay = day
+			TriperNapr -= 1
+			gs'stat'
+			'<center><img src="images/ginek/at12xa77.jpg"></center>'
+
+			'You made a very painful injection in the ass.'
+			if TriperNapr = 0:Triper = 0 & Venera -= 1 & TriperOnce = 0 & 'It was the last stab'
+
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if money >= 5000 and SifNapr > 0 and SifUkolDay ! day:
+		act 'Go to injections of syphilis (5000 RUB). You`re <<SifNapr>> injection in the direction':
+			cla
+			clr
+			money = money - 5000
+			minut = minut + 60
+			SifUkolDay = day
+			SifNapr -= 1
+			gs'stat'
+			'<center><img src="images/ginek/at12xa77.jpg"></center>'
+
+			'You made a very painful injection in the ass.'
+
+			if SifNapr = 0:Sifilis = 0 & 'It was the last stab'
+
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if money >= 20000 and preg = 1 and pregtime < 84:
+		act 'Make Abortion (20000 RUB)':
+			cla
+			vidage = vidage + 1
+			abort = abort + 1
+			money = money - 20000
+			pregtime = 0
+			pregtalk = 0
+
+			abortrand = RAND(0,10)
+			if age > 18:
+				if abortrand < 10:preg = 0
+				if abortrand = 10:preg = 2
+			elseif age < 18:
+				if abortrand < 4:preg = 0
+				if abortrand >= 5:preg = 2
+			end
+
+			'<center><img src="images/pic/abort.jpg"></center>'
+			'You spread on the gynecological chair, the doctor brought you into the vagina tools and parts ripped from your fruit.'
+
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if money >= 50000 and KandidozOnce = 1 and week = 1 and day <= 10:
+		act 'Go to private clinics for the complete destruction of the virus thrush (50000 RUB)':
+			cla
+			*clr
+			money = money - 50000
+			day += 3
+			week += 3
+			KandidozOnce = 0
+			Kandidoz = 0
+			gs'stat'
+			'<center><img src="images/ginek/at12xa77.jpg"></center>'
+
+			'You have lain for three days in private clinics and were completely cured of thrush.'
+
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if money >= 150000 and GerpesOnce = 1 and week = 1 and day <= 10:
+		act 'Go to private clinics for the complete destruction of the herpes virus (150000 RUB)':
+			cla
+			*clr
+			money = money - 150000
+			day += 3
+			week += 3
+			GerpesOnce = 0
+			Gerpes = 0
+			Venera -= 1
+			gs'stat'
+			'<center><img src="images/ginek/at12xa77.jpg"></center>'
+
+			'You have lain for three days in private clinics and were completely cured of herpes.'
+
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if money >= 350000 and SifacOnce = 1 and week = 1 and day <= 10:
+		act 'Go to private clinics for the complete elimination of syphilis (350000 RUB)':
+			cla
+			*clr
+			money = money - 350000
+			day += 3
+			week += 3
+			SifacOnce = 0
+			Sifilis = 0
+			Venera -= 1
+			gs'stat'
+			'<center><img src="images/ginek/at12xa77.jpg"></center>'
+
+			'You have lain for three days in private clinics and were completely cured of syphilis.'
+
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if preg = 1 and pregtime = 280:
+		act 'Give birth to':
+			cla
+			vidage = vidage + 1
+			preg = 2
+			pregtime = 0
+			pregtalk = 0
+			numkid += 1
+			kid += 1
+			daykid[numkid] = day
+			monthkid[numkid] = month
+			yearkid[numkid] = year
+
+			$father[numkid] = $father
+
+			haprikid[numkid] = RAND(0,3)
+			glacol[numkid] = RAND(0,3)
+
+			!'<center><img src="images/pic/abort.jpg"></center>'
+			'You put on the bed and spread her legs. It was a terrible pain in the abdomen, you yelled with all the dope and finally gave birth.'
+
+			polkid[numkid] = RAND(0,1)
+			if polkid[numkid] = 0:$polreb[numkid] = 'girl' & 'The doctor said that you had a girl.'
+			if polkid[numkid] = 1:$polreb[numkid] = 'boy' & 'The doctor said that you have a baby boy.'
+
+			act 'Give the name of the child':
+				$kidname[numkid] = input ("What do you call baby?")
+
+				if $kidname[numkid] <= 0:
+					if polkid[numkid] = 0:$kidname = 'Masha'
+					if polkid[numkid] = 1:$kidname = 'Misha'
+				end
+
+				act 'Logout':gt'poli','start'
+			end
+		end
+	end
+
+	if sick > 0 and polisickday ! day:
+		if ninelsex = 0:
+			act 'To go to a therapist':
+				cla
+				*clr
+				polisickday = day
+
+				terrnd = RAND(0,1)
+				if terrnd = 0:gt'poli','drPP'
+				if terrnd = 1:gt'poli','ninel'
+			end
+		elseif ninelsex > 0:
+			act 'Go to the reception to Ninel':
+				cla
+				*clr
+				polisickday = day
+				gt'poli','ninel2'
+			end
+		end
+	end
+
+	if sick <= 0 and horny >= 90 and ninelsex >= 1 and ninelday ! day:
+		act 'Search Ninel':
+			cla
+			*clr
+			ninelday = day
+
+			ninelrand = RAND(0,2)
+			if ninelrand = 0:
+				'At the reception you said, Ninel that in his office'
+
+				act 'Go to Ninel':gt'poli','ninel3'
+			elseif ninelrand = 1:
+				'At the reception you said, Ninel that today do not accept'
+
+				act 'To leave from the clinic':gt'street'
+			elseif ninelrand = 2:
+				'At the reception you said, Ninel that today`s challenges'
+
+				act 'To leave from the clinic':gt'street'
+			end
+		end
+	end
+
+	if katjob > 0:act 'Login to the head physician':gt'poli','glavdoc'
+
+	if zub > 0:
+		act 'Going to the dentist':
+			cls
+			zubpay = zub*30000
+			gs'stat'
+
+			'The dentist looked at you and said,, that the prosthesis will cost <<zubpay>> rubles'
+
+			act 'To leave from the clinic':gt'street'
+
+			if money >= zubpay:
+				act 'Pay prosthetics':
+					cls
+					money -= zubpay
+					minut += 60
+					zub = 0
+					gs'stat'
+
+					'You paid for prosthetics and dentist within an hour completely put in order your teeth.'
+
+					act 'To leave from the clinic':gt'street'
+				end
+			end
+		end
+	end
+
+	if anus > 5:
+		act 'Go to the proctologist':
+			cls
+			minut += 15
+			if analplugIN ! 0:analplugIN = 0
+			gs'stat'
+
+			'<center><img src="images/picb/<<anpic>>.jpg"></center>'
+			'You came to the office to the proctologist. He immediately asked you to hear from the waist down and tilting.'
+
+			if anus <= 15:
+				'The doctor examined your anus and said "Well, in principle, nothing terrible, bit stretched anus, but no abnormalities."'
+			elseif anus > 15 and anus <= 25:
+				'The doctor examined your anus and said "You stretched anus and sphincter. I would recommend the procedure, 1000 rubles per session, This will help decrease the anus to normal size."'
+			elseif anus > 25 and anus <= 35:
+				'The doctor examined your anus and said "You have greatly extended the anus, most likely your sphincter is not able to keep the intestinal gases. I would recommend the procedure, 1000 rubles per session, This will help decrease the anus to normal size."'
+			elseif anus > 35:
+				'The doctor examined your anus and said "Oh my God! You need to be careful to treat his booty, Here you have the same gut`s fall. I would recommend the procedure, 1000 rubles per session, This will help decrease the anus to normal size."'
+			end
+
+			if money >= 1000 and anus > 15 and proktologday ! day:
+				act 'Purchase procedure':
+					cls
+					money -= 1000
+					minut += 60
+					proktologday = day
+					anus -= 5
+					gs'stat'
+
+					'<center><img src="images/picb/<<anpic>>.jpg"></center>'
+					'You paid for the procedure and the doctor an hour tinkering in your ass causing her to order.'
+
+					act 'To leave from the clinic':gt'street'
+				end
+			end
+
+			act 'To leave from the clinic':gt'street'
+		end
+	end
+
+	if glass > 0:
+		act 'Go to the optometrist':
+			cls
+			gs'stat'
+
+			'Ophthalmologist examined you and said that you can do laser vision correction procedure, and this is 100 thousands. But from reading books eyesight may deteriorate again.'
+
+			if glass = 1:'Doctor looking at you add, Of course you can buy glasses that will look better on you. 8 thousands.'
+
+			act 'To leave from the clinic':gt'street'
+
+			if money >= 8000 and glass = 1:
+				act 'Buy Points':
+					cls
+					money -= 8000
+					minut += 60
+					glass = 2
+					gs'stat'
+
+					'You bought a new, more stylish glasses.'
+
+					act 'To leave from the clinic':gt'street'
+				end
+			end
+
+			if money >= 100000 and glass ! 0:
+				act 'Pay for laser correction':
+					cls
+					money -= 100000
+					minut += 60
+					blizoruk = 0
+					glass = 0
+					gs'stat'
+
+					'You paid for your laser correction and an hour corrected vision.'
+
+					act 'To leave from the clinic':gt'street'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'drPP':
+	cla
+	clr
+	*clr
+	minut = minut + RAND(3,10)
+	gs'stat'
+
+	'You sit in the corridor among the coughing and ohayuschih old ladies waiting for their turn.'
+	'Lastly, turn came'
+
+	act 'Login to Account':
+		cla
+		*clr
+
+		'<center><img src="images/add-on/drPP.jpg"></center>'
+
+		if drPP = 0:'At the table sits an elderly balding man felicitous appearance. "Hello, sick. My name is Peter, I`m your local therapist, - he says, I am looking at you through glasses".'
+		if drPP = 1:'At the table sit Peter. He smiles at you and says,: "Hello, sick.'
+		drPP = 1
+
+		'(You) - Hello, doctor.'
+		'(Doctor) - At that complain, sick?'
+
+		act 'Complain':
+			cla
+			*clr
+			minut = minut + 5
+
+			'(You) - Oh, doctor, I seem to have caught a cold - nose is stuffed, throat aches... And cough.'
+			'(Doctor) - So-with... The temperature there?'
+			'(You) - Yes, slight.'
+			'(Doctor) - Well-with, let you listen'
+
+			act 'To carry out the doctor`s instructions':
+				cla
+				minut = minut + 20
+
+				'<center><img src="images/inBed/ninel03"></center>'
+				'The doctor listened carefully your lungs, I looked into the throat, I gave thermometer - measure the temperature and, lastly, concluded:'
+				'(Doctor) - Nothing wrong - common cold - SARS. Buy at the pharmacy here these medications, soak a couple of days in bed, and everything will be fine. Point - not supercool.'
+				'(You) - Thank you, doctor. Bye.'
+
+				act 'Going home':gt'street'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'ninel':
+	cla
+	clr
+	*clr
+	minut = minut + RAND(3,15)
+	gs'stat'
+
+	'You sit in the corridor among the coughing and ohayuschih old ladies waiting for their turn.'
+	'Lastly, turn came'
+
+	act 'Login to Account':
+		cla
+		*clr
+
+		if ninelmet = 0:'At the table sits a young pretty girl in a light dressing gown. Robe unbuttoned so, that does not hide its small, but beautiful breasts. "Hello. My name Ninel Pavlovna, I replaces your local therapist, - she says, scrutinizing you".'
+		if ninelmet = 1:'At the table sits Ninel. She smiles at you and says,: "Hello, Sveta.'
+
+		if horny < 30:
+			act 'Hello, doctor':
+				cla
+				*clr
+				ninelmet = 1
+				minut = minut + 5
+
+				'<center><img src="images/add-on/exam00.jpg"></center>'
+				'(Doctor) Good afternoon. At that complain?'
+				'(You) - Oh, doctor, I seem to have caught a cold - nose is stuffed, throat aches... And cough.'
+				'(Doctor) - The temperature there?'
+				'(You) - Yes, slight.'
+				'(Doctor) - Clear. Undress.'
+
+				act 'To carry out the doctor`s instructions':
+					cla
+					*clr
+					minut = minut + 20
+
+					'<center><img src="images/add-on/exam01.jpg"></center>'
+					'The doctor listened carefully your lungs, I looked into the throat, He gave thermometer - measure the temperature and, lastly, concluded:'
+					'(Doctor) - SARS - nothing serious. Comply with bed rest and take these medicines here. A couple of days will be healthy. And avoid hypothermia.'
+					'(You) - Thank you, doctor. Bye.'
+
+					act 'Going home':gt'street'
+				end
+			end
+		elseif horny >= 30:
+			act 'Hello, doctor':
+				cla
+				*clr
+				'<center><img src="images/add-on/exam10.jpg"></center>'
+				'(Doctor) Good afternoon. At that complain?'
+				'(You) - Oh, doctor, I seem to have caught a cold - nose is stuffed, throat aches... And cough.'
+				'(Doctor) - The temperature there?'
+				'(You) - Yes, slight.'
+				'(Doctor) - Clear. Undress. Fully'
+
+				act 'Undress':
+					cla
+					*clr
+					horny = horny + 10
+
+					'<center><img src="images/add-on/exam12.jpg"></center>'
+					'You stand in front of the doctor completely naked and confused trying to cover up his hands.'
+					'The doctor comes to you and gently hugging the shoulders:'
+					'(Doctor) - What are you, sweet - do not be shy. I`m a doctor. What`s your name?'
+					'(You, shyly) - Sveta...'
+					'(Doctor) - Do not worry, Sveta - I`ll heal. Well-Single - Breathe deeply.'
+
+					act 'Breathe':
+						cla
+						clr
+						*clr
+						horny = horny + 10
+						gs'stat'
+
+						'<center><img src="images/add-on/exam13.jpg"></center>'
+						'The doctor listens to your lungs. Her hands are light and delicate, touching stethoscope openly caress your breasts.'
+						'Do you feel the growing excitement'
+						'(Doctor) - Like this. Now open your mouth - and-and-and-and...'
+
+						act 'A-and-and':
+							cla
+							*clr
+							'<center><img src="images/add-on/exam14.jpg"></center>'
+							'You open your mouth and your doctor examines the throat reddened'
+							'(Doctor) - Here you go. Now come to measure the temperature. Sit on the couch and push the legs.'
+							'(You) - Why?'
+							'(Doctor) - We measured rectally - so reliable.'
+							'(You) - E-e-e...'
+							'(Doctor) - Do not be afraid - it does not hurt.'
+
+							act 'Substitute the ass':
+								cla
+								clr
+								*clr
+								horny = horny + 10
+								gs'stat'
+
+								'<center><img src="images/add-on/exam15.jpg"></center>'
+								'The doctor arranged for you on the couch in this position, you blushing, greased lubricated you between your legs and gently introduced the thermometer into the anus. It really does not hurt, We understand you - even pleasant.'
+								'The doctor began to slowly move back thermometer-forward in your ass, and the fingers of the other hand - stroke your pussy. Thanks lubricants her fingers glide easily and gently.'
+								'You feel, What excites stronger. Your nipples harden, Pussy hand doctor flowed...'
+
+								act 'Doctor, what`s happening?':
+									cla
+									clr
+									*clr
+									minut = minut + 10
+									horny = horny + 10
+									gs'stat'
+
+									'<center><img src="images/add-on/exam16.jpg"></center>'
+									'The doctor takes out a thermometer and begins openly caressing your pussy moisten with desire.'
+									'You are confused and frightened by her behavior, but it is so tender, and you are so excited, that you simply can not resist. Only, Can you - is choking ask:'
+									'(You) - Doctor, what are you doing? What`s happening?'
+									'(Doctor) - A - I felt! I knew immediately, you`re one of us, and therefore I can take advantage of their power peacefully.'
+									'(You) - So you, too, the magician?!'
+									'(Doctor) - Yes, Only my magic special - Tantric. I heard about this?'
+									'(You) - No, I do not remember...'
+									'(Doctor) - It`s magic, based on sensuality and sex. Roughly speaking, I can cast, Only when I am having sex.'
+									'(You) - I.e..?'
+									'(Doctor) - I.e, if you and I`s have sex - I`ll heal. You agree?'
+									'(You) - And in return?'
+									'(Doctor) - Nothing - I do this only for their own satisfaction. I, see, whether, I am experiencing orgasm, unless conjure.'
+									'(You) - Then of course - I agree.'
+									'(Doctor) - Then get on your knees on the couch.'
+
+									act 'Kneel down':
+										cla
+										*clr
+										'<center><img src="images/add-on/exam17.jpg"></center>'
+										'You knelt down and turned back to Ninel. She took off her robe, meanwhile,, She remained in her stocking feet and you gasped when he saw her strap.'
+										'Dr. lubricated dildo your pussy and lubricant and grinned:'
+										'(Doctor) - Well, baby, Come treated!'
+
+										act 'A-and-ah!':
+											cla
+											clr
+											*clr
+											minut = minut + 10
+											horny = 100
+											gs'stat'
+
+											'<center><img src="images/add-on/exam18.jpg"></center>'
+											'With these words, it is a powerful incentive drove in you dildo.'
+											'You gasp of surprise, then again, and again, and - I have the pleasure.'
+											'Doctor fucked you familiar confident movements, moaning with every jolt - It seems she is afforded no less fun than you - You were just in ecstasy. The unusual situation, Ninel shame and skills quickly led you to the peak'
+
+											act 'I`ll finish!':
+												cla
+												*clr
+												'<center><img src="images/add-on/exam19.jpg"></center>'
+												'(You) - I`ll finish! - you shout, - Please, please, please!'
+												'Ninel overturned on the couch, dragging you along, you find yourself at the top and start frantically jumping on a dildo, screaming and squealing from acute, almost unbearable pleasure.'
+												'Just a few movements, and you start to finish, screaming and twitching in a paroxysm of an incredibly long orgasm.'
+												'(Doctor) - Now it`s my turn. Come on, girl - try.'
+
+												act 'Pleasuring Ninel':
+													cla
+													clr
+													*clr
+													horny = 0
+													orgasm = orgasm + 1
+													lesbian = lesbian + 1
+													ninelsex = ninelsex + 1
+													if ninelsex = 1:girl = girl + 1
+													SUB = SUB + 1
+													vagina = vagina + 1
+													sick = 0
+													health = vital*10 + stren*5+1000
+													willpower = intel*5 + will*5+1000
+													manna = (intel*magik) + magik*100 + vital*10 + rikudo
+													gs'stat'
+
+													'<center><img src="images/add-on/exam19a.jpg"></center>'
+													'Ninel tear strap and presses you face to his inflamed, pussy juices flowing. You begin to wield her tongue in a few seconds, Ninel comes in orgasm. She screams and beats his chest and squeezing out of her vagina in your face sprinkles thick whitish liquid'
+
+													act 'Dress':
+														cla
+														*clr
+														'<center><img src="images/add-on/exam11.jpg"></center>'
+														'With trembling hands, you start to pull her panties. Ninel has slipped robe only her flushed face reminiscent of rough sex, she has just worked with you.'
+														'(Ninel) - Well, How do you feel?'
+														'(You) - Oh-oh... Just beautiful, - you answer and only then realize, as you are right - from the disease has disappeared, you are full of health and in good spirits. A sweet exhaustion makes this bouquet of sensations even more pleasant'
+														'(Ninel) - Well, you see. It`s magic, Babe. M-m-m... You just wonder - for a long time I did not get so much pleasure from his magic. If you get sick again - just come to me or called home. But if you just want to have a good time - look for me in the clinic.'
+														'You promised to be sure to find it, led myself up and left'
+
+														act 'Exit the clinic':gt'street'
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'ninel2':
+	cla
+	*clr
+	'You come to the office and Ninel, contemptuously throwing old ladies sitting in the hallway: "No queue," - go to the office.'
+
+	act 'Login to Account':
+		cla
+		*clr
+		'<center><img src="images/add-on/exam00.jpg"></center>'
+		'Ninel looks up from a-the medical scribbling, He knows you and smiling:'
+		'(Ninel) - Hello, Svetik. Again ill?'
+		'(You, coughing into a fist) - Aha. I`ll fly?'
+		'(Ninel) - Of course, Babe. Undress - I listen to you.'
+		'(You) - Why? You sorceress...'
+		'(Ninel laughs) - Silly. How little you know about magic. I did need to know, from which I will treat, otherwise it will happen as the old song - I wanted to make a storm, but I got a goat. Magic - fine thing'
+		'(You) - That is how... Well then, of course.'
+
+		act 'Undress':
+			cla
+			*clr
+			horny = horny + 10
+
+			'<center><img src="images/add-on/exam02.jpg"></center>'
+			'You undress and Ninel listens to your lungs. As usual, her hands are light and tender and touching her stethoscope on your chest swell sensual heat'
+			'(Ninel) - Yes... You again wheezing. Well-ka say "and-and-and"'
+
+			act 'A-a-a':
+				cla
+				*clr
+				'<center><img src="images/add-on/exam03.jpg"></center>'
+				'You open your mouth and carefully inspect your Ninel Sore throat'
+				'(Ninel) - Painting friend. What are you so? Absolutely not kept. The temperature there?'
+				'(You, smilingly) - Compete.'
+				'(Ninel, archly) - Liked? A first feared... Lie down on the flank and tighten the knees to the chest.'
+
+				act 'Lie down on the couch':
+					cla
+					clr
+					*clr
+					horny = horny + 10
+					minut = minut + 10
+					gs'stat'
+
+					'<center><img src="images/add-on/exam04.jpg"></center>'
+					'You take the desired position and starts fucking Ninel your ass thermometer. You will quickly become excited, your pussy lips are opened, one begins to ooze grease. You moan softly'
+					'(Ninel) - What, baby, Artist? Well-Single Let`s check - to what extent.'
+
+					act 'Substitute pussy':
+						cla
+						clr
+						*clr
+						horny = horny + 10
+						minut = minut + 5
+						gs'stat'
+
+						'<center><img src="images/add-on/exam06.jpg"></center>'
+						'You roll on your back and legs Spreads. Ninel gets Speculum and insert it into your vagina flushed. You quietly ohaete pleasure and Ninel echoed you passionate heavy sigh. It looks like your kind of wide-open vulva her great-ons'
+
+						act 'Oh-about-x..!':
+							cla
+							clr
+							*clr
+							horny = 100
+							minut = minut + 15
+							gs'stat'
+
+							'<center><img src="images/add-on/exam05.jpg"></center>'
+							'Impassioned, Ninel quickly takes off robe, showing between her legs sticking out and pulled the strap to your lips'
+							'You eagerly kissing, while the skilled fingers Ninel play with your excited clitoris, forcing the warm waves of pleasure to run up through your body'
+							'(You) - Fuck me! Rather! - ask for you. Ninel grins, continuing to tease your clitoris hand'
+							'(Ninel) - Ask me'
+							'(You) - Fuck me - please! Rather, I ask!'
+							'(Ninel) - Ask for better. I can see, how you want it'
+
+							act 'To ask and beg':
+								cla
+								*clr
+								minut = minut + 20
+
+								'<center><img src="images/add-on/exam07.jpg"></center>'
+								'(You) - Please, please, please! Fuck me! Do with me what you want - i`m all yours! Only the most - I beseech, rather!!!'
+								'Ninel puts on a strap and snarling drives him into the bosom of your blazing lust. You cried out, Put your feet up, trying, the rubber member has entered into you as deeply as possible.'
+								'Ninel fuck you faster, moaning and groaning with every jolt, but you groan and podmahivat struggling.'
+								'(Ninel) - On knees..! Turn around! - breathlessly tells Dr.'
+
+								act 'Substitute the ass':
+									cla
+									clr
+									*clr
+									horny = 0
+									minut = minut + 10
+									orgasm = orgasm + 1
+									lesbian = lesbian + 1
+									SUB = SUB + 1
+									vagina = vagina +1
+									sick = 0
+									health = vital*10 + stren*5+1000
+									willpower = intel*5 + will*5+1000
+									manna = (intel*magik) + magik*100 + vital*10 + rikudo
+									gs'stat'
+
+									'<center><img src="images/add-on/exam08.jpg"></center>'
+									'Groaning excitement you get on your knees and bulging ass, Ninel it easier to enter, but she is in no hurry'
+									'(You) - Come on - faster! - ask for you, - I almost..! - but Ninel panting orders:'
+									'(Ninel) - Ask! Ask, beg me, small JUMPS!'
+									'(You) - Please, please, please-and-and-and!!! - you shout, - Fuck me, Ebi! I want to finish! Yes - I`m a slut, I JUMPS, but please, please, please, Let me finish!!! Fuck me-and-and-and!!!!'
+									'Strap sticks into your vagina inflamed and begins to hammer away like a jackhammer. Moment and you pierce the wild orgasm. You shout and slap in the throes, weaken your knees and you fall down on the couch, shuddering in voluptuous convulsions, Ninel and all stops and orgasm does not end...'
+									'Finally you end and immediately commanded Ninel:'
+									'(Ninel) - Come to please me now, little whore. Come on - how do you know how!'
+
+									act '...':
+										cla
+										*clr
+										'<center><img src="images/add-on/exam09.jpg"></center>'
+										'You roll on your back and Ninel sits on your face. You diligently oruduete tongue and lips, obihazhivaya its jaws wide open and swollen erect clit, and she screaming and sobbing crawl crotch in your face, until he finally comes in and starts to cry finish. She finished a long time, yelling, shaking like a fever, and plenty of filling your face thick and sticky liquid'
+
+										act '...':
+											cla
+											*clr
+											horny = horny + 20
+
+											'<center><img src="images/add-on/exam09a.jpg"></center>'
+											'Having finished, Ninel rises and slowly puts, showing you my perfect body. It`s incredible, but in your excitement rises again.'
+											'Ninel how-somehow he sees this and smiles:'
+											'(Ninel) - Oh, no - enough is enough. But you come in as a-else - Amuse.'
+											'You yourself know, which once again will be just too much. You are healthy, satisfied - thanks for nothing.'
+
+											act 'Thank Ninel and go':gt'street'
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'ninel3':
+	cla
+	*clr
+	'You come to the office and Ninel, contemptuously throwing old ladies sitting in the hallway: "No queue," - go to the office.'
+
+	act 'Login to Account':
+		cla
+		*clr
+		'<center><img src="images/add-on/exam10.jpg"></center>'
+		'Ninel looks up from a-the medical scribbling, He knows you and smiling:'
+		'(Ninel) - Hello, Svetik. Again ill?'
+		'(You, with feigned grimace of suffering on his face) - Oh, doctor - my pussy is burning, and all flows. Surely, She is seriously ill.'
+		'(Ninel, smiling) - My poor child. Now we are going to fly it.'
+
+		act 'Tear off the clothes':
+			cla
+			*clr
+			'<center><img src="images/add-on/polsex01.jpg"></center>'
+			'Groaning with impatience you tear off her clothes. Ninel also kicked off her robe and front of your face rocked Strap.'
+			'(Ninel) - Suck it, Babe. Make it hot and wet, as you yourself'
+			'You bites his lips in a dildo and start to suck, squishing and abundant watering his saliva. You see, how excited I am looking at this Ninel.'
+
+			act 'Fuck me!':
+				cla
+				*clr
+				minut = minut + 10
+
+				'<center><img src="images/add-on/polsex02.jpg"></center>'
+				'Remembering, Ninel likes it that you begin to beg her to fuck you as soon as possible. You do not even have to pretend to do - the desire to literally burn you.'
+				'Finally Ninel heed the request. It puts you roughly to his knees and begins to drive the strap and measured in your inflamed vagina. You cried out and push each ahaete. Weaken your feet.'
+
+				act 'Fall on the couch':
+					cla
+					*clr
+					minut = minut + 20
+
+					'<center><img src="images/add-on/polsex03.jpg"></center>'
+					'You fall on the couch. Ninel overturns on its side and you continue to play. You drawl and voluptuous groan, of her breasts pulled too deep groan and bestial growl'
+					'Christ, how do you good.'
+					'(Ninel, breathless) - I can not anymore - let itself..!'
+
+					act 'Ride Ninel':
+						cla
+						clr
+						*clr
+						horny = 0
+						minut = minut + 10
+						orgasm = orgasm + 1
+						lesbian = lesbian + 1
+						SUB = SUB + 1
+						manna = manna + 15
+						willpower = willpower + 15
+						vagina = vagina + 1
+						gs'stat'
+
+						'<center><img src="images/add-on/polsex04.jpg"></center>'
+						'You dutifully change position. Ninel leans back on the couch, as you sit down on top of her and strung on dildo.'
+						'You jump on the strapon, squealing and nadrachivaya fingers clit, when Ninel beneath you starts to twitch and moan. You understand, it ends and it works as a trigger - You go in orgasm.'
+						'For a few seconds you and Ninel beats and screaming in paroxysms of passion, and then fall exhausted on the couch'
+						'(You) - Thank you, sweet. It was great...'
+						'(Ninel) - Oh yeah, Svetik. Come again.'
+
+						act 'Freshen up and go':gt'street'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'glavdoc':
+	minut += 5
+
+	'You introduced and asked, Do you take on the job.'
+	'Chief Physician looked at you. "Oh yes, you`re the girl was talking about Catherine. Good, Hear working conditions"'
+	'"Will work on weekdays, Comes with 8 to 9 hours, and come out to replace, going to work 16 hours. Do not come, This day you will not be counted in the salary. Salary lists 25-the first day of, for each worked shift - 1000 rubles."'
+	'"Labour should hand over to the personnel department. You understand, You will work?"'
+
+	if (work = 0 and workhosp = 0 and cheatWork = 0) or (workhosp = 0 and cheatWork = 1):
+		act 'Apply for job':
+			cla
+			workhosp = 1
+			work = 1
+
+			'You carried working in the personnel department."'
+
+			act 'Logout':gt'poli','start'
+		end
+	end
+
+	if workhosp = 1:act 'Dismissed':gt'poli','discharge'
+
+	act 'Logout':gt'poli','start'
+end
+
+if $ARGS[0] = 'beginwork':
+	cla
+	*clr
+	'<center><b><font color = maroon>Clinic</font></b></center>'
+	'<center><img src="images/img/spaln/hospital.jpg"></center>'
+	'You have replaced the clinic.'
+
+	act 'Start work':
+		smena += 1
+		gt'WorkHosp','start'
+	end
+	act 'Dismissed':gt'poli','discharge'
+end
+
+if $ARGS[0] = 'discharge':
+	cla
+	minut += 10
+	workhosp = 0
+	work = 0
+	pay = smena * 1000
+	money = money + pay
+	smena = 0
+
+	'Chief Physician looked at you: "Here`s your payment <<pay>> rubles and employment history. Bye."'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = '0':
+	cla
+	*clr
+	'<center><img src="images/img/spaln/hospsex1.jpg"></center>'
+	'During the examination the doctor starts to stick to you, clearly hinting at an intimate relationship'
+
+	act 'Send it':gt'poli','start'
+	act 'Have fun':
+		picrand = 11
+		guy += 1
+		xgt'sex','var'
+	end
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	'<center><img src="images/img/spaln/hospsex2.jpg"></center>'
+	'You inspect the two doctors, they touch you everywhere clearly beyond what is permitted'
+
+	act 'Send them':gt'poli','start'
+	act 'Have fun':
+		picrand = 11
+		guy += 2
+		xgt'sexdvoe','var'
+	end
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	'<center><img src="images/img/spaln/hospsex3.jpg"></center>'
+	'By accessing the office you caught African nurse kneeling in front of a doctor, with smacking sucking his dick.'
+
+	act 'Escape':gt'poli','start'
+	act 'Login to Account':
+		cla
+		*clr
+		'<center><img src="images/img/spaln/hospsex4.jpg"></center>'
+		'When you are logged, doctor jumped out of the office, and unmet nurse glared at you, but a second later her eyes light flashed and she threw a bathrobe came to you and grab one-handed for the ass and the other pressed to his chest drew you to Me'
+
+		act 'Escape':gt'poli','start'
+		act 'Allow it':
+			cla
+			*clr
+			guy += 1
+			girl += 1
+			lesbian += 1
+
+			'<center><img src="images/img/spaln/hospsex5.jpg"></center>'
+			'She prispustila with your pants and bent over the couch, I began to process your pussy with his tongue'
+
+			act 'Lick it':
+				cla
+				*clr
+				'<center><img src="images/img/spaln/hospsex6.jpg"></center>'
+				'You tipped her on the couch and dug into her lips black pussy, She exuded a smell that literally drive you crazy, you could not tear myself away from it, licked her pussy thrust tongue inside pussy and anus, in this state you returned and found the doctor.'
+
+				act 'Continue threesome':picrand = 11 & gt'podrsex','var'
+			end
+		end
+	end
+end
+--- poli ---------------------------------
+

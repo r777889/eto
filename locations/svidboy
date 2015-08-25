@@ -1,0 +1,364 @@
+# svidboy
+if $ARGS[0] = 'kinosvid':
+	cla
+	*clr
+	minut += 60
+	manna += 10
+	bfA += 3
+	gs'stat'
+
+	'<center><b>Theater</b></center>'
+	'<center><img src="images/img/boysvid/kino0.jpg"></center>'
+	'<<$boyA>> I bought tickets and you take their seats ready for viewing'
+
+	act 'Watch movies':
+		cla
+		*clr
+		minut += 90
+
+		'<center><img src="images/img/boysvid/kino1.jpg"></center>'
+		'During the session, <<$boyA>> looked around and making sure that besides you no one in the hall, I turned to you and started kissing, His hand slid under clothes, began to fondle your breasts.'
+
+		act 'Not here':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/kino0.jpg"></center>'
+			'You removed his hand and said, "Well, not here"'
+			'When the film ended <<$boyA>> He said that he needed to flee and left.'
+
+			act 'Escape':gt'torgcentr'
+		end
+		act 'Unbutton his pants':
+			cla
+			*clr
+			picrand = 48
+			svidboysex = 1
+			svidboykino = 1
+			bfA += 5
+
+			'<center><img src="images/img/boysvid/kino2.jpg"></center>'
+			'You unbutton his pants and pulled out already erection starts stroking his hand, <<$boyA>> put your hands on his shoulders and begins to gently push down, directing your head to its members.'
+
+			act 'Take in the mouth':gt'sex','minet'
+		end
+	end
+end
+
+if $ARGS[0] = 'parksvid':
+	cla
+	*clr
+	minut += 60
+	manna += 10
+	bfA += 3
+	gs'stat'
+
+	'<center><b>Park</b></center>'
+	'<center><img src="images/img/boysvid/park0.jpg"></center>'
+	'<<$boyA>> and you are met at the entrance to the park.'
+
+	act 'To go for a walk':
+		parksvidrand = RAND(0,1)
+		if parksvidrand = 1:gt'svidboy','parksvid2'
+
+		cla
+		*clr
+		minut += 60
+
+		'<center><img src="images/img/boysvid/park1.jpg"></center>'
+		'When you come into the park <<$boyA>> You picked up on his hands and began to circle, "Enough, stop, More Damage" You laughed. <<$boyA>> put you on the ground.'
+
+		act 'Go further':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/park0.jpg"></center>'
+			'You took his hand and went on.'
+			'Soon <<$boyA>> He said that he needed to flee and left.'
+
+			act 'Escape':gt'park','start'
+		end
+		act 'Kiss him':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/park2.jpg"></center>'
+			'You turn to him and kiss on the lips, he hugs you and his hands start to wander around your body, One stop on the chest, the second is your buttocks squeezes.'
+
+			act 'Terminate':
+				cla
+				*clr
+				'<center><img src="images/img/boysvid/park0.jpg"></center>'
+				'You removed his hands and went on.'
+				'Soon <<$boyA>> He said that he needed to flee and left.'
+
+				act 'Escape':gt'park','start'
+			end
+			act 'Continue':
+				cla
+				*clr
+				horny += 20
+
+				'<center><img src="images/img/boysvid/park3.jpg"></center>'
+				'You continue to kiss him, <<$boyA>> passes from your lips on his neck, Bare arms and chest, and you begin to squeeze her, You have a factory and hand itself stretches to pussy.'
+
+				act 'Terminate':
+					cla
+					*clr
+					'<center><img src="images/img/boysvid/park0.jpg"></center>'
+					'You removed his arms and chest hidden under clothes back went on.'
+					'Soon <<$boyA>> He said that he needed to flee and left.'
+
+					act 'Escape':gt'park','start'
+				end
+				act 'Continue':
+					cla
+					*clr
+					'<center><img src="images/img/boysvid/park4.jpg"></center>'
+					'You stand and enjoy caresses, one hand fingering her pussy, suddenly <<$boyA>> bends you and baring your ass bites into her tongue, his tongue slips between your buttocks is caressing the pussy tickling the anus.'
+
+					act 'Continue':
+						picrand = 49
+						svidboysex = 1
+						svidboypark = 1
+						bfA += 5
+						gt'sex','kuni'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'parksvid2':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/boysvid/park5.jpg"></center>'
+	'Walking through the nooks and crannies of the park, you notice a black guy watching you'
+
+	if izvrat = 1:
+		'<<$boyA>> it also observes, and turned to you and said, unbuttoning his pants "And let`s arrange a little show for this pervert"'
+
+		act 'Takeout':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/park6.jpg"></center>'
+			'"Well, No, I will not do that" you answer buttoning his pants, You take him by the hand and go on.'
+			'Soon <<$boyA>> He said that he needed to flee and left.'
+
+			act 'Escape':gt'park','start'
+		end
+		act 'Agree':
+			picrand = 50
+			svidboysex = 1
+			svidboypark1 = 1
+			bfA += 5
+			gt'sex','minet'
+		end
+	end
+
+	'You comes to mind crazy idea, to have sex with her boyfriend in front of peeping.'
+
+	act 'Sex':
+		cla
+		*clr
+		'<center><img src="images/img/boysvid/park9.jpg"></center>'
+		'You let go of his hand away a little guy back, hoping place so that-African would have seen good and throwing off his clothes covenant of her boyfriend "I want you here and now"'
+		'"And I do not mind" he says coming up to you and is unbuttoning his pants.'
+
+		act 'Blow job':
+			picrand = 50
+			svidboysex = 1
+			svidboypark2 = 1
+			bfA += 5
+			gt'sex','minet'
+		end
+	end
+	act 'Discard the idea and move on':
+		cla
+		*clr
+		'<center><img src="images/img/boysvid/park6.jpg"></center>'
+		'You drop the idea and move on.'
+		'Soon <<$boyA>> He said that he needed to flee and left.'
+
+		act 'Escape':gt'park','start'
+	end
+end
+
+if $ARGS[0] = 'parksvid21':
+	cla
+	*clr
+	'<center><img src="images/img/boysvid/park7.jpg"></center>'
+	'After <<$boyA>> finished, He asks you "Well this little Papuan still here?"'
+	'"Yes, actively Fingering." you answer, glancing toward the African.'
+	'"If you want you can suck it, I look." speaks <<$boyA>>, clearly wanting that-would you agree.'
+
+	act 'Takeout':
+		cla
+		*clr
+		'<center><img src="images/img/boysvid/park6.jpg"></center>'
+		'"Oh no, I`m not going to suck it, enough with him and watching." you answer dressing, then take his hand and go on.'
+		'Soon <<$boyA>> He said that he needed to flee and left.'
+
+		act 'Escape':gt'park','start'
+	end
+	act 'Agree':
+		cla
+		*clr
+		bfA += 5
+		bj += 1
+		swallow += 1
+
+		'<center><img src="images/img/boysvid/park8.jpg"></center>'
+		'You beckon African, he cautiously approaches cautiously looking at your guy.'
+		'"Do not be afraid, took out prichindaly, Now my slut will suck you down to the bottom" He grinned <<$boyA>>'
+		'You go down on his knees so that the <<$boyA>> I could see the whole process, Pulling a guy and starts sucking Panties, you had to work not long, a minute later he came into your mouth. The boy immediately ran away satisfied.'
+		'"Hey, If money is not a whore would take her at least say thank you" I threw him into the track <<$boyA>>'
+		'Not paying attention to his words, because you really behave like the last whore, You got dressed and went on.'
+		'Soon <<$boyA>> He said that he needed to flee and left.'
+
+		act 'Escape':gt'park','start'
+	end
+end
+
+if $ARGS[0] = 'parksvid22':
+	cla
+	*clr
+	'<center><img src="images/img/boysvid/park7.jpg"></center>'
+	'After <<$boyA>> finished, he notices you watching African "Damn it, This pervert spying us" and observing both your lips smile slipped asked "Did you know that he is here, are you here specifically decided to fuck off in front of this black man, can you tell him yet otsosesh?"'
+
+	act 'Reassure him':
+		cla
+		*clr
+		'<center><img src="images/img/boysvid/park6.jpg"></center>'
+		'"Of course I did not know anything, do you really think that I could have sex with you in front of the" you do pained face and dressed quickly go, after a few seconds <<$boyA>> It catches up with you, "Forgive me, sun, and I did not want to hurt you, I hastily said," He apologizes, you take him by the hand, You say that you forgive and move on.'
+		'Soon <<$boyA>> He said that he needed to flee and left.'
+
+		act 'Escape':gt'park','start'
+	end
+	act 'Annoy him':
+		cla
+		*clr
+		bfa = 0
+		bj += 1
+		swallow += 1
+		eggs += 1
+
+		'<center><img src="images/img/boysvid/park8.jpg"></center>'
+		'"And I want to suck" They threw you back.'
+		'"So what are you waiting for me to call, or suck it, hey man come here are free whore, sucks for so" cried <<$boyA>>'
+		'"Come on do not be afraid" shouted the guy you, African timidly walked up to you.'
+		'You go down on his knees so that the <<$boyA>> I could see the whole process, Pulling a guy and starts sucking Panties, you had to work not long, a minute later he came into your mouth. But you`re not going to end so quickly especially when <<$boyA>> I am sitting next crimson with anger. You have a guy for a member and continued to masturbate it-he finally fell, and themselves demonstratively turned to his, now ex-boyfriend, and a little tinkering with the sperm in the mouth swallow it. Then you turned back to African and continued, not letting his hands you a member of the language began to fondle his balls, then they took them entirely into his mouth and began to suck the mouth releasing one that again absorbing two, when a member of the African stood again, you switched it, you slowly and methodically licked every centimeter of his dildo, then began to suck head, loud smacking, After you calmly and methodically began to suck him trying to absorb it in themselves entirely and, as a member was a very modest size you manage it, and that would put an end to, You pushed it into his mouth and his balls. On this <<$boyA>> I could not help shouting that-what about the fact that you`re a whore, and he hates you ran, you quietly completed the guy a blowjob and swallowing cum went away.'
+
+		act 'Escape':gt'park','start'
+	end
+end
+
+if $ARGS[0] = 'billsvid':
+	cla
+	*clr
+	minut += 60
+	manna += 10
+	bfA += 3
+	gs'stat'
+
+	picrand = RAND(51,52)
+	'<center><img src="images/img/boysvid/bil<<picrand>>.jpg"></center>'
+	'<<$boyA>> I pay table in a booth and you went to play'
+
+	act 'Play':
+		cla
+		*clr
+		minut += 60
+
+		'<center><img src="images/img/boysvid/bil1<<picrand>>.jpg"></center>'
+		'During the game <<$boyA>> It is coming to you from behind and his hands start to slide over your hips and lips drawn to the neck.'
+
+		act 'Not here':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/bil0<<picrand>>.jpg"></center>'
+			'You removed his hand and said, "Well, not here".'
+			'When your time is up <<$boyA>> He said that he needed to flee and left.'
+
+			act 'Escape':gt'torgcentr'
+		end
+		act 'Let continue':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/bil2<<picrand>>.jpg"></center>'
+			'You put the cue on the table and relax allowing him to continue to caress your body, his kisses down lower and lower.'
+
+			act 'Let continue':
+				svidboysex = 1
+				svidboykino = 1
+				bfA += 5
+				gt'sex','kuni'
+			end
+			act 'Stop, enough':
+				cla
+				*clr
+				'<center><img src="images/img/boysvid/bil0<<picrand>>.jpg"></center>'
+				'You removed his hand and said, "Well, not here"'
+				'When your time is up <<$boyA>> He said that he needed to flee and left.'
+
+				act 'Escape':gt'torgcentr'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'kafesvid':
+	cla
+	*clr
+	minut += 60
+	manna += 10
+	bfA += 3
+	gs'stat'
+
+	'<center><img src="images/img/boysvid/kafe0.jpg"></center>'
+	'You and <<$boyA>> We went into a small cafe in the center, It seems that it does not enjoy popularity, almost no visitors, You sat down at a table in one of the separate cubicles.'
+
+	act 'Waiting order':
+		cla
+		*clr
+		minut += 60
+
+		'<center><img src="images/img/boysvid/kafe1.jpg"></center>'
+		'Once you have brought order <<$boyA>> I began to pester you, and he strove to kiss you, and his hands glided over your body, caressing the breasts, then squeezing the buttocks.'
+
+		act 'Not here':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/kafe0.jpg"></center>'
+			'You removed his hand and said, "Well, not here"'
+			'Some time later <<$boyA>> He said that he needed to flee and left.'
+
+			act 'Escape':gt'down'
+		end
+		act 'Let continue':
+			cla
+			*clr
+			'<center><img src="images/img/boysvid/kafe2.jpg"></center>'
+			'Soon you will remain almost without clothes, and <<$boyA>> You have kissed the abdomen, going down to the pubis.'
+
+			act 'Let continue':
+				svidboysex = 1
+				svidboykafe = 1
+				bfA += 5
+				picrand = 53
+				gt'sex','kuni'
+			end
+			act 'Stop, enough':
+				cla
+				*clr
+				'<center><img src="images/img/boysvid/kafe0.jpg"></center>'
+				'At the last moment, you still came to their senses and realizing that you are in a cafe, They pushed him "We do not have enough in the cafe, patience home"'
+				'But soon <<$boyA>> He said that he needed to flee and left.'
+
+				act 'Escape':gt'down'
+			end
+		end
+	end
+end
+--- svidboy ---------------------------------
+

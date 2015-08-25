@@ -1,0 +1,292 @@
+# qjob
+if $ARGS[0] = 'var1':
+	cla
+	*clr
+
+	var = RAND(0,3)
+	if var ! 0:
+		minut += 180
+		money += 2000
+
+		'<center><img src="images/img/qjob/f0.jpg"></center>'
+		'You come to a small photo studio. You are taken to the dressing room and asked to undress, with you there were a few girls in their underwear, and you decide to get naked, Photographer skeptically examined you from all sides and nodded. You and another girl was carried to another room, issued and advertised underwear after you`ve dressed your makeup engaged. As a result, after almost three hours, you were on the site, along with another girl. Photographer Shootings, I am telling you what to do, while another change posture, you strap flew off the shoulder bodice and slid down a little exposing breasts. You started to correct him, but you stopped the photographer "Stop, leave as is, and you`re close to her breasts with her hands. that-have nipples were visible"'
+
+		act 'Correct':
+			cla
+			'"No, on a shot I did not sign" you said, and trimmed bra. Photos-then muttered under his breath, but the shooting continued. Soon it was over and you dressed, They took the money and left.'
+
+			act 'Escape':gt'down'
+		end
+		act 'Leave as is':
+			cla
+			*clr
+			'<center><img src="images/img/qjob/f1.jpg"></center>'
+			'You do not have to correct, and remained bare-chested, she covered her hands and continued shooting. Some time later, when a photographer once again telling you how to get up, He came right up to you and putting your hand on the buttocks and kissed her on the neck. She opened her mouth in surprise, and you were looking at it, not knowing what to do.'
+
+			act 'Stop it':
+				cla
+				*clr
+				'<center><img src="images/img/qjob/f0.jpg"></center>'
+				'You bounce off of him screaming, the photographer began to apologize, you will again put the bodice and continued shooting. Soon it was over and you dressed, They took the money and left.'
+
+				act 'Escape':gt'down'
+			end
+			act 'Do nothing':
+				cla
+				*clr
+				orgasm += 1
+				kuni += 1
+				guy += 1
+
+				'<center><img src="images/img/qjob/f2.jpg"></center>'
+				'You stood in silence, photographer and seeing that you do not mind continued, He started to kiss your shoulders and back, down below, and now your panties flew down, and his tongue started to wander between your buttocks closer to the pussy. The girl the whole time and was stunned with views, holding your chest, when you started to moan, she regained consciousness and tried to move away, but you skhatili her and pulling her to her started kissing. The first few seconds, she was tight-lipped and resting your chest, timidly trying to push you away, but then her mouth fell open and tongue popped into your, and his hands have not rested on his chest, and caressed her. Feeling, which is close to an orgasm you release the girl and pressed her hands more head to their buttocks photographer. Soon the pleasant shiver ran through your body, you are finished. Tearing himself away from your pussy photographer stood up and said, "Girls, may continue in the dressing room?"'
+
+				act 'Takeout':
+					cla
+					'"No, enough is enough" Answer You dressed and went to the dressing room. Disguised as you took the money and left.'
+
+					act 'Escape':gt'down'
+				end
+				act 'Agree':
+					picrand = 30
+					gt'podrsex','var'
+				end
+			end
+		end
+	elseif var = 0:
+		minut += 60
+
+		'<center><img src="images/img/qjob/f3.jpg"></center>'
+		'You`ve come to the place, there were only a girl a photographer and another girl model, photographer gave clothes and asked to change clothes and stand in front of the camera, along with another girl, When you`re all done, She walked around for a long time the two of you, seeing you through the camera. Finally she finished and turned to you "Generally you approach, but there is one detail, with your partner, we have all discussed it and agreed, Now with you. Shooting is not quite Advertising, most erotic, you caress each other, I wanted it all, I warn you once, it will go abroad, therefore, no one here will not see these images. Well I agree?"'
+
+		act 'Takeout':
+			cla
+			'"No, I`m not a porn star and this does not agree" dressed and left.'
+
+			act 'Escape':gt'down'
+		end
+		act 'Agree':
+			cla
+			*clr
+			minut += 90
+			money += 2000
+
+			'<center><img src="images/img/qjob/f4.jpg"></center>'
+			'You agreed and began shooting, you are hugging each other, kissing, Photographer sometimes stops you and showed how best to get up, that-though it looked more spectacular, soon it will stop you again "Well finished with a prelude, Now get on your knees and caress her tongue" she said to you. You were already well excited and re-inviting you not required, quickly knelt you release the tongue and clung to her pussy Girls, but the photographer back to stop you "No, stand I did not see anything so, take out the language completely and lick her elongated tongue, you need not satisfy her and make good pictures" she said. You listened and did everything she said, Woman caressing you most tip of the tongue, in the region of the clitoris, and she diligently buckle portraying that is about to finish. "Good, and now use this" He said the photographer took out a good-sized dildo and holding his girlfriend, "Well, you, on all fours" she added, I am referring to you.'
+
+			act 'Up':
+				cla
+				*clr
+				'<center><img src="images/img/qjob/f5.jpg"></center>'
+				'You got up on all fours, the girl took a dildo, but it stopped a photographer "Billeting. Now ladies grease, I look at it here is not necessary." she added, looking at your oozing pussy. She introduced you to the vibrator and the shooting continued. You moaned and writhed and not on camera, but from the fact that you like it, you were ready to end, but here again the photographer to stop you "No, stop, Well, what are you doing, who works as a vibrator, here`s how to see." She took a dildo in hand and began to show a girl, and you start to roll again, just enjoy othlynuvshee. You were enjoying the process, but then you think, You did not hear the clicks of cameras, You turned and saw that the photographer has a completely naked wielding a dildo in your pussy, and operating a model in her tongue.'
+
+				act 'Change position':
+					cla
+					*clr
+
+					picrand = RAND(6,10)
+					'<center><img src="images/img/qjob/f<<picrand>>.jpg"></center>'
+					'Your bodies are intertwined in what-the bizarre tangle of women`s bodies, you have hardly understood who gives pleasure to you, and who you are, but you is madly in love. When it was over, and all three of you were satisfied that collapsed on the floor and lay for several minutes. In this shooting and ended, you have a little chat, all dressed and gone.'
+
+					act 'Escape':gt'down'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'var2':
+	cla
+	*clr
+	minut += 120
+	money += 2000
+
+	'<center><img src="images/img/qjob/f11.jpg"></center>'
+	'You came in a small studio, where you will meet a girl the photographer, She gave you the linen and when you start to shoot dressed. Linen was so transparent that through it could be seen all parts of your body. The girl, meanwhile, both commanded to stand and bend it. You diligently performed all her guidance, After about an hour of shooting, when she once again put you in position and start to correct underwear, then you just bared his chest and returned to shoot as if nothing had happened. You get trimmed underwear covering her breast, even through it and so it was perfectly clear. She pouted "Well open, it is not for advertising, we ended up with advertising, this is for me, I like to shoot naked beauties, these pictures no one will see" she said.'
+
+	act 'Takeout':
+		cla
+		'"No, on a shot I did not sign" you said, and went to change clothes, she gave you money again asked to take off, but you were adamant.'
+
+		act 'Escape':gt'down'
+	end
+	act 'Open':
+		cla
+		*clr
+		'<center><img src="images/img/qjob/f12.jpg"></center>'
+		'You bared his chest and she smiled at the beginning of the shoot you, it has already filmed you in a dense and commanded, giving you the choice of posture. As a result, it was soon one hand began to stroke you, and after that she put the camera and grabbed you in the chest with both hands, Soon her hands slid below, and their place was taken by mouth. She caressed you, and seeing that you do not resist you put her hand into her panties and began to pull at the clitoris, and soon began to descend to the lips, covering your body with kisses.'
+
+		act 'Further':
+			picrand = 22
+			xgt'lezbsex','var'
+		end
+	end
+end
+
+if $ARGS[0] = 'var3':
+	cla
+	*clr
+
+	qjobpristrand = RAND(0,5)
+	var = RAND(0,5)
+	if var = 0:
+		minut += 60
+
+		'<center><img src="images/img/qjob/n0.jpg"></center>'
+		'You`ve come to the apartment, you discover a young guy and invited to enter, he kept showing you their work, and then announced "Voobscheto I now have a creative crisis and I do not need a model, but rather a muse, that-she inspired me."'
+		'"And how can I help you?" you ask.'
+		'"There is such a thing, I have always had problems with women, Now, if you agreed to help me relax a bit." he mumbled.'
+		'"Did you want that-I had to sleep with you?" you ask.'
+		'"You could say that, Do not worry, I`ll pay, That`s the money I have." he said, reaching for the money.'
+
+		act 'Takeout':
+			cla
+			'"Whore a challenge, freak, let it inspires you" you said, and headed for the exit.'
+
+			act 'Escape':gt'down'
+		end
+		act 'Agree':
+			cla
+			*clr
+			minut += 60
+			money += 1000
+
+			'<center><img src="images/img/qjob/n1.jpg"></center>'
+			'"Okay, Give me the money" You agree.'
+			'"Of course, Here you go, Can I first consider your vagina, nothing, just I want to see close" he said.'
+			'"Yes, See how much you want" Answer You and throwing off his clothes lay down on the bed. The guy went there and began to consider your pussy, the parting lips and looking inside, simply leading the fingers on your clitoris, you will soon run down and he moistened his fingers in your juice put them inside and slightly apart again began to stare into, soon he finally finished and took off his pants.'
+
+			act 'Begin':
+				picrand = 81
+				xgt'sex','var'
+			end
+		end
+	elseif var = 1:
+		minut += 180
+		money += 1000
+
+		'<center><img src="images/img/qjob/n2.jpg"></center>'
+		'You have arrived at the apartment where you will meet a man, He quickly take you into the room and sat on the couch he said, he need only your face and you have to portray passion, as if you were finishing. You two o`clock sat on the couch with his mouth open, frozen in a silent scream of pleasure. When all was ready he called you to the picture, coming up you see in the picture Woman painted in the style of anime, she had your face, and she was completely naked. The artist stood behind your back and kept saying to describe how she was doing fine and compliment you for the excellent display of passion, Soon you feel his breath on your neck, He was coming closer to you in the end, he put his arm around you and from all of his talk, you have caught the phrase "What a pity that women may not be as passionate and exciting as the copies on canvas."'
+
+		act 'Escape':
+			cla
+			'"I have to go" you said, and headed for the door leaving him alone to admire his labor,.'
+
+			act 'Escape':gt'down'
+		end
+		act 'Convince':
+			cla
+			'"Well, why can not, yet how can, they just hesitate to show it. A picture shows their true passion, that they do not dare to show others. Maybe you just could not wake her up in them" you said.'
+			'"No, it is not possible, I had a lot of women and one had no such passion." he said.'
+			'"Can recheck, Do I have such a passion" They say you unbuttoning clothes.'
+
+			act 'Begin':
+				picrand = 82
+				xgt'sex','var'
+			end
+		end
+	elseif var = 2:
+		minut += 180
+		money += 1000
+
+		'<center><img src="images/img/qjob/n3.jpg"></center>'
+		'You have arrived at the apartment where you will meet a man, He quickly take you into the room and gave you a sheet and a vase, as he prepared paint you will quickly undressed and turned in the sheet picked up a vase.'
+
+		if qjobpristrand!0:
+			'So it took a couple of hours, Finally he finished and thanking you, evicted from the apartment.'
+
+			act 'Escape':gt'down'
+		elseif qjobpristrand = 0:
+			'As long as you stand, Artist periodically comes to you and corrects sheet, and each time he accidentally touches you. Each time it is more and more coming to you, and his touch are becoming more confident. He eventually priobnimaet you and begins to paw is not shy, his hands glide over your chest and fall lower and lower.'
+
+			act 'Terminate':
+				cla
+				'You make a remark to him and he lets you and return to the picture, he soon ends and you pack off.'
+
+				act 'Escape':gt'down'
+			end
+			act 'Allow':
+				picrand = 85
+				gt'sex','kuni'
+			end
+		end
+	elseif var = 3:
+		minut += 180
+		money += 1000
+
+		'<center><img src="images/img/qjob/n4.jpg"></center>'
+		'You have arrived at the apartment where you will meet a man, He quickly take you into the room and sat on the sofa on which was sitting another girl. You froze waiting for when you are told you have to do, but simply the artist returned to painting and began to write. "Yes, you relax, We do not care for him, he draws her we`re just muse, We sit and do nothing" I told you girl. You lay back on the couch and talking with girl, about any nonsense. You are talking and laughing, and the artist continued his work without paying attention to you, and you have completely forgotten about him, and it can be seen that there was almost no of-for canvas.'
+
+		if qjobpristrand ! 0:
+			'So it took a couple of hours, Finally he finished and thanking you, evicted from the apartment.'
+
+			act 'Escape':gt'down'
+		elseif qjobpristrand = 0:
+			'Soon you besilis already hard on the couch as children. She tumbled down on the couch and have your clothes slipped baring breasts. She froze over you panting, her face was a few inches from your chest, she looked at you and you notice how on her lips ran smile, She opened her mouth slightly and making a few movements of the tongue without taking it out of his mouth, but so-you would have seen it, froze waiting for your response.'
+
+			act 'Correct clothing':
+				cla
+				'You trimmed clothes and the girl got off you, you are returned to the chatter. Soon, the artist finished and shoved you.'
+
+				act 'Escape':gt'down'
+			end
+			act 'Allow':
+				cla
+				*clr
+				'<center><img src="images/img/qjob/n5.jpg"></center>'
+				'You smiled at her and held her hand over her thigh, more from you and did not need her lips stuck into your chest, and his hands slid through the body erratically tearing your clothes. Soon you were totally naked on the couch, her tongue caressing your pussy, and his hands caressing the body. You closed your eyes plunging into the abyss of pleasure when he felt someone above him-the breath, Opening his eyes, you see in front of his face erection artist. He pulled him closer to you almost resting on the lips, You opened his mouth running it inside and began to caress the head tongue, then absorbed him deeper and started sucking.'
+
+				act 'Continue':
+					picrand = 31
+					gt'podrsex','var'
+				end
+			end
+		end
+	elseif var = 4:
+		minut += 180
+		money += 1000
+
+		'<center><img src="images/img/qjob/n6.jpg"></center>'
+		'You have arrived at the apartment, There you will meet a girl and ran to the room where the man was sitting in a sheet, she said that it was her husband, and basically it will pose to you and requires only the buttocks. You got cancer before man and bared buttocks, He put one hand on your buttocks and metering. She began to write.'
+
+		if qjobpristrand!0:
+			'So it took a couple of hours, Finally she finished and thanking you, evicted from the apartment.'
+
+			act 'Escape':gt'down'
+		elseif qjobpristrand = 0:
+			'You stood so for quite some time and then the man began to stroke your buttocks, first gently, almost imperceptibly, then more and more, and soon he was squeezed your ass unashamedly. Have you looked at the girl, she pretended that nothing was happening and continued to do their work. At this time, a man has put his hand between your legs and began stroking your cat.'
+
+			act 'Embed':
+				cla
+				'You turned around and it was the forces slapped him in the face. She again did not react, again you stood in a pose, and he gently put his hand on your ass and more its not moving. Soon she had finished and shoved you.'
+
+				act 'Escape':gt'down'
+			end
+			act 'Allow':
+				cla
+				*clr
+				'<center><img src="images/img/qjob/n7.jpg"></center>'
+				'You are a little spread her legs giving him room to maneuver, and he immediately took advantage of this, He ran his fingers through your first pussy fingering clit, and when you got wet, he introduced you two fingers into the vagina and began to move. You began to moan softly, but remembering the girl broke off and looked at it, She smiled and continued to write to you. You closed your eyes and began to enjoy what is happening and is already groaning unashamedly. Soon you heard footsteps girl, then squish characteristic, turning you saw her husband makes blowjob. You turned around and approached them, man immediately grabbed you and re-running the one hand you a pussy, I began to kiss your breasts'
+
+				act 'Continue':
+					picrand = 32
+					gt'podrsex','var'
+				end
+			end
+		end
+	elseif var = 5:
+		minut += 180
+		money += 1000
+
+		'<center><img src="images/img/qjob/n2.jpg"></center>'
+		'You have arrived at the apartment where you will meet a man, He quickly take you to the room. You took a pose, and he began to write, He was quite handsome, and you began to turn showing themselves in a favorable light, but in your every move just heard a request not to move. So it took a lot of time, and he had paid no attention to you, you it was even hurt, as it is so you do not pay attention. he soon finished.'
+
+		act 'Escape':gt'down'
+		act 'Covet':
+			picrand = 86
+			gt'sex','minet'
+		end
+	end
+end
+--- qjob ---------------------------------
+

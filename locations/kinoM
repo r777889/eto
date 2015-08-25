@@ -1,0 +1,145 @@
+# kinoM
+if $ARGS[0] = 'start':
+	minut = minut + 30
+
+	'You`ve come to the cinema. <<$boyA>> I bought two tickets on the back row.'
+
+	if dayA > 15 and harakBoyA = 2:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 1:gs'boylove','tits'
+	if dayA > 25 and harakBoyA = 0:gs'boylove','tits'
+	if dayA > 20 and harakBoyA = 2:gs'boylove','figure'
+	if dayA > 25 and harakBoyA = 1:gs'boylove','figure'
+	if dayA > 30 and harakBoyA = 0:gs'boylove','figure'
+
+	gs'anekdot'
+
+	'While you wait for the session <<$boyA>> anecdote tells you <<$anek>>'
+
+	act 'Laugh':
+		cla
+		SUB = SUB + 1
+		bfa = bfa + 1
+		xgt'kinoM','a'
+	end
+	act 'Smile':
+		cla
+		xgt'kinoM','a'
+	end
+	act 'Not funny':
+		cla
+		DOM = DOM + 1
+		bfa = bfa - 3
+		xgt'kinoM','a'
+	end
+end
+
+if $ARGS[0] = 'a':
+	*clr
+	minut = minut + 90
+	fat = fat + 2
+
+	'<center><img src="images/pic/kino.jpg"></center>'
+	'Finally, the session start. You and <<$boyA>> We went into the room, They found their seats and sat on comfortable chairs. <<$boyA>> put a large jar of popcorn on his knees and began to eat it, you take turns.'
+
+	if harakBoyA < 2:
+		act 'Hug his hand':
+			cla
+			bfa = bfa + 1
+
+			'You embraced his hand and he kissed you, and then the entire session sat holding hands.'
+
+			xgt'kinoM','b'
+		end
+	elseif harakBoyA = 2:
+		act 'Hug his hand':
+			cla
+			bfa = bfa + 1
+
+			'You embraced his hand and he kissed you, then his hand began obschupyvat your knee, <<$boyA>> I whispered to you, Babe, I want you.'
+
+			act 'Remove his hand and watch a movie':xgt'kinoM','b'
+			act 'Masturbate':gt'kinoM','hj'
+			act 'Suck':gt'kinoM','bj'
+			act 'Sit down on his dick':gt'kinoM','sex'
+		end
+	end
+
+	act 'Watch movies':
+		cla
+		bfa = bfa - 1
+		intel = intel + 1
+
+		'Movies were interesting and you sat the entire session without interrupting the movie.'
+
+		xgt'kinoM','b'
+	end
+end
+
+if $ARGS[0] = 'sex':
+	*clr
+	sex = sex + 1
+	sexa += 1
+	vagina = vagina + 1
+	horny = horny + SUB
+	bfa = bfa + 2
+	gs'brosok'
+
+	'<center><img src="images/picVA/sinema.jpg"></center>'
+	'You got his penis out of his pants and masturbate him to start, <<$boyA>> He took out a condom and put on the penis, Then you got on <<$dick>> inch dick her wet pussy and began to move slowly in the darkness of the hall of audience.'
+
+	if horny >= 90:
+		horny = 0
+		manna = manna + 15
+		willpower = willpower + 15
+		orgasm = orgasm + 1
+
+		'You feel like something is growing inside of you and all of your bottom turned into a blazing fire pleasant fire, a minute later smooth movements on the penis you had to plug his mouth with his hand, that would not yell at the whole hall of orgasm.'
+	end
+
+	'Soon <<$boyA>> I broke down and ended in a condom.'
+
+	act 'Further':gt'kinoM','b'
+end
+
+if $ARGS[0] = 'bj':
+	*clr
+	bj = bj + 1
+	bja += 1
+	swallow = swallow + 1
+	cumlip = cumlip + 1
+	horny = horny + SUB
+	bfa = bfa + 2
+	gs'brosok'
+
+	'<center><img src="images/picVA/sinema1.jpg"></center>'
+	'You got his penis out of his pants and masturbate him to start, She leaned over him and around his lips slowly began to suck it <<$dick>> inch dick in a dark room viewers.'
+	'Soon <<$boyA>> I broke down and finished in your mouth, You tried to swallow all the sperm, because it is still nowhere to spit.'
+
+	act 'Further':gt'kinoM','b'
+end
+
+if $ARGS[0] = 'hj':
+	*clr
+	hj = hj + 1
+	hja += 1
+	horny = horny + SUB
+	bfa = bfa + 1
+	gs'brosok'
+
+	'<center><img src="images/picVA/sinema2.jpg"></center>'
+	'You got his penis out of his pants and began to caress his hand in a dark room viewers.'
+	'Soon on your skillful movements guy you left off her hands, You wiped them on a handkerchief.'
+
+	act 'Further':gt'kinoM','b'
+end
+
+if $ARGS[0] = 'b':
+	minut = minut + 30
+	fat = fat + 1
+
+	'The session ended, in the theater lights came on and the people went to the exit, <<$boyA>> He proposed to hold you.'
+
+	act 'Home':gt'sexm','start'
+end
+--- kinoM ---------------------------------
+

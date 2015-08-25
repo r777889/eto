@@ -1,0 +1,233 @@
+# skverdin
+$d_park_placer_bj = {
+	boy += 1
+	dick = RAND(15,25)
+	parkfuckboy += 1
+	$ppBoyName[parkfuckboy] = $bname
+	ppBoyTipe[parkfuckboy] = 1
+	ppBoyPlace[parkfuckboy] = 1
+	!masturbate 2 blow job 3 gangbang
+	ppdick[parkfuckboy] = dick
+	parktimes += 1
+	pphj = 0
+	ppbj = 0
+	ppsex = 0
+	ppanal = 0
+	dynamic $d_pp_hand
+	dynamic $d_pp_squat
+}
+
+$d_pp_hand = {
+	act 'Member of the hand touch':
+		cls
+		pphj += 1
+		minut += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/hj.jpg"></center>'
+		'You clasped fingers standing <<dick>> inch cock and began to move the skin revealing the purple head covering it.'
+
+		tiprand = RAND(1,100)
+		if tiprand >= 90:
+			'<<$bname>> I took you by the shoulders and pushed, trying to put you on his heels'
+
+			dynamic $d_pp_squat
+		elseif tiprand >= 50 and tiprand < 90:
+			'<<$bname>> I said impatiently "Svetik, kiss him"'
+
+			dynamic $d_pp_squat
+
+			if dom > 0:
+				dynamic $d_pp_hjcum
+			else
+				'<<$bname>> It stands still and you devour the eyes'
+
+				dynamic $d_pp_hjcum
+				dynamic $d_pp_squat
+			end
+		end
+	end
+}
+
+$d_pp_hjcum = {
+	act 'Dodrochit':
+		cls
+		pphj += 1
+		minut += 1
+		gs'stat'
+
+		tiprand = RAND(1,100)
+		if tiprand >= 80:cumfrot += 1 & $pptext = 'you notice as one of the jets of semen gets into your clothes on'
+		if tiprand < 80:$pptext = 'Man sperm tight jets flew to the ground'
+
+		'<center><img src="images/qwest/alter/Ev/pphjcum.jpg"></center>'
+		'You have become hard to masturbate cock and he began to finish, <<$pptext>>'
+
+		dynamic $d_pp_goend
+	end
+}
+
+$d_pp_squat = {
+	act 'To squat':
+		cls
+		minut += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/squat.jpg"></center>'
+		'You sat down on his haunches and right in front of your face turned stand-up <<dick>> inch cock'
+
+		dynamic $d_pp_bj
+	end
+}
+
+$d_pp_bj = {
+	act 'Suck':
+		cls
+		ppbj += 1
+		minut += 5
+		parkslut += 1
+		ppBoyTipe[parkfuckboy] = 2
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/ppbj.jpg"></center>'
+		'Your lips bow solid <<dick>> inch cock, and you suck it carefully feeling his tongue and his lips warm and every vein in the body member.'
+
+		tiprand = RAND(1,100)
+		if tiprand = 100:
+			'Suddenly, you hear footsteps approaching and turned his head to the side you can see the other guy, He laughed and said, "Shit, <<$bname>> fifteen minutes you can not leave, already what that heifer cheek wheeled." <<$bname>> He laughed and turned to his friend "What do you tupish? Join!" The second man immediately came up to you and pulled out his penis out of his pants.'
+
+			dynamic $d_pp_double
+		elseif tiprand >= 90 and tiprand < 100:
+			'<<$bname>> suddenly he took out a member of your mouth and began wordlessly to raise you and expand back to itself'
+
+			dynamic $d_pp_sex
+		elseif tiprand >= 70 and tiprand < 90:
+			'<<$bname>> whispers to you "Svetik, you mouth is not tired? Can perepihnemsya?"'
+
+			dynamic $d_pp_sex
+			dynamic $d_pp_bjcum
+		elseif tiprand < 70:
+			'You chustvuete stiffen cock, he seems ready is about to finish'
+
+			dynamic $d_pp_hjcum
+			dynamic $d_pp_bjcum
+		end
+	end
+}
+
+$d_pp_bjcum = {
+	act 'Continue to suck':
+		cls
+		minut += 1
+		cumlip += 1
+		cumfrot += 1
+		cumface += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/ppbjcum.jpg"></center>'
+		'You have continued to suck and less than a minute as a member became discharged semen into your mouth, Sperm was so much, that part of it poured on your lips mouth and even onto your clothing.'
+
+		dynamic $d_pp_goend
+	end
+}
+
+$d_pp_sex = {
+	act 'Bend':
+		cls
+		minut += 1
+		ppsex += 1
+		pose = 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/ppsex.jpg"></center>'
+		'You bared her butt and bending it framed guy'
+
+		dynamic $sexstart
+		dynamic $sexstart4
+
+		tiprand = RAND(1,100)
+		if tiprand >= 20:
+			dynamic $sexcum
+			dynamic $d_pp_goend
+		elseif tiprand < 20:
+			'<<$bname>> You took out a member and deploying you face him began to put you on his heels'
+
+			dynamic $d_pp_squat
+		end
+	end
+}
+
+$d_pp_double = {
+	act 'Ohrenevayu':
+		cls
+		ppBoyTipe[parkfuckboy] = 3
+		parkslut += 10
+		guy += 1
+		gang += 1
+		bj += 1
+		ppbj += 1
+		minut += 5
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/ppbjdouble.jpg"></center>'
+		'Everything happened quickly and you do not even have time to realize in both your hands turned over the penis, their purple heads were right in front of your face. One of the guys hand impatiently pushed your head to the member.'
+
+		act 'Suck two members':
+			cls
+			minut += 15
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/Ev/ppbjdouble2.jpg"></center>'
+			'You have become polished just two bow with her wet lips spitted her mouth purple hat guys take turns. Soon <<$bname>> groaned "Open your mouth slut"'
+
+			act 'Open mouth':
+				cls
+				minut += 15
+				cumface += 1
+				cumlip += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/Ev/ppbjdouble3.jpg"></center>'
+				'You obediently opened the procedure are tired mouth <<$bname>> You shot a thick white liquid directly on wet and slightly swollen lips of the work done. His friend strangled hissed "Cumming" and grab you by the hair turned your face to its members.'
+
+				act 'Turn the face':
+					cls
+					minut += 15
+					cumface += 1
+					cumlip += 1
+					cumfrot += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/ppbjdouble4.jpg"></center>'
+					'You turned your face and you immediately charged struhni second portion directly into the open mouth, you instinctively shaken and a large ball of sperm fell out of your mouth and on your clothes shmyaknulsya. <<$bname>> whinnied "Epta! You`re a sniper, huesoska loaded directly into her mouth fucking!"'
+
+					dynamic $d_pp_goend
+				end
+			end
+		end
+	end
+}
+
+$d_pp_goend = {
+	act 'Brush up':
+		cls
+		if ppbj > 0:bj += 1
+		if pphj > 0:hj += 1
+		if ppsex > 0:sex += 1
+		if ppanal > 0:anal += 1
+		minut += 5
+		gs'stat'
+
+		if cumface > 0 or cumlip > 0:
+			'<center><img src="images/qwest/alter/Ev/ppendcum.jpg"></center>'
+		else
+			'<center><img src="images/qwest/alter/Ev/ppendno.jpg"></center>'
+		end
+
+		'You started to brush up. <<$bname>> pretty buttoned pants "Well pokeda Svetulya, I still have things, It can be seen as a."'
+
+		act 'Escape':gt'gskver'
+	end
+}
+--- skverdin ---------------------------------
+

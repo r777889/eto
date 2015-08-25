@@ -1,0 +1,114 @@
+# kotovEv
+gs'stat'
+
+'<center><b><font color = maroon><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
+
+if kotovLoveQW > 0 and GorSlut > 0:
+	'Vitek nabychilsya and tells you "Slysh Svetsik, Th for garbage? We`re mutim, and then you tell me about, you <<$gnikname>>. The whole town already knows, guys with me neigh area. You ohuevshaya creature!"'
+
+	act 'Scandal':
+		cls
+		grupNPC[9] = 0
+		kotovLoveQW = -1
+		gs'stat'
+
+		'You started yelling at Vic, that he already Jam. Vitek started yelling at you and suddenly you have ringing in your head and you were on the floor. Above you stood Vitek. Heavily burned cheek, you do not understand, what happened, but it seems he slapped you across the face. "All creation! Most do not come to me! Between us all over!"'
+
+		act 'Move away':gt $loc, $metka
+	end
+
+	if dom >= 20:
+		act 'Convince, that all this gossip':
+			cls
+			sub += 20
+			GorSlut = 0
+			gs'stat'
+
+			'You started to convince Vic, that all this gossip, I do not have no foundation. Vitek frowned "I`ll knock your teeth to these talkers, if ever even some garbage about you hear. Do not worry, I pozatykayu the yapping mouths."'
+
+			act 'Move away':gt $loc, $metka
+		end
+	end
+
+	exit
+end
+
+if $loc = 'gdksport':
+	if kotovKnowSport = 0:
+		'Witek came up to you and hug her waist kissed. "Hello, Svetik."'
+
+		act 'What are you doing here?':
+			cls
+			gs'stat'
+
+			'<center><b><font color = maroon><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
+			'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
+			'You asked Victor what he was doing. Vitek whinnied "You cho? I`m here to 11 Boxing takes years. Candidate Master of Sports has, second place in the championship held in the region."'
+
+			act 'You drink, and even smoke!':
+				cls
+				kotovKnowSport = 1
+				gs'stat'
+
+				'<center><b><font color = maroon><<$npcName[9]>> <<$npcSurName[9]>></font></b></center>'
+				'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
+				'Were you surprised, Vitek every day thumps and smokes, as he combines sport. Vitek grinned "Ha. Coach says I have talent. Beat the big cannon, and the excellent response. It`s in my dad, the wino was done for. 6be a walker in the area, and died of cirrhosis, but move into a jug could always so, that flew from sneakers. Of course a little bluing prevents, but what the fuck? I`d quit drinking and smoking, and, but in boxing, Me and without money, MMR is the ceiling. I can even wriggle inside, but the master of sports will not. I`ve been to the region, 2It took place, I beat the champion in the shit, twice he knocked down lying. A victory gave him. So now for me, boxing is so, I do it out of habit, Yes that would be in the form to behave."'
+
+				act 'Move away':gt $loc, $metka
+			end
+		end
+	elseif kotovKnowSport > 0:
+		'Witek came up to you and hug her waist kissed. "Hello, Svetik. I`m back to training."'
+
+		act 'Move away':gt $loc, $metka
+	end
+elseif $loc = 'gskver':
+	'Vitek waving your hand. "Come Svetsik."'
+
+	act 'Sorry, I hasten':gt $loc, $metka
+	act 'Step up':
+		cls
+		minut += 5
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
+		'Vitek pours a beer in a plastic cup. "In short, Svetik, let pivasom popem."'
+
+		act 'Drink beer':
+			cls
+			minut += 15
+			alko += 2
+			fat += 5
+			salo += 1
+			energy += 10
+			gs'stat'
+
+			'Vitek poured you a beer and you have been with him to drink. Vitek poison bikes with boys, they are pressed at the city of Loja babosov, yes as Ramsay with boys from another region.'
+
+			act 'Okay, I have to go':
+				cls
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
+				'Witek came up to you and hug, kissing on the lips. "Slysh Svetsik, go to my."'
+
+				if dom > 0:act 'Sorry, I hasten':sub += 1 & gt $loc, $metka
+
+				act 'Go to Vitka':
+					cls
+					minut += 15
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/npc/9.jpg"></center>'
+					'You went through the square towards where he lives Vitek. Soon you with Vityok approached the dilapidated house, he opened the door and led you through the poor and not well-kept apartment in her room, where clothes lay crumpled heaps on the floor and lay empty bottles.'
+
+					act 'Further':gt'kotovSex'
+				end
+			end
+		end
+		act 'Sorry, I hasten':gt $loc, $metka
+	end
+end
+--- kotovEv ---------------------------------
+

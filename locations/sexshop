@@ -1,0 +1,893 @@
+# sexshop
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+
+	cla
+	*clr
+
+	shrand = RAND(0,100)
+	if kendra > 0 and shrand < 10:gt'sexshop','kendra'
+	if tanga = 0 and shrand > 90:gt'sexshop','shprod'
+	minut = minut + 5
+
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	clr
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Sex Toys</font></b></center>'
+	'<center><img src="images/pic/sexshop.jpg"></center>'
+	'Lubricant - 300 RUB'
+	'Small faloimitator - 800 RUB'
+	'Vibrator - 1300 RUB'
+	'Strap 1200 RUB'
+	'Butt plug 1200 RUB'
+	'In the basement are booths for private viewing porn movies (50 RUB 15 minutes).'
+
+	act 'Logout':
+		cla
+		ghnow = 0
+		minut = minut + 5
+		gt'down'
+	end
+
+	if SUB >= 100 and analplug = 1 and dildo = 1 and vnesh > 26 and Peter < 1:
+		Peterrand = RAND(0, 100)
+		if Peterrand > 50:
+			'In you are interested in looking middle-aged man, apparently he was the owner of this store'
+
+			act 'Interested owner of the store':
+				cla
+				*clr
+				'<center><img src="images/peter/peter.jpg"></center>'
+				'Peter I, I`ve been watching you. I often see you here. I think it will be interesting together...'
+
+				act 'Go to Peter':gt'Peterroom','start'
+				act 'Logout':
+					cla
+					ghnow = 0
+					minut = minut + 5
+					gt'down'
+				end
+			end
+		end
+	end
+
+	act 'Go to the basement':gt'sexshop','podval'
+
+	if gloryhole >= 20 and pornstudio = 0:
+		'You notice the edge of the eye, that the seller is trying to attract your attention'
+
+		act 'Step up, find out, what`s the matter':gt'sexshop','porn'
+	end
+
+	if money >= 300:
+		act 'Buy lubricant (300 RUB)':
+			cla
+			*clr
+			portion = input ("How much do you want to buy?")
+			if portion*300 > money:'You do not have enough money.'
+			if portion*300 <= money:
+				lubri += portion*5
+				money = money - portion*300
+				minut = minut + 5
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You bought a lubricant and paid the money in cash.'
+			end
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 400 and pornMagazine <= 1:
+		act 'Buy a porno magazine (400 RUB)':
+			cls
+			minut += 5
+			money -= 400
+			pornMagazine = 50
+			gs'stat'
+
+			'You bought pornozhurnal.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 800 and dildo = 0:
+		act 'Buy small faloimitator (800 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			dildo = 1
+			money = money - 800
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought faloimitator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 1200 and strapon = 0:
+		act 'Buy strap (1200 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			strapon = 1
+			money = money - 1200
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought a strap-on and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 1200 and analplug = 0:
+		act 'Buy anal plug (1200 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			analplug = 1
+			money = money - 1200
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought a butt plug and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 1300 and vibrator = 0:
+		act 'Buy a vibrator (1300 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			vibrator = 1
+			money = money - 1300
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought a vibrator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 1500 and middildo = 0:
+		act 'Buy 15five inch faloimitator (1500 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			middildo = 1
+			money = money - 1500
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought faloimitator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 2500 and largedildo = 0:
+		act 'Buy 20five inch faloimitator (2500 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			largedildo = 1
+			money = money - 2500
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought faloimitator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 4500 and bigdildo = 0:
+		act 'Buy 25five inch faloimitator (4500 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			bigdildo = 1
+			money = money - 4500
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought faloimitator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 6500 and extradildo = 0:
+		act 'Buy 30five inch faloimitator (6500 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			extradildo = 1
+			money = money - 6500
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought faloimitator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 8500 and superdildo = 0:
+		act 'Buy 35five inch faloimitator (8500 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			superdildo = 1
+			money = money - 8500
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought faloimitator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 12000 and maddildo = 0:
+		act 'Buy 40 cm faloimitator (12000 RUB)':
+			cla
+			*clr
+			minut = minut + 15
+			maddildo = 1
+			money = money - 12000
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You bought faloimitator and paid the money in cash.'
+
+			act 'Move away from the counter':gt'sexshop','start'
+		end
+	end
+
+	if money >= 1000:
+		if hooker[1] = 0:
+			act 'Inspect clothes prostitutes. Number1':
+				cla
+				*clr
+				'<center><img src="images/ode/hooker1.jpg"></center>'
+				'Clothing prostitutes.'
+				'Costs 1000 RUB.'
+
+				act 'Escape':gt'sexshop','start'
+				act 'Buy':
+					cla
+					money = money - 1000
+					hooker[1] = 1
+					hookerH[1] = 200
+					hookerB[1] = bedra
+					gt'sexshop','start'
+				end
+			end
+		end
+
+		if hooker[2] = 0:
+			act 'Inspect clothes prostitutes. Number2':
+				cla
+				*clr
+				'<center><img src="images/ode/hooker2.jpg"></center>'
+				'Clothing prostitutes.'
+				'Costs 1000 RUB.'
+
+				act 'Escape':gt'sexshop','start'
+				act 'Buy':
+					cla
+					money = money - 1000
+					hooker[2] = 1
+					hookerH[2] = 200
+					hookerB[2] = bedra
+					gt'sexshop','start'
+				end
+			end
+		end
+
+		if hooker[3] = 0:
+			act 'Inspect clothes prostitutes. Number3':
+				cla
+				*clr
+				'<center><img src="images/ode/hooker3.jpg"></center>'
+				'Clothing prostitutes.'
+				'Costs 1000 RUB.'
+
+				act 'Escape':gt'sexshop','start'
+				act 'Buy':
+					cla
+					money = money - 1000
+					hooker[3] = 1
+					hookerH[3] = 200
+					hookerB[3] = bedra
+					gt'sexshop','start'
+				end
+			end
+		end
+
+		if hooker[4] = 0:
+			act 'Inspect clothes prostitutes. Number4':
+				cla
+				*clr
+				'<center><img src="images/ode/hooker4.jpg"></center>'
+				'Clothing prostitutes.'
+				'Costs 1000 RUB.'
+
+				act 'Escape':gt'sexshop','start'
+				act 'Buy':
+					cla
+					money = money - 1000
+					hooker[4] = 1
+					hookerH[4] = 200
+					hookerB[4] = bedra
+					gt'sexshop','start'
+				end
+			end
+		end
+
+		if hooker[5] = 0:
+			act 'Inspect clothes prostitutes. Number5':
+				cla
+				*clr
+				'<center><img src="images/ode/hooker5.jpg"></center>'
+				'Clothing prostitutes.'
+				'Costs 1000 RUB.'
+
+				act 'Escape':gt'sexshop','start'
+				act 'Buy':
+					cla
+					money = money - 1000
+					hooker[5] = 1
+					hookerH[5] = 200
+					hookerB[5] = bedra
+					gt'sexshop','start'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'podval':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+	!gloryholeBooths
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Basement with booths for movies</font></b></center>'
+	'<center><img src="images/pic/gloryholeBooths1.jpg"></center>'
+	''
+
+	act 'Go to the free stall':gt'sexshop','pip'
+	act 'Going to the bathroom':gt'sexshop','toi'
+
+	if masharab = 1:
+		act 'Login to Masha':gt'masharoom','start'
+	end
+
+	act 'Get out of the basement':gt'sexshop','start'
+end
+
+if $ARGS[0] = 'toi':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Toilet</font></b></center>'
+	'<center><img src="images/pic/PublicToilet.jpg"></center>'
+	''
+
+	if tanga = 1:
+		act 'Remove underwear':
+			cla
+			tanga = 0
+			gt'sexshop','toi'
+		end
+	end
+
+	if hapri = 0:
+		act 'Coiffured':
+			cla
+			minut = minut + 3
+			hapri = 1
+			act 'View results':gt'sexshop','toi'
+		end
+	end
+
+	if mop = 1 and kosmetica > 0:
+		act 'Apply Makeup':
+			cla
+			*clr
+			'<center><img src="images/pic/mop.jpg"></center>'
+
+			act 'Light make-up':
+				cla
+				minut = minut + 3
+				kosmetica = kosmetica - 1
+				mop = 2
+
+				'You legonechko summed eyes and slightly tint the lips.'
+
+				act 'Logout':gt'sexshop','toi'
+			end
+
+			if kosmetica >= 2:
+				act 'Normal make-up':
+					cla
+					minut = minut + 5
+					kosmetica = kosmetica - 2
+					mop = 3
+
+					'You lipstick, summed up the eyes and eyelids.'
+
+					act 'Logout':gt'sexshop','toi'
+				end
+			end
+
+			if kosmetica >= 3:
+				act 'The caller makeup':
+					cla
+					minut = minut + 10
+					kosmetica = kosmetica - 3
+					vidageday = vidageday - 1
+					mop = 4
+
+					'You densely nakrasili eyes, imposed a shadow and mascara, nakrasili contour lip pencil and lipstick.'
+
+					act 'Logout':gt'sexshop','toi'
+				end
+			end
+		end
+	end
+
+	if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+		act 'Substitution 15 min':
+			cla
+			*clr
+			cumpussy = 0
+			cumbelly = 0
+			cumass = 0
+			cumanus = 0
+			cumlip = 0
+			cumface = 0
+			sweat = sweat - 1
+			minut = minut + 15
+
+			'<center><img src="images/pics/wash5.jpg"></center>'
+			'You carefully washed sperm from itself.'
+
+			act 'Logout':gt'sexshop','toi'
+		end
+	end
+
+	if cumlip > 0 or cumface > 0:
+		act 'Wash off with facial cum 15 min':
+			cla
+			*clr
+			mop = 1
+			cumlip = 0
+			cumface = 0
+			sweat = sweat - 1
+			minut = minut + 15
+
+			'<center><img src="images/pic/facesp.jpg"></center>'
+			'You carefully washed sperm from the face.'
+
+			act 'Logout':gt'sexshop','toi'
+		end
+	end
+
+	if cumfrot > 0:
+		act 'Clear semen from clothing 15 min':
+			cla
+			cumfrot = 0
+			sweat = sweat - 1
+			minut = minut + 15
+
+			!'<center><img src="images/pic/facesp.jpg"></center>'
+			'You have erased the traces of semen from clothing.'
+
+			act 'Logout':gt'sexshop','toi'
+		end
+	end
+
+	if tampon > 0 and mesec > 0 and isprok = 0:
+		act 'Change swab':
+			cla
+			*clr
+			tampon = tampon - 1
+			isprok = 1
+			minut = minut + 5
+			manna = manna - 5
+
+			'<center><img src="images/pics/wash3.jpg"></center>'
+			'You have changed the swab.'
+
+			act 'Finish':gt'sexshop','toi'
+		end
+	end
+
+	act 'Exit out of the closet':gt'sexshop','podval'
+end
+
+if $ARGS[0] = 'pip':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+	!gloryholeBooths
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Booth movie</font></b></center>'
+	'<center><img src="images/pic/ghBooths.jpg"></center>'
+	'A small cabinet with a TV on the wall, terminal and two holes in the walls at waist level.'
+	if ghnow > 0:'You served <<ghnow>> cocks.'
+
+	act 'Get out of the stall':gt'sexshop','podval'
+
+	if money >= 50 and hour < 23:
+		act 'Shove 50 rubles Machine':
+			cla
+			money = money - 50
+			minut = minut + 15
+			horny = horny + 5
+			manna = manna + 5
+
+			'Once you have paid the money earned TV on the wall showing porn.'
+			'You sit in a chair and watched porn, he began to have a little to excite.'
+
+			act 'The film ended':gt'sexshop','pip'
+
+			if horny >= 50:
+				act 'Masturbate':
+					cla
+					horny = horny + 10
+					manna = manna + 10
+
+					'You caress her pussy fingers and enjoy the pleasant sensations between her legs.'
+
+					if horny >= 100:
+						orgasm = orgasm + 1
+						horny = 0
+						manna = manna + 15
+						willpower = willpower + 15
+						mastr = mastr + 1
+
+						'Gradually the pleasant feeling spreads throughout the body and have an orgasm covers.'
+					end
+
+					act 'The film ended':gt'sexshop','pip'
+				end
+			end
+
+			ghrand = RAND(0,10)
+			if ghrand >= 10 - (cumlip*2):
+				'You hear in the next stall Turn on the TV.'
+
+				act 'Stick a finger in the hole (serve strangers)':
+					cla
+					*clr
+					ghnow = ghnow + 1
+					money = money + 300
+
+					fingerRand = RAND(0,4)
+					if fingerRand = 0:'<center><img src="images/pic/ghFinger.jpg"></center>'
+					if fingerRand = 1:'<center><img src="images/pic/ghFinger1.jpg"></center>'
+					if fingerRand = 2:'<center><img src="images/pic/ghFinger2.jpg"></center>'
+					if fingerRand = 3:'<center><img src="images/pic/ghFinger3.jpg"></center>'
+					if fingerRand = 4:'<center><img src="images/pic/ghFinger4.jpg"></center>'
+
+					'You stuck your fingers in the hole by showing that you are ready to serve member.'
+					'The stranger slipped into the hole 300 rubles, and then out of the hole he seemed his penis.'
+
+					act 'Sucking dick':
+						cla
+						*clr
+						horny = horny + VAF
+						guy = guy + 1
+						bj = bj + 1
+						gloryhole = gloryhole + 1
+						swallow = swallow + 1
+						cumlip = cumlip + 1
+
+						dynamic $venerasiak
+
+						ghprand = RAND(0,37)
+						if ghprand = 0:'<center><img src="images/picV/gloryhole.jpg"></center>'
+						if ghprand = 1:'<center><img src="images/picV/gloryhole1.jpg"></center>'
+						if ghprand = 2:'<center><img src="images/picV/gloryhole2.jpg"></center>'
+						if ghprand = 3:'<center><img src="images/picV/gloryhole3.jpg"></center>'
+						if ghprand = 4:'<center><img src="images/picV/gloryhole4.jpg"></center>'
+						if ghprand = 5:'<center><img src="images/picV/gloryhole5.jpg"></center>'
+						if ghprand = 6:'<center><img src="images/picV/gloryhole6.jpg"></center>'
+						if ghprand = 7:'<center><img src="images/picV/gloryhole7.jpg"></center>'
+						if ghprand = 8:'<center><img src="images/picV/gloryhole8.jpg"></center>'
+						if ghprand = 9:'<center><img src="images/picV/gloryhole9.jpg"></center>'
+						if ghprand = 10:'<center><img src="images/picV/gloryhole10.jpg"></center>'
+						if ghprand = 11:'<center><img src="images/picV/gloryhole11.jpg"></center>'
+						if ghprand = 12:'<center><img src="images/picV/gloryhole12.jpg"></center>'
+						if ghprand = 13:'<center><img src="images/picV/gloryhole13.jpg"></center>'
+						if ghprand = 14:'<center><img src="images/picV/gloryhole14.jpg"></center>'
+						if ghprand = 15:'<center><img src="images/picV/gloryhole15.jpg"></center>'
+						if ghprand = 16:'<center><img src="images/picV/gloryhole16.jpg"></center>'
+						if ghprand = 17:'<center><img src="images/picV/gloryhole17.jpg"></center>'
+						if ghprand = 18:'<center><img src="images/picV/gloryhole18.jpg"></center>'
+						if ghprand = 19:'<center><img src="images/picV/gloryhole19.jpg"></center>'
+						if ghprand = 20:'<center><img src="images/picV/gloryhole20.jpg"></center>'
+						if ghprand = 21:'<center><img src="images/picV/gloryhole21.jpg"></center>'
+						if ghprand = 22:'<center><img src="images/picV/gloryhole22.jpg"></center>'
+						if ghprand = 23:'<center><img src="images/picV/gloryhole23.jpg"></center>'
+						if ghprand = 24:'<center><img src="images/picV/gloryhole24.jpg"></center>'
+						if ghprand = 25:'<center><img src="images/picV/gloryhole25.jpg"></center>'
+						if ghprand = 26:'<center><img src="images/picV/gloryhole26.jpg"></center>'
+						if ghprand = 27:'<center><img src="images/picV/gloryhole27.jpg"></center>'
+						if ghprand = 28:'<center><img src="images/picV/gloryhole28.jpg"></center>'
+						if ghprand = 29:'<center><img src="images/picV/gloryhole29.jpg"></center>'
+						if ghprand = 30:'<center><img src="images/picV/gloryhole30.jpg"></center>'
+						if ghprand = 31:'<center><img src="images/picV/gloryhole31.jpg"></center>'
+						if ghprand = 32:'<center><img src="images/picV/gloryhole32.jpg"></center>'
+						if ghprand = 33:'<center><img src="images/picV/gloryhole33.jpg"></center>'
+						if ghprand = 34:'<center><img src="images/picV/gloryhole34.jpg"></center>'
+						if ghprand = 35:'<center><img src="images/picV/gloryhole35.jpg"></center>'
+						if ghprand = 36:'<center><img src="images/picV/gloryhole36.jpg"></center>'
+						if ghprand = 37:'<center><img src="images/picV/gloryhole37.jpg"></center>'
+
+						'You took the cock in her mouth and began to suck, treating it with her lips struggling.'
+
+						if horny >= 100:
+							VAF = VAF + 1
+							orgasm = orgasm + 1
+							horny = 0
+							manna = manna + 15
+							willpower = willpower + 15
+							lip = lip + 1
+
+							'<b>Unexpectedly, you you started sucking dick cum themselves. Between the legs blazing fire and waves of pleasure covered body, You groaned but did not release a member of his mouth continuing to suck.</b>'
+						end
+
+						'Finally the stranger began to finish in your mouth filling it with vigorous sperm. After you`ve licked all the sperm with a member from the wall, a man came out of the booth.'
+
+						act 'Wipe the face':gt'sexshop','pip'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'porn':
+	cla
+	*clr
+	minut = minut + 5
+
+	'Generally, You have a noble minetchitsa, as everybody knows. Do you want to earn some money in porn-actress business? Pay there certainly better, than here, and cocks, may be, and even more, if they deal. Well? Another proposal will not!'
+
+	act 'Agree':
+		cla
+		*clr
+		pornstudio = 2
+		gt'pornstudio','1'
+	end
+	act 'Takeout':
+		cla
+		*clr
+		pornstudio = 1
+		gt'sexshop','start'
+	end
+end
+
+if $ARGS[0] = 'kendra':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/img/centr/shkend.jpg"></center>'
+	'In the store you can see Kendra, Try on latex lingerie.'
+	'"Who is here with us, my favorite litter, Come to me and I already strongly excited choosing a toy, Now we are testing something on the spot" Kendra laughed, sitting down at the table and pushing the legs.'
+
+	act 'Get away from it':gt'sexshop','start'
+	if DOM > 10:act 'First deserve':gt'sexshop','kendra4'
+
+	act 'Serve Kendra':
+		cla
+		*clr
+		SUB += 1
+		!girl += 1
+		lesbian += 1
+
+		'<center><img src="images/img/centr/shkend1.jpg"></center>'
+		'You get thrown off clothes, and kneeling before the current pussy licking Kendra and accept it. As long as you carefully suck Kendra yells and extols your tongue, saying that more than one tongue not pleased her as your.'
+		'"Now take anything from toys" Kendra says'
+
+		act 'Take dildo':gt'sexshop','kendra1'
+		act 'Give her strap':gt'sexshop','kendra2'
+	end
+end
+
+if $ARGS[0] = 'kendra1':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/img/centr/shkend2.jpg"></center>'
+	'You take a dildo and licking paste it into your pussy Kendra. While you with one hand oruduete dildo in her pussy, second caress her clitoris trying to bring herself to orgasm. Kendra meanders sitting on the table in time to the diligent podmahivaya your movements.'
+
+	pipirand = RAND(0,3)
+	if pipirand > 0:
+		orgasm += 1
+
+		'When Kendra starts to tremble all over in orgasm, You also covers a wave of orgasm. Few come to himself, Kendra looking at you, "And yet you are beautiful litter, even while you finish with me"'
+
+		act 'Finish':gt'sexshop','start'
+	end
+	if pipirand = 0:
+		act 'Whoops...':
+			cla
+			*clr
+			sweat += 1
+
+			'<center><img src="images/img/centr/shkend4.jpg"></center>'
+			'Suddenly, when you were ready to end, Kendra began writing, her urine flowed in on dildo has flowed through your hand.'
+			'"Damn it" They cried and you were about to throw a dildo.'
+			'"Let`s finish up, whore" cried Kendra'
+
+			act 'Send it':gt'sexshop','kendra3'
+			act 'Continue':
+				cla
+				*clr
+				sweat += 3
+				SUB += 2
+				horny = 0
+
+				'<center><img src="images/img/centr/shkend3.jpg"></center>'
+				'You dutifully continued to wield a dildo, still continuing to stroke her clitoris, but excitement is already gone. Her urine dripping with dildo on your hand and now the hand and stomach and thighs, it was in her urine.'
+				'Finally she came, "Now lick me, or I soiled." He commanded Kendra'
+
+				act 'Send it':gt'sexshop','kendra3'
+				act 'Lick':
+					cla
+					*clr
+					SUB += 2
+
+					'<center><img src="images/img/centr/shkend5.jpg"></center>'
+					'You dutifully moved closer to her and began to slowly lick the urine from her thighs and pussy.'
+					'"Actively Move the nipple" Customized You Kendra. You began to lick faster, barely restraining retching from the urine taste in the mouth.'
+					'"There is a good boy, Come to see me more often, Amuse" With these words Kendra got dressed and left, leaving you sitting on the floor in a puddle of urine.'
+
+					act 'Escape':gt'sexshop','start'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'kendra2':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/img/centr/shkend8.jpg"></center>'
+	'Kendra strap dress and looking at you asked "Well, that beauty in which you insert hole?".'
+
+	act 'The vagina':
+		cla
+		*clr
+		sex += 1
+		vagina += 1
+		orgasm += 1
+		horny = 0
+
+		'<center><img src="images/img/centr/shkend10.jpg"></center>'
+		'Kendra sits in a chair and you jump up on top of her entering Strap yourself in pussy. You springing on strapon, and Kendra podmahivaet you from the bottom trying to shove it as deep as possible. A few minutes later a horse racing, orgasm covers you, and you slide with Kendra.'
+		'"There is a good boy, Come to see me more often, Amuse" With these words Kendra got dressed and left'
+
+		act 'Escape':gt'sexshop','start'
+	end
+	act 'In the ass':
+		cla
+		*clr
+		anal += 1
+		orgasm += 1
+		anus += 1
+		horny = 0
+
+		'<center><img src="images/img/centr/shkend9.jpg"></center>'
+		'You jump up on the table and spreads her legs, Kendra gently introduces you to strap in the anus and give your ass a few seconds to get used to, Then she starts to move. Strap slip inside your ass, and soon you will become a pleasure, seeing that you enjoy the process begins to slowly accelerate Kendra, and you put your hand on your crotch and fingers massaging the clitoris, after a few minutes you orgasm covers, You shudder all over, Kendra frantically grabs the legs and cuddle so you strap included in the full length of the anus, you have dark eyes and you are off.'
+		'When you come to a Kendra is already dressed, "Well, you have yourself nifiga orgasm, will have to find a double strap that want to see you two trunks will" With these words Kendra left.'
+
+		act 'Escape':gt'sexshop','start'
+	end
+end
+
+if $ARGS[0] = 'kendra3':
+	cla
+	*clr
+	minut += 10
+	anal += 1
+	anus += 1
+	rape += 1
+
+	'<center><img src="images/img/centr/shkend6.jpg"></center>'
+	'"Oh damn, I will teach you now submissive" With these words Kendra jumped and threw you on the table, where even a second ago sat themselves. He fell on the table, you swiped back, and while you`re writhing in pain on the table, Kendra wearing strap, and pressed his hands to the table your hips start to push it to you in the ass, neudosuzhivshis even smear it. Go to your back pain was added the pain of torn anus threesome. Kendra fucked with force your anus saying that you litter and the right to vote you do not have.'
+	'When she finally got tired, then you literally wiped off the table onto the floor, You fell with a thud on the floor.'
+	'"On your knees slut" she hissed.'
+
+	act 'Kneel down':
+		cla
+		*clr
+		'<center><img src="images/img/centr/shkend7.jpg"></center>'
+		'You struggled to his knees, spin badly hurt, but it seems from the anus dripping blood.'
+		'"Suck" Kendra commanded substituting strap to your face. Have you looked at the strap, which you could see the traces of your blood.'
+		'"Yes, you already suck." He shouted Kendra, and I grab you by the hair, you reflexively opened his mouth that-to cry, Kendra but pushed it ahead Strap. She fucked you in the mouth with the same frenzy that a moment ago you tore ass.'
+		'When she finally calmed down and let your hair, you fell exhausted to the floor, Kendra leaned over you and said, "Remember you litter, what you say and do something, I will say on the street naked cancer stand, will stand and thank all of you who fuck, and now learn the lessons, and I have to go" After that, she got dressed and left.'
+
+		act 'Escape':gt'sexshop','start'
+	end
+end
+
+if $ARGS[0] = 'kendra4':
+	cla
+	*clr
+	minut += 10
+	orgasm += 1
+	horny = 0
+
+	picrand = RAND(11,12)
+	'<center><img src="images/img/centr/shkend<<picrand>>.jpg"></center>'
+	'Kendra looked at you surprised, as you threw off her clothes.'
+	'Undressed you turned it backwards, and stuck out his ass "Well look, dovedesh to orgasm can try Strap"'
+	if picrand = 11:'Kendra knelt down and began to lick your pussy, her tongue slid over the lips sex, tickle the clitoris, and droop into the vagina, after a few minutes of her effort, you are finished.'
+	if picrand = 12:'Kendra knelt down and her tongue stuck on the move you in getting inside the anus, you had the feeling that you in the ass snake crawled and twisted it all around, it penetrated her fingers into the vagina and a few minutes later thanks to her tongue snaked you in the ass and pussy Palchikov diligently massaging you experienced orgasm.'
+	'"Well, I will fulfill your desires?" Kendra asked breathless."Now do according to my."'
+
+	act 'Give her strap':gt'sexshop','kendra2'
+	if DOM > 25:act 'Perebesh':gt'sexshop','start'
+end
+
+if $ARGS[0] = 'shprod':
+	cla
+	*clr
+	minut += 5
+
+	'<center><img src="images/img/centr/shprod.jpg"></center>'
+	'The shop is suitable for you and the seller starts to try to offer some kind of miniskirt "Girl you do go, you really only try on"'
+
+	act 'Takeout':gt'sexshop','start'
+	act 'Try':
+		cla
+		*clr
+		picrand = 47
+
+		'<center><img src="images/img/centr/shprod1.jpg"></center>'
+		'You wear a skirt and came out of the booths are going to the mirror, You do not have panties and skirt on so short that looks more like a belt completely covering anything and all your charms visible from all directions.'
+		'Approaching the mirror you look at this so-called skirt, dealer kneels behind you and start praising Iron-on transfer your ass skirt, his hands were wandering around your hips and lips as close to the buttocks when they spoke about the concern of your skin, Soon the word stop and remain only touch his lips to your skin, ever closer to the pussy.'
+
+		act 'Push him':gt'sexshop','start'
+		act 'Letting him':gt'sex','kuni'
+	end
+end
+--- sexshop ---------------------------------
+

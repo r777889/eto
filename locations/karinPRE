@@ -1,0 +1,110 @@
+# karinPRE
+minut = minut + 120
+nudity = 0
+clr
+gs'statPRE'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+'You woke up in what is not a familiar place, standing near you is the same red-haired girl. "And I woke up. I told this blockhead Juugo, that he would have more careful with you addressed. But did he listen. As a result, I had to you from the light pull, he almost did not kill you."'
+'"But there are pluses, while you lay unconscious, I studied a little bit you. The strength of an amulet passed to you. As you pull it out I have no idea. This way the bad news, for you. Toby, Well, the man in the mask. He had probably realized, amulet that worked and gave his power and now he`s looking for you."'
+
+act 'What`s going on here?':
+	cla
+	*clr
+	minut = minut + 5
+	clr
+	gs'statPRE'
+
+	'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+	'"What`s all the hell is going on?" You interrupted the girl and tried to move his hand, but you were tied to the bed.'
+	'"Emm, okay, start order." she said. "Magic exists and is very real. Before the world was not so, Circle were sorcerers, and this could not be a surprise to anyone. Once everything has changed. The Order of Dawn, the head of which you personally visited. That guy in the mask named Toby. So this order took a few demons and use their power bewitched moon. Now the whole world is living in illusion the moon and sends Toby directly. Who can resist the illusion, but it is powerful mages, but most of the world just forgot about the magic and began to live in a fantasy world, they believe the only reality."'
+	'"Recently, there was a powerful burst of magical energy, which even caused the malfunction Tsukuemi. Tsukuemi so called spell of illusion imposed on the moon. As you can guess mages felt this surge. He walked out of that cave you found. Apparently there was a surge at the time of activation of the amulet. Who is this amulet started hunting. Magicians of all stripes are looking for a subject of such fierce forces can disrupt Tsukuemi.'
+	'How do you know, Toby wants to safeguard his Order from destruction Tsukuemi. And perhaps by the amulet to strengthen his forces. Tsukuemi weakens over time."'
+
+	act 'The whole world is an illusion sent down this Toby?':
+		cla
+		*clr
+		minut = minut + 5
+		clr
+		gs'statPRE'
+
+		'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+		'"The whole world is an illusion sent down this Toby?" you ask. She nodded. "Yes. But the illusion of a specific. Everything around it is financially. Just having a magical nature escapes the attention of the person. Machine, apartment, TV and Internet, all this really does exist and is indeed in the form in which it sees people. But if I say, hurl a fireball, then people will see how I threw a grenade or a shot from a flamethrower. Once the human mind encounters a miracle, Tsukuemi triggered and begins to affect the mind, forbidding him to take a miracle as it is a miracle, hence any little green men, UFO, poltergeists, spontaneous combustion, understanding of the impact of Tsukuemi forced to seek outlets in every form of delirium at the sight of a miracle, If the mind can not cope with the impact Tsukuemi, A man can go mad, and then no one would believe him."'
+
+		act 'Who are you?':
+			cla
+			*clr
+			minut = minut + 5
+			clr
+			gs'statPRE'
+
+			'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+			'"Who are you?" you ask. She smiled. "I? I Karin. Magician, but certainly not a magician Toby. I will specialize in the treatment of, Mutation, modified organisms. I have little combat techniques, therefore, that would certainly grab you, I retained the services of Juugo. He mutant, it is caused by the mutation of a magical nature. He has terrible physical strength which is very hard to resist. He can bear fists score. But this power, combined with the influence of Tsukuemi driving him crazy. We work with them, I keep it in a state of sanity, and he carries out my orders."'
+
+			act 'Why do you need me?':
+				cla
+				*clr
+				minut = minut + 5
+				clr
+				gs'statPRE'
+
+				'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+				'"Why do you need me?" you ask. She said. "Hmm, my obvious. When I grab you, I was hoping to get this effect. But now the situation has changed. Amulet in general that has become useless. The strength went into you. But it`s bad news for you. If you think, that once you have the power of the amulet, so you can do anything. With two guys. Naked without the ability to force nothing. And Toby easily beat your will and forced to obey, Juugo and beat you like a puppy. Not so simple with this force. You yourself became an amulet, the power within you to enjoy it contained but you can not do."'
+
+				act 'And what kind of amulet? Where did he come?':
+					cla
+					*clr
+					minut = minut + 5
+					clr
+					gs'statPRE'
+
+					'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+					'"And what kind of amulet? Where did he come?" you ask. Karin thought. "Most likely it`s some kind of trick Rikudo, ancient magician stunning force. I`m not sure. Similarly, only I know, that the amulet was created in a special way, he could only give his power to the one in whom there is no magic. And he could give effect only to the man. Most likely it was some kind of amulet Rikudo for emergency restoration of power at a time when she had finished.'
+					'Do you know, you`re already a corpse. In your footsteps is Toby and his gang of bastards and morons. When he finds you, he will turn you inside out, but the effect would get out of you. Apply your power in the form in which it exists is the same as the call Toby and tell where you are. Tsukuemi on you can no longer act, so you probably saw Toby moves. Time, and it is where he needs, convenient and fast."'
+					'Karin thought. "Do you know. I do not want to give you Toby. And I think I know how to bring down the trail this bloodhound. Strength Rikudo only works if it is in a man`s body. You`re a man, and it works there, regardless of your will. I should destroy the huge efforts and dispel the traces of this force, to hide our place position."'
+
+					act 'Uh, I do not understand, what do you suggest?':
+						cla
+						*clr
+						minut = minut + 5
+						clr
+						gs'statPRE'
+
+						'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+						'"Uh, I do not understand, what do you suggest?" you ask. Karin giggled. "I`ll make you pretty, young girl and Toby never find you. No, Well there is another way, I just stop your heart and your power will dissolve in nature, and thou shalt die. To give you Toby I`m not going. And to confess I do not want to kill you. It may eventually be able to do something sensible with your strength."'
+
+						act 'Hey, I do not want to be a woman, besides, I have a family, wife, daughter':
+							cla
+							*clr
+							minut = minut + 5
+							clr
+							gs'statPRE'
+
+							'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+							'"Hey, I do not want to be a woman, besides, I have a family, wife, daughter" you scared. Karin smiled sadly. "Here the choice is easy, or you will die, or you will live without the term. I never knew men, that they were shaking their rattles around. For his family not to worry. I`ll arrange everything. You`ll be dead for all, tragedy, but what to do, But Toby unhook. I will erase your memory about a family, will only shadowy memories, you can not even remember where you live.Completely erase the memory I will not leave, you turn into a useless vegetable."'
+
+							act 'There must be another way!':
+								cla
+								*clr
+								minut = minut + 5
+								clr
+								gs'statPRE'
+
+								'<center><img src="images/picPRE/karinPRE.jpg"></center>'
+								'"There must be another way!" You panicked. Karin has become a serious. "Do not argue. But this is the only way available to me. Now go to sleep." He said Karin putting your hand on chest.'
+
+								act 'Sleep':gt'sleepPRE'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- karinPRE ---------------------------------
+

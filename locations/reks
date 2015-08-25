@@ -1,0 +1,763 @@
+# reks
+$rexRep = {
+	if rex<20:'You have a terrible row with Rex.'
+	if rex>=20 and rex<40:'You Rex tensions.'
+	if rex>=40 and rex<60:'You have a normal relationship with Rex.'
+	if rex>=60 and rex<80:'You have a good relationship with Rex.'
+	if rex>=80:'You have an excellent relationship with Rex.'
+	''
+}
+
+$rexGdkTalk = {
+	if rex>=40 and rex<60:
+		rexTalk = rand(1,10)
+		if rexTalk < 5:'You chat with Rex on various topics.'
+		if rexTalk = 6:'You chat with Rex, He tells you, as the summer went with their parents to Abkhazia.'
+		if rexTalk = 7:'You chat with Rex and learn, he loves to photograph and dreams of becoming a photographer.'
+		if rexTalk = 8:'You chat with Rex, he tells, that his father, a car wash, and sometimes he is not bad there moonlights.'
+		if rexTalk = 9:'You chat with Rex, He tells you, both had an accident.'
+		if rexTalk = 10:'You chat with Rex, He says, that in fact his name is Egor, and Rex - This klikuha.'
+	end
+	if rex>=60:
+		rexTalk = rand(1,10)
+		if rexTalk = 10 and rex>=80:
+			*clr
+			horny += 10
+			gs'stat'
+			'<center><img src="images/qwest/alter/Reks/rexhistory1.jpg"></center>'
+			'You chat with Rex, he tells - "My friend the bride so get drunk, that after the party when everyone got to sleep, She plopped down in the wrong bed! In the dark thought that had fallen into bed and began to groom stick, and there turned out to be a friend of the groom, and not the best. Well, he is not thinking long and it pripihnul! You have no idea what was in the morning ... In short so they are not married" - prosmeyalsya Rex.'
+			'The conversation on this topic a little excite you. '
+		elseif rexTalk < 3 and rex>=80 and rexSisTalk < 4:
+			if rexSisTalk = 0:
+				'You chat with Rex, He says, he also has an older sister - Diana, who is studying to be a teacher in the city. There`s live while studying in a hostel. Sometimes coming here on vacation. It happens at the weekend comes to visit, the benefit to the city is not a day away.'
+				rexSisTalk += 1
+			elseif rexSisTalk = 1:
+				'You chat with Rex, He says, that loves his sister. One local guy broke his nose, who broke her heart having gone to another. After that, until now he had not seen it with other guys. When it comes mainly walking with friends. Although suspects, in the city she has a friend ...'
+				rexSisTalk += 1
+			elseif rexSisTalk = 2:
+				cla
+				'You chat with Rex.
+- Light, remember, I told, that my ancestors gave dnyuhu steep fotik? How about a stroll through the park tomorrow? I can not take it with you. You`ll see some clear pictures obtained!'
+				act 'Agree':
+					rex += 1
+					'- What, I`m not against, let her watch at 16:00.
+- Cool, then tomorrow 16:00, zamёtano!'
+					rexPark = 1
+					rexParkDay = daystart + 1
+					act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt'annafrends2'
+				end
+				act 'Takeout':
+					rex -= 3
+					'- Damn ... a lot to do tomorrow, let`s do it next time.
+- Okay…'
+					act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt'annafrends2'
+				end
+				exit
+			elseif rexSisTalk = 3:
+				cla
+				'You chat with Rex.
+- Sveta remember, I told you, I drag my father that the car keys while he was not home? Tomorrow, on the anniversary of the ancestors go to the city where they are likely to spend the night and. Keys father leaves home. Maybe a little ride in her watch 21:00?'
+				act 'Takeout':
+					rex -= 5
+					'- Let`s do it next time.
+- Oh well… - Frustrated said Rex.'
+					act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt'annafrends2'
+				end
+				act 'Agree':
+					rex += 1
+					'- Why no?
+- Fine! Then tomorrow 21:00 I`ll pick you at the door.'
+					rexCar = 1
+					rexCarDay = daystart + 1
+					act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt'annafrends2'
+				end
+				exit
+			end
+		elseif rexTalk < 4 and rex>=80 and rexSisTalk = 4 and rexCar ! 1 and rexCarCount < 9:
+			'Rex offers of hours tomorrow in 21:00 ride by car.'
+			act 'Takeout':
+				rex -= 5
+				'- Let`s do it next time.
+- Well, Then another time...'
+				act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt'annafrends2'
+			end
+			act 'Agree':
+				rex += 1
+				'- Good,  I agree.
+- The 21:00 I will have your entrance - Rex smiled.'
+				rexCar = 1
+				rexCarDay = daystart + 1
+				act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt'annafrends2'
+			end
+			exit
+		else
+			rexTalk = rand(1,6)
+		end
+		if rexTalk = 1:'You chat with Rex, He tells you, sometimes in the evenings tihorya takes a key from his father`s car, that is not at home and riding without a license.'
+		if rexTalk = 2:'You chat with Rex on various topics, Sometimes it makes you compliments.'
+		if rexTalk = 3:'You chat with Rex, he tells the camera down a steep parents gave him for his birthday.'
+		if rexTalk = 4:'You chat with Rex, - "You know, I look at you with Anka, definitely have a lot in common ..."'
+		if rexTalk = 5:'You chat with Rex, He says, that studying at a driving school and if you`re lucky, it will soon be right.'
+		if rexTalk = 6:'You chat with Rex, each time it is more and more you like, nor is it such a strange and.'
+		
+		act 'Continue to drink beer':SiSonWork = 0 & SiSgdk = 0 & gt'annafrends2'
+	end
+}
+
+if $ARGS[0] = 'skver':
+	cls
+	rexPark = 2
+	rexSisTalk += 1
+	minut += 5
+	rex += 1
+	gs'stat'
+	'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
+	dynamic $rexRep
+	'Rex stood at the bench, and hiding his hands behind his back. You go to him smiling and in that moment, he pulls out-behind a small, but very beautiful bouquet of flowers and hands it to you. 
+With words - "Vaau..." - you take a bunch, inhale and exhale fragrance keeping his smile from the face of utter: "Thank you, Rex..!"'
+	act 'Walk':
+		cls
+		minut += 30
+		gs'stat'
+		'<center><img src="images/qwest/alter/Reks/progulpark.jpg"></center>'
+		'You wandered around the park, speaking on various topics. Rex periodically fotkal landscape and shows you what the pictures are clear.'
+		act 'Further':
+			cls
+			minut += 30
+			gs'stat'
+			'<center><img src="images/qwest/alter/Reks/rexozero.jpg"></center>'
+			'You have reached the lake and Rex did one picture with you.'
+			act 'Further':
+				cls
+				minut += 30
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/newclo/8.jpg"></center>'
+				'You have wandered and came to the market. Walking through the market on one of the shelves you saw the inscription «Sale», a beautiful dress on a hanger for hanging 1500 rubles. Rex saw how you look at this dress.'
+				if dom > 5:
+					act 'To persuade Rex buy a dress':
+						minut += 20
+						newclo[132] = 1
+						newcloH[132] = 50
+						newcloB[132] = bedra
+						'Rex bought you a dress, You wander around a bit and went.'
+						act 'In town':gt'gorodok'
+					end
+				else
+					act 'View Rex':
+						cla
+						minut += 5
+						gs'stat'
+						'Rex smiled seeing your opinion:
+- Light, if you want to, we can buy this dress. But you several shots in it. There is a?'
+						act 'Takeout':
+							minut += 20
+							'- I`ll manage.
+You wander around a bit and went.'
+							act 'In town':gt'gorodok'
+						end
+						act 'Agree':
+							minut += 30
+							newclo[132] = 1
+							newcloH[132] = 50
+							newcloB[132] = bedra
+							rex += 1
+							gs'stat'
+							'Rex bought you a dress, You went home and changed clothes.'
+							act 'Further':
+								cls
+								numdres = 132
+								numdress = numdres
+								odetjeans = 0
+								odetyoga = 0
+								odetsarafan = 0
+								odetshort = 0
+								odetskirt = 0
+								odetdress = 0
+								odetprofi = 0
+								odetpants = 0
+								odetlatex = 0
+								odethooker = 0
+								odetkis = 0
+								odetnewclo = 1
+								odetero = 0
+								vatnik = 0
+								glamur = 1
+								sport = 0
+								ski = 1
+								Sforma = 0
+								hook = 0
+								ofclo = 0
+								sexual = 1
+								if cumfrot > 0:cumfrot = 0
+								nude = 0
+								odevnesh = 5
+
+								minut += 5
+								gs'stat'
+								'<center><img src="images/qwest/alter/Reks/Rex foto/Svet/fpr4.jpg"></center>'
+								'You came out of the entrance:
+-Well? - You ask.
+Rex literally devouring your eyes mumbled:
+- Chicly!!!'
+								act 'Go to the park':
+									cls
+									minut += 10
+									gs'stat'
+									'<center><img src="images/qwest/alter/Reks/Rex foto/Svet/fpr1.jpg"></center>'
+									'You came to the Square:
+- Light, sfotkayu give you a bouquet.'
+									act 'Further':
+										cls
+										minut += 5
+										horny += 5
+										gs'stat'
+										'<center><img src="images/qwest/alter/Reks/Rex foto/Svet/fpr2.jpg"></center>'
+										'- Here is a great picture - said Rex. You sat down on a huge boulder and took a pose. Corner of my eye you notice how Rex sticks fly.'
+										act 'Further':
+											cls
+											minut += 5
+											gs'stat'
+											'<center><img src="images/qwest/alter/Reks/Rex foto/Svet/fpr3.jpg"></center>'
+											'You made another shot at stone throwing leg to leg and went to wander through the square in search of new places for photos. Plenty nabrodivshis you sat on the bench.
+Rex pulled out his smartphone and began to show you pictures sisters.'
+											act 'Watch':
+												cls
+												minut += 5
+												gs'stat'
+												'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr1.jpg"></center>'
+												'- Look what I have it, true beauty?'
+												act 'View more':
+													cls
+													minut += 5
+													gs'stat'
+													'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr2.jpg"></center>'
+													'- This is what we at the wedding of my father`s younger brother.'
+													act 'View more':
+														cls
+														minut += 5
+														gs'stat'
+														'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr3.jpg"></center>'
+														'- She loves all sorts of beautiful clothes, Well, in other matters as well as all women. No offense to light, - He smiled.'
+														act 'View more':
+															cls
+															minut += 5
+															gs'stat'
+															'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr4.jpg"></center>'
+															'- It`s in our park '
+															act 'View more':
+																cls
+																minut += 5
+																gs'stat'
+																'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr5.jpg"></center>'
+																'- It is we in the bath'
+																act 'View more':
+																	cls
+																	minut += 5
+																	gs'stat'
+																	'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr6.jpg"></center>'
+																	'- It was she who in his father`s car. When I gave the phone only, she asked to see, That captured her legs. True beautiful?'
+																	act 'View more':
+																		cls
+																		minut += 5
+																		gs'stat'
+																		'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr7.jpg"></center>'
+																		'- And this is our home.'
+																		act 'View more':
+																			cls
+																			minut += 5
+																			horny += 10
+																			gs'stat'
+																			'<center><img src="images/qwest/alter/Reks/Rex foto/Sister/fsr8.jpg"></center>'
+																			'- Oh ...! Pancake!!! How… - muttered Rex. Are you eyes wide open looking at the, a sister whose holding Rex-the member of the mouth! You do not have time to utter, how quickly flushed Rex flipped and put the phone. It is likely it was his penis, We think you. Otherwise, what so kipish. Rex immediately began to make excuses, supposedly does not know how this picture was in his phone, they say it is not his sister, thinking that you did not see.'
+																			act 'Further':
+																				cls
+																				minut += 5
+																				rex = 70
+																				gs'stat'
+																				'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
+																				dynamic $rexRep
+																				'You have a little laugh and change the subject. But the idea never left you ... and your opinion has changed dramatically to Rex.'
+																				'- All right, Rex, I have to go. - He escorts you to the house, you tell him - Thank you for the dress and see you soon.'
+																				act 'Escape':gt'gorodok'
+																			end
+																		end
+																	end
+																end
+															end
+														end
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'avto':
+	cls
+	rexCar = 0
+	rexSisTalk += 1
+	minut += 5
+	rex += 1
+	gs'stat'
+	'<center><img src="images/qwest/alter/Reks/skoda.jpg"></center>'
+	'You got a new foreign car and drove to skate. As far without rights Rex could not leave, And besides, for it was evident, he was screwy, - Rex paused in the village overlooking the lake.
+He took the back seat 2 liters of beer and offered to you.'
+	$rexstory = {
+		'Rex already pretty drunk.
+- Light, I would like to share with you something ... what is important for me to tell you things as they are. I hope you hear me to the end ...
+Generally, what you saw on my phone ... Yes ... this is my sister ... It happened, that ... Well ...
+Forgive me for such candor. So we had fun! Furthermore, it happened more than once, and more. Once pulled me to take a picture, and Diana was not even against, thought, that I have a factory and continued to suck. Sometimes I took the phone back in his hands and fotkal. I told her, and I delete everything that she believed me.
+Understand, Light ... I have a weakness for women`s legs ... is, that I was strong winds! And when she had a male member Slyunkov flow. And we both adore oral sex! I guess this is our family ... In general as-then it happened, we understand each other. You do not think, We did not have sex with her particular! Only oral!'
+		act 'Further':
+			cls
+			minut += 10
+			horny += 5
+			gs'stat'
+			'<center><img src="images/qwest/alter/Reks/utrmin.jpg"></center>'
+			'- As that time came the night Diana vypivshaya, although it was already almost in the morning. I slept on a folding chair and blanket I slept, that night I had a terrible riser, and we spent the night at the moment in the hall during the repairs in the bedroom. A dream feel, I`m sorry, what-something wrong ... I opened my eyes, and there ... I play Diana member! I quickly closed my eyes, He is lying and trying to understand whether it is a dream or reality? Of course, she already knew, I woke up, But do not stop, continuing to slowly suck.'
+			act 'Continue to listen':
+				cls
+				minut += 10
+				horny += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/minrex.gif"></center>'
+				'- Soon, I finally woke up, and even that was not going to-or take. I just lay there and enjoyed the full, as my older sister sucks me! Before that I did not have to feel like, before me nobody was doing blowjob.'
+				act 'Further':
+					cls
+					minut += 10
+					horny += 5
+					gs'stat'
+					'<center><img src="images/qwest/alter/Reks/minrex2.gif"></center>'
+					'- I could not hold back a long time, considering how long I have not finished. But she sucked slowly, how-if she knew, so my long enough. It took another quite a bit, and my penis has become streams fill her mouth with sperm! She did not even twitched, swallowing everything to the last drop. Then gently closed her not yet fully fallen member of cowards, I lay down on his bed, and after a long time not sniffed.
+I tossed and turned for another hour in the chair, a long time could not sleep thinking about what happened ...'
+					act 'Further':
+						cls
+						minut += 10
+						horny += 5
+						gs'stat'
+						'- During the whole of the next day she avoided meeting with me. In the evening, it is as if nothing has come an unprecedented, I sat on the couch and watched TV with me, from time to time commenting on what is happening on the screen. 
+A few days later it happens again, only this time it was different, it was more untied and I just helped her relax, received from it a lot of fun. After the second time we have found the courage to discuss what is happening between us. Then I learned about her weaknesses, and talked about his. I justified this by saying, that it is better to let them blow off steam with me, what with all the running ...'
+						act 'Further':
+							cls
+							minut += 30
+							if horny < 95: horny = 95
+							gs'stat'
+							'<center><img src="images/qwest/alter/Reks/rudivl.jpg"></center>'
+							'You sat in silence and listened to the words Rex surprised the details, Now knowing why he seemed so strange. But he loved you terribly. 
+Rex stared at you waiting for your words. 
+-Light, all right?
+After seconds 5 after the question you gather your thoughts. The first thing that you come up with it:
+- Kick-Ass ...! I do not even know what to say ... - On the face you have a mixture of astonishment, with a smile.
+- Answer least, Will we see you even after this conversation, or be me now dynamite? - Desperate said Rex, It is almost certain, that the issue was more rhetorical.  
+- Billeting, that is, you have more pictures of this plan? Kick ... Well ... I personally anything so I can not boast. Yet… - You joke cheering Egor.
+Rex relaxed slightly, laughing at your joke ambiguous, he understood, that not everything is so sad, as it seemed. Smoothly peretёk your conversation in a different direction. You have sat in, Rex drank beer dvushku, throwing the empty bottle through the window asked,: 
+- Well, Light, go?
+- Not, not, I do not ... you will not go drunk, went better spend my foot, not so far away and I go ...
+Rex parked on signalization and you moved to the side of the house, Rex was staggering and close to everything you hesitate to take the handle, the whole way of thinking are you now about it Opinion.
+With wet shorts from overstimulation, going home, you squandered your conversation in his head in the car and thought ... What the hell, I blurted out there ... «yet»What the ... «yet»?... I wonder what he thought ...
+Soon you come to the house, exchanged a few words, We said goodbye and parted.'
+							act 'Home':gt'gorodok'
+						end
+					end
+				end
+			end
+		end
+	}
+	if dom > 5:
+		act 'Takeout':
+			cls
+			minut += 20
+			rex -= 2
+			gs'stat'
+			'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
+			'You`re quite a long time sitting and waiting until already been screwy Rex, drink most of the beer.'
+			dynamic $rexstory
+		end
+	end
+	act 'Agree':
+		cls
+		minut += 15
+		alko += 2
+		rex += 2
+		gs'stat'
+		'<center><img src="images/qwest/alter/Reks/Rex.jpg"></center>'
+		'You sit for a long time by drinking bitter beer from the bottle not gulps, unlike Rex who already was screwy, most of the beer sucked it.'
+		dynamic $rexstory
+	end
+end
+
+if $ARGS[0] = 'avto2':
+	cls
+	rexCar = 0
+	rexCarCount += 1
+	minut += 30
+	rex += 1
+	gs'stat'
+	'<center><img src="images/qwest/alter/Reks/CarRex1.jpg"></center>'
+
+	$rexCarEnd = {
+		''
+		'You enough knurled, You had fun, but it is time to home.'
+		act 'Home':gt'gorodok'
+	}
+
+	if rexCarCount <= 5:
+		rexTalk = rand(1,4)
+		if rexTalk = 1:'You ride with Rex, He says, he finally managed to pass on the right, and now the father sometimes lets him take the car. '
+		if rexTalk = 2:'You ride with Rex, he tells various funny stories.'
+		if rexTalk = 3:'You ride with Rex, He recalls how drunk at a party in honor of his birthday.'
+		if rexTalk = 4:'You ride with Rex, he shares his dreams, want when-some open their own studio.'
+		minut += 30
+		gs'stat'
+		dynamic $rexCarEnd
+	elseif rexCarCount > 5 and rexCarCount <= 8:
+		'You ride with Rex, during a conversation he takes you by the hand.'
+		act 'Leave':
+			cls
+			horny += 10
+			minut += 30
+			rex += 1
+			gs'stat'
+			'<center><img src="images/qwest/alter/Reks/CarRex2.jpg"></center>'
+			'Rex hold your hand surprised that you do not mind, on it was evident, that he was a little nervous.'
+			dynamic $rexCarEnd
+		end
+		if dom >= 5:
+			act 'Remove the arm':
+				cls
+				minut += 30
+				rexCarCount -= 1
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/CarRex4.jpg"></center>'
+				'You removed the arm, Rex Smer breath and you continue the conversation.'
+				dynamic $rexCarEnd
+			end
+		end
+	elseif rexCarCount = 9:
+		'You ride with Rex, during the conversation, he puts his hand on your knee.'
+		if dom >= 5:
+			act 'Remove the arm':
+				cls
+				minut += 30
+				rexCarCount -= 1
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/CarRex4.jpg"></center>'
+				'You removed the arm, Rex Smer breath and you continue the conversation.'
+				dynamic $rexCarEnd
+			end
+		end
+		act 'Leave':
+			cls
+			horny += 10
+			minut += 10
+			rex += 1
+			gs'stat'
+			'<center><img src="images/qwest/alter/Reks/CarRex3.jpg"></center>'
+			'Rex kept his hand on your leg just above the knee, you continued to talk.'
+			if dom >= 5:
+				act 'Remove the arm':
+					cls
+					minut += 20
+					rexCarCount -= 1
+					gs'stat'
+					'<center><img src="images/qwest/alter/Reks/CarRex4.jpg"></center>'
+					'You removed the arm, Rex Smer breath and you continue the conversation.'
+					dynamic $rexCarEnd
+				end
+			end
+			act 'Further':
+				cls
+				horny += 10
+				minut += 10
+				rex += 1
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/CarRex5.jpg"></center>'
+				'During the conversation, he seemed to casually raised his hand higher and higher.'
+				if dom >= 5:
+					act 'Remove the arm':
+						cls
+						minut += 10
+						rexCarCount -= 1
+						gs'stat'
+						'<center><img src="images/qwest/alter/Reks/CarRex6.jpg"></center>'
+						'You removed the arm, Rex Smer breath and you continue the conversation.'
+						dynamic $rexCarEnd
+					end
+				end
+				act 'Further':
+					cls
+					horny += 10
+					minut += 10
+					rex += 1
+					gs'stat'
+					'<center><img src="images/qwest/alter/Reks/CarRex8.jpg"></center>'
+					'Rex had crept close enough to your panties, His hand almost touches them. You are very excited and did not want, that he would have stayed, but you`re still a little afraid of him strangely and put her hand on his, implying, that you do not want, he continued to.
+Apparently Rex could not resist and touched your recording through panties.'
+					act 'Stop':
+						cls
+						horny += 10
+						minut += 10
+						rex -= 5
+						gs'stat'
+						'<center><img src="images/qwest/alter/Reks/CarRex9.jpg"></center>'
+						'You abruptly put his hand between her legs, without giving him the opportunity to continue. All overexcited Rex forced himself to remove his hand with your foot.
+You talked for a long time, Rex talked a lot about his sister, misses her. He speaks, that before she even pictures sent out over the weekend and came, now very rare ...
+Rex says:
+- Light, I am sorry that you do not have your phone, so I would have corresponded with you sometimes. 
+- It`s a pity ... Sis on 18 years, presented a smartphone, I usually give money, which is not enough for a normal phone, a push-button or want to buy a balalaika, me enough ... the way home at night she sleeps like a marmot, so I would like to wish you good night with her phone, - you smile.
+- Will be awesome! - happily said Rex.'
+						dynamic $rexCarEnd
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'sms':
+	cls
+	minut += 10
+	rex += 1
+	rexSmsDay = daystart
+	gs'stat'
+	'<center><img src="images/qwest/alter/Reks/SmartSist.jpg"></center>'
+	if horny < 50:
+		'You have an inexpensive smartphone sisters and wrote sms Rex.
+"Good night, sweeties!"'
+		act 'Put the phone down':gt'bedrPar'
+	elseif horny >= 50 and smsForRex < 4:
+		'You have a cheap smartphone and sister decided to make Wrexham. You came up with the idea a bit strange: take a picture of their feet and send it to the wishes of Rex.'
+		$smsEnd = {
+			act 'To send':
+				cls
+				minut += 5
+				rex += 1
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmartSist.jpg"></center>'
+				'In contacts with her sister you found a phone number and send the message Wrexham. Came report, that mms delivered. A little later, You have gathered to return the phone to place and go to sleep, as here comes the answer.'
+				act 'See':
+					minut += 5
+					gs'stat'
+					''
+					'Thank you, my sweetheart, you have no idea how I am pleased :*.'
+					act 'Put the phone down':gt'bedrPar'
+				end
+			end
+		}
+		smsForRex += 1
+		if smsForRex = 1:
+			act 'Photography':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex1.jpg"></center>'
+				'You bared her legs to his shorts and took a shot.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 2:
+			act 'Photos in stockings':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex2.jpg"></center>'
+				'You decide to try on sexy stockings and sisters made them a picture.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 3:
+			act 'Photos with the inscription':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex3.jpg"></center>'
+				'You decide to write a wish on his leg good night and take a picture.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 4:
+			act 'Photos in stockings':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex4.jpg"></center>'
+				'You decide to try on sexy stockings and sisters made them a picture.'
+				dynamic $smsEnd
+			end
+		end
+	elseif horny >= 50 and smsForRex >= 4 and smsForRex < 13:
+		'You have an inexpensive smartphone sister. After writing a message, you decide to take the picture again, but this time you wanted more.'
+		$smsEnd = {
+			act 'To send':
+				cls
+				minut += 5
+				rex += 1
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmartSist.jpg"></center>'
+				'You sent a message with a photo. Through 5 minutes from the Rex comes the answer.
+Baby you`re super:*!!! I want more of these pictures!!!'
+				act 'Put the phone down':gt'bedrPar'
+			end
+		}
+		smsForRex += 1
+		horny += 5
+		if smsForRex = 5:
+			act 'Photography':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex5.jpg"></center>'
+				'You took off the robe and sfotkalis at the mirror in his underwear.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 6:
+			act 'Photography 2':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex6.jpg"></center>'
+				'You took off the robe and sfotkalis at the mirror in his underwear.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 7:
+			act 'Photography 3':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex7.jpg"></center>'
+				'You took off the robe and lowered a little panties sfotkalis the mirror.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 8:
+			act 'Photography 4':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex8.jpg"></center>'
+				'You took off the robe, dressed sexy sister stockings, We took a pose in the mirror and took a shot.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 9:
+			act 'Photography 5':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex9.jpg"></center>'
+				'You took off the robe and stood in a pose in the mirror a little raised the topic, that allows you to see part of a bare breast.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 10:
+			act 'Photography 6':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex10.jpg"></center>'
+				'You took off the robe, They lay on the bed and took a shot in stockings.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 11:
+			act 'Photography 7':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex11.jpg"></center>'
+				'You stood at the mirror and took a shot in shorts and T-shirt.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 12:
+			act 'Photography 8':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex12.jpg"></center>'
+				'You stood at the mirror in panties, They lifted the shirt up to your chest and navel sfotkali.'
+				dynamic $smsEnd
+			end
+		elseif smsForRex = 13:
+			act 'Photography 9':
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/Reks/SmsRex13.jpg"></center>'
+				'You are in underwear and stockings took seductive pose and took a shot.'
+				act 'To send':
+					cls
+					minut += 5
+					rex += 1
+					horny += 5
+					gs'stat'
+					'<center><img src="images/qwest/alter/Reks/SmsRex14.jpg"></center>'
+					'You sent a message with a photo. Through 5 minutes from the Rex comes mms.'
+					'- Ohrenet!!! - It snatches you by surprise. You widely hatched eye, watching the picture is quite large member! 
+Had he guessed to send me a picture of his penis? I am looking for a member of the Rex you more and more excited.'
+					act 'Answer':
+						cls
+						minut += 5
+						rex += 1
+						horny += 5
+						gs'stat'
+						'<center><img src="images/qwest/alter/Reks/SmsRex17.jpg"></center>'
+						'You lay on your back at the mirror, lifting legs and moving toward panties, a snapshot of its current pussy, and then sent it to Rex.'
+						act 'Wait':
+							cls
+							minut += 10
+							rex += 1
+							horny += 15
+							gs'stat'
+							'<center><img src="images/qwest/alter/Reks/SmsRex18.jpg"></center>'
+							'You`ve been waiting for an answer, and decided, Rex that you do not send anything, you`re just about to put the phone into place, they saw a new mms. You ofigeli by what he saw! Rex took a picture of its member ends. Here you thoroughly flowed.'
+							if horny >= 100:
+								act 'Masturbate':
+									cls
+									minut += 10
+									rex += 1
+									horny = 0
+									orgasm += 1
+									horny = 0
+									manna = mannamax
+									gs'stat'
+									'<center><img src="images/qwest/alter/Reks/SmsRex15.jpg"></center>'
+									'You can not hold back and looking at the phone began to masturbate, until he finally exploded with orgasm.'
+									act 'Answer':
+										cls
+										minut += 10
+										rex += 10
+										gs'stat'
+										'<center><img src="images/qwest/alter/Reks/SmsRex16.jpg"></center>'
+										'You have made a picture of its current pussy after orgasm and sent Rex. A minute later, Rex sent a sms with words «You are super!!!».
+You do not have to answer, and wait a bit longer to make sure that Rex will not send you anything, sister returned phone in place.'
+										act 'Put the phone down':gt'bedrPar'
+									end
+									act 'Do not answer':
+										'You do not have to answer, and after waiting a short convinced, Rex is more than anything you will not send, sister returned phone in place.'
+										act 'Put the phone down':gt'bedrPar'
+									end
+								end
+							else
+								act 'Put the phone down':gt'bedrPar'
+							end
+						end
+					end
+					act 'Put the phone down':gt'bedrPar'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'party':
+	cls
+	minut += 5
+	gs'stat'
+	'<center><b><font color = maroon>Rex</font></b></center>'
+	'<center><img src="images/qwest/alter/sisterQW/ReksHome/Reks.jpg"></center>'
+	'High athletic guy, whom everyone calls Rex.'
+	act 'Move away':gt'sbReksHome','party_home'
+end
+--- reks ---------------------------------
+

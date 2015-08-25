@@ -1,0 +1,428 @@
+# gKristinaZv
+gs'stat'
+
+'After the physical training you went to the locker room with the other girls. In the shower Christine immediately came up to you in front of the other classmates.'
+
+if zverhumiliation = 0:randhumiliation = 0
+if zverhumiliation = 1:randhumiliation = RAND(0,1)
+if zverhumiliation = 2:randhumiliation = RAND(0,2)
+if zverhumiliation = 3:randhumiliation = RAND(0,3)
+if zverhumiliation = 4:randhumiliation = RAND(0,4)
+if zverhumiliation = 5:randhumiliation = RAND(0,5)
+if zverhumiliation = 6:randhumiliation = RAND(0,6)
+if zverhumiliation = 7:randhumiliation = RAND(0,7)
+if zverhumiliation = 8:randhumiliation = RAND(0,8)
+if zverhumiliation = 9:randhumiliation = RAND(0,9)
+if zverhumiliation = 10:randhumiliation = RAND(0,10)
+if zverhumiliation = 11:randhumiliation = RAND(0,11)
+if zverhumiliation = 12:randhumiliation = RAND(0,12)
+if zverhumiliation = 13:randhumiliation = RAND(0,13)
+if zverhumiliation = 14:randhumiliation = RAND(0,14)
+if zverhumiliation = 15:randhumiliation = RAND(0,15)
+if zverhumiliation >= 16:randhumiliation = RAND(0,16)
+
+if randhumiliation = 0:
+	' - Well, sheep, you`re here pizdela about me, I vaflersha, so I brought you a present.'
+	'Christina pulled out of his bag on the suction cup dildo, then with chpok sticked to the wall at the groin and angrily added:'
+	' - Well, Svetik, starts sucking or forgiveness, can, do you want, that I once broke your fucking mouth, ragged sheep?!'
+
+	act 'Suck dildo':
+		cls
+		if zverhumiliation < 6:zverhumiliation += 1
+		dilbj += 1
+		sub += 1
+		minut += RAND(5,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj.jpg"></center>'
+		'You sit down in front of a dildo, sticky sucker to the wall, and began to suck in front of the girls in her class. After a while Kristina, laughing, allowing you to stop and change.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 1:
+	' - Well, sheep, you`re the type of girl sports, I think, You should be a little pump.'
+	'Christina pulled out of his bag and dildo with chpok sticked it to the floor, adding:'
+	' - Well, Svetik, emphasis lying to accept and start sucking, wrung!'
+
+	act 'Suck dildo':
+		cls
+		if zverhumiliation < 6:zverhumiliation += 1
+		dilbj += 1
+		sub += 1
+		minut += RAND(5,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj2.jpg"></center>'
+		'You took the emphasis lying lips and clasped dildo, and then began to do push-ups, allowing the dildo to penetrate deeper into your mouth. After a while Kristina, laughing, allowing you to stop and change.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 2:
+	' - Well, sheep, it`s time for the next suction.'
+	'Christina pulled out of his bag and dildo with chpok sticked it to the floor, maliciously added:'
+	' - Well, Svetik, start practicing!'
+
+	act 'Suck dildo':
+		cls
+		if zverhumiliation < 6:zverhumiliation += 1
+		dilbj += 1
+		sub += 1
+		minut += RAND(5,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj3.jpg"></center>'
+		'You sit down in front of a dildo and bending low, We started sucking dildo in front of classmates. After a while Kristina, laughing, allowing you to stop and change.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 3:
+	' - Well, sheep, I decided to do a bit of your development.'
+	'Christina pulled from his bag three dildos and cleaves them to the mirror at the level of the groin, with a malicious grin added:'
+	' - Well, Svetik, come on, Practitioners!'
+
+	act 'Suck dildo':
+		cls
+		if zverhumiliation < 6:zverhumiliation += 1
+		dilbj += 1
+		sub += 1
+		minut += RAND(5,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj4.jpg"></center>'
+		'You sit down in front of a dildo and began to suck, while the other two arms nadrachivaya. After a while, Christina finally allows you to stop and change.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 4:
+	' - Well, sheep, I decided to do a bit of your development.'
+	'Christina pulled out of his bag and dildo sticked it straight to the mirror in the dressing room, with an evil laugh, adding:'
+	' - This, you to see your face, when you swallow, shallow slut!'
+
+	act 'Suck dildo':
+		cls
+		if zverhumiliation < 6:zverhumiliation += 1
+		dilbj += 1
+		sub += 1
+		minut += RAND(5,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj5.jpg"></center>'
+		'You sit down in front of a dildo and began to suck, wherein the on-demand Christina, I am looking at myself in the eye. After some time, she finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end	
+elseif randhumiliation = 5:
+	' - Okay, bitch, Now on, Keep your dick and starts to suck!'
+	'Christina gives you a dildo and the laughter of the other girls looking at you expectantly.'
+
+	act 'Suck':
+		cls
+		if zverhumiliation < 6:zverhumiliation += 1
+		dilbj += 1
+		sub += 1
+		minut += RAND(5,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj6.jpg"></center>'
+		'You both were, and you begin to suck, crawl lips tightly on the rubber member. After a while, Christina finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 6:
+	cls
+	'<center><img src="images/qwest/alter/zver/dildobj7.jpg"></center>'
+	'In the locker room before the rest of the girls to you suits Kristina:'
+	' - So, bitch, today I have something-any plans for you, so let`s, shows her smelly pussy'
+	'You obediently sit on the floor and pushes the sponge, Christine showing your vagina.'
+	act 'Further':
+		cls
+		sub += 1
+		minut += RAND(2,5)
+		gs 'stat'
+		if vagina = 0:
+			cls
+			if anus < 15:
+				anus += 1
+				if anus < 5:agape = 1
+				minut += RAND(5,10)
+				horny = RAND(20,40)
+				gs 'stat'
+				'<center><img src="images/qwest/alter/zver/dildobj9.jpg"></center>'
+				' - Virgin, - angrily stretches Christina. - Well, Let us then your ass, will improve your qualifications.'
+				'She gives you a dildo.'
+				'But dildo is too great for your butt, so you have to fuck her fingers. Christine while unhappy watching you, after which finally allows you to get dressed and go.'
+			elseif anus >= 15 and anus < 25:
+				anus += 1
+				if anus < 20:agape = 2
+				if anus >= 20:agape = 1
+				minut += RAND(5,10)
+				horny = RAND(30,50)
+				gs 'stat'
+				'<center><img src="images/qwest/alter/zver/dildobj10.jpg"></center>'
+				' - Virgin, - angrily stretches Christina. - Well, Let us then your ass, will improve your qualifications.'
+				'She gives you a dildo.'
+				'You catch a dildo and starts fucking her in the ass to them. Christine while indifferently watching you, after which finally allows you to get dressed and go.'
+			elseif anus >= 25:
+				horny = RAND(50,75)
+				gs 'stat'
+				'<center><img src="images/qwest/alter/zver/dildobj11.jpg"></center>'
+				' - Virgin, - angrily stretches Christina. - Well, Let us then your ass, will improve your qualifications.'
+				'She gives you a dildo.'
+				'Christine minute looking at you, and then requires the return of the dildo and the words: "For the broken-ass it is too small!" He tells you to fuck yourself in the ass hand. You dutifully obey and begin to fulfill her claim.It is some time indifferently watching you, after which finally allows you to get dressed and go.'
+			end
+			act 'Escape':gt'gschool'
+		else
+			if zverhumiliation < 7:zverhumiliation += 1
+			vagina += 1
+			if vagina < 10:vgape = 2 & horny = RAND(5,15)
+			if vagina >= 10 and vagina < 15:vgape = 1 & horny = RAND(25,35)
+			if vagina >= 15:horny = RAND(40,75)
+			minut += RAND(5,10)
+			gs 'stat'
+			'<center><img src="images/qwest/alter/zver/dildobj12.jpg"></center>'
+			'You obediently sit on the floor and pushes the sponge, Christine showing your vagina.'
+			' - Fine, - she says, - then begins to work his hole! - and co chpok cleave dildo on the floor.'
+			'You climb on him and under the gaze of Christina begin to crawl over it her pussy.'
+			if horny >= 100:
+				nippain = 1
+				horny -= RAND(15,40)
+				dom += 1
+				gs 'stat'
+				'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+			end
+			'It is a time of satisfaction watching you, after which finally allows you to get dressed and go.'
+			act 'Escape':gt'gschool'
+		end
+	end
+elseif randhumiliation = 7 and vagina > 0:
+	' - Come on, Jump in, - Christina tells you in the shower, clinging to the wall dildo dildo at the level of the groin.'
+
+	act 'Jump on':
+		cls
+		if zverhumiliation < 14:zverhumiliation += 1
+		sub += 1
+		if vagina < 10:vgape = 2 & horny = RAND(5,15)
+		if vagina >= 10 and vagina < 15:vgape = 1 & horny = RAND(25,35)
+		if vagina >= 15:horny = RAND(40,75)
+		minut += RAND(10,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj13.jpg"></center>'
+		'You turn to the dildo and bent over backwards, strung him her pussy.'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,40)
+			dom += 1
+			gs 'stat'
+			'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while watching you, after which finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 8 and vagina > 0:
+	' - Come on, sheep, jumps on his favorite rubber Huey, - evil laughs you Christina, dildo sticked to the floor.'
+
+	act 'Jump on':
+		cls
+		if zverhumiliation < 14:zverhumiliation += 1
+		sub += 1
+		if vagina < 10:vgape = 2 & horny = RAND(5,15)
+		if vagina >= 10 and vagina < 15:vgape = 1 & horny = RAND(25,35)
+		if vagina >= 15:horny = RAND(40,75)
+		minut += RAND(10,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj14.jpg"></center>'
+		'You, parted wider legs, squatting over the dildo and start to jump on it.'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,40)
+			dom += 1
+			gs 'stat'
+			'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while watching you, after which finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 9 and vagina > 0:
+	' - Come on, sheep, begins to work his horny pussy, - Christina tells you, dildo sticked to the floor.'
+
+	act 'Work':
+		cls
+		if zverhumiliation < 14:zverhumiliation += 1
+		sub += 1
+		if vagina < 10:vgape = 2 & horny = RAND(5,15)
+		if vagina >= 10 and vagina < 15:vgape = 1 & horny = RAND(25,35)
+		if vagina >= 15:horny = RAND(40,75)
+		minut += RAND(10,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj15.jpg"></center>'
+		'You, raised his leg higher, pussy start to sit down on the rubber member'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,40)
+			dom += 1
+			gs 'stat'
+			'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while watching you, after which finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 10 and vagina > 0:
+	' - Come on, sheep, begins to work his horny pussy, - Christina tells you, dildo sticked to the floor.'
+
+	act 'Work':
+		cls
+		if zverhumiliation < 14:zverhumiliation += 1
+		sub += 1
+		if vagina < 10:vgape = 2 & horny = RAND(5,15)
+		if vagina >= 10 and vagina < 15:vgape = 1 & horny = RAND(25,35)
+		if vagina >= 15:horny = RAND(40,75)
+		minut += RAND(10,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj16.jpg"></center>'
+		'You, parted wider legs, sit on a dildo and start to jump on it.'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,40)
+			dom += 1
+			gs 'stat'
+			'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while watching you, after which finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 11 and vagina > 0:
+	' - Today, I forgot your favorite member, - Christina tells you, pulling a comb out of her handbag. - Therefore here, Today this oboydeshsya.'
+
+	act 'Take a comb':
+		cls
+		if zverhumiliation < 14:zverhumiliation += 1
+		sub += 1
+		if vagina < 10:horny = RAND(40,60)
+		if vagina >= 10 and vagina < 15:horny = RAND(30,50)
+		if vagina >= 15:horny = RAND(20,40)
+		minut += RAND(10,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj17.jpg"></center>'
+		'You dutifully takes a comb and legs spread, You start fucking it yourself.'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,40)
+			dom += 1
+			gs 'stat'
+			'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while watching you, and then takes a comb and wiped it on your clothes, finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 12 and vagina > 0:
+	' - Today, I forgot your favorite member, - Christina tells you. - So today you will work hand.'
+
+	act 'Working hand':
+		cls
+		if zverhumiliation < 14:zverhumiliation += 1
+		sub += 1
+		if vagina < 10:vgape = 1 & horny = RAND(50,70)
+		if vagina >= 10 and vagina < 15:horny = RAND(40,60)
+		if vagina >= 15:horny = RAND(30,50)
+		minut += RAND(10,15)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj18.jpg"></center>'
+		'You tuck your fingers one by one their pussy, Christina is not telling you "Stop". You dutifully stop and start fucking yourself with your fingers.'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,30)
+			dom += 1
+			gs 'stat'
+			'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while watching you, after which finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 13 and vagina > 0:
+	' - Today get along without their favorite member, - Christina tells you. - Come on, I have little time, therefore puts his hand in his stinking hole and starts moaning!'
+
+	act 'Shove':
+		cls
+		if zverhumiliation < 14:zverhumiliation += 1
+		sub += 1
+		if vagina < 10:vgape = 3 & horny = RAND(10,20)
+		if vagina >= 10 and vagina < 15:vgape = 2 & horny = RAND(30,50)
+		if vagina >= 15:vgape = 1 & horny = RAND(50,75)
+		minut += RAND(15,20)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj19,'+rand(0,1)+'.jpg"></center>'
+		'You are currently puts his hand in the pussy and by order of Christine start a fuck.'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,30)
+			dom += 1
+			gs 'stat'
+			'You just reach an orgasm, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while watching you, after which finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end
+elseif randhumiliation = 14:
+	' - Well, sheep, - Christina tells you. - Today you will work tab!'
+
+	act 'Work tongue':
+		cls
+		if zverhumiliation < 20:zverhumiliation += 1
+		sub += 1
+		horny = RAND(10,20)
+		minut += RAND(15,20)
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj20,'+rand(0,1)+'.jpg"></center>'
+		'You descend upon the request of Christine in front of her and start to lick her vagina, yet do not lead to orgasm.'
+		if horny >= 100:
+			nippain = 1
+			horny -= RAND(15,30)
+			dom += 1
+			gs 'stat'
+			'You, too, in the course of almost ends, but Christina painful tweak your nipples and the words: "Whores do not have to finish!" It does not give you finish.'
+		end
+		'Christine while blissfully watching, while you suck her pussy, after which finally allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end	
+elseif randhumiliation = 15:
+	' - Well, sheep, - Christina tells you. - On your knees and get ready!'
+
+	act 'On knees':
+		cls
+		if zverhumiliation < 30:zverhumiliation += 1
+		sub += 2
+		horny = 0
+		minut += 5
+		if mop > 1:mop = 0
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/zver/dildobj21.jpg"></center>'
+		'You will melt in the knees and at the request of Christine`s hands begin to capture streams of urine and bringing it to his mouth, quick drink..'
+		'Christina for some time continued to pee in your palm, until finally the stream does not dry out, after which it allows you to get dressed and go.'
+
+		act 'Escape':gt'gschool'
+	end	
+	
+elseif randhumiliation = 16:
+	' - Okay, sheep, I`m busy today, so rest, - disdainfully told you Christina and ordered failing.'
+
+	act 'Escape':gt'gschool'
+end
+--- gKristinaZv ---------------------------------
+

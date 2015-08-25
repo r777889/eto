@@ -1,0 +1,19 @@
+# roulette
+clr
+minut = minut + 10
+gs'stat'
+
+'<right><img src="images/casino/ruletka.jpg"></right>'
+'You came to the table with the American roulette.'
+
+act 'To approach the dealer':
+	gt'croupier'
+end
+act 'Play':
+	gt'amrul'
+end
+act 'Back to the lobby':
+	gt'hall'
+end
+--- roulette ---------------------------------
+

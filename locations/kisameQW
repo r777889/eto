@@ -1,0 +1,100 @@
+# kisameQW
+if $ARGS[0] = 'start':
+	cla
+	horny = horny + 20
+	clr
+	gs'stat'
+
+	'<center><img src="images/picQW/kisame1.jpg"></center>'
+	'You swim in the pool, Kisame underwater whirls constantly touching your body. He rips off your swimsuit and pushes you to the bottom of the pool.'
+	'Kisame plunges to you and pushing your feet.'
+
+	act 'Trying to push him away':
+		cla
+		*clr
+		horny = horny + 60
+		sweat = -3
+		manna = manna + 5
+		willpower = willpower + 5
+		clr
+		gs'stat'
+
+		'<center><img src="images/picQW/kisame2.jpg"></center>'
+		'Kisame despite your attempts to resist pushing your feet bites into your mouth piece, his tongue penetrates your vagina and caress you like. You feel on top of the world.'
+
+		act 'Submit':
+			cla
+			*clr
+			horny = horny + 60
+			sweat = -3
+			manna = manna + 5
+			willpower = willpower + 5
+			guy = guy + 1
+			sex = sex + 1
+			vagina = vagina + 1
+			if KisameSex = 0:KisameSex = 1 & guy = guy + 1
+			clr
+			gs'stat'
+
+			'<center><img src="images/picQW/kisame3.jpg"></center>'
+			'Kisame playing with you like a toy, He swims under you and skewer your pussy on his dick. You are both on the verge of orgasm and fainting from suffocation. You hear the voice of Kisame, you can breathe underwater. He rigidly fucks you in the pussy and you do not stand up and breathe in the water itself. Suddenly, instead of water in your lungs gets completely normal air.'
+			'Sighing you immediately covers orgasm, You bend in convulsions of pleasure. Kisame is also ends up in you.'
+
+			act 'Further':gt'kisameQW','after'
+		end
+		act 'Attack (Kisame magician10)':
+			cla
+			*clr
+			'<center><img src="images/picQW/kisameV.jpg"></center>'
+
+			horny = horny + 60
+			$nameV = 'Kisame'
+			!The stats
+			strenV = 300
+			speedV = 100
+			agilV = 100
+			reactV = 100
+			vitalV = 200
+			intelV = 100
+			willV = 50
+			!Skills
+			magikV = 10
+			boxingV = 100
+			shootV = 100
+			!Parameters
+			healthV = vitalV*10 + strenV*5
+			mannaV = intelV*magikV + magikV*100 + vitalV*10
+			willpowerV = willV*10
+			BonusAtakV = 0
+			BonusDefV = 0
+			!Action Programme
+			program = 5
+
+			kisamePic = 1
+			KisaFight = 1
+			klonV = 5
+			!defenceV = 10000
+			if spellavtoklon = 1:klon = 3
+			if spellbefshild = 1:defence = 500
+			gt'fight','start'
+
+			'You kicked in the face Kisame. He showed his teeth, and his appearance began to change, a moment later he was blue in the face with gills and sharks teeth. He hissed with a smile on his face "Want to play baby? Let`s play!"'
+
+			act 'Fight':gt'fight','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'after':
+	cla
+	horny = horny + 20
+	clr
+	gs'stat'
+
+	'<center><img src="images/picQW/kisameV.jpg"></center>'
+	'Kisame transformed lightning in a blue creature akulopodobnoe. He smiled and said, "Thanks babe." With that he slapped you on the ass, and went into the men`s locker room.'
+
+	act 'Find a swimsuit and go to the locker room':gt'bass','start'
+end
+--- kisameQW ---------------------------------
+

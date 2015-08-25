@@ -1,0 +1,122 @@
+# qwmeet
+$qwmeetdy = {
+	'The door opened and the driver of the car gave you a hand.'
+
+	act 'Leaning out of the car on the driver`s hand':
+		cls
+		minut += 3
+		gs'stat'
+
+		'<center><img src="images/qwest/kim/001.jpg"></center>'
+		'Coming out of the car you just now spotted the driver. He was a young man of Asian origin. He gave the impression of a confident guy and impudent smile at you.'
+		'Out of the car looked Vladimir "This is my driver, Fame. He will call in for you. While Svetulya, I`ll call you."'
+		'Asian smiled again and you shut the back door. Jumping into the driver`s seat he once again looked at you greedy, undressing eyes and slammed the door with a grin. The car skidded to immediately jumped up and flew away disappearing in the distance.'
+
+		act 'Going home':gt'street'
+	end
+}
+
+minut += 5
+vladimirQW = 25
+vladimirday = day
+gs'stat'
+
+'<center><b><font color = maroon>Vladimir</font></b></center>'
+'<center><img src="images/qwest/vladimir/001.jpg"></center>'
+'Once you`ve entered the door of the restaurant you went to Vladimir lush bouquet of roses. Hello World. Well, let`s go to a restaurant?'
+
+act 'Take the bouquet and go to a restaurant with Vladimir':
+	cla
+	minut += 3
+	gs'stat'
+
+	'You`re a little confused and took a bouquet of roses hand Vladimir and he took you by the elbow took you to a restaurant. He led you to a table where the table plate "Special order" and substituting your chair to sit invited.'
+
+	act 'Sit on a chair':
+		cla
+		minut += 3
+		gs'stat'
+
+		'The waiter brought the menu and you, Vladimir asked you not to hesitate and order whatever you want.'
+
+		act 'Make an order':
+			cla
+			minut += 3
+			gs'stat'
+
+			'You have made an order and the waiter taking the Delete. At the table there was an awkward pause. Vladimir paused and asked,. "Light whom you work?"'
+
+			if workrin = 1:
+				$qwvladwork = 'I work in the market.'
+			elseif young_shop_work = 1:
+				$qwvladwork = 'I work in a store.'
+			elseif workKafe > 0:
+				$qwvladwork = 'I work as a waitress in a cafe.'
+			else
+				$qwvladwork = 'By and large nothing.'
+			end
+
+			act '<<$qwvladwork>>':
+				cla
+				minut += 15
+				gs'stat'
+
+				'(You) - <<$qwvladwork>>'
+				'(Vladimir) - Clear. I know I am not a big desk, Own business. Buy Sell, In short.'
+				'At this time the waiter brought to the table order. After the plates were placed. Vladimir continued.'
+				'"I 40 years. Married, have a baby. My wife and I have a long time nothing in common and I am ready to divorce her anytime."'
+				'Vladimir poured into glasses of wine and offered a toast to the first acquaintance.'
+
+				act 'Drink':
+					cla
+					minut += 15
+					energy = 21
+					water = 21
+					gs'stat'
+
+					'You drank wine and started to dig in a salad fork. Vladimir said,. "Let`s move on to you, I hope you do not mind?" You shake your head confirming that you, too, this official communication style do not like.'
+					'Vladimir continued "In business law wolf. You can not stand still, we must constantly evolve. Now I open another business. So you could take on the job."'
+					'You chewed lettuce and looked at him. "We just met, but you do not know me at all."'
+					'Vladimir nodded "Yes, but you are special girl. Unique. I just feel it."'
+					'The restaurant began to play live music and Vladimir invited you to dance.'
+
+					act 'Dancing with Vladimir':
+						cla
+						minut += 15
+						gs'stat'
+
+						'Vladimir took you by the hand and led to the dance floor. There it you hard, He embraced and began to confidently lead in the dance. You feel like dancing your breasts pressed against his chest, Vladimir and his hot hands tightly holding your waist.'
+						'Soon the dance ended and Vladimir pododvinuv you a chair help you to sit down. You have continued to dine and converse. At this time, Vladimir did not address the serious and said he recently went to a ski resort.'
+						'After you ate and drank, Vladimir proposed to hold you to the house. He paid the waiter left a generous tip, and took you by the hand went with you from the restaurant.'
+
+						act 'Exit Restaurant':
+							cls
+							minut += 15
+							gs'stat'
+
+							'<center><img src="images/qwest/vladimir/car.jpg"></center>'
+							'The restaurant car was already prepared for you by Vladimir, it helped you to sit in the back seat and beating the car sat near you. The driver closed the door and sat behind the wheel. Without turning around, he asked where to go, and you called him your address.'
+							'You practically flew through the city streets at breakneck speed. The driver turned out to be a real ace, he deftly fit into corners and bypassed barely moving cars have never hit the brakes. Very quickly you come to your porch. Vladimir remarked sadly "I unfortunately need to make a couple of cases, so I`m in a hurry. I`ll call you tomorrow."'
+							'He leaned forward to you trying to kiss you.'
+
+							act 'Give a kiss on the cheek':
+								cla
+								'You cheek and gently kissed you, Vladimir.'
+
+								dynamic $qwmeetdy
+							end
+							act 'Kiss on the lips':
+								cla
+								'Vladimir kissed you on the lips. His strong and firm lips gently digging into your soft and tender lips.'
+
+								dynamic $qwmeetdy
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- qwmeet ---------------------------------
+

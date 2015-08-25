@@ -1,0 +1,70 @@
+# DanceWhore5
+minut += 5
+dick = RAND(16,30)
+gs'stat'
+
+'Three Caucasians took you to your room.'
+
+act 'To squat':
+	cls
+	bj += 3
+	guy += 3
+	gang += 1
+	sub += 1
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/dance/bjt.jpg"></center>'
+	'You sit down in front of guys and their members have hands. Few masturbate you licked the head of one of the members. Then you began to suck dick absorbing it into his mouth so much, how could masturbate and other members. You tried to lick and suck just three members.'
+
+	!tipdarand = RAND(0,1)
+	tipdarand = 0
+	if tipdarand = 0:
+		'Caucasians talking in an incomprehensible language to put you cancer.'
+
+		act 'Loosen the ass and suck':
+			cls
+			minut += 30
+			$boy = 'Customer'
+			cumanus += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/dance/f.jpg"></center>'
+			'You suck two members of absorbing them as deeply as possible into his mouth.'
+
+			dynamic $sexstart
+			dynamic $analsex
+
+			act 'Further':
+				cls
+
+				tipdarand = RAND(0,1)
+				if tipdarand = 0:
+					cumface += 2
+					facial += 1
+					minut += 10
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/dance/facialt.jpg"></center>'
+					'You close your eyes and feel like you hit in the face and warm jet of sperm flowed down. Then the next jet hit you in the face. Then another and another. Finally, a member has ceased to finish. Second Caucasian, too, began to discharge your face covering his sperm.'
+				elseif tipdarand = 1:
+					cumlip += 2
+					swallow += 1
+					minut += 10
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/dance/swallowt.jpg"></center>'
+					'You knelt and willingly opened her mouth. Caucasians began to stop you in filling the open mouth of his sperm. When the flow of sperm stopped and turned your mouth is filled to the brim with sperm, you swallow.'
+				end
+
+				dynamic $din_go_to_home_dance
+			end
+		end
+	end
+!	if tipdarand = 1:
+!	end
+!	if tipdarand = 2:
+!	end
+end
+--- DanceWhore5 ---------------------------------
+

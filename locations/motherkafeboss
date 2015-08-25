@@ -1,0 +1,8 @@
+# motherkafeboss
+gs'stat'
+
+'The owner of a cafe famous for its high and thin man in his forties.'
+
+act 'Move away':gt $loc, $metka
+--- motherkafeboss ---------------------------------
+

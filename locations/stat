@@ -1,0 +1,1471 @@
+# stat
+clr
+view
+
+gs'dinSex2'
+rand1=rand(0,100)
+if poSkill>1000:poSkill=1000
+if nippain = 2:
+	if nippainday+5 < daystart:
+		$nippain = 'You greatly sore nipples.'
+		nippain = 1
+		nippainday = daystart
+	elseif nippainday+5 >= daystart:
+		$nippain = 'You greatly sore nipples.'
+	end
+elseif nippain = 1:
+	if nippainday+5 < daystart:
+		$nippain = ''
+		nippain = 0
+	elseif nippainday+5 >= daystart:
+		$nippain = 'You have a little bit sore nipples.'
+	end
+end
+
+if painpub = 2:
+	if painpubday+5 < daystart:
+		$painpub = 'You greatly sore vagina.'
+		painpub = 1
+		painpubday = daystart
+	elseif painpubday+5 >= daystart:
+		$painpub = 'You greatly sore vagina.'
+	end
+elseif painpub = 1:
+	if painpubday+5 < daystart:
+		$painpub = ''
+		painpub = 0
+		painpubday = daystart
+	elseif painpubday+5 >= daystart:
+		$painpub = 'You have a little sore vagina.'
+	end
+end
+
+if year = 2011 and katjaPreg = 0 and month >= 2:katjaPreg = 1
+
+if analplay >= 2 and anus <= 10:anus += 1 & analplay = 0
+if analplay >= 4 and anus <= 15:anus += 1 & analplay = 0
+if analplay >= 8 and anus <= 20:anus += 1 & analplay = 0
+
+musle[1] = musle
+flex[1] = agil
+stamina[1] = vital*3
+wipo[1] = will
+intel[1] = intel
+krasota[1] = vnesh
+rost[1] = rost
+salo[1] = salo
+fat[1] = fat
+Bteh[1] = bteh
+Uteh[1] = uteh
+Zteh[1] = zteh
+!flex[0] = agil
+!stamina[0] = vital*3
+!krasota[0] = vnesh
+!wipo[0] = will
+
+if nopornowrestling = 0:
+	nopornowrestling = 1
+	NPCnum = 30
+	NPCnow = 1
+	!shag = 1
+	gs'npc'
+	NoView = 1
+	NPCrost = 30
+	gs'generation'
+	NoView = 1
+	NPCrost = 30
+	gs'generation'
+	NoView = 1
+	NPCrost = 30
+	gs'generation'
+	NoView = 1
+	NPCrost = 30
+	gs'generation'
+	NoView = 1
+	NPCrost = 30
+	gs'generation'
+
+	$nikname[1] = 'Schoolgirl'
+	!musle[0] = 100
+	!flex[0] = agil
+	!stamina[0] = vital*3
+	!wipo[0] = will
+	!intel[0] = 10
+	!krasota[0] = vnesh
+	!rost[0] = 165
+	!salo[0] = 100
+	!fat[0] = 100
+
+	!$nikname[1] = 'Steel Virgo'
+	!musle[1] = 100
+	!flex[1] = 100
+	!stamina[1] = 300
+	!wipo[1] = 50
+	!intel[1] = 10
+	!krasota[1] = 10
+	!rost[1] = 165
+	!salo[1] = 100
+	!fat[1] = 100
+end
+
+if newclo[131] = 1 and SchoolAtestat = 1 or newclo[131] = 1 and SchoolBlock = 1:newclo[131] = 0
+
+!!!CHEATS!!!
+if cheatWork = 1:work = 0
+if cheatWorkKiskis = 1:young_shop_miss = 0
+if cheatHapri = 1:hapri = 1
+if cheatKlisma = 1:klismaday = day & klismaday1 = 1
+if cheatNomakeup = 1:
+	if mop = 0:mop = 1
+end
+if cheatNosweat = 1 and sweat ! -3:sweat = -3
+if cheatNoEat = 1:
+	if energy ! 19:energy = 19
+	if water ! 19:water = 19
+end
+!!!!!!!!!!!!
+
+if alko > 0 and frost > 0:frost = 0
+if StrongNarkota >= 20:
+    if alko > 0:alko = 0
+end    
+
+if lernSkill >= 8:intel += 1 & lernSkill = 0
+if numdress ! 131 and Sforma > 0:Sforma = 0
+if lern >= 10:intel += 1 & lern = 0
+
+if GorSlut = 1:$gnikname = 'davalka'
+if GorSlut = 2:$gnikname = 'vaflersha'
+if GorSlut = 3:$gnikname = 'total huesoska'
+if GorSlut = 4:$gnikname = 'total hole'
+if GorSlut = 5:$gnikname = 'Sunken slut'
+if GorSlut = 6:$gnikname = 'prostitute'
+
+if GorSlut >= 2:KatjaKnowBJ = 1
+if GorSlut >= 1 or preg > 0:KatjaKnowSex = 1
+if GorSlut > 6: GorSlut = 6
+
+if film > 0 and kompromatLife < 10:
+	!pornoaktrissa
+	if kompromatLife < 10:kompromatLife = 10
+	$kompromatFoto = 'The photograph footage from your porn.'
+end
+if fotoyousuck = 1 and kompromatLife < 9:
+	!sucked in a couple of the guys was sfotografirovanna
+	if kompromatLife < 9:kompromatLife = 9
+	$kompromatFoto = 'The photo clearly shows, you suck just two members. Obviously this is the picture, which is pasted at the entrance, after you`ve sucked in the park.'
+end
+if fotoCFNMsex > 0 and kompromatLife < 8:
+	kompromatLife = 8
+	$kompromatFoto = 'In the photo you are standing in front of a crowd of people with cancer and you fucked behind naked man. Apparently the photo was taken in a strip club.'
+end
+if fotoCFNMblowjobCum > 0 and kompromatLife < 7:
+	!cum on face in the strip club
+	kompromatLife = 7
+	$kompromatFoto = 'In the photo you sit down in front of a naked guy. His sperm is visible on your face and his penis touches your lips. Apparently the photo was taken in a strip club.'
+end
+if fotoCFNMblowjob > 0 and kompromatLife < 6:
+	!It is sucking in front of everyone
+	kompromatLife = 6
+	$kompromatFoto = 'In the photo you sit down in front of a naked guy, clasping his cock lips. Behind the visible to the crowd of girls. Apparently the photo was taken in a strip club.'
+end
+if stripdancesum > 0 and kompromatLife < 2:
+	!stripper
+	if kompromatLife < 2:kompromatLife = 2
+	$kompromatFoto = 'In the photo, You dance naked near the pole. Obviously you fotkali when you worked as a stripper.'
+end
+if modelfoto > 0 and kompromatLife < 1:
+	!Photo Model
+	if kompromatLife < 1:kompromatLife = 1
+	$kompromatFoto = 'The picture your naked body. When you pose a modeling agency.'
+end
+
+shameless = guy+bj+anal+hj+(slutty*2)+(gang*2)
+moneySUM = money+karta+stolmoney
+cumSUM = cumbelly+cumpussy+cumass+cumlip+cumface+cumfrot+cumanus
+
+gs'dina'
+gs'din2'
+
+if husbizvradd > 5:izvratH = 1
+if husbharmin > 10:harakHusb = 0
+if clrbelo <= 0:clrbelo = 0 & tanga = 0
+
+if husband = 0:
+	husbizvradd = 0
+	husbharmin = 0
+	husbandMark = 0
+	houseslut = 0
+end
+
+if SNarkvnesh = 0:SNarkvnesh = 1
+if SNarkTimes >= SNarkvnesh*25:
+	SNarkvnesh += 1
+	vidage += 1
+end
+
+if gopota >= 20 and gnewQW = 1:gnewQW = 2
+
+if workDisk = 4 and week > 5:workDisk = 1
+if workDisk = 3 and week > 5:workDiskAtkPlayer = 1
+
+VeneraN = 0
+if VeneraOnce > 0:VeneraOnce = 0
+if SifacOnce = 1:VeneraN += 1
+if GerpesOnce = 1:VeneraN += 1
+if TriperOnce = 1:VeneraN += 1
+Venera = VeneraN
+
+if fat < 0:fat = 0
+if vokal < 0:vokal = 0
+if vokal > 100:vokal = 100
+if dance > 100:dance = 100
+if stripdance > 100:stripdance = 100
+if poledance > 100:poledance = 100
+
+!'
+if libonce = 0:
+	libonce = 1
+	ADDQST 'lib/otg_lib_menu_eng.qsp'
+end
+if youngshoponce = 0:
+	youngshoponce = 1
+	ADDQST 'youngshop.qsp'
+end
+
+if qwestonce = 0:
+	qwestonce = 1
+	ADDQST 'qwest/qwest.qsp'
+end
+'
+
+if bfa < 0:bfa = 0
+
+if painQW = 0:painweather = 6
+
+if beg < 0:beg = 0
+if beg > 2000:beg = 2000
+
+if oficiant > 100:oficiant = 100
+if vagina > 36:vagina = 36
+if throat > 36:throat = 36
+if anus > 36:anus = 36
+
+if Jab > 120:Jab = 120
+if Punch > 120:Punch = 120
+if Kik > 120:Kik = 120
+if KikDef > 120:KikDef = 120
+
+if nark >= 30 and narkoman = 0:
+	narkoman = 1
+elseif nark = 0 and narkoman = 1:
+	narkoman = 0
+end
+
+boxing = Jab + Punch + Kik + KikDef
+if boxing > 100:boxing = 100
+
+if stren > 100 and mutagenP = 0:stren = 100
+if speed > 100 and mutagenS = 0:speed = 100
+if agil > 100 and mutagenA = 0:agil = 100
+if react > 100 and mutagenR = 0:react = 100
+if vital > 100 and mutagenV = 0:vital = 100
+if will > 100 and mutagenW = 0:will = 100
+if intel > 100 and mutagenI = 0 and student = 0 and diplom = 0:intel = 100
+
+if stren > 150 and mutagenP = 1:stren = 150
+if speed > 150 and mutagenS = 1:speed = 150
+if agil > 150 and mutagenA = 1:agil = 150
+if react > 150 and mutagenR = 1:react = 150
+if vital > 150 and mutagenV = 1:vital = 150
+if will > 150 and mutagenW = 1:will = 150
+if intel > 150 and mutagenI = 1 and student = 0 and diplom = 0:intel = 150
+
+if stren > 200 and mutagenP = 2:stren = 200
+if speed > 200 and mutagenS = 2:speed = 200
+if agil > 200 and mutagenA = 2:agil = 200
+if react > 200 and mutagenR = 2:react = 200
+if vital > 200 and mutagenV = 2:vital = 200
+if will > 200 and mutagenW = 2:will = 200
+if intel > 200 and mutagenI = 2 and student = 0 and diplom = 0:intel = 200
+
+if stren > 250 and mutagenP = 3:stren = 250
+if speed > 250 and mutagenS = 3:speed = 250
+if agil > 250 and mutagenA = 3:agil = 250
+if react > 250 and mutagenR = 3:react = 250
+if vital > 250 and mutagenV = 3:vital = 250
+if will > 250 and mutagenW = 3:will = 250
+if intel > 250 and mutagenI = 3 and student = 0 and diplom = 0:intel = 250
+
+if intel > 250:intel = 250
+
+if DOM > 100: DOM = 100
+if SUB > 100: SUB = 100
+if VAF > 200: VAF = 200
+
+if MagikDostup = 0:
+	if orgasm >= 1 and magik < 1:magik = 1 & glaraz = glaraz + 1 & rikudo = rikudo + 500 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 2 and magik < 2:magik = 2 & resnic = resnic + 1 & rikudo = rikudo + 500 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 4 and magik < 3:magik = 3 & glaraz = glaraz + 1 & rikudo = rikudo + 500 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 8 and magik < 4:magik = 4 & resnic = resnic + 1 & rikudo = rikudo + 500 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 16 and magik < 5:magik = 5 & glaraz = glaraz + 1 & rikudo = rikudo + 500 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 32 and magik < 6:magik = 6 & resnic = resnic + 1 & rikudo = rikudo + 1000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 64 and magik < 7:magik = 7 & glaraz = glaraz + 1 & rikudo = rikudo + 1000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 100 and magik < 8:magik = 8 & rikudo = rikudo + 1000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 200 and magik < 9:magik = 9 & rikudo = rikudo + 1000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 300 and magik < 10:magik = 10 & rikudo = rikudo + 2000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 400 and magik < 11:magik = 11 & rikudo = rikudo + 4000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 500 and magik < 12:magik = 12 & rikudo = rikudo + 4000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 600 and magik < 13:magik = 13 & rikudo = rikudo + 4000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 700 and magik < 14:magik = 14 & rikudo = rikudo + 4000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 800 and magik < 15:magik = 15 & rikudo = rikudo + 8000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 900 and magik < 16:magik = 16 & rikudo = rikudo + 8000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 1000 and magik < 17:magik = 17 & rikudo = rikudo + 8000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 1100 and magik < 18:magik = 18 & rikudo = rikudo + 8000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 1200 and magik < 19:magik = 19 & rikudo = rikudo + 8000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 1300 and magik < 20:magik = 20 & rikudo = rikudo + 16000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+	if orgasm >= 1400 and magik < 20:magik = 21 & rikudo = rikudo + 21000 & pl'<b>You feel like something inside of you opened and you poured the magic, It raises you to a new energy level.</b>'
+end
+
+if SUB >= DOM and DOM > 0:SUB = SUB - DOM & DOM = 0
+if DOM >= SUB and SUB > 0:DOM = DOM - SUB & SUB = 0
+
+if horny < 0:horny = 0
+if health > vital*10 + stren*5:health = vital*10 + stren*5
+if willpower > intel*5 + will*5:willpower = intel*5 + will*5
+if manna > (intel*magik) + magik*100 + vital*10 + rikudo:manna = (intel*magik) + magik*100 + vital*10 + rikudo
+mannamax = (intel*magik) + magik*100 + vital*10 + rikudo
+!musle = strenbuf + vitalbuf
+if vidageday <= 0:
+	vidageday = 360
+	vidage += 1
+end
+
+!!!!!!!!!!!
+!!!TIME!!!
+!!!!!!!!!!!
+if nminut ! minut:
+	!totminut playing time in minutes
+	totminut += minut
+	nminut = minut
+end
+
+if vgape > 0:
+	if vgape = 3:
+		if manna > (mannamax/4):manna = mannamax/4
+	elseif vgape = 2:
+		if manna > (mannamax/2):manna = mannamax/2
+	end
+
+	if vgapetime+2500 <= totminut:
+		if vgape = 1:vgape = 0
+		if vgape = 2:vgape = 1 & vgapetime = totminut
+		if vgape = 3:vgape = 2 & vgapetime = totminut
+	end
+end
+
+if agape > 0:
+	if agape = 3:
+		if manna > (mannamax/6):manna = mannamax/6
+	elseif agape = 2:
+		if manna > (mannamax/3):manna = mannamax/3
+	end
+
+	if agapetime+5760 <= totminut:
+		if agape = 1:agape = 0
+		if agape = 2:agape = 1 & agapetime = totminut
+		if agape = 3:agape = 2 & agapetime = totminut
+		if anus > 1:anus -= 1
+	end
+end
+
+if spanked > 0:
+	if spanked = 3:
+		if manna > (mannamax/6):manna = mannamax/6
+	elseif spanked = 2:
+		if manna > (mannamax/3):manna = mannamax/3
+	end
+
+	if spankedtime+3500 <= totminut:
+		if spanked = 1:spanked = 0 & spankedtime = totminut
+		if spanked = 2:spanked = 1 & spankedtime = totminut
+		if spanked >= 3:spanked = 2 & spankedtime = totminut
+	end
+end
+
+if sec >= 60:
+	:loopsec
+	minut += 1
+	sec -= 60
+	if sec >= 60:
+		jump 'loopsec'
+	end
+end
+
+if minut >= 60:
+	:loopmin
+	if SbrosNerdism = 1:nerdism -= ((will/10)+orgasm)
+	if nerdism < 0:nerdism = 0
+	if obkvsdam > 0:obkvsdam = RAND(2,5)
+	hour = hour + 1
+	energy = energy - 1
+	water = water - 1
+	son = son - 1
+	minut = minut - 60
+
+	if alko > 0 and alkoblock = 0:
+		if alko >= 4 and alkoday!daystart:
+			alkoday=daystart
+			if beg > 0:beg -= 1
+			if volleyboll > 0:volleyboll -= 1
+			if alko >= 6:
+				if stren > 10:stren -= 1 & salo += 3
+				if vital > 10:vital -= 1 & salo += 3
+				if intel > 10:intel -= 1
+				alko -= alko/2
+			end
+		end
+		alko -= 1
+	end
+
+	!!!!!!!!!!!!!
+	!!!AVTOBOY!!!
+	!!!!!!!!!!!!!
+	if hour >= 8 and hour <= 23 and NPCnum > 10:
+		:markturnirotbort
+		xf = 0
+		:markturnirotbortt
+		xf += 1
+		turnirFighter[xf] = RAND(2,NPCnum)
+		if xf < 2:jump'markturnirotbortt'
+		if turnirFighter[1] = turnirFighter[2]:jump'markturnirotbort'
+		a = turnirFighter[1]
+		i = turnirFighter[2]
+		NoView = 1
+		gs'Autofight'
+	end
+	!!!!!!!!!!!!!
+
+	if shame > 0:shame -= 1 & manna -= 5
+	if smoker >= 20:smokerNeed += 1
+	if smokerNeed > 10 and InSleep = 0:manna -= manna*10/100
+	if smokerNeed > 300:smokerNeed = 0 & smoker = 0
+	if StrongNarkota > 0:StrongNarkota -= 1
+	if SLomka > 0:SLomka += 1 & manna -= 500
+	if SLomka > 100 and StrongNarkota <= 0:SLomka = 0 & SNarkTimes = 0
+
+	if narkoman = 1 and narkday ! day:
+		health = health - 5
+		willpower = willpower - 5
+		manna = manna - 10
+	end
+
+	if tanga = 0 and ski = 0 or glamur = 0 and tanga = 0:
+		mosolpred += 1
+	end
+
+	if mosolpred >= 10:
+		mosol += 1
+		mosolpred -= 10
+	end
+
+	if mosol >= 50:
+		manna -= 5
+	end
+
+	if energy >= 25:energy -= 5 & fat += 1
+
+	if tanga = 1 and mosol > 0:mosol -= 1
+	if lipbalmstat > 0:lipbalmstat -= 1
+	if sickstage = 1:sick += 1 & sicktimer += 1
+	if sickstage = 1 and sicktimer >= 80:sicktimer = 0 & sickstage = 2
+	if sickstage = 2 and sick > 0:sick -= 1
+	if sickstage = 2 and sick <= 0:sick = 0 & sickstage = 0
+	if perkice > 0:perkice -= 1
+	if frost > 0:frost -= 1
+
+	if KGOLpers > 0:
+		if KGHP < KGHPMAX:KGHP += 10
+		if KGManna < KGMannaMax:KGManna += 10
+	end
+
+	if minut >= 60:
+		jump 'loopmin'
+	end
+end
+
+if hour >= 24:
+	prezikProver += 1
+	discoclose = 0
+	trenerskaia = 0
+	
+	if pirs_pain_ton > 0:pirs_pain_ton -= 1
+	if brow > 0 and browper = 0:brow -=1
+
+	if shorthair = 1:
+		shorthairday += 1
+		if shorthairday >= 45:shorthairday = 0 & shorthair = 0
+	end
+
+	if KatjaOTN > 0:
+		if KatjaHorny > 0 and KatjaLust < 40:KatjaHorny -= RAND(1,3)
+		if KatjaLust >= 40:KatjaHorny += RAND(1,3)
+		if KatjaHorny < 0:KatjaHorny = 0
+		if KatjaHorny >= 100:KatjaHorny = 0 & KatjaMastr += 1 & KatjaLust += 1
+	end
+
+	if volleysostav > 0:trenerepa -= 1
+
+	if birthday = day and birthmonth = month:
+		!birthday
+		age = age + 1
+		vidage = vidage + 1
+	end
+
+	if horny > hornyStat:
+		hornyStat = horny
+		if pirsA > 0:
+			horny += 1
+		end
+		if pirsB > 0:
+			horny += 1
+		end
+		if pirsC > 0:
+			horny += 1
+		end
+		if pirsD > 0:
+			horny += 1
+		end
+		if pirsE > 0:
+			horny += 1
+		end
+		if pirsF > 0:
+			horny += 5
+		end
+		if pirsG > 0:
+			horny += 5
+		end
+		if pirsN > 0:
+			horny += 1
+		end
+	end
+
+	if horny < hornyStat:
+		hornyStat = horny
+	end
+
+	!!!!!!!!!!!!!!!
+	!!!GENERATION!!!
+	!!!!!!!!!!!!!!!
+	if NPCnum < 290:
+		NPCnow = NPCnum
+		NPCnum += RAND(1,3)
+		gs'npc'
+	end
+
+	if NPCnum >= 290 and NPCnum < 300:
+		NPCnow = NPCnum
+		NPCnum += 1
+		gs'npc'
+	end
+	!!!!!!!!!!!!!!!
+
+	if kanikuli = 0:Suspeh -= 1
+	dmishaevent = 0
+
+	if BuyHous = 2 and ArendHouseSL <= 0:ArendHouseSL = 0 & BuyHous = 0 & housr = 0
+	if BuyHous = 2 and ArendHouseSL > 0:ArendHouseSL -= 1
+	!Hotel room
+	if hotelroom>0 and hotelroom1day<1:hotelroom1day=0&hotelroom=0
+	if hotelroom>0 and hotelroom1day>0:hotelroom1day-=1
+
+	if Gspravka <= 0 and GspravkaT > 0:GspravkaT = 0 & Gspravka = 0
+	if GspravkaT > 0:Gspravka -= 1
+	if IvanPodstavaQW = 2 and PodpiskaNeviezd = 30:IvanPodstavaQW = 3
+	if IvanPodstavaQW = 2 and PodpiskaNeviezd > 0 and PodpiskaNeviezd < 30:PodpiskaNeviezd += 1
+
+	if salo > fat:
+		salo -= 1
+		fat += 1
+		if salo>fat*2:
+			salo -= 1
+			fat += 1
+		end
+		if salo>fat*4:
+			salo -= 1
+			fat += 1
+		end
+	elseif salo < fat:
+		salo += 1
+		fat -= 1
+	end
+
+	if strenbuf > stren:strenbuf -= 1
+	if strenbuf < stren:strenbuf += 1
+	if vitalbuf > vital:vitalbuf -= 1
+	if vitalbuf < vital:vitalbuf += 1
+	if agilbuf > agil:agilbuf -= 1
+	if agilbuf < agil:agilbuf += 1
+	if husband > 0 and husbandrink ! 11:husbandrink = RAND(0,10)
+	inWorkYoungShop = 0
+	husbandsexday = 0
+	borsexkol = 0
+	givisexday = 0
+
+	if shantsr > 0:
+		pay = shantsr*5000
+		karta += pay
+		shantsr = 0
+	end
+
+	if shantbog > 0:
+		:shantftb
+		shantftbgrand = RAND(0,10)
+		if shantftbgrand > 2:
+			shantpopala += 1
+			shantbog -= 1
+			if shantbog > 0:jump'shantftb'
+		elseif shantftbgrand <= 2:
+			karta += 30000
+			shantbog -= 1
+			if shantbog > 0:jump'shantftb'
+		end
+	end
+
+	petersexday = 0
+	klismaday1 = 0
+	:loop
+	day = day + 1
+	daystart = daystart + 1
+	week = week + 1
+	hour = hour - 24
+
+	!RFP
+	if SifacOnce = 1:Sifilis += 1
+	if GerpesOnce = 1:Gerpes += 1
+	if TriperOnce = 1:Triper += 1
+	if KandidozOnce = 1:Kandidoz += 1
+	if beg >= 100 and beg < 1000:beg -= 1
+	if beg >= 1000 and beg < 1500:beg -= 2
+	if beg >= 1500 and beg < 2000:beg -= 3
+	if beg >= 2000:beg -= 4
+
+	vidageday = vidageday - 1
+	if workDolgDay > 0:workDolgDay -= 1
+	if QWdogreiqTimer > 0:QWdogreiqTimer -= 1
+	if husband > 0:husbanday += 1
+	if kid > 0:kid += 1
+	if husband > 10 and husbanday > 0:husband -= 15
+	if fingal > 0:fingal -= 1
+
+	if husbandMark = 1 and husband <= 10:
+		husbizvradd = 0
+		husbharmin = 0
+		husbandMark = 0
+		husband = 0
+		divorced += 1
+		if KFOnLineReaga > 0:KFOnLineReaga -= 1
+
+		'<b><font color = red>Your husband filed for divorce.</font></b>'
+	end
+
+	gs'cikl'
+	if nark > 0:
+		nark = nark - 1
+	end
+
+	if pregtime > 10:fat += 1
+
+	if hour >= 24:
+		jump 'loop'
+	end
+end
+
+if budilnikOn = 0:
+	$budilnikInfo = 'Alarm clock <a href="exec: budilnikOn = 1 & GT $loc,$metka">off</a>'
+else
+	$budilnikInfo = 'Alarm clock <a href="exec: budilnikOn = 0 & GT $loc,$metka">included</a>'
+end
+
+!Payments
+if day = 25:
+	if PersSecWork = 1 and PersSecWorkTimes > 0 and paydaybistrosec = 0:
+		Pay = PersSecWorkTimes*2500
+		PersSecWorkTimes = 0
+		money += Pay
+		paydaybistrosec = 1
+		'<b><font color = green>Do you have listed <<pay>> rubles salary for a secretary job.</font></b>'
+	end
+	if workKafe = 1 and paydayKafe = 0:
+		paydayKafe = 1
+		pay = smenaKafe*600
+		money = money + pay
+		smenaKafe = 0
+		'<b><font color = green>Do you have listed <<pay>> rubles salary for a job as a waitress in a cafe.</font></b>'
+	end
+	if workhosp = 1 and nopaypoly = 0:
+		pay = smena*1000
+		money = money + pay
+		smena = 0
+		nopaypoly = 1
+		'<b><font color = green>Do you have listed <<pay>> rubles salary for work in the clinic.</font></b>'
+	end
+	if worksalon = 1 and nopaysalon = 0:
+		pay = smena*800
+		money = money + pay
+		smena = 0
+		nopaysalon = 1
+		'<b><font color = green>Do you have listed <<pay>> rubles salary for a job in a beauty salon.</font></b>'
+	end
+	if tanwork = 1 and nopaytanwork = 0:
+		nopaytanwork = 1
+		money += 25000
+		'<b><font color = green>Do you have listed 25000 rubles salary for a job as a governess.</font></b>'
+	end
+	if workSec = 1 and paydaySec = 0:
+		paydaySec = 1
+		pay = sekDay*800
+		if officebestslut >= 3:pay += 20000
+		karta = karta + pay
+		sekDay = 0
+		'<b><font color = green>You have listed the bank account <<pay>> rubles salary for a secretary job.</font></b>'
+	end
+	if workFabrika = 1 and paydayFabrika = 0:
+		paydayFabrika = 1
+		pay = smenaFabrika*200
+		money = money + pay
+		smenaFabrika = 0
+		'<b><font color = green>Do you have listed <<pay>> rubles salary for a job in a factory.</font></b>'
+	end
+	if husband > 0 and paydayHusb = 0:
+		paydayHusb = 1
+		if husbFin = 0:huspay = 15000
+		if husbFin = 1:huspay = 25000
+		if husbFin = 2:huspay = 40000
+		money += huspay
+		'<b><font color = green>Your husband transferred salary in a bank account, in an amount <<huspay>> rubles.</font></b>'
+	end
+
+	if stipuha = 1 and stipuhaday = 0:stipuhaday = 1 & money = money + 1200 & '<b><font color = green>Do you have listed 1200 rubles scholarships.</font></b>'
+	if housr = 1 and haday = 0 or housr = 2 and haday = 0:haday = 1 & money = money - 3000 & '<b><font color = red>You pay 3000 rubles per apartment.</font></b>'
+
+	if housr = 1 and electroday = 0 or housr = 2 and electroday = 0:
+		electroday = 1
+		if elektro >= 800:elektro = 800 + RAND(0,100)
+		money = money - elektro
+		'<b><font color = red>You pay <<elektro>> RUR Light.</font></b>'
+	end
+	if housr = 1 and kabel > 0 and kabelday = 0 or housr = 2 and kabel > 0 and kabelday = 0:kabelday = 1 & money = money - 300 & '<b><font color = red>You pay 300 rubles for cable TV.</font></b>'
+end
+
+if day ! 25:
+	if paydayHusb = 1:paydayHusb = 0
+	if workKafe = 1 and paydayKafe = 1:paydayKafe = 0
+	if workSec = 1 and paydaySec = 1:paydaySec = 0
+	if workFabrika = 1 and paydayFabrika = 1:paydayFabrika = 0
+	if housr = 1 and haday = 1 or housr = 2 and haday = 1:haday = 0
+	if housr = 1 and electroday = 1 or housr = 2 and electroday = 1:electroday = 0
+	if housr = 1 and kabel > 0 and kabelday = 1 or housr = 2 and kabel > 0 and kabelday = 1:kabelday = 0
+	if stipuhaday = 1:stipuhaday = 0
+	if nopaytanwork = 1:nopaytanwork = 0
+	if nopaypoly = 1:nopaypoly = 0
+	if nopaysalon = 1:nopaysalon = 0
+	if paydaybistrosec = 1:paydaybistrosec = 0
+end
+
+if sdaday = day and sdamonth = month and housr = 0:
+	housr = 1
+	'<b><font color = red>Term of lease your apartment has expired, you returned keys.</font></b>'
+end
+
+if month = 1 or month = 3 or month = 5 or month = 7 or month = 8 or month = 10 or month = 12:
+	!31
+	if day > 31:day -= 31 & month += 1
+elseif month = 2:
+	!28
+	if day > 28:day -= 28 & month += 1
+elseif month = 0:
+	month = 1
+	if day > 31:day -= 31 & month += 1
+elseif month = 13:
+	month = 1
+	if day > 31:day -= 31 & month += 1
+else
+	!30
+	if day > 30:day -= 30 & month += 1
+end
+
+!'
+if day > 30:
+	day = day - 30
+	month = month + 1
+end
+'
+
+if day = 0:day = 1
+
+if week > 7:
+	:loopweek
+	week = week - 7
+	husbandrink = 0
+	if military = 1:military = 0
+	if week > 7:
+		jump 'loopweek'
+	end
+end
+
+if week = 1:$week = 'Monday'
+if week = 2:$week = 'Tuesday'
+if week = 3:$week = 'Wednesday'
+if week = 4:$week = 'Thursday'
+if week = 5:$week = 'Friday'
+if week = 6:$week = 'Saturday'
+if week = 7:$week = 'Sunday'
+
+if month = 0:month = 1
+if month = 13:month = 1 & year = year + 1
+if month = 1:$month = 'January' & $mons = 'January'
+if month = 2:$month = 'February' & $mons = 'February'
+if month = 3:$month = 'March' & $mons = 'Martha'
+if month = 4:$month = 'April' & $mons = 'April'
+if month = 5:$month = 'May' & $mons = 'May'
+if month = 6:$month = 'June' & $mons = 'June'
+if month = 7:$month = 'July' & $mons = 'July'
+if month = 8:$month = 'Augustus' & $mons = 'August'
+if month = 9:$month = 'September' & $mons = 'September'
+if month = 10:$month = 'October' & $mons = 'October'
+if month = 11:$month = 'November' & $mons = 'November'
+if month = 12:$month = 'December' & $mons = 'December'
+
+if minut < 10:$nilmin = '0'
+if minut >= 10:$nilmin = ''
+
+if kid > 0:
+	if year > yearkid[1] and markyear[1] ! year:
+		if monthkid[1] = month and daykid[1] = day:
+			markyear[1] = year
+			kidage[1] += 1
+		end
+	end
+end
+
+!moodlet
+!mannamax
+!totminut
+
+if Mud >= totminut:
+	manna = mannamax
+	$mud = 'You feel winged.'
+else
+	$mud = ''
+end
+
+if nerdism > 0:
+	if lastreadday = daystart:
+		!<font color = green>You are completely healthy shine and a healthy glow.</font>
+		manna = mannamax
+		SbrosNerdism = 0
+		$mudnerd = '<font color = green>You are immersed in their fantasies after reading the book.</font>'
+	end
+	if lastreadday+1 = daystart:
+		!manna = mannamax
+		SbrosNerdism = 0
+		$mudnerd = '<font color = black>You a little bored and want to again plunge into books.</font>'
+	end
+	if lastreadday+2 = daystart:
+		SbrosNerdism = 0
+		if manna > mannamax/2:manna -= 10
+		$mudnerd = '<font color = red>Do you really want to read something.</font>'
+	end
+	if lastreadday+3 <= daystart:
+		if manna > mannamax/10:manna -= 10
+		SbrosNerdism = 1
+		$mudnerd = '<font color = red><b>You want terrible read at least something!!!</b></font>'
+	end
+	!$mudnerd += 'lastread<<lastread>> totminut<<totminut>> <<totminut-lastread>>'
+else
+	SbrosNerdism = 0
+	$mudnerd = ''
+end
+
+!!!!!!!!!!!!!!!!!!!
+!!!END OF TIME!!!
+!!!!!!!!!!!!!!!!!!!
+subage = 0
+:metakasubage
+subage += 10
+if subage+10 < age:
+	jump'metakasubage'
+else
+	subage = age-subage
+end
+
+if subage = 0 or subage >= 5:
+	$letgoda = 'years'
+elseif subage = 1:
+	$letgoda = 'year'
+else
+	$letgoda = 'year'
+end
+
+subagevne = 0
+:metakasubagevne
+subagevne += 10
+if subagevne+10 < vidage:
+	jump'metakasubagevne'
+else
+	subagevne = vidage-subagevne
+end
+
+if subagevne ! 1:
+	$letgoda2 = 'years'
+else
+	$letgoda2 = 'year'
+end
+
+!!!!!!!!!!!!!
+!!!ENERGY!!!
+!!!!!!!!!!!!!
+if son < 0:
+	son = 0
+	manna = manna - 5
+end
+
+if energy < 0:
+	energy = 0
+	health = health - 1
+	if fat = 0 and stren + vital > 0:
+		stren = stren - 1
+		vital = vital - 1
+		energy = energy + 2
+	elseif fat = 0 and stren + vital <= 0:
+		over = 3
+		gt'gameover'
+		exit
+	elseif fat > 0:
+		fat = fat - 1
+		energy = energy + 2
+	end
+end
+
+if water < 0:
+	water = 1
+	health = health - 5
+	willpower = willpower - 1
+end
+
+if manna <= 0:
+	manna = 1
+	health = health - 5
+	willpower = willpower - 5
+	!fat = fat + 1
+end
+
+if health < 0:
+	over = 1
+	gt'gameover'
+	exit
+end
+if willpower < 0 and StoryLine = 0:
+	over = 2
+	gt'gameover'
+	exit
+end
+
+if saloonce = 0 and opPRE = 0:
+	saloonce = 1
+	salo = fat
+	strenbuf = stren
+	vitalbuf = vital
+	agilbuf = agil
+end
+
+gs'body'
+!!!!!!!!!!!!!
+
+if health = vital*10 + stren*5:$health = '<font color = green>You are completely healthy shine and a healthy glow.</font>'
+if willpower = intel*5 + will*5:$willpower = '<font color = green>You have a crystal clear mind.</font>'
+if manna = (intel*magik) + magik*100 + vital*10 + rikudo:$manna = '<font color = green>You are in good spirits.</font>'
+
+if health < vital*10 + stren*5 and health >= (vital*10 + stren*5)*75/100:$health = '<font color = blue>You are healthy, but being as it is not very.</font>'
+if health < (vital*10 + stren*5)*75/100 and health >= (vital*10 + stren*5)*50/100:$health = '<font color = brown>Are you ill.</font>'
+if health < (vital*10 + stren*5)*50/100 and health >= (vital*10 + stren*5)*25/100:$health = '<font color = red>You`re.</font>'
+if health < (vital*10 + stren*5)*25/100:$health = '<font color = red>You are on the verge of death.'
+
+if willpower < intel*5 + will*5 and willpower >= (intel*5 + will*5)*75/100:$willpower = '<font color = blue>You mostly are in a reverie.</font>'
+if willpower < (intel*5 + will*5)*75/100 and willpower >= (intel*5 + will*5)*50/100:$willpower = '<font color = brown>You Depressed.</font>'
+if willpower < (intel*5 + will*5)*50/100 and willpower >= (intel*5 + will*5)*25/100:$willpower = '<font color = red>Are you depressed.</font>'
+if willpower < (intel*5 + will*5)*25/100:$willpower = '<font color = red>You are on the brink of madness.</font>'
+
+if manna < (intel*magik) + magik*100 + vital*10 + rikudo and manna >= ((intel*magik) + magik*100 + vital*10 + rikudo)*75/100:$manna = '<font color = blue>You have normal mood.</font>'
+if manna < ((intel*magik) + magik*100 + vital*10 + rikudo)*75/100 and manna >= ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100:$manna = '<font color = brown>You are in a bad mood.</font>'
+if manna < ((intel*magik) + magik*100 + vital*10 + rikudo)*50/100 and manna >= ((intel*magik) + magik*100 + vital*10 + rikudo)*25/100:$manna = '<font color = red>You are in a terrible mood.</font>'
+if manna < ((intel*magik) + magik*100 + vital*10 + rikudo)*25/100:$manna = '<font color = red>Your mood below any baseboards and urban sewage.</font>'
+
+if energy >= 20:$energy = '<font color = green>You ate to satiety.</font>'
+if energy < 20 and energy >= 10:$energy = '<font color = blue>Are you fed.</font>'
+if energy < 10 and energy >= 2:$energy = '<font color = brown>You are a little hungry.</font>'
+if energy < 2:$energy = '<font color = red>You are very hungry.</font>'
+
+if water >= 20:$water = '<font color = green>You got drunk and did not want to drink.</font>'
+if water < 20 and water >= 10:$water = '<font color = blue>You do not want to drink.</font>'
+if water < 10 and water >= 2:$water = '<font color = brown>You want to drink.</font>'
+if water < 2:$water = '<font color = red>You sushnyak.</font>'
+
+if son >= 20:$son = '<font color = green>Do you get enough sleep and do not want to sleep.</font>'
+if son < 20 and son >= 10:$son = '<font color = blue>You do not want to sleep.</font>'
+if son < 10 and son >= 2:$son = '<font color = brown>You want to sleep.</font>'
+if son < 2:$son = '<font color = red>You fall asleep on the move.</font>'
+
+!$din_shame = {
+	!dynamic din_shame
+	!shame += 1
+	!if shame >= 5:shame = 4 & shameless += 1
+	!if shame >= 4:$shame = '<font color = red><b>Your cheeks blaze from zalivshego them blush with shame.</b></font>'
+	!if shame = 3:$shame = '<font color = red>Your cheeks flush red with shame.</font>'
+	!if shame = 2:$shame = '<font color = brown>You`re a little red from shame.</font>'
+	!if shame = 1:$shame = '<font color = green>You`re a little confused.</font>'
+	!if shame <= 0:$shame = '<font color = green>You`re a little confused.</font>'
+	!gs'stat'
+}
+
+!if shame >= 5:shame = 4 & shameless += 1
+!if shame >= 4:$shame = '<font color = red><b>Your cheeks blaze from zalivshego them blush with shame.</b></font>'
+!if shame = 3:$shame = '<font color = red>Your cheeks flush red with shame.</font>'
+!if shame = 2:$shame = '<font color = brown>You`re a little red from shame.</font>'
+!if shame = 1:$shame = '<font color = green>You`re a little confused.</font>'
+!if shame <= 0:$shame = '<font color = green>You`re a little confused.</font>'
+
+$holyday = ''
+kanikuli = 0
+if (month = 10 and day >= 27) or (month = 11 and day <= 4):$holyday = '<b>Autumn holidays.</b>' & kanikuli = 1
+if (month = 12 and day >= 29) or (month = 1 and day <= 13):$holyday = '<b>Winter break.</b>' & kanikuli = 2
+if (month = 3 and day >= 25):$holyday = '<b>Spring break.</b>' & kanikuli = 3
+if (month = 5 and day >= 25) or month = 6 or month = 7 or month = 8:$holyday = '<b>Summer vacation.</b>' & kanikuli = 4
+if month = 1 and day = 1:$holyday = '<b>New Year!</b>' & kanikuli = 5
+
+if hour >= 8 and hour < 16 and week < 6 and StoryLine > 0 and SchoolAtestat = 0 and kanikuli = 0 and schoolProgulDay ! day:
+	!absence from school
+	schoolprogul += 1
+	schoolProgulDay = day
+end
+if workFabrika = 1 and week => 1 and week <= 5 and hour > 8 and age => 16 and age < 18 and FabrikaProgulDay ! day or workFabrika = 1 and week => 1 and week <= 5 and hour > 16 and age > 18 and FabrikaProgulDay ! day:
+	!absence from work in a factory in the town
+	FabrikaProgul += 1
+	FabrikaProgulDay = day
+end
+
+!!!!!!!!!!!!!!!!!!!!!
+!!!Beginning Description!!!
+!!!!!!!!!!!!!!!!!!!!!
+!pl'Time <b><<hour>></b> hours <b><<$nilmin>><<minut>></b> minutes'
+!pl 'Right now <<day>> <<$month>> <<year>> year, <<$week>>.'
+if hour < 10:
+	if minut > 9:pl' <b> 0<<hour>> : <<minut>> </b> <<$week>> : <<day>> <<$mons>> <<year>> year, '
+	if minut < 10:pl' <b> 0<<hour>> : 0<<minut>> </b> <<$week>> : <<day>> <<$mons>> <<year>> year, '
+end
+if hour > 9:
+	if minut > 9:pl' <b> <<hour>> : <<minut>> </b> <<$week>> : <<day>> <<$mons>> <<year>> year, '
+	if minut < 10:pl' <b> <<hour>> : 0<<minut>> </b> <<$week>> : <<day>> <<$mons>> <<year>> year, '
+end
+
+pl' <b><<money>></b> rubles in your purse'
+if StoryLine>0 and SchoolAtestat = 0:pl'<<$holyday>>'
+if birthday = day and birthmonth = month:pl'<b>Today is your birthday.</b>'
+!if shame > 0:pl'<<$shame>>'
+pl'<b><<$manna>></b>'
+
+if horny >= 90 and tanga = 1:
+	pl'<font color = #FF1493>You feel, that between his legs all <a href="exec:view''images/picb/briefs2.jpg''">soaked</a> from your juices.</font>'
+end
+if horny >= 90 and tanga = 0:
+	pl'<font color = #FF1493>You feel, that between his legs all <a href="exec:view''images/picb/briefs2a.jpg''">soaked</a> from your juices.</font>' 
+end
+if horny >= 50 and horny < 90 and tanga = 1:
+	pl'<font color = #DB7093>Are you a little nervous, feeling as though between his legs something nice <a href="exec:view''images/picb/briefs1.jpg''">itchy</a>.</font>'
+end
+if horny >= 50 and horny < 90 and tanga = 0:
+	pl'<font color = #DB7093>Are you a little nervous, feeling as though between his legs something nice <a href="exec:view''images/picb/briefs1a.jpg''">itchy</a>.</font>'
+end
+
+if ETOmenu = 1:
+	pl'<b><<$health>></b>'
+	pl'<b><<$willpower>></b>'
+	pl'<b><<$energy>></b>'
+	pl'<b><<$water>></b>'
+	pl'<b><<$son>></b>'
+elseif ETOmenu = 0:
+	a = horny
+	!a1 = horny
+	gs'indik','2'
+	pl '<<$ind>> excitation'
+
+	healthmax = (vital*10 + stren*5)
+	a = (health*100 /healthmax)
+	a1 = health
+	gs'indik','1'
+	pl '<<$ind>> health'
+
+	willpowermax = (intel*5 + will*5)
+	a = (willpower*100 / willpowermax)
+	a1 = willpower
+	gs'indik','1'
+	pl '<<$ind>> Purity of mind'
+
+	a = (manna *100 / mannamax)
+	a1 = manna
+	gs'indik','1'
+	pl '<<$ind>> Mana'
+
+	a = energy*4
+	a1 = energy
+	gs'indik','1'
+	pl '<<$ind>> satiety'
+
+	a = water*5
+	a1 = water
+	gs'indik','1'
+	pl '<<$ind>> thirst'
+
+	a = son*4
+	a1 = son
+	gs'indik','1'
+	pl '<<$ind>> cheerfulness'
+end
+
+$smoker = {
+	siga -= 1
+	smoker += 1
+	smokeHour = hour
+	smokeDay = day
+	smokeminut = minut+5
+	smokeNeed = 0
+	manna += 100
+	wipo += 100
+	if energy < 20:energy += 3
+	gs'stat'
+}
+
+if $mud ! '':pl'<font color = green><b><<$mud>></b></font>'
+if siga <= 0 and smoker >= 20:pl'<font color = red><b>You have run out of cigarettes.</b></font>'
+
+if smokeNeed > 0 and siga > 0 and smoker >= 20:
+	pl'<a href="exec:dynamic $smoker"><font color = red><b>Do you want to smoke. Do you have another <<siga>> cigarettes</b></font></a>'
+elseif siga > 0 and smoker >= 20:
+	pl'<a href="exec:dynamic $smoker"><font color = blue><b>Do you have another <<siga>> cigarettes</b></font></a>'
+end
+
+if siga > 0 and smoker < 20:
+	if smokeHour = hour and smokeday = day and smokeminut >= minut:
+	else
+		pl'<a href="exec:dynamic $smoker"><font color = blue><b>Do you have another <<siga>> cigarettes</b></font></a>'
+	end
+end
+
+if smokeHour = hour and smokeday = day and smokeminut >= minut:pl'<font color = green>Do you smoke a cigarette</font>'
+
+if pirs_pain_ton > 0:
+	if pirs_pain_ton = 1:pl'<font color = red>You have aches language and he is a little swollen.</font>'
+	if pirs_pain_ton = 2:pl'<font color = red>You have much whining language and it is noticeably swollen.</font>'
+	if pirs_pain_ton > 2:pl'<font color = red><b>Do you have a sore tongue, he was very swollen and almost tossed in the mouth.</b></font>'
+end
+
+if nippain > 0:pl'<font color = red><b><<$nippain>></b></font>'
+if painpub > 0:pl'<font color = red><b><<$painpub>></b></font>'
+
+if opPRE = 0:pl'<<$mop>> and <<$hapri>> hair.'
+
+if sweat = 1:pl'<font color = brown>You sweat.</font>'
+if sweat = 2:pl'<font color = red>From your little smells.</font>'
+if sweat = 3:pl'<font color = red>From you stink then.</font>'
+if sweat > 3:pl'<b><font color = red>From you stink from both bomzhihi.</font></b>'
+if isprok = 0 and mesec > 0 and preg = 0:pl'<b><font color = red>You have bleeding between the legs, urgently need a gasket.</font></b>'
+if isprok = 1 and mesec > 0 and preg = 0:pl'You month, but lining protects you.'
+if preg = 1 and pregtime = 280:pl'<b><font color = red>YOU start to scramble you urgently need the hospital</font></b>'
+if preg = 1:rodtime = 280 - pregtime
+if preg = 1 and pregtime < 280 and pregtime > 6:pl'<b><font color = blue>Are you pregnant <<pregtime>> days, left before delivery <<rodtime>> days</font></b>'
+if hour >= 11 and hour < 12 and week > 1 and week < 5 and workKafe = 1:pl'<b><font color = red>You can leave a work shift waitress in a cafe</font></b>'
+if hour >= 8 and hour < 9 and week < 5 and workSec >= 1:pl'<b><font color = red>YOU NEED TO WORK Secretary in the design organization</font></b>'
+if PersSecWork = 1 and week < 6 and hour < 10 and hour >= 5:pl'<b><font color = red>YOU NEED TO WORK secretary in BYSTROEZHKU, NOT LATER 9 HOURS</font></b>'
+if workFabrika = 1 and week => 1 and week <= 5 and hour = 8 and age >= 18 or workFabrika = 1 and week => 1 and week <= 5 and hour = 16 and age < 18:pl'<b><font color = red>TheAM To go to work in the factory as a seamstress TOWN</font></b>'
+
+$cumeater = {
+	cumlip += 1
+	vaf += 1
+	cumbelly = 0
+	gs'stat'
+	'You have collected fingers sperm from the stomach and licked them feel tart taste of sperm.'
+}
+
+$cumeater2 = {
+	cumlip += 1
+	vaf += 1
+	cumpussy = 0
+	gs'stat'
+	'You have collected fingers sperm from the pussy and lick them feel tart taste of sperm.'
+}
+
+$cumeater3 = {
+	cumlip += 1
+	vaf += 1
+	cumass = 0
+	gs'stat'
+	'You have collected fingers sperm from priests and licked them feel tart taste of sperm.'
+}
+
+$cumeater4 = {
+	cumlip += 1
+	vaf += 1
+	cumface = 0
+	gs'stat'
+	'You have collected fingers sperm from her face and licked them feel tart taste of sperm.'
+}
+
+$cumeater5 = {
+	cumlip += 1
+	vaf += 1
+	cumfrot = 0
+	gs'stat'
+	'You have collected fingers sperm from clothes and licked them feel tart taste of sperm.'
+}
+
+$cumeater6 = {
+	cumlip += 1
+	vaf += 1
+	cumanus = 0
+	gs'stat'
+	'You have collected fingers sperm from the anus and lick them feel tart taste of sperm.'
+}
+
+$clear_write = {
+	body_write = 0
+	face_write = 0
+	minut += 10
+	gs'stat'
+	'Within 10 minutes you thoroughly washed obscene "painting" from your body.'
+}
+
+!'<a href="exec:view''images/picb/cumface.jpg''">face</a>'
+!'<a href="exec:view''images/picb/cumface.jpg''"><b><font color = red>Your face</font></b></a>'
+!'<a href="exec:view''images/picb/cumass.jpg''"><b><font color = red>Your Booty</font></b></a>'
+
+if body_write > 0 and face_write > 0:pl'<b><font color = red><a href="exec:dynamic $clear_write"><b><font color = red>Your body and face painted with obscene graffiti.</font></b></a>'
+if body_write > 1 and face_write = 0:pl'<b><font color = red><a href="exec:dynamic $clear_write"><b><font color = red>Your body is inscribed with derogatory graffiti.</font></b></a>'
+if body_write = 1 and face_write = 0:pl'<b><font color = red><a href="exec:dynamic $clear_write"><b><font color = red>Your body is an obscene sign.</font></b></a>'
+if body_write = 0 and face_write > 1:pl'<b><font color = red><a href="exec:dynamic $clear_write"><b><font color = red>Your face is covered with writing obscene epithets.</font></b></a>'
+if body_write = 0 and face_write = 1:pl'<b><font color = red><a href="exec:dynamic $clear_write"><b><font color = red>On your face humiliating label.</font></b></a>'
+
+if cumbelly > 0 and swallow < 10:pl'<b><font color = red>Your <a href="exec:view''images/picb/cumbelly.jpg''">stomach</a> smeared in sperm.</font></b>'
+if cumbelly > 0 and swallow >= 10:pl'<a href="exec:view''images/picb/cumbelly.jpg''"><b><font color = red>Your stomach</font></b></a> <a href="exec:dynamic $cumeater"><b><font color = red>smeared in sperm.</font></b></a>'
+
+if cumpussy > 0 and swallow < 10:pl'<b><font color = red>From your <a href="exec:view''images/picb/cumpussy.jpg''">pussy</a> sperm slowly flows.</font></b>'
+if cumpussy > 0 and swallow >= 10:pl'<a href="exec:view''images/picb/cumpussy.jpg''"><b><font color = red>From your pussy</font></b></a> <a href="exec:dynamic $cumeater2"><b><font color = red>sperm slowly flows.</font></b></a>'
+
+if cumass > 0 and swallow < 10:pl'<b><font color = red>Your <a href="exec:view''images/picb/cumass.jpg''">Booty</a> smeared in sperm.</font></b>'
+if cumass > 0 and swallow >= 10:pl'<a href="exec:view''images/picb/cumass.jpg''"><b><font color = red>Your Booty</font></b></a> <a href="exec:dynamic $cumeater3"><b><font color = red>smeared in sperm.</font></b></a>'
+
+if cumlip > 0:pl'<b><font color = red>From your mouth smells of sperm.</font></b>'
+
+if cumface > 0 and swallow < 10:pl'<b><font color = red>Your <a href="exec:view''images/picb/cumface.jpg''">face</a> hair and smeared with semen.</font></b>'
+if cumface > 0 and swallow >= 10:pl'<a href="exec:view''images/picb/cumface.jpg''"><b><font color = red>Your face</font></b></a> <a href="exec:dynamic $cumeater4"><b><font color = red>hair and smeared with semen.</font></b></a>'
+if cumfrot > 0 and swallow < 10:pl'<b><font color = red>You have to <a href="exec:view''images/picb/cumfrot.jpg''">clothes</a> semen stains.</font></b>'
+if cumfrot > 0 and swallow >= 10:pl'<a href="exec:view''images/picb/cumfrot.jpg''"><b><font color = red>You have to dress</font></b></a> <a href="exec:dynamic $cumeater5"><b><font color = red>semen stains.</font></b></a>'
+if cumanus > 0 and swallow < 10:pl'<b><font color = red>From your <a href="exec:view''images/picb/cumanal.jpg''">ass</a> sperm slowly flows.</font></b>'
+if cumanus > 0 and swallow >= 10:pl'<a href="exec:view''images/picb/cumanal.jpg''"><b><font color = red>From your ass</font></b></a> <a href="exec:dynamic $cumeater6"><b><font color = red>sperm slowly flows.</font></b></a>'
+
+if vgape = 3:pl'<b><font color = red>You greatly sore vagina, You hardly even walk, while trying for wider legs apart.</font></b>'
+if vgape = 2:pl'<b><font color = red>Do you have a sore vagina and you can hardly keep your legs together.</font></b>'
+if vgape = 1:pl'<b><font color = red>You have a little sore vagina.</font></b>'
+
+if agape = 3:pl'<b><font color = red>You have greatly hurt the anus and out comes the blood.</font></b>'
+if agape = 2:pl'<b><font color = red>Do you have a sore ass.</font></b>'
+if agape = 1:pl'<b><font color = red>You have a little sore and itchy anus.</font></b>'
+
+if spanked >= 3:pl'<b><font color = red>Your poor <a href="exec:view''images/picb/SpankedAss2.jpg''">ass</a> mercilessly hurt, It shows a bright red scars from the blows, sometimes turning into bruises.</font></b>'
+if spanked = 2:pl'<b><font color = red>Your <a href="exec:view''images/picb/SpankedAss1.jpg''">buttocks</a> burning fire, they are streaks otchetilivo.</font></b>'
+if spanked = 1:pl'<b><font color = red>Your <a href="exec:view''images/picb/SpankedAss.jpg''">buttocks</a> a little red from spanking and rough touch and ache.</font></b>'
+
+if Gerpes >= 3:pl'<b><font color = red>Sores on your lips. All signs of genital herpes.</font></b>'
+if Gerpes < 10 and Gerpes >= 5:pl'<b><font color = red>Your pussy blushed and strongly itches. It genital herpes.</font></b>'
+if Gerpes >= 10:pl'<b><font color = red>On your pussy appeared sores. It genital herpes.</font></b>'
+if Gerpes >= 20:pl'<b><font color = red>Cover your ass sores of genital herpes.</font></b>'
+
+if Sifilis >= 21 and Sifilis < 50:pl'<b><font color = red>You jumped much, solid sore on the lip.</font></b>'
+if Sifilis >= 50:pl'<b><font color = red>Syphilitic rash covers your whole body.</font></b>'
+
+if Triper > 2:pl'<b><font color = red>From out of the vagina white discharge and strong stinging during urination. Just out of the vagina tightly and nasty smells.</font></b>'
+if Kandidoz > 30:pl'<b><font color = red>You thrush.</font></b>'
+if SLomka > 0:pl'<b><font color = red>You are very bad and hurt all the bones. You breaking</font></b>'
+if narkday ! day and narkoman = 1:pl'<b><font color = red>You are very bad and hurt all the bones. Urgent need Pale Lady!</font></b>'
+if fingal > 0:pl'<b><font color = red>You have a black eye on the face.</font></b>'
+
+if cloth_vid = 1:
+	pl'<b><a href="exec:dynamic $din_exhibiTakeOffBimbo">You are dressed in the form of bimbos</a></b>'
+end
+if exhibi >= 4 and exhibiHideNewCloth ! 1:
+	pl'<b><a href="exec:dynamic $din_exhibiHideNewCloth">You have opened a new outfit ready</a></b>'
+end
+
+if tanga = 0 and ski = 1 and nude = 0 or tanga = 0 and glamur = 1 and nude = 0:
+	pl'<b><font color = red>The blush of shame fills your face, you do not put panties and is now out of your short skirt sometimes shines naked ass.</font></b>'
+elseif tanga = 0 and ski = 0 and glamur = 0 and opPRE = 0 and nude = 0:
+	pl'<b><font color = red>You did not put panties.</font></b>'
+elseif tanga = 1 and nude = 1:
+	pl'<b><font color = red>You stripped down to her panties and your sisechki invitingly swing when walking</font></b>'
+elseif tanga = 0 and nude = 1:
+	pl'<b><font color = red>You are absolutely naked, and this in all the thrills</font></b>'	
+end
+
+if mosol >= 30 and mosol < 50:pl'<b><font color = red>Pisya reddened and itchy, You think it rubbed on clothes.</font></b>'
+if mosol >= 50:pl'<b><font color = red>Pisya hurts and each step is given through the pain, It Crimson and visible abrasions from walking without underwear.</font></b>'
+
+if analplugIN = 1:pl'<b><font color = red>You have inserted in the ass anal tube.</font></b>'
+if vibratorin = 1:pl'<b><font color = red>Do you work in the vagina vibrator.</font></b>'
+
+if young_shop_work = 1 and hour = 14 and week < 6:pl'<b><font color = red>The 15 hours you need to be at work in the shop Keys Pussy.</font></b>'
+if young_shop_work = 1 and hour = 16 and week < 6 and inWorkYoungShop = 0:young_shop_miss += 1 & pl'<b><font color = red>You will walk to work.</font></b>'
+
+if workrin = 1:
+	if week = 2 or week = 4 or week = 6:
+		if hour = 7:pl'<b><font color = red>The 8m hours you work on the market.</font></b>'
+		if hour = 8:pl'<b><font color = red>You need to work on the market.</font></b>'
+	end
+end
+
+if frost > 0 and frost <= 5:pl'<b><font>You little cold.</font></b>'
+if frost > 5 and frost < 11:pl'<b><font color = red>You freeze.</font></b>'
+if frost >= 11:pl'<b><font color = red>You are very cold.</font></b>'
+
+if sick = 1:pl'<b><font color = red>You is not that good, tickle in the throat and a little runny nose.</font></b>'
+if sick > 1 and sick < 24:pl'<b><font color = red>You chills. You runs from the nose and throat was raw, you cough and sneeze - It seems, You just.</font></b>'
+if sick >= 24 and sick < 48:pl'<b><font color = red>You have a fever. You have clogged nose, it hurts to swallow - throat aches. You are constantly coughing and sneezing - It seems, you catch cold.</font></b>'
+if sick >= 48 and sick < 72:pl'<b><font color = red>You have a high fever. You have a stuffy nose, sore head and throat, you are very cough - It seems, You got a strong cold. May be, This flu.</font></b>'
+if sick >= 72:pl'<b><font color = red>You toss in the heat. You have a stuffy nose, headache and aching all the bones. Your throat is inflamed and very sore. You heavy with anguish cough - It seems, you are seriously ill. May be, it is a sore throat.</font></b>'
+
+if $mudnerd ! '':pl'<<$mudnerd>>'
+
+if hour < meethour and svidanieA = 1:pl'<<$boyA>> will be waiting for you near your home <<meethour>> hours'
+if hour = meethour and svidanieA = 1:pl'<b><font color = red><<$boyA>> I am waiting for you around the house.</font></b>'
+
+if meetday < daystart and svidanieA = 1:bfA -= 10 & svidanieA = 0
+if StrongNarkota > 20:pl'<b><font color = red>You stoned.</font></b>'
+
+if alko > 0:
+	if alko < 3:pl'<b><font color = red>You`re a little drunk.</font></b>'
+	if alko >= 3 and alko < 6:pl'<b><font color = red>You`re drunk.</font></b>'
+	if alko >= 6:pl'<b><font color = red>You`re drunk as a lord.</font></b>'
+end
+
+if day = 29 and month = 12 and year = 2010 and StoryLine = 1:
+	if hour >= 5 and hour <= 14:pl'The 14 School hours will take place New Year`s party.'
+end
+
+if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and (sisboyQW = 3 or sisboyQW = 5 or sisboyQW = 7 or (sisboyQW = 9 and sisboytrioQW ! 1)):pl'' & pl'You promised her sister not to go to your room 18 hours'
+if StoryLine = 1 and sisboyday + 1 = daystart and hour < 19 and sisboytrioQW = 1:pl'' & pl'You promised her sister to come to your room 18 hours'
+
+if sisboyday + 1 = daystart and $CURLOC = 'bedrPar' and hour = 18:gt'sisterQW','sisboyQW_expel'
+
+dynamic $brotherSexCount
+
+gs'din_bad'
+
+if bag > 0:
+	pl'<a href="exec:dynamic $d_bag"><b>Handbag</b></a>'
+end
+
+!zero checks marriage
+proverka1 = 0
+proverka2 = 0
+proverka3 = 0
+proverka4 = 0
+proverka5 = 0
+
+!Clothing repair, for older savegames.
+if remdrop = 0:
+	remdrop = 1
+	if jeans = 1:jeans[1] = 1 & jeansH[1] = 50 & jeansB[1] = bedra
+	if jeans2 = 1:jeans[2] = 1 & jeansH[2] = 50 & jeansB[2] = bedra
+	if jeans3 = 1:jeans[3] = 1 & jeansH[3] = 50 & jeansB[3] = bedra
+	if jeans4 = 1:jeans[4] = 1 & jeansH[4] = 50 & jeansB[4] = bedra
+	if jeans5 = 1:jeans[5] = 1 & jeansH[5] = 50 & jeansB[5] = bedra
+	if yoga = 1:yoga[1] = 1 & yogaH[1] = 50
+	if yoga2 = 1:yoga[2] = 1 & yogaH[2] = 50
+	if yoga3 = 1:yoga[3] = 1 & yogaH[3] = 50
+	if yoga4 = 1:yoga[4] = 1 & yogaH[4] = 50
+	if yoga5 = 1:yoga[5] = 1 & yogaH[5] = 50
+	if yoga6 = 1:yoga[6] = 1 & yogaH[6] = 50
+	if yoga7 = 1:yoga[7] = 1 & yogaH[7] = 50
+	if yoga8 = 1:yoga[8] = 1 & yogaH[8] = 50
+	if yoga9 = 1:yoga[9] = 1 & yogaH[9] = 50
+	if yoga10 = 1:yoga[10] = 1 & yogaH[10] = 50
+	if yoga11 = 1:yoga[11] = 1 & yogaH[11] = 50
+	if yoga12 = 1:yoga[12] = 1 & yogaH[12] = 50
+	if yoga13 = 1:yoga[13] = 1 & yogaH[13] = 50
+	if yoga14 = 1:yoga[14] = 1 & yogaH[14] = 50
+	if yoga15 = 1:yoga[15] = 1 & yogaH[15] = 50
+	if yoga16 = 1:yoga[16] = 1 & yogaH[16] = 50
+	if yoga17 = 1:yoga[17] = 1 & yogaH[17] = 50
+	if yoga18 = 1:yoga[18] = 1 & yogaH[18] = 50
+	if sarafan = 1:sarafan[1] = 1 & sarafanH[1] = 50
+	if sarafan2 = 1:sarafan[2] = 1 & sarafanH[2] = 50
+	if short = 1:short[1] = 1 & shortH[1] = 50 & shortB[1] = bedra
+	if short2 = 1:short[2] = 1 & shortH[2] = 50 & shortB[2] = bedra
+	if short3 = 1:short[3] = 1 & shortH[3] = 50 & shortB[3] = bedra
+	if short4 = 1:short[4] = 1 & shortH[4] = 50 & shortB[4] = bedra
+	if short5 = 1:short[5] = 1 & shortH[5] = 50 & shortB[5] = bedra
+	if skirt = 1:skirt[1] = 1 & skirtH[1] = 50 & skirtB[1] = bedra
+	if skirt2 = 1:skirt[2] = 1 & skirtH[2] = 50 & skirtB[2] = bedra
+	if skirt3 = 1:skirt[3] = 1 & skirtH[3] = 50 & skirtB[3] = bedra
+	if skirt4 = 1:skirt[4] = 1 & skirtH[4] = 50 & skirtB[4] = bedra
+	if skirt5 = 1:skirt[5] = 1 & skirtH[5] = 50 & skirtB[5] = bedra
+	if dress = 1:dress[1] = 1 & dressH[1] = 100 & dressB[1] = bedra
+	if dress2 = 1:dress[2] = 1 & dressH[2] = 100 & dressB[2] = bedra
+	if dress3 = 1:dress[3] = 1 & dressH[3] = 100 & dressB[3] = bedra
+	if dress4 = 1:dress[4] = 1 & dressH[4] = 100 & dressB[4] = bedra
+	if dress5 = 1:dress[5] = 1 & dressH[5] = 100 & dressB[5] = bedra
+	if dress6 = 1:dress[6] = 1 & dressH[6] = 100 & dressB[6] = bedra
+	if dress7 = 1:dress[7] = 1 & dressH[7] = 100 & dressB[7] = bedra
+	if dress8 = 1:dress[8] = 1 & dressH[8] = 100 & dressB[8] = bedra
+	if dress9 = 1:dress[9] = 1 & dressH[9] = 100 & dressB[9] = bedra
+	if dress10 = 1:dress[10] = 1 & dressH[10] = 100 & dressB[10] = bedra
+	if dress11 = 1:dress[11] = 1 & dressH[11] = 100 & dressB[11] = bedra
+	if dress12 = 1:dress[12] = 1 & dressH[12] = 100 & dressB[12] = bedra
+	if dress13 = 1:dress[13] = 1 & dressH[13] = 100 & dressB[13] = bedra
+	if dress14 = 1:dress[14] = 1 & dressH[14] = 100 & dressB[14] = bedra
+	if dress15 = 1:dress[15] = 1 & dressH[15] = 100 & dressB[15] = bedra
+	if dress16 = 1:dress[16] = 1 & dressH[16] = 100 & dressB[16] = bedra
+	if dress17 = 1:dress[17] = 1 & dressH[17] = 100 & dressB[17] = bedra
+	if dress18 = 1:dress[18] = 1 & dressH[18] = 100 & dressB[18] = bedra
+	if dress19 = 1:dress[19] = 1 & dressH[19] = 100 & dressB[19] = bedra
+	if dress20 = 1:dress[20] = 1 & dressH[20] = 100 & dressB[20] = bedra
+	if dress21 = 1:dress[21] = 1 & dressH[21] = 100 & dressB[21] = bedra
+	if dress22 = 1:dress[22] = 1 & dressH[22] = 100 & dressB[22] = bedra
+	if dress23 = 1:dress[23] = 1 & dressH[23] = 100 & dressB[23] = bedra
+	if dress24 = 1:dress[24] = 1 & dressH[24] = 100 & dressB[24] = bedra
+	if profi = 1:profi[1] = 1 & profiH[1] = 50 & profiB[1] = bedra
+	if profi2 = 1:profi[2] = 1 & profiH[2] = 50 & profiB[2] = bedra
+	if pants = 1:pants[1] = 1 & pantsH[1] = 50 & pantsB[1] = bedra
+	if pants2 = 1:pants[2] = 1 & pantsH[2] = 50 & pantsB[2] = bedra
+	if pants3 = 1:pants[3] = 1 & pantsH[3] = 50 & pantsB[3] = bedra
+	if pants4 = 1:pants[4] = 1 & pantsH[4] = 50 & pantsB[4] = bedra
+	if pants5 = 1:pants[5] = 1 & pantsH[5] = 50 & pantsB[5] = bedra
+	if latex = 1:latex[1] = 1 & latexH[1] = 50 & latexB[1] = bedra
+	if latex2 = 1:latex[2] = 1 & latexH[2] = 50 & latexB[2] = bedra
+	if hooker = 1:hooker[1] = 1 & hookerH[1] = 50 & hookerB[1] = bedra
+	if hooker2 = 1:hooker[2] = 1 & hookerH[2] = 50 & hookerB[2] = bedra
+	if hooker3 = 1:hooker[3] = 1 & hookerH[3] = 50 & hookerB[3] = bedra
+	if hooker4 = 1:hooker[4] = 1 & hookerH[4] = 50 & hookerB[4] = bedra
+	if hooker5 = 1:hooker[5] = 1 & hookerH[5] = 50 & hookerB[5] = bedra
+	if dressel1 = 1:odekis[1] = 1 & odekisH[1] = 50 & odekisB[1] = bedra
+	if odekis1 = 1:odekis[2] = 1 & odekisH[2] = 50 & odekisB[2] = bedra
+	if odekis2 = 1:odekis[3] = 1 & odekisH[3] = 50 & odekisB[3] = bedra
+	if odekis3 = 1:odekis[4] = 1 & odekisH[4] = 50 & odekisB[4] = bedra
+	if odekis4 = 1:odekis[5] = 1 & odekisH[5] = 50 & odekisB[5] = bedra
+	if odekis5 = 1:odekis[6] = 1 & odekisH[6] = 50 & odekisB[6] = bedra
+	if odekis6 = 1:odekis[7] = 1 & odekisH[7] = 50 & odekisB[7] = bedra
+	if odekis7 = 1:odekis[8] = 1 & odekisH[8] = 50 & odekisB[8] = bedra
+	if odekis8 = 1:odekis[9] = 1 & odekisH[9] = 50 & odekisB[9] = bedra
+	if odekis9 = 1:odekis[10] = 1 & odekisH[10] = 50 & odekisB[10] = bedra
+end
+--- stat ---------------------------------
+

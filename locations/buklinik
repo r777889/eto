@@ -1,0 +1,317 @@
+# buklinik
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic</b></center>'
+	'<center><img src="images/etogame/bukli.jpg"></center>'
+	'Opening hours 9 to 17, Weekend Saturday, Sunday.'
+
+	temp = RAND(1,10)
+	if temp = 9:'You see the crowd of homeless, trying to get to a shelter.'
+	if temp = 2:'You see homeless, trying to get to a shelter.'
+	if temp = 3:'You see an old man who came to the shelter.'
+
+	if hour >= 9 and hour <= 17 and week < 6:
+		act 'Go to the clinic':gt'buklinik','holl'
+	end
+
+	act 'Escape':gt'nord'
+end
+
+if $ARGS[0] = 'holl':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic. Hall</b></center>'
+	'<center><img src="images/etogame/bukli_holl.jpg"></center>'
+	'Clinic Corridor.'
+
+	if bumtolik > 4:'Items are stored on <a href="exec:GT ''buklinik'',''sklad''">Availability</a>.'
+	if bumtolik > 5:'At the entrance is located <a href="exec:GT ''buklinik'',''registr3''">Registry</a>.'
+	if bumtolik > 5:'Instead registry is <a href="exec:GT ''buklinik'',''olga2''">Olga office</a>.'
+	if bumtolik > 5:'At the end of the corridor <a href="exec:GT ''buklinik'',''shower''">shower room</a>.'
+	if bumtolik = 6: '<a href="exec:GT ''buklinik'',''spal''">Berths</a>.'
+	if bumtolik > 6:'Berths. (I go there any more nude)'
+	if bumtolik > 5:'<a href="exec:GT ''buklinik'',''stol''">Dining room</a> residents.'
+	if bumtolik > 5:'Office in charge <a href="exec:GT ''buklinik'',''sec''">Jeanne</a>.'
+	if bumtolik > 5:'Office Coordinator <a href="exec:GT ''buklinik'',''dir''">Faith</a>.'
+
+	if bumtolik = 4:
+		act 'Call in the registry':gt'buklinik','registr'
+	end
+
+	act 'Escape':gt'nord'
+end
+
+if $ARGS[0] = 'registr':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic. Registry</b></center>'
+	'<center><img src="images/etogame/bukli_reg.jpg"></center>'
+	'The front desk sit two women in white coats.'
+
+	if bumtolik = 4: 'You: - Hello, my name is Svetlana, I am for the work. A girl named Olga gave me this business card, He said, you need staff.'
+	'Registrar: - Hello! We are very glad to see you. But I`m afraid, you give, the fact, we need volunteers, t.e. your work will not be paid. A work to be very difficult. We`ll have to take care for the elderly and the homeless and feed and clothe.'
+
+	act 'I understood you, I have to think':gt'nord'
+	act 'Agree':gt'buklinik','registr2'
+end
+
+if $ARGS[0] = 'registr2':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	bumtolik = 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic. Registry</b></center>'
+	'<center><img src="images/etogame/bukli_reg.jpg"></center>'
+	'You: - Good, I think, I can handle. Where do I begin?'
+	'Registrar: - I am happy to hear it. Fill. And raised me a copy of the passport and, if there are documents on education, diploma, courses, all that is, perhaps, in a stormy, we can find you paid work.'
+	'(You fill out the form)'
+	'Registrar: - Good, here`s membership card. In the corridor the first door on the right, You will be taken to a warehouse, where she will meet Olga show you everything.'
+
+	act 'In the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'registr3':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic. Registry</b></center>'
+	'<center><img src="images/etogame/bukli_reg.jpg"></center>'
+	'The registry usually sit or any Karina Regina.'
+
+	act 'In the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'sklad':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+	'<center><b>Mercy Clinic. Warehouse</b></center>'
+	'<center><img src="images/etogame/bukli_sklad.jpg"></center>'
+	'Warehouse packs littered with all things.'
+
+	if bumtolik = 5:act 'Find Olga':gt'buklinik','olga'
+	act 'In the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'olga':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Your colleague Olga</b></center>'
+	'<center><img src="images/etogame/bukli_olga.jpg"></center>'
+	'(Olga - well-groomed and cute brunette with a kind smile.)'
+
+	if bumtolik = 5:
+		'- Olga, Hello. I Light, Do you remember me? I decided to respond to your call. And ready to begin duties. The front desk told, you show me everything here.'
+		'- Sveta, good afternoon! Good for you, welcome! Let`s, I will briefly explain how we work. We are volunteers and, accordingly, our work is not paid. You can arrive at any time, business hours. The work is very different, t.to. you attached to me, the first time the job will get me.'
+		'Olga: - You do not mind to go to you?'
+		'You: - I am in favor.'
+		'Olga: - Good, I will come to you a tour. Here we have a warehouse of goods, we purchased for the needy. We packed it in boxes and transported to the destination.'
+	end
+
+	act 'For office-manager':gt'buklinik','sec'
+end
+
+if $ARGS[0] = 'sec':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Your colleague Jeanne</b></center>'
+	'<center><img src="images/etogame/bukli_sec.jpg"></center>'
+	'(Jeanne and cheerful young blonde)'
+
+	if bumtolik = 5:
+		'Olga: - Meet, This is our office manager Joan. Zhannochka we are literally responsible for everything. If there are organizational issues addressed her.'
+		'Olga: - Zhannochka is Light, our new volunteer.'
+		'Jeanne: - Wow! And you young Light, bold. Very pleased to meet you!'
+		'You: - Thank you, mutually.'
+
+		act 'For the head':gt'buklinik','dir'
+	elseif bumtolik > 5:
+		'- Hello, Sveta!'
+
+		act 'In the corridor':gt'buklinik','holl'
+	end
+end
+
+if $ARGS[0] = 'dir':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Your colleague Vera</b></center>'
+	'<center><img src="images/etogame/bukli_dir.jpg"></center>'
+	'(Faith overbearing and well-groomed woman)'
+
+	if bumtolik = 5:
+		'Olga: - And this is our coordinator Vera...'
+		'Faith: - Simply Vera.'
+		'Olga: - Faith is not only our coordinator, but inspiration, she came up with it and created our organization.'
+		'You: - Very nice, Sveta!'
+		'Faith: - Welcome to contact us. (Faith you smiling)'
+
+		act 'Complete familiarity':gt'buklinik','olga2'
+	elseif bumtolik > 5:
+		'- Hello, Sveta!'
+
+		act 'In the corridor':gt'buklinik','holl'
+	end
+end
+
+if $ARGS[0] = 'shower':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic. Shower room</b></center>'
+	'<center><img src="images/etogame/bukli_show.jpg"></center>'
+	'Shared shower room for guests'
+	'Here, guests take a shower. Better unnecessarily here not to meddle.'
+
+	act 'In the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'stol':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic. Dining room</b></center>'
+	'<center><img src="images/etogame/bukli_stol.jpg"></center>'
+	'Dining room for guests'
+	'Here, guests take food. The diet is very meager, but they fit.'
+
+	act 'In the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'spal':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Mercy Clinic. Bedrooms</b></center>'
+	'<center><img src="images/etogame/bukli_spal.jpg"></center>'
+	'Berths for guests.'
+	'People here just do not have. Alcoholics and homeless, vagrants and drug addicts. There are just people who have nowhere to sleep.'
+
+	if bumtolik = 6:
+		act 'Greet':gt'buklinik_event','pos1'
+	end
+
+	act 'In the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'olga2':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b>Your colleague Olga</b></center>'
+	'<center><img src="images/etogame/bukli_olga.jpg"></center>'
+	'(Olga - well-groomed and cute brunette with a kind smile.)'
+
+	if bumtolik > 5: '- Hello, Sveta!'
+	if buklinikDay = day:'- At present, there is more work, We can rest.'
+	if bumtolik >= 7 and buklinikDay ! day: '- Sveta, We need help <a href="exec:GT ''buklinik_event'',''pos6''">feed the needy</a>.'
+	if bumtolik >= 8 and buklinikDay ! day: '- Sveta, Here is the address of one <a href="exec:GT ''buklinik_event'',''pos8''">elderly man</a>, go down to help him on the farm.'
+	if bumtolik = 9 and buklinikDay ! day: '- Sveta, to help persuade a drunk does not wander the streets, and come to live with <a href="exec:GT ''buklinik_event'',''pos9''">us</a>.'
+	if bumtolik = 5:
+		bumtolik=6
+		'Olga: - Down the hall Sleeps, shower rooms, where guests can eat free. See there is nothing special. Well, here`s everything. At the reception we sit two girls - Regina and Karina, You`ve seen them.'
+		'To us has come the other volunteers, but you yourself to meet them at the meeting.'
+		'You can look here, If that appeals to me.'
+	end
+
+	act 'In the corridor':gt'buklinik','holl'
+end
+--- buklinik ---------------------------------
+

@@ -1,0 +1,28 @@
+# Hall
+cla
+*clr
+minut = minut + 5
+gs'stat'
+
+'You entered the hall of the giant casino building.'
+
+act 'Get out of the casino':
+	gt'casino'
+end
+
+picrand = RAND(0,2)
+if picrand = 0:'<right><img src="images/casino/hcasino1.jpg"></right>'
+if picrand = 1:'<right><img src="images/casino/hcasino2.jpg"></right>'
+if picrand = 2:'<right><img src="images/casino/hcasino3.jpg"></right>'
+'You can go:'
+''
+'K <a href="exec:GT ''headwaiter''">the maitre d `</a>'
+'The Hall <a href="exec:GT ''igravt''">slot machines</a>'
+'The room games <a href="exec:GT ''roulette''">Roulette</a>'
+'The room games <a href="exec:GT ''cards''">cards</a>'
+!'The <a href="exec:GT ''restaurant''">restaurant</a>'
+!'The <a href="exec:GT ''saloon''">saloon</a>'
+!'The <a href="exec:GT ''theater''">theater</a>'
+'K <a href="exec:GT ''hotel''">hotel</a>'
+--- Hall ---------------------------------
+

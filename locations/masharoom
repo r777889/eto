@@ -1,0 +1,517 @@
+# masharoom
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	gs'stat'
+
+	if hour >= 7 and hour <= 20:
+		'<center><img src="images/img/masha/r1.jpg"></center>'
+		'Room Masha, a huge room with dilapidated walls and lots of all kinds of sex toys and accessories.'
+		'Masha no, and the door of the muddler forgot to close.'
+
+		act 'Wait an hour':
+			minut += 60
+
+			if hour >= 7 and hour <= 20:gt'masharoom','start'
+			if hour < 7 or hour > 20:gt'masharoom','0'
+		end
+		act 'Trying on suits':
+			cla
+			*clr
+			minut += 60
+
+			mashroomrand = RAND(0,10)
+			if mashroomrand = 10:gt'masharoom','1'
+			if mashroomrand = 9:gt'masharoom','2'
+
+			'<center><img src="images/img/masha/r2.jpg"></center>'
+			'Are you interested in the costumes hanging on the walls, and you decide to try a few on.'
+
+			act 'Finish':gt'masharoom','start'
+		end
+		act 'Escape':gt'sexshop','podval'
+	elseif hour < 7 or hour > 20:
+		gt'masharoom','0'
+	end
+end
+
+if $ARGS[0] = '0':
+	gs'stat'
+	cla
+	*clr
+
+	'<center><img src="images/img/masha/r0.jpg"></center>'
+	'Room Masha, a huge room with dilapidated walls and lots of all kinds of sex toys and accessories.'
+	'Masha is lying half-naked on the bed.'
+
+	if month > 5 and temper > 20 and osadki < painweather:
+		act 'Even walk on a leash':
+			cla
+			*clr
+			DOM += 1
+			minut += 60
+
+			'<center><img src="images/img/masha/r30.jpg"></center>'
+			'You wear a collar and Masha through the back door is displayed on a street in a nearby doorway. Masha did not seem embarrassed that someone-Some may see it on a leash on all fours briskly paces and a few times even urinating on the sidewalk. Portraying contented dog, it rubs against your legs, then licks shoes.'
+
+			act 'Making sweeping street':
+				cla
+				*clr
+				DOM += 1
+
+				'<center><img src="images/img/masha/r31.jpg"></center>'
+				'You give her a broom to sweep the street and order. Masha quickly jumps up and begins to carefully revenge, this janitor probably still nobody saw.'
+
+				act 'Compliment':
+					cla
+					*clr
+					'<center><img src="images/img/masha/r32.jpg"></center>'
+					'"Good for, worked well here`s a reward." With these words, you`re strapped to his thigh dildo. Masha quickly came to you and turned gently spread on dildo pussy. You stood leaning on her hand back and looked Masha violently put on dildo swinging her hips to the beat of her movements. A few minutes later Mary shivered and jumped off a dildo knelt, his breath, she carefully licked all their allocation to dildo and began to lick your shoes. "All went home" You say you`re a little tugging the leash.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+				act 'Punish':
+					cla
+					*clr
+					'<center><img src="images/img/masha/r33.jpg"></center>'
+					'"Poorly, too bad you should be punished" With these words, you took her broom. "Stoop" commanded you, Masha obediently turned his back to you and bent. You started whipping her buttocks with broom, a few strokes you notice that her face tears flow, but she continued to stand in silence, suffering blows. When you have finished her ass was crimson red, Masha quickly dropped to all fours and gently coming to you start to rub on your feet, "Okay, go home" you said patting her head, Masha immediately perked up and happily went near you.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+			end
+
+			act 'Finish':gt'masharoom','start'
+		end
+	end
+
+	act 'Play with a candle':
+		cla
+		*clr
+		minut += 60
+		lesbian += 1
+		DOM += 1
+
+		'<center><img src="images/img/masha/r34.jpg"></center>'
+		'You order Masha licking and she immediately falls to his knees in front of you. Her tongue glides over your crotch almost bringing you to orgasm, you straighten it and order to insert the strap in place a candle. Masha little fiddle, Finally adjusts spark, and puts this design for you.'
+
+		act 'Order to suck':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r35.jpg"></center>'
+			'You tell her to suck candle, and she eagerly jumped on her and began furiously sucking. Masha tries his best then caressing her tongue is setting the stage for a cheek. A few minutes later you get tired of it.'
+
+			act 'Pour the wax into the mouth':
+				cla
+				*clr
+				'<center><img src="images/img/masha/r36.jpg"></center>'
+				'"And now I`m going to cum in your mouth" With these words, you set fire to the wick of a candle. Masha without waiting for your orders settled by candle mouth wide open. The wax began to melt and drain it into the mouth. Masha catching every drop with all of her body shook with pain, but she continued. Soon you will notice that her hands were clenched thighs, which have already started to shudder, you realize that it ends, when another drop fell into her mouth, Masha screamed, more hands clutched the hip, and he ran over the body cramp, she came from the pain, "And it really turned on pain and submission." You think putting out a candle. "Rest" you threw it, and she immediately curled up on the floor.'
+
+				act 'Finish':gt'masharoom','start'
+			end
+			act 'Pour the wax on his chest':
+				cla
+				*clr
+				orgasm += 1
+
+				'<center><img src="images/img/masha/r37.jpg"></center>'
+				'"And now I`m going to cum on your chest, lie down." With these words, you set fire to the wick of a candle. Masha quickly fell to the floor you are sat on top. Wax started to drip on her breasts she shuddered every drop and softly moaning. Every time a drop fell on the nipple of her body shook even stronger and it gets you started, You took aim on the nipples and soon your pussy was very wet, and her whole chest filled with wax on so much that the rest of drops have not caused her pain.'
+
+				act 'Give her to lick':
+					cla
+					*clr
+					'<center><img src="images/img/masha/r38.jpg"></center>'
+					'You threw off their makeshift strap, He turned and sat her on the face. Masha did not make them wait immediately set in motion the language. She did not take long, You were so excited that in a few seconds you covered orgasm.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+				act 'Meet each other':
+					cla
+					*clr
+					'<center><img src="images/img/masha/r39.jpg"></center>'
+					'You threw off their makeshift strap, He turned and sat her on the face. Masha did not make them wait immediately set in motion the language, You leaned toward her dripping pussy and launched her own language. You will not take long, You both were so excited that in a few seconds you both covered orgasm.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+			end
+		end
+		act 'Fuck it':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r40.jpg"></center>'
+			'You light a candle and get up on Masha so that the wax dripping on her buttocks. The wax melts and drips flowing down the candle on the machine ass, with every drop of Mary wails, but he does not even try to move away. A few minutes later her buttocks are covered with a layer of wax.'
+
+			act 'Sign into it':
+				cla
+				*clr
+				'<center><img src="images/img/masha/r41.jpg"></center>'
+				'You extinguish the candle and the wax is frozen smoothing edges candles. Mary all the time stands still on his knees waiting for your instructions, You get up on his knees behind her and put his hand on her back in front of her tilt, then you notice that all of her thighs wet from her secretions, It seems that the pain it only excites, if you decide to change the target of a little candle and lifted slightly above, juicy spit you enter a thick candle in her anus. Masha begins to scream and squirm all over, but he does not even try to remove you, and you continue to enter. After giving her ass a little privvyknut to the size you start fucking her speeding posteponno, Masha howling in pain but continued to diligently podmahivat you. a few minutes later Masha loud screams and limp, at her feet her flowing juice. You pull out of her priests candle, Masha and collapses on its side, her face beatific smile. Now she can not do anything you have to remove the makeshift strap.'
+
+				act 'Finish':gt'masharoom','start'
+			end
+		end
+	end
+	act 'Ordered to lick':
+		cla
+		*clr
+		minut += 60
+		lesbian += 1
+		DOM += 1
+		orgasm += 1
+
+		'<center><img src="images/img/masha/r27.jpg"></center>'
+		'You lie on a sofa and calls Masha, You are in command of the legs and spreads "Lick", Masha immediately crouches lips to your perineum, you shower the leash of her head and strongly attracted to her pussy. Her tongue glides over your crotch caressing the clitoris is penetrating the vagina, soon you will feel like an orgasm is getting closer.'
+
+		act 'Continue':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r29.jpg"></center>'
+			'You jump on the couch and pulls her leash to her vagina. A few deft movements of the tongue and your juices filled her mouth.'
+
+			act 'Finish':gt'masharoom','start'
+		end
+		act 'Ordered to lick ass':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r28.jpg"></center>'
+			'You climb onto the couch on all fours and spending leash between your legs are attracting it to his ass. Masha kiss your buttocks gradually approaching the center, reaching the goal, she thoroughly licks your anus and then pushes into the language of your priests, displays and again licking the anus. A few minutes of manipulation with your anus, you end.'
+
+			act 'Finish':gt'masharoom','start'
+		end
+	end
+	act 'Play a little':
+		cla
+		*clr
+		minut += 60
+		DOM += 1
+		lesbian += 1
+
+		'<center><img src="images/img/masha/r42.jpg"></center>'
+		'You come to Masha hugged her from behind and starts stroking his chest, then go to the teats, first and then pulling them tight squeeze by turning them in different directions. Masha meanders all body, teryas ass on your hips.'
+
+		act 'Continue to play with breasts':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r44.jpg"></center>'
+			'You lie on the bed and Masha order to kneel at your feet. You rests her feet in the chest and heels start to press on her nipples, first softly, then more and more. The harder you pressed the heel in her chest, the more she moans, you will soon notice that her feet already flowing juice, she is so excited that that`s about to finish.'
+
+			act 'Engage her pussy':
+				cla
+				*clr
+
+				picrand = RAND(49,51)
+				'<center><img src="images/img/masha/r<<picrand>>.jpg"></center>'
+				'You grab the whip from the table and literally pierces her butt in the car pussy, She whines and starts moaning. You fucked her grip strength, Masha soon starts to cum and she poured out a stream of juice.'
+
+				act 'Further':
+					cla
+					*clr
+					orgasm += 1
+
+					'<center><img src="images/img/masha/r64.jpg"></center>'
+					'You do not hold back and cling to her pussy lips starting to lick her release, and you are not expecting to come to an end.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+			end
+		end
+		act 'Let kissing your chest':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r45.jpg"></center>'
+			'You grab her by the hair and pulls his chest. Masha bites his lips to you in the chest, then kissing her trying to completely tighten in the mouth, tickles the tongue nipples.'
+
+			act 'Ordered to lick':
+				cla
+				*clr
+				orgasm += 1
+
+				picrand = RAND(46,48)
+				'<center><img src="images/img/masha/r<<picrand>>.jpg"></center>'
+				'You order Masha licking your pussy and she immediately bites his tongue in it, her nimble tongue minute later almost bring you to orgasm.'
+
+				act 'Let continue':
+					cla
+					'You did not stop her, and after a few seconds you covered orgasm.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+				act 'Take strap':
+					cla
+					*clr
+
+					picrand = RAND(53,54)
+					'<center><img src="images/img/masha/r<<picrand>>.jpg"></center>'
+					'You stop it and bring order Strap, Mary brings and helps you put it. When you strap wearing literally plunges it into his mouth, Masha begins to suck it as if her mouth real member.'
+
+					act 'The pussy':
+						cla
+						*clr
+
+						picrand = RAND(57,63)
+						'<center><img src="images/img/masha/r<<picrand>>.jpg"></center>'
+						'Taking it out of the car mouth, you put it in her pussy. Masha moaning and actively podmahivaet your movements to the beat. Soon she violently kills uttering groan. You end after her making several strong, wide shocks.'
+
+						act 'Finish':gt'masharoom','start'
+					end
+					act 'In the ass':
+						cla
+						*clr
+
+						picrand = RAND(55,56)
+						'<center><img src="images/img/masha/r<<picrand>>.jpg"></center>'
+						'Taking it out of the car mouth, you paste it with the power of her anus. Masha moaning and actively podmahivaet your movements to the beat. Soon she violently kills uttering groan. You end after her making several strong, wide shocks.'
+
+						act 'Finish':gt'masharoom','start'
+					end
+				end
+			end
+		end
+		act 'Let caressing your pussy':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r43.jpg"></center>'
+			'You take her hand and guide his crotch, Masha began to stroke your pussy fingering clit. Her nimble fingers almost bring you to orgasm'
+
+			act 'Let continue':
+				cla
+				'You did not stop her, and after a few seconds you covered orgasm.'
+
+				act 'Finish':gt'masharoom','start'
+			end
+			act 'Ordered to take dildo':
+				cla
+				*clr
+				'<center><img src="images/img/masha/r52.jpg"></center>'
+				'You order Masha take dildo. She takes it and sends you in the pussy. You do not require a lot of time and your flushed, her fingers pussy, a few minutes later I finished. When you are finished, Masha took dildo from you and start to suck it, and the other hand to finger her pussy, a few seconds later she came.'
+
+				act 'Finish':gt'masharoom','start'
+			end
+		end
+	end
+	act 'Escape':gt'sexshop','podval'
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/masha/r3.jpg"></center>'
+	'Dressing another outfit, you feel yourself at someone`s eyes, gently turning his head, you see, that the door is not completely closed, and through the crack on you who is watching.'
+
+	act 'Close the door':gt'masharoom','start'
+	act 'Tease':
+		cla
+		*clr
+		horny += 20
+
+		'<center><img src="images/img/masha/r4.jpg"></center>'
+		'You sit back and legs wide apart, so that the crotch was visible from the door, running his hand into her panties and begin stroking yourself, soon you will hear the sound of the door unzip and soon heard heavy breathing.'
+
+		act 'Continue':
+			cla
+			orgasm += 1
+
+			'You continue to massage her clit, and the realization that someone-then at that time looking at you and Fingering, only increases your excitement leading to the rapid orgasm. When you end the notice as a stream of white liquid flew into the room through the gap, Your supervisor is also terminated.'
+
+			act 'Finish':gt'masharoom','start'
+		end
+		act 'Call him':
+			cla
+			*clr
+			kuni += 1
+
+			'<center><img src="images/img/masha/r5.jpg"></center>'
+			'"Hey, you want to lick?" asked you look at the door. It was quiet for a few seconds, You really think you show up and there`s no one, but soon the door creaked, and came to the threshold of man, it was a pimply college boy, He stood on the threshold of not knowing what to do.'
+			'"My proposal is, expiration date and it is now to expire, you or lick or went out of here. And as a bonus, if well polizhesh, I`ll masturbate." you said, looking at him with a pleased smile.'
+			'The guy finally decided to come to you, and dropped to his knees and began to lick your pussy, his movements were not nimble and clumsy, He barely kept the excitement in you.'
+
+			act 'Let licks ass':
+				cla
+				*clr
+				'<center><img src="images/img/masha/r6.jpg"></center>'
+				'You turn around and substitute his ass, saying that he licked her, the guy starts to drive carefully on the language of your buttocks, one minute you get bored with the words "Point lick" Man you grab his head and pressed his lips to her anus, he starts to kiss him and then floats language. Gradually you begin to like it and you let it relax your head, enjoying. A few minutes later he stops and only you going to yell at him again as you feel that you rested his cock pussy.'
+
+				act 'Give':
+					cla
+					*clr
+					guy += 1
+					sex += 1
+
+					'<center><img src="images/img/masha/r8.jpg"></center>'
+					'"You invitation in writing to, Come on already." you said and then his penis went in you, but unfortunately not for long. You do not even have time to really feel his cock, as the guy all shook and began to finish, you barely have time to jump off his penis and then it is discharged to the floor. "Get out, impotent accident" cast in the hearts of you. The guy ran out of room, putting on his pants.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+				act 'Punish':
+					cla
+					*clr
+					DOM += 1
+
+					'<center><img src="images/img/masha/r9.jpg"></center>'
+					'"Do not rush, Give first taste try" you say turning her head. The guy runs up to you a joyful, jabbing his cock in your face. You take his penis in her hand, language and spend on the head, he relaxes ready to have fun, but a second later, He distorts his face in pain, you grabbed him by the balls and squeezed them. "Well suchenok, I have decided that you can fuck me like that, I told you that you can only masturbate." With these words, you yank his balls down and the guy falls to his knees. Letting go of his balls you hit in the face with his foot, and when he starts to crawl to the exit, customize it kicks in the ribs. At last, he crawls on all fours through the door you come to him from behind and swung strongly that there are forces beat kicked in the balls, man head over heels continues on his way down the corridor screaming out loud.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+			end
+			act 'Take the person':
+				cla
+				*clr
+				orgasm += 1
+
+				'<center><img src="images/img/masha/r7.jpg"></center>'
+				'When you get tired of his inept actions, we decided to take matters into their own hands, or rather feet, and commanded the boy to go. He quickly decided to lay down what you want it to please, but you sat on his face and began to crawl through it actively pussy. The guy was trying to help you, but I could not get into a rhythm, and you end up grabbing his hair and fixed his head that-I would not interfere. After a few minutes you have managed to finish, You frantically moved his feet almost strangled Man. You moved a little by giving him the air, his face dripping drops of your juice.'
+
+				act 'Take in the mouth':
+					cla
+					*clr
+					bj += 1
+					cumlip += 1
+
+					'<center><img src="images/img/masha/r10.jpg"></center>'
+					'You turn around right at him and grabbed his penis hand run it in his mouth, the guy immediately bites tongue in your pussy, and immediately you feel his cock in your mouth starts to cum. "Skorostrel fucking" I went through your head when jet of sperm fill your mouth. You spat out his dick with cum, otplevavshis Man kicked out.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+				act 'Saddle':
+					cla
+					*clr
+					guy += 1
+					sex += 1
+
+					'<center><img src="images/img/masha/r11.jpg"></center>'
+					'You shifted to its member, and taking his hand pointing the currently pussy, you do not even have time to introduce his penis to the end, like feel, he is about to finish. You jumped off his cock, and he came over. The boy blushed and all that he began to babble and so perevozbudilsya.d. and t.n. You just grinned "Run away from here skorostrel".'
+
+					act 'Finish':gt'masharoom','start'
+				end
+				act 'Jerk off hands':
+					cla
+					*clr
+					hj += 1
+
+					'<center><img src="images/img/masha/r12.jpg"></center>'
+					'You got off the guy and took his penis in his hand began to masturbate, you took a few movements and the guy moaned ready to end.'
+
+					act 'Further':
+						cla
+						*clr
+						cumlip += 1
+						cumface += 1
+
+						'<center><img src="images/img/masha/r14.jpg"></center>'
+						'You made a few moves and a member of his sperm spurted, jet was quite strong and the sperm gets into your mouth, on the face and flooded your chest.'
+
+						act 'Finish':gt'masharoom','start'
+					end
+				end
+				act 'Wank breasts':
+					cla
+					*clr
+					'<center><img src="images/img/masha/r13.jpg"></center>'
+					'You squeezed his penis between her breasts and began to masturbate him with them, a few seconds later you feel that your breasts between his penis had swelled badly and began to tremble ready to finish.'
+
+					act 'Further':
+						cla
+						*clr
+						cumlip += 1
+						cumface += 1
+
+						'<center><img src="images/img/masha/r14.jpg"></center>'
+						'You tried to pull away from him-I would not get dirty, but it was too late from his cock spurted sperm, jet was quite strong and the sperm gets into your mouth, on the face and flooded your chest.'
+
+						act 'Finish':gt'masharoom','start'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	guy += 1
+	gs'stat'
+
+	'<center><img src="images/img/masha/r20.jpg"></center>'
+	'Trying another Machine outfit you put your hands on leather handcuffs fastens between the carabiner, And behold fasten it to you was easily removed but it alone does not work, You frantically started trying to break free, when suddenly someone-then you pulled the leash is attached to the collar on the neck dressed. First you happy even decided that it returned Masha, but turned to see a man and a large leather paddle in his arms suggests that now you will be hurt, and that you have forgotten nothing to close the door. The man, meanwhile, looked at you "I see you waiting for me, Well, today`s play.".'
+	'"Please help me remove" You started handing him chained hands, still I am hoping that he will not touch you. "Shut up bitch, servant should not speak without permission of the owner, He knelt down and opened her mouth, quickly." he cried.'
+
+	act 'Continue to ask you to release':
+		cla
+		*clr
+		mop = 0
+		rape += 1
+		anal += 1
+
+		'<center><img src="images/img/masha/r21.jpg"></center>'
+		'"Oh, you bitch defiant. Now I`ll teach you to obey." With these words, he threw you on the couch. You were on the couch with his back to it, eyes, he pulled the blindfold you and you just heard your back unbuckling the belt and falls to the floor, a second you put his ass hard hot cock. "Please do not" You have uttered understanding that your words will not stop him, as happened with the force of a man pushed to you dildo ass, You cried out in pain pierced your anus. "Let`s shout louder, Now turn your ass line up" he said with a grin and continued to drive a screw you in the ass. You gritted his teeth and deprive quietly wept a little squealing with every jolt, knowing that he was right, because you are connected to the basement of sex-shop, full of perverts and your screams can build all.'
+
+		act 'Endure':
+			cla
+			cumanus += 1
+
+			'Deciding your plea you only angered him more gritted his teeth and waited until he had finished. He fucked you for a long time, will drive his dick for the most eggs, when you could not weep and couch was wet from your tears, he finally finished, Fill out your ass with his sperm. You collapsed on the couch shivering in mourning. "The next time you`re submissive bitch" He threw a man leaving the door and went out to plow, so that you could clearly see from the corridor. You got up and limped to the door slammed her. After some time you have managed to undo the carabiner and free from handcuffs.'
+
+			act 'Finish':gt'masharoom','start'
+		end
+		act 'Asking release':
+			cla
+			*clr
+			cumlip += 1
+			cumface += 1
+			spank += 1
+			bj += 1
+			swallow += 1
+
+			'<center><img src="images/img/masha/r22.jpg"></center>'
+			'"Please enough, let me" begged you. "That you can not tell where you belong, I watch your mouth to do nothing, Now I will correct." With that, he walked around the couch and grab you so that you could not close the mouth, I began to fuck you in it, and the second hand began to hit you on the buttocks with a spatula. When he began to finish something you stuck your dick right in the throat, you had to frantically swallow his semen that-would have suffocated. When he finished it wiped his dildo on your face and left, finally causing you such a kick in the ass, you flew from the couch to the floor. You got up and limped to the door slammed her. After some time you have managed to undo the carabiner and free from handcuffs.'
+
+			act 'Finish':gt'masharoom','start'
+		end
+	end
+	act 'Submit':
+		cla
+		*clr
+		SUB += 2
+		bj += 1
+		swallow += 1
+		cumlip += 1
+
+		'<center><img src="images/img/masha/r23.jpg"></center>'
+		'You dutifully knelt down and opened her mouth. He put on a blindfold on you and soon it touched your lips-something warm and solid. Catching a member of the lips in a rapidly tightened it into itself and began furiously sucking all kind depicting a grateful slave. Soon you will feel like a member of the mouth began to throb ready to finish. The jet of sperm hit you in the mouth, you immediately swallowed it and continued to suck dick, when he took it, You have opened my mouth and began to try to catch it blindly lips, depicting the passion that-I would not annoy him.'
+		'"Brain, good slave, And now lie down on the couch" he said.'
+
+		act 'Submit':
+			cla
+			*clr
+			'<center><img src="images/img/masha/r24.jpg"></center>'
+			'You blindly moved squatting toward the couch, I am finding it difficult to lay down and waited. He sat down on top of you and you`ll feel his lips touching his penis, but this time it was no longer solid, You dragged him inside and began to suck again trying to pick it up, soon you will feel it began to increase. "There is a good boy, well-tried, and now turn around to the flank and open ass, and for your efforts, we you her little smazhem." With that, he got off and lay next to you.'
+
+			act 'To turn':
+				cla
+				*clr
+				anal += 1
+				orgasm += 1
+				analorgasm += 1
+
+				'<center><img src="images/img/masha/r25.jpg"></center>'
+				'You turned on its side, exposing his ass to his cock, He rubbed it and slowly entered my dick in your ass, I am trying not to cause pain. You tried to push the buttocks with his hands, but his hands tied you can not do it, Then he unclasped carbine on handcuffs. His cock was moving in your ass, and you start to like it, you diligently podmahivat in time with his movements. Soon you began to accelerate the movement and it accelerated with you, penetrating deeper into you. In the process, he repeatedly unfolded you, without removing the penis from the anus and when he once again began to deploy you to another side, you have covered the orgasm shuddered abruptly moved up to him trying to absorb his cock an as far as possible. He made several strong aftershocks and finished dividing the sperm so that you poured out of the ass and the rest on the buttocks. "Now quickly open your mouth" he commanded rushing to your face, strong hand squeezing his penis'
+
+				act 'Open mouth':
+					cla
+					*clr
+					cumlip += 1
+					swallow += 1
+
+					'<center><img src="images/img/masha/r26.jpg"></center>'
+					'You have opened my mouth, and the remnants of sperm poured into it. Waiting until you swallow the sperm he once again put you dick in her mouth, when you carefully licked his dildo, he wore his pants and let not the words came out, closing the door.'
+
+					act 'Finish':gt'masharoom','start'
+				end
+			end
+		end
+	end
+end
+--- masharoom ---------------------------------
+

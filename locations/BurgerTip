@@ -1,0 +1,913 @@
+# BurgerTip
+$burger_work_din = {
+	burand = RAND(0,6)
+	if burand = 0:
+		'You lit lamp on a table device. Chubais calls you to itself.'
+
+		act 'Go to the office of Anatoly Borisovich':
+			cls
+			gs'stat'
+
+			'<center><img src="images/qwest/sosed/work2.jpg"></center>'
+
+			bossrand = RAND(0,3)
+			if bossrand = 0:
+				'You went into the room and approached the table Chubais. He turned his head to you "Sveta, Bring coffee."'
+
+				act 'Bring coffee':
+					cls
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/work3.jpg"></center>'
+					'You went to the kitchen and make coffee for the boss. Then he brought his boss.'
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				end
+			elseif bossrand = 1:
+				'You went into the room and approached the table Chubais. He turned his head to you "Sveta. Take these documents, and go to the chief accountant. It will issue, and you bring them to me."'
+
+				act 'Go to the chief accountant':
+					cls
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/work9.jpg"></center>'
+					'You took the papers and went to the chief accountant. Elena G. irritably took documents, I muttered something under his breath, I put signature and print multiple accounts. "On Bring Director."'
+
+					act 'Going to the Director':
+						cls
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/work2.jpg"></center>'
+						'Taking documents, you went back to the director`s office and gave him documents.'
+
+						if PSBBtimes = 1:dynamic $dinBistroWork
+						if PSBBtimes = 2:dynamic $dinBistroWork2
+					end
+				end
+			elseif bossrand = 2:
+				'You went into the room and approached the table Chubais. He turned his head to you "Sveta. Take these documents and bring them to Ivan, will immediately let"'
+
+				act 'Go to Ivan':
+					cls
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/work7.jpg"></center>'
+					'You took the papers and went to the senior manager Ivan.'
+					'Ivan sat in his office and worked on the computer. You gave him a folder with documents "Chubais said the deal with this immediately." Ivan took a folder out of your hands, and you nodded scanned.'
+
+					act 'Go to her':
+						cls
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/work.jpg"></center>'
+						'Having the documents you went to his office.'
+
+						if PSBBtimes = 1:dynamic $dinBistroWork
+						if PSBBtimes = 2:dynamic $dinBistroWork2
+					end
+				end
+			elseif bossrand = 3:
+				cls
+				bossexrand = RAND(0,3)
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/sosed/boss<<bossexrand>>.jpg"></center>'
+				'You went into the room and approached the table Chubais. He got up from the table and walked over to you'
+
+				if bossexrand = 0:'Chubais came up to you and pulled you passionately kissing the wall.'
+				if bossexrand = 1:'His hand slid down to your stomach and crawled under her skirt, You felt his hand began to fondle your pussy.'
+				if bossexrand = 2:'He grabbed you for your ass and lifted up her skirt began to knead your soft ass.'
+				if bossexrand = 3:'Anatoly Borisovich put your hands on your hips, His hands slid up tossing your skirt.'
+
+				act 'Kiss':
+					cls
+					horny += 10
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/bossex.jpg"></center>'
+					'Anatoly Borisovich sat on the couch holding you firmly in their hands. He put you over the top and began to kiss you and caress your ass.'
+
+					dynamic $boss_din_bj
+
+					act 'Continue':
+						cls
+						horny += 10
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/bossex2.jpg"></center>'
+						'Anatoly Borisovich began to undress you and threw you on the back. He kissed you and you got into his hands between his legs feeling pussy'
+
+						bosstipsexrand = RAND(1,10)
+						if bosstipsexrand >= 3:
+							dynamic $boss_din_sex2
+						elseif bosstipsexrand < 3:
+							'Fingers Chubais began to fondle your ass, and you feel like you entered his finger in the ass.'
+
+							dynamic $boss_din_anal2
+						end
+					end
+				end
+				act 'Kneel down':
+					cls
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/bossex1.jpg"></center>'
+					'You knelt before the chief and began to unbutton his pants with his thin fingers. Anatoly Borisovich stood in front of you without moving and stared into your eyes. Finally, you undid his pants and stuck his hand in his pants chief groped his cock.'
+
+					act 'Caress cock through panties':
+						cls
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/bossBJ.jpg"></center>'
+						'Your slender fingers dropped his pants to the chief, and his standing member hill bulged through panties. You kissed the panties on the site and felt a strong tuber flesh through the fabric. Then playfully took in his mouth cock right through the panties and began to fondle.'
+
+						dynamic $boss_din_bj
+					end
+
+					dynamic $boss_din_bj
+				end
+			end
+		end
+
+		exit
+	elseif burand = 1:
+		cls
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/work5.jpg"></center>'
+
+		if PSBBtimes = 1:
+			bosstiprand = RAND(0,3)
+			if bosstiprand = 0:
+				TerminalPapper = 1
+				DayTerminalPapper = day
+
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, Bring these documents to the Northern region, at the warehouse terminal, then you can be free today."'
+
+				act 'Escape':gt'down'
+			elseif bosstiprand = 1:
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, I`ll leave before lunch for. But now bring up products, I accept you instead Products."'
+
+				act 'Take products':
+					cls
+					gs'stat'
+
+					'To the rear entrance truck arrived with food. To you approached the driver with the documents on acceptance. You signed the documents and ordered the baggage handlers to unload the car.'
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				end
+			elseif bosstiprand = 2:
+				BankPapper = 1
+				dayBankPapper = day
+
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, to run to the bank with these documents. How to Take it documents can be free today."'
+
+				act 'Escape':gt'down'
+			elseif bosstiprand = 3:
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, call the programmer, that we concurrently, my computer is broken"'
+
+				act 'Call programmer':
+					cls
+					gs'stat'
+
+					if sosedQW = 0:
+						'Soon the office became young, a tall guy with a big bag. He asked that broke, You showed him the chief of the computer and the guy sat down at the computer fix. Soon after he graduated and earned a computer.'
+					elseif sosedQW > 0 and sosedKnowWork > 0:
+						sosedKnowWork = 1
+						'Soon the office became Timothy, your neighbor. He asked that broke, You showed him the chief of the computer and the guy sat down at the computer fix. Soon after he graduated and earned a computer.'
+					elseif sosedQW > 0 and sosedKnowWork = 0:
+						sosedKnowWork = 1
+						'Soon the office became Timothy, your neighbor. He was surprised to see you. You talked fun, Timothy is working part-time in Bystroezhke, office equipment repairs, charges cartridges.'
+					end
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				end
+			end
+		elseif PSBBtimes = 2:
+			bosstiprand = RAND(0,3)
+			if bosstiprand = 0:
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, I have to leave early today, here`s print, okay, while." then Chubais out of the office.'
+
+				bburand = RAND(0,10)
+				if bburand = 0:
+					'To you came to office senior manager Ivan.'
+
+					dynamic $din_Ivan_work
+
+					if kompromatLife = 0 or kompromatBlackMail > 1:
+						'Ivan grinned "I have shtampulki on these papers here." You took the seal and stamp on paper Ivan.'
+
+						if PSBBtimes = 1:dynamic $dinBistroWork
+						if PSBBtimes = 2:dynamic $dinBistroWork2
+					end
+				elseif bburand = 1:
+					'To you came to the office assistant manager Sergey.'
+					'Sergei looked at you carnivorous eyes "Anatoly Borisovich at?" You answered, what no.'
+
+					if sergeyPQW = 1:
+						'Pimply young man chuckled and sat on the edge of the table. "Svetik, You dynamo. I`m in a cafe for you invested, and you`re with me here and so cost. That`s not at all nice of you."'
+					elseif sergeyPQW = 0:
+						'Pimply kid sat on the edge of the table "Svetik, you are cool girl, You can go to somewhere?"'
+
+						act 'No! And do not even think!':
+							cls
+							gs'stat'
+
+							'You rejected the proposal of the rookie and he jumped up from the table left the office.'
+
+							if PSBBtimes = 1:dynamic $dinBistroWork
+							if PSBBtimes = 2:dynamic $dinBistroWork2
+						end
+						act 'Come on':
+							cls
+							gs'stat'
+
+							'<center><img src="images/qwest/sosed/work7.jpg"></center>'
+							'Sergei was delighted and promised to go after you left. Working time has come to an end and re-entered the office of Sergei. "Come."'
+
+							act 'Go':
+								cls
+								minut += 60
+								horny += 15
+								water = 24
+								energy = 24
+								salo += 2
+								fat += 20
+								gs'stat'
+
+								'<center><img src="images/qwest/sosed/kafe2.jpg"></center>'
+								'You went with Sergey and went into a nearby cafe from Bystroezhki. Sergei ordered drinks and food and you sit down at the table. Order was soon brought, and you began to eat and drink wine. Soon, you`re a little drunk and the conversation flowed naturally. Sergei called the waitress and paid with her. You went out with his pimply cavalier and he suddenly put his arm around you "Svetik, drove me."'
+
+								act 'Takeout':
+									cls
+									minut += 15
+									sergeyPQW = 1
+									gs'stat'
+
+									!'<center><img src="images/qwest/sosed/kafe2.jpg"></center>'
+									'You refused to harassment and intrusive milksop left.'
+
+									act 'Escape':gt'down'
+								end
+							end
+						end
+
+						exit
+					end
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				elseif bburand = 2:
+					'To you came to the office of the chief accountant Lena.'
+					'Lena looked disapprovingly you "Operations at?" You said that he was gone. Lena went lipped.'
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				elseif bburand = 3:
+					'To you came to the office personnel manager Vic.'
+					'Vic smiled at you "Operations at?" You answered, he`s gone. Vick said he would call the next time gone.'
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				elseif bburand > 3:
+					'You put time sat in the office of one, bored and laying solitaire on the computer.'
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				end
+			elseif bosstiprand = 1:
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, drove at home, Amuse."'
+
+				act 'Go with Anatoly Borisovich':
+					cls
+					gs'stat'
+
+					'<center><img src="images/maggot/car.jpg"></center>'
+
+					BurMestoRand = RAND(0,1)
+					if BurMestoRand = 0:
+						'You got in the car to Anatoly Borisovich and you went to the sleeping area of ​​the city. Soon the car stopped near the sauna. Anatoly Borisovich said with a smile. "I rented a room for us."'
+
+						act 'Going to the sauna':
+							cls
+							gs'stat'
+
+							if SaunaWhore > 0:
+								BuSWworkEnd = 1
+
+								'You went to the sauna and suddenly faced the entrance with mother, provided that you work in the sauna. She said with surprise "Svetik, what the hell? You`re Alone? I have a job to fend, and even dare to come here?" Anatoly Borisovich surprised "What`s going on here? You know the Light?" Nurse laughed "Do I know the Light? Yes, her pussy real goldmine! Of course I know her, I have it work as a prostitute." Anatoly Borisovich blushed "How? Sveta? You`re just a whore?" You started to mumble, trying to come up with on the fly how you otmazatsya. Anatoly Borisovich shook his head. "I was wrong about you, Svetlana." Then he quietly walked out of the sauna, and you heard his car left. Nurse continued to laugh at you "Svetik, you`re a whore, and if you manage to still a decent guy Okrut, it will come up if your past, then you no self-respecting man, will not live. Think of it as a lesson to you free of charge."'
+
+								act 'Escape':gt'street'
+							elseif SaunaWhore = 0:
+								'You went to the sauna and Chubais held you in luxurious rooms that he took. He quickly began to undress, and you, too, undressed. Then he came up to you. "Svetik, suck me."'
+
+								act 'Further':
+									cls
+									minut += 5
+									bj += 1
+									gs'stat'
+
+									'<center><img src="images/qwest/sosed/bossBJS.jpg"></center>'
+									'You sit down in front of the boss, and he is taking his hand kissed his dick. His cock began to shake gradually rising. You prick the skin revealing a head of the penis and licked it. Then you wrapped around dick lips and began to suck. You feel like a dick in your mouth gradually increased in size and become firmer, Finally member gets full and you suck it, with sucking sounds covering saliva. Anatoly Borisovich pulls his dick out of your mouth and puts you in a shop.'
+
+									act 'Further':
+										cls
+										minut += 5
+										protect = 1
+										$boy = 'Anatoly'
+										dick = 12
+										silavag = 0
+										gs'stat'
+
+										'<center><img src="images/qwest/sosed/bossSexS.jpg"></center>'
+										'Anatoly Borisovich put a condom on the penis and lay down on the bench pulling your hand to yourself. You have thrown a leg over the boss`s stomach and sat on top of him, then you took his hard cock hand and sent it into my pussy.'
+
+										dynamic $sexstart3
+
+										sweat = -3
+
+										'You`ve heard Anatoly Borisovich groaned and twitched several times, he took you on, and you see ebya, that sperm filled condom.'
+										'Then you went into the shower to wash. Stepping out of the shower, you saw, that Anatoly Borisovich already dressed. "Svetik, I`ve got to run." He kissed you and left.'
+
+										act 'Escape':gt'street'
+									end
+								end
+							end
+						end
+					elseif BurMestoRand = 1:
+						'You got in the car and suddenly the phone rang boss. He frowned and picked up the phone. "Yes honey, I will soon." He put the phone down. "We must go home, Svetik, Quick suck, I will go."'
+
+						act 'Suck':
+							cls
+							minut += 5
+							bj += 1
+							cumlip += 1
+							swallow += 1
+							gs'stat'
+
+							'<center><img src="images/qwest/sosed/bossBJcar.jpg"></center>'
+							'Anatoly Borisovich sat on the couch waiting for your actions. You leaned over to him and unbuttoned his pants took out his penis out of his pants. You leaned toward his groin and clasped his lips his flaccid penis, which gradually began to wake up in your mouth. You suck it as deeply as possible and faster, trying, What would the boss finished. Finally Anatoly Borisovich little moan and warm liquid spurted into your mouth. Trying not to get an expensive car, you started to swallow cum boss. Once finished Anatoly Borisovich, he removed his penis into his trousers and said goodbye to you.'
+
+							act 'Escape':gt'down'
+						end
+					end
+				end
+
+				exit
+			elseif bosstiprand = 2:
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, call the programmer, that we concurrently, my computer is broken"'
+
+				act 'Call programmer':
+					cls
+					gs'stat'
+
+					if sosedQW = 0:
+						'Soon the office became young, a tall guy with a big bag. He asked that broke, You showed him the chief of the computer and the guy sat down at the computer fix. Soon after he graduated and earned a computer.'
+					elseif sosedQW > 0 and sosedKnowWork > 0:
+						sosedKnowWork = 1
+
+						'Soon the office became Timothy, your neighbor. He asked that broke, You showed him the chief of the computer and the guy sat down at the computer fix. Soon after he graduated and earned a computer.'
+					elseif sosedQW > 0 and sosedKnowWork = 0:
+						sosedKnowWork = 1
+
+						'Soon the office became Timothy, your neighbor. He was surprised to see you. You talked fun, Timothy is working part-time in Bystroezhke, office equipment repairs, charges cartridges.'
+					end
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				end
+			elseif bosstiprand = 3:
+				'From the office of Anatoly Borisovich came and went over to you. "Svetik, Today you have to stay at work. Come to me now partners, business negotiations."'
+
+				act 'Further':
+					cls
+					minut += 60
+					gs'stat'
+
+					'Anatoly Borisovich came two men, and they settled down in his office. Anatoly Borisovich sometimes you called, that would bring the coffee. An hour later, the men were gone and Anatoly Borisovich let you go.'
+
+					act 'Escape':gt'down'
+				end
+			end
+		end
+
+		exit
+	elseif burand = 2:
+		'To you came to office senior manager Ivan.'
+
+		dynamic $din_Ivan_work
+
+		if kompromatLife = 0 or kompromatBlackMail > 1:
+			'Ivan grinned "I have shtampulki on these papers here." You ran to the chief and he stamped on documents, then you classify documents Ivan.'
+
+			if PSBBtimes = 1:dynamic $dinBistroWork
+			if PSBBtimes = 2:dynamic $dinBistroWork2
+		end
+
+		exit
+	elseif burand = 3:
+		'To you came to the office assistant manager Sergey.'
+		'Sergei greedily examining you said "Ivan ordered to carry these documents main, for signature."'
+
+		if PSBBtimes = 1:dynamic $dinBistroWork
+		if PSBBtimes = 2:dynamic $dinBistroWork2
+
+		exit
+	elseif burand = 4:
+		'To you came to the office of the chief accountant Lena.'
+		'Lena as always with arrogant mien said "I need a printing head of these bills." You carried the documents to the chief, it seals and slap you gave the documents to Lena.'
+
+		if PSBBtimes = 1:dynamic $dinBistroWork
+		if PSBBtimes = 2:dynamic $dinBistroWork2
+
+		exit
+	elseif burand = 5:
+		'To you came to the office personnel manager Vic.'
+		'She smiled at you "I`ve brought documents, who then as always dismissed, you need to put the press." You carried the documents to the chief and he spank seals. Then you have carried documents Vick.'
+
+		if PSBBtimes = 1:dynamic $dinBistroWork
+		if PSBBtimes = 2:dynamic $dinBistroWork2
+
+		exit
+	elseif burand = 6:
+		'To you came to the office of elegantly dressed woman with an arrogant person.'
+
+		if gossipBU < 10:
+			'The lady looked with contempt and disgust you asked "Shreds at?" You nod your head, a lady without knocking, entered the office Anatoly Borisovich, and after some time they went out together, Chubais said on the way "Yes honey, necessarily I`ll come to your mother today." When the woman left Antaoly Borisovich grunted "My wife is a rare stinker."'
+
+			if PSBBtimes = 1:dynamic $dinBistroWork
+			if PSBBtimes = 2:dynamic $dinBistroWork2
+		end
+		if gossipBU >= 10:
+			'The lady looked with contempt and anger have opened the door to Anatoly Borisovich, You heard her shrill voice "Shreds, I know all about your adventures with his sekretutka, and if you now do not expel this slut from work, then I myself go from you, Do you understand?" Anatoly Borisovich zabubnil "Yes, yes, sweetheart, you know, I just love you." He was red-faced out of the office and threw a piece of you on the table "Write on his own!"'
+
+			act 'Write a statement of resignation':
+				cls
+				work = 0
+				PersSecWork = 2
+				Pay = PersSecWorkTimes*2500
+				PersSecWorkTimes = 0
+				money += Pay
+				gs'stat'
+
+				'You wrote a statement of resignation of its chief and quickly signed, He counted to you <<pay>> RUR your paycheck and said "It`s over Svetlana, Get out of here."'
+
+				act 'Escape':gt'down'
+			end
+		end
+
+		exit
+	end
+}
+
+$boss_ass_din = {
+	bossassrand = RAND(0,3)
+	if bossassrand = 0:
+		'When you tilt the table to pick up the documents, then got savory slap on the ass on Chubais.'
+	end
+}
+
+$boss_din_bj = {
+	act 'Get a member of cowards':
+		cls
+		numbjrand = RAND(0,14)
+		wantrand = RAND(0,3)
+		bj += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/bossBJ<<numbjrand>>.jpg"></center>'
+		'Did you get a member of the pants around his boss and his <<$liptalk>> his lips purple head. Your tongue deftly worked feeling the smooth surface of the head all the twists member. Clasping member you took it into his mouth to the throat and began to move her head. Your eyes stared at the curly pubic Chubais and sometimes his hair tickling your nose.'
+
+		if wantrand = 3:
+			'Anatoly Borisovich took out a member of your mouth "Svetik, I want you."'
+
+			dynamic $boss_din_bendover
+		elseif wantrand = 2:
+			'Anatoly Borisovich muffled groan "Svetik, if you continue, I finish"'
+
+			dynamic $boss_din_bendover
+			dynamic $boss_din_bj2
+		elseif wantrand < 2:
+			'Anatoly Borisovich grunted obviously going to end.'
+
+			dynamic $boss_din_bj_cum
+		end
+	end
+}
+
+$boss_din_go_toilet = {
+	act 'Going to the bathroom':
+		cls
+		gs'stat'
+
+		bosstoirand = RAND(0,10)
+		if bosstoirand = 10:
+			gossipBU += 1
+
+			'You went to the toilet, but in the hallway accidentally collided with Ivan. Ivan looked at you with a smile and turned away went about his business.'
+
+			dynamic $boss_din_toilet_wash
+		elseif bosstoirand = 9:
+			gossipBU += 1
+
+			'You went to the toilet, but in the hallway accidentally collided with the chief accountant Lena. Lena looked at you and saw a sperm murmured "Whore" and he went about his business.'
+
+			dynamic $boss_din_toilet_wash
+		elseif bosstoirand = 8:
+			gossipBU += 1
+
+			'You went to the toilet, but in the hallway accidentally collided with the personnel manager Vika. Vick saw you cum and her eyes widened in surprise, She wrinkled her nose in disgust and walked away.'
+
+			dynamic $boss_din_toilet_wash
+		elseif bosstoirand = 7:
+			gossipBU += 1
+
+			'You went to the toilet, but in the hallway accidentally collided with the deputy manager Sergei. Serge saw pimply youngster cum on you and laughed "That`s because huesoska" then he ran somewhere.'
+
+			dynamic $boss_din_toilet_wash
+		elseif bosstoirand < 7:
+			bosstoirandin = RAND(0,10)
+			if bosstoirandin = 10:
+				gossipBU += 1
+
+				'You quietly slipped into the toilet, but in the toilet, nose to nose encounter with chief accountant Lena. Lena looked at you and saw a sperm murmured "Whore" and he went about his business.'
+
+				dynamic $boss_din_toilet_wash2
+			elseif bosstoirandin = 9:
+				gossipBU += 1
+
+				'You quietly slipped into the toilet, but in the toilet, nose to nose confronted with personnel manager Vika Vika saw you cum and her eyes widened in surprise, She wrinkled her nose in disgust and walked away.'
+
+				dynamic $boss_din_toilet_wash2
+			elseif bosstoirandin < 9:
+				cumface = 0
+				cumfrot = 0
+
+				if cumface > 0:$deytoibur = 'Standing at the sink you have washed the face, wash sperm.'
+				if cumfrot > 0:$deytoibur2 = 'Unnoticed erase semen from clothing failed and blouse left a large wet spot.'
+				'You quietly slipped into the toilet. <<$deytoibur>><<$deytoibur2>>'
+
+				if PSBBtimes = 1:dynamic $dinBistroWork
+				if PSBBtimes = 2:dynamic $dinBistroWork2
+			end
+		end
+	end
+}
+
+$boss_din_toilet_wash = {
+	cumface = 0
+	cumfrot = 0
+
+	if cumface > 0:$deytoibur = 'Standing at the sink you have washed the face, wash sperm.'
+	if cumfrot > 0:$deytoibur2 = 'Unnoticed erase semen from clothing failed and blouse left a large wet spot.'
+	'You went to the bathroom and turned on the water in the sink. <<$deytoibur>><<$deytoibur2>>'
+
+	if PSBBtimes = 1:dynamic $dinBistroWork
+	if PSBBtimes = 2:dynamic $dinBistroWork2
+}
+
+$boss_din_toilet_wash2 = {
+	cumface = 0
+	cumfrot = 0
+
+	if cumface > 0:$deytoibur = 'Standing at the sink you have washed the face, wash sperm.'
+	if cumfrot > 0:$deytoibur2 = 'Unnoticed erase semen from clothing failed and blouse left a large wet spot.'
+	'You turn on the water in the sink. <<$deytoibur>><<$deytoibur2>>'
+
+	if PSBBtimes = 1:dynamic $dinBistroWork
+	if PSBBtimes = 2:dynamic $dinBistroWork2
+}
+
+$boss_din_bj_cum = {
+	act 'Remove the member from the mouth':
+		cls
+		gs'stat'
+
+		reaktrand = RAND(0,10)
+		if reaktrand <= 5:
+			'<center><img src="images/qwest/sosed/bossBJcum.jpg"></center>'
+			'You just took out a member of his mouth. One hour is a member of semen splattered on the floor, You caressed member of the hand until finally Chubais did not exhausted. Then he removed his dick in his pants and sat down at the table.'
+
+			if PSBBtimes = 1:dynamic $dinBistroWork
+			if PSBBtimes = 2:dynamic $dinBistroWork2
+		elseif reaktrand > 5 and reaktrand < 9:
+			cumfrot += 1
+
+			'<center><img src="images/qwest/sosed/bossBJcum2.jpg"></center>'
+			'You just took out a member of his mouth. One hour is a member of semen splattered on the floor, You caressed member of the hand until finally Chubais did not exhausted. then he removed the dick in his pants and sat down at the table. Starting brush up, you noticed, that part of the sperm gets into your shirt on.'
+
+			dynamic $boss_din_go_toilet
+		elseif reaktrand >= 9:
+			cumface += 1
+			cumfrot += 1
+
+			'<center><img src="images/qwest/sosed/bossBJcum3.jpg"></center>'
+			'Once you have taken out a member of his mouth, as directed jet of sperm hit you in the face. You close your eyes and you immediately got the sperm to the lashes. When you rubbed your eyes, we saw, that sperm also got on your clothes.'
+
+			dynamic $boss_din_go_toilet
+		end
+
+		gs'stat'
+	end
+
+	dynamic $boss_din_bj2
+}
+
+$boss_din_bj2 = {
+	act 'Continue to suck':
+		cls
+		cumlip += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/bossBJcum4.jpg"></center>'
+		'You have continued to suck and immediately poured into your mouth warm sperm, which is mixed with saliva while you continue to suck dick deciduous.'
+
+		act 'Spit out':
+			cls
+			gs'stat'
+
+			'<center><img src="images/qwest/sosed/bossBJcum5.jpg"></center>'
+			'When sperm ceased to flow out of the penis you are hurried spit cum mouth, but his mouth was nasty, pungent taste of sperm.'
+
+			boburand = RAND(0,10)
+			if boburand > 2:
+				if PSBBtimes = 1:dynamic $dinBistroWork
+				if PSBBtimes = 2:dynamic $dinBistroWork2
+			elseif boburand <= 2:
+				cumfrot += 1
+				gs'stat'
+
+				'Spitting out the sperm you notice that a few drops of sperm makes contact with your blouse.'
+
+				dynamic $boss_din_go_toilet
+			end
+		end
+		act 'Swallow':
+			cls
+			swallow += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/sosed/bossBJcum6.jpg"></center>'
+			'You rushed to swallow a warm and nasty cum, but his mouth was an unpleasant taste of semen.'
+
+			boburand = RAND(0,10)
+			if boburand > 2:
+				if PSBBtimes = 1:dynamic $dinBistroWork
+				if PSBBtimes = 2:dynamic $dinBistroWork2
+			elseif boburand <= 2:
+				cumfrot += 1
+				gs'stat'
+
+				'Spitting out the sperm you notice that a few drops of sperm makes contact with your blouse.'
+
+				dynamic $boss_din_go_toilet
+			end
+		end
+	end
+}
+
+$boss_din_bendover = {
+	act 'Lie chest on the table':
+		cls
+		gs'stat'
+		!bossfuck
+
+		'<center><img src="images/qwest/sosed/bossbendover.jpg"></center>'
+		'You bent down and laid on the table-feeding, She lifted her skirt with his hands and parted the ass.'
+
+		bosstipsex = RAND(0,10)
+		if bosstipsex <= 8:
+			'Anatoly Borisovich rubbed a little head of his penis on your pussy mokrenkaya.'
+
+			dynamic $boss_din_sex
+		elseif bosstipsex > 8:
+			'Anatoly Borisovich bent over and spit on your ass, Then you feel his finger collected saliva and you went into the anus.'
+
+			dynamic $boss_din_anal
+		end
+	end
+}
+
+$boss_din_sex = {
+	act 'Moan':
+		cls
+		bosstipsex = RAND(0,10)
+		$boy = 'Anatoly'
+		dick = 12
+		silavag = 0
+		pose = 1
+		gs'stat'
+		!bossfuck
+
+		'<center><img src="images/qwest/sosed/bossfuck.jpg"></center>'
+		'You relax and feel like your lower jaws parted logged into your body hard cock, you can not stand the distance and light moan, from the feeling of fullness.'
+
+		dynamic $sexstart2
+		!dynamic $sexcum
+
+		bosswantrand = RAND(0,10)
+		if bosswantrand >= 3:
+			cumass = cumass + 1
+
+			'<<$boy>> You took out a member and you feel like a jet of sperm on your naked ass.'
+			'You took a napkin and wiped the sperm with his bare ass, but you`re not rubbing, of the sperm still remain in your body.'
+
+			if PSBBtimes = 1:dynamic $dinBistroWork
+			if PSBBtimes = 2:dynamic $dinBistroWork2
+		elseif bosswantrand < 3:
+			'Anatoly Borisovich took out a member of your pussy and stared it in your ass.'
+
+			dynamic $boss_din_anal
+		end
+	end
+}
+
+$boss_din_anal = {
+	act 'Relax anus':
+		cls
+		bosstipsex = RAND(0,10)
+		$boy = 'Anatoly'
+		dick = 12
+		silavag = 0
+		pose = 1
+		gs'stat'
+		!bossfuck
+
+		'<center><img src="images/qwest/sosed/bossanal.jpg"></center>'
+		'You relax and feel in your anus rested hard cock trying to push your sphincter.'
+
+		dynamic $analsex
+		!dynamic $sexcum
+
+		cumanus += 1
+
+		'<<$boy>> groaned and you felt something in your ass was bottled heat from sperm.'
+		'Finally Anatoly Borisovich took out a member of your priests and removed his pants.'
+
+		if PSBBtimes = 1:dynamic $dinBistroWork
+		if PSBBtimes = 2:dynamic $dinBistroWork2
+	end
+}
+
+$boss_din_sex2 = {
+	act 'Moan':
+		cls
+		bosstipsex = RAND(0,10)
+		$boy = 'Anatoly'
+		dick = 12
+		silavag = 0
+		pose = 0
+		gs'stat'
+		!bossfuck
+
+		'<center><img src="images/qwest/sosed/bossfuck2.jpg"></center>'
+		'You relax and feel like your lower jaws parted logged into your body hard cock, you can not stand the distance and light moan, from the feeling of fullness.'
+
+		dynamic $sexstart2
+		!dynamic $sexcum
+
+		bosswantrand = RAND(0,10)
+		if bosswantrand >= 3:
+			cumbelly = cumbelly + 1
+
+			'<<$boy>> You took out a member and you feel like a jet of sperm on your naked ass.'
+			'You took a napkin and wiped the sperm with his bare ass, but you`re not rubbing, of the sperm still remain in your body.'
+
+			if PSBBtimes = 1:dynamic $dinBistroWork
+			if PSBBtimes = 2:dynamic $dinBistroWork2
+		elseif bosswantrand < 3:
+			'Anatoly Borisovich took out a member of your pussy and stared it in your ass.'
+
+			dynamic $boss_din_anal2
+		end
+	end
+}
+
+$boss_din_anal2 = {
+	act 'Relax anus':
+		cls
+		bosstipsex = RAND(0,10)
+		$boy = 'Anatoly'
+		dick = 12
+		silavag = 0
+		pose = 0
+		gs'stat'
+		!bossfuck
+
+		'<center><img src="images/qwest/sosed/bossanal2.jpg"></center>'
+		'You relax and feel in your anus rested hard cock trying to push your sphincter.'
+
+		dynamic $analsex
+		!dynamic $sexcum
+
+		cumanus += 1
+
+		'<<$boy>> I groaned, and you feel like in your ass was bottled heat from sperm.'
+		'Finally Anatoly Borisovich took out a member of your priests and removed his pants.'
+
+		if PSBBtimes = 1:dynamic $dinBistroWork
+		if PSBBtimes = 2:dynamic $dinBistroWork2
+	end
+}
+
+$din_Ivan_work = {
+	if kompromatLife > 0 and kompromatBlackMail = 0:
+		'Ivan grinned "Svetik, Svetik. I could not have imagined, that such a sweet girl, such a rich life." He put the photo on the table you. You pick it up and look. <<$kompromatFoto>>. Ivan pleased reached, like a cat caught the mouse "You know Svetsik, All anything, but our chief claim to political career. And in politics he did not forgive, his secretary loves to act in such a way. He, too, will suffer." So that, you can collect things and find a new job. "When Anatoly Borisovich know, then you will take off from here with a bang."'
+
+		dynamic $din_Ivan_work2
+
+		act 'Keep silent':
+			cls
+			kompromatBlackMail = 1
+			minut += 5
+			gs'stat'
+
+			'<center><img src="images/qwest/sosed/work5.jpg"></center>'
+			'Ivan seeing your silence frowned slightly. "Okay baby, pride destroy you." Ivan got irritated and put the photo in his pocket.'
+
+			if PSBBtimes = 1:dynamic $dinBistroWork
+			if PSBBtimes = 2:dynamic $dinBistroWork2
+
+			dynamic $din_Ivan_work2
+		end
+	end
+}
+
+$din_Ivan_work2 = {
+	act 'Ivan plead not show these photos':
+		cls
+		minut += 5
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/work5.jpg"></center>'
+		'You begged Ivan skip boss pictures. Ivan grinned "I see you are ready to cooperate. let`s go to my office, discuss."'
+
+		act 'Go to Ivan in his office':
+			cls
+			kompromatBlackMail = 2
+			gs'stat'
+
+			'You came to the office of Ivan and he closed the door with a key. "Well baby, To begin, I want to see you naked. Undress!"'
+
+			act 'Undress':
+				cls
+				kompromatBlackMail = 2
+				gs'stat'
+
+				'You undressed feeling the gaze of Ivan. When you find yourself naked in front of him, he slowly walked across the room, I am looking at you. His hand took you for the chest and you feel his fingers covered your nipple. "Not bad, good. Maybe we`ll get along and. Now on his knees bitch, and open your fucking mouth wide."'
+
+				act 'Kneel down and open your mouth':
+					cls
+					kompromatBlackMail = 2
+					cumface += 1
+					facial += 1
+					boy += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/ivanfacial.jpg"></center>'
+					'You knelt and opened his mouth. Ivan took out a member of his pants and began to masturbate in front of your face, without taking with you your gaze. "I knew, that you will be my whore!" sperm from his penis splattered on your face. Then another and another jet. After Ivan finished your face, he removed his dick in his pants and said, "Okay, get out of my office slut, and do not forget, I do not report to the chief nothing, but you are in my hands."'
+
+					if PSBBtimes = 1:dynamic $dinBistroWork
+					if PSBBtimes = 2:dynamic $dinBistroWork2
+				end
+			end
+
+			dynamic $din_Ivan_work3
+		end
+
+		dynamic $din_Ivan_work3
+	end
+}
+
+$din_Ivan_work3 = {
+	act 'Takeout':
+		cls
+		kompromatBlackMail = 1
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/work7.jpg"></center>'
+		'You refused to undress. Ivan sighed. "All the same, you stupid pussy, and I`m tired of you messing, easier to get rid of you, Once and for all." Ivan went to the door, I opened it and pointed out to you at the door.'
+
+		if PSBBtimes = 1:dynamic $dinBistroWork
+		if PSBBtimes = 2:dynamic $dinBistroWork2
+	end
+}
+
+$din_Ivan_work4 = {
+	act 'Takeout':
+		cls
+		kompromatBlackMail = 1
+		gs'stat'
+
+		'<center><img src="images/qwest/sosed/work7.jpg"></center>'
+		'You refused. Ivan sighed. "All the same, you stupid pussy, and I`m tired of you messing, easier to get rid of you, Once and for all." He turned and walked away'
+
+		act 'Escape':gt'down'
+	end
+}
+--- BurgerTip ---------------------------------
+

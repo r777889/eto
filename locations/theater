@@ -1,0 +1,6 @@
+# theater
+act 'Back to the lobby':
+	gt'hall'
+end
+--- theater ---------------------------------
+

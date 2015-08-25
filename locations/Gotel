@@ -1,0 +1,16 @@
+# Gotel
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+
+'<center><H4>Hotel</H4></center>'
+'<center><img src="images/pic/Gotel.jpg"></center>'
+'Near <a href="exec:minut += 3 & GT ''vokzalG''">the front door</a> Front located <a href="exec:minut += 1 & GT ''Gresep''">reception</a>.'
+
+if hour >= 12 and hour <= 13 and GermanQW > 0:
+	'In the room with the inscription <a href="exec:minut += 1 & GT ''Goteladmin''">"Administration"</a> The castle is open.'
+end
+--- Gotel ---------------------------------
+

@@ -1,0 +1,22 @@
+# avt
+!tehNT = 200
+!tehT = RAND(10,200)
+
+if tehT >= tehNT*75/100:$tehT = 'The car is in excellent condition.'
+if tehT < tehNT*75/100 and tehT >= tehNT*50/100:$tehT = 'When the engine have the background noise'
+if tehT < tehNT*50/100 and tehT >= tehNT*25/100:$tehT = 'The car rumbles and smokes.'
+if tehT < tehNT*25/100:$tehT = 'As the toilet was able to start the engine it is not clear.'
+
+if carT = 1:
+	if tehT >= tehNT*75/100:bupay = RAND(100000,180000)
+	if tehT < tehNT*75/100 and tehT >= tehNT*50/100:bupay = RAND(60000,130000)
+	if tehT < tehNT*50/100 and tehT >= tehNT*25/100:bupay = RAND(35000,65000)
+	if tehT < tehNT*25/100:bupay = RAND(15000,50000)
+elseif carT = 2:
+	if tehT >= tehNT*75/100:bupay = RAND(80000,100000)
+	if tehT < tehNT*75/100 and tehT >= tehNT*50/100:bupay = RAND(50000,90000)
+	if tehT < tehNT*50/100 and tehT >= tehNT*25/100:bupay = RAND(30000,60000)
+	if tehT < tehNT*25/100:bupay = RAND(15000,40000)
+end
+--- avt ---------------------------------
+

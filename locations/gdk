@@ -1,0 +1,46 @@
+# gdk
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+music_on = 0
+gs'stat'
+gs'time'
+
+'<center><b><font color = maroon>The House of Culture</font></b></center>'
+
+if hour >= 9 and hour < 20:
+	'<center><img src="images/etogame/dk.jpg"></center>'
+	'In the evenings 20.00 to 23.00 dancing. Entrance 25 rubles.'
+elseif hour >= 20 and hour < 23:
+	'<center><img src="images/etogame/dk_night.jpg"></center>'
+	'At the entrance to the recreation center is full of youth, guys just stand and smoke, joke, and someone-then look out for. Small groups of girls 2-3 man, that-then discuss, who-simply thumps in the bushes.'
+
+	if money >= 25:act 'Log club':money -= 25 & minut += 15 & gt'gdkin'
+elseif hour >= 23:
+	'<center><img src="images/etogame/dk_night.jpg"></center>'
+	'In the evenings 20.00 to 23.00 dancing. Entrance 25 rubles.'
+end
+
+act 'Logout':gt'gorodok'
+
+if hour >= 16 and hour <= 20:
+	'Now the house of culture sports sections.'
+	act 'Go to section':gt'gdksport'
+end
+
+if hour >= 8 and hour <= 18:
+	'Now the House of Culture operates a library.'
+	act 'Go to the library':gt'gdkbibl'
+end
+if hour >= 12 and hour <= 20:
+	'C 14 to 20 House of Culture in different working circles.'
+	act 'Go to clubs':gt'gdkkru'
+end
+
+'<a href="exec:minut += 5 & GT ''ugel''">Login for the club</a>'
+
+if hour < 9:'<center><img src="images/etogame/dk_night.jpg"></center>'
+
+gs'family'
+--- gdk ---------------------------------
+

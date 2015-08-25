@@ -1,0 +1,643 @@
+# selfplay
+$d_self_ass_fingering = {
+
+}
+
+$d_self_fingering = {
+	act 'Poke a finger in the vagina':
+		cls
+		minut += 2
+		selfplaytime += 2
+
+		'<center><img src="images/qwest/selfplay/finger.jpg"></center>'
+
+		if vagina = 0 and mesec <= 0:
+			'You caress her fingers on his lips soft and wet pussy and began to gradually introduce his finger in the pussy, but you stumble upon a resilient barrier their hymen.'
+
+			act 'Pierce Worthless':
+				cls
+				horny -= 25
+				vagina += 1
+				minut += 5
+				selfplaytime += 5
+				manna -= 100
+				gs'stat'
+
+				'<center><img src="images/qwest/selfplay/finger.jpg"></center>'
+				'You stuck his finger in the pussy and forcefully pressed on Worthless, it`s a little bent inside your body, and suddenly broke your finger and went inside completely. Inside was a little painful pussy, You got out of his finger and saw himself, he blood.'
+
+				act 'Breather':gt $curloc
+			end
+		elseif vagina > 0:
+			'You entered my finger into the vagina and then another.'
+
+			if vagina < 5:
+				horny += RAND(2,5)
+
+				'Slippery walls of your pussy very tightly clasped fingers.'
+			elseif vagina >= 5 and vagina < 10:
+				horny += RAND(5,10)
+
+				'You feel your pussy slippery wall around your fingers.'
+			elseif vagina >= 10:
+				horny += RAND(2,5)
+
+				'Your pussy is quite spacious for a couple of fingers and you are moving your fingers feel slippery walls your pussy.'
+			elseif vagina < 5:
+				vaginaTemp += 1
+			end
+
+			act 'Fuck yourself with your fingers':
+				cls
+				minut += 5
+				selfplaytime += 5
+				if vagina <= 10:horny += RAND(5,10)
+				if vagina > 10:horny += RAND(2,5)
+
+				'<center><img src="images/qwest/selfplay/finger.jpg"></center>'
+				'You started to fuck her pussy fingers typing them in his bosom, and moving them.'
+				if vagina <= 10:'Your pussy gently grabs your fingers and you feel pleasant warmth spreads in the abdomen.'
+				if vagina > 10:'Vagina is quite spacious and you have quite work, that would be at least something of the feel of his fingers.'
+
+				gs'stat'
+				if vagina < 10:vaginaTemp += 1
+
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+
+					'Suddenly you if electric shock and abdomen began pleasant spasms ,you squirm biting her lip, that would not scream with pleasure.'
+				end
+
+				if horny > 0:dynamic $d_self_fingering2
+
+				act 'Breather':gt $curloc
+			end
+		elseif mesec > 0:
+			manna -= 5
+
+			'Vagina slightly covered with dried blood on your monthly. You tried to shove a finger, but you immediately became not nice.'
+		end
+
+		gs'stat'
+
+		act 'Breather':gt $curloc
+	end
+}
+
+$d_self_fingering2 = {
+	act 'Thrust his hand into the vagina':
+		cls
+		minut += 2
+		selfplaytime += 2
+
+		'<center><img src="images/qwest/selfplay/hand.jpg"></center>'
+
+		if vagina > 0:
+			'You introduced yourself all the hand into the vagina.'
+
+			if vagina < 10:
+				if vgape = 2:vgape = 3
+				if vgape = 1:vgape = 2
+				if vgape = 0:vgape = 1
+				vgapetime = totminut
+				horny -= 10
+				manna -= 10
+
+				'You stuck all the fingers in the pussy and you will immediately become very painful.'
+			elseif vagina >= 10 and vagina < 15:
+				horny += RAND(1,3)
+
+				'You stuck all the fingers in your pussy and felt like your vagina is very tight wraps his fingers, It seems just a little bit and you will break something.'
+			elseif vagina >= 15 and vagina < 20:
+				horny += RAND(3,6)
+
+				'You stuck all the fingers in your pussy and felt like your vagina tightly wraps his fingers warm and wet walls.'
+			elseif vagina >= 20:
+				horny += RAND(6,12)
+
+				'You stuck all the fingers in your pussy and felt like your vagina clasps his fingers hot and wet walls. You covered a pleasant feeling of fullness.'
+			elseif vagina < 15:
+				vaginaTemp += 1
+			end
+
+			act 'Fuck his palm':
+				cls
+				minut += 5
+				selfplaytime += 5
+
+				if vagina < 10:
+					if vgape = 2:vgape = 3
+					if vgape = 1:vgape = 2
+					if vgape = 0:vgape = 1
+					vgapetime = totminut
+					horny -= 10
+					manna -= 10
+				end
+
+				'<center><img src="images/qwest/selfplay/hand.jpg"></center>'
+				'You started to fuck her pussy fingers typing them in his bosom, and moving them.'
+
+				if vagina <= 15:horny -= 10 & manna -= 10 & 'Are you hurt when you are trying to fuck her pussy with his palm.'
+				if vagina > 10:horny += RAND(10,20) & 'Vagina is quite spacious and you have quite work, that would be at least something of the feel of his fingers.'
+
+				gs'stat'
+				if vagina < 20:vaginaTemp += 1
+
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+
+					'Suddenly you if electric shock and abdomen began pleasant spasms ,you squirm biting her lip, that would not scream with pleasure.'
+				end
+
+				dynamic $d_self_fingering2
+
+				act 'Breather':gt $curloc
+			end
+		end
+
+		gs'stat'
+
+		act 'Breather':gt $curloc
+	end
+}
+
+$d_van_vtor = {
+	if indorf = 0:
+		cls
+		horny -= 50
+		manna -= 10
+		gs'stat'
+
+		'In the bathroom chattering "Sveta! You what, drowned or something? Get out of the bath!"'
+
+		act 'Exit the bathroom':
+			analplay = 0
+			selfplaytime = 0
+			mastrOnce = 0
+			proverkasisterhere = 0
+			if vaginaTemp > vagina*2:vagina += 1 & vaginaTemp = 0
+			gt $loc, $metka
+		end
+
+		exit
+	end
+}
+
+!if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
+!dynamic $d_sis_prov
+
+$d_sis_prov = {
+	if sister_indorf = 0:
+		if $loc = 'bedrPar':
+			gs'family'
+			if sisterHere = 0 and proverkasisterhere = 0:proverkasisterhere = 1
+			if sisterHere > 0 and proverkasisterhere = 2:gt $curloc
+		end
+	end
+}
+
+if mastrOnce = 0:mastr += 1 & mastrOnce = 1
+gs'stat'
+
+if $loc = 'bedrPar' or $loc = 'Gadsarai':'<center><img src="images/qwest/selfplay/start.jpg"></center>'
+if $loc = 'vanrPar':'<center><img src="images/qwest/selfplay/startvann.jpg"></center>'
+
+!then calculation of the invasion
+if $loc = 'vanrPar':
+	if selfplaytime >= 60:
+	end
+end
+if $loc = 'bedrPar':
+	gs'family'
+
+	if sister_indorf = 0:
+		if sisterHere = 0 and proverkasisterhere = 0:proverkasisterhere = 1
+		if sisterHere > 0:
+			cls
+			gs'stat'
+
+			!if $loc = 'bedrPar':'<center><img src="images/qwest/selfplay/start.jpg"></center>'
+
+			if $loc = 'vanrPar':
+				'<center><img src="images/qwest/selfplay/startvann.jpg"></center>'
+			else
+				'<center><img src="images/qwest/selfplay/start.jpg"></center>'
+			end
+
+			if proverkasisterhere = 2:
+				SisterKnowMastr += 1
+
+				'<font color = red><b>Anya saw, you masturbate.</b></font>'
+			end
+
+			if proverkasisterhere = 1:
+				proverkasisterhere = 2
+
+				'<font color = red><b>You hear footsteps approaching your room.</b></font>'
+			end
+		end
+	end
+end
+
+if dildo = 1:'Do you have a small long dildo 10 see.'
+if middildo = 1:'You have a long dildo 15 see.'
+if largedildo = 1:'You have a long dildo 20 see.'
+if bigdildo = 1:'You have a long dildo 25 see.'
+if extradildo = 1:'You have a long dildo 30 see.'
+if superdildo = 1:'You have a long dildo 35 see.'
+if maddildo = 1:'You have a long dildo 40 see.'
+
+if horny > 0:
+	act 'Caress the clitoris':
+		cls
+		minut += 5
+		selfplaytime += 5
+
+		!if $loc = 'bedrPar':'<center><img src="images/qwest/selfplay/klit.jpg"></center>'
+
+		if $loc = 'vanrPar':
+			'<center><img src="images/qwest/selfplay/klitvann.jpg"></center>'
+		else
+			'<center><img src="images/qwest/selfplay/klit.jpg"></center>'
+		end
+
+		if manna >= mannamax/2:
+			horny += RAND(5,10)
+
+			'You put his hand between her legs and groped in the folds of her soft and wet pussy small bump touches which are very pleasant, you began to caress her fingers this hump and enjoy the feeling of pleasant warmth cover you between the legs.'
+		elseif manna < mannamax/2:
+			horny += RAND(0,1)
+
+			'You fingers caress the clitoris, you have a good and pleasant, but your bad mood affects, you just can not escape from his thoughts, and you can not get excited.'
+		end
+
+		if horny >= 100:
+			orgasm += 1
+			horny = 0
+			manna = mannamax
+
+			'Suddenly you if electric shock and abdomen began pleasant spasms ,you squirm biting her lip, that would not scream with pleasure.'
+		end
+
+		gs'stat'
+
+		act 'Breather':gt $curloc
+
+		if horny > 0:dynamic $d_self_fingering
+	end
+end
+
+if horny > 0 and agape < 3:
+	act 'Poke a finger in the ass':
+		cls
+		minut += 5
+		selfplaytime += 5
+
+		!if $loc = 'bedrPar':'<center><img src="images/qwest/selfplay/klit.jpg"></center>'
+		!if $loc = 'vanrPar':'<center><img src="images/qwest/selfplay/klitvann.jpg"></center>'
+		'<center><img src="images/qwest/selfplay/1.jpg"></center>'
+
+		if anus >= 3:
+			'You stuck a finger in his ass and he freely slipped into your anus.'
+		elseif anus >= 1 and anus < 3:
+			anus += 1
+
+			'You stuck a finger in his ass and felt like a tight ass grabbed your finger.'
+		elseif anus = 0:
+			anus = 1
+
+			'You stuck a finger in his virgin ass and felt like a tight ass grabbed your finger.'
+		end
+
+		if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
+
+		dynamic $d_sis_prov
+
+		gs'stat'
+
+		act 'Breather':gt $curloc
+		act 'Stick two fingers':
+			cls
+			minut += 5
+			selfplaytime += 5
+
+			'<center><img src="images/qwest/selfplay/2.jpg"></center>'
+
+			if anus >= 5:
+				'You calmly stuck two fingers in your ass.'
+
+				if agape > 0:
+					if agape = 2:agape = 3
+					if agape = 1:agape = 2
+					agapetime = totminut
+					horny -= 50
+					if anus > 1:anus -= 1
+
+					'Do you have a sore butt and sticking two fingers you even more damage it.'
+				end
+			elseif anus >= 3 and anus < 5:
+				analplay += 1
+
+				'You stuck two fingers in his ass and your ass tightly wrapped them.'
+
+				if agape > 0:
+					if agape = 2:agape = 3
+					if agape = 1:agape = 2
+					agapetime = totminut
+					horny -= 50
+					anus += 1
+
+					'Do you have a sore butt and sticking two fingers you even more damage it.'
+				end
+			elseif anus >= 1 and anus < 3:
+				anus += 1
+				if agape = 2:agape = 3
+				if agape = 1:agape = 2
+				if agape = 0:agape = 1
+				horny -= 50
+				agapetime = totminut
+
+				'You stuck two fingers in his ass and felt a sharp pain in your anus.'
+			end
+
+			gs'stat'
+
+			act 'Breather':gt $curloc
+
+			if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
+
+			dynamic $d_sis_prov
+
+			if horny > 0 and agape < 3:
+				act 'Thrust three fingers':
+					cls
+					minut += 5
+					selfplaytime += 5
+
+					'<center><img src="images/qwest/selfplay/3.jpg"></center>'
+
+					if anus >= 10:
+						'You calmly stuck three fingers in your ass.'
+
+						if agape > 0:
+							if agape = 2:agape = 3
+							if agape = 1:agape = 2
+							agapetime = totminut
+							horny -= 50
+							if anus > 1:anus += 1
+
+							'Do you have a sore ass and thrust three fingers you even more damage it.'
+						end
+					elseif anus >= 5 and anus < 10:
+						analplay += 1
+
+						'You stuck three fingers in his ass and your ass tightly wrapped them.'
+
+						if agape > 0:
+							if agape = 2:agape = 3
+							if agape = 1:agape = 2
+							agapetime = totminut
+							horny -= 50
+							anus += 1
+
+							'Do you have a sore ass and thrust three fingers you even more damage it.'
+						end
+					elseif anus < 5:
+						anus += 1
+						if agape = 2:agape = 3
+						if agape = 1:agape = 2
+						if agape = 0:agape = 1
+						horny -= 50
+						agapetime = totminut
+
+						'You stuck three fingers in his ass and felt a sharp pain in your anus.'
+					end
+
+					act 'Breather':gt $curloc
+
+					if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
+
+					dynamic $d_sis_prov
+
+					gs'stat'
+
+					if horny > 0 and agape < 3:
+						act 'Thrust four fingers':
+							cls
+							minut += 5
+							selfplaytime += 5
+
+							'<center><img src="images/qwest/selfplay/4.jpg"></center>'
+
+							if anus >= 15:
+								'You quietly stuck his hand in your ass.'
+
+								if agape > 0:
+									if agape = 2:agape = 3
+									if agape = 1:agape = 2
+									agapetime = totminut
+									horny -= 50
+									if anus > 1:anus -= 1
+
+									'Do you have a sore butt and sticking four fingers you even more damage it.'
+								end
+							elseif anus >= 10 and anus < 15:
+								analplay += 1
+
+								'You stuck a hand in his ass and your ass grabbed them tightly.'
+
+								if agape > 0:
+									if agape = 2:agape = 3
+									if agape = 1:agape = 2
+									agapetime = totminut
+									horny -= 50
+									anus += 1
+
+									'Do you have a sore ass and thrust his hand you even more damage it.'
+								end
+							elseif anus < 10:
+								anus += 1
+								if agape = 2:agape = 3
+								if agape = 1:agape = 2
+								if agape = 0:agape = 1
+								horny -= 50
+								agapetime = totminut
+
+								'You have thrust his hand into his ass and felt a sharp pain in your anus.'
+							end
+
+							act 'Breather':gt $curloc
+
+							if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
+
+							dynamic $d_sis_prov
+
+							gs'stat'
+
+							if horny > 0 and agape < 3:
+								act 'Stick the whole hand':
+									cls
+									SelfFisting += 1
+									minut += 5
+									selfplaytime += 5
+
+									'<center><img src="images/qwest/selfplay/5.jpg"></center>'
+
+									if anus >= 20:
+										'You calmly put his hand in your ass.'
+
+										if agape > 0:
+											if agape = 2:agape = 3
+											if agape = 1:agape = 2
+											agapetime = totminut
+											horny -= 50
+											if anus > 1:anus -= 1
+
+											'Do you have a sore ass and thrust his hand you even more damage it.'
+										end
+									elseif anus >= 15 and anus < 20:
+										analplay += 1
+
+										'You reached into his ass and your ass tightly wrapped them.'
+
+										if agape > 0:
+											if agape = 2:agape = 3
+											if agape = 1:agape = 2
+											agapetime = totminut
+											horny -= 50
+											anus += 1
+
+											'Do you have a sore ass and thrust his hand you even more damage it.'
+										end
+									elseif anus < 15:
+										anus += 1
+										if agape = 2:agape = 3
+										if agape = 1:agape = 2
+										if agape = 0:agape = 1
+										horny -= 50
+										agapetime = totminut
+
+										'You reached into his ass and felt a sharp pain in your anus.'
+									end
+
+									act 'Breather':gt $curloc
+
+									if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
+
+									dynamic $d_sis_prov
+
+									gs'stat'
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if horny > 10:
+	if dildo >= 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 or extradildo = 1 or superdildo = 1 or maddildo = 1:
+		if dildohand > 0:
+			'In your hands <<dildohand>>five inch dildo'
+
+			if vgape <= 0:
+				act 'Dildo in the pussy':
+					cls
+					minut += 15
+					selfplaytime += 15
+					dick = dildohand
+
+					!if $loc = 'bedrPar':'<center><img src="images/qwest/selfplay/dildo.jpg"></center>'
+
+					if $loc = 'vanrPar':
+						'<center><img src="images/qwest/selfplay/dildovann.jpg"></center>'
+					else
+						'<center><img src="images/qwest/selfplay/dildo.jpg"></center>'
+					end
+
+					dynamic $d_vag_sex_dildo
+
+					gs'stat'
+
+					act 'Breather':gt $curloc
+				end
+			end
+
+			if agape <= 0:
+				act 'Dildo in the ass':
+					cls
+					minut += 15
+					selfplaytime += 15
+					dick = dildohand
+
+					!if $loc = 'bedrPar':'<center><img src="images/qwest/selfplay/dildoanal.jpg"></center>'
+
+					if $loc = 'vanrPar':
+						'<center><img src="images/qwest/selfplay/dildovann.jpg"></center>'
+					else
+						'<center><img src="images/qwest/selfplay/dildoanal.jpg"></center>'
+					end
+
+					dynamic $d_analsex_dildo
+
+					gs'stat'
+
+					act 'Breather':gt $curloc
+				end
+			end
+
+			act 'Put the dildo in place':dildohand = 0 & gt $curloc
+		elseif dildohand = 0:
+			'You do not have a dildo in his hands'
+
+			if dildo = 1:
+				act 'Take 10five inch dildo':dildohand = 10 & gt $curloc
+			end
+			if middildo = 1:
+				act 'Take 15five inch dildo':dildohand = 15 & gt $curloc
+			end
+			if largedildo = 1:
+				act 'Take 20five inch dildo':dildohand = 20 & gt $curloc
+			end
+			if bigdildo = 1:
+				act 'Take 25five inch dildo':dildohand = 25 & gt $curloc
+			end
+			if extradildo = 1:
+				act 'Take 30five inch dildo':dildohand = 30 & gt $curloc
+			end
+			if superdildo = 1:
+				act 'Take 35five inch dildo':dildohand = 35 & gt $curloc
+			end
+			if maddildo = 1:
+				act 'Take 40five inch dildo':dildohand = 40 & gt $curloc
+			end
+		end
+	end
+end
+
+if horny > 0:dynamic $d_self_fingering
+
+act 'Abandon this idea':
+	analplay = 0
+	selfplaytime = 0
+	mastrOnce = 0
+	proverkasisterhere = 0
+	if vaginaTemp > vagina*2:vagina += 1 & vaginaTemp = 0
+	gt $loc, $metka
+end
+
+if $loc = 'vanrPar' and selfplaytime >= 60:dynamic $d_van_vtor
+
+if $loc = 'Gadsarai':
+	piratHorny += 1
+
+	'The dog named Pirate curiously looks at ,what are you doing.'
+end
+--- selfplay ---------------------------------
+

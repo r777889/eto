@@ -1,0 +1,23 @@
+# vokzal
+$metka = $ARGS[0]
+$loc = $CURLOC
+cls
+gs'stat'
+gs'time'
+
+'<center><H4>Railway station</H4></center>'
+'<center><img src="images/pic/vokzal2.jpg"></center>'
+
+if car > 0 and cardrive = 19:
+	cardrive = 19
+	'In the parking lot is <a href="exec:GS ''carF'',''start''">your <<$car>></a>.'
+end
+
+temp = RAND(1,100)
+if temp > 70:'You see <a href="exec:GT ''etoexhib'',''pos54''">suspicious character.</a>'
+
+act 'Go':minut+=5&gt'vokzalholle'
+act 'Escape':minut += 15 & gt'nord'
+act 'Exit at North Highway':minut += 15 & nroad = 0 & gt'road'
+--- vokzal ---------------------------------
+

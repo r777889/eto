@@ -1,0 +1,63 @@
+# kameraKPZ
+gs'stat'
+
+'<center><b><font color = maroon>Bullpen</font></b></center>'
+'<center><img src="images/pic/kpz.jpg"></center>'
+'Most camera with wooden benches.'
+
+if kameraKPZ < 3:
+	act 'Sit':
+		cla
+		minut += 60
+		kameraKPZ += 1
+		gs'stat'
+
+		'You sat on the hard wooden bench and began to think about your position.'
+
+		act '...':gt $curloc
+	end
+else
+	'For lattice approached a policeman and Anatoly Borisovich. The policeman immediately walked away and the owner said Bystroezhki. "Sveta, Sveta, Well, how could you?"'
+
+	act 'Tell him how it was':
+		cls
+		minut += 60
+		gs'stat'
+
+		'<center><img src="images/pic/kpz.jpg"></center>'
+		'You began to tell Ivan became persuade you to have sex and you denied him, he naplel you tales about your increase, and gave you the keys. Do you have an envelope and gave it to Ivan. Anatoly Borisovich sad you looked through the bars. "Sveta. Ivan showed himself a true professional and an honest man. He made it to the general manager of the bottoms. And you want me to say, he was tempted by what is 650 thousands? At all hazards, his position, his career, reputation, only, that would steal the money and annoy you? You`re just a dishwasher. What sense would he do that? Besides Ivan decent salary and maybe soon it will become director of the branch."'
+
+		act 'To convince his innocence':
+			cls
+			minut += 60
+			gs'stat'
+
+			'<center><img src="images/pic/kpz.jpg"></center>'
+			'You become the owner Bystroezhki convince of his innocence. Anatoly Borisovich about something thought. "It is reasonable to put you there is no me. I need to get my money back. And if we assume, that you`re not lying, Then I warmed a snake on his chest. That`s what I`ll tell you. I pohodataystvuyu, what would you have released on bail. You will be somewhere in the month before trial, that would clear himself. If you can not, then I`m sorry, i can not help you."'
+
+			act 'Agree':
+				cls
+				minut += 260
+				gs'stat'
+
+				'<center><img src="images/pic/kpz.jpg"></center>'
+				'Of course there is no selection and you agreed with Anatoli. He quickly went somewhere and after a while you let out of the bullpen. Chubais met you in his car and invited you to sit down to it.'
+
+				act 'Go with Anatoly':
+					cls
+					minut += 30
+					PodpiskaNeviezd = 1
+					IvanKvartira = 1
+					gs'stat'
+
+					'<center><img src="images/maggot/car.jpg"></center>'
+					'You got into the car and drove. Anatoly said. "Now I`ll take you to your house. I think you need some rest. Ivan lives in the northern region, Do as you. But consider, if again what the mischief, I`ll pull out will not. And remember girl. You have to court where a month. During this time, you must either return me the money, or prove me guilty of Ivan, or you sit. I`ll take care of, what would your time has been suspended. Send for six years sewing quilted jackets in some sort of wilderness surrounded by old prostitutes, addicts, cheats and other charges. And you will be a court decision to transfer me the money, has not paid the full amount of. If anything, find me in Bystroezhke." You came to your house and said goodbye to Anatoly.'
+
+					act 'Get out of the car':gt'street'
+				end
+			end
+		end
+	end
+end
+--- kameraKPZ ---------------------------------
+

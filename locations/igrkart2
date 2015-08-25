@@ -1,0 +1,189 @@
+# igrkart2
+clr
+minut = minut + 5
+gs'stat'
+
+if turn1 = 0:
+	cla
+	'<right><img src="images/casino/stavkacw.jpg"></right>'
+	'Please bid, Gentlemen.'
+
+	act 'Place bet':
+		money = money - deal
+		turn1 = 1
+
+		deal = input 'Enter the amount'
+		if money < deal:
+			msg 'You do not have the money'
+			gt'igrkart2'
+		elseif deal < 0:
+			msg 'Wrong, try again.'
+			gt'igrkart1'
+		elseif deal > 1000:
+			msg 'Maximum rate 1000 rubles.'
+			gt'igrkart1'
+		end
+
+		gt'igrkart2'
+	end
+	act 'Move away from the table':
+		gt'kazvar'
+	end
+end
+
+if turn1 = 1:
+	cla
+	nich = 0
+
+	'<right><img src="images/casino/stavkacw.jpg"></right>'
+
+	act 'Put another draw':
+		turn1 = 2
+		nich = 1
+
+		if money < deal:
+			msg 'You do not have the money'
+			turn1 = 2
+			nich = 0
+			gt'igrkart2'
+		else
+			money = money-deal
+		end
+
+		gt'igrkart2'
+	end
+	act 'Continue without additional rate':
+		turn1 = 2
+		nich = 0
+		gt'igrkart2'
+	end
+end
+if turn1 = 2:
+	cla
+	'<right><img src="images/casino/cartcw.jpg"></right>'
+	'The dealer deals the cards:'
+	'...'
+
+	suit = RAND(1,4)
+	number = RAND(1,13)
+	$di_card[1] = $number[number] + $suit[suit]
+	di_points = points[number]
+	di_poi = number
+	suit = RAND(1,4)
+	number = RAND(2,14)
+	$pl_card[1] = $number[number] + $suit[suit]
+	pl_points = points[number]
+	pl_poi = number
+	wait 1000
+	'Map dealer:'
+	' <<$di_card[1]>>'
+	'__________________________'
+	'Card Player:'
+	' <<$pl_card[1]>>'
+
+	if di_poi > pl_poi:
+		' '
+		'Casino won'
+
+		act 'You lost':
+			turn1 = 0
+			gt'igrkart2'
+		end
+	elseif di_poi < pl_poi:
+		' '
+		'You have won'
+
+		act 'You have won <<2*deal>> RUB':
+			money = money+2*deal
+			turn1 = 0
+			gt'igrkart2'
+		end
+	elseif di_poi = pl_poi:
+		if nich = 1:
+			' '
+			'You have won'
+
+			act 'You have won <<11*deal>> RUB':
+				money = money+11*deal
+				turn1 = 0
+				gt'igrkart2'
+			end
+		else
+			turn1 = 3
+			gt'igrkart2'
+		end
+	end
+end
+
+if turn1 = 3:
+	act 'Continue to play':
+		cla
+
+		if money < deal:
+			msg 'You do not have the money'
+			gt'igrkart2'
+		else
+			money = money-deal
+		end
+
+		'<right><img src="images/casino/cartcw.jpg"></right>'
+		'The dealer deals the cards:'
+		'...'
+
+		suit = RAND(1,4)
+		number = RAND(1,13)
+		$di_card[2] = $number[number] + $suit[suit]
+		di_points = points[number]
+		di_poi = number
+		suit = RAND(1,4)
+		number = RAND(2,14)
+		$pl_card[2] = $number[number] + $suit[suit]
+		pl_points = points[number]
+		pl_poi = number
+
+		'Map dealer:'
+		' <<$di_card[1]>>'
+		' <<$di_card[2]>>'
+		'__________________________'
+		'Card Player:'
+		' <<$pl_card[1]>>'
+		' <<$pl_card[2]>>'
+
+		if di_poi > pl_poi:
+			' '
+			'Casino won'
+
+			act 'You lost':
+				turn1 = 0
+				gt'igrkart2'
+			end
+		elseif di_poi < pl_poi:
+			' '
+			'You have won'
+			act 'You have won <<4*deal>> RUB':
+				money = money+4*deal
+				turn1 = 0
+				gt'igrkart2'
+			end
+		elseif di_poi = pl_poi:
+			' '
+			'Again draw'
+
+			act 'Pick up <<3*deal>> RUB':
+				money = money+3*deal
+				turn1 = 0
+				gt'igrkart2'
+			end
+		end
+	end
+	act 'Pick up half your bet':
+		if deal mod 2 = 1:
+			deal = deal+1
+		end
+
+		money = money+deal/2
+		gt'igrkart2'
+	end
+end
+--- igrkart2 ---------------------------------
+

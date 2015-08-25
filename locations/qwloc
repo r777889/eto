@@ -1,0 +1,89 @@
+# qwloc
+$qwnamedy = {
+	act '<<$name>>':
+		cla
+		vladimirQW = 10
+
+		'(You) - <<$name>>'
+		'(Vladimir) - Beautiful name, a match for you. I unfortunately have to go, but would like to meet with you again. Go to a restaurant, talk. Leave me your phone number, I`ll call you tomorrow.'
+
+		act 'No (Escape)':
+			cla
+			vladimirQW = 2
+
+			'You turned on the man and went away from him.'
+
+			act 'Escape':gt'park','luna'
+		end
+		act 'Dictate the phone number':
+			cla
+			vladimirQW = 20
+			vladimirday = day
+
+			'You dictated phone number Vladimir and he wrote it down in a small notebook with leather cover.'
+
+			act 'Escape':gt'park','luna'
+		end
+	end
+}
+
+$qwvladdy = {
+	'(Man) - Hello. I am Vladimir, I liked you, I would like to ask what is your name.'
+
+	dynamic $qwnamedy
+
+	act 'Sorry, I have no time':
+		cla
+		vladimirQW = 1
+
+		'(You) - Sorry, I have no time.'
+		'(Vladimir) - Well, what do you? I will not bite. Just I want to know the name from the charming stranger.'
+
+		dynamic $qwnamedy
+
+		act 'Still, I`ll go (Escape)':
+			cla
+			vladimirQW = 2
+
+			'You turned on the man and went away from him.'
+
+			act 'Escape':gt'park','luna'
+		end
+	end
+}
+
+minut += 5
+gs'stat'
+gs'time'
+
+'<center><b><font color = maroon>Man</font></b></center>'
+'<center><img src="images/qwest/vladimir/001.jpg"></center>'
+
+if mop > 1 and hapri = 1:
+	'A man standing near the fence noticed your eyes and smiled at you.'
+
+	act 'To approach the man':
+		cla
+		'You went to the man and he went away from the fence toward you.'
+
+		dynamic $qwvladdy
+	end
+	act 'Smile':
+		cla
+		'You the man smiled at him and he went away from the fence toward you.'
+
+		dynamic $qwvladdy
+	end
+	act 'Turn':
+		cla
+		'You have turned away from the man and heard in his footsteps behind him.'
+
+		dynamic $qwvladdy
+	end
+else
+	'The man looked at you and turned away.'
+
+	act 'Escape':gt'park','luna'
+end
+--- qwloc ---------------------------------
+

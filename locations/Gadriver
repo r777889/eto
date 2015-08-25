@@ -1,0 +1,332 @@
+# Gadriver
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>River Zmeyavka</H4></center>'
+
+if month >= 5 and month <= 9:
+	if hour >= 6 and hour < 22:
+		'<center><img src="images/qwest/gadukino/river/Gadriver.jpg"></center>'
+	else
+		'<center><img src="images/qwest/gadukino/river/Gadriver_night.jpg"></center>'
+	end
+else
+	if hour >= 8 and hour < 18:
+		'<center><img src="images/qwest/gadukino/river/Gadriver_winter.jpg"></center>'
+	else
+		'<center><img src="images/qwest/gadukino/river/Gadriver_winter_night.jpg"></center>'
+	end
+end
+
+'A small village creek, flowing just off Gadyukino.'
+temp = RAND(0,20)
+if temp = 0 and hour >= 6 and hour < 22 and month >= 5 and month <= 9 and sunWeather = 1:'On the banks spread their local fishing rods <a href="exec: dynamic $fishers ">fishermen</a>.'
+if temp = 1 and hour < 5 and month >= 5 and month <= 9 and miragopQW >= 20:'Right near the trails, leading to the river, It is completely naked <a href="exec: dynamic $mirapunish ">Of the world</a>, Crucified between two trees...'
+
+act 'To the beach':minut += 5 & gt'Gadriver', 'Gadbitch'
+act 'In the village':minut += 20 & mirainriver = 0 & gt'gadukino'
+
+if $ARGS[0] = 'Gadbitch':
+	cla
+	clr
+	*clr
+	gs'stat'
+	
+	'<center><H4>Village beach</H4></center>'
+	
+	if hour >= 6 and hour < 22:
+		if sunWeather = 1:
+			'<center><img src="images/qwest/gadukino/river/Gadbitch_soft.jpg"></center>'
+		else
+			'<center><img src="images/qwest/gadukino/river/Gadbitch_cold.jpg"></center>'
+		end
+	else
+		'<center><img src="images/qwest/gadukino/river/Gadbitch_night.jpg"></center>'
+	end
+	
+	'A small country beach, which can be bad-poor sunbathe and swim.'
+	if mirainriver = 1:temp = RAND(0,20)
+	if mirainriver = 1 and temp < 10:'On the beach sunning razomlevshie <a href="exec: dynamic $mirameadow ">Of the world</a>.'
+	if mirainriver = 1 and temp >= 10:'The river splashing fun <a href="exec: dynamic $mirameadow ">Of the world</a>.'
+	
+	if temper >= 20 and month >= 5 and month <= 9:
+	
+		if bikini > 0:
+			act 'Bathe':
+				cla
+				*clr
+				cumpussy = 0
+				cumbelly = 0
+				cumass = 0
+				cumlip = 0
+				cumface = 0
+				cumfrot = 0
+				minut = minut + 30
+				sweat = -3
+				manna = manna + 5
+				willpower = willpower + 5
+				if stren < 30:stren = stren + 1
+				if hour >= 22 and hour <= 6:
+					'<center><img src="images/qwest/gadukino/river/GadRiverSwim_night.jpg"></center>'
+					'You iskupnulis in creek, feeling, how refreshing and invigorating water.'
+				else
+					if temp >= 10 and mirainriver = 1:
+						'<center><img src="images/qwest/gadukino/river/RiverTwoGirls.jpg"></center>'
+						'You iskupnulis in creek, Mira splashing fun at each other with water.'
+					else
+						'<center><img src="images/qwest/gadukino/river/GadRiverSwim.jpg"></center>'
+						'You iskupnulis in creek, feeling, how refreshing and invigorating water.'
+					end
+				end
+				act 'Get out of the water':minut += 5 & gt'Gadriver', 'Gadbitch'
+			end
+		else
+			act 'Bathe':
+				cla
+				*clr
+				cumpussy = 0
+				cumbelly = 0
+				cumass = 0
+				cumlip = 0
+				cumface = 0
+				cumfrot = 0
+				minut = minut + 20
+				sweat = -3
+				manna = manna + 5
+				willpower = willpower + 5
+				if stren < 30:stren = stren + 1
+				if hour >= 22 and hour <= 6:
+					'<center><img src="images/qwest/gadukino/river/watergirls1.jpg"></center>'
+					'You stripped naked and quickly iskupnulis in creek, feeling, how refreshing and invigorating water.'
+				else
+					if temp >= 10 and mirainriver = 1:
+						horny += RAND(5,15)
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/river/RiverTwoGirlsNude.jpg"></center>'
+						'You iskupnulis in creek, Mira splashing fun at each other with water.'
+					else
+						'<center><img src="images/qwest/gadukino/river/watergirls.jpg"></center>'
+						'You stripped naked and quickly iskupnulis in creek, feeling, how refreshing and invigorating water.'
+					end
+				end
+				act 'Get out of the water':minut += 5 & gt'Gadriver', 'Gadbitch'
+			end
+		end
+		if hour >= 8 and hour < 20:
+			if bikini > 0 and sunWeather = 1:
+				act 'Sunbathe 1 h':
+					cla
+					*clr
+					minut = minut + 60
+					sweat = sweat + 1
+					manna = manna + 5
+					
+					if temp < 10 and mirainriver = 1:
+						'<center><img src="images/qwest/gadukino/river/BeachTwoGirls.jpg"></center>'
+						'You lie down next to Mira on the sand and chatting about nothing, thrilled at the sun.'
+						if krem = 0:
+							tan = tan + 1
+						elseif krem > 0:
+							krem = krem - 1
+							tan = tan + 3
+							'You body is smeared with cream for sunburn and went sunbathing.'
+						end
+					else
+						'<center><img src="images/qwest/gadukino/river/GadRiverGirl.jpg"></center>'
+						'You tan while lying on the shore.'
+					if krem = 0:
+						tan = tan + 1
+					elseif krem > 0:
+						krem = krem - 1
+						tan = tan + 3
+						'You body is smeared with cream for sunburn and went sunbathing.'
+					end
+						 if valeraRepinQW=0:
+						 valznak=rand(5,100)
+						     if vnesh>=valznak:
+						     'Suddenly, you went to somebody`s shadow. You have opened my eyes and saw, that next to you is not familiar guy. He politely smiled and you sat beside. "Hello! I have something you have not seen here before."'
+						         act'A was?':
+						         cls
+						         minut+=5
+						         valeraRepinQW=1
+						         gs'stat'
+						         'You looked good, athletic blond guy look and told him skeptically
+						         - A was?
+						         The guy did not hesitate to nod.
+						         - Well, I`m a local, I thought, I know everyone here. People in Gadyukino not much. 
+						         Looking closer to the guy, you noticed, something that it has not perceptibly familiar. Like you saw him. The boy scratched his blond curls on the head and said,.
+						         - I Repin Valery, not heard?
+						         Then you remembered it. The neighbor boy about five years ago going into the army. You then have the minnows and quite naturally did not communicate with him, but we saw it more than once. Because you smile said Valery.
+						         - I Light Lebedev.
+						         The boy beamed and slapped his forehead.
+						         - Well, of course! Exactly. 
+						         He again looked at you and said.
+						         - When I saw you for the last time, you`re all the girl was, Pigtails, and now you`ve become a pretty girl.
+						         '
+						             act'Embarrassed smile.':
+									 cls
+									 minut+=5
+									 gs'stat'
+									 'You smiled shyly downcast eyes. And meanwhile Valerka zapilikal phone. He immediately picked up the phone and turned serious.
+									 - Listen. Are you on any issue?
+									 He paused and continued listening to the interlocutor.
+									 - 1000 h. Yes, yes, all permissions have. Jib there. Yes, 25. Area surcharge. You can offer and, If refuel. Yes, good. Call anytime.
+									 After that, Valery hung up.'
+									     act'1000 h?':
+										 cls
+										 minut+=5
+										 gs'stat'
+										 'You slyly looked at and asked Valery.
+										 - 1000 h?
+										 Valera puzzled look on you.
+										 - Well yes. He is not very big, ordinary Galician, I`d Chinese, I would take more, somewhere 4500 h.
+										 He looked at you closely.
+										 - It seems we have a misunderstanding. I bought a crane, automobile, Galician brand, 25 tons. And I work on it. Business hour 1000 rubles.'
+										 	 act'Ah, there you`re talking about that!!!':
+											 cls
+											 minut+=5
+											 gs'stat'
+											 'You put a palm to his mouth.
+											 - Ah, there you`re talking about that!
+											 Valery looked at you and suddenly burst out laughing. 
+											 - What are you thinking?
+											 You immediately shook his head negatively.
+											 - Nothing.
+											 Valery wiped tears came laughing and added,.
+											 - Well, Sveta, Wow.
+											 Valery went otsmeyavshis.
+											 - His cock is not bad. At first he worked on another, for wages, Now podnakopit, so I took another loan and bought a crane. Work on yourself comfortable. Dogovarivaeshsya with the client, We leave it to the, lift cargo, money received, Yes drove back. Of course there are also disadvantages, full paperwork, Again, completely renovated on me. Yes, with these procedure simply Slinger, Only hire, arrange, I have to go to work, and he was drunk ass bitch lying, though its very rafters, Yes crane lifts. That`s like jumping out of the cab to the saiga load, then back again, and so the whole day, complete ass.'
+											 act'And where you live?':gt'repinRiver'
+											 end
+											 
+											 act'Well, I thought so.':
+											 cls
+											 minut+=5
+											 gs'stat'
+											 'Valera nodded his head.
+											 - His cock is not bad. At first he worked on another, for wages, Now podnakopit, so I took another loan and bought a crane. Work on yourself comfortable. Dogovarivaeshsya with the client, We leave it to the, lift cargo, money received, Yes drove back. Of course there are also disadvantages, full paperwork, Again, completely renovated on me. Yes, with these procedure simply Slinger, Only hire, arrange, I have to go to work, and he was drunk ass bitch lying, though its very rafters, Yes crane lifts. That`s like jumping out of the cab to the saiga load, then back again, and so the whole day, complete ass.'
+												 act'And where you live?':gt'repinRiver'
+											 end
+										 end
+										 
+										 act'Ogee?':
+										 cls
+										 minut+=5
+										 gs'stat'
+										 'You looked surprised and asked Valera.
+										 - Ogee?
+										 Valery shrugged.
+										 - I bought a crane, automobile, Galician brand, 25 tons. And I work on it. Business hour 1000 rubles. His cock is not bad. At first he worked on another, for wages, Now podnakopit, so I took another loan and bought a crane. Work on yourself comfortable. Dogovarivaeshsya with the client, We leave it to the, lift cargo, money received, Yes drove back. Of course there are also disadvantages, full paperwork, Again, completely renovated on me. Yes, with these procedure simply Slinger, Only hire, arrange, I have to go to work, and he was drunk ass bitch lying, though its very rafters, Yes crane lifts. That`s like jumping out of the cab to the saiga load, then back again, and so the whole day, complete ass.'
+										 act'And where you live?':gt'repinRiver'
+										 end
+										 
+
+									 end
+						         end
+						     end
+						 end
+					end
+					act 'Further':minut += 5 & gt'Gadriver', 'Gadbitch'
+				end
+			elseif bikini = 0:
+				act 'Sunbathe 1 h':
+					cla
+					*clr
+					minut = minut + 60
+					sweat = sweat + 1
+					manna = manna + 5
+					if temp < 10 and mirainriver = 1:
+						'<center><img src="images/qwest/gadukino/river/BeachTwoGirlsNude.jpg"></center>'
+						'You lie next to Mira on the sand and talking about nothing, thrilled the sun.'
+					else
+						'<center><img src="images/qwest/gadukino/river/GadRiverNude.jpg"></center>'
+						'You strip naked and lie down to sunbathe.'
+					end
+					if krem = 0:
+						tan = tan + 1
+					elseif krem > 0:
+						krem = krem - 1
+						tan = tan + 3
+						'You body is smeared with cream for sunburn and went sunbathing.'
+					end
+					act 'Further':minut += 5 & gt'Gadriver', 'Gadbitch'
+				end
+			end
+		end
+	end
+	
+	act 'Escape':minut += 5 & gt'Gadriver'
+end
+
+$mirameadow = {
+	cls
+	minut += 2
+	gs 'stat'
+	
+	
+	if temp < 10:
+		if miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/river/MiraBeach.jpg"></center>'
+		else
+			'<center><img src="images/qwest/gadukino/river/MiraBeachNude.jpg"></center>'
+		end
+	else
+		if miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/river/MiraRiver.jpg"></center>'
+		else
+			'<center><img src="images/qwest/gadukino/river/MiraRiverNude.jpg"></center>'
+		end
+	end
+	act 'Escape':minut += 5 & gt'Gadriver', 'Gadbitch'
+	
+	act'Chat':
+	cls
+	minut+=10
+	manna+=10
+	gs'stat'
+		if temp < 10:
+		if miragopQW < 12:
+			'<center><img src="images/qwest/gadukino/river/MiraBeach.jpg"></center>'
+		else
+			'<center><img src="images/qwest/gadukino/river/MiraBeachNude.jpg"></center>'
+		end
+		else
+			if miragopQW < 12:
+				'<center><img src="images/qwest/gadukino/river/MiraRiver.jpg"></center>'
+			else
+				'<center><img src="images/qwest/gadukino/river/MiraRiverNude.jpg"></center>'
+			end
+		end
+	 'You are chatting with Mira about trifles'
+	act 'Escape':minut += 5 & gt'Gadriver', 'Gadbitch'
+	end
+}
+
+$fishers = {
+	cls
+	minut += 2
+	gs 'stat'
+	
+	'<center><img src="images/qwest/gadukino/river/GadRiverFishers.jpg"></center>'
+	
+	act 'Escape':minut += 5 & gt'Gadriver', 'Gadbitch'
+}
+
+$mirapunish = {
+	cls
+	minut += 10
+	horny += RAND(25,75)
+	gs 'stat'
+	
+	'<center><img src="images/qwest/gadukino/river/MiraPunish.jpg"></center>'
+	'You come closer to her and Miroslav happily smiling to you, asking for her release. As long as you unleash it, it tells you, it`s her way Kolyamba punished for, she gently bit his dick, When he sucked...'
+	' - Thank God, - with a sigh of relief, she adds to her story. - Good, What have you got to me, and not someone-else, but it seems, Whatever the picture was - Nude Mirka, Crucified between the trees at night, Stay away and do, what you want, even fuck, though Bey, kill... Well carried by, thank you, Sveta, I rescued you cool!'
+	
+	act 'Escape':minut += 5 & gt'Gadriver', 'Gadbitch'
+}
+--- Gadriver ---------------------------------
+

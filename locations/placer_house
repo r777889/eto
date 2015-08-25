@@ -1,0 +1,439 @@
+# placer_house
+alko += 10
+gs'stat'
+
+'Have you come across a company apartment and there continued to drink and have fun.'
+
+if kol_man = 1:
+	dick = RAND(12,25)
+	$boy = 'Guy'
+
+	'You started hugging and kissing Man, <<$ev_name>> also started to kiss him.'
+
+	act 'Suck a guy':
+		cls
+		bj += 1
+		guy += 1
+		gang += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/placer/threesomeBJ.jpg"></center>'
+		'Together with a friend, you are inclined to the groin guy and started to suck his cock together, in turn, absorbing it into his mouth and licking balls.'
+
+		act 'Further':
+			cls
+			minut += 15
+
+			if Frend_num = 14:
+				KatjaLust += 5
+				KatjaSlut += 5
+				KatjaHorny = 0
+				KatjaSex += 1
+				KatjaGuy += 1
+				KatjaBJ += 1
+				KatjaOhrenet = 5
+			end
+
+			pose = 1
+			lesbian += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/placer/threesome.jpg"></center>'
+			'You put cancer and a guy came up to your ass ready to fuck you. <<$ev_name>> the village in front of you and offered you my pussy you immediately began to lick.'
+
+			dynamic $sexstart
+			dynamic $sexstart2
+			dynamic $sexcum
+
+			act 'Escape':gt'placer_end'
+		end
+	end
+elseif kol_man = 2:
+	dick = RAND(12,25)
+	$boy = 'Guy'
+
+	'Men began to hug and kiss you with girlfriend, <<$ev_name>> Man began to stroke between her legs and pulled his penis.'
+
+	act 'Suck a guy':
+		cls
+		bj += 1
+		guy += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/placer/foursomeBJ.jpg"></center>'
+		'You, too, leaned toward the boy and began to suck his dick, <<$ev_name>> sucks the other guy.'
+
+		act 'Fuck with the guys':
+			cls
+			minut += 15
+
+			if Frend_num = 14:
+				KatjaLust += 5
+				KatjaSlut += 5
+				KatjaHorny = 0
+				KatjaSex += 1
+				KatjaGuy += 1
+				KatjaBJ += 1
+				KatjaOhrenet = 4
+			end
+
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/placer/foursome.jpg"></center>'
+
+			dynamic $sexstart
+			dynamic $sexstart3
+			dynamic $sexcum
+
+			act 'Escape':gt'placer_end'
+		end
+	end
+elseif kol_man = 3:
+	$d_dozdat = {
+		act 'Wait a friend':
+			cls
+			minut += 5
+			gs'stat'
+			cumface = 0
+
+			if Frend_num = 14:
+				'<center><img src="images/qwest/alter/placer/katjacum.jpg"></center>'
+				'From the room came a tired but happy Katya stained white mucus in the face.'
+			end
+
+			'Together with a friend you brought each other in order and began to gather home.'
+
+			act 'Escape':gt'placer_end'
+		end
+	}
+
+	$d_girlfrend_end = {
+		act 'Further':
+			cls
+
+			if Frend_num = 14:
+				KatjaLust += 10
+				KatjaSlut += 5
+				KatjaHorny = 0
+				KatjaSex += 1
+				KatjaGuy += 1
+				KatjaBJ += 1
+				KatjaOhrenet = 1
+			end
+
+			gs'stat'
+
+			'The boys went to the bathroom and you were alone in the room.'
+
+			dynamic $d_dozdat
+
+			act 'Peek behind girlfriend':
+				cls
+				gs'stat'
+
+				if Frend_num = 14:
+					'<center><img src="images/qwest/alter/placer/katjaend.jpg"></center>'
+					'You looked in the room, lying naked on the bed, and Kate clearly dosasyvala member of the guy after hot sex, the guy started to cum on your face and Kate spread semen on her lips and cheeks.'
+				end
+
+				'You closed the door that would not interfere, and wait for a friend.'
+
+				dynamic $d_dozdat
+			end
+		end
+	}
+
+	$d_girlfrend_end2 = {
+		act 'Further':
+			cls
+
+			if Frend_num = 14:
+				KatjaLust += 5
+				KatjaSlut += 10
+				KatjaHorny = 0
+				KatjaSex += 1
+				KatjaGuy += 2
+				KatjaBJ += 2
+				KatjaGang += 1
+				KatjaOhrenet = 2
+			end
+
+			gs'stat'
+
+			'The boy lay on the bed and began to snore.'
+
+			dynamic $d_dozdat
+
+			act 'Peek behind girlfriend':
+				cls
+				gs'stat'
+
+				if Frend_num = 14:
+					'<center><img src="images/qwest/alter/placer/katjaendgang.jpg"></center>'
+					'You looked into the room that Kate furiously spire on both sides two guys, Only Kate moos holding member of the mouth.'
+				end
+
+				'You closed the door that would not interfere, and wait for a friend.'
+
+				dynamic $d_dozdat
+			end
+		end
+	}
+
+	'One of the guys suggested you uedenitsya room.'
+
+	act 'Go Man':
+		cls
+		horny += 10
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+		'As soon as you left alone as the guy began to touch and kiss you'
+
+		act 'Take in the mouth':
+			cls
+			$boy = 'guy'
+			dick = RAND(15,20)
+			bj += 1
+			guy += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/placer/bj.jpg"></center>'
+			'You sat down on his haunches in front of a guy and he unbuttoned his pants pulled out his penis.'
+
+			dynamic $dinrandbj
+
+			act 'Further':
+				cls
+				gs'stat'
+
+				tipsexrand = RAND(0,1)
+				if tipsexrand = 0:
+					cumlip += 1
+					swallow += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/placer/swallow2.jpg"></center>'
+
+					dynamic $dinrandswallow
+					dynamic $d_girlfrend_end2
+				elseif tipsexrand = 1:
+					'<center><img src="images/qwest/alter/placer/bj.jpg"></center>'
+					'The boy whispered,, "I want you"'
+
+					act 'Redouble efforts':
+						cls
+						cumlip += 1
+						swallow += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/placer/swallow2.jpg"></center>'
+						'You become even more actively sucking dick, that would do blowjob.'
+
+						dynamic $dinrandswallow
+						dynamic $d_girlfrend_end2
+					end
+					act 'Lie on your back':
+						cls
+						horny += 10
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/placer/miss.jpg"></center>'
+						'You lay on your back and one of the guys spread your legs, and the second came to your face and put his penis in your mouth.'
+
+						dynamic $sexstart
+						dynamic $sexstart2
+						dynamic $sexcum
+						dynamic $d_girlfrend_end2
+					end
+					act 'Anal':
+						cls
+						horny += 10
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/placer/anal2.jpg"></center>'
+						'You offered a guy fuck you in the ass, He gladly accepted and you undressed got on all fours.'
+
+						dynamic $analsexrude
+						dynamic $d_girlfrend_end2
+					end
+				end
+			end
+		end
+	end
+	act 'Staying in the room':
+		cls
+		horny += 20
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/placer/swing.jpg"></center>'
+		'<<$ev_name>> I am whispering about something with a guy, then she went into the next room with him, I am leaving you with two guys. Boys addicted to you for closer, One began to kiss your lips, and the other stroking your chest.'
+
+		act 'Staying with the guys':
+			cls
+			$boy = 'guy'
+			dick = RAND(15,20)
+			horny += 10
+			bj += 2
+			guy += 2
+			gang += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/placer/doublebj.jpg"></center>'
+			'You guys started to undress ,and you just giggled drunkenly, you do not realize how but in your mouth appeared a member of one of the guys, and the second term you held in your hand. You started sucking the guys in turn. Finally, members of the guys were quite tense and the guys come off from your mouth trying to put you in a position for sex.'
+
+			act 'Lie on your back':
+				cls
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/placer/doublemiss.jpg"></center>'
+				'You lay on your back and one of the guys spread your legs, and the second came to your face and put his penis in your mouth.'
+
+				dynamic $sexstart
+				dynamic $sexstart2
+				dynamic $sexcum
+
+				sexrand = RAND(0,1)
+				if sexrand = 0:
+					cumlip += 1
+					cumface += 1
+					gs'stat'
+
+					'Suddenly a guy who sucked you became close your mouth and smeared his semen to you by a member of the lips and cheeks.'
+
+					dynamic $d_girlfrend_end
+				elseif sexrand = 1:
+					'Men suddenly decided to change places.'
+
+					act 'Further':
+						cls
+						horny += 10
+						cumlip += 1
+						cumface += 1
+						dick = RAND(15,20)
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/placer/doublemiss2.jpg"></center>'
+						'Boys swapped, and the guy from whom you suck dick spread your legs, and the guy who fucked you slipped you smeared his penis into her mouth Cum, What would you clean it.'
+
+						dynamic $sexstart
+						dynamic $sexstart2
+						dynamic $sexcum
+						dynamic $d_girlfrend_end
+					end
+				end
+			end
+			act 'Get cancer':
+				cls
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/placer/rakom.jpg"></center>'
+				'You undressed and got cancer on the bed waiting for guys.'
+
+				act 'Anal':
+					cls
+					dick = RAND(15,20)
+					horny += 10
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/placer/doggyanal.jpg"></center>'
+					'You guys have offered to fuck you in the ass, They gladly agreed. One of the guys came up to your face and put his penis between your lips, you immediately started to suck.'
+
+					dynamic $analsexrude
+
+					sexrand = RAND(0,1)
+					if sexrand = 0:
+						cumlip += 1
+						cumface += 1
+						gs'stat'
+
+						'Suddenly a guy who sucked you became close your mouth and smeared his semen to you by a member of the lips and cheeks.'
+
+						dynamic $d_girlfrend_end
+					elseif sexrand = 1:
+						act 'Further':
+							cls
+							dick = RAND(15,20)
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/placer/anal.jpg"></center>'
+							'The guy pulled out of your ass my limp dick and a guy who beat you you suck and joined up to your ass.'
+
+							dynamic $analsexrude
+							dynamic $d_girlfrend_end
+						end
+					end
+				end
+				act 'The pussy':
+					cls
+					pose = 1
+					horny += 10
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/placer/doubledog.jpg"></center>'
+					'One of the guys came up to your face and put his penis between your lips, you immediately started to suck.'
+
+					dynamic $sexstart
+					dynamic $sexstart2
+					dynamic $sexcum
+
+					cumlip += 1
+					cumface += 1
+					gs'stat'
+
+					'Suddenly a guy who sucked you became close your mouth and smeared his semen to you by a member of the lips and cheeks.'
+
+					dynamic $d_girlfrend_end
+				end
+			end
+		end
+	end
+elseif kol_man >= 4:
+	'Men began to embrace you and girlfriend.'
+
+	act 'Having sex':
+		cls
+		guy+=2
+		gang += 1
+		anal += 1
+		sex += 1
+		dp += 1
+		dick = RAND(15,18)
+		$boy = 'the first guy'
+		dick2 = RAND(15,18)
+		$boy2 = 'the second guy'
+
+		if Frend_num = 14:
+			KatjaLust += 5
+			KatjaSlut += 10
+			KatjaHorny = 0
+			KatjaSex += 1
+			KatjaGuy += 2
+			KatjaBJ += 2
+			KatjaGang += 1
+			KatjaOhrenet = 4
+		end
+
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/placer/dp.jpg"></center>'
+
+		dynamic $doublepenetration
+		dynamic $sexcum
+
+		cumanus += 1
+		gs'stat'
+
+		'The second guy started to cum inside your priests filling her with his sperm'
+
+		act 'Escape':gt'placer_end'
+	end
+end
+!if kol_man = 5:
+!end
+!if kol_man = 6:
+!end
+--- placer_house ---------------------------------
+

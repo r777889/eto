@@ -1,0 +1,229 @@
+# dom_gor
+act 'Outside':
+	cls
+	if sick <= 72 and nude = 0:
+		xgt'gorodok'
+	elseif nude = 0:
+		'<b><font color=red>YOU TOO MUCH THAT sick to walk down the street.</font></b>'
+		xgt $curloc
+	else
+		'<b><font color=red>You need to get dressed.</font></b>'
+		xgt $curloc
+	end
+end
+
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color=maroon>Your room</font></b></center>'
+'<center><img src="images/etogame/kom_gor.jpg"></center>'
+'Your room in a hostel. The room is small, only the minimum necessary. 2 Sleeps, <a href="exec:GT ''gor_mirror'',''start''">mirror</a>, <a href="exec:GT ''gor_exh'',''pos1''">hanger</a>, <a href="exec:GT ''loker'',''start''">cupboard</a> for things and a small TV.'
+
+if cloth_vid = 2 and teachlevel > 20 and parkrunday ! day and hour < 21 and hour > 6:
+	act 'Jogging on the square 1 h':
+		cla
+		*clr
+		parkrunday = day
+		minut = minut + 30
+		manna = manna + 10
+		willpower = willpower - 10
+		beg = beg + 1
+		fat = fat - 8
+		speed = speed + 1
+		sweat = sweat + 3
+
+		'<center><img src="images/pic/parkbeg.jpg"></center>'
+		'You did a few laps around the park. Breathless, sweaty and tired.'
+
+		parkrand = RAND(0,10)
+		if parkrand > 4 and beguch < 3:
+			'In the park you will meet students from the school and asked to run with you.'
+
+			act 'Run together':
+				cla
+				*clr
+				beguch += 1
+
+				'<center><img src="images/etogame/stop.jpg"></center>'
+				'You run with the student sometimes stopping and talking with ease.'
+				'Learner: - Svetlana, you are so beautiful, You all are so fond! You: - Hmm, thank you!'
+
+				act 'End run':gt'gskver'
+			end
+		elseif parkrand > 4 and beguch >= 3 and beguch < 6:
+			'In the park you will meet students from the school and asked to run with you.'
+
+			act 'Run together':
+				cla
+				*clr
+				beguch += 1
+
+				'<center><img src="images/etogame/stop2.jpg"></center>'
+				'You stopped, to do stretching exercises muscles.'
+				'Learner: - Ahh if our girls would be at least a little like you! You: - You`re just used to it, get to know them!'
+
+				act 'End run':gt'gskver'
+			end
+		elseif parkrand > 4 and beguch >= 6 and beguch < 9:
+			'In the park you will meet students from the school and asked to run with you.'
+
+			act 'Run together':
+				cla
+				*clr
+				beguch += 1
+				horny += 3
+
+				'<center><img src="images/etogame/stop3.jpg"></center>'
+				'You run with the student sometimes stopping and talking with ease.'
+				''
+				'Learner: - Svetlana, Can I take a picture of you! You: - What are you going to do then with my photo, a rascal!'
+				'Learner: - No, No, I will not forgive her masturbate! You: - Aha! I did not say!'
+				'Learner: - Pardon, It was a bad idea. You: - Yes, I`m kidding! Fotkat, just me then do not forget to copy.'
+				''
+				'You picked up background, We stood in a pose and have photographed.'
+
+				act 'End run':gt'gskver'
+			end
+		end
+
+		act 'End run':gt'gskver'
+	end
+end
+
+if hour < 23:
+	act 'Lie down on the couch':
+		cla
+		minut += 60
+
+		if son < 30:
+			son += 5
+		else
+			son = 29
+		end
+
+		'I relax lying on the couch.'
+
+		act 'Pull':gt'dom_gor'
+	end
+end
+
+if hour => 23:
+	act 'Sleeping in bed':
+		cla
+		*clr
+		tanga = 1
+		health = health + 5
+		hapri = 0
+		InSleep = 1
+		cloth_vid = 0
+		gs'stat'
+
+		'<center><img src="images/pics/son.jpg"></center>'
+		if analplugIN = 1:analplugIN = 0 & 'Before going to bed, you took out a butt plug.'
+		if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed, you took out a vibrator.'
+		if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
+
+		'You slept'
+
+		act 'Up':
+			cla
+			InSleep = 0
+			minut += 480
+			son = 30
+			gt'dom_gor'
+		end
+	end
+end
+
+if eda > 0:
+	'The refrigerator kept food that will last for <b><<eda>></b> Servings.'
+end
+if edaD = 0 and eda = 0:
+	'<b><font color=red>The refrigerator ball Roll, there is nothing at all.</font></b>'
+end
+if edaD > 0:
+	'The refrigerator is kept healthy meal that will last for <b><<edaD>></b> Servings.'
+end
+
+if eda >= 1:
+	act 'Prepare a meal':
+		cla
+		*clr
+		eda -= 1
+		minut += 120
+		frost = 0
+		edahot = 0
+		health = health + 10
+		manna = manna + 20
+		gs'stat'
+
+		if energy >= 30:
+			fat = fat + 2
+
+			'You do not want to eat and drink.'
+		elseif energy < 30:
+			energy += 25
+			fat += 1
+
+			'You will be happy to eat.'
+		end
+
+		if water < 20:
+			water = water + 20
+
+			'You will be happy to drink a cup of tea.'
+		elseif water >= 20:
+			'Tea in you no longer climbs.'
+		end
+
+		act 'Get up from the table':gt'dom_gor'
+	end
+end
+
+if edaD > 0:
+	act 'There are dietary food (30 min)':
+		cla
+		*clr
+		frost = 0
+		minut = minut + 30
+		health = health + 10
+		manna = manna + 20
+		edaD = edaD - 1
+
+		'<center><img src="images/pics/food.jpg"></center>'
+
+		if energy >= 30:
+			'You can no longer have.'
+		elseif energy >= 20 and energy < 30:
+			energy = energy + 10
+
+			'You pushed through the power of a meal.'
+		elseif energy < 20:
+			energy = energy + 20
+
+			'You gladly eaten cooked meal.'
+		end
+
+		if water >= 20:
+			'Tea in you no longer climbs.'
+		elseif water < 20:
+			water = water +20
+
+			'You will be happy to drink a cup of tea.'
+		end
+
+		act 'Get up from the table':gt'dom_gor'
+	end
+end
+
+if gor_dorm > 0: act 'The shared bathroom':gt'etoexhib','pos41'
+--- dom_gor ---------------------------------
+

@@ -1,0 +1,23 @@
+# rack
+'You are standing at the reception desk and you smiling young girl at the counter'
+
+act 'See the description of rooms':
+	cla
+	*clr
+
+	'The choice provided 4 types of rooms:'
+	'1. Budget accommodation'
+	'2. Standard rooms'
+	'3. Suite'
+	'4. Presidential Suite'
+
+	act 'Finish reading':gt'rack'
+end
+act 'Talk to the girl at the reception':
+	gt'Maria1'
+end
+act 'Move away from the rack':
+	gt'hotel'
+end
+--- rack ---------------------------------
+

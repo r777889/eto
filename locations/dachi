@@ -1,0 +1,31 @@
+# dachi
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>Dacha cooperative</H4></center>'
+'<center><img src="images/pic/dachi.jpg"></center>'
+
+if car > 0 and cardrive = 18:
+	cardrive = 18
+
+	'In the parking lot is <a href="exec:GS ''carF'',''start''">your <<$car>></a>.'
+end
+
+'First alley dug into the ground <a href="exec:GT ''etoexhib'',''pos7''">column advertisement</a>.'
+'At the end of the alley located <a href="exec:GT ''etoexhib'',''pos6''">spring with spring water</a>.'
+
+if dachaest = 1:
+	'Your <a href="exec:GT ''dachamy'',''start''">country cottage area</a>.'
+	'Instead of your 6 hectare is exactly the same <a href="exec:GT ''etoexhib'',''pos8''">plot neighbor</a>.'
+end
+
+if etoexhib < 13:'You feel the presence of magic light.'
+
+act 'Stroll through the alleys':gt'etoexhib','pos2'
+act 'Exit the highway':minut += 15 & nroad = 5 & gt'road'
+--- dachi ---------------------------------
+

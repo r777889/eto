@@ -1,0 +1,13 @@
+# headwaiter
+clr
+minut = minut + 5
+gs'stat'
+
+'<right><img src="images/casino/metrd.jpg"></right>'
+'What do you want-then you need from me?'
+
+act 'Move away':
+	gt'hall'
+end
+--- headwaiter ---------------------------------
+

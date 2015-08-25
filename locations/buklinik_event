@@ -1,0 +1,184 @@
+# buklinik_event
+if $ARGS[0] = 'pos1':
+	cla
+	*clr
+	minut += 30
+	buklinikDay = day
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_spal.jpg"></center>'
+	'The room had a few men, and you decide, it is necessary to introduce them.'
+	'You: - Good afternoon! My name is Sveta, I`m your new employee-volunteer, I will help you as much as.'
+	'The men in the room pay attention to you.'
+	'Guest 1: - Hello, girl, Vladimir! As you stand at the door, pass, sit down, I`ll introduce you to all.'
+
+	act 'Go into the room':gt'buklinik_event','pos2'
+	act 'Staying at the door':gt'buklinik_event','pos5'
+	act 'Exit the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'pos2':
+	cla
+	*clr
+	bumtolik = 7
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_spal.jpg"></center>'
+	'Did you decide, that nothing bad will happen if you go into the room, see what`s inside the life of these unfortunate people.'
+	'You: - Thank you, I really briefly. Just meet. First day.'
+	'When you pass by the seated men, you see how they are looking at you. They did not hesitate to look at your chest and legs.'
+	'Must be they for a long time there were no women.'
+	'Vladimir: - Sit down young lady.'
+	'You are seated at a small table in the center of the room. On all sides around you face strangers. Mainly elderly, but as one with a hangover.'
+	'Vladimir: - Meet, Vitaly is, Paul is Afanasievich, Oleg O., Kostya and lame Albert.'
+	'From the crowd: - So you will help us, it`s good, Help me not to interfere. Long time I did not help women.'
+	'- Yeah, and I! So young, skin smooth and smells delicious.'
+
+	act 'Try to leave':gt'buklinik_event','pos3'
+end
+
+if $ARGS[0] = 'pos3':
+	cla
+	*clr
+	manna -= 20
+	horny += 3
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_grop2.jpg"></center>'
+	'You: - Perhaps, I will go. I have to go. Aaa, what are you doing, stop!'
+	'You tried to get up and leave. But who-then I hold your thigh.'
+	'From the crowd: - Where? But as-the, help? You should help us her ass.'
+	'You feel like someone-then your buttocks squeezed.'
+	'- Well-Single, Show us your tits delicious!'
+	'C these words, lame Albert, I hugged you for your waist, with the force pulled her so that you bumped into him. A second hand began to pull your clothes baring breasts.'
+	'Aaa! - you yell, that is urine.'
+	'Bang!'
+
+	act 'Look on the door':gt'buklinik_event','pos4'
+end
+
+if $ARGS[0] = 'pos4':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_angry.jpg"></center>'
+	'Olga stood in the doorway, and she was just in a rage.'
+	'- What are you organized?! You launder, you feed, give accommodation! And to you this is not enough! Pigs ungrateful!'
+	'Olga strode toward the you, I took you by the hand and led into the corridor.'
+	'- Man first day of work, All volunteers are scared away. Well, I`ll deal with you more!'
+	'(She slammed the door and you were alone in the corridor)'
+	'- Sveta, are you okay?'
+	'- Yes. Scared little.'
+	'- You think of anything, vigilance. They only give an excuse.'
+
+	act 'Good, I realized':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'pos5':
+	cla
+	*clr
+	manna -= 5
+	bumtolik = 7
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_spal.jpg"></center>'
+	'You: - Thank you, Me and comfortable here.'
+	'The men in the room had lost all interest in you and began to take care of business.'
+	'Vladimir: - Well, hello, hello! What then priperlas, do not bother to go.'
+	'You: - Huh! Cad!'
+
+	act 'Exit the corridor':gt'buklinik','holl'
+end
+
+if $ARGS[0] = 'pos6':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_eat.jpg"></center>'
+	'Olga: - Thank you, that agreed. Nothing special, just carry plates on the tables. And try not to be rude, if someone-it starts to stick, be considerate. Keep apron, clothe, you do not accidentally get dirty.'
+	'("Molest! Delicate! She must be kidding me, from-for the case." - We think you.)'
+
+	act 'Spacing plates':gt'buklinik_event','pos7'
+end
+
+if $ARGS[0] = 'pos7':
+	cla
+	*clr
+	buklinikDay=day
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_eat2.jpg"></center>'
+
+	if bumtolik > 7:
+		'You calmly wafting plates on the tables.'
+	elseif bumtolik = 7:
+		bumtolik = 8
+
+		'You calmly carried the plates on the tables. While from-for one of the tables you have not addressed sassy tone:'
+		'- Wow, Look what buffer! They are a size, beauty?'
+		'- What!? But how... Em... none of your business! - blurts you.'
+	end
+
+	act 'Finish':gt'buklinik','olga2'
+end
+
+if $ARGS[0] = 'pos8':
+	cla
+	*clr
+	if bumtolik = 8:bumtolik = 9
+	buklinikDay = day
+	minut += 120
+	manna += 20
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_sitter1.jpg"></center>'
+	'You came at two hours helped the old man at home. The old man was very thankful to you and you feel joy and peace.'
+
+	act 'Finish':gt'buklinik','olga2'
+end
+
+if $ARGS[0] = 'pos9':
+	cla
+	*clr
+	buklinikDay = day
+	minut += 120
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_mission.jpg"></center>'
+	'You and other volunteers searched the park and found everything-the tramp which says Olga.'
+	'Girl-volunteer: - Leave, Come with us, we take you to a good place.'
+	'Tramp: - Never! I`m here and not bad. Come visit, speaking panties, Make the old man company, heh-heh.'
+	'Girl: - That`s the same old pervert, Light you have any-any ideas on how to lure back?'
+
+	if horny > 50 and tanga = 1 and ski = 1 or horny > 50 and tanga = 1 and glamur = 1:
+		act 'There is one idea':gt'buklinik_event','pos10'
+	end
+
+	act 'I have no idea':gt'buklinik','olga2'
+end
+
+if $ARGS[0] = 'pos10':
+	cla
+	*clr
+	bumtolik = 10
+	horny += 10
+	gs'stat'
+
+	'<center><img src="images/etogame/bukli_mission1.jpg"></center>'
+	'You are so excited, what comes to mind is an incredible idea, lure pervert lit up her panties. You get up in the position right in front of the hut and says the tramp: "- Respected, I have something for you-what is!"'
+	'Everyone who was standing next to his eyes bulging from seen spectacle.'
+	'But, similar plan worked, as soon as the old man saw a hot young body, He instinctively reached out to you, and climbed out of the shelter.'
+	'"- Grab it!" - You are in command of volunteers. Stunned aides did not immediately realize, that you told them and staring at your ass.'
+	'You are already scared, now an old man with dirty hands will grab you in the ass, but who-some of the volunteers came to himself and stopped the poor old man.'
+	'Volunteer: - You come with us!'
+	'Homeless: - What! No! I am a free man! Not eligible! Oh, you`re a liar! Beware!'
+	'The old man was taken away. And you expressed gratitude.'
+	'Girl-volunteer: - Hmm, unusual and how you did it come to mind!?'
+	'It seems people in the hospital learned of a new assistant in a new way.'
+
+	act 'Finish':gt'buklinik','olga2'
+end
+--- buklinik_event ---------------------------------
+

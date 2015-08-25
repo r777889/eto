@@ -1,0 +1,29 @@
+# qwlocdog
+cls
+minut += 3
+gs'stat'
+
+'You pick up the phone and a female voice tells you. "Hello world, This Margarita. We met in a cafe?"'
+
+act 'Oh, I have a lot to do, Today I can not get':
+	cla
+	qwdogiventday = day
+
+	'(You) - Oh, I have a lot to do, Today I can not get.'
+	'(Margaret) - Okay. Then I`ll call in a week.'
+
+	act 'Hang up':gt $locM, $metkaM
+end
+
+act 'I`m not against':
+	cla
+	QWdogReiq = 3
+	qwdogiventday = day
+
+	'(You) - I`m not against.'
+	'(Margaret) - Great. Then I wait in the cafe.'
+
+	act 'Hang up':gt $locM, $metkaM
+end
+--- qwlocdog ---------------------------------
+

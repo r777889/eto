@@ -1,0 +1,11 @@
+# party_boy
+cls
+minut += 5
+gs'stat'
+'<center><b><font color = maroon>Guy</font></b></center>'
+'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_boy.jpg"></center>'
+'The guy that-there adjusts and makes the sound louder.
+- Hello, Sveta, Bring me a beer, in the kitchen where you will find all the booze.'
+act 'Move away':gt'sbReksHome','party_home'
+--- party_boy ---------------------------------
+

@@ -1,0 +1,544 @@
+# svidan
+if $ARGS[0] = 'start':
+	if svidanieA = 1 and svidanieB = 1 and svidanieC = 1:
+		bfA = 0
+		bfB = 0
+		bfC = 0
+		svidanieA = 0
+		svidanieB = 0
+		svidanieC = 0
+		manna = 0
+		willpower = willpower - 30
+
+		'<<$boyA>>, <<$boyB>> and <<$boyC>> suited to you, then look at each other in bewilderment. They all understand and go. <<$boyC>> It throws you goodbye "Well, you whore!"'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	elseif svidanieA = 1 and svidanieB = 1 and svidanieC = 0:
+		bfA = bfA - 1
+		bfB = 0
+		!bfC = 0
+		svidanieA = 0
+		svidanieB = 0
+		svidanieC = 0
+		manna = manna - 10
+		willpower = willpower - 20
+
+		'<<$boyA>> and <<$boyB>> suited to you, then look at each other in bewilderment. <<$boyA>> asks, what kind of bloke you pinned. For what <<$boyB>> Outraged, he`s your guy, but not this poludurok.'
+		if bfA > 0:'<<$boybodyA>> <<$boybodA>> <<$boyA>> punches in the face of its rival. <<$boyB>> He falls to the ground with a broken face. <<$boyA>> says a defeated opponent, "once you see next to my girls even kill fuck."'
+		if bfA <= 0:'<<$boyA>> spits angrily to the ground and said,. "Fuck you on the dick, whore." He threw flowers and leaves in the trash. <<$boyB>> looking at what is happening and leaves without saying a word.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	elseif svidanieA = 1 and svidanieB = 0 and svidanieC = 1:
+		bfA = bfA - 1
+		!bfB = 0
+		bfC = 0
+		svidanieA = 0
+		svidanieB = 0
+		svidanieC = 0
+		manna = manna - 10
+		willpower = willpower - 20
+
+		'<<$boyA>> and <<$boyC>> suited to you, then look at each other in bewilderment. <<$boyA>> asks, what kind of dick from the mountain to you pinned. For what <<$boyC>> Outraged, he`s your guy, but not this poludurok.'
+		if bfA > 0:'<<$boybodyA>> <<$boybodA>> <<$boyA>> punches in the face of its rival. <<$boyC>> He falls to the ground with a broken face. <<$boyA>> says a defeated opponent, "once you see next to my girls even kill fuck."'
+		if bfA <= 0:'<<$boyA>> spits angrily to the ground and said,. "Fuck you on the dick, whore." He threw flowers and leaves in the trash. <<$boyC>> looking at what is happening and leaves without saying a word.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	elseif svidanieA = 0 and svidanieB = 1 and svidanieC = 1:
+		bfB = bfB - 1
+		!bfB = 0
+		bfC = 0
+		svidanieA = 0
+		svidanieB = 0
+		svidanieC = 0
+		manna = manna - 10
+		willpower = willpower - 20
+
+		'<<$boyB>> and <<$boyC>> suited to you, then look at each other in bewilderment. <<$boyB>> asks, what kind of dick from the mountain to you pinned. For what <<$boyC>> Outraged, he`s your guy, but not this poludurok.'
+		if bfb > 0:'<<$boybodyB>> <<$boybodB>> <<$boyB>> punches in the face of its rival. <<$boyC>> He falls to the ground with a broken face. <<$boyB>> says a defeated opponent, "once you see next to my girls even kill fuck."'
+		if bfb <= 0:'<<$boyB>> spits angrily to the ground and said,. "Fuck you on the dick, whore." He threw flowers and leaves in the trash. <<$boyC>> looking at what is happening and leaves without saying a word.'
+
+		act 'Escape':gt'street'
+
+		exit
+	elseif svidanieA = 1 and svidanieB = 0 and svidanieC = 0:
+		dayA = dayA + 1
+		svidanieA = 0
+		willpower = willpower + RAND(5,10)
+		manna = manna + RAND(5,10)
+
+		if harakBoy = 0:
+			if mop <= 2 and mop > 0:bfA = bfA + 1
+			if mop = 4:bfA = bfA - 1
+		elseif harakBoy = 1:
+			if mop <= 3 and mop > 0:bfA = bfA + 1
+			if mop = 4:bfA = bfA - 1
+		elseif harakBoy = 2:
+			if mop = 4:bfA = bfA + 1
+			if mop <= 2 and mop > 0:bfA = bfA - 1
+		end
+
+		'<<$boybodyA>> <<$boybodA>> <<$boyA>> suited to you and kisses you Welcoming.'
+
+		if dayA >= 30:
+			giftrand = RAND(0,2)
+			if giftrand <= financeA:
+				gift = RAND(bfa*10,bfa*50)
+				money = money + gift
+
+				'<<$boyA>> I made you a gift on <<gift>> rubles.'
+			end
+		end
+
+		act 'Kiss':gt'svidan','a'
+		act 'Avoid kissing':
+			cla
+			bfA = bfA - 1
+			gt'svidan','a'
+		end
+
+		exit
+	elseif svidanieA = 0 and svidanieB = 1 and svidanieC = 0:
+		dayB = dayB + 1
+		svidanieB = 0
+
+		'<<$boybodyb>> <<$boybodb>> <<$boyb>> suited to you and kisses you Welcoming.'
+
+		act 'Kiss':gt'svidan','b'
+
+		exit
+	elseif svidanieA = 0 and svidanieB = 0 and svidanieC = 1:
+		dayc = dayc + 1
+		svidaniec = 0
+
+		'<<$boybodyc>> <<$boybodc>> <<$boyc>> suited to you and kisses you Welcoming.'
+
+		act 'Kiss':gt'svidan','c'
+
+		exit
+	end
+end
+
+if $ARGS[0] = 'a':
+	if financeA = 0:gt'svi','poor'
+	if financeA = 1:gt'svi','norm'
+	if financeA = 2:gt'svi','reach'
+end
+
+if $ARGS[0] = 'kustA':
+	*clr
+	minut = minut + 20
+
+	'You hid in the nook and <<$boyA>> He pulled out his penis.'
+
+	act 'Take in the mouth':
+		cla
+		*clr
+		bfA = bfA + 1
+		if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+		bj = bj + 1
+		dick = dickA
+		harakBoy = harakBoyA
+		minut = minut + 30
+		$nameV = $boyA
+
+		'<center><img src="images/picV/bj.jpg"></center>'
+		'You knelt and <<$nameV>> He pulled out his penis and offered it to your face.'
+
+		gs'oral','start'
+
+		act 'Continue to suck':
+			cla
+			*clr
+			swallow = swallow + 1
+			cumlip = cumlip + 1
+
+			'<center><img src="images/picV/swallow.jpg"></center>'
+			'A jet of hot sperm hit you in the mouth. You began to swallow cum, and <<$nameV>> I continued to cum in your mouth. Finally, the flow of hot liquid with a pungent taste stopped.'
+
+			act 'Escape':
+				cla
+				dynamic $brodilr
+			end
+		end
+		act 'Remove from the mouth':
+			cla
+			*clr
+
+			if harakBoyA = 0:
+				'<center><img src="images/picV/hand.jpg"></center>'
+				'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+			elseif harakBoyA = 1:
+				tiprand = RAND(0,3)
+				if tiprand < 3:
+					'<center><img src="images/picV/hand.jpg"></center>'
+					'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+				elseif tiprand = 3:
+					facial = facial + 1
+					cumface = cumface + 1
+
+					'<center><img src="images/picV/facial.jpg"></center>'
+					'You took out a member and at this point <<$nameV>> discharged directly on your face, covering it with a warm and sticky sperm.'
+				end
+			elseif harakBoyA = 2:
+				facial = facial + 1
+				cumface = cumface + 1
+
+				'<center><img src="images/picV/facial.jpg"></center>'
+				'<<$nameV>> hold your hair pulled dick out of your mouth, and finished your face, covering it with a warm and sticky sperm.'
+			end
+
+			act 'Escape':
+				cla
+				dynamic $brodilr
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'carA':
+	*clr
+	minut = minut + 20
+
+	'You got in the car and <<$boyA>> I hugged you and started kissing.'
+
+	act 'Sex':
+		cla
+		*clr
+		bfA = bfA + 1
+		if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+		sex = sex + 1
+		minut = minut + 30
+		pose = 0
+		$nameV = $boyA
+		dick = dickA
+		silavag = silavagA
+
+		'<center><img src="images/picV/vag.jpg"></center>'
+		'<<$nameV>> I put you on your back and spread your legs.'
+
+		gs'orgazm','start'
+
+		act 'Escape':
+			cla
+			dynamic $brodilr
+		end
+	end
+	act 'Take in the mouth':
+		cla
+		*clr
+		bfA = bfA + 1
+		if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+		bj = bj + 1
+		dick = dickA
+		harakBoy = harakBoyA
+		minut = minut + 30
+		$nameV = $boyA
+
+		'<center><img src="images/picV/bj.jpg"></center>'
+		'You knelt and <<$nameV>> He pulled out his penis and offered it to your face.'
+
+		gs'oral','start'
+
+		act 'Continue to suck':
+			cla
+			*clr
+			swallow = swallow + 1
+			cumlip = cumlip + 1
+
+			'<center><img src="images/picV/swallow.jpg"></center>'
+			'A jet of hot sperm hit you in the mouth. You began to swallow cum, and <<$nameV>> I continued to cum in your mouth. Finally, the flow of hot liquid with a pungent taste stopped.'
+
+			act 'Escape':
+				cla
+				dynamic $brodilr
+			end
+		end
+		act 'Remove from the mouth':
+			cla
+			*clr
+
+			if harakBoyA = 0:
+				'<center><img src="images/picV/hand.jpg"></center>'
+				'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+			elseif harakBoyA = 1:
+				tiprand = RAND(0,3)
+				if tiprand < 3:
+					'<center><img src="images/picV/hand.jpg"></center>'
+					'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+				elseif tiprand = 3:
+					facial = facial + 1
+					cumface = cumface + 1
+
+					'<center><img src="images/picV/facial.jpg"></center>'
+					'You took out a member and at this point <<$nameV>> discharged directly on your face, covering it with a warm and sticky sperm.'
+				end
+			elseif harakBoyA = 2:
+				facial = facial + 1
+				cumface = cumface + 1
+
+				'<center><img src="images/picV/facial.jpg"></center>'
+				'<<$nameV>> hold your hair pulled dick out of your mouth, and finished your face, covering it with a warm and sticky sperm.'
+			end
+
+			act 'Escape':
+				cla
+				dynamic $brodilr
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'hisA':
+	*clr
+	minut = minut + 20
+
+	'Once you have entered the apartment <<$boyA>> I hugged you and started kissing.'
+
+	act 'Sex':
+		cla
+		*clr
+		bfA = bfA + 1
+		if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+		sex = sex + 1
+		minut = minut + 30
+		pose = 0
+		$nameV = $boyA
+		dick = dickA
+		silavag = silavagA
+
+		'<center><img src="images/picV/vag.jpg"></center>'
+		'<<$nameV>> I put you on your back and spread your legs.'
+
+		gs'orgazm','start'
+
+		act 'Escape':
+			cla
+			dynamic $brodilr
+		end
+	end
+	act 'Take in the mouth':
+		cla
+		*clr
+		bfA = bfA + 1
+		if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+		bj = bj + 1
+		dick = dickA
+		harakBoy = harakBoyA
+		minut = minut + 30
+		$nameV = $boyA
+
+		'<center><img src="images/picV/bj.jpg"></center>'
+		'You knelt and <<$nameV>> He pulled out his penis and offered it to your face.'
+
+		gs'oral','start'
+
+		act 'Continue to suck':
+			cla
+			*clr
+			swallow = swallow + 1
+			cumlip = cumlip + 1
+
+			'<center><img src="images/picV/swallow.jpg"></center>'
+			'A jet of hot sperm hit you in the mouth. You began to swallow cum, and <<$nameV>> I continued to cum in your mouth. Finally, the flow of hot liquid with a pungent taste stopped.'
+
+			act 'Escape':
+				cla
+				dynamic $brodilr
+			end
+		end
+		act 'Remove from the mouth':
+			cla
+			*clr
+
+			if harakBoyA = 0:
+				'<center><img src="images/picV/hand.jpg"></center>'
+				'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+			elseif harakBoyA = 1:
+				tiprand = RAND(0,3)
+				if tiprand < 3:
+					'<center><img src="images/picV/hand.jpg"></center>'
+					'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+				elseif tiprand = 3:
+					facial = facial + 1
+					cumface = cumface + 1
+
+					'<center><img src="images/picV/facial.jpg"></center>'
+					'You took out a member and at this point <<$nameV>> discharged directly on your face, covering it with a warm and sticky sperm.'
+				end
+			elseif harakBoyA = 2:
+				facial = facial + 1
+				cumface = cumface + 1
+
+				'<center><img src="images/picV/facial.jpg"></center>'
+				'<<$nameV>> hold your hair pulled dick out of your mouth, and finished your face, covering it with a warm and sticky sperm.'
+			end
+
+			act 'Escape':
+				cla
+				dynamic $brodilr
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'kvartA':
+	*clr
+	minut = minut + 20
+	if housr > 0:housrA = 1 & housrMir = 0
+
+	'Once you have entered the apartment <<$boyA>> I hugged you and started kissing.'
+
+	if husband = 0:
+		act 'Sex':
+			cla
+			*clr
+			bfA = bfA + 1
+			if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+			sex = sex + 1
+			minut = minut + 30
+			pose = 0
+			$nameV = $boyA
+			dick = dickA
+			silavag = silavagA
+
+			'<center><img src="images/picV/vag.jpg"></center>'
+			'<<$nameV>> I put you on your back and spread your legs.'
+
+			gs'orgazm','start'
+
+			act 'Carry-to-door':
+				cla
+				gt'mirror','fin'
+			end
+		end
+		act 'Take in the mouth':
+			cla
+			*clr
+			bfA = bfA + 1
+			if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+			bj = bj + 1
+			dick = dickA
+			harakBoy = harakBoyA
+			minut = minut + 30
+			$nameV = $boyA
+
+			'<center><img src="images/picV/bj.jpg"></center>'
+			'You knelt and <<$nameV>> He pulled out his penis and offered it to your face.'
+
+			gs'oral','start'
+
+			act 'Continue to suck':
+				cla
+				*clr
+				swallow = swallow + 1
+				cumlip = cumlip + 1
+
+				'<center><img src="images/picV/swallow.jpg"></center>'
+				'A jet of hot sperm hit you in the mouth. You began to swallow cum, and <<$nameV>> I continued to cum in your mouth. Finally, the flow of hot liquid with a pungent taste stopped.'
+
+				act 'Carry-to-door':
+					cla
+					gt'mirror','fin'
+				end
+			end
+			act 'Remove from the mouth':
+				cla
+				*clr
+
+				if harakBoyA = 0:
+					'<center><img src="images/picV/hand.jpg"></center>'
+					'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+				elseif harakBoyA = 1:
+					tiprand = RAND(0,3)
+					if tiprand < 3:
+						'<center><img src="images/picV/hand.jpg"></center>'
+						'You took out a member of his mouth and <<$nameV>> You finished in the palm.'
+					elseif tiprand = 3:
+						facial = facial + 1
+						cumface = cumface + 1
+
+						'<center><img src="images/picV/facial.jpg"></center>'
+						'You took out a member and at this point <<$nameV>> discharged directly on your face, covering it with a warm and sticky sperm.'
+					end
+				elseif harakBoyA = 2:
+					facial = facial + 1
+					cumface = cumface + 1
+
+					'<center><img src="images/picV/facial.jpg"></center>'
+					'<<$nameV>> hold your hair pulled dick out of your mouth, and finished your face, covering it with a warm and sticky sperm.'
+				end
+
+				act 'Carry-to-door':
+					cla
+					gt'mirror','fin'
+				end
+			end
+			act 'Masturbate him':
+				cla
+				*clr
+				if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+				DOM = DOM + 1
+				hj = hj + 1
+				minut = minut + 30
+				horny = horny + DOM
+
+				'<center><img src="images/picV/hand1.jpg"></center>'
+				'You undressed and laid on the bed Man, while they themselves sat down beside him and began to fondle his penis hands.'
+				'Soon on your skillful movements guy you left off her hands.'
+
+				if harakBoyA = 0:bfA = bfA - 1
+				if harakBoyA = 1:bfA = bfA - 5
+				if harakBoyA = 2:bfA = bfA - 10
+
+				act 'Wipe your hands and hold up doors':
+					cla
+					gt'mirror','fin'
+				end
+			end
+
+			if DOM > 1 and kunday ! day and mesec <= 0:
+				act 'Cooney':
+					cla
+					*clr
+					kunday = day
+					if boyonceA = 0:boyonceA = 1 & guy = guy + 1 & vneshBoyA = vneshBoyA + 10
+					DOM = DOM + 1
+					kuni = kuni + 1
+					minut = minut + 30
+					horny = horny + DOM + (silaVag*2 + 5)
+
+					'<center><img src="images/picV/kuni.jpg"></center>'
+					'You undressed and lay on the bed, I am saying that the guy you caressed his tongue.'
+					'<<$boyA>> I lay down between your legs and began to work on the tongue of your pussy.'
+
+					if harakBoyA = 0:bfA = bfA - 1
+					if harakBoyA = 1:bfA = bfA - 5
+					if harakBoyA = 2:bfA = bfA - 10
+
+					if horny >= 90:
+						horny = 0
+						manna = manna + 15
+						willpower = willpower + 15
+						orgasm = orgasm + 1
+
+						'From the skillful actions guy you covered orgasm.'
+					else
+						'Action Man, though were exciting, but they began to bore you.'
+					end
+				end
+				act 'Further':
+					cla
+					gt'svidan','kvartA'
+				end
+			end
+		end
+	end
+end
+--- svidan ---------------------------------
+

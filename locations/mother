@@ -1,0 +1,581 @@
+# mother
+!Model Olga Kabaeva
+motherAge = age+19
+if momslut >= 2 and mother < 40:mother = 40
+gs'stat'
+gs'motherQW'
+gs'dinmother'
+
+'<center><b><font color = maroon>Mom</font></b></center>'
+'<center><img src="images/qwest/alter/mother.jpg"></center>'
+'Your mother Natasha is still quite young and attractive. She is only <<motherAge>> years. She works in the station cafe.'
+
+if (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 0:motherQW = 1
+if motherQW = 1 and mother > 40:mother = 40
+if mother < 20:'You and mom scandal.'
+if mother >= 20 and mother < 40:'You and mom tensions.'
+if mother >= 40 and mother < 60:'You have a normal relationship with his mother.'
+if mother >= 60 and mother < 80:'You have a good relationship with his mother.'
+if mother >= 80:'You have a great relationship with my mother.'
+
+act '<B>Move away</B>':gt $loc, $metka
+
+if motherWorry = 1 and indorf = 0:
+	motherWorry = 0
+	mother -= 1
+
+	'The mother does not sleep and is in the hallway waiting for you: "Where are you shlyaeshsya?! You know what hour in the yard?!"'
+exit
+elseif motherWorry = 1 and indorf > 0:
+	motherWorry = 0
+end
+
+if $loc = 'gkafe':
+	cla
+	'Mom saw you and frowned: "Why come? I said many times, Do not go to my job. There`s nothing to do young girls!"'
+	act '<B>Move away</B>':gt $loc, $metka
+exit
+end
+
+!check hair color
+if hcolfronce=0:hcolmotherremember=hcol&hcolfronce=1
+if hcolmotherremember!hcol:
+if hcol=0:$texthcol='I decided to become a burning brunette?'
+if hcol=1:$texthcol='I decided to get my natural hair color?'
+if hcol=2:$texthcol='I decided to become a redhead-shameless?'
+if hcol=3:$texthcol='I decided to become a blonde?'
+'Mother with interesoma looked at your hair: "Ooh-you, Repainted! <<$texthcol>>"'
+hcolmotherremember=hcol
+end
+
+if nude=1:
+	cla
+	'The mother looks at you eyes wide-"Light,Here is the number of, Are not you ashamed to go naked? Well dressed jogging".'
+	act '<B>Move away</B>':gt $loc, $metka
+	exit
+end
+
+if pirsA >= 1 and pirsAmother=0 and motherpirsadaytalk!daystart:
+!Mother tongue piercing notes
+pirseerand=rand(1,100)
+motherpirsadaytalk=daystart
+	if pirseerand>=75:
+	'Mother looks you in the mouth: "Sveta, and what have you got there in the language shines?"'
+		act'Nothing':
+		cla
+		'You shake my head: "Nothing." and then turn away ,that the mother had not noticed tongue piercing.'
+		act '<B>Move away</B>':gt $loc, $metka
+		end
+		
+		act'Show pierced tongue':
+		cls
+		pirsAmother=1
+		gs'stat'
+		'<center><img src="images/picb/pirsA.jpg" ></center>'
+		'You open your mouth and draw out the tongue showing the mother tongue piercing.'
+		'Mother shakes her head "Sveta, tongue piercing made lewd women, serving men mouth."'
+		act '<B>Move away</B>':gt $loc, $metka
+		end
+	exit
+	end
+end
+
+if pirsB = 1 and pirsBmother=0 and motherpirsbdaytalk!daystart:
+!Mother says lip piercing
+motherpirsadbytalk=daystart
+'Mother looks at your lips that appeared piercing "And this is why?"'
+	act'I just liked':
+	cls
+	pirsBmother=1
+	gs'stat'
+	'<center><img src="images/picb/pirsB.jpg" ></center>'
+	'You shrug your shoulders and say,, just you like, So you decided to make a lip piercing.'
+	act '<B>Move away</B>':gt $loc, $metka
+	end
+exit
+end
+
+if pirsC = 1 and pirsCmother=0:
+!mother notices earrings
+pirsCmother=1
+'Mother is looking at your ears noticing earrings: "I look at you decided to wear earrings? Very cute, suits you."'
+end
+
+if pirsD = 1 and pirsDmother=0:
+!mother notices a nose ring
+pirsDmother=1
+'Mother looks a bit shocked at your nose ring: "Jesus, Sveta, and this is why else? I understand, bulls ring is inserted into the nose, that would be for them to carry the ring, but you-why?"'
+end
+
+if pirsE = 1 and pirsEmother=0:
+!mother notices eyebrow piercing
+pirsEmother=1
+'Mother shakes her head looking at your eyebrow piercing: "Sveta, Well, what do you need that stuff in eyebrow?", - then sadly shakes his head - "Oh youth, youth..."'
+end
+
+if mother > 65 and mesec > 0 and preg = 0 and tampon = 0:
+	act 'Ask a tampon':
+		'You tell mother about, that you have a month and ended swabs. She looks at you knowingly, It brings some of his and recommends you next time thinking ahead.'
+		tampon=3
+		mother -= 15
+		minut += 3
+		cla 
+		act '<B>Move away</B>':gt $loc, $metka
+		exit
+	end
+end
+
+act 'Chat':
+	cls
+	minut+=rand(10,15)
+	mother+=1
+	gs'stat'
+	'<center><b><font color = maroon>Mom</font></b></center>'
+	'<center><img src="images/qwest/alter/mother.jpg"></center>'
+	'Your mother Natasha is still quite young and attractive. She is only <<motherAge>> years. She works in the station cafe.'
+	if mother<20:'You have a terrible row with my mother.'
+	if mother>=20 and mother<40:'You and mom tensions.'
+	if mother>=40 and mother<60:'You have a normal relationship with his mother.'
+	if mother>=60 and mother<80:'You have a good relationship with his mother.'
+	if mother>=80:'You have a great relationship with my mother.'
+	act '<B>Move away</B>':gt $curloc
+	if mother<20:
+	dynamic $d_mother[1]
+	exit
+	elseif mother>=20 and mother<40:
+	dynamic $d_mother[2]
+	exit
+	elseif mother >=40:
+		dynamic $d_mother[3]
+	end
+end
+
+if SchoolAtestat = 1 and SAtestatGift = 0:
+	SAtestatGift = 1
+	money += 5000
+	gs'stat'
+
+	'My mother was delighted: "Now you graduated from high school and I want to give you five thousand rubles. You can buy a gift."'
+end
+
+if hour > 5:
+	if abort = 1 and pregTalkFamily = 1:
+		pregTalkFamily = 2
+		mother = 0
+
+		'The mother looked sadly at you: "What do you all-still a fool! Have an abortion, and if now you will not have children? What, thinking, will be forever young and whole life will be held in the fun?"'
+	end
+
+	if momslut = 1:
+		act 'Say, what you saw, mother fucking master of the cafe':
+			cls
+			minut += 5
+			momslut = 2
+			gs'stat'
+
+			'<center><b><font color = maroon>Mom</font></b></center>'
+			'<center><img src="images/qwest/alter/mother.jpg"></center>'
+			'You said the mother, you`ve seen it on the stock with a host of cafes cafe. Mother noticeably pale and sat down on a stool: "And what you saw?". You answered it, seen, she sucked the owner cafes, and then he fucked her cancer. Mother looked down: "Well yes, I sleep with Slava. But I want to warn you, blackmail me you did not get." The mother looked into your eyes: "All, What you can achieve, is to destroy the family."'
+
+			act '<B>Move away</B>':gt $loc, $metka
+		end
+	end
+
+	if preg = 1 and pregTalkFamily = 0:
+		act 'Say mother, you are pregnant':
+			cls
+			minut += 5
+			mother = 20
+			pregTalkFamily = 1
+			gs'stat'
+
+			'<center><b><font color = maroon>Mom</font></b></center>'
+			'<center><img src="images/qwest/alter/mother.jpg"></center>'
+			'You said the mother, you are pregnant. Mother with wide-eyed helplessly sat on a stool. She said sadly "Well. I was afraid of this. Now, do not try to have an abortion, if you do an abortion, in the future it is unlikely you manage to have children. You`ll have to have a child."'
+
+			act '<B>Move away</B>':gt $loc, $metka
+		end
+	end
+
+	act 'Ask for money':
+		cls
+		minut += 5
+		gs'stat'
+
+		'<center><b><font color = maroon>Mom</font></b></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
+		'You asked my mother for money.'
+
+		if SchoolAtestat = 0:
+			if mother >= 80:
+				if motherPayDay = day:
+					'Mother frowned: "Dochura, I told you already gave money!"'
+				elseif motherPayDay ! day:
+					mother -= 1
+					motherPayDay = day
+
+					if Suspeh >= 70:
+						if Suspeh < 90:
+							money += 150
+
+							'Mother, frowning, gives you 150 rubles: "You`ll learn better, I will give more. In the meantime,, it`s all, that you deserve!"'
+
+							act '<B>Move away</B>':gt $loc, $metka
+
+							exit
+						elseif Suspeh >= 90:
+							money += 300
+
+							'Mother smiled and gave you 300 rubles: "Okay, money."'
+
+							act '<B>Move away</B>':gt $loc, $metka
+
+							exit
+						end
+					else
+						'Mother frowned: "You`ll learn better, will be money, as long as you deserve only the belt, instead of money!"'
+					end
+				end
+			elseif mother >= 60 and mother < 80:
+				if motherPayDay = day:
+					'Mother frowned: "No docha. I`ve already gave money. Let us call it a day."'
+				elseif motherPayDay ! day:
+					mother -= 1
+					motherPayDay = day
+
+					if Suspeh >= 70:
+						if Suspeh < 90:
+							money += 100
+
+							'Mother gave you frown 100 rubles: "You`ll learn better, I will give more. In the meantime,, it`s all, that you deserve!"'
+
+							act '<B>Move away</B>':gt $loc, $metka
+
+							exit
+						elseif Suspeh >= 90:
+							money += 250
+
+							'Mother smiled and gave you 250 rubles: "Okay, money."'
+
+							act '<B>Move away</B>':gt $loc, $metka
+
+							exit
+						end
+					else
+						'Mother frowned: "You`ll learn better, will be money, as long as you deserve only the belt, instead of money!"'
+					end
+				end
+			elseif mother >= 40 and mother<60:
+				if motherPayDay = day:
+					'Mother frowned: "Here you are also Velcro. Do not get!"'
+				elseif motherPayDay ! day:
+					mother -= 1
+					motherPayDay = day
+
+					if Suspeh >= 70:
+						if Suspeh < 90:
+							money += 50
+
+							'Mother gave you frown 50 rubles: "You`ll learn better, I will give more. In the meantime,, it`s all, that you deserve!"'
+
+							act '<B>Move away</B>':gt $loc, $metka
+
+							exit
+						elseif Suspeh >= 90:
+							money += 200
+
+							'Mother smiled and gave you 200 rubles: "Okay, money."'
+
+							act '<B>Move away</B>':gt $loc, $metka
+
+							exit
+						end
+					else
+						'Mother frowned: "You`ll learn better, will be money, as long as you deserve only the belt, instead of money!"'
+					end
+				end
+			elseif mother < 40 and motherKnowWhore = 0 and motherKnowSpravka = 0:
+				'Mother frowned: "Do not you deserve the money!"'
+			elseif mother < 40 and motherKnowWhore >= 1 or mother < 40 and motherKnowSpravka >= 1:
+				'- You`re asking for more money, whore? Get out, scram their stud beg money!'
+			end
+		elseif SchoolAtestat > 0:
+			'You`re old enough, Earn itself.'
+		end
+
+		act '<B>Move away</B>':gt $loc, $metka
+	end
+
+	act 'Request new clothes':
+		cls
+		minut += 5
+		gs'stat'
+
+		'<center><b><font color = maroon>Mom</font></b></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
+		'You asked for new clothes.'
+
+		if SchoolAtestat = 0:
+			if mother >= 80:
+				if motherClotheMonth ! month:
+					'Mom sighed: "Well, here again. You`re my world is empty. Let`s go shopping, Mount onion."'
+
+					act 'Go to the store':
+						cls
+						mother = 70
+						motherClotheMonth = month
+						minut += 30
+						gs'stat'
+
+						'You went to the store with his mother and began to choose. With her mother to go shopping quite an interesting exercise, it will never give you choose yourself and be sure to buy clothes for your taste.'
+
+						act 'Choose clothes':
+							cls
+							gs'stat'
+							:markbuyclomother
+
+							numrand = RAND(1,130)
+							if newclo[numrand] = 0:
+								newclo[numrand] = 1
+								newcloH[numrand] = 50
+								newcloB[numrand] = bedra
+
+								'<center><img src="images/ode/newclo/<<numrand>>.jpg"></center>'
+							else
+								jump'markbuyclomother'
+							end
+
+							'Mom bought you clothes.'
+
+							act '<B>Escape</B>':gt $loc, $metka
+						end
+
+						if newclo[131] = 0:
+							act 'Choose a school uniform':
+								cls
+								gs'stat'
+								newclo[131] = 1
+
+								'Mom bought you a school uniform.'
+
+								act '<B>Escape</B>':gt $loc, $metka
+							end
+						end
+					end
+
+					exit
+				else
+					'Mom shook her head: "Dochura, our budget is not rubber, this month we have already bought your clothes. Now wait for the next month."'
+				end
+			else
+				'Mom shook her head: "No money."'
+			end
+		else
+			'Mom shook her head: "You`re an adult, It should make itself."'
+		end
+
+		act '<B>Move away</B>':gt $loc, $metka
+	end
+end
+
+if $loc = 'kuhrPar':
+	act 'Offer your help':
+		cls
+		minut += 60
+		mother += RAND(1,5)
+		manna -= 10
+		TotalMomPom += 1
+		MomPom += 1
+		gs'stat'
+		if MomPom = 1:
+			'<center><img src="images/qwest/alter/mother/motherhelp1.jpg"></center>'
+			'You offered to help his mother with the housework.'
+			'Mom asked you to wash the dishes. You are within an hour washing dishes in the kitchen.'
+		elseif MomPom = 2:
+			'<center><img src="images/qwest/alter/mother/motherhelp2.jpg"></center>'
+			'You offered to help his mother with the housework.'
+			'Mom wants you to peel the potatoes. You are within an hour peeling potatoes in the kitchen.'
+		elseif MomPom = 3:
+			'<center><img src="images/qwest/alter/mother/motherhelp3.jpg"></center>'
+			'You offered to help his mother with the housework.'
+			'Mom wants you to clean the floor. You are within an hour washed the floors in the apartment.'
+		elseif MomPom = 4:
+			'<center><img src="images/qwest/alter/mother/motherhelp4.jpg"></center>'
+			'You offered to help his mother with the housework.'
+			'Mom asked you to do your laundry. You are within an hour wash clothes in the bathroom.'
+		elseif MomPom = 5:
+			'<center><img src="images/qwest/alter/mother/motherhelp5.jpg"></center>'
+			'You offered to help his mother with the housework.'
+			'Mom asked you to pat underwear. You are within an hour iron clothes in the hall.'
+		elseif MomPom = 6:
+			sdacharand = RAND(10,50)
+			money += sdacharand
+			gs'stat'
+			'<center><img src="images/qwest/alter/mother/motherhelp6.jpg"></center>'
+			'You offered to help his mother with the housework.'
+			'Mom asked you to run to the grocery store. You go for an hour for food, You got change for a purchase <<sdacharand>> rubles.'
+		elseif MomPom = 7:
+			'<center><img src="images/qwest/alter/mother/motherhelp7.jpg"></center>'
+			'You offered to help his mother with the housework.'
+			MomPom = 0
+			'Mom asked you to run to the pharmacy for drugs. It runs my mother`s sister, Lyudmila, and it will give free drugs, Mom then she rejoice with Aunt Luda. My mother wrote a list and you went to the pharmacy, a pharmacy as always sat behind the counter Aunt Luda. "Hello Svetulechka. What`s up? How is your mood?" You are greeted by her aunt and gave her a piece of paper in which the mother wrote drugs. Aunt Luda quickly gathered the necessary and gave you. You came back to the apartment and gave her mother medication.'
+		end
+
+		act '<B>Move away</B>':gt $loc, $metka
+	end
+end
+
+if SchoolAtestat = 0:
+	if GspravkaT = 0 and GspravkaTimes >= 3 and hour >= 6 and hour <= 21 and motherKnowSpravka = 0:
+		cla
+		mother -= 1
+		'Mother frowned: "How much can you pull out the FAQ? You`ll have the most to lead the gynecologist!" Mother took you by the hand and led him to the clinic, to the gynecologist.'
+
+		act 'Going to the gynecologist for help':
+			cls
+			cla
+			minut = minut + 15
+			'<center><b><font color = maroon>Mom</font></b></center>'
+			'<center><img src="images/qwest/alter/mother/ginekolog.jpg"></center>'
+			'You lay down on the examination table and pushed his feet. The gynecologist has viewed your vagina.'
+
+			if vagina > 0:
+				Gspravka = 7
+				GspravkaT = 2
+
+				'Gynecologist wrote Help, that you are not a virgin.'
+			elseif vagina = 0:
+				Gspravka = 7
+				GspravkaT = 1
+
+				'Gynecologist wrote Help, that you are a virgin.'
+			end
+
+			act '<B>Logout</B>':gt $curloc
+		end
+
+		exit
+	elseif GspravkaT = 0 and GspravkaTimes < 3 and motherKnowSpravka = 0:
+		GspravkaTimes += 1
+
+		'"You need to go to the clinic. Gynecologist, refer to school."'
+	elseif GspravkaT = 2 and motherKnowSpravka = 0:
+		cla
+		if motherKnowWhore = 0:
+			mother = 0
+			motherKnowSpravka = 1
+			!if motherQW = 0:motherQW = 1
+
+			if momslut < 2:
+				'Mother grabbed you by the ear: "Oh blyadischa! My father screamed, What would one of you people do Putney, you find worthy husbands, and you`re a whore has already Mandu someone tuck! Get out of my sight!"'
+			else
+				'His mother shook her head sadly: "Well, here you become an adult. Look no aerial."'
+			end
+		elseif motherKnowWhore > 0 and motherQW < 2:
+			mother -= 10
+			motherKnowSpravka = 1
+			!if motherQW = 0:motherQW = 1
+
+			'The mother looked at the FAQ: "Do not even wonder. Fuck with someone-in the alley, and even home all hahalskih "gifts" come. B my eyes have not seen you."'
+		elseif motherQW >= 2:
+			motherKnowSpravka = 2
+
+			' -And what do you bring it to me? You can even make copies and carry them to school. Doubt, that you have there that-will change, - with malice noticed your mother.'
+		end
+
+		act '<B>Move away</B>':gt $loc, $metka
+		exit
+	end
+end
+
+if motherQW = 1 and mother >= 20 and $loc = 'kuhrPar':
+	act 'Try to make peace':
+		cla
+		cls
+		'<center><b><font color = maroon>Mom</font></b></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
+
+		mqwtRand = RAND(1,10)
+		if mqwtRand <= 2:
+			mother -= RAND(1,5)
+			minut += 30
+
+			'You tried to talk to his mother and make peace. But what if you`re too aggressive, whether it has a bad mood, But the result "reconciliation" It is becoming another scandal.'
+
+			act '<B>Move away<B/>':gt $loc, $metka
+		elseif mqwtRand > 2 and mqwtRand <= 8:
+			mother += RAND(0,1)
+			minut += 30
+
+			'You tried to talk to his mother and make peace. Despite, the whole half-hour conversation mainly a fairly aggressive monologue your mother about morality, diseases and about, what awaits you in the future, if you do not take up the mind, some progress in the relationship is still there.'
+
+			act '<B>Move away</B>':gt $loc, $metka
+		elseif mqwtRand > 8:
+			gt'motherQW','motherQW_2'
+		end
+	end
+end
+
+if alko > 0 and alkomday ! day:
+	alkomday = day
+	mother -= 1
+
+	'Mother sniffed: "Sveta, you smell of alcohol! that hideousness? You are still too young, What would drink!"'
+end
+
+if (cumlip > 1 or cumface > 0 or cumfrot > 0) and whoremday ! day:
+	cla
+	whoremday = day
+
+	if motherKnowWhore = 0 and motherKnowSpravka = 0 and motherQW = 0:
+		mother = 0
+		if motherKnowWhore = 0:motherKnowWhore = 1
+
+		if momslut < 2:
+			'The mother looked at you, eyes bulged and reddened. On you was noticeable sperm.'
+			'- Oh, you`re a whore juvenile, What`s this on you? All say that the daughter of a decent, and she fucking somewhere. Blyadina! I went here, do not get caught up in my eyes!'
+		else
+			'His mother shook her head sadly: "You would have wiped the sperm, and the whole town will know, you whore."'
+		end
+
+		act '<B>Move away</B>':gt $loc, $metka
+	elseif (motherKnowWhore > 0 or motherKnowSpravka > 0) and motherQW = 1:
+		monther -= 20
+		if motherKnowWhore = 0:motherKnowWhore = 1
+
+		if momslut < 2:
+			'The mother looked at you glare. On you was noticeable sperm.'
+			'- Again, where-the fucking whore juvenile? I am already familiar to ashamed of you! I went here, I do not get caught the eye!'
+		else
+			'His mother shook her head sadly "You would have wiped the sperm, and the whole town will know, you whore."'
+		end
+
+		act '<B>Move away</B>':gt $loc, $metka
+	elseif motherQW >= 2:
+		monther -= 10
+		if motherKnowWhore = 0:motherKnowWhore = 1
+
+		'Mother looked sternly at you. On you was noticeable sperm.'
+		'- Sveta, I certainly understand it all, but could you clean up the art of their fancy man? Quickly into the bathroom, yet who-something not seen!'
+
+		act '<B>Move away</B>':gt'vanrPar'
+	end
+end
+
+if glamur > 0 and hour > 9:
+	'Mom looked at you "Where are you going so dressed up?"'
+end
+
+if week = 5 and dostupindorf = 1:
+	if hour > 9:
+		'Mom continued to go about their business tells you "Sveta, Tomorrow we`ll go to the village, in 12 hours. If you want us then to come to me 12ti."'
+	end
+elseif week = 6 and dostupindorf = 1:
+	if hour > 9 and hour < 12:
+		'Mom asks you "Sveta, Well? Will you come with us to the village?"'
+
+		act 'To go to the countryside':hour = 12 & minut = 0 & indorf = 1 & gt'famdorfride'
+	end
+end
+--- mother ---------------------------------
+

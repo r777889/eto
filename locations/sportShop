@@ -1,0 +1,146 @@
+# sportShop
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Sporting goods store.</font></b></center>'
+	'<center><img src="images/pic/sportshop.jpg"></center>'
+
+	act 'Logout':
+		cla
+		minut = minut + 5
+		gt'torgcentr'
+	end
+	act 'In the women`s clothing department':
+		cla
+		minut = minut + 5
+		gt'sportshop','clo'
+	end
+
+	if skak = 0 and money >= 500:
+		act 'Buy a skipping rope (500 RUB)':
+			cla
+			minut = minut + 5
+			money = money - 500
+			skak = 1
+
+			act 'Pick purchase':gt'sportshop','start'
+		end
+	end
+
+	if obruch = 0 and money >= 1500:
+		act 'Buy hoop (1500 RUB)':
+			cla
+			minut = minut + 5
+			money = money - 1500
+			obruch = 1
+
+			act 'Pick purchase':gt'sportshop','start'
+		end
+	end
+
+	if bookYog = 0 and money >= 1500:
+		act 'Buy Yoga Guide (1500 RUB)':
+			cla
+			minut = minut + 5
+			money = money - 1500
+			bookYog = 1
+
+			act 'Pick purchase':gt'sportshop','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'clo':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	cla
+	clr
+	*clr
+	mag = 1
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>The department of women`s clothing.</font></b></center>'
+	'<center><img src="images/pic/sportshop.jpg"></center>'
+	'All clothing is 4000 RUB, sportswear dimensionless.'
+
+	act 'Exit Department':
+		cla
+		minut = minut + 5
+		gt'sportshop','start'
+	end
+
+	if money >= 4000:
+		if yoga[1] = 0:
+			act 'Inspect 1th sportswear':numdres = 1 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[2] = 0:
+			act 'Inspect 2th sportswear':numdres = 2 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[3] = 0:
+			act 'Inspect 3th sportswear':numdres = 3 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[4] = 0:
+			act 'Inspect 4th sportswear':numdres = 4 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[5] = 0:
+			act 'Inspect 5th sportswear':numdres = 5 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[6] = 0:
+			act 'Inspect 6th sportswear':numdres = 6 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[7] = 0:
+			act 'Inspect 7th sportswear':numdres = 7 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[8] = 0:
+			act 'Inspect 8th sportswear':numdres = 8 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[9] = 0:
+			act 'Inspect 9th sportswear':numdres = 9 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[10] = 0:
+			act 'Inspect 10th sportswear':numdres = 10 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[11] = 0:
+			act 'Inspect 11th sportswear':numdres = 11 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[12] = 0:
+			act 'Inspect 12th sportswear':numdres = 12 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[13] = 0:
+			act 'Inspect 13th sportswear':numdres = 13 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[14] = 0:
+			act 'Inspect 14th sportswear':numdres = 14 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[15] = 0:
+			act 'Inspect 15th sportswear':numdres = 15 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[16] = 0:
+			act 'Inspect 16th sportswear':numdres = 16 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[17] = 0:
+			act 'Inspect 17th sportswear':numdres = 17 & payclo = 4000 & gt'loker','yoga'
+		end
+		if yoga[18] = 0:
+			act 'Inspect 18th sportswear':numdres = 18 & payclo = 4000 & gt'loker','yoga'
+		end
+	end
+end
+--- sportShop ---------------------------------
+

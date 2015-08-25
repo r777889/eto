@@ -1,0 +1,56 @@
+# comendant
+if $ARGS[0] = 'pos1':
+	cla
+	*clr
+	minut += 10
+	gs'stat'
+
+	'<center><b><font color=maroon>The commandant of the hostel</font></b></center>'
+	'<center><img src="images/etogame/comendant.jpg"></center>'
+	'The commandant of the hostel and friendly ulybchiv.'
+
+	act 'Become acquainted':gt'comendant','pos2'
+end
+
+if $ARGS[0] = 'pos2':
+	cla
+	*clr
+	minut += 5
+	gor_dorm = 1
+	gs'stat'
+
+	'<center><b><font color=maroon>The commandant of the hostel</font></b></center>'
+	'<center><img src="images/etogame/comendant.jpg"></center>'
+	'You: - Good afternoon! I am in the direction of the school, Here are all the necessary documents.'
+	'...'
+	'- Yes, It seems everything is in order. Welcome to our town. My name is Peter, you can simply Petya.'
+	'- Svetlana.'
+	'- So will teach, Well, this is lucky to get such a charming tomboy teacher.'
+	'- Thank you.'
+	'- So, Here are your keys, the room number on the key fob. Kitchen and bathroom at the end of the corridor, although water is often cut off the utility. If there are problems, please contact me.'
+
+	act 'To the room':gt'dom_gor'
+end
+
+if $ARGS[0] = 'pos3':
+	cla
+	*clr
+	minut += 5
+	gor_dorm = 3
+	gs'stat'
+
+	'<center><b><font color=maroon>The commandant of the hostel</font></b></center>'
+	'<center><img src="images/etogame/comendant_what.jpg"></center>'
+	'You: - Hello! It`s just an outrage, have you seen the condition of the pipe in the bathroom. Therefore cut off the water, that of the pipes is nothing left.'
+	'...'
+	'- Ltd., what you say.'
+	'- Yes, I myself checked riser, I can show you Come.'
+	'- Ugliness! I immediately call plumbers. So here`s the thing.'
+	'- Hmm, I hope...'
+	'- I immediately take measures, Thanks you. Sorry for the inconvenience.'
+	'(Hmm, strange type)'
+
+	act 'To the room':gt'dom_gor'
+end
+--- comendant ---------------------------------
+

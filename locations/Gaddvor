@@ -1,0 +1,31 @@
+# Gaddvor
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+'<center><H4>Courtyard</H4></center>'
+'<center><img src="images/qwest/gadukino/dvor.jpg"></center>'
+'The courtyard garden, hut and outbuildings enclosed fence.'
+
+if car > 0 and cardrive = 23:
+	cardrive = 23
+
+	'Near the fence stands <a href="exec:GS ''carF'',''start''">your <<$car>></a>'
+end
+
+clr
+gs'stat'
+gs'time'
+
+act 'Going into the house':minut += 5 & gt'Gadhouse'
+act 'Go to the barn':minut += 5 & gt'Gadsarai'
+act 'To go to the bath':minut += 5 & gt'Gadbana'
+if meadow > 0 and hour >= 6 and hour < 20:act 'Go to the clearing':minut += 20 & gt'Meadow'
+act '<b>To go to the countryside</b>':minut += 5 & gt'gadukino'
+
+if hour >= 17 and hour < 20:
+	if mitkaday ! daystart:'Not far from the hut shies <a href="exec:GT ''mitka''">Mitya kingpin</a>'
+elseif hour >= 20:
+	'Not far from the hut village sits kompashka <a href="exec:GT ''mitkabuh''">youth</a>'
+end
+--- Gaddvor ---------------------------------
+

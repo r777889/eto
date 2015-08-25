@@ -1,0 +1,63 @@
+# podval_rape
+gs'stat'
+
+if podvalrape = 0:
+	'You lie on the filthy mattress in the floor of a dark basement smelling sewage, surrounded by empty bottles. Around you are <<$kol_man_text>> and discuss with each other "Well potsiki, pull lots, who first tears up the slut?"'
+
+	act 'Further':
+		rape += 1
+		gang += 1
+		podvalrape = 1
+		minut += 5
+		silavag = 0
+		$boy = 'Gopnik'
+		guy += kol_man
+		ciklkm = kol_man
+		if podvalrapeQW = 0:podvalrapeQW = 1
+		gt $curloc
+	end
+elseif podvalrape = 1:
+	rand1=rand(0,100)
+	if rand1<10:'<center><img src="images/qwest/alter/placer/gopgang2.jpg"></center>'
+	if rand1>=10:'<center><img src="images/nigma/gor/orgy1,'+rand(0,4)+'.gif"></center>'
+
+	:markpodvalrape
+	ciklkm -= 1
+	minut += 15
+	dick = RAND(12,20)
+
+	tiprand = RAND(0,2)
+	if tiprand < 2:
+		dynamic $sexstart2
+		dynamic $sexcum
+	elseif tiprand = 2:
+		dynamic $analsexrude
+	end
+
+	if ciklkm > 0:'Then the space between your legs took the next guy.'
+	gs'stat'
+	if ciklkm > 0:jump'markpodvalrape'
+
+	endrandom = RAND (0,1)
+	if endrandom = 0:
+	'Finally, it`s all over, guys got dressed and went out of the cellar.'
+		act 'Escape':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+	
+	elseif endrandom = 1:
+		act 'Come to life':
+			cla
+			cls
+			minut += 5
+			body_write = 5
+			face_write = 1
+			podvalwriterand = RAND (1,6)
+			gs 'stat'
+			
+			'<center><img src="images/qwest/alter/placer/podvalwrite<<podvalwriterand>>.jpg"></center>'
+			'Besides that you missed in a circle and we wanted to detach, Gopnik painted obscenities all your body and sprawled helplessly laughing retired. You`re lying stunned on the floor, making half-hearted attempts to climb.'
+ 			act 'Escape':podvalrape = 0 & dormrape = 0 & gt'gorodok'
+		end  	
+	end
+end
+--- podval_rape ---------------------------------
+

@@ -1,0 +1,129 @@
+# dinsexgivi
+$threesomedin = {
+	act 'Take the member':
+		cls
+		minut += 5
+		gs'stat'
+
+		tiprand = RAND(0,1)
+		picrand = RAND(1,2)
+		'<center><img src="images/picKav/threeC<<picrand>>.jpg"></center>'
+		'You take the top of the Givi and sit down on his cock her pussy.'
+
+		dynamic $sexstart2
+		dynamic $giviirasexdivibor2
+	end
+	act 'Kissing on':
+		cls
+		minut += 5
+		gs'stat'
+
+		tiprand = RAND(0,1)
+		picrand = RAND(1,2)
+		'<center><img src="images/picKav/threeC<<picrand>>.jpg"></center>'
+		'Ira sits on a member Givi her pussy and begins frantically jumping on his thick and hard horseradish.'
+
+		dynamic $giviirasexdivibor
+	end
+}
+
+$threesomedin2 = {
+	act 'Kissing on':
+		cls
+		minut += 5
+		gs'stat'
+
+		tiprand = RAND(0,1)
+		picrand = RAND(1,2)
+		'<center><img src="images/picKav/threeC<<picrand>>.jpg"></center>'
+		'Ira sits on a member Givi her pussy and begins frantically jumping on his thick and hard horseradish.'
+
+		dynamic $giviirasexdivibor
+	end
+}
+
+$giviirasexdivibor = {
+	!SG selection
+	act 'Licking his chest Ira':
+		cls
+		minut += 5
+		horny += 10
+		gs'stat'
+
+		tiprand = RAND(0,1)
+		picrand = RAND(1,2)
+		if picrand = 1:'<center><img src="images/picKav/threeD.jpg"></center>'
+		if picrand = 2:'<center><img src="images/picKav/threeD1.jpg"></center>'
+		'While Ira jumped on thick cock you circled her nipple with his lips and began to suck it.'
+		'Givi groaned and dropped Ira with a member.'
+
+		dynamic $giviirasexdivibor3
+	end
+	act 'Substitute pussy Ira':
+		cls
+		minut += 5
+		horny += 20
+		gs'stat'
+
+		tiprand = RAND(0,1)
+		picrand = RAND(1,2)
+		'<center><img src="images/picKav/threeE.jpg"></center>'
+		'You framed her pussy Ira and she began to actively lick it without stopping ride on a limb.'
+		if horny >= 90:horny = 0 & orgasm += 1 & 'You covered an orgasm and you moan with pleasure.'
+		'Givi groaned and dropped Ira with a member.'
+
+		dynamic $giviirasexdivibor3
+	end
+}
+
+$giviirasexdivibor2 = {
+	!Ira choice
+	act 'Jump on a limb':
+		cls
+		minut += 5
+		horny += 10
+		gs'stat'
+
+		tiprand = RAND(0,2)
+		picrand = RAND(1,2)
+		if tiprand = 0:
+			'<center><img src="images/picKav/threeF.jpg"></center>'
+			'You Ride on a member Givi and Ira decided not to remain indifferent snapped his lips you in the nipple started to suck and nibble.'
+		elseif tiprand = 1:
+			'<center><img src="images/picKav/threeF1.jpg"></center>'
+			'You jump on a limb and Givi IRA starts to kiss you on the mouth at the same time caressing your pussy finger.'
+		end
+		'Givi groaned and threw you to the member.'
+
+		dynamic $giviirasexdivibor3
+	end
+}
+
+$giviirasexdivibor3 = {
+	!Ira choice
+	act 'Further':
+		cls
+		minut += 5
+		horny += 10
+		cumlip += 1
+		cumface += 1
+		gs'stat'
+
+		'<center><img src="images/picKav/threeFin.jpg"></center>'
+		'Givi put you on your knees together with Irina and began to finish on your face. You finish with a lick and a member from the faces of each other and kissing.'
+
+		act 'Escape':dynamic $endirinaaftergang
+	end
+}
+
+$endirinaaftergang = {
+	cls
+	minut += 5
+	gs'stat'
+
+	'Exhausted, tired and heavy with the smell of sperm you get home from a hard day after Irene. You get to the entrance of Ira and she kisses you on the lips enveloping scent of semen goodbye, then go to his home.'
+
+	act 'Escape':gt'street'
+}
+--- dinsexgivi ---------------------------------
+

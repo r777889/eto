@@ -1,0 +1,95 @@
+# vokzaltorg
+$d_kachatprava = {
+	act 'Swing right':
+		cls
+		money = 0
+		tovarL = 0
+		minut += 120
+		manna = 0
+		gs'stat'
+
+		'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+		'You have decided to shake their rights, Police responded to what is to be expected, you dragged to the police, Money seized and confiscated goods. Once you promuryzhili two o`clock, you still released.'
+
+		act 'Escape':minut += 1 & gt'vokzalGin'
+	end
+}
+
+cls
+minut += 30
+prodskill = vnesh+will+dom
+if prodskill < 20:prodskill = 20
+if prodskill > 150:minimumtov = 3
+if prodskill > 100 and prodskill <= 150:minimumtov = 2
+if prodskill < 100:minimumtov = 1
+tovarand = RAND(minimumtov,prodskill/10)
+if tovarand > tovarL:tovarand = tovarL
+tovpay = tovarand*300
+money += tovpay
+tovarL -= tovarand
+will += RAND(0,1)
+TorgVokzalTimes += 1
+dom += 1
+gs'stat'
+
+'<center><img src="images/qwest/vokzal/peron.jpg"></center>'
+'You managed vtyuhat <<tovarand>> units sold, while earning <<tovpay>> rubles.'
+
+act 'Escape':
+	cls
+	gs'stat'
+
+	'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+	'Near the platform you are already waiting for the police. "Breach? We sell without proper papers?"'
+
+	if money >= 500:
+		act 'Pay 500 RUB':
+			cls
+			money -= 500
+			gs'stat'
+
+			'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+			'You paid 500 rubles police. He took the money and immediately lost interest to you.'
+
+			act 'Escape':minut += 1 & gt'vokzalGin'
+		end
+	end
+
+	act 'To persuade forgive':
+		cls
+		gs'stat'
+
+		'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+		'You started to persuade the police captain to forgive you and release.'
+
+		if katalkinSexOnce >= 1:
+			if katalkinSexDay+7 >= daystart:
+				'The captain grinned "Well, you came to see me to the police."'
+
+				act 'Escape':minut += 1 & gt'vokzalGin'
+			elseif katalkinSexDay+7 < daystart:
+				'The captain frowned "You long ago to me did not come, avoiding?"'
+
+				act 'No, you, simply no':
+					cls
+					gs'stat'
+
+					'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+					'You began to make excuses saying, that you just do not have enough time. The captain grinned "Come then now the department. Carry out bodily searches."'
+
+					act 'Going to the police':minut += 5 & katalkinNoexit = 1 & gt'katalkin'
+				end
+			end
+		elseif katalkinSexOnce = 0:
+			schtraf = 500
+
+			'The captain grinned "Come then now the department. They will understand."'
+
+			act 'Going to the police':minut += 5 & katalkinNoexit = 1 & gt'katalkin'
+		end
+	end
+
+	dynamic $d_kachatprava
+end
+--- vokzaltorg ---------------------------------
+

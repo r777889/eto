@@ -1,0 +1,1605 @@
+# lake
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	if lakeonce = 0:lakeonce = 1 & minut = minut + 60
+	gs'stat'
+	gs'time'
+
+	'<center><b><font color = maroon>Lake</font></b></center>'
+	'<center><img src="images/pic/lake.jpg"></center>'
+	'A large lake located within the city is a favorite vacation spot of inhabitants in the summer.'
+	'Blind path <a href="exec:GT ''dort'',''start''">leaving</a> in landing'
+
+	if car > 0 and cardrive = 4:
+		cardrive = 4
+		'At the lake worth <a href="exec:GS ''carF'',''start''">your <<$car>></a>.'
+	end
+
+	if nastjaQW = 3 and temper >= 20 and bikini > 0 and hour >= 6 and hour <= 20:
+		'You waved his hand in greeting <a href="exec:gt''nastja'',''pos14''">Nastya</a>.'
+	end
+
+	if temper >= 20 and bikini > 0 and hour >= 6 and hour <= 20:
+		'Around <a href="exec:gt''lake'',''aquapark''">water attractions</a>.'
+		'And, you can <a href="exec:gt''lake'',''horse''">ride a horse</a>'
+		'And there are even a couple of kilometers <a href="exec:gt''Nudelake''">nudist beach</a>'
+		'You can also soak up the sun or take a dip.'
+
+		act 'Take a walk along the beach':
+			cls
+			minut += 60
+			gs'stat'
+
+			'<center><img src="images/img/lake/lake.jpg"></center>'
+			'You walk along the beach.'
+
+			walkrand = RAND(0,100)
+			if walkrand >= 50 and walkrand < 60:gt'lake','walklake1'
+			if walkrand >= 60 and walkrand < 70:gt'lake','walklake2'
+
+			act 'Finish':gt'lake','start'
+		end
+		act 'Bathe 1 h':
+			cla
+			*clr
+			cumpussy = 0
+			cumbelly = 0
+			cumass = 0
+			cumlip = 0
+			cumface = 0
+			cumfrot = 0
+			minut = minut + 60
+			sweat = -3
+			manna = manna + 5
+			willpower = willpower + 5
+			if stren < 30:stren = stren + 1
+
+			'<center><img src="images/pics/swim.jpg"></center>'
+			'You iskupnulis lake, Water refreshes and invigorates.'
+
+			act 'Get out of the water':gt'lake','start'
+		end
+		if sunWeather = 1:
+			act 'Sunbathe 1 h':
+				cla
+				*clr
+				minut = minut + 60
+				sweat = sweat + 1
+				manna = manna + 5
+
+				'<center><img src="images/pics/zagar.jpg"></center>'
+
+				if krem = 0:
+					tan = tan + 1
+					'You went to the beach to sunbathe.'
+				elseif krem > 0:
+					krem = krem - 1
+					tan = tan + 3
+					'You body is smeared with cream for sunburn and went sunbathing.'
+				end
+
+				evrand = RAND(0,100)
+				if evrand > 50:
+					act 'Stand on the beach':gt'lake','start'
+				elseif evrand <= 30 and andrei > 0:
+					act 'Stand on the beach':gt'lake','start'
+				elseif evrand <= 30 and andrei = 0:
+					anreirape = 1
+					'You fell asleep on the beach while sunbathing. You dreamed that someone caresses your breasts. Your nipples harden, chest high rises from deep breaths. What-It outlined the aura of something wet on the breast, sweet and you moan.'
+					'A strong hand stroked the folds on your body, from which the whole body covered goose, and suddenly his finger slipped through overgrown fuzz barely punched folds genital lips and touched some-the incredibly pleasant point. Your body felt hot, back sweet shiver ran, and below all moisturize. Already feeling, that pleasure comes awake, and not in sleep, but still unable to overcome the sleepy bliss and open your eyes, you have spread her legs wide, surrendering seductive caress. When the cheeky finger, wetted your juices, easily penetrated into your bosom, you even have time to wonder, naturalness sensation. Movement of fingers you have entered into a kind of trance, you have groaned loudly, wriggling under the hot sun rays. And suddenly, when you thought, that here-here`s what-Something must have happened, I left you a feeling of fullness.'
+
+					act 'Open your eyes':
+						cla
+						*clr
+						'Opening his eyes, You saw a shadowy figure unshaven man, longingly staring at you. You felt awkward - you lie naked in front of strangers, moreover all moaning and actual, as the latest slut, and scary - no one on the beach, because it can make you all, he wants!'
+						'All these thoughts flashed through your mind, until the man pulling off her shorts. You looked at him in horror the exposed member, before he was a huge show you.'
+
+						act 'Jump':
+							cla
+							*clr
+							'You tried to jump but then strong hands were pressed to his hairy chest.'
+
+							act 'Knee hit him in the balls':
+								cla
+								*clr
+								andrei = 1
+
+								'You accurately poked his knee in the balls, He yelled and let you down.'
+
+								act 'Stand on the beach':gt'lake','start'
+							end
+							act 'Breaking free from the embrace':
+								cla
+								*clr
+								andrei = 2
+								anreiday = day
+								guy = guy + 1
+								anal = anal + 1
+								anus = anus + 1
+								cumass = cumass + 1
+								horny = 20
+								orgasm = orgasm + 1
+
+								'<center><img src="images/picVA/andreiA.jpg"></center>'
+								'You began to break out of his grasp, but it led to elozanie, he was even more excited and hugged her hard cock to your sun-heated tender thigh.'
+								'The stranger turned you on the belly and became wet with his saliva your elastic anus.'
+								'He spread his force your buttocks, the most revealing quivering hole, crushing you with his heavy body. You squinted, from your throat pain escaped wheeze, when hard cock began to enter into your inner sanctum. No you do not feel pleasure, Only sharp pain tides, aversion to her rapist and sense, if you use, as a whore. Here, his fingers casually touched your womb, and you caught a wave of lust. Over and over again as if you punched through a huge member of your abuser, and you podmahivat him, and could not hold back the sweet moans.'
+
+								act 'Another, more, more, more...':
+									cla
+									*clr
+									'<center><img src="images/picVA/andrei.jpg"></center>'
+									'Another, more, more, more... It is pounding in your temples simultaneously with each thrust. Your clitoris turned into bare wire, thought, even a moment - and you explode. The man changed his position - now you`re sitting in an upright position, nasazhivayas already own on his fat cock, with one hand he continued stimulation of your clitoris, and the other is a fiercely crushed, the other soft supple breasts, painfully squeezing between the fingers of your nipple lumps.'
+									'Here`s, lastly, your body has received a long-awaited relaxation, you have a few seconds of inertia continued to bounce on his rapist, and then he will cast a dull growl your ass plump spicy hot stringy streams of sperm.'
+									'- Well, liked, Aphrodite? - With a touch of irony, the man asked.'
+
+									act 'What is your name?':
+										cla
+										*clr
+										'- What is your name? - Your own question seemed most stupid, but the word, as the saying goes, not a sparrow...'
+										'- Andrew, - He grinned.'
+										'And you like?'
+										'Light said you -'
+										'I see, you like our game. Do you want to catch an even bigger buzz? - Come tomorrow, - Andrew said softly, dressing, - We repeat our deeds.'
+
+										act 'Stand on the beach':gt'lake','start'
+									end
+								end
+							end
+						end
+					end
+				elseif evrand <= 40 and evrand > 30:
+					gt'lake','vlake1'
+				elseif evrand <= 50 and evrand > 40:
+					gt'lake','vlake2'
+				end
+			end
+		end
+
+		if anreiday ! day and andrei = 2:
+			'You see on the beach Andrew.'
+
+			act 'Approach to Andrew':gt'lake','andrey1'
+		end
+	end
+
+	act 'Logout':
+		cla
+		lakeonce = 0
+		minut = minut + 60
+		gt'street'
+	end
+end
+
+if $ARGS[0] = 'aquapark':
+	minut += 5
+	cls
+	gs'stat'
+    gs'time'
+
+	'<center><img src="images/img/Lake/aquapark.jpg"></center>'
+	'You came to the attractions.'
+	'There is <a href="exec:gt''lake'',''gidro''">watercraft</a>, <a href="exec:gt''lake'',''banan''">banana</a> and <a href="exec:gt''Lake'',''gorka''">hill</a>.'
+
+	act 'Escape':gt'lake','start'
+end
+
+if $ARGS[0] = 'gidro':
+	cls
+	gs'stat'
+	gs'time'
+	minut += 1
+
+	'<center><img src="images/img/Lake/aquapark.jpg"></center>'
+	'You came to hydrocycles.'
+	'Tour price 100 RUB.'
+
+	if money >= 100:
+		act 'Go for a ride':
+			manna = manna + 10
+			willpower = willpower + 10
+			money -= 100
+			cls
+			minut += 30
+
+			'<center><img src="images/img/Lake/gidro.jpg"></center>'
+			'You take a jet ski, and you begin to ride.'
+
+			gidrrand = RAND(0,4)
+			if gidrrand = 0:gt'lake','kater1'
+
+			act 'Finish':gt'lake','aquapark'
+		end
+	end
+
+	act 'Move away':gt'lake','aquapark'
+end
+
+if $ARGS[0] = 'banan':
+	cls
+	gs'stat'
+	gs'time'
+	minut += 1
+
+	'<center><img src="images/img/Lake/aquapark.jpg"></center>'
+	'You came to the banana.'
+	'Tour price 100 RUB.'
+
+	if money >= 100:
+		act 'Go for a ride':
+			manna = manna + 10
+			willpower = willpower + 10
+			cls
+			minut += 30
+			money -= 100
+
+			'<center><img src="images/img/Lake/banan.jpg"></center>'
+			'You sit down on a banana and you ride.'
+
+			banrand = RAND(0,100)
+			if banrand >= 80 and banrand < 90:gt'lake','kater2'
+			if banrand >= 90:gt'lake','kater3'
+
+			act 'Finish':gt'Lake','aquapark'
+		end
+	end
+
+	act 'Move away':gt'lake','aquapark'
+end
+
+if $ARGS[0] = 'gorka':
+	cls
+	gs'stat'
+	gs'time'
+	minut += 1
+
+	'<center><img src="images/img/Lake/aquapark.jpg"></center>'
+	'You came to the hill.'
+	'Tour price 50 RUB.'
+
+	if money >= 50:
+		act 'Go for a ride':
+			manna = manna + 10
+			willpower = willpower + 10
+			cls
+			minut += 15
+			money -= 50
+
+			'<center><img src="images/img/Lake/gorka.jpg"></center>'
+			'You climb the hill and roll down.'
+
+			act 'Finish':gt'lake','aquapark'
+		end
+	end
+
+	act 'Move away':gt'lake','aquapark'
+end
+
+if $ARGS[0] = 'horse':
+	cls
+	gs'stat'
+	gs'time'
+	minut += 1
+
+	'<center><img src="images/img/Lake/horse0.jpg"></center>'
+	'You came to the horses.'
+	'Tour price 100 RUB.'
+
+	if money >= 100:
+		act 'Go for a ride':
+			manna = manna + 10
+			willpower = willpower + 10
+			cls
+			minut += 30
+			money -= 100
+
+			'<center><img src="images/img/Lake/horse.jpg"></center>'
+			'You sit in the saddle and go ride on the lake shore.'
+
+			horserand = RAND(0,100)
+			if horserand >= 60 and horserand < 80:gt'lake','horse1'
+			if horserand >= 80:gt'lake','horse2'
+
+			act 'Finish':gt'lake','start'
+		end
+	end
+
+	act 'Move away':gt'lake','start'
+end
+
+if $ARGS[0] = 'walklake1':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+	'Taking a walk on the beach you hear how someone is calling you "Hey, come here beauty". You turned and saw that next to the beach between the trees stands on the threshold of a hut and a guy sitting.'
+
+	$dinribak = {
+		act 'Idiot! (leave)':
+			cls
+			minut += 2
+			gs'stat'
+
+			'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+			'You have called this idiot idiot and ready to leave. The guy said, "Well, maybe I was wrong. And you do not whore, a whore. Hey Babe, you want to make two thousand?"'
+
+			act 'Escape':gt'lake','start'
+			act 'Cash in advance!':
+				cls
+				minut += 2
+				gs'stat'
+
+				'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+				'You hesitating blurted "Cash in advance!" The guy laughed "Well, with this and started to! I would say that you`re a whore, rather than powdered to my brain like a schoolgirl playing of virginity." The guy took the money and handed it to you imposingly.'
+
+				act 'Escape':gt'lake','start'
+				act 'Take the money':
+					cls
+					minut += 2
+					money += 2000
+					if ribakSex = 0:ribakSex = 1 & guy += 1
+					bj += 1
+					sub += 1
+					manna = 0
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/facefuck.jpg"></center>'
+					'You took money from the boy and hid them. The guy grinned wickedly "On your knees scum! I`m so goddamned fuck your face, that you will not forget for a long time!" You have reddened, but still faced a guy on his knees. He grabbed her hands and your face spit in your face, then rubbed his hand over his harchek your face. You froze in confusion, but the guy does not stand on ceremony with you and you drove his penis into the mouth to the throat. You choked and tears flowed from his eyes. Man growled "What whore, Artist? Such scum like you should enjoy it! You dirty whore. Do you like money, then you have to get used to such." The guy started to fuck you roughly in the mouth, periodically wiping current snot out of your nose and mouth drooling, your hand across your face, and occasionally causing hefty slaps. You almost fainted and expired snot, tears and saliva from the fact that a member of the roughly enters your throat. Your throat is burning with fire and incessant cramps nausea twisted your body. Time stretched into infinity, and you have already started to think, that this torment will never end, when suddenly the guy pulled his dick out of your mouth.'
+
+					act '...':
+						cls
+						minut += 2
+						sub += 1
+						cumface += 1
+						cumlip += 1
+						facial += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/facefuck1.jpg"></center>'
+						'The guy started to cum on your face, lips, jet of his sperm flew into your mouth, and you feel lousy taste of semen.'
+
+						act 'Watch for Man':
+							cls
+							minut += 2
+							sub += 1
+							$ribakName = 'whore'
+							gs'stat'
+
+							'<center><img src="images/qwest/sosed/facefuck1.jpg"></center>'
+							'Are you tired of seeing the guy. Then took the palm of your hair, He wiped his cock your hair. After that, he rudely told you. "All whore. Now you can get out."'
+
+							act 'Escape':gt'lake','start'
+						end
+					end
+				end
+			end
+		end
+		act 'Come closer':
+			cls
+			minut += 2
+			gs'stat'
+
+			'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+			'You hesitantly came closer to the guy and he quickly grabbed you by the wrist literally dragged to itself. "Come on baby, do not fuck brain, we are both aware of, what you want to try to horror my dick taste. So do not be shy."'
+
+			act 'Break and run':gt'lake','start'
+			act 'Stand in front of a guy on his knees':
+				cls
+				minut += 2
+				if ribakSex = 0:ribakSex = 1 & guy += 1
+				bj += 1
+				sub += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/sosed/big.jpg"></center>'
+				'You knelt in front of a guy and your face was in front of his large penis. Man impatiently slapped you prick on the nose. "What boobs mnesh? Starts sucking!" With these words, the guy grabbed you by the hair and buried your face in his penis, you do not understand how it happened, but his head was hot inside your mouth. The guy taking your head in his hands began to stick your face on a huge dick. His head rested on a regular basis in your throat, sometimes causing gagging and salivation. Suddenly the guy pushing the hips sharply to meet your face drove his cock in your throat. You have eyes widened from the realization, that this giant body went into your throat. You rested her hands on her hips Man trying to be free from the trap and breathe. Finally, the guy let go of your head allowing you to remove a member from a throat and rest. But how long the guy did not wait, and again taking you by the hair began to pull your face on your dick. Suddenly, the guy pulled his dick out of your mouth and started to masturbate in front of your face while you`re trying to catch my breath "Open your fucking mouth" I growled at you kid "And vysun your language."'
+
+				act 'Open your mouth and stick out tongue':
+					cls
+					minut += 2
+					sub += 1
+					cumface += 1
+					cumlip += 1
+					facial += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/cum.jpg"></center>'
+					'You obediently opened his mouth and put your language. Immediately you slapped in the face jet of sperm. Then another and, covering your face with sperm. Part of the sperm gets into your mouth and you feel its a nasty taste.'
+
+					act 'Watch for Man':
+						cls
+						minut += 2
+						sub += 1
+						swallow += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/cumeat.jpg"></center>'
+						'In your face dripping sperm, you feel no taste in your mouth and look at the guy. The guy smiled and bit his finger collected sperm from your face. Then he stuck his finger in the mouth causing you to lick sperm. When his thumb was clean, he gathered the remnants of sperm from your face on the finger and stuck it back in your mouth. Once again you licked his finger and swallowing sperm.'
+
+						act 'Watch for Man':
+							cls
+							minut += 2
+							sub += 1
+							$ribakName = 'Sunken whore'
+							gs'stat'
+
+							'<center><img src="images/qwest/sosed/spit.jpg"></center>'
+							'The guy suddenly thrust your fingers of both hands to his mouth and parted your lips with relish spat in your mouth. You flinch from it and feel like your cheeks blush of shame flooding. The guy looked at you menacingly "You lustful, vile creature and it was then, I deserved. Now get!"'
+
+							act 'Escape':gt'lake','start'
+						end
+					end
+				end
+				act 'Try to remove the person':
+					cls
+					minut += 2
+					cumface += 1
+					$ribakName = 'whore'
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/cum1.jpg"></center>'
+					'You tried to dodge, but the guy grabbed you by the hair and began to fall the jet of sperm on your face. Finally, exhausted and told the guy "Get out of here thing!"'
+
+					act 'Escape':gt'lake','start'
+				end
+			end
+		end
+	}
+
+	if ribakSex = 0:
+		act 'Escape':gt'lake','start'
+		act 'Step up':
+			cls
+			minut += 2
+			gs'stat'
+
+			'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+			'You came to the guy with a fishing rod. He looked lustfully and imposingly you from head to toe.'
+
+			act 'Escape':gt'lake','start'
+
+			if vnesh < 15:
+				'The guy smiled and began to hum "Well Well you such a terrible."'
+			elseif vnesh >= 15 and vnesh < 30:
+				'Man Look around you smile "Okay, good."'
+			elseif vnesh >= 30:
+				'The guy nodded examine you "And you do so, simpotnaya."'
+			end
+
+			if vnesh >= 15:
+				act 'What do you want?':
+					cls
+					minut += 2
+					gs'stat'
+
+					'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+					'You asked, that guy should be. The guy looked at you again with a smirk. "You have written on his face, you blyadushka. Want a delicious nap huytsa?"'
+
+					act 'How dare you? (Rebelled)':
+						cls
+						minut += 2
+						gs'stat'
+
+						'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+						'You have rebelled so arrogant statements. What guy just became wider grin. "Come on. Do not worry. I love whores." After these words the man unzipped his fly and pulled out a huge dick in which it was clearly less 25 centimeters. "Come on baby, See what the Pope has vkusnuypirogek for your fucking rotika." The guy beckoned you to her finger.'
+
+						dynamic $dinribak
+					end
+					act 'What? (wonder)':
+						cls
+						minut += 2
+						gs'stat'
+
+						'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+						'Are you surprised this impudence. The guy just smiled wider. "You`re even more surprised after seeing this!" With that man unbuttoned his pants and pulled out a hefty term in which it was clearly less 25 centimeters. "Come on baby, See what the Pope has vkusnuypirogek for your fucking rotika." The guy beckoned you to her finger.'
+
+						dynamic $dinribak
+					end
+					act 'Hmm (thinking)':
+						cls
+						minut += 2
+						gs'stat'
+
+						'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+						'You think for a second. The guy just smiled wider. "I knew that you whore, Only to see you, I have a nose for whores bored in hard dick." With that man unbuttoned his pants and pulled out a hefty term in which it was clearly less 25 centimeters. "Come on baby, See what the Pope has vkusnuypirogek for your fucking rotika." The guy beckoned you to her finger.'
+
+						dynamic $dinribak
+					end
+				end
+			end
+		end
+	elseif ribakSex > 0:
+		'You came to the guy who said you. Hello <<$ribakName>>, want a tasty huytsa?'
+
+		act 'Escape':gt'lake','start'
+
+		if $ribakName = 'whore':
+			act 'Two pieces!':
+				cls
+				minut += 2
+				gs'stat'
+
+				'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+				'You said the guy "Two pieces, and the money in advance!" The guy grinned "If you are going to earn money floss, get ready to drink the cup of humiliation to the dregs." The guy took the money and handed it to you imposingly.'
+
+				act 'Escape':gt'lake','start'
+				act 'Take the money':
+					cls
+					minut += 2
+					money += 2000
+					ribakSex += 1
+					bj += 1
+					sub += 1
+					manna = 0
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/facefuck.jpg"></center>'
+					'You took money from the boy and hid them. The guy grinned wickedly "On your knees scum! I`m so goddamned fuck your face, that you will not forget for a long time!" You have reddened, but still faced a guy on his knees. He grabbed her hands and your face spit in your face, then rubbed his hand over his harchek your face. You froze in confusion, but the guy does not stand on ceremony with you and you drove his penis into the mouth to the throat. You choked and tears flowed from his eyes. Man growled "What whore, Artist? Such scum like you should enjoy it! You dirty whore. Do you like money, then you have to get used to such." The guy started to fuck you roughly in the mouth, periodically wiping current snot out of your nose and mouth drooling, your hand across your face, and occasionally causing hefty slaps. You almost fainted and expired snot, tears and saliva from the fact that a member of the roughly enters your throat. Your throat is burning with fire and incessant cramps nausea twisted your body. Time stretched into infinity, and you have already started to think, that this torment will never end, when suddenly the guy pulled his dick out of your mouth.'
+
+					act '...':
+						cls
+						minut += 2
+						sub += 1
+						cumface += 1
+						cumlip += 1
+						facial += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/facefuck1.jpg"></center>'
+						'The guy started to cum on your face, lips, jet of his sperm flew into your mouth, and you feel lousy taste of semen.'
+
+						act 'Watch for Man':
+							cls
+							minut += 2
+							sub += 1
+							$ribakName = 'whore'
+							gs'stat'
+
+							'<center><img src="images/qwest/sosed/facefuck1.jpg"></center>'
+							'Are you tired of seeing the guy. Then took the palm of your hair, He wiped his cock your hair. After that, he rudely told you. "All whore. Now you can get out."'
+
+							act 'Escape':gt'lake','start'
+						end
+					end
+				end
+			end
+		elseif $ribakName ! 'whore':
+			act 'Stand in front of a guy on his knees':
+				cls
+				minut += 2
+				ribakSex += 1
+				bj += 1
+				sub += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/sosed/big.jpg"></center>'
+				'You knelt in front of a guy and your face was in front of his large penis. Man impatiently slapped you prick on the nose. "What boobs mnesh? Starts sucking!" With these words, the guy grabbed you by the hair and buried your face in his penis, you do not understand how it happened, but his head was hot inside your mouth. The guy taking your head in his hands began to stick your face on a huge dick. His head rested on a regular basis in your throat, sometimes causing gagging and salivation. Suddenly the guy pushing the hips sharply to meet your face drove his cock in your throat. You have eyes widened from the realization, that this giant body went into your throat. You rested her hands on her hips Man trying to be free from the trap and breathe. Finally, the guy let go of your head allowing you to remove a member from a throat and rest. But how long the guy did not wait, and again taking you by the hair began to pull your face on your dick. Suddenly, the guy pulled his dick out of your mouth and started to masturbate in front of your face while you`re trying to catch my breath "Open your fucking mouth" I growled at you kid "And vysun your language."'
+
+				act 'Open your mouth and stick out tongue':
+					cls
+					minut += 2
+					sub += 1
+					cumface += 1
+					cumlip += 1
+					facial += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/cum.jpg"></center>'
+					'You obediently opened his mouth and put your language. Immediately you slapped in the face jet of sperm. Then another and, covering your face with sperm. Part of the sperm gets into your mouth and you feel its a nasty taste.'
+
+					act 'Watch for Man':
+						cls
+						minut += 2
+						sub += 1
+						swallow += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/sosed/cumeat.jpg"></center>'
+						'In your face dripping sperm, you feel no taste in your mouth and look at the guy. The guy smiled and bit his finger collected sperm from your face. Then he stuck his finger in the mouth causing you to lick sperm. When his thumb was clean, he gathered the remnants of sperm from your face on the finger and stuck it back in your mouth. Once again you licked his finger and swallowing sperm.'
+
+						act 'Watch for Man':
+							cls
+							minut += 2
+							sub += 1
+							$ribakName = 'Sunken whore'
+							gs'stat'
+
+							'<center><img src="images/qwest/sosed/spit.jpg"></center>'
+							'The guy suddenly thrust your fingers of both hands to his mouth and parted your lips with relish spat in your mouth. You flinch from it and feel like your cheeks blush of shame flooding. The guy looked at you menacingly "You lustful, vile creature and it was then, I deserved. Now get!"'
+
+							act 'Escape':gt'lake','start'
+						end
+					end
+				end
+				act 'Try to remove the person':
+					cls
+					minut += 2
+					cumface += 1
+					$ribakName = 'whore'
+					gs'stat'
+
+					'<center><img src="images/qwest/sosed/cum1.jpg"></center>'
+					'You tried to dodge, but the guy grabbed you by the hair and began to fall the jet of sperm on your face. Finally, exhausted and told the guy "Get out of here thing!"'
+
+					act 'Escape':gt'lake','start'
+				end
+			end
+		end
+!'
+		act 'Only between the legs?':
+			cla
+			*clr
+			dynamic $venerasiak
+			slutty += 1
+			guy += 1
+
+			'<center><img src="images/img/Lake/walk1/walk1.jpg"></center>'
+			'"Only between the legs?" We asked you understood what it offers'
+			'"I was just there and catch, but you told me to start mouth polish rod" the guy said, unbuttoning his pants and freeing the rod at will.'
+
+			act 'Polished rod':
+				cla
+				*clr
+				bj += 1
+
+				'<center><img src="images/img/Lake/walk1/walk2.jpg"></center>'
+				'You sat next to him and lowered his head to his cock began to suck. A few minutes later the guy you ripped from a member "All right enough, well poliruesh."'
+
+				act 'I tried to':
+					cla
+					*clr
+					sex += 1
+
+					'<center><img src="images/img/Lake/walk1/walk3.jpg"></center>'
+					'The guy climbed, You turned and swung cancer went into your vagina, You screamed in pain.'
+					'"Well, what do you think, Fishing is not easy, Needless to suffer" said the man with the power of continuing to fuck your pussy. And you have only scream at every jolt.'
+
+					act 'Ouch-ouch-ouch':
+						cla
+						*clr
+						cumbrest += 1
+						money += 2000
+
+						'<center><img src="images/img/Lake/walk1/walk4.jpg"></center>'
+						'At the end of man stiffened and shook abruptly pulled out of you my dick, expanding you to face your chest filled with his sperm.'
+						'"That you feed for fish." he said with a smile,.'
+						'"And it is that they were gold" said the guy handing you money'
+
+						act 'Escape':gt'lake','start'
+					end
+				end
+			end
+		end
+'
+	end
+end
+
+if $ARGS[0] = 'walklake2':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/walk2/walk1.jpg"></center>'
+
+	if StasikValera = 0:'You felt hot and decided to freshen up a bit, you went into the water, turning you noticed not far from the two men looking at you.'
+	if StasikValera > 0:'You felt hot and decided to freshen up a bit, you went into the water, turning you notice is not far Stasik and Valerie looking at you.'
+
+	act 'Escape':gt'lake','start'
+
+	$din_stasValera4 = {
+		act 'Relax':
+			cls
+			minut += 2
+			horny += 20
+			if StasikSex = 0:StasikSex = 1 & guy += 1
+			if ValeraSex = 0:ValeraSex = 1 & guy += 1
+			StVaGang = 1
+			gang += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/sosed/lake.jpg"></center>'
+			'You are relaxed and began to enjoy the caress breasts and pussy.'
+
+			$boy = 'Stas'
+			dick = 15
+			silavag = 1
+			pose = 0
+
+			dynamic $sexstart
+
+			'You feel how the body Stasik expanded the your feet and that it boils down to your hard soft pussy.'
+
+			dynamic $sexstart2
+
+			'While you fucked Stas, Valera slumped to your face and put his own standing member in your lips.'
+
+			dick = 17
+			bj += 1
+
+			dynamic $dinrandbj
+			dynamic $sexcum
+
+			'Valera groaned compressed lips trembled and his cock in your mouth.'
+
+			swallow += 1
+			cumlip += 1
+			cumface += 1
+
+			dynamic $dinrandswallow
+
+			act 'Further':
+				cls
+				minut += 2
+				gs'stat'
+
+				'Tired men dismounted and began to have to pull on his clothes. Stas helped you stand up "You`re a cool girl Svetsik, Let us carry you home."'
+
+				act 'Do not, I myself like something':
+					cls
+					minut += 2
+					gs'stat'
+
+					'You refused and Stas shrugged "Well, as you know."'
+
+					act 'Escape':gt'lake','start'
+				end
+				act 'I`m not against':
+					cls
+					minut += 5
+					cumface = 0
+					StasValeraKnow = 1
+					gs'stat'
+
+					'The boys waited until you bring myself up and went to the side of your house. Along the way, the men kept silent and even longer sprightly Stas not really pondered, what can you say in this situation. Finally you stopped before the door of your apartment. And I say goodbye to you guys left.'
+
+					act 'Escape':gt'korr'
+				end
+			end
+		end
+	}
+
+	$din_stasValera3 = {
+		act 'Further':
+			cls
+			minut += 2
+			horny += 20
+			gs'stat'
+
+			'You are relaxed and began to enjoy the sensation in your chest touches arising from Stasik. Man perfected movement lowered the cup bra freeing your breasts. You do not have time to blink an eye and lips covered Stasik your nipple.'
+
+			act 'Hey! What doest thou?':
+				cls
+				minut += 2
+				gs'stat'
+
+				'You jumped to their feet adjusting bra. Stas smiled "Do not be afraid girl."'
+
+				act 'Escape':gt'lake','start'
+			end
+			act 'Sluggish protest':
+				cls
+				minut += 2
+				horny += 20
+				gs'stat'
+
+				'You tried to pull her bra back and whispered "Do not!" Stas smiled "Do not be shy girl."'
+
+				dynamic $din_stasValera4
+			end
+			act 'To be silent':
+				cls
+				minut += 2
+				horny += 30
+				gs'stat'
+
+				'You sit back enjoying the, how skillfully Staik sucking your breasts, his hands began to passionately caress your body. His strong fingers penetrated into your panties and began caressing your pussy.'
+
+				dynamic $din_stasValera4
+			end
+		end
+	}
+
+	$din_stasValera2 = {
+		act 'Remove your hands from himself Stasik':
+			cls
+			minut += 2
+			gs'stat'
+
+			'You angrily removed his hands from his body Stasik. Stas grinned "Come on baby, relax."'
+
+			act 'Rebelled and go':
+				cls
+				minut += 2
+				gs'stat'
+
+				'You angrily stood up and began to gather to go. Stas got to his feet and began to persuade you to go with the guys in the cafe.'
+
+				act 'Escape':gt'lake','start'
+			end
+			act 'Keep silent':
+				cls
+				minut += 2
+				horny += 20
+				gs'stat'
+
+				'You kept silent and Stas immediately took advantage of your confusion. His hands gently squeezed your breasts and you felt as a pleasant warmth and tenderness covered your breasts.'
+
+				dynamic $din_stasValera3
+			end
+		end
+		act 'Smile and pretend, that nothing happens':
+			cls
+			minut += 2
+			horny += 20
+			gs'stat'
+
+			'You started to smile, feeling the touch Stasik excite you. You are on the second closed his eyes and suddenly felt a hand on his chest. You opened your eyes in surprise and saw how totally unflappable Stas squeezes your breasts with a dreamy smile on his face.'
+
+			dynamic $din_stasValera3
+		end
+	}
+
+	$din_stasValera = {
+		act 'Sveta':
+			cls
+			minut += 2
+			gs'stat'
+
+			'You answered Stasik, that your name is Light. He smiled wider and said,. "Nice to meet you." To you also Valera came and said hello to you. Men settled on the banks near you.'
+
+			act 'Lie on the sand':
+				cls
+				minut += 2
+				horny += 15
+				gs'stat'
+
+				'You lay on the sand and the men settled on either side of you. Stas began to tell you, Valera that they work in a sales representative of a large firm, and indeed a very important bird knowledgeable people. Without stopping to talk Stas put his hand on your stomach and started stroking.'
+
+				dynamic $din_stasValera2
+			end
+			act 'Sitting on the sand':
+				cls
+				minut += 2
+				horny += 15
+				gs'stat'
+
+				'You sat on the sand and the peasants settled on either side of you. Stas began to tell you, Valera that they work in a sales representative of a large firm, and indeed a very important bird knowledgeable people. Without stopping to talk Stas put his hand on your ass and began to stroke.'
+
+				dynamic $din_stasValera2
+			end
+		end
+	}
+
+	if StasikValera = 0:
+		act 'View them':
+			cls
+			minut += 1
+			StasikValera = 1
+			gs'stat'
+
+			'You looked at the men and noticed they began to whisper among themselves. Then one of the men walked up to you. He said smiling "Hi beauty, I Stas, and this is my friend Valera. And what`s your name?"'
+
+			dynamic $din_stasValera
+
+			act 'I have to go':
+				cls
+				minut += 1
+				gs'stat'
+
+				'You`re not going to get acquainted with these fellows and began to gather to go. Stas started to persuade you. "Come on, babe. We savages have? We just wanted to chat, and you`re just afraid. You can still say, what`s your name?"'
+
+				dynamic $din_stasValera
+
+				act 'Escape':gt'lake','start'
+			end
+		end
+	end
+
+	if StasikSex > 0 or ValeraSex > 0:
+		act 'Waved':
+			cla
+			*clr
+			!guy += 2
+
+			dynamic $venerasiak
+
+			'<center><img src="images/img/Lake/walk2/walk2.jpg"></center>'
+			'Looking straight at them, you defiantly shooting shorts and waving them. Men almost went running to you, you threw off everything else and knelt.'
+
+			act 'Wait':
+				cla
+				*clr
+				bj += 1
+
+				'<center><img src="images/img/Lake/walk2/walk3.jpg"></center>'
+				'Men run up to you with the already unbuttoned trousers, You get them one by one members of the sucking one another. One of the men impatiently grabs your ass and trying to put cancer.'
+
+				act 'Get cancer':
+					cla
+					*clr
+					sex += 1
+
+					'<center><img src="images/img/Lake/walk2/walk4.jpg"></center>'
+					'You have succumbed to him and got cancer, a man with the strength came into your pussy. And you continued to suck another, but soon he, too, could not resist and tried to pull his cock out of your mouth.'
+
+					act 'Let him go':
+						cla
+						*clr
+						anal += 1
+
+						'<center><img src="images/img/Lake/walk2/walk5.jpg"></center>'
+						'As soon as you let go of his cock, he literally pulled you with dildo second man, He turned his back and lifting your buttocks anus planted on his dick.'
+
+						act 'Called second':
+							cla
+							*clr
+							'<center><img src="images/img/Lake/walk2/walk6.jpg"></center>'
+							'You are beckoned to the second man, he was not taken aback came up to you and your dildo plunged back into your vagina. Did you feel like a member of their moving inside of you, rub against each other through a thin partition separating them. Leaned on their shoulders, and you become lifted again sit down on their members have not yet reached the peak of pleasure.'
+
+							act 'Finish':
+								cla
+								*clr
+								cumbrest += 1
+								cumlip += 1
+								cumface += 1
+
+								'<center><img src="images/img/Lake/walk2/walk7.jpg"></center>'
+								'Full of men lowered you down, and began to masturbate on your face, You open your mouth and waited patiently. They finished at the same time the Gulf sperm your mouth, face and chest.'
+
+								act 'Escape':gt'lake','start'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'vlake1':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/Vlake1/vlake1.jpg"></center>'
+	'While you are sunbathing on the beach you walked campaign of four guys and they began to flirt with you'
+
+	act 'Otshit':gt'lake','start'
+	act 'Flirt':
+		cla
+		*clr
+		'<center><img src="images/img/Lake/Vlake1/vlake2.jpg"></center>'
+		'Men perched near, they flirt and how to sneak to touch your body and caress him.'
+
+		act 'Otshit':gt'lake','start'
+		act 'Relax and have fun':
+			cla
+			*clr
+			guy += 4
+			bj += 1
+
+			dynamic $venerasiak
+
+			'<center><img src="images/img/Lake/Vlake1/vlake3.jpg"></center>'
+			'One of the guys pulls out a cock and brings it to your face, you lasciviously grinned and licked his, the other guys got too excited and members. They surrounded you, and you`re kneeling aspirated four people at once.'
+
+			act 'Continue to suck':
+				cla
+				*clr
+				kuni += 1
+
+				'<center><img src="images/img/Lake/Vlake1/vlake4.jpg"></center>'
+				'One of the men leaned over to kiss your pussy and began to lick her trying to shove his fingers inside.'
+
+				act 'Move legs':gt'lake','vlake1cum'
+				act 'Relax and have fun':
+					cla
+					*clr
+					gang += 1
+					sex += 1
+					anal += 1
+
+					'<center><img src="images/img/Lake/Vlake1/vlake7.jpg"></center>'
+					'Noticing that you reacted favorably to his fingers in your vagina, the guy took out his fingers, and their place was taken by his hard cock. The others decided not to stop blowjob, started periodically change places.'
+
+					act 'Let`s take two':
+						cla
+						*clr
+						'<center><img src="images/img/Lake/Vlake1/vlake8.jpg"></center>'
+						'"Let`s take two" you said, and did not finish as a dildo felt included in your anus. And again spun, You turned out to be the top of the bottom, but always all your holes have been plugged members, your madly in love but you do not want, finish and could not.'
+
+						act 'Finish':gt'lake','vlake1cum'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'vlake1cum':
+	cla
+	*clr
+	gs'stat'
+	cumlip += 1
+	cumface += 1
+
+	'<center><img src="images/img/Lake/Vlake1/vlake5.jpg"></center>'
+	'Men began to cum on your face and mouth. You lick cum from dick and swallows it. Finally guys satisfied, They dressed and left, You were not satisfied.'
+
+	act 'Escape':gt'lake','start'
+	act 'Masturbate':
+		cla
+		*clr
+		mastr += 1
+		orgasm += 1
+
+		'<center><img src="images/img/Lake/Vlake1/vlake6.jpg"></center>'
+		'Left not satisfied, you decide to take matters into their own hands, puts his hand to caress her pussy until orgasm and does not cover you.'
+
+		act 'Escape':gt'lake','start'
+	end
+end
+
+if $ARGS[0] = 'vlake2':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/Vlake2/vlake1.jpg"></center>'
+	'Tanning you notice two naked men walking along the beach from the nudist beach.'
+
+	act 'Disregard':gt'lake','start'
+	act 'Waved':
+		cla
+		*clr
+
+		'<center><img src="images/img/Lake/Vlake2/vlake2.jpg"></center>'
+		'Men come up to you, one of them falls sharply in front of you on the knee and bites her lips to your, second stoke your panties.'
+
+		act 'And push them to escape':gt'lake','start'
+		act 'Kneel down':
+			cla
+			*clr
+			guy += 2
+			bj += 1
+			SUB += 1
+
+			dynamic $venerasiak
+
+			'<center><img src="images/img/Lake/Vlake2/vlake3.jpg"></center>'
+			'You climb on your knees, pick up their dildo and takes turns sucking two.'
+
+			act 'Proceed':
+				cla
+				*clr
+				sex += 1
+
+				'<center><img src="images/img/Lake/Vlake2/vlake4.jpg"></center>'
+				'One of the men lay down and you continue to suck him lifting his ass up, immediately I took a second look and discovered inserted his penis into your wet pussy.'
+
+				act 'Sign me two':
+					cla
+					*clr
+					anal += 1
+
+					'<center><img src="images/img/Lake/Vlake2/vlake5.jpg"></center>'
+					'"Sign me two" You groaned and saddled one of the men, the second was not deaf to your request and put his cock in your ass.'
+
+					act 'Change position':
+						cla
+						*clr
+						cumassin += 1
+
+						'<center><img src="images/img/Lake/Vlake2/vlake6.jpg"></center>'
+						'You planted your ass on a man lying. The second came up to you with one hand and holding your head began to fuck your mouth, dildo penetrating her deeper and deeper. After a while, you feel like a hot cum fills your anus and ended with him, second man ready to cum in your mouth.'
+
+						act 'Continue to suck':gt'lake','vlake2cum'
+						act 'Remove':
+							cla
+							*clr
+							cumface += 1
+
+							'<center><img src="images/img/Lake/Vlake2/vlake7.jpg"></center>'
+							'You took out a member of his mouth and the man had finished your face.'
+
+							act 'Escape':gt'lake','start'
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'vlake2cum':
+	cla
+	*clr
+	gs'stat'
+	cumlip += 1
+
+	'<center><img src="images/img/Lake/Vlake2/vlake8.jpg"></center>'
+	'You have continued to suck and soon your mouth filled stream of sperm, swallowing it you carefully licked his dick, leaving no drop of sperm.'
+
+	act 'Escape':gt'lake','start'
+end
+
+if $ARGS[0] = 'andrey1':
+	cla
+	*clr
+	gs'stat'
+	minut += 30
+
+	'You came to Andrew, He grinned, and he said,: "Let`s go swimming!"'
+
+	act 'Takeout':gt'lake','start'
+	act 'Bathe':
+		cla
+		anreiday = day
+		anreirape = 0
+
+		'<center><img src="images/img/Lake/Andrey1/andrey1.jpg"></center>'
+		'- I see, Lady agree, - predatory grinned Andrew. - Then let`s go swimming. He caught you in his arms, laughing your inappropriate attempts to cover him her breasts, threw your hands and lips gently pinched right nipple. You sigh, and abdomen began to rise warm wave excitation.'
+		'You`re a little swim, resting and relaxing. And, You are already back on the blanket, stroking in rhythm of relaxing your body. First, you have to bring a man, - he said, pododvinuv your dick to your mouth and a little potershis head on your lips.'
+
+		act 'Open the mouth':
+			cla
+			*clr
+			bj += 1
+			sex += 1
+
+			'<center><img src="images/img/Lake/Andrey1/andrey2.jpg"></center>'
+			'You have cut her lips and ran her tongue along the barrel, then dragged him into her as they could. Andrew began with gusto to fuck you in the mouth. Suddenly your hearing came a-then a whimper from the nearest bushes. You looked up and saw, both from the bushes spying on you boy, He pulls up-down by hand in the groin area.'
+			'Andrew also understood, behind them peep, and I turned your head so, to an observer could see all the details, a red head appears and disappears in your rotike. You defiantly licking dick man, the accelerating, the slowing pace, holding his tongue on the bridle, and periodically taking in his mouth testicles. Where you were born in these instincts, you did not know, but the reaction Andrei understood, you`re doing it right.'
+			'Lastly, Andrei removed you from yourself, You knocked on his back and a wrench deep into your bosom. You cringed in pain, but Andrew, without stopping, I began to move inside you. A few minutes of monotonous movements have enveloped the sweet bliss, and when his fingers became Andrei stimulate your anus, penetrating directly into both holes, You blew the waves of incredible pleasure. Through narrowed lids, you watched, as a young man Peeper, with bated breath, spellbound, if in a trance, eagerly caught every movement.'
+
+			act 'Call boy':
+				cla
+				*clr
+				guy += 1
+				cumlip += 1
+				cumass += 1
+				anal += 1
+
+				'<center><img src="images/img/Lake/Andrey1/andrey3.jpg"></center>'
+				'Shy boy came up to you. "Well, what are you waiting, Panties keep an, until the girl against" Andrew threw him, turning you over and pushing his hands your buttocks. The young man came from behind and put his penis in your anus. Now, two members moving in you like pistons delivering incredible fun. Groaning you rode two terms, until the young man had finished you on the ass, and Andrew got up and discharged your mouth.'
+
+				act 'Stand on the beach':gt'lake','start'
+			end
+			act 'Deeper! Stronger!':
+				cla
+				*clr
+				cumpussy += 1
+
+				'<center><img src="images/img/Lake/Andrey1/andrey4.jpg"></center>'
+				'- Deeper, worse! - Shouted you, do not hesitate, enthusiastically absorbing the whole man. He answered you inarticulate growl, bursting out in his time with their ragged breathing. Before, as you both finished, the boy ran away.'
+
+				act 'Stand on the beach':gt'lake','start'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'kater1':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/kater1/kater1.jpg"></center>'
+	'Riding a jet ski you do too steep reversal, You throw into the water, You swallowed the water and began to sink. For your happiness you notice the guy on the boat, he pulls you out of the water, and binds to the boat watercraft. After a while, when you catch your breath and sitting comfortably on the nose boats, guy comes up to you'
+	'"Well, how are you beautiful, I pulled myself together, What about gratitude?" he asks, bed at the same time hand on your crotch.'
+
+	act 'Take the jet ski and go':gt'lake','start'
+	act 'Extend the legs':
+		cla
+		*clr
+		guy += 1
+		kuni += 1
+
+		dynamic $venerasiak
+
+		'<center><img src="images/img/Lake/kater1/kater2.jpg"></center>'
+		'You push the legs, making it clear that they are willing to repay the savior, man smiled, He introduced his fingers into your vagina, and tongue began to caress your clitoris.'
+
+		act 'Make a blowjob':
+			cla
+			*clr
+			bj += 1
+
+			'<center><img src="images/img/Lake/kater1/kater3.jpg"></center>'
+			'You seat the guy lick dildo, covers his mouth and start sucking dedication, a couple of minutes you feel as a member in your mouth begins to shudder ready to end.'
+
+			act 'Continue to suck':gt'lake','kater1cum'
+			act 'Stay':
+				cla
+				*clr
+				sex += 1
+
+				'<center><img src="images/img/Lake/kater1/kater4.jpg"></center>'
+				'You stop, the guy puts you cancer and gimlet your vagina as a member.'
+
+				act 'Change position':
+					cla
+					*clr
+					'<center><img src="images/img/Lake/kater1/kater5.jpg"></center>'
+					'When he gets tired, you store it, and do jumps on top of him and start jumping on a wild stallion.'
+
+					act 'Change position':
+						cla
+						*clr
+						orgasm += 1
+
+						'<center><img src="images/img/Lake/kater1/kater6.jpg"></center>'
+						'You turn around on it without letting yourself dildo, and continue to mercilessly skewer her pussy on his dildo and now one of you sees a moan of pleasure. Exhausted fall out with him.'
+
+						act 'Proceed':
+							cla
+							*clr
+							'<center><img src="images/img/Lake/kater1/kater7.jpg"></center>'
+							'The guy turns you on his side and re-enters your pussy, continuing his gimlet her dildo.'
+
+							act 'Change position':
+								cla
+								*clr
+								'<center><img src="images/img/Lake/kater1/kater8.jpg"></center>'
+								'Then he raises you on your feet, lifts and one with the power inserts his penis into your vagina, you satisfied and tired hangs on it waiting for him to finish. After a few thrusts, he pulls out his dick and lets you, you fall on your knees, and the guy puts you in the mouth.'
+
+								act 'Suck':gt'lake','kater1cum'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'kater1cum':
+	cla
+	*clr
+	gs'stat'
+	cumbelly += 1
+	cumlip += 1
+	cumface += 1
+	cumbrest += 1
+
+	'<center><img src="images/img/Lake/kater1/kater9.jpg"></center>'
+	'The flow of semen pouring into your mouth was on so large that you could not keep your mouth and swallow were filled to the brim, sperm flowed in abundance poured out of your mouth, It spreads over the chin and fill your chest and abdomen.'
+
+	act 'Lick the remains':
+		cla
+		*clr
+		'<center><img src="images/img/Lake/kater1/kater10.jpg"></center>'
+		'When the stream dried up, you are distraught bathed sperm began to lick the remnants of his term, savoring every drop.'
+
+		act 'Escape':gt'lake','start'
+	end
+end
+
+if $ARGS[0] = 'kater2':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/kater2/kater1.jpg"></center>'
+	'Riding on a banana you could not resist, You throw into the water, You swallowed the water and began to sink. For your happiness you notice the two guys on the boat, they pull you out of the water. After a while you catch your breath, rested and began to look around. Did you see that on your nose are both your savior completely naked.'
+
+	act 'Pretending to be asleep until the docked':gt'lake','start'
+	act 'Approach them':
+		cla
+		*clr
+		guy += 2
+		sex += 1
+
+		dynamic $venerasiak
+
+		'<center><img src="images/img/Lake/kater2/kater2.jpg"></center>'
+		'You shoot a swimsuit, come to the guys and let not words, You jump on one of the guys and passionately kisses him, a second you feel like a member of his risen rests on your buttocks, you take it in hand and heads to her pussy.'
+
+		act 'Change position':
+			cla
+			*clr
+			anal += 1
+
+			'<center><img src="images/img/Lake/kater2/kater3.jpg"></center>'
+			'Man shoots you with his penis, He turns back to him, grabs and lifts the buttocks, You throw your feet up, a man clutching you to her pulls your anus to your dildo. You moan, whether from the pain inflicted huge dildo in your ass, or from the pleasure he brings to you, with each thrust you try to take his cock as deep as possible a.'
+			'"Want more deeply?" he asks'
+
+			act 'Yes, deeper, worse!':
+				cla
+				*clr
+				bj += 1
+
+				'<center><img src="images/img/Lake/kater2/kater4.jpg"></center>'
+				'"Yes, deeper, worse!" you shout.'
+				'"Well, then hold on" says the guy, puts you on all fours. It is part of you and puts his dick so deep in your ass that his eggs clap on your buttocks. The second man who had been staring at you, coming to poke you in the face by a dick. You grab his cock and start sucking lips.'
+
+				act 'Enter the two':
+					cla
+					*clr
+					orgasm += 1
+
+					'<center><img src="images/img/Lake/kater2/kater5.jpg"></center>'
+					'"Fuck me in the two holes" you shout, marveling at his own lust, Guys did not hesitate and went two, They left their members as deep as they could on. Soon you like failed, before the eyes of all swam circles, body trembled, you like it-Had this never ending orgasm'
+
+					act 'Further':
+						cla
+						*clr
+
+						'<center><img src="images/img/Lake/kater2/kater6.jpg"></center>'
+						'Realizing that you are satisfied with the guys you put on the deck, stood nearby and started masturbating.'
+
+						act 'Turn to one':
+							cla
+							*clr
+							cumlip += 1
+
+							'<center><img src="images/img/Lake/kater2/kater7.jpg"></center>'
+							'When one of the guys groaned, you turned to him with his mouth open. He vyprysnul his semen into your mouth, you will be happy to swallow.'
+
+							act 'Turn to the second':
+								cla
+								*clr
+								cumface += 1
+
+								'<center><img src="images/img/Lake/kater2/kater8.jpg"></center>'
+								'Soon groaned and second, you turned to him, but as soon as you opened your mouth, the guy is dead on your face.'
+
+								act 'Escape':gt'lake','start'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'kater3':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/kater3/1.jpg"></center>'
+	'Riding a jet ski you do too steep reversal, You throw into the water, You swallowed the water and began to sink. For your happiness you notice the guy on the boat, he pulls you out of the water, and binds to the boat watercraft. After a while, when you catch your breath and sitting comfortably on the nose boats, guy comes up to you.'
+	'"Well, how are you beautiful, I pulled myself together, What about gratitude?" he asks, while thrusting your hand in the pants.'
+
+	act 'Take the jet ski and go':gt'lake','start'
+	act 'Extend the legs':
+		cla
+		*clr
+		guy += 2
+		kuni += 1
+
+		dynamic $venerasiak
+
+		'<center><img src="images/img/Lake/kater3/2.jpg"></center>'
+		'You shoot her panties and spreads her legs, man lowers his head to your feet and caressing their language gradually gets to your clitoris.'
+
+		act 'Make a blowjob':
+			cla
+			*clr
+			bj += 1
+			sex += 1
+
+			'<center><img src="images/img/Lake/kater3/4.jpg"></center>'
+			'You seat the guy lick dildo, covers his mouth and start sucking dedication, while you suck from the depths of the boat, a second. Seeing this picture, he comes to you and puts his penis in your pussy.'
+
+			act 'Further':
+				cla
+				*clr
+				anal += 1
+
+				'<center><img src="images/img/Lake/kater3/6.jpg"></center>'
+				'You sit on top of one of them, and the second part of you in the ass.'
+
+				act 'Change position':
+					cla
+					*clr
+					orgasm += 1
+
+					'<center><img src="images/img/Lake/kater3/8.jpg"></center>'
+					'Guys you deploy and re-enter together.'
+
+					act 'Change position':
+						cla
+						*clr
+						cumlip += 1
+
+						'<center><img src="images/img/Lake/kater3/11.jpg"></center>'
+						'Full of turns, they end up in your mouth.'
+
+						act 'Escape':gt'lake','start'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'horse1':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/horse1/horse1.jpg"></center>'
+	'Riding along the coast you have noticed the two men on quad bikes, they came to you and offered to walk together.'
+
+	act 'Takeout':gt'lake','start'
+	act 'To go with them':
+		cla
+		*clr
+		'<center><img src="images/img/Lake/horse1/horse2.jpg"></center>'
+		'You walk down the horse and go with the men chatting about any nonsense.'
+
+		act 'Go further':
+			cla
+			*clr
+			'<center><img src="images/img/Lake/horse1/horse3.jpg"></center>'
+			'Suddenly one of the men turns you to himself and begins to touch the breast, at this time the second embraces you back, running hand in your pants.'
+
+			act 'And push them to escape':gt'lake','start'
+			act 'Get their members':
+				cla
+				*clr
+				guy += 2
+				bj += 1
+
+				dynamic $venerasiak
+
+				'<center><img src="images/img/Lake/horse1/horse4.jpg"></center>'
+				'You took them members of his pants, squatted down and began to greedily suck.'
+
+				act 'Fuck me':
+					cla
+					*clr
+					sex += 1
+
+					'<center><img src="images/img/Lake/horse1/horse5.jpg"></center>'
+					'"Fuck me" you cried. One of the men lay down and you continue to suck it, the second came from behind and put your left to languish with desire pussy'
+
+					act 'Change position':
+						cla
+						*clr
+						'<center><img src="images/img/Lake/horse1/horse6.jpg"></center>'
+						'You straddle one of the men jumping on him like a horse galloping all a few minutes ago. The second came up to you and started to tease you as a member, then lowering it to you, that-you could suck it then lifting up forcing you to reach for him trying to catch his lips.'
+
+						act 'Change position':
+							cla
+							*clr
+							orgasm += 1
+
+							'<center><img src="images/img/Lake/horse1/horse7.jpg"></center>'
+							'You jumped from the penis and got on all fours, Men gathered around you from different angles one fucked your vagina, a second thrust in the mouth. You began furiously sucking podmahivaya both hips, soon you feel that a member in your mouth that`s about to explode.'
+
+							act 'Remove from the mouth':
+								cla
+								*clr
+								cumlip += 1
+
+								'<center><img src="images/img/Lake/horse1/horse8.jpg"></center>'
+								'You took out a member of his mouth and began stroking his tongue, a second your efforts were rewarded on stream smermy protruding tongue'
+
+								act 'Suck the second':
+									cla
+									*clr
+									'<center><img src="images/img/Lake/horse1/horse9.jpg"></center>'
+									'You knelt before the second man, licked from the egg to the head and took her mouth, when you with pleasure sucking dick, man trembled. "Now finish" I went through your head'
+
+									act 'Continue to suck':gt'lake','horse1bj'
+									act 'Remove':
+										cla
+										*clr
+										cumface += 1
+
+										'<center><img src="images/img/Lake/horse1/horse10.jpg"></center>'
+										'You took out a member of his mouth and the man had finished your face with words "Here`s a cream baby", You gladly licked the remnants of sperm from his penis.'
+
+										act 'Escape':gt'lake','start'
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'horse1bj':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/horse1/horse11.jpg"></center>'
+	'And the flow of sperm gushed into your mouth, You swallow it purring with pleasure, licking the remnants of his penis and swallowed again'
+
+	act 'Escape':gt'lake','start'
+end
+
+if $ARGS[0] = 'horse2':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/img/Lake/horse2/horse1.jpg"></center>'
+	'When you ride you caught up with the two men on horseback and offered to walk together.'
+
+	act 'Takeout':gt'lake','start'
+	act 'To go with them':
+		cla
+		*clr
+		'<center><img src="images/img/Lake/horse2/horse2.jpg"></center>'
+		'You are descended from horses and went on foot along the beach chatting about any nonsense.'
+
+		act 'Finish the walk':gt'lake','start'
+		act 'Touch their pants':
+			cla
+			*clr
+			bj += 1
+			guy += 2
+
+			dynamic $venerasiak
+
+			'<center><img src="images/img/Lake/horse2/horse3.jpg"></center>'
+			'You touch their pants in the groin, men exchanging glances freeze, Then you go down on your knees to get them members and begin to caress his tongue a smooth transition to cocksucking.'
+
+			act 'Lie on your back':
+				cla
+				*clr
+				anal += 1
+
+				'<center><img src="images/img/Lake/horse2/horse4.jpg"></center>'
+				'Releasing their members, You lay on your back one of the men raised his legs and you put in the ass, You did not expect this and quietly squealed, the second is located at your head, I am trying to shove dick in your mouth.'
+
+				act 'Take in the mouth':
+					cla
+					*clr
+					'<center><img src="images/img/Lake/horse2/horse5.jpg"></center>'
+					'You grabbed his penis with his lips and greedily inhaled the'
+
+					act 'Change position':
+						cla
+						*clr
+						sex += 1
+						orgasm += 1
+
+						'<center><img src="images/img/Lake/horse2/horse6.jpg"></center>'
+						'You sat down on one of the men on horseback, the second came from behind to ambush a number of you in the anus and strong shocks fucked your ass, you have dark eyes with pleasure, whole body quivered and you faced a wave of orgasm. Soon you will feel the men began to moan and now explode.'
+
+						act 'Change position':
+							cla
+							*clr
+							'<center><img src="images/img/Lake/horse2/horse7.jpg"></center>'
+							'You jumped from the members and knelt, Men gathered around you from different angles, one finished soon.'
+
+							act 'Suck the second':
+								cla
+								*clr
+								'<center><img src="images/img/Lake/horse2/horse8.jpg"></center>'
+								'You turned to the second, lips wrapped around his cock, but once you have pulled his dick deep into himself as a man groaned, his cock stiffened ready to pour into your mouth flow of sperm'
+
+								act 'Remove from the mouth':
+									cla
+									*clr
+									cumface += 1
+									cumlip += 1
+
+									'<center><img src="images/img/Lake/horse2/horse9.jpg"></center>'
+									'Taking a member, You open wide, preparing to catch a stream of sperm, a man does not keep you waiting, semen spurted into your mouth, enveloping your tongue and throat.'
+
+									act 'Escape':gt'lake','start'
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- lake ---------------------------------
+

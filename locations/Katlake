@@ -1,0 +1,131 @@
+# Katlake
+!if $ARGS[0] = 'start':
+cla
+gs'stat'
+
+'<center><img src="images/img/Lake/kat.jpg"></center>'
+'You become bored and you begin to examine the rest of the campers, Not far from you is a beautiful girl.'
+
+act 'Not suitable':gt'Nudelake'
+act 'Step up':
+	cla
+	'You come to the girl and trying to start a conversation.'
+
+	act 'Hello':gt'Katlake','znakomstvo'
+end
+
+if $ARGS[0] = 'znakomstvo':
+	cla
+	gs'stat'
+
+	if vnesh < 14:
+		katday = day
+
+		'"Hello" a little embarrassed you say.'
+		'The girl looked around you scornful look and did not say anything'
+		'"Talk will not work" flashed through your mind'
+
+		act 'Escape':gt'Nudelake'
+	elseif vnesh >= 14:
+		cla
+		clr
+		katday = day
+		telkat += 1
+		kat = 1
+		minut += 30
+
+		'"Hello" a little embarrassed you say.'
+		'She looks you up and down, He smiles and says, "Hello".'
+		'She looks at you with a slight smile and waits. You frantically trying to think of what to say, blush trying to squeeze out a word.'
+		'She notices your meal and decides to take matters into their own hands "I Katia, for friends Kat, and what`s your name?"'
+		'"Sveta" you exhale with relief. Then the conversation went much better and you chatted for half an hour.'
+
+		act 'Escape':gt'Nudelake'
+	end
+end
+
+if $ARGS[0] = 'kat':
+	cla
+	clr
+	*clr
+	gs'stat'
+	minut += 30
+
+	'<center><img src="images/img/Lake/kat.jpg"></center>'
+	'Seeing you smile Katya "Hi, how`s it going Svetsik".'
+
+	act 'Escape':gt'Nudelake'
+	act 'Suggest to play volleyball':gt'Katlake','voleybol'
+	act 'Suggest a walk':gt'Katlake','walk'
+	act 'Chat':
+		cla
+		clr
+		katday = day
+		kat += 1
+		minut += 30
+
+		'You talked for half an hour.'
+
+		act 'Escape':gt'Nudelake'
+	end
+end
+
+if $ARGS[0] = 'voleybol':
+	cla
+	clr
+	*clr
+	katday = day
+	kat += 3
+	minut += 30
+	agil += 1
+	react += 1
+	speed += 1
+	gs'stat'
+
+	'<center><img src="images/img/Lake/voleybol.jpg"></center>'
+	'You and Kate go to the volleyball court and join playing. When you have that-it is impossible Cat encourages you clapping a hand over your naked ass, while her hand a little delayed by slightly squeezing her buttocks.'
+
+	act 'Finish':gt'Nudelake'
+end
+
+if $ARGS[0] = 'walk':
+	cla
+	katday = day
+	kat += 2
+	minut += 30
+	gs'stat'
+
+	'You and Kate are walking along the beach, fun chatting.'
+
+	kwalrand = RAND(0,100)
+	if kwalrand >= 80 and kwalrand < 90 and kat > 20:gt'Kwlake1'
+	if kwalrand >= 90 and kat > 20:gt'Kwlake2'
+
+	act 'Finish':gt'Nudelake'
+end
+
+if $ARGS[0] = 'key':
+	cla
+	clr
+	*clr
+	katkey = 1
+	kat += 10
+	minut += 60
+	gs'stat'
+
+	'<center><img src="images/img/Lake/sun.jpg"></center>'
+	'You sunbathe, you suddenly become ill, dizzy, you nauseated. You tried to get up and lost consciousness.'
+	'"Right now, right now, a little patience." where you can hear the voice from the darkness Katie.'
+	'You feel cool, Darkness slowly flutters and you open your eyes. Before you face Kat.'
+	'"Finally, woke up." says Kate. You are viewing, you have a wet towel on your head, And you`re lying in the shade under a tree.'
+	'"What happened to me" you ask.'
+	'"What, that, sunstroke, here`s what." Kate replies.'
+	'"And now comes to life and went to me, today I will stay" she continued.'
+	'"I feel better, I`m going home" You have tried to argue.'
+	'"Not, Well, you better her a look, I`m with her noshus like a chicken with egg, three times ran a towel drenched, dragged on his shadow, and she also vykobenivaetsya. All I have said to me, means to me, I still nurse and I know better"'
+	'After this tirade mind you do not become'
+
+	act 'Go with Kate':gt'kathouse0'
+end
+--- Katlake ---------------------------------
+

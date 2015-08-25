@@ -1,0 +1,26 @@
+# qwloc3
+gs'stat'
+
+'You raised a tube and a male voice said, "Hello World, This Vladimir, wanna take a ride on a boat?"'
+
+act 'Oh, I have a lot to do, Today I can not get':
+	cla
+	vladimirday = day
+
+	'(You) - Oh, I have a lot to do, Today I can not get.'
+	'(Vladimir) - Okay. Then I`ll call you tomorrow 4 evening.'
+
+	act 'Hang up':gt'korr'
+end
+act 'I`m not against':
+	cla
+	vladimirQW = 30
+	vladimirday = day
+
+	'(You) - I`m not against.'
+	'(Vladimir) - Great. Now for you to come my driver will take you and Glory.'
+
+	act 'Hang up':gt'korr'
+end
+--- qwloc3 ---------------------------------
+

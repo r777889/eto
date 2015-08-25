@@ -1,0 +1,40 @@
+# graveyard1
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+if $ARGS[0]='start':
+cla
+*clr
+set minut = minut + 5
+set DOM += 1
+set willpower -= 5
+'<center><B><font color=maroon>Ruins</font></B></center>'
+'<center><img src="images/lmps/0.jpg" ></center>'
+'The nearest building is reminiscent - Building House of Culture, but comes from the broken windows energy is sending shudders. '
+clr
+gs'stat'
+gs'time'
+
+act 'Exit the highway':minut += 40 & nroad = 3 & gt'road'
+act 'Enter the building':minut += 3 & gt'ruina','start'
+act 'Walk around the yard':gt'graveyard1','adma'
+end
+
+if $ARGS[0]='adma':
+cla
+*clr
+set minut = minut + 5
+set DOM +=1
+set willpower -= 10
+set intel += 5
+gs'stat'
+gs'time'
+'<center><img src="images/lmps/000.jpg"></center>'
+'For not clear kostruktsii in a thicket of trees hiding a-the old dilapidated building.'
+'Why you became-neposebe something from this place, and sweated prbezhal unpleasant chill.'
+'AKDN and curiosity began to struggle in your soul'
+act'Bypass construction':minut += 5 & gt'graveyard1','start'
+end
+
+--- graveyard1 ---------------------------------
+

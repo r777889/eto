@@ -1,0 +1,1024 @@
+# kompMFC
+if vibrator = 1 or dildo = 1 or middildo = 1 or largedildo = 1 or bigdildo = 1 or extradildo = 1 or superdildo = 1 or maddildo = 1:
+	cls
+	gs 'stat'
+	'You show the camera all your toys, after which the client asks you to insert a dildo their pussy.'
+	if vagina = 0:
+		act 'Parting with virginity before <<camclients>> people':
+			cls
+			webpopular += 10
+			if webpopular < 15:
+				tokens += RAND(100,300)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(200,500)
+			elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(500,1500)
+			elseif webpopular >= 75:
+				tokens += RAND(1000,5000)
+			end
+			sub += 10
+			vgape = 3
+			minut += 5
+			horny = 0
+			vagina = 1
+			if camclients > 1000:
+				tokens += RAND(1000,5000)
+			elseif camclients > 500: 
+				tokens += RAND(500,3000)
+			elseif camclients > 250: 
+				tokens += RAND(500,1500)  
+			elseif camclients > 100: 
+				tokens += RAND(100,1000)
+			elseif camclients < 100:
+				tokens += RAND(50,500)
+			end
+			gs 'stat'
+
+			'<center><img src="images/camwhore/camwhore22.jpg"></center>'
+			'You wincing, when your hymen breaks. Blood flows out of your pussy torn, and chat breaks comment.'
+			'Depriving yourself of virginity, you are immediately stopped and leaned back in relief, making yourself a break and at the same time giving users the ability to enjoy your bleeding is no longer virgin pussy.'
+			act'Further':gt'Komp','waitclients'
+		end
+		act 'In the ass':
+			cls
+			gs 'stat'
+			'You do not want to part with such a disgusting virginity in front of all these strangers, It is therefore proposed to the client to look, how will you fuck yourself in the ass.'
+			'He reluctantly agrees to, but says, that then and pay less...'
+			act 'Still do':
+				cls
+				gs 'stat'
+				if vibrator = 1:
+				 	act 'Use a vibrator':
+				   		cls
+				   		webpopular += 1
+						if webpopular < 15:
+							tokens += RAND(25,50)
+						elseif webpopular >= 15 and webpopular < 35:
+							tokens += RAND(50,100)
+						elseif webpopular >= 35 and webpopular < 75:
+							tokens += RAND(50,150)
+						elseif webpopular >= 75:
+							tokens += RAND(100,200)
+						end
+				   		minut += 5
+				   		dildohand = 10
+				   		if anus > 10:
+				   			horny += RAND(10,20)
+				   		else
+							anus += 1
+							horny += RAND(10,20)  
+				   		end	
+				   		gs 'stat'
+
+				   		'<center><img src="images/camwhore/camwhore23.jpg"></center>'
+				   		if anus > 10:
+				   			'You turn on the vibrator and quick firm motion to drive it into her ass.'
+				   			if horny >= 100:
+								orgasm += 1
+								horny = 0
+								manna = mannamax
+								'But the vibrations were so strong for your overexcited pussy, that in the process you are finished, without even touching the vagina.'
+							else
+								'Little fuck yourself in the ass, Finally you put it off to the side, automatic noticing, that tokens for that you have already received.'
+							end
+				   		else
+				   			'Lubricated with saliva the anus, you turn on the vibrator and slowly, gently shoves it in his ass.'
+				   			'Little fuck yourself, you put it aside, oblivious, that tokens for that you have already translated.'
+				   		end
+				   		act'Further':gt'Komp','waitclients'
+				   	end			
+				end
+				if dildo = 1:
+				   	act 'Use 10five inch dildo':
+				   		cls
+				   		webpopular += 1
+						if webpopular < 15:
+							tokens += RAND(20,30)
+						elseif webpopular >= 15 and webpopular < 35:
+							tokens += RAND(30,50)
+						elseif webpopular >= 35 and webpopular < 75:
+							tokens += RAND(30,100)
+						elseif webpopular >= 75:
+							tokens += RAND(50,100)
+						end
+				   		minut += 5
+				   		dildohand = 10
+				   		if anus > 10:
+				   			horny += RAND(5,15)
+				   		else
+				   			horny -= RAND(5,15)
+							anus += 1	
+				   		end	
+				   		gs 'stat'
+				   		'<center><img src="images/camwhore/camwhore24.jpg"></center>'
+				   		if anus > 10:
+				   			'You take a small dildo and quick firm motion to drive it into her ass.'
+				   			if horny >= 100:
+								orgasm += 1
+								horny = 0
+								manna = mannamax
+								'In the process you do not hold back, and missing a hand between her legs, start frantically pull lips sex, from what and ends under the active user comments.'
+							else
+								'Little, but wildly fuck yourself, you put it aside, oblivious, that tokens for that you have already translated.'
+							end
+				   		else
+				   			'Lubricated with saliva the anus, you take a small dildo and slowly shoves it in his ass.'
+				   			'Little by moving them in her ass, you put it aside, oblivious, that tokens for that you have already translated.'
+				   		end
+				   		act'Further':gt'Komp','waitclients'
+				   	end				
+				end
+				if middildo = 1:
+					if anus >= 15:
+						act 'Use 15five inch dildo':
+							cls
+							webpopular += 1
+							if webpopular < 15:
+								tokens += RAND(25,35)
+							elseif webpopular >= 15 and webpopular < 35:
+								tokens += RAND(25,100)
+							elseif webpopular >= 35 and webpopular < 75:
+								tokens += RAND(25,150)
+							elseif webpopular >= 75:
+								tokens += RAND(100,150)
+							end
+							minut += 5
+							dildohand = 15
+							if anus > 15:
+								horny += RAND(5,15)
+							else
+								horny -= RAND(5,15)
+								anus += 1
+							end	
+							gs 'stat'
+							'<center><img src="images/camwhore/camwhore25.jpg"></center>'
+							if anus > 15:
+								'You take a small dildo, You put it on the floor and start jumping on it selflessly.'
+								if horny >= 100:
+									orgasm += 1
+									horny = 0
+									manna = mannamax
+									'You are so excited, do not resist and grohnuvshis ass on dildo, They brought themselves to orgasm.'
+								else
+									'In five minutes you have found, which is quite worked their tokens, and therefore back on the bed.'
+								end
+							else
+								'You take a small dildo, put it on the floor and grease-lubricated with saliva the anus, You start carefully sit down on it.'
+								'Few poelozit on it his anus, Finally you put it off to the side, oblivious, that tokens for that you have already translated.'
+							end
+							act'Further':gt'Komp','waitclients'
+						end
+					end
+				end
+				if largedildo = 1:
+					if anus >= 20:
+						act 'Use 20five inch dildo':
+							cls
+							webpopular += 1
+							if webpopular < 15:
+								tokens += RAND(40,55)
+							elseif webpopular >= 15 and webpopular < 35:
+								tokens += RAND(40,100)
+							elseif webpopular >= 35 and webpopular < 75:
+								tokens += RAND(100,150)
+							elseif webpopular >= 75:
+								tokens += RAND(100,200)
+							end
+							minut += 5
+							dildohand = 20
+							if anus > 20:
+								horny += RAND(5,15)
+							else
+								horny -= RAND(5,15)
+								anus += 1
+								agape = 1
+							end	
+							gs 'stat'
+							'<center><img src="images/camwhore/camwhore26.jpg"></center>'
+							if anus > 20:
+								'You take a dildo, put it on the floor and fast movements start to sit down at him his ass.'
+								if horny >= 100:
+									orgasm += 1
+									horny = 0
+									manna = mannamax
+									'Continuing the way to sit down on the phallus his anus, you run a hand between her legs and violently ends.'
+								else
+									'In five minutes you have found, which is quite worked their tokens, and therefore back on the bed.'
+								end
+							else
+								'You take a dildo, put it on the floor and grease-lubricated with saliva the anus, You start carefully sit down on it.'
+								'Few poelozit on it his anus, Finally you put it off to the side, oblivious, that tokens for that you have already translated.'
+							end
+							act'Further':gt'Komp','waitclients'
+						end
+					end
+				end
+				if bigdildo = 1:
+					if anus >= 25:
+						act 'Use 25five inch dildo':
+							cls
+							webpopular += 1
+							if webpopular < 15:
+								tokens += RAND(50,60)
+							elseif webpopular >= 15 and webpopular < 35:
+								tokens += RAND(50,100)
+							elseif webpopular >= 35 and webpopular < 75:
+								tokens += RAND(100,200)
+							elseif webpopular >= 75:
+								tokens += RAND(100,300)
+							end
+							minut += 5
+							dildohand = 25
+							if anus > 25:
+								horny += RAND(10,20)
+							else
+								horny -= RAND(10,20)
+								anus += 1
+								agape = 1
+							end	
+							gs 'stat'
+							'<center><img src="images/camwhore/camwhore27.jpg"></center>'
+							if anus > 25:
+								'You lean on your back and slightly lifting the pelvis without lubrication slowly shoves a dildo up to the stop.'
+								if horny >= 100:
+									orgasm += 1
+									horny = 0
+									manna = mannamax
+									'But as soon as he came in you completely, as your arm itself quickly falls on the crotch and you end his palm.'
+								else
+									'A few minutes sharp sweeping movements to fuck your ass, Finally you put it off to the side.'
+								end
+							else
+								'You lean on your back and generously lubricate the anus with saliva, then lift the pelvis slightly and slowly puts a dildo.'
+								'Almost without removing it, You barely-barely moves them in his rectum, whereupon found, that the order is executed.'
+							end
+							act'Further':gt'Komp','waitclients'
+						end
+					end
+				end
+			   	if extradildo = 1:
+					if anus >= 30:
+						act 'Use 30five inch dildo':
+							cls
+							webpopular += 1
+							if webpopular < 15:
+								tokens += RAND(50,75)
+							elseif webpopular >= 15 and webpopular < 35:
+								tokens += RAND(50,150)
+							elseif webpopular >= 35 and webpopular < 75:
+								tokens += RAND(100,300)
+							elseif webpopular >= 75:
+								tokens += RAND(300,500)
+							end
+							minut += 5
+							dildohand = 30
+							if anus > 30:
+								horny += RAND(15,20)
+							else
+								horny -= RAND(15,20)
+								anus += 1   
+								agape = 1 
+							end	
+							gs 'stat'
+							'<center><img src="images/camwhore/camwhore28.jpg"></center>'
+							if anus > 30:
+								'You lie on your back, You cast your leg behind your head yourself and start to have an active dildo her ass.'
+								if horny >= 100:
+									orgasm += 1
+									horny = 0
+									manna = mannamax
+									'But the proximity of your shaking from frictions pussy so sexy, fingers free hand themselves rush to the clitoris and begin to pull it to the beat of the moving and squish your ass phallus, from what you and ends.'
+								else
+									'Five minutes later I finally got tired, and therefore decide to stop, considering the request made.'
+								end
+							else
+								'You lie on your back, You cast your leg behind your head and imagine the saliva lubricate the anus, then you begin to put a dildo up your ass.'
+								'Even though greasing, You hurt a little, so after a couple of minutes you stop.'
+							end
+							act'Further':gt'Komp','waitclients'
+						end
+					end
+			   	end
+			   	if superdildo = 1:
+					if anus >= 35:
+						act 'Use 35five inch dildo':
+							cls
+							webpopular += 1
+							if webpopular < 15:
+								tokens += RAND(75,100)
+							elseif webpopular >= 15 and webpopular < 35:
+								tokens += RAND(100,300)
+							elseif webpopular >= 35 and webpopular < 75:
+								tokens += RAND(100,500)
+							elseif webpopular >= 75:
+								tokens += RAND(300,500)
+							end
+							minut += 5
+							dildohand = 35
+							if anus > 35:
+								horny += RAND(20,25)
+							else
+								horny -= RAND(20,25)
+								anus += 1
+								agape = 1
+							end	
+							gs 'stat'
+							'<center><img src="images/camwhore/camwhore29.jpg"></center>'
+							if anus > 30:
+								'You turn to the side and a lively start to tear his ass, receiving from it a real pleasure.'
+								if horny >= 100:
+									orgasm += 1
+									horny = 0
+									manna = mannamax
+									'In the process you will rapidly come to an end.'
+								else
+									'But though you pleasant, but you know, it work, therefore, make an effort, soon stop.'
+								end
+							else
+								'You turn to the side and liberally lubricated with saliva ass, trying to shove her dildo.'
+								'You can not sign a single head, so a little bit by moving the tip of the phallus, You could hardly pull it out.'
+							end
+							act'Further':gt'Komp','waitclients'
+						end
+					end
+				end
+				if maddildo = 1:
+					if anus >= 35:
+						act 'Use 40five inch dildo': 
+							cls
+							webpopular += 1
+							if webpopular < 15:
+								tokens += RAND(100,150)
+							elseif webpopular >= 15 and webpopular < 35:
+							tokens += RAND(100,300)
+							elseif webpopular >= 35 and webpopular < 75:
+								tokens += RAND(300,500)
+							elseif webpopular >= 75:
+								tokens += RAND(500,750)
+							end
+							minut += 5
+							dildohand = 40
+							if anus > 35:
+								horny += RAND(25,30)
+							else
+								horny -= RAND(25,30)
+								anus += 1
+								agape = 1
+							end	
+							gs 'stat'
+							'<center><img src="images/camwhore/camwhore30.jpg"></center>'
+							if anus > 35:
+								'You take your biggest dildo and put it on the floor, then routinely spit on his fingers and lubricate the anus.'
+								if horny >= 100:
+									orgasm += 1
+									horny = 0
+									manna = mannamax
+									'Excitation so large, that you have one hand holding dildo, another launching his crotch and bring themselves to orgasm.'
+								else
+									'Phallus nice ring and stretches through the chosen pose the vagina bulges out, providing a wonderful view of your little virgin pussy turned inside out.'
+								end
+							else
+								'You take your biggest dildo and put it on the floor, then spit on his fingers and liberally lubricate the anus.'
+								'You manage to shove an artificial head of a member of, who immediately dives deeper, causing the ring anus shrink convulsively at its base. You tried to drop a bit, but because the anus tightened around the phallus, you did not succeed, so you`re just a couple of minutes, we shook it from side to side.'
+							end
+							act'Further':gt'Komp','waitclients'
+						end
+					end
+			   	end
+			end
+			act 'Ignore':
+				cls
+				webpopular -= 1
+				gt'Komp','waitclients'
+			end
+		end
+	elseif vagina > 0:
+		if vibrator = 1:
+			act 'Use a vibrator':
+		   		cls
+				webpopular += 1
+				if webpopular < 15:
+					tokens += RAND(25,50)
+				elseif webpopular >= 15 and webpopular < 35:
+					tokens += RAND(50,100)
+	   			elseif webpopular >= 35 and webpopular < 75:
+					tokens += RAND(50,150)
+				elseif webpopular >= 75:
+					tokens += RAND(100,200)
+				end
+				minut += 5
+				dildohand = 10
+				if vagina > 10:
+					horny += RAND(10,20)
+				else
+					horny += RAND(10,15)
+					vagina += 1	
+				end	
+				gs 'stat'
+				'<center><img src="images/camwhore/camwhore31.jpg"></center>'
+				if vagina > 15:
+					'You turn on the vibrator and quick firm motion to drive it into her pussy...'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'And then violently ends by suddenly surging orgasm.'
+					else
+						'Little fuck yourself at a fast pace, you put it aside, oblivious, that tokens for that you have already translated.'
+					end
+				else
+					'You turn on the vibrator and leisurely poking it into my pussy.'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'And then violently ends by suddenly surging orgasm.'
+					else
+						'Little fuck yourself, you put it aside, oblivious, that tokens for that you have already translated.'
+					end
+				
+				end
+				act'Further':gt'Komp','waitclients'
+			end
+		end
+		if dildo = 1:
+			act 'Use 10five inch dildo':
+				cls
+				webpopular += 1
+				if webpopular < 15:
+					tokens += RAND(20,30)
+				elseif webpopular >= 15 and webpopular < 35:
+					tokens += RAND(20,50)
+	  			elseif webpopular >= 35 and webpopular < 75:
+					tokens += RAND(20,100)
+				elseif webpopular >= 75:
+					tokens += RAND(50,100)
+				end
+				minut += 5
+				dildohand = 10
+				if vagina < 10:
+					horny += RAND(10,15)
+					vagina += 1
+				else
+					horny += RAND(5,10)
+				end	
+				gs 'stat'
+				'<center><img src="images/camwhore/camwhore36.jpg"></center>'
+				if vagina > 10:
+					'You take a small dildo and focus the camera on her crotch, a couple of minutes with pleasure play...'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'Then, Unable to contain, ends all public-inches from the webcam..'
+					else
+						'Feeling, What excites, you will soon stop - Tokens for that you have already received.'
+					end
+				else
+					'You take a small dildo and focus the camera on her crotch, a couple of minutes with pleasure fuck yourself'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'Then, Unable to contain, ends all public-inches from the webcam...'
+					else
+						'Feeling, What excites, you will soon stop - Tokens for that you have already received.'
+					end
+				end
+				act'Further':gt'Komp','waitclients'
+			end
+		end
+		if middildo = 1:
+			act 'Use 15five inch dildo':
+		   		cls
+				webpopular += 1
+				if webpopular < 15:
+					tokens += RAND(25,35)
+				elseif webpopular >= 15 and webpopular < 35:
+					tokens += RAND(35,50)
+	  			elseif webpopular >= 35 and webpopular < 75:
+					tokens += RAND(50,75)
+				elseif webpopular >= 75:
+					tokens += RAND(50,100)
+				end
+		  		minut += 5
+		  		dildohand = 15
+		   		if vagina < 15:
+		   			horny += RAND(10,15)
+		   			vagina += 1
+		   			vgape = 1
+		   		else
+					horny += RAND(5,10)
+		   		end	
+		  		gs 'stat'
+				'<center><img src="images/camwhore/camwhore37.jpg"></center>'
+		   		if vagina > 15:
+		   			'You take a small dildo and ass sticking out easily pounded it into my pussy.'
+		   			if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'A minute later you end under the standing ovation the audience..'
+					else
+						'Little fuck yourself, you will soon stop.'
+					end
+		   		else
+		   			'You take a small dildo and ass sticking out gently shoves it into my pussy.'
+		   			if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'A minute later you end under the standing ovation the audience..'
+					else
+						'Little fuck yourself, you will soon stop...'
+					end
+		   		end
+		  		act'Further':gt'Komp','waitclients'
+			end
+		end
+		if largedildo = 1:
+			act 'Use 20five inch dildo':
+		   		cls
+		   		webpopular += 1
+				if webpopular < 15:
+					tokens += RAND(40,55)
+				elseif webpopular >= 15 and webpopular < 35:
+					tokens += RAND(50,100)
+	   			elseif webpopular >= 35 and webpopular < 75:
+					tokens += RAND(50,150)
+				elseif webpopular >= 75:
+					tokens += RAND(50,200)
+				end
+		  		minut += 5
+				dildohand = 20
+				if vagina < 20:
+					horny += RAND(5,15)
+					vagina += 1
+					vgape = 2
+				else
+					horny += RAND(5,10)   
+				end	
+				gs 'stat'
+				'<center><img src="images/camwhore/camwhore38.jpg"></center>'
+				if vagina > 20:
+					'You take a dildo and moved down the bed so, to the pelvis was suspended, back run into the bed and start to hammer a dildo.'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'Thank you so much it drives a, it rests with every jolt you into the uterus and feeling it, you noisy ends.'
+					else
+						'Your vagina is already too big for this size, so after a couple of boring you and you stop...'
+					end
+				else
+					'You take a dildo and moved down the bed so, to the pelvis was suspended, back run into the bed and start to shove a dildo.' 
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'And soon begin to shudder in orgasm surging...'
+					else
+						'Your vagina tightly wraps dildo, so a couple of minutes you gently slide them in their inside...'
+					end
+				end
+				act'Further':gt'Komp','waitclients'
+			end
+		end
+		if bigdildo = 1:
+			act 'Use 25five inch dildo':
+				cls
+				webpopular += 1
+				if webpopular < 15:
+					tokens += RAND(50,60)
+				elseif webpopular >= 15 and webpopular < 35:
+					tokens += RAND(50,150)
+	   			elseif webpopular >= 35 and webpopular < 75:
+					tokens += RAND(100,250)
+				elseif webpopular >= 75:
+					tokens += RAND(250,400)
+				end
+				minut += 5
+				dildohand = 25
+				if vagina < 25:
+					horny += RAND(10,20)
+					vagina += 1
+					vgape = 3
+				else
+					horny += RAND(5,10)	
+				end	
+				gs 'stat'
+				'<center><img src="images/camwhore/camwhore39.jpg"></center>'
+				if vagina > 25:
+				   'You get up out of bed and ass sticking out towards the camera, Bullies higher pace, then easily shoves a dildo in pussy.'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'After another movement of your legs give way and in the throes of orgasm gushed you dumped on the bed...'
+					else
+						'A few minutes later you get tired of this position, and therefore decide to stop...'
+					end
+				else
+					'You get up out of bed and ass sticking out towards the camera, Bullies higher pace, then hard-, but still puts a dildo in pussy.'
+					if horny >= 100:
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						'After another movement of your legs give way and in the throes of orgasm gushed you dumped on the bed...'
+					else
+						'A few minutes later your pussy starts to ache, so you decide to stop...'
+					end
+				end
+				act'Further':gt'Komp','waitclients'
+			end
+		end
+		if extradildo = 1:
+			if vagina >= 25:
+				act 'Use 30five inch dildo':
+					cls
+					webpopular += 1
+					if webpopular < 15:
+						tokens += RAND(50,75)
+					elseif webpopular >= 15 and webpopular < 35:
+						tokens += RAND(75,100)
+					elseif webpopular >= 35 and webpopular < 75:
+						tokens += RAND(100,250)
+					elseif webpopular >= 75:
+						tokens += RAND(250,500)
+					end
+					minut += 5
+					dildohand = 30
+					if vagina < 30:
+						horny += RAND(15,20)
+						vagina += 1
+						vgape = 1
+					else
+						horny += RAND(5,15)   
+					end	
+					gs 'stat'
+					'<center><img src="images/camwhore/camwhore40.jpg"></center>'
+					if vagina > 30:
+						'You get up on all fours, put the dildo on the bed and start to sit down with a flourish on his pussy.'
+						if horny >= 100:
+							orgasm += 1
+							horny = 0
+							manna = mannamax
+							'After another movement of your legs give way and in the throes of orgasm gushed you fall on the bed, wherein the sensing, as the dildo penetrates into you for the long and painful vozmozhnuyuyu rests in the uterus...'
+						else
+							'A couple of minutes you are riding a phallus, then you get tired and decide to stop...'
+						end
+					else
+						'You get up on all fours, put the dildo on the bed and start to carefully sit down on a pussy.'
+						if horny >= 100:
+							orgasm += 1
+							horny = 0
+							manna = mannamax
+							'After another movement of your legs give way and in the throes of orgasm gushed you dumped on the bed, feeling, as a dildo comes out of your tight pussy...'
+						else
+							'A couple of minutes you will crawl on his vagina, is not the size of the discomfort ceases absolutely unbearable, then stop ...'
+						end
+					end
+					act'Further':gt'Komp','waitclients'
+				end
+			end
+		end
+		if superdildo = 1:
+			if vagina >= 25:
+				act 'Use 35five inch dildo':
+					cls
+					webpopular += 1
+					if webpopular < 15:
+						tokens += RAND(75,100)
+					elseif webpopular >= 15 and webpopular < 35:
+						tokens += RAND(100,250)
+					elseif webpopular >= 35 and webpopular < 75:
+						tokens += RAND(200,450)
+					elseif webpopular >= 75:
+						tokens += RAND(350,750)
+					end
+					minut += 5
+					dildohand = 35
+					if vagina < 30:
+						horny += RAND(20,25)
+						vagina += 1
+						vgape = 1
+					else
+						horny += RAND(10,15)
+					end	
+					gs 'stat'
+					'<center><img src="images/camwhore/camwhore41.jpg"></center>'
+					if vagina >= 30:
+						'You slide on the floor, Dildo attach to the floor and sit down on his vagina to the uterus itself.'
+						if horny >= 100:
+							orgasm += 1
+							horny = 0
+							manna = mannamax
+							'After another movement of your legs give way and in the throes of orgasm gushed you fall to the floor, wherein the sensing, as the dildo penetrates into you for the long and painful vozmozhnuyuyu rests in the uterus...'
+						else
+							'A couple of minutes you are riding a phallus, then you get tired and decide to stop...'
+						end
+					else
+						'You slide on the floor, Dildo attach to the floor and insert the tip into the vagina itself.'
+						if horny >= 100:
+							orgasm += 1
+							horny = 0
+							manna = mannamax
+							'After another movement of your legs cramp and you begin to violently finish, izvivayasb cunt on a huge cock.'
+						else
+							'A few minutes, resting his hands on the floor, you move your hips, every feeling frictions, as head of the vaginal wall rasstyagivaet...'
+						end
+					end
+					act'Further':gt'Komp','waitclients'
+				end
+			end
+		end
+		if maddildo = 1:
+			if vagina >= 30:
+				act 'Use 40five inch dildo':
+					cls
+					webpopular += 2
+					if webpopular < 15:
+						tokens += RAND(100,150)
+					elseif webpopular >= 15 and webpopular < 35:
+						tokens += RAND(150,450)
+					elseif webpopular >= 35 and webpopular < 75:
+						tokens += RAND(350,750)
+					elseif webpopular >= 75:
+						tokens += RAND(500,750)
+					end
+					minut += 5
+					dildohand = 40
+					if vagina < 35:
+						horny += RAND(25,30)
+						vagina += 1  
+						vgape = 2
+					else
+						horny += RAND(15,20)   
+					end	
+					gs 'stat'
+					if vagina > 35:
+						'<center><img src="images/camwhore/camwhore42.jpg"></center>'
+						'You take two dildos smaller and in turn puts them in his pussy, feeling, it nice stretch.'
+						if horny >= 100:
+							orgasm += 1
+							horny = 0
+							manna = mannamax
+							'You are trying to move her hips, nasazhivayas on phalluses, but the wave of surging orgasm throws you on the bed and they are popping out of your pussy...'
+						else
+							'Their total diameter greater, than the diameter of your largest dildo, so you rolling your eyes, squirm in ecstasy, experiencing both pain and pleasure...'
+						end
+					else
+						'<center><img src="images/camwhore/camwhore43.jpg"></center>'
+						'You take your biggest dildo and put it on the floor, then no effort is placed on a vagina.'
+						if horny >= 100:
+							orgasm += 1
+							horny = 0
+							manna = mannamax
+							'You are trying to move her hips, nasazhivayas on the phallus, but the wave of surging orgasm throws you on the bed and he pops out of your pussy...'
+						else
+							'Holding his hand, you`re doing squats, vagina crawl on huge dick, until finally tired...'
+						end
+						
+					end
+					act'Further':gt'Komp','waitclients'
+				end
+			end
+		end
+	end	
+else 
+	cls
+	gs 'stat'
+	'Are you in broken English to answer him, that, alas, nothing you do not.'
+	'He puts sad smiles and then asks you to work even fingers...'
+	if vagina = 0:
+		act 'Hand in the ass':
+			cls
+			webpopular += 1
+			minut += 5
+			horny += RAND(10,15)
+			if webpopular < 15:
+				tokens += RAND(25,50)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(25,75)
+	   		elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(50,100)
+			elseif webpopular >= 75:
+				tokens += RAND(100,150)
+			end
+			anus += 1
+			gs 'stat'		 
+			if anus < 10:
+				'<center><img src="images/camwhore/camwhore32.jpg"></center>'
+				'You turn her ass to the camera and puts his finger to the anus stop, then, little pause, You start fuck yourself.'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You are so carried away with doing this, they forgot, where are you, and therefore quickly put his hand between her legs and roughly finished...'
+				else
+					'A few minutes later you have found, that worked their tokens, why stop...'
+				end			
+			elseif anus >= 10 and anus < 15:
+				'<center><img src="images/camwhore/camwhore45.jpg"></center>'
+				'You turn her ass to the camera and shoves his anus with two fingers, then, little pause, You start fuck yourself.'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You are so carried away with doing this, they forgot, where are you, and therefore quickly put his hand between her legs and roughly finished...'
+				else
+					'A few minutes later you have found, that worked their tokens, why stop...'
+				end			
+			elseif anus >= 15 and anus < 25:
+				'<center><img src="images/camwhore/camwhore46.jpg"></center>'
+				'You turn her ass to the camera and shoves his anus three fingers, then, little pause, You start fuck yourself.'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You are so carried away with doing this, they forgot, where are you, and therefore quickly put his hand between her legs and roughly finished...'
+				else
+					'A few minutes later you have found, that worked their tokens, why stop...'
+				end			
+			elseif anus >= 25 and anus < 35:
+				'<center><img src="images/camwhore/camwhore47.jpg"></center>'
+				'You turn her ass to the camera and shoves his anus four fingers, then, little pause, You start fuck yourself.'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You are so carried away with doing this, they forgot, where are you, and therefore quickly put his hand between her legs and roughly finished...'
+				else
+					'A few minutes later you have found, that worked their tokens, why stop...'
+				end			
+			elseif anus >= 35:
+				'<center><img src="images/camwhore/camwhore48.jpg"></center>'
+				'You lie on your back and putting his hand his anus, starts fucking his ass..'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You are so carried away with doing this, they forgot, where are you, and therefore quickly put his hand between her legs and roughly finished...'
+				else
+					'A few minutes later you have found, that worked their tokens, why stop...'
+				end			  
+			end
+			act'Further':gt'Komp','waitclients'			 
+		end
+		act 'Improvised means':
+			cls
+			webpopular += 1
+			minut += 5
+			horny += RAND(10,15)
+			if webpopular < 15:
+				tokens += RAND(25,50)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(25,75)
+	   		elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(50,100)
+			elseif webpopular >= 75:
+				tokens += RAND(100,150)
+			end
+			anus += 1
+			gs 'stat'
+			if anus < 10:
+				'<center><img src="images/camwhore/camwhore49.jpg"></center>'
+				'Your opinion will come across a comb and you decide to take advantage of it...'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You suck handle combs, lubricating it with saliva, then you put his ass and starts fucking himself, and the other hand fumble her clitoris until, has not yet come to an end.'
+				else
+					'A few minutes later you have found, which is quite worked their tokens, why stop...'
+				end			
+				act'Further':gt'Komp','waitclients'
+			elseif anus >= 10 and anus < 15:
+				'<center><img src="images/camwhore/camwhore50.jpg"></center>'
+				'You will notice a couple of markers and then decide to use them...'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'Drench ass saliva, you are one stuffed them into his anus, then bring themselves to orgasm...'
+				else
+					'Drench ass saliva, you are one stuffed them into his anus, then slowly you start to fuck them yourself...'
+				end			
+				act'Further':gt'Komp','waitclients'
+			elseif anus >= 15 and anus < 25:
+				'<center><img src="images/camwhore/camwhore51.jpg"></center>'
+				'Your opinion will come across remote....'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You immediately lubricate the ass and gently zasovyvete it a, but as soon as he enters your half, you immediately powerfully ends...'
+				else
+					'A few minutes later you have found, that worked their tokens, why stop...'
+				end			
+				act'Further':gt'Komp','waitclients'
+			elseif anus >= 25 and anus < 35:
+				'<center><img src="images/camwhore/camwhore52.jpg"></center>'
+				'Fumbling look around the room you do not find, but it suddenly dawns on you, and you bring in the corridor phone...'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You tuck in my ass handset, feeling, it stretches your anus, as soon as she gets inside, how you rocked powerful orgasm.'
+				else
+					'A few minutes later you have found, that worked their tokens, why stop...'
+				end			
+				act'Further':gt'Komp','waitclients'
+			elseif anus >= 35:
+				'<center><img src="images/camwhore/camwhore53.jpg"></center>'
+				'Charite you look around the room and notice hairspray...'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'Your ass is already so stretched, and excitement is so great, what do you, seizing varnish, in one fell swoop to drive it into her ass and masturbate furiously until her, until you start to finish...'
+				else
+					'Your ass is already so stretched, what do you, seizing varnish, in one fell swoop to drive it into her ass and start furiously masturbate her...'
+				end			
+				act'Further':gt'Komp','waitclients'				
+			end
+		end	
+		act 'Ignore':
+			cls
+			webpopular -= 1
+			gt'Komp','waitclients'
+		end
+	elseif vagina > 0:
+		act 'Do':
+			cls
+			webpopular += 1
+			minut += 5
+			horny += RAND(15,30)
+			if webpopular < 15:
+				tokens += RAND(25,50)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(25,75)
+	  		elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(50,100)
+			elseif webpopular >= 75:
+				tokens += RAND(100,150)
+			end
+			if vagina >= 15:
+				vagina += 1
+			end
+			gs 'stat'
+			if vagina >= 25 and anus < 25:
+				'<center><img src="images/camwhore/camwhore33.jpg"></center>'
+				'You scatter wider legs and a lot of comments to thrust a hand.'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'That you so excited, that you begin to actively fuck her hand, until they finally get the long-awaited orgasm...'
+				else
+					'A few minutes to fuck yourself in the vagina hand, you finally come back from enjoying a reality.' 
+				end		   
+				act'Further':gt'Komp','waitclients'
+			elseif vagina >= 25 and anus >= 25:
+				'<center><img src="images/camwhore/camwhore44.jpg"></center>'
+				'You shower taller legs and leisurely, under a storm of commentary puts a hand.'
+				'For a moment you become so good, that you forget the finger of the other hand at the same time as usual start to develop themselves anus.'
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'You are so excited, that begin to furiously fuck her hand in the pussy, another finger while frantically crawl in her ass, until it finally comes to an end...'
+				else
+					'But soon all of you come to themselves and recall, what you are doing it is still not so easy, and from-for the money, why stop...' 
+				end
+				act'Further':gt'Komp','waitclients'
+			elseif vagina > 15 and vagina < 25:
+				'<center><img src="images/camwhore/camwhore34.jpg"></center>'
+				'You lie on your back and spreads wider legs, then fucks herself with two fingers...' 
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'While, unable to stop, Finally do not bring herself to orgasm...'
+				else
+					'A few minutes sustain such a pace, you finally come back from enjoying a reality.'
+				end		  
+				act'Further':gt'Komp','waitclients'
+			elseif vagina <= 15:
+				'<center><img src="images/camwhore/camwhore35.jpg"></center>'
+				'You lie on your side and highly showered foot, and then you begin to have yourself one finger.'   
+				if horny >= 100:
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					'But the excitement is so great, that you will soon come to an end under the vulgar many emoticons in chat...'
+				else
+					'Five minutes later, you finally get tired of this posture, why stop.'  
+				end	  
+				act'Further':gt'Komp','waitclients'
+			end
+		end
+	end
+end
+--- kompMFC ---------------------------------
+

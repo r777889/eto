@@ -1,0 +1,10 @@
+# lena
+cls
+minut += 5
+gs'stat'
+'<center><b><font color = maroon>Lena</font></b></center>'
+'<center><img src="images/qwest/alter/sisterQW/ReksHome/Lena.jpg"></center>'
+'Small and mobile Lena'
+act 'Move away':gt'sbReksHome','party_home'
+--- lena ---------------------------------
+

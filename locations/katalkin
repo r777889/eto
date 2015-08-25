@@ -1,0 +1,235 @@
+# katalkin
+gs'stat'
+
+if hour >= 8:'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+'A little nook in which the police are sitting.'
+
+if hour >= 8 and hour < 22:
+	'Captain Katalkin handles cases.'
+
+	if katalkinSexDay < daystart and katalkinSexOnce = 1:
+		if schtraf = 0:
+			'Katalkin looking at you with interest "Sit down Light. Maybe a cup of tea?"'
+
+			act 'To drink tea':
+				cls
+				minut += 5
+				katalkinNoexit = 0
+				gs'stat'
+
+				'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+				'You sat down at the table and poured you some tea Katalkin. Captain himself sat down next to you and also began to drink tea. He virtually rummage your body for its lustful eyes. Captain whispers to you grabbing for your thighs "Well Sveta, can entertain?"'
+
+				act 'Put his hand on his pants':katsexetap = 1 & gt'katalkinSex'
+				act 'Do not move':katsexetap = 0 & gt'katalkinSex'
+			end
+		elseif schtraf > 0:
+			'Captain Katalkin smiling at you "Well Sveta, pay a fine or exhaust?"'
+
+			if money >= schtraf:
+				act 'Pay a fine':
+					cls
+					money -= schtraf
+					schtraf = 0
+					katalkinNoexit = 0
+					gs'stat'
+
+					'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+					'You pay a fine police officer. He took the money and immediately lost interest to you.'
+
+					act 'Escape':minut += 1 & gt'vokzalGin'
+				end
+			end
+
+			act 'Work':katsexetap = 0 & gt'katalkinSex'
+		end
+	elseif katalkinSexDay = daystart and katalkinSexOnce = 1:
+		if schtraf = 0:
+			'Katalkin sitting in his papers and that writes.'
+		elseif schtraf > 0:
+			'Katalkin grins "I think you`re fully fulfilled its fine."'
+
+			act 'Bye':
+				cls
+				schtraf = 0
+				katalkinNoexit = 0
+				gs'stat'
+
+				'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+				'You said goodbye to the police, He nodded to you "Come on, Go, and then I have a lot of work".'
+
+				act 'Escape':minut += 1 & gt $curloc
+			end
+		end
+	elseif katalkinSexOnce = 0:
+		if schtraf = 0:
+			'Katalkin looking at you with interest "Sit down. Maybe a cup of tea?"'
+
+			act 'To drink tea':
+				cls
+				minut += 5
+				katalkinNoexit = 0
+				gs'stat'
+
+				'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+				'You sat down at the table and poured you some tea Katalkin. Captain himself sat down next to you and also began to drink tea. He virtually rummage your body for its lustful eyes. And suddenly you feel like the captain put his hand on your leg and bit her fists frantically began to mumble his face closer to your. "You pretty, we police are people too."'
+
+				act 'Escape':minut += 1 & gt $curloc
+				act 'Do not move':katsexetap = 0 & gt'katalkinSex'
+			end
+		elseif schtraf > 0:
+			'Captain Katalkin turned to you and said, "In general you a fine <<schtraf>> rubles and you can go."'
+
+			if money >= schtraf:
+				act 'Pay a fine':
+					cls
+					money -= schtraf
+					schtraf = 0
+					katalkinNoexit = 0
+					gs'stat'
+
+					'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+					'You pay a fine police officer. He took the money and immediately lost interest to you.'
+
+					act 'Escape':minut += 1 & gt'vokzalGin'
+				end
+			else
+				act 'I have no money':
+					cls
+					money = 0
+					schtraf = 0
+					katalkinNoexit = 0
+					kutime = 24
+					gs'stat'
+
+					'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+					'Police searched you, and took valuables. He frowned and said, "After sitting for hours while in jail."'
+
+					act 'In jail':gt'kutuzka'
+				end
+			end
+
+			act 'Beg':
+				cls
+				gs'stat'
+
+				'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+				'You started to beg the police captain did not punish you. He looked around the empty room and then turned his face to you. "Well, maybe we could come up with something." His eyes slid over your figure and his sweaty hand fell on my knees to you.'
+
+				if money >= schtraf:
+					'You think to yourself, may well in Figure this captain, obviously he had to something. I have enough money for a fine.'
+
+					act 'Pay a fine':
+						cls
+						money -= schtraf
+						schtraf = 0
+						katalkinNoexit = 0
+						gs'stat'
+
+						'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+						'You pay a fine police officer. He took the money and immediately lost interest to you.'
+
+						act 'Escape':minut += 1 & gt'vokzalGin'
+					end
+				elseif money < schtraf:
+					'You think to yourself, that the output then you have no. As there is no required amount for payment of the fine.'
+				end
+
+				act 'Smile it':katsexetap = 0 & gt'katalkinSex'
+			end
+		end
+	end
+elseif hour >= 22:
+	'Captain Katalkin sitting at a table on which lies a variety of snacks and vodka worth. Next to him sat two more police.'
+
+	if katalkinSexOnce = 1:
+		if katGangMeet = 0:
+			'Seeing you Katalkin captain waved his hand and you said drunkenly "Come Sveta. I`ll introduce you to the guys fucking."'
+
+			act 'Sit down':
+				cls
+				minut += 5
+				katalkinNoexit = 0
+				katGangMeet = 1
+				gs'stat'
+
+				'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+				'You sat down at a table with a drunken police campaign, you immediately poured vodka. Katalkin introduced you guys like Pasha and Sergei. "Well Svetsik, Let`s drink to acquaintance."'
+
+				act 'Drink for familiarity':alko += 2 & minut += 5 & gt'katalkinAlko'
+			end
+		elseif katGangMeet > 0:
+			'Seeing you Katalkin captain waved his hand and you said drunkenly "Come Sveta. Let buhnem."'
+
+			act 'Sit down':
+				cls
+				minut += 5
+				katalkinNoexit = 0
+				gs'stat'
+
+				'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+				'You sat down at a table with his subordinates and Katalkinym Pasha and Sergei. You immediately poured vodka.'
+
+				act 'Drink a glass of':alko += 2 & minut += 5 & gt'katalkinAlko'
+			end
+		end
+	elseif katalkinSexOnce = 0:
+		'IF THIS MESSAGE TO climbed a bug'
+
+		if schtraf = 0:
+			'Katalkin drunkenly looking at you "Come to us at the table! Join, do not be shy, here all their."'
+
+			act 'Sit down':
+				cls
+				minut += 5
+				katalkinNoexit = 0
+				gs'stat'
+
+				'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+				''
+
+				act 'Escape':minut += 1 & gt $curloc
+				act 'Do not move':katsexetap = 0 & gt'katalkinSex'
+			end
+		elseif schtraf > 0:
+			'Drunken Captain Katalkin turned to you and said, "In short pay fines <<schtraf>> rubles, and you can get out."'
+
+			if money >= schtraf:
+				act 'Pay a fine':
+					cls
+					money -= schtraf
+					schtraf = 0
+					katalkinNoexit = 0
+					gs'stat'
+
+					'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+					'You pay a fine police officer. He took the money and immediately lost interest to you.'
+
+					act 'Escape':minut += 1 & gt'vokzalGin'
+				end
+			else
+				act 'I have no money':
+					cls
+					money = 0
+					schtraf = 0
+					katalkinNoexit = 0
+					kutime = 24
+					gs'stat'
+
+					'<center><img src="images/qwest/vokzal/katalkin.jpg"></center>'
+					'Police searched you, and took valuables. He frowned and said, "After sitting for hours while in jail."'
+
+					act 'In jail':gt'kutuzka'
+				end
+			end
+		end
+	end
+elseif hour < 8:
+	'The door is locked.'
+
+	act 'Escape':minut += 1 & gt'vokzalGin'
+end
+
+if katalkinNoexit = 0:act 'Escape':minut += 1 & gt'vokzalGin'
+--- katalkin ---------------------------------
+

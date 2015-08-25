@@ -1,0 +1,821 @@
+# dina
+gs'dinSex'
+gs'dinBoroda'
+
+$d_read_porn = {
+	act 'Read porno magazine':
+		cls
+		'<center><img src="images/qwest/alter/porn.jpg"></center>'
+
+		if pornMagazine = 1:
+			'Skukota, this magazine you`ve memorized by heart, it seems it is time to buy a new one.'
+		else
+			pornMagazine -= 1
+			horny += 10
+			minut += 5
+			gs'stat'
+
+			'You are flipping through a porn magazine reading stories and looking at pictures, sly excitement begins to cover you.'
+		end
+
+		act 'Logout':gt $curloc
+	end
+}
+
+$sitrobrd = {
+	cla
+	*clr
+	minut = minut + 15
+	obruchday = day
+	agil = agil + 1
+	sweat = sweat + 1
+	manna = manna - 1
+	fat = fat - 1
+
+	'<center><img src="images/pic/obruch.gif"></center>'
+	'You twisted hoop for fifteen minutes developing agility.'
+
+	act 'Logout':gt $curloc
+}
+
+$sitryogd = {
+	cla
+	*clr
+	minut = minut + 15
+	bookYogday = day
+	will = will + 1
+	manna = manna + 5
+
+	'<center><img src="images/pic/bookYog.jpg"></center>'
+	'You meditate for fifteen minutes will developing.'
+
+	act 'Logout':gt $curloc
+}
+
+$sitrskakd = {
+	cla
+	*clr
+	minut = minut + 15
+	skakday = day
+	speed = speed + 1
+	sweat = sweat + 1
+	manna = manna - 1
+	fat = fat - 1
+
+	'<center><img src="images/pic/skak.jpg"></center>'
+	'You are within fifteen minutes jumped rope on developing speed.'
+
+	act 'Logout':gt $curloc
+}
+
+$sitrpressd = {
+	cla
+	*clr
+	minut = minut + 15
+	pressday = day
+	vital = vital + 1
+	sweat = sweat + 1
+	manna = manna - 1
+	fat = fat - 1
+
+	'<center><img src="images/pic/press.jpg"></center>'
+	'You do abdominal exercises for fifteen minutes developing endurance.'
+
+	act 'Logout':gt $curloc
+}
+
+$sitrpushd = {
+	cla
+	*clr
+	minut = minut + 15
+	pushday = day
+	stren = stren + 1
+	sweat = sweat + 1
+	manna = manna - 1
+	fat = fat - 1
+
+	'<center><img src="images/pic/push.jpg"></center>'
+	'You press the floor for fifteen minutes developing force.'
+
+	pushnum = RAND(stren/10,stren/5)
+	'You managed to clean wrung <<pushnum>> time. Your record before wrung <<pushrecord>> time'
+	if pushrecord < pushnum:pushrecord = pushnum & 'This new record.'
+
+	act 'Logout':gt $curloc
+}
+
+$gladbelo = {
+	cla
+	*clr
+	minut = minut + suhbelo2*3
+	clrbelo = clrbelo + suhbelo2
+	suhbelo2 = 0
+	manna = manna - 10
+	elektro = elektro + 10
+
+	'<center><img src="images/pic/belo.jpg"></center>'
+	'You stroked underwear.'
+
+	act 'Logout':gt $curloc
+}
+
+$showerdin = {
+	cumpussy = 0
+	cumbelly = 0
+	cumass = 0
+	cumanus = 0
+	cumlip = 0
+	cumface = 0
+}
+
+$kiosksig = {
+	cls
+	'A pack of cigarettes costs 50 rubles.'
+
+	if money >= 50:
+		act 'Buy a pack of cigarettes':
+			siga += 20
+			money -= 50
+			minut += 5
+			gt $curloc
+		end
+	end
+
+	act 'Escape':gt $curloc
+	exit
+}
+
+$budilnik = {
+	'<b><center><font size = 4><font color = black>Alarm clock</font></center></b>'
+	'Alarm clock wound on <<alarm1>> hours <<alarm2>> minutes'
+	'<b><center><font size = 3><font color = black>		Watch						Minutes</font></center></b>'
+	'<center><a href="exec:alarm1 = 01 & gt $curloc">01</a> <a href="exec:alarm1 = 02 & gt $curloc">02</a> <a href="exec:alarm1 = 03 & gt $curloc">03</a> <a href="exec:alarm1 = 04 & gt $curloc">04</a> <a href="exec:alarm1 = 05 & gt $curloc">05</a></center>'
+	'<center><a href="exec:alarm1 = 06 & gt $curloc">06</a> <a href="exec:alarm1 = 07 & gt $curloc">07</a> <a href="exec:alarm1 = 08 & gt $curloc">08</a> <a href="exec:alarm1 = 09 & gt $curloc">09</a> <a href="exec:alarm1 = 10 & gt $curloc">10</a> <a href="exec:alarm2 = 00 & gt $curloc">00</a> <a href="exec:alarm2 = 05 & gt $curloc">05</a> <a href="exec:alarm2 = 10 & gt $curloc">10</a> <a href="exec:alarm2 = 15 & gt $curloc">15</a></center>'
+	'<center><a href="exec:alarm1 = 11 & gt $curloc">11</a> <a href="exec:alarm1 = 12 & gt $curloc">12</a> <a href="exec:alarm1 = 13 & gt $curloc">13</a> <a href="exec:alarm1 = 14 & gt $curloc">14</a> <a href="exec:alarm1 = 15 & gt $curloc">15</a> <a href="exec:alarm2 = 20 & gt $curloc">20</a> <a href="exec:alarm2 = 25 & gt $curloc">25</a> <a href="exec:alarm2 = 30 & gt $curloc">30</a> <a href="exec:alarm2 = 35 & gt $curloc">35</a></center>'
+	'<center><a href="exec:alarm1 = 16 & gt $curloc">16</a> <a href="exec:alarm1 = 17 & gt $curloc">17</a> <a href="exec:alarm1 = 18 & gt $curloc">18</a> <a href="exec:alarm1 = 19 & gt $curloc">19</a> <a href="exec:alarm1 = 20 & gt $curloc">20</a> <a href="exec:alarm2 = 40 & gt $curloc">40</a> <a href="exec:alarm2 = 45 & gt $curloc">45</a> <a href="exec:alarm2 = 50 & gt $curloc">50</a> <a href="exec:alarm2 = 55 & gt $curloc">55</a></center>'
+	'<center><a href="exec:alarm1 = 21 & gt $curloc">21</a> <a href="exec:alarm1 = 22 & gt $curloc">22</a> <a href="exec:alarm1 = 23 & gt $curloc">23</a> <a href="exec:alarm1 = 00 & gt $curloc">00</a></center>'
+}
+
+$margoroomdiDush = {
+	cls
+	minut += 15
+	QWdogreiqTimer = 7
+	QWdogReiq = 2
+	gs'stat'
+
+	'You undress and go to the track for Margarita in shower. You do not have time to really get into the bathroom as the Margarita pilas in your lips with a kiss.'
+
+	act 'Lick my nipples':
+		cls
+		minut += 15
+		horny += 50
+		if MargoSex = 0:MargoSex = 1 & girl += 1
+		lesbian += 1
+		gs'stat'
+
+		'<center><img src="images/zoo/margo2.jpg"></center>'
+		'Marguerite took the swollen nipples SG alternately in the mouth, take their licking and biting his sharp little teeth.'
+
+		act 'Carry it':dynamic $brodila
+	end
+	act 'Lick my vagina':
+		cls
+		minut += 15
+		horny += 20
+		if MargoSex = 0:MargoSex = 1 & girl += 1
+		lesbian += 1
+		gs'stat'
+
+		'<center><img src="images/zoo/margo3.jpg"></center>'
+		'Marguerite kneels and begins his tongue licking the vagina, by its action on the body run by a pleasant body wave.'
+
+		if horny >= 90:horny = 0 & orgasm += 1 & 'You covered the orgasm.'
+
+		act 'Carry it':dynamic $brodila
+	end
+	act 'Lick my ass':
+		cls
+		minut += 15
+		horny += 20
+		if MargoSex = 0:MargoSex = 1 & girl += 1
+		lesbian += 1
+		gs'stat'
+
+		'<center><img src="images/zoo/margo4.jpg"></center>'
+		'Nimble and agile tongue Margarita began to lick anus,causing a pleasant languor in all body, Margarita it seemed a little hole she slowly inserted a finger in the ass and started to make rhythmic movements.'
+
+		if horny >= 99:horny = 0 & orgasm += 1 & 'You covered the orgasm.'
+
+		act 'Carry it':dynamic $brodila
+
+		if anus > 15 and horny > 0:
+			act 'Stick me in the priest`s hand':
+				cls
+				minut += 15
+				horny += 60
+				anus += 5
+				gs'stat'
+
+				'<center><img src="images/zoo/margo5.jpg"></center>'
+				'First one finger, then two, three and so the whole arm is entirely. She quickly found herself in the depths of ass. It`s incredible. I still had no hand entirely. And so it happened. Margarita penetrated deeper and deeper, and I was in seventh heaven. Polly took a supple hand. It was incredibly well. She massaged me inside, like a real mistress, causing me to moan loudly and wagging with pleasure his ass.'
+
+				if horny >= 90:horny = 0 & analorgasm += 1 & 'You covered the orgasm.'
+
+				act 'Carry it':dynamic $brodila
+			end
+		end
+	end
+}
+
+$margoroomdi3 = {
+	cls
+	minut += 15
+	gs'stat'
+
+	'You undress and go to the track for Margarita in shower. You do not have time to really get into the bathroom as the Margarita pilas in your lips with a kiss.'
+
+	act 'Lick my nipples':
+		cls
+		minut += 15
+		horny += 50
+		if MargoSex = 0:MargoSex = 1 & girl += 1
+		lesbian += 1
+		gs'stat'
+
+		'<center><img src="images/zoo/margo2.jpg"></center>'
+		'Margarita took your swollen nipples in her mouth alternately, take their licking and biting his sharp little teeth.'
+
+		act 'Go into the room':dynamic $margoroomdi2
+	end
+	act 'Lick my vagina':
+		cls
+		minut += 15
+		horny += 20
+		if MargoSex = 0:MargoSex = 1 & girl += 1
+		lesbian += 1
+		gs'stat'
+
+		'<center><img src="images/zoo/margo3.jpg"></center>'
+		'Marguerite kneels and begins his tongue licking the vagina, by its action on the body run by a pleasant body wave.'
+
+		if horny >= 90:horny = 0 & orgasm += 1 & 'You covered the orgasm.'
+
+		act 'Go into the room':dynamic $margoroomdi2
+	end
+	act 'Lick my ass':
+		cls
+		minut += 15
+		horny += 20
+		if MargoSex = 0:MargoSex = 1 & girl += 1
+		lesbian += 1
+		gs'stat'
+
+		'<center><img src="images/zoo/margo4.jpg"></center>'
+		'Nimble and agile tongue Margarita began to lick anus, causing a pleasant languor in all body, Margarita it seemed a little hole she slowly inserted a finger in the ass and started to make rhythmic movements.'
+
+		if horny >= 99:horny = 0 & orgasm += 1 & 'You covered the orgasm.'
+
+		act 'Go into the room':dynamic $margoroomdi2
+
+		if anus > 15 and horny > 0:
+			act 'Stick me in the priest`s hand':
+				cls
+				minut += 15
+				horny += 60
+				anus += 5
+				gs'stat'
+
+				'<center><img src="images/zoo/margo5.jpg"></center>'
+				'First one finger, then two, three and so the whole arm is entirely. She quickly found herself in the depths of ass. It`s incredible. I still had no hand entirely. And so it happened. Margarita penetrated deeper and deeper, and I was in seventh heaven. Polly took a supple hand. It was incredibly well. She massaged me inside, like a real mistress, causing me to moan loudly and wagging with pleasure his ass.'
+
+				if horny >= 90:horny = 0 & analorgasm += 1 & 'You covered the orgasm.'
+
+				act 'Go into the room':dynamic $margoroomdi2
+			end
+		end
+	end
+}
+
+$margoroomdi2 = {
+	cls
+	minut += 15
+	gs'stat'
+
+	'-I`m ready: Margarita says entering the room.'
+	'Very good, get down - you answer Margarita.'
+
+	act 'Suck at stud':
+		cls
+		minut += 15
+		horny += 30
+		gs'stat'
+
+		'<center><img src="images/zoo/margo6.jpg"></center>'
+		'Margot leaning towards male and located at convenient starts sucking him. Finally, a member of the dog on the alert.'
+
+		act 'Insert dick in her ass dog':
+			cls
+			minut += 15
+			horny += 30
+			gs'stat'
+
+			'<center><img src="images/zoo/anal.jpg"></center>'
+			'Margarita gets on all fours, and you are sent to members of her anus, feeling that the cable is in the anus began rhythmic action 2 times faster, Margarita has squealed as the most genuine bitch.'
+			'Suddenly Margaret sobbed and how sharply moaned drawl, and her eyes rolled tears.'
+			'Margaret, what happened? - You came closer.'
+			'Light, he stuck me - Suffice it to say Margarita and licked her lips-Unusual feelings, that-the pressure on the walls of the anus and turns both painful and pleasant, I did not yet experienced.'
+			'Yes, unusual and pleasant feeling, I am with you completely agree, Just do not make any sudden movements dog may jerk and you break, your wonderful ass - You have chosen to show a little concern with respect to Margarita.'
+			'Light you know, I looked zooporno so there girl 19 years for granted 3 hours 17 males,then she ate moved - Margarita licked her lips: this will train that would kill her record.'
+			'Rit, you`re like a little video is certainly postonovochno-You responded with skepticism.'
+			'No Light This video my father personally ordered for himself - Margaret tried to change position but for the dog growled angrily, and Margaret left the attempt to release - so do not supply any.'
+			'Suddenly a knot in the anus of Margaret Opal, and a member of the dog with a strange sound "FER" popped.From ass margaritas flowed sperm mixed with blood.'
+			'Ohrenet - Margarita delighted-I am now going to practice often zoo, All bath and I`m going home.'
+
+			act 'Walk in shower with Margarita':dynamic $margoroomdiDush
+		end
+	end
+}
+
+$margoroomdi = {
+	cls
+	minut += 15
+	gs'stat'
+
+	'YOU opens a little bit and look after her but nothing happened Margarita easy to clean.You note that her beautiful body.'
+
+	act 'Go into the room':dynamic $margoroomdi2
+}
+
+$margokafedin = {
+	cls
+	minut += 15
+	gs'stat'
+
+	'<center><img src="images/zoo/margo.jpg"></center>'
+	'You are going to but then called the waitress at Cafe Margarita comes,You notice it immediately comes to your table.'
+	'Hi, I`m sorry that the detainee,unforeseen circumstances-Margarita sits at the table.'
+
+	if MargoSex = 0:
+		'So why did you want to talk to me? You just took the bull by the horns.'
+		'About zoosekse, you`re practicing it? - I asked Margarita'
+		'Yes,no,you cares? - You have decided to show a bit of character'
+		'I like the zoo - Margarita said the last words are not sure - I would like to try.'
+		'Do you have a dog? - Her words have amused, cause slight smirk'
+		'The fact of the matter is no, I live with my parents and they are not allowed to bring a dog - uttering these words Marguerite sad sigh.'
+		'And you want to go under my dog? - You do not hide the sarcasm.'
+		'Well yes - Margarita missed your sarcasm on deaf ears'
+	else
+		'You sat down at a table with Margot, and she admitted that she liked with the dog and she wants more.'
+	end
+
+	act 'Assort itself (Escape)':gt'street'
+
+	if husbandMark <= 0 and husband <= 0:
+		act 'Come then to me':
+			cls
+			minut += 15
+			gs'stat'
+
+			'You and Margarita got up from the table and went to your house. Already in apartment Margarita went to the shower.'
+
+			act 'Peep in the shower':dynamic $margoroomdi
+			act 'Waiting room':dynamic $margoroomdi2
+
+			if horny >= 50:act 'Login to Margarita in the shower':dynamic $margoroomdi3
+		end
+	end
+}
+
+$butikreiqdi = {
+	cls
+	minut += 5
+	gs'stat'
+
+	'Began turning his head,you do not notice certain, but your actions have attracted Seller, Retailing young girl in a little too narrow shirt with logo boutique, besides that her shirt was testnovata so had to unbutton the top button and(Fashion - YOU thought whether it is male boutique shirt obtyag would be understandable, but in women? What is and what the administration thinks?) coming to you a little bit inconsistent and quickly asks:'
+	'Seller: I can tell you what a help?'
+
+	act 'No, thank you':gt'butik','start'
+	act 'Silently leave':gt'down'
+	act 'Staring at her breasts':
+		cls
+		minut += 5
+		horny += 50
+		gs'stat'
+
+		'Seeing that the saleswoman novice and you are likely to decide its first client on it poizgolyatsya. You`ve just opened my mouth to say that what some harsh sentence, his eyes rested on the chest. Bra, coupled with shirt successfully emphasized the chest, and even though it was visible only the upper part of the chest, your imagination to finish everything for you. (I wonder what her nipples? Suddenly it flashed in the brain)'
+		'-Yes, You say you give me a few minutes of your time.'
+		'Your words made an impression on the saleswoman,She was confused and a little flushed.'
+		'Yes, Yes, Yes - Often it: what is colored dress, shape the neckline of the dress, you freer dress or vice versa you want to highlight your perfect figure?'
+		'Stop, stop - you say: firstly how do I contact you, You`re still a person and not an impersonal entity? Your words made an impression on the girl, She yavna flattered by your words.'
+		'Irene - says the girl, and then recovering: seller-Consultant Rima.'
+		'Can I call you Rimma? you ask-and my name is Light'
+		'Yes, of course as you see fit-Rimma and answers you smiling shyly.'
+
+		act 'Choose a dress with Rimma':
+			cls
+			minut += 5
+			gs'stat'
+
+			if hapri = 1 and mop > 1 and leghair <= 0 and sweat <= 0 and curly > 0 and glamur > 0:
+				'You choose things evaluate them together and just hang Rimma.'
+				'Rimma, Where`s the fitting room? suddenly you ask'
+				'Come - Rimma did not notice as a barrier between you gone:Seller Buyer.'
+
+				act 'Go to the fitting room':
+					cls
+					minut += 5
+					gs'stat'
+
+					'You and Rimma went into the fitting room.'
+
+					act 'You do not like it':
+						cls
+						minut += 5
+						gs'stat'
+
+						'As a result, spending time in an empty you leave Boutique. In my head 2 thoughts: Rimma, namely, her body is a mysterious and curious observer.'
+						'You go home again suddenly feel eyes on me.'
+
+						act 'Ignore':gt'down'
+						act 'Look around':
+							cls
+							minut += 5
+							gs'stat'
+
+							'You started to turn his head sharply looking around.'
+							'You notice that you are watching a girl.'
+
+							act 'To approach it':
+								cls
+								minut += 5
+								gs'stat'
+
+								'You are silent approach and rests in the eyes Woman:'
+								nl
+								'Good afternoon - she says - You do not remember me?'
+								'No - You`re a little annoyed - Must?'
+								'The girl did not like not responding to your sharpness'
+								'In principle, there is no out of the situation that you have been? - should not-meets girl'
+								'What is the situation where when? You do not hide the anger.'
+								'Yes, in a vacant lot, Where are you "fun" a male dog-she replied with a grin.'
+
+								act 'You`re oherela! (Escape)':gt'down'
+								act 'Extort taken in head? What do you want?':
+									cls
+									minut += 5
+									QWdogReiq = 2
+									QWdogreiqTimer = 7
+									gs'stat'
+
+									'I decided to blackmail me? With one hand plucking at the clitoris other rented? And how much do you want? Say you`re angry, and how much do you think this whore wants.'
+									'Again, your words had no effect on the girl. Cocking his head to the side, she asked: Tantrum finished?'
+									'You irritably told her that even not yet started hysteria.'
+									'NO, until you meet me on the nerves next week - suddenly she says.'
+									'Come on - You shook his head wearily.'
+									'That`s good my name is Margarita - the girl says, and looks at you expectantly.'
+									'Svetlana - you answer.'
+									'See you - says Margarita and leaves.'
+
+									act 'Escape':gt'down'
+								end
+							end
+						end
+					end
+					act 'Remove her panties to Rimma':
+						cls
+						minut += 5
+						gs'stat'
+
+						'You took off her panties in front of Rimma and noticed how she flushed cheeks and quickened breathing.'
+
+						act 'Do you like me?':
+							cls
+							minut += 5
+							orgasm = orgasm + 1
+							horny = 0
+							lesbian += 1
+							if RimmaSex = 0:RimmaSex = 1 & girl += 1
+							rimmaday = day
+							gs'stat'
+
+							'<center><img src="images/zoo/primer.jpg"></center>'
+							'Rimma, do you like me? you quietly ask a question'
+							'Yes,very - Rimma responds with excitement'
+							'Then I lick - you need'
+							'Rimma kneels down and starts kissing is not very skillfully body. Starting with the belly of her kiss timid began to turn in a more confident, kissing and licking tongue, Rima reached the wet mound. After kissing and licking his crotch, Rimma a little bit of his. The unexpectedness of the body flowed sweet languor.'
+							'Smell what your scent - Rimma for a few seconds looked up from petting.'
+							'Having the right palm gently on the pubes Rimma fingers spread damp sponge,She stuck out her tongue and ran it inside.'
+							'Soft reciprocating action of the tongue on the clitoris Rima caused mild spasmodic excitement. Suddenly Rimma became the language press on the clitoris. The body is already slightly subordinate, the brain was only one program does not moan for the whole shop.'
+							'Suddenly, your body began to shake wave spasms,the last spasm came Orgasm.Mild groaning you knelt.'
+							'You are in easy prostration,and the body in a pleasant languor.'
+
+							act 'Get out of the dressing room':
+								cls
+								minut += 5
+								QWdogReiq = 2
+								QWdogreiqTimer = 7
+								gs'stat'
+
+								'Rimma escorts you to the door.'
+								'Light,did you like it - Rima asked, blushing.'
+								'What do you think?drove me-Do you crave to continue.'
+								'No, I can not wait for parents - I told you these Rima looks upset.'
+								'Then we meet next week? - the proposal voiced.'
+								'Come on - Rima looks very satisfied.'
+								'You go home,suddenly behind a woman`s voice:'
+								'Goodnight - said the stranger.'
+								'Looking closely you recognize her girl wasteland.'
+								'Hello-You said cheerfully - are you following me all day watching?'
+								'Yes-she smiled - I saw you in the boutique,did not dare to go out there and here decided to wait for you on the street.'
+								'Why wait? Ask your painful question.'
+								'Now it is too late let`s meet next week to talk - woman waiting looking at you'
+								'Come on. - readily agreed to you - By the way my name is Light.'
+								'Margaret - I had the girl.'
+
+								act 'Escape':gt'down'
+							end
+						end
+					end
+				end
+			else
+				'You Rimma iterate dress, but could not find. Are you leaving, Rima is not a lot you sad goodbye'
+				act 'Escape':gt'down'
+			end
+		end
+	end
+}
+
+$polactdog = {
+	cls
+	streetdogday = day
+	!if QWdogReiq = 0:QWdogReiq = 1 & QWdogreiqTimer = 7
+	zoo += 1
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/zoo/first.jpg"></center>'
+	'After looking around and making sure that no one has you take off clothes:'
+	'Dog stuck soft but at the same time rough tongue and began to lick pussy, from the rhythmic action dog all over his body went soft wave excitation,unwittingly cause slight moan.'
+	'A few minutes later the dog stops and starts licking his attempts to capture the bitch,the better to accept you get on all fours. Male habitual movement run against you:'
+
+	act 'The Members of the vagina':
+		cls
+		minut += 10
+		orgasm = orgasm + 3
+		horny = 0
+		vagina += 3
+		gs'stat'
+
+		'<center><img src="images/zoo/vag.jpg"></center>'
+		'You turned around to him and began to massage his pouch, from which there seemed to member, you started to masturbate him, he grew up in his eyes, turning into a formidable club 27see. Taking his cock in his hand, You sent him a little and entered, the rest he did himself, he abruptly pushed and member went hungry pussy. You moan from the first blow, and after three hits you`ve been completely strung on dick. The dog began to fuck long, but strong shocks, stringing each time a member of the hilt with one blow. Member of the dog almost completely out, remained 2 cm and he abruptly pushed him over the whole length, a member of the champ came into the vagina, sex lips tightly encircled him when returning. Orgasms followed one another, surging waves. The dog still gaining momentum and stronger run against, He gripped their claws, driving member into the depths of the vagina.'
+
+		act '...':
+			cls
+			minut += 10
+			cumpussy += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/vag2.jpg"></center>'
+			'You pushed even stronger legs and rested his hands on the ground, It is becoming more convenient for dog pose, pussy greedily swallowing every see this member, milking it, I squeezed the entire length. Pussy juice dripping and burning love, allocation ran down his thighs and dripped to the ground. The dog began to come on more violent and more. Soon he began to grow node and you began to push toward the ass member, I am trying to swallow it more. Pussy walls you feel, his cock began to grow, and he drove his penis at the base and slightly trailed. His unit expanded in pussy, pushing her wall, and tied a tight knot. The dog began to attempt to release but a member of a tightly stuck in the pussy, and she squeezed it tight at the base of a ring, and not released, until it is a bitch to pump sperm. You screamed, when the sperm hit, completely filling your pussy, his hot sperm, that burned the interior of. A member graduated and throbbing in your depths, pussy milked him, He sucked from her boy every last drop. Cum began to flow to the legs thin stream. You were completely filled with his sperm. Dog cranked and started backwards, You pressed it to her and stood a few minutes with him in the castle with a knot in pussy. When a member of a little opal and you could be freed from the node, you fell to the ground, and pussy flowed from his sperm, flooding all around.'
+
+			if QWdogReiq > 0:act 'Escape':dynamic $brodila
+			if QWdogReiq = 0:act 'Escape':dynamic $dogreiqdi
+		end
+	end
+	act 'To send a member in the ass':
+		cls
+		minut += 10
+		orgasm = orgasm + 3
+		horny = 0
+		anus += 3
+		gs'stat'
+
+		'<center><img src="images/zoo/anal.jpg"></center>'
+		'Kneeling in the excited state, Member of the Dog came into the ass. Anus was parted from-for the difficult position and much relaxed muscles, and his cock slipped easily into the ass. Sudden rhythmic motion brought both pain and pleasure,orgasm followed orgasm. But then he abruptly entered fully into the anus, sphincter tightly wraps his, thereby sealing the anus completely.'
+
+		act '...':
+			cls
+			minut += 10
+			cumanus += 1
+			gs'stat'
+
+			'<center><img src="images/zoo/anal2.jpg"></center>'
+			'You feel, he began to lower the liquid inside ass. Having stood in the castle a few minutes, But the ball on his penis did not decrease and bored dog stand, I started growling pull his penis out of the anus. The pain you start yelling, He is feeling his huge cock in the anus tears 2 parts. Then he listened to a distinctive sound "FER" and his cock jumped out of the ass torn out of which poured down the stomach of his sperm, interspersed with discharge from the anus.'
+
+			if QWdogReiq > 0:act 'Escape':dynamic $brodila
+			if QWdogReiq = 0:act 'Escape':dynamic $dogreiqdi
+		end
+	end
+}
+
+$dogreiqdi = {
+	cls
+	QWdogReiq = 1
+	QWdogreiqTimer = 7
+	minut += 10
+	gs'stat'
+
+	'<center><img src="images/zoo/girl.jpg"></center>'
+	'Getting up from his knees and adjusting of clothes you kissed a dog and went home, coming to himself after intercourse,barely rising, straightened his clothes you notice a Woman. Girl with curiosity and excitement explicitly looking for all your shows. She opens her mouth and wants to say,but each turns around and runs away. You stay in a light loss but also the fact that you have looked for you filed. And he called unto dog you go home.'
+
+	act 'Escape':dynamic $brodila
+}
+
+$youriqwest = {
+	act 'Go to Jury':
+		cls
+		jouryQWNo = 0
+		minut += 30
+		gs'stat'
+
+		'You go down the street with Yuri, We came to the metro, there you have been in the car and rode in silence with him in the northern part of the city. Coming out of the subway Yuri led you in the direction of new buildings, You went all the way in silence, and Yuri looked tense. Finally you come to a new nine-, Yuri opened the front door and you have passed the entrance. Yuri called the elevator, and you come to his pad.'
+
+		act 'Log in to the apartment':
+			cla
+			minut += 30
+			gs'stat'
+
+			'You enter into a small cozy, one-room apartment. It catches the eye is the fact that lives here, albeit very neat, but the bachelor.'
+			'Yuri held you in the hall and planted a chair. He went to the kitchen and brought champagne with grapes and put it on the table between the two chairs. Sam sat in a nearby chair and remote control included music.'
+			'It was obvious that George does not like can not come up with a topic for conversation. The conversation did not jell, and finally Yuri resolutely stood up and going to hand you filed "Let`s Dance?"'
+
+			act 'Dancing with Yuri':
+				cla
+				minut += 10
+				horny += 50
+				gs'stat'
+
+				'You have typed the order you a little champagne and covered intoxication and what that sweet bliss. You smiled and took his hand, Yuri got up from the chair came to the middle of the room. Yuri came up to you and hug, I began to dance with you. His hands gently glided over your body. You captured the excitement and you too began to stroke his hands, Yuri. Yuri pressed against you and you feel like through the fabric, you in the belly rests on his hard cock.'
+
+				act 'Touched him between the legs':
+					cla
+					minut += 10
+					gs'stat'
+
+					'You almost without any intent slid his hand over the body of Yuri and stopped at his crotch feeling his standing member. Yuri muffled sigh from your touch.'
+
+					act 'Unbutton his pants':
+						cla
+						minut += 10
+						gs'stat'
+
+						'You undid his pants and his hands in his pants to Yuri groped his hard, as a member of an iron and got it out of his pants. His head was hidden under the skin, which fits closely to the head, you prick the skin on the penis revealing purple, hard head.'
+
+						act 'Squat down and take in the mouth':
+							cls
+							guy += 1
+							jourySex = 1
+							bj += 1
+							minut += 10
+							gs'stat'
+
+							'<center><img src="images/qwest/youri/bjdance.jpg"></center>'
+							'A little hand caressed member Yury you sat down in front of him and your face was right on against standing member. You wrapped around his purple head <<$liptalk>> and began to suck dick. Your lips glided over the smooth and hot cock sucking it. Yuri was moaning and looking down, in your eyes. Then he choked hissed "Let`s go to bed."'
+							gs'oral','0'
+
+							act 'To go to bed':
+								cls
+								minut += 10
+								$nameV = 'Yuri'
+								$boy = $nameV
+								dick = 18
+								silavag = 2
+								pose = 1
+								gs'stat'
+
+								'<center><img src="images/qwest/youri/sex.jpg"></center>'
+								'The bed Yuri helped you to undress and put you on all fours ready to enter into you.'
+
+								dynamic $sexstart
+								'You feel like something solid Bound to you in the pussy.'
+								dynamic $sexstart2
+								'Yuri rammed so hard you, you broke and fell onto the bed breast.'
+
+								act 'Moan':
+									cls
+									minut += 10
+									pose = 1
+									gs'stat'
+
+									'<center><img src="images/qwest/youri/sex1.jpg"></center>'
+									'Yuri oblivious, the fact that you fell chest on the bed continued to thrust his cock in you.'
+									'He fiercely hollowed your body and you groaning helplessly under him, feeling his cock ramming your insides, pushing his every move.'
+
+									dynamic $sexcum
+									'Yuri froze on you, He kissed her on the cheek and went to the bathroom.'
+
+									act 'Going to the bathroom':
+										cls
+										minut += 10
+										horny += 10
+										gs'stat'
+
+										'<center><img src="images/qwest/youri/van.jpg"></center>'
+										'You went to the bathroom, which already washed Jury, He asked you to wash him. You shrug wearily climbed into the shower.'
+										'Yuri began to lather you and you feel like a member of his gentle rubbing of your hip began to harden suffused with blood, and rising.'
+
+										act 'Kissing with Yuri':
+											cls
+											minut += 10
+											horny += 10
+											gs'stat'
+
+											'<center><img src="images/qwest/youri/shower.jpg"></center>'
+											'Yuri attracted you to her and began to kiss you. You have already get tired, but the situation excites you and you responded to the caresses Yuri, also began to stroke his body.'
+
+											act 'Sucking dick':
+												cls
+												minut += 10
+												horny += 10
+												bj += 1
+												gs'stat'
+
+												'<center><img src="images/qwest/youri/shower1.jpg"></center>'
+												'Yuri put you in the bathroom on his heels and put his still soft dick in your mouth. You started to suck dick, who stood up straight in your mouth, filling it. Soon was a member of both the steel and Yuri began to moan. Finally he took a member of your mouth and prepared to finish.'
+												gs'oral','0'
+
+												act 'Substitute person':
+													cls
+													minut += 10
+													horny += 10
+													cumface += 1
+													facial += 1
+													gs'stat'
+
+													'<center><img src="images/qwest/youri/shower2.jpg"></center>'
+													'Sperm Yuri hit you in the face, but it was not much and soon stopped the flow.'
+
+													act 'Take a shower':
+														cla
+														*clr
+														minut = minut + 15
+														sweat = -3
+														horny = horny + 1
+														hapri = 1
+														mop = 1
+														cumpussy = 0
+														cumbelly = 0
+														cumass = 0
+														cumlip = 0
+														cumface = 0
+														cumanus = 0
+														gs'stat'
+
+														'<center><img src="images/pics/dush.jpg"></center>'
+														'Finally, you could get to shower and bathe. You showered and went out into the hall comb. There you are waiting for Yuri, which again was nervous and it was immediately clear, he wants you to show the door.'
+
+														act 'Escape':gt'nord'
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+}
+
+$brodila = {
+    if housr = 1:
+        gt'korr','start'
+    end
+    if housr = 2:    
+        gt'korr2x','start'
+    end
+}
+
+$brodilr = {
+    if housr = 1:
+        gt'street','start'
+    end
+    if housr = 2:    
+        gt'liamel','start'
+    end
+
+}
+
+$brodilk = {
+    if housr = 1:
+        gt'kuhr','start'
+    end
+    if housr = 2:
+        gt'kuhr2x','start'
+    end
+}
+
+$brodils = {
+    if housr = 1:
+        gt'sitr','start'
+    end
+    if housr = 2:
+        gt'sitr2x','start'
+    end
+}
+
+--- dina ---------------------------------
+

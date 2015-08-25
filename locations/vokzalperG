@@ -1,0 +1,20 @@
+# vokzalperG
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>Peron town</H4></center>'
+'<center><img src="images/pic/vokzalperG.jpg"></center>'
+'<a href="exec:GT ''vokzalGin'',''start''">At the station</a>'
+
+if snarkozak = 1 and narkossista = 0 and narkozakday!day:
+    if money >= 2000:
+        act 'Search tab':dynamic $snarkozaka
+    end
+end
+
+--- vokzalperG ---------------------------------
+

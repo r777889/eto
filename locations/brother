@@ -1,0 +1,443 @@
+# brother
+brotherAge = age-2
+brotherDick = 13
+
+gs'stat'
+
+'<center><b><font color = maroon>Kolka</font></b></center>'
+'<center><img src="images/qwest/alter/brother.jpg"></center>'
+'Your brother Kolka younger than you and he <<brotherAge>> years. Kolka was born, unlike you and your sister have by stepfather. He is a student at the same school as you, and enjoys soccer.'
+
+if brother < 20:'You and your brother scandal.'
+if brother >= 20 and brother < 40:'You and your brother tensions.'
+if brother >= 40 and brother < 60:'You and your brother normal relations.'
+if brother >= 60 and brother < 80:'You have a good relationship with my brother.'
+if brother >= 80:'You have a great relationship with my brother.'
+
+if cumbelly > 0 and nude=1:
+	'-Go pomoysya, look disgusting at all this finish.'
+	if brotherSex = 0:
+		brother -=1
+		act 'Move away':gt $loc, $metka
+		exit
+	end
+end
+
+if  cumface > 0 :
+	'-Wash your face, look disgusting at all this finish.'
+	if brotherSex = 0:
+		brother -=1
+		act 'Move away':gt $loc, $metka
+		exit
+	end
+end
+
+if cumass > 0 and nude=1 and tanga =0:
+	'-Go pomoysya, all ass in Koncha.'
+	if brotherSex = 0:
+		brother -=1
+		act 'Move away':gt $loc, $metka
+		exit
+	end
+end
+
+if cumfrot > 0 and nude = 0:
+	'- You have all the clothes stained. Wash, or ask the mother.'
+end
+
+if spanked > 1 and nude=1 and tanga=0:
+	'What happened to your ass? Punished for that-then?'
+end
+
+if nude=1 and lobok>2 and tanga = 0:
+	'- You`d shaved, - brother does you note, - or demontriruy all its thickets'
+elseif nude=1:
+	if brotherSex >= 1:
+		'"Sveta, you have an amazing body"'
+	else
+		'"Very best look. You what,nudism decided to do?'
+		brother += 1
+	end
+end
+
+act 'Move away':gt $loc, $metka
+
+if $loc = 'gschool':
+	if brother < 40:
+		'Brother frowns "Get off me pridurochnaya!"'
+	else
+		if evgenQW >= 4 and BjBeerQW>=3:
+			'Brother grins "Hi Sveta. But why do you want this football, better go with us to watch porn?' 
+			
+			act 'Going to watch porn':minut += 5 & gt'seeporn'
+			
+		elseif evgenQW >= 4:
+			'Guys poshushukavshis together tell you "Yes, Well it this soccer, Let`s go watch porn."'
+
+			act 'Going to watch porn':minut += 5 & gt'seeporn'
+			
+		elseif evgenQW < 4:
+			'Brother grins "Hi Sveta. Play football?"'
+
+			act 'To play football':
+				cls
+				minut += 60
+				brother += 5
+				agil += RAND(0,2)
+				speed += RAND(0,2)
+				sweat += 3
+				beg += RAND(2,5)
+				gs'stat'
+
+				'You are within an hour running around chasing the ball across the field with his brother and his friends Bear and Zhendosom.'
+
+				ivrand = RAND(0,1)
+				if ivrand = 0 and seepornofut = 0:
+					'Boys whispering to each other discussing something.'
+
+					act 'Then you are talking about?':
+						cls
+						gs'stat'
+
+						'The boys hesitated, so much so, nothing.'
+
+						if dom > 0:
+							'You`re a little pressed on them "Did you like malyshnya, sekretiki what is you." One of the boys immediately split "Yes, we want to go look at porn."'
+
+							act 'Move away':gt $loc, $metka
+							act 'Take me':
+								cls
+								gs'stat'
+
+								'You asked, what would you also have to look porn. Guys bit posmuschalis, but agreed.'
+
+								act 'Going to watch porn':minut += 5 & gt'seeporn'
+							end
+						else
+							act 'Move away':gt $loc, $metka
+						end
+					end
+				end
+				if seepornofut >= 1:
+					'Guys poshushukavshis together tell you "Sveta, go look porn?"'
+
+					act 'Going to watch porn':minut += 5 & gt'seeporn'
+				end
+				act 'Move away':gt $loc, $metka
+			end
+		end
+	end
+end
+
+if $loc = 'sitrPar' and indorf = 0 and nude = 0 and brothersawpirsF=0 and father_go = 1 and brother > 85 and hour >= 18 and hour < 21 and pirsF > 0:
+	act 'Show nipple piercings':
+		cls
+		gs'stat'
+		minut+=1
+		horny+=3
+		brothersawpirsF=1
+		brother += 3
+		'<center><img src="images/qwest/alter/placer/9vh2v.jpg" ></center>'
+		'- Look, what I have, - you come to Kolka closer and bare the chest, showing brother decoration in your nipple,- do not be shy, you can touch.
+		Brother, Stunned your offer, hesitantly touches to piercing your nipple, causing laid moan.'
+		if  brotherSex = 0:
+			'Kolka abruptly removed his hand and apologized for his rudeness. You have no choice, how confident, it`s not his fault, and hide the chest.'
+		else
+			'Seeing, that manipulation of the nipple bring you pleasure, Kolka starts insistent play with piercings, sometimes squeezing breasts exposed. 
+After playing, He lets go of your breast, and says,, that such decorations he likes'
+		end
+		horny+=10
+		act '<B>Move away</B>':gt $loc, $metka
+	end
+end
+
+if $loc = 'sitrPar' and indorf = 0 and nude=1 and pirsF>0 and brothersawpirsF =0:
+	if  brotherSex = 0:
+		if brother>=70:
+			'- Suits you, - brother, wink, indicates your pierced nipples.'
+			brother += 1
+			brothersawpirsF=1
+			act '<B>Move away</B>':gt 'sitrPar'
+			exit
+		else
+			'-I do not understand, why so a mock,- Kolka noticed your nipples pierced.'
+			brothersawpirsF=1
+			act '<B>Move away</B>':gt 'sitrPar'
+			exit
+		end
+	else
+		if father_go = 1 and hour >= 18 and hour < 21:	
+			'-How lovely, - Kolka playing with your nipples pierced'
+			brother += 3
+			brothersawpirsF=1
+			horny+=10
+			act '<B>Move away</B>':gt 'sitrPar'
+			exit
+		elseif father_go = 0 and hour >= 18 and hour < 21:
+			'-Beauty, - Kolka quietly puts his hand on your chest and strokes punctured nipple.'
+			brother += 3
+			brothersawpirsF=1
+			horny+=10
+			act '<B>Move away</B>':gt 'sitrPar'
+			exit
+		end
+	end
+end
+
+dynamic $brotherSexCount
+
+if $loc = 'sitrPar' and indorf = 0 and brotherSexCount > 0 and brotherDay = day:
+	brotherRand = rand(0,10)
+	if hour >= 5 and hour < 7 and brotherSex > 0 and brotherMorningSex ! day and brotherRand < 2:
+		'Going up in the morning to the sleeping brother, you saw the mound under the blanket.'
+		act 'On-quiet morning to solve the problem of his brother':
+			cls
+			minut += 5
+			horny += 10
+			bj += 1
+			cumlip += 1
+			swallow += 1
+			brotherSex += 1
+			brotherSexCount -= 1
+			brotherMorningSex = day
+			gs'stat'
+
+			'<center><img src="images/qwest/alexey/bj6.jpg"></center>'
+			'Approaching a brother, you gently pulled back the covers and began to suck it <<brotherDick>> inch dick. After a few minutes, he moaned softly in his sleep, his cock jerked and jet of sperm flew between your lips into your mouth.'
+			'Your mouth quickly filled with warm sperm and you feel its sharp taste.'			
+			'Swallowing semen, you gently trimmed blanket and, looking at a slight smile sleeping brother, gone.'
+			
+			act 'Move away':gt $loc, $metka
+		end
+	end
+	
+	if hour >= 21 and hour < 24 and brotherSex > 0 and brotherNightSex ! day:
+		'When you come closer, he suddenly opened his eyes and said,:'
+		if sub > 0 or (evgenQW >= 4 and BjBeerQW>=3):
+			'"Sveta, help me sleep." Then he threw a blanket, and you saw him strut.'
+			brotherSexCount -= 1
+			brotherNightSex = day
+			
+			dynamic $brotherSexStart
+		else
+			'"Light, I did not get to sleep, can you tell me how-the help?" Then he looks pointed mound under the blanket.'
+			cla
+			act 'Help him':
+				'"Yes, I know, what to do" Then he pulled back the blanket and saw him strut.'
+				brotherSexCount -= 1
+				brotherNightSex = day
+		
+				dynamic $brotherSexStart
+			end
+			act 'Let him solve his problem':
+				'"I`m not going to help with this!" Then you turned around and left.'
+				cla
+				act 'Escape':gt $loc
+			end
+		end
+	end
+
+	if father_go = 1 and hour >= 18 and hour < 21 and brotherSex > 0 and brotherEvSex ! day:
+		'When you come closer, He turned to you and said,:'
+		if sub > 0 or (evgenQW >= 4 and BjBeerQW>=3):
+			'"Sveta, Come on you-quiet here you will work, to ancestors have not heard." Then he dropped his pants, and you have seen his hard <<brotherDick>> inch dick.'
+			brotherSexCount -= 1
+			brotherEvSex = day
+			
+			dynamic $brotherSexStart
+		else
+			'"Light, I`ve got a problem, can you tell me how-something to help solve it?" Then he looks pointed hump in his pants.'
+			cla
+			act 'Help him':
+				'"I know, which will help solve this problem, only-quiet and take your pants off." Once your words Kolka smiled and took off his pants, exposing his standing <<brotherDick>> inch dick.'
+				brotherSexCount -= 1
+				brotherEvSex = day
+		
+				dynamic $brotherSexStart
+			end
+			act 'Let him solve his problem':
+				'"I can not help" Then you turned around and left.'
+				cla
+				act 'Escape':gt $loc
+			end
+		end
+	end
+end
+
+$brotherSexStart = {
+	cla
+	if brotherSex = 0:brotherSex = 1 & guy += 1
+	act 'Jerk brother':
+		cls
+		minut += 5
+		dick = brotherDick
+		hj += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/artom/hj.jpg"></center>'
+		'You took it hard and hot cock in his hand and began to masturbate him. Finally brother strangled groan and you saw how his cock flies sperm.'
+
+		dynamic $brotherSexEnd
+	end
+	if brotherSex > 4:
+		act 'Suck my brother':
+			cls
+			minut += 5
+			horny += 10
+			bj += 1
+			dick = brotherDick
+			gs'stat'
+
+			'<center><img src="images/nigma/gor/ш0,'+rand(0,6)+'.gif"></center>'
+			'You sit down in front of bratm and brought his face to his cock.'
+
+			dynamic $dinrandbj
+
+			'Soon groaned Kolka "Svetik, I`ll finish."'
+
+			act 'Suck on':
+				cls
+				minut += 5
+				horny += 10
+				cumlip += 1
+				swallow += 1
+				gs'stat'
+
+				'<center><img src="images/nigma/gor/с0,'+rand(0,11)+'.gif"></center>'
+
+				dynamic $dinrandswallow
+
+				dynamic $brotherSexEnd
+			end
+			act 'Remove from the mouth':
+				cls
+				minut += 5
+				horny += 10
+				cumface += 1
+				facial += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/Ev/cocksuckerFacial.jpg"></center>'
+				'You took out his dick and then your face hit the hot jet of sperm, then another and another, and finally stopped brother cum on your face.'
+
+				dynamic $brotherSexEnd
+			end
+			if brotherSex > 6:
+				act 'Surrender':
+					if brotherSex > 10: brotherSex = 10
+					cls
+					minut += 5
+					horny += 10
+					$boy = 'Kolka'
+					dick = brotherDick
+					silavag = 0
+
+					gs'stat'
+
+					'<center><img src="images/nigma/gor/ш1,'+rand(0,11)+'.gif"></center>'
+					'You lay on the sofa and brother lay on you from above.'
+
+					dynamic $sexstart
+					dynamic $sexstart2
+					dynamic $sexcum
+
+					dynamic $brotherSexEnd
+				end
+			end
+		end
+	end
+	if brotherSex > 6:
+		act 'Gave his brother':
+			if brotherSex > 10: brotherSex = 10
+			cls
+			minut += 5
+			horny += 10
+			$boy = 'Kolka'
+			dick = brotherDick
+			silavag = 0
+
+			gs'stat'
+
+			'<center><img src="images/nigma/gor/ш1,'+rand(0,11)+'.gif"></center>'
+			'You lay on the sofa and brother lay on you from above.'
+
+			dynamic $sexstart
+			dynamic $sexstart2
+			dynamic $sexcum
+
+			dynamic $brotherSexEnd
+		end
+	end
+}
+
+$brotherSexEnd = {
+	brotherSex += 1
+	if sub > 0 or (evgenQW >= 4 and BjBeerQW>=3):
+		if $loc = 'sitrPar' and father_go = 1 and hour >= 18 and hour < 21:
+			minut += 15
+	
+			gs'stat'
+	
+			'Kolka gave you a break, and then saying,: "Good for, Sveta, good job, And now let`s wali!", She continued to go about their business.'
+			act 'Escape':gt $loc
+		elseif $loc = 'sitrPar':
+			minut += 15
+	
+			gs'stat'
+	
+			'Kolka gave you a break, and then saying,: "Good for, Sveta, well-tried, And now let`s wali!", asleep.'
+			act 'Escape':gt $loc
+		else
+			'Kolka said: "Good for, Sveta, well-tried, And now let`s wali!", gone.'
+		end
+	else
+		if $loc = 'sitrPar' and father_go = 1 and hour >= 18 and hour < 21:
+			minut += 15
+	
+			gs'stat'
+	
+			'Kolka gave you a break, and then saying,: "Many thanks, Sveta, You helped me a lot", She continued to go about their business.'
+			act 'Escape':gt $loc
+		elseif $loc = 'sitrPar':
+			minut += 15
+	
+			gs'stat'
+	
+			'Kolka gave you a break, and then saying,: "Thank you, Svetik, You rescued me very, Now I can finally sleep.", asleep.'
+			act 'Escape':gt $loc
+		else
+			'Kolka said: "Thanks for all, Sis. Well, I went.", gone.'
+		end
+	end
+}
+
+$brotherSexCount = {
+	if brotherDay = day - 1 and brotherSexCount > 0:brotherSexCount = 5
+	
+	if brotherMorningSex < day or brotherMorningSex > day:brotherMorningSex = day - 1
+	if brotherEvSex < day or brotherEvSex > day:brotherEvSex = day - 1
+	if brotherNightSex < day or brotherNightSex > day:brotherNightSex = day - 1
+	
+	if brotherSexCount < 1:
+		brotherDay = day + 1
+		brotherSexCount = 5
+	else
+		brotherDay = day
+	end
+	if month = 1 or month = 3 or month = 5 or month = 7 or month = 8 or month = 10 or month = 12:
+		!31
+		if brotherDay > 31:brotherDay -= 31
+	elseif month = 2:
+		!28
+		if brotherDay > 28:brotherDay -= 28
+	else
+		!30
+		if brotherDay > 30:brotherDay -= 30
+	end
+
+	if brotherDay = 0:brotherDay = 1
+
+}
+!end
+--- brother ---------------------------------
+

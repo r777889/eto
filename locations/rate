@@ -1,0 +1,93 @@
+# rate
+clr
+cla
+minut = minut + 5
+kh = 0
+chnch = 0
+mb = 0
+du = 0
+series = 0
+Chi = 100
+gs'stat'
+
+'<right><img src="images/casino/stavkaru.jpg"></right>'
+'What will put?'
+
+act 'Red / black':
+	cla
+	act 'Red':
+		kh = 1
+		gt'RESULTS'
+	end
+	act 'Black':
+		kh = 2
+		gt'RESULTS'
+	end
+end
+act 'Even / Odd':
+cla
+	act 'Even':
+		chnch = 1
+		gt'RESULTS'
+	end
+	act 'Odd':
+		chnch = 2
+		gt'RESULTS'
+	end
+end
+act 'Small / Big':
+cla
+	act 'Small: 1-18':
+		mb = 1
+		gt'RESULTS'
+	end
+	act 'Big: 19-36':
+		mb = 2
+		gt'RESULTS'
+	end
+end
+act 'Dozen':
+cla
+	act 'The first dozen: 1-12':
+		du = 1
+		gt'RESULTS'
+	end
+	act 'Second dozen: 13-24':
+		du = 2
+		gt'RESULTS'
+	end
+	act 'Third dozen: 25-36':
+		du = 3
+		gt'RESULTS'
+	end
+end
+act 'Series':
+cla
+	act 'First row: 1,4,7,10,13,16,19,22,25,28,31,34':
+		series = 1
+		gt'RESULTS'
+	end
+	act 'Second row: 2,5,8,11,14,17,20,23,26,29,32,35':
+		series = 2
+		gt'RESULTS'
+	end
+	act 'Third row: 3,6,9,12,15,18,21,24,27,30,33,36':
+		series = 3
+		gt'RESULTS'
+	end
+end
+act 'Number':
+cla
+	Chi = input 'Enter a number from 0-36'
+	if Chi < 0 and Chi > 36:
+		msg 'It is said that it was only on the 0 to 36'
+		gt'rate'
+	end
+
+	gt'RESULTS'
+end
+act 'Nothing':
+	gt'amrul'
+end
+--- rate ---------------------------------
+

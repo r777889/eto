@@ -1,0 +1,143 @@
+# sexorg
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	minut += 30
+	sweat += 1
+	picrand = RAND(0,1)
+	gs'stat'
+	gt'sexorg','var'
+end
+
+if $ARGS[0] = 'var':
+	sexorgrand = RAND(0,6)
+	if sexorgrand = 0:
+		cla
+		*clr
+		horny += 10
+		sexvar += 1
+
+		if orsxbj = 0:
+			bj += 1
+			orsxbj = 1
+		end
+
+		'<center><img src="images/img/sexorg/minet11.jpg"></center>'
+		'You two suck his dick, the turns, then together lick his dildo, languages ​​in contact.'
+
+		act 'Another':gt'sexorg','var'
+
+		if sexvar >= 3:act 'Finish':gt'sexorg','end'
+	elseif sexorgrand = 1:
+		cla
+		*clr
+		horny += 10
+		sexvar += 1
+
+		'<center><img src="images/img/sexorg/vag11.jpg"></center>'
+		'While she is enjoying a member in her pussy, you, too, find yourself an interesting exercise.'
+
+		act 'Another':gt'sexorg','var'
+		if sexvar >= 3:act 'Finish':gt'sexorg','end'
+	elseif sexorgrand = 2:
+		cla
+		*clr
+		horny += 10
+		sexvar += 1
+
+		if orsxsex = 0:
+			sex += 1
+			orsxsex = 1
+		end
+
+		'<center><img src="images/img/sexorg/uvag11.jpg"></center>'
+		'It is part of you, his penis moves inside your pussy bringing you pleasure, at that time she did not find confused what to do.'
+
+		act 'Another':gt'sexorg','var'
+		if sexvar >= 3:act 'Finish':gt'sexorg','end'
+	elseif sexorgrand = 3:
+		cla
+		*clr
+		horny += 10
+		sexvar += 1
+
+		'<center><img src="images/img/sexorg/anal11.jpg"></center>'
+		'Do you like the look of his cock in her ass and while she sweetly yells trying to absorb all of it, you did not lose too,.'
+
+		act 'Another':gt'sexorg','var'
+		if sexvar >= 3:act 'Finish':gt'sexorg','end'
+	elseif sexorgrand = 4:
+		cla
+		*clr
+		horny += 10
+
+		if orsxanal = 0:
+			anal += 1
+			pdsxanal = 1
+		end
+
+		'<center><img src="images/img/sexorg/uanal11.jpg"></center>'
+		'When it comes to you in the ass you a little sick, but soon the pain goes away and its place is taken by a pleasant sensation, until his move dildo in your ass it is not sitting idly by.'
+
+		act 'Another':gt'sexorg','var'
+		if sexvar >= 3:act 'Finish':gt'sexorg','end'
+	elseif sexorgrand = 5:
+		cla
+		*clr
+		horny += 10
+
+		if orsxbj = 0:
+			bj += 1
+			orsxbj = 1
+		end
+
+		if orsxsex = 0:
+			sex += 1
+			orsxsex = 1
+		end
+
+		if orsxanal = 0:
+			anal += 1
+			orsxanal = 1
+		end
+
+		'<center><img src="images/img/sexorg/udp11.jpg"></center>'
+		'The two men are part of you and you moan with pleasure feeling both dildo moving inside.'
+
+		act 'Another':gt'sexorg','var'
+		if sexvar >= 3:act 'Finish':gt'sexorg','end'
+	elseif sexorgrand = 6:
+		cla
+		*clr
+		horny += 10
+		sexvar += 1
+
+		'<center><img src="images/img/sexorg/dp11.jpg"></center>'
+		'When they are in it together you get a little jealous seeing how she enjoys.'
+
+		act 'Another':gt'sexorg','var'
+		if sexvar >= 3:act 'Finish':gt'sexorg','end'
+	end
+end
+
+if $ARGS[0] = 'end':
+	cla
+	*clr
+	orsxbj = 0
+	orsxsex = 0
+	orsxanal = 0
+	sexvar = 0
+	cumlip = 1
+
+	if horny >= 80:
+		horny = 0
+		orgasm += 1
+	end
+
+	'<center><img src="images/img/sexorg/cum11.jpg"></center>'
+	'They finished, and you lick each other sperm.'
+
+	act 'Escape':gt'<<$sexloc>>','start'
+end
+--- sexorg ---------------------------------
+

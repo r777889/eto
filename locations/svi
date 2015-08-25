@@ -1,0 +1,579 @@
+# svi
+if $ARGS[0] = 'poor':
+	minut = minut + 20
+
+	if Venera >= 3:
+		bfA = 0
+
+		'<<$boyA>> You see signs of venereal disease and left you.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if sweat > 1:
+		!sweating
+		bfA = bfA - 1
+
+		if harakBoyA = 0:'<<$boyA>> It tells you, he appeared urgent business.'
+		if harakBoyA = 1:'<<$boyA>> She wrinkles her nose in disgust and tells you, he appeared urgent business.'
+		if harakBoyA = 2:'<<$boyA>> It tells you, you would do well to wash.'
+		if harakBoyA = 3:'<<$boyA>> It tells you, that she appeared urgent business.'
+		if harakBoyA = 4:'<<$boyA>> She wrinkles her nose in disgust and tells you, that she appeared urgent business.'
+		if harakBoyA = 5:'<<$boyA>> It tells you, you would do well to wash.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if vatnik = 2:
+		!quilted jacket
+		bfA = bfA - 1
+
+		if harakBoyA = 0:'<<$boyA>> It tells you, he appeared urgent business.'
+		if harakBoyA = 1:'<<$boyA>> scornfully looks at you and tells you, he appeared urgent business.'
+		if harakBoyA = 2:'<<$boyA>> It tells you, in this rags you`re like a scarecrow.'
+		if harakBoyA = 3:'<<$boyA>> It tells you, that she appeared urgent business.'
+		if harakBoyA = 4:'<<$boyA>> scornfully looks at you and tells you, that she appeared urgent business.'
+		if harakBoyA = 5:'<<$boyA>> It tells you, in this rags you`re like a scarecrow.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if harakBoyA > 0 and izvrat = 0 and (cumface > 0 or cumlip > 0):
+		bfA = 0
+
+		'<<$boyA>> you saw the traces of sperm. He called you slut and broke off relations with you.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if daya < 10 and boyonceA = 0:
+		!candy buketny period
+		vstrand = RAND(0,2)
+		if vstrand = 0:
+			'<<$boyA>> It offers a walk in the park.'
+
+			act 'Walk in the park':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'You walk in the park with a guy. <<$boyA>> telling stories and jokes hunted.'
+
+				act 'Invite to himself':
+					cla
+					if dayA < 3:bfA = bfA - 1
+					gt'svidan','kvartA'
+				end
+				act 'Say goodbye and go home':
+					cla
+					bfA = bfA + 1
+					dynamic $brodilr
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		elseif vstrand = 1:
+			'<<$boyA>> It offers to go to the cinema.'
+
+			act 'Go to the cinema':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'You went to the cinema on a new film. <<$boyA>> I hug you.'
+
+				act 'Hug his hand':
+					cla
+					bfA = bfA + 1
+
+					'You watch a movie hugging Man`s hand. Finally, the film ends.'
+
+					act 'Invite to himself':
+						cla
+						if dayA < 3:bfA = bfA - 1
+						gt'svidan','kvartA'
+					end
+					act 'Say goodbye and go home':
+						cla
+						bfA = bfA + 1
+						dynamic $brodilr
+					end
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		elseif vstrand = 2:
+			'<<$boyA>> It offers to drink in the entrance pivasika.'
+
+			act 'Drink beer':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'<<$boyA>> pivasika bought and crackers and you went with him to the staircase, where drinking and fun chatting.'
+
+				act 'Invite to himself':
+					cla
+					if dayA < 3:bfA = bfA - 1
+					gt'svidan','kvartA'
+				end
+				act 'Say goodbye and go home':
+					cla
+					bfA = bfA + 1
+					dynamic $brodilr
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		end
+	elseif daya >= 10 and boyonceA = 0:
+		'<<$boyA>> speaks, that he was a grown man, and he was not satisfied with a platonic relationship.'
+
+		act 'Parting':
+			cla
+			bfA = 0
+			dynamic $brodilr
+		end
+		act 'Agree to have sex':
+			cla
+			*clr
+			minut = minut + 20
+
+			'You agreed to have sex. <<$boyA>> delighted.'
+
+			act 'Go to your apartment':gt'svidan','kvartA'
+			act 'Go into the bushes':gt'svidan','kustA'
+		end
+
+		exit
+	end
+
+	if dayA > 15:gs'boylove','haer'
+	if dayA > 30:gs'boylove','figure'
+	if dayA > 60:gs'boylove','tits'
+
+	if boyonceA > 0:
+		'<<$boyA>> It offers to hang out in the stairwell with pivasikom.'
+
+		act 'Hang':
+			cla
+			minut = minut + 60
+			fat = fat + 1
+			bfA = bfA + 1
+
+			'You drank beer in the entrance with her boyfriend. <<$boyA>> I hugged you and said,, he wants you.'
+
+			act 'Go to your apartment':gt'svidan','kvartA'
+			act 'Go into the bushes':gt'svidan','kustA'
+		end
+		act 'Takeout':
+			cla
+			bfA = bfA - 1
+			gt'street'
+		end
+	end
+end
+
+if $ARGS[0] = 'norm':
+	minut = minut + 20
+
+	if Venera >= 3:
+		bfA = 0
+
+		'<<$boyA>> You see signs of venereal disease and left you.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if sweat > 1:
+		!sweating
+		bfA = bfA - 1
+
+		if harakBoyA = 0:'<<$boyA>> It tells you, he appeared urgent business.'
+		if harakBoyA = 1:'<<$boyA>> She wrinkles her nose in disgust and tells you, he appeared urgent business.'
+		if harakBoyA = 2:'<<$boyA>> It tells you, you would do well to wash.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if vatnik = 2:
+		!quilted jacket
+		bfA = bfA - 1
+
+		if harakBoyA = 0:'<<$boyA>> It tells you, he appeared urgent business.'
+		if harakBoyA = 1:'<<$boyA>> scornfully looks at you and tells you, he appeared urgent business.'
+		if harakBoyA = 2:'<<$boyA>> It tells you, in this rags you`re like a scarecrow.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if harakBoyA >0 and izvrat = 0 and (cumface > 0 or cumlip > 0):
+		bfA = 0
+
+		'<<$boyA>> you saw the traces of sperm. He called you slut and broke off relations with you.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if daya < 10 and boyonceA = 0:
+		!candy buketny period
+		vstrand = RAND(0,2)
+		if vstrand = 0:
+			'<<$boyA>> It offers to go to the cafe.'
+
+			act 'Go to the cafe':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'You went to a cafe with a guy. <<$boyA>> telling stories and jokes hunted.'
+
+				act 'Invite to himself':
+					cla
+					if dayA < 3:bfA = bfA - 1
+					gt'svidan','kvartA'
+				end
+				act 'Say goodbye and go home':
+					cla
+					bfA = bfA + 1
+					dynamic $brodilr
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		elseif vstrand = 1:
+			'<<$boyA>> It offers to go to the cinema.'
+			act 'Go to the cinema':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'You went to the cinema on a new film. <<$boyA>> I hug you.'
+
+				act 'Hug his hand':
+					cla
+					bfA = bfA + 1
+
+					'You watch a movie hugging Man`s hand. Finally, the film ends.'
+
+					act 'Invite to himself':
+						cla
+						if dayA < 3:bfA = bfA - 1
+						gt'svidan','kvartA'
+					end
+					act 'Say goodbye and go home':
+						cla
+						bfA = bfA + 1
+						dynamic $brodilr
+					end
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		elseif vstrand = 2:
+			'<<$boyA>> It offers a walk.'
+
+			act 'Walk':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'<<$boyA>> I took you by the arm and you`re walking down the street talking.'
+
+				act 'Invite to himself':
+					cla
+					if dayA < 3:bfA = bfA - 1
+					gt'svidan','kvartA'
+				end
+				act 'Say goodbye and go home':
+					cla
+					bfA = bfA + 1
+					dynamic $brodilr
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		end
+	elseif daya >= 10 and boyonceA = 0:
+		'<<$boyA>> speaks, that he was a grown man, and he was not satisfied with a platonic relationship.'
+
+		act 'Parting':
+			cla
+			bfA = 0
+			dynamic $brodilr
+		end
+		act 'Agree to have sex':
+			cla
+			*clr
+			minut = minut + 20
+
+			'You agreed to have sex. <<$boyA>> delighted.'
+
+			act 'Go to your apartment':gt'svidan','kvartA'
+			act 'Go to his car':gt'svidan','carA'
+		end
+
+		exit
+	end
+
+	if dayA > 12 and skin < 2:bfA = bfA - 1
+	if dayA > 12:gs'boylove','haer'
+	if dayA > 24:gs'boylove','figure'
+	if dayA > 48:gs'boylove','tits'
+	if dayA > 22 and glaraz < 1:bfA = bfA - 1
+	if dayA > 40 and lip < 1:bfA = bfA - 1
+
+	if boyonceA > 0:
+		'<<$boyA>> offers sit in a cafe.'
+
+		act 'In the cafe':
+			cla
+			minut = minut + 60
+			fat = fat + 1
+			bfA = bfA + 1
+
+			'You`ve come to the cafe, <<$boyA>> I ordered a full table and you were talking and having fun. <<$boyA>> I hugged you and said,, he wants you.'
+
+			act 'Go to your apartment':gt'svidan','kvartA'
+			act 'Go to his car':gt'svidan','carA'
+		end
+		act 'Takeout':
+			cla
+			bfA = bfA - 1
+			gt'street'
+		end
+	end
+end
+
+if $ARGS[0] = 'reach':
+	minut = minut + 20
+
+	if Venera >= 3:
+		bfA = 0
+
+		'<<$boyA>> You see signs of venereal disease and left you.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if sweat > 1:
+		!sweating
+		bfA = bfA - 1
+
+		if harakBoyA = 0:'<<$boyA>> It tells you, he appeared urgent business.'
+		if harakBoyA = 1:'<<$boyA>> She wrinkles her nose in disgust and tells you, he appeared urgent business.'
+		if harakBoyA = 2:'<<$boyA>> It tells you, you would do well to wash.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if vatnik = 2:
+		!quilted jacket
+		bfA = bfA - 1
+
+		if harakBoyA = 0:'<<$boyA>> It tells you, he appeared urgent business.'
+		if harakBoyA = 1:'<<$boyA>> scornfully looks at you and tells you, he appeared urgent business.'
+		if harakBoyA = 2:'<<$boyA>> It tells you, in this rags you`re like a scarecrow.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if harakBoyA > 0 and izvrat = 0 and (cumface > 0 or cumlip > 0):
+		bfA = 0
+
+		'<<$boyA>> you saw the traces of sperm. He called you slut and broke off relations with you.'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if dayA > 5 and skin < 3:bfA = bfA - 1
+	if dayA > 10:gs'boylove','haer'
+	if dayA > 20:gs'boylove','figure'
+	if dayA > 30:gs'boylove','tits'
+	if dayA > 10 and glaraz < 2:bfA = bfA - 1
+	if dayA > 6 and lip < 2:bfA = bfA - 1
+	if dayA > 8 and resnic < 1:bfA = bfA - 1
+
+	if daya < 10 and boyonceA = 0:
+		!candy buketny period
+		vstrand = RAND(0,2)
+		if vstrand = 0:
+			'<<$boyA>> It offers to go to the cafe.'
+
+			act 'Go to the cafe':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'You went to a cafe with a guy. <<$boyA>> telling stories and jokes hunted.'
+
+				act 'Invite to himself':
+					cla
+					if dayA < 3:bfA = bfA - 1
+					gt'svidan','kvartA'
+				end
+				act 'Say goodbye and go home':
+					cla
+					bfA = bfA + 1
+					dynamic $brodilr
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		elseif vstrand = 1:
+			'<<$boyA>> It offers to go to the cinema.'
+
+			act 'Go to the cinema':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'You went to the cinema on a new film. <<$boyA>> I hug you.'
+
+				act 'Hug his hand':
+					cla
+					bfA = bfA + 1
+
+					'You watch a movie hugging Man`s hand. Finally, the film ends.'
+
+					act 'Invite to himself':
+						cla
+						if dayA < 3:bfA = bfA - 1
+						gt'svidan','kvartA'
+					end
+					act 'Say goodbye and go home':
+						cla
+						bfA = bfA + 1
+						dynamic $brodilr
+					end
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		elseif vstrand = 2:
+			'<<$boyA>> offers go to a restaurant.'
+
+			act 'Go to a restaurant':
+				cla
+				minut = minut + 60
+				fat = fat + 1
+				bfA = bfA + 1
+
+				'<<$boyA>> I brought you to the restaurant. There is a waiter quickly covered the table and you were enjoying a meal, wine and socializing'
+
+				act 'Invite to himself':
+					cla
+					if dayA < 3:bfA = bfA - 1
+					gt'svidan','kvartA'
+				end
+				act 'Say goodbye and go home':
+					cla
+					bfA = bfA + 1
+					dynamic $brodilr
+				end
+			end
+			act 'Takeout':
+				cla
+				bfA = bfA - 1
+				dynamic $brodilr
+			end
+		end
+	elseif daya >= 10 and boyonceA = 0:
+		'<<$boyA>> speaks, that he was a grown man, and he was not satisfied with a platonic relationship.'
+
+		act 'Parting':
+			cla
+			bfA = 0
+			dynamic $brodilr
+		end
+		act 'Agree to have sex':
+			cla
+			*clr
+			minut = minut + 20
+
+			'You agreed to have sex. <<$boyA>> delighted.'
+
+			act 'Go to your apartment':gt'svidan','kvartA'
+			act 'Go to him':gt'svidan','hisA'
+		end
+
+		exit
+	elseif boyonceA > 0:
+		'<<$boyA>> offers sit in a cafe.'
+
+		act 'In the cafe':
+			cla
+			minut = minut + 60
+			fat = fat + 1
+			bfA = bfA + 1
+
+			'You`ve come to the cafe, <<$boyA>> I ordered a full table and you were talking and having fun. <<$boyA>> I hugged you and said,, he wants you.'
+
+			act 'Go to your apartment':gt'svidan','kvartA'
+			act 'Go to it':gt'svidan','hisA'
+		end
+		act 'Takeout':
+			cla
+			bfA = bfA - 1
+			dynamic $brodilr
+		end
+	end
+end
+--- svi ---------------------------------
+

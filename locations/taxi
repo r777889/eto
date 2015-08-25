@@ -1,0 +1,44 @@
+# taxi
+act 'Taxi':
+	cla
+	*clr
+	minut += 5
+
+	'<center><img src="images/pic/taxi1.jpg"></center>'
+	'You caught a passing taksishku.'
+	'Fare 250 RUB.'
+
+	if $loc ! 'street':
+		act 'Go to the sleeping area':
+			$loc = 'street'
+			dynamic $taxi
+		end
+	end
+
+	if $loc ! 'down':
+		act 'Go to the center':
+			$loc = 'down'
+			dynamic $taxi
+		end
+	end
+
+	if $loc ! 'Nord':
+		act 'Go to the Northern region':
+			$loc = 'Nord'
+			dynamic $taxi
+		end
+	end
+	
+	if $loc ! 'BDSM_Club' and BDSMClub = 1 and BDSMday ! daystart:
+		act 'Go to BDSM-club':
+			$loc = 'BDSM_Club'
+			$metka = 'start'
+			BDSMtaxi = 1
+			dynamic $taxi
+		end
+	end
+
+	act 'Takeout':gt $loc,$metka
+end
+--- taxi ---------------------------------
+

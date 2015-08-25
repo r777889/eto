@@ -1,0 +1,388 @@
+# EvgopBuh
+$din_gop_double_bj = {
+	act 'Open mouth':
+		cls
+		minut += 5
+		horny += 10
+		bj += 2
+		guy += 1
+		if boynumBlock = 0:guy += 1
+		if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+		bmBJ[Tboynum] += 1
+		bmGANG[Tboynum] += 1
+		gs'stat'
+
+		if rand1<10:'<center><img src="images/qwest/alter/Ev/gop6.jpg"></center>'
+		if rand1>=10:'<center><img src="images/nigma/gor/д0,'+rand(5,10)+'.jpg"></center>'
+		'You obediently opened her mouth and the guys once you have inserted two terms in the mouth, stretching it to the limit. You started to suck two hard and hot cock turns.'
+
+		act 'Further':
+			cls
+			minut += 5
+			horny += 10
+			cumlip += 2
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/Ev/gop7.jpg"></center>'
+			'Suddenly, one of the guys started to cum in your mouth, I followed immediately began to finish second. One of the guys grabbed you by the head without letting you remove the face. Boys nakonchal a full mouth and drew their members from your mouth. Leaving you sitting on a stump with a mouth full of sperm.'
+
+			dynamic $din_gop_end
+		end
+	end
+}
+
+$din_gop_end = {
+	act 'Further':
+		cls
+		minut += 5
+		cumfrot += 1
+		manna -= 30
+		if GorSlut < 3:GorSlut = 3
+		bmGossip[Tboynum] = 3
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/gop8.jpg"></center>'
+		'You sit stunned occurring on the stump and out of your mouth runs fine, stretching jet of sperm. You notice a sluggish, that part of the sperm gets into your clothes on. Men poured a glass of vodka and drank again. A hemmed looking at you "Cool huesoska you found. Not bad, she shuffled her lips me elde." Second laughed "Check, vaflersha sitting relishing struhnyu." And another said, thoughtfully "It is necessary to declare a kid, so as not to zashkvarilis vaflersha."'
+
+		act 'Escape':gt'gdk'
+	end
+}
+
+$din_gop_end2 = {
+	act 'Further':
+		cls
+		minut += 5
+		cumfrot += 1
+		manna -= 30
+		if GorSlut < 4:GorSlut = 4
+		bmGossip[Tboynum] = 4
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/gop8.jpg"></center>'
+		'Your legs are tired and podgibayutsya, you do not stand up and sit down on the ground, from your mouth runs fine, stretching jet of sperm. You notice a sluggish, that part of the sperm gets into your clothes on. Men poured a glass of vodka and drank again. A hemmed looking at you "Cool pacifier you have found. Not bad, she shuffled her lips me elde." Second laughed "Check, slut is still a can not come." And another said, thoughtfully "It is necessary to declare a kid, so as not to zashkvarilis slut."'
+
+		act 'Escape':gt'gdk'
+	end
+}
+
+music_on = 0
+minut += 5
+gs'stat'
+rand1=rand(0,100)
+'<center><img src="images/etogame/dk_night.jpg"></center>'
+
+if GorSlut <= 3:
+	'You went out with a guy from the club he led you for your club. There are already two of his pals booze. On the ground, there was a bottle of vodka and plastic cups. The guy said, "I <<$bname>> this <<$bname2>> and <<$bname3>>." You introduced "I Light." <<$bname2>> I took the bottle and plastic cup. He was drunk, lack of movement poured vodka into a glass, then I handed you a cup.'
+
+	act 'Drink':
+		cls
+		minut += 5
+		alko += 2
+		gs'stat'
+
+		'<center><img src="images/etogame/dk_night.jpg"></center>'
+		'You drink vodka and you have captured the spirit of this booze. <<$bname3>> I took out a piece of candy "On Svetsik, snack." You get stuck in the mouth candy trying to kill the disgusting taste of vodka.'
+
+		if alko < 4:
+			act 'Go back to the club':
+				cls
+				willpower += RAND(0,1)
+				intel += RAND(0,1)
+				gt'gdkin'
+			end
+		end
+
+		act 'Staying with the guys':
+			cls
+			minut += 5
+			horny += 10
+			gs'stat'
+
+			'<center><img src="images/etogame/dk_night.jpg"></center>'
+			'You stayed with the guys. <<$bname>> I came up to you and hug you around the waist. "Svetik, you cool chuvikhi." His hands began to stroke your ass and squeeze it.'
+
+			if dom >= 10:
+				act 'Rebelled "You ohuel something?"':
+					cls
+					minut += 5
+					sub += 1
+					gs'stat'
+
+					'You rebelled ryavknuv boy on Greyhound "You ohuel something?" <<$bname>> even he jerked his hands away from you. You moved away from him a step "So keep your hands to yourself!"'
+
+					act 'Go back to the club':
+						cls
+						willpower += RAND(1,3)
+						intel += RAND(1,3)
+						gt'gdkin'
+					end
+				end
+			end
+
+			act 'Whisper "Do not"':
+				cls
+				minut += 5
+				horny += 10
+				gs'stat'
+
+				if rand1<10:'<center><img src="images/qwest/alter/Ev/gop.jpg"></center>'
+				if rand1>=10 and rand1<30:'<center><img src="images/nigma/gor/publ.pre0,0.gif"></center>'
+				if rand1>=30:'<center><img src="images/nigma/gor/prubl.pre0,'+rand(0,1)+'.jpg"></center>'
+				'<<$bname>> You put on a stump next to the meadow where the guys drink. He unbuttoned his pants and pulled out his standing member. <<$bname>> You said in a floor vote "Come on baby, do not be shy, See how delicious caramel, You can lick."'
+
+				if horny < 75:
+					act 'Go back to the club':
+						cls
+						willpower += RAND(1,3)
+						intel += RAND(1,3)
+						gt'gdkin'
+					end
+				end
+
+				if dom >= 5:
+					act 'Rebelled "You ohuel something?"':
+						cls
+						minut += 5
+						sub += 1
+						gs'stat'
+
+						'You rebelled ryavknuv boy on Greyhound "You ohuel something?" <<$bname>> I did not expect such a reaction from you and confused. You stood up and said with hemp "Stick your stub back panties, patsanchik!"'
+
+						act 'Go back to the club':
+							cls
+							willpower += RAND(1,3)
+							intel += RAND(1,3)
+							gt'gdkin'
+						end
+					end
+				end
+
+				act 'Sitting on a stump':
+					cls
+					minut += 5
+					horny += 10
+					bj += 1
+					if boynumBlock = 0:guy += 1
+					if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+					bmBJ[Tboynum] += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/gop2.jpg"></center>'
+					'You embraced apathy and you sat on a stump looking at a member. <<$bname>> taking you to a member of the hand held him on the lips. You opened your mouth, what would be indignant and immediately his cock slapped his crimson head of your wet tongue. Another second and his cock was in your mouth.'
+
+					act 'Suck':
+						cls
+						minut += 5
+						horny += 10
+						gs'stat'
+
+						if rand1<10:'<center><img src="images/qwest/alter/Ev/gop3.jpg"></center>'
+						if rand1>=10:'<center><img src="images/nigma/gor/publ0,'+rand(0,8)+'.jpg"></center>'
+						'Without even knowing you began to suck hard cock clasping his own <<$liptalk2>>. You closed your eyes trying not to think about, what do you do. Hard and hot cock sliding between your lips, Fill your mouth to the throat.'
+
+						act 'Further':
+							cls
+							minut += 5
+							cumlip += 1
+							water -= 10
+							gs'stat'
+
+							'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+							'Suddenly you in the mouth of a member flew a hot jet of sperm. Your mouth was filled with badly smelling, warm Concha. <<$bname>> Member you took out of his mouth and wiped it on your <<$liptalk2>>. Then he removed his dick in his pants. "Boys, You can use vaflersha, I have already othuesosil."'
+
+							if dom > 0:
+								act 'Rebelled':
+									cls
+									minut += 5
+									dom = 0
+									sub += 1
+									GorSlut = 2
+									gs'stat'
+
+									'You angrily spat at his feet sperm kid. "You ohuel something?" The kid began to ruffle "Shut vaflersha." But you got out of hemp and obmaterili boys.'
+
+									act 'Go back to the club':
+										cls
+										willpower += RAND(0,1)
+										intel += RAND(0,1)
+										gt'gdkin'
+									end
+								end
+							end
+
+							if horny <= 75:
+								act 'Spit sperm':
+									cls
+									minut += 5
+									gs'stat'
+
+									if rand1<10:'<center><img src="images/qwest/alter/Ev/gop5.jpg"></center>'
+									if rand1>=10:'<center><img src="images/nigma/gor/д0,'+rand(0,10)+'.jpg"></center>'
+									'You leaned over and spat at his feet sperm. To you came <<$bname2>> and <<$bname3>>, They got out of his pants and substitute their members for you to face.'
+
+									dynamic $din_gop_double_bj
+								end
+							end
+
+							act 'Swallow cum':
+								cls
+								minut += 5
+								swallow += 1
+								water -= 10
+								gs'stat'
+
+								if rand1<10:'<center><img src="images/qwest/alter/Ev/gop5.jpg"></center>'
+								if rand1>=10:'<center><img src="images/nigma/gor/д0,'+rand(0,10)+'.jpg"></center>'
+								'You swallow semen, feeling her nasty taste in your mouth. To you came <<$bname2>> and <<$bname3>>, They got out of his pants and substitute their members for you to face.'
+
+								dynamic $din_gop_double_bj
+							end
+						end
+					end
+				end
+			end
+			act 'To be silent':
+				cls
+				minut += 5
+				horny += 10
+				gs'stat'
+
+				'<center><img src="images/etogame/dk_night.jpg"></center>'
+				'<<$bname>> I began pulling off your clothes, you drunkenly dangled in his hand and suddenly felt the breeze on his bare ass.'
+
+				act 'Further':
+					cls
+					minut += 5
+					horny += 10
+					sex += 1
+					$boy = $bname
+					if boynumBlock = 0:guy += 1
+					if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+					bmSEX[Tboynum] += 1
+					gs'stat'
+
+					if rand1<10:'<center><img src="images/qwest/alter/Ev/gopd.jpg"></center>'
+					if rand1>=10 and rand1<50:'<center><img src="images/nigma/gor/publ1,'+rand(0,2)+'.gif"></center>'
+					if rand1>=50:'<center><img src="images/nigma/gor/publ1,'+rand(0,6)+'.jpg"></center>'
+					'<<$bname>> bent you and you grabbed hold of the fact that, that would not fall.'
+
+					dynamic $sexstart
+					dynamic $sexstart2
+					dynamic $sexcum
+
+					'The guy put the dick in his pants and said, "Boys, You can use davalkoy."'
+
+					act 'Further':
+						cls
+						minut += 5
+						horny += 10
+						sex += 1
+						guy += 1
+						if boynumBlock = 0:guy += 1
+						if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+						bj += 1
+						cumlip += 1
+						$boy = $bname3
+						bmGANG[Tboynum] += 1
+						gs'stat'
+
+						if rand1<10:'<center><img src="images/qwest/alter/Ev/gopd2.jpg"></center>'
+						if rand1>=10:'<center><img src="images/nigma/gor/д1,'+rand(0,4)+'.jpg"></center>'
+						'<<$bname2>> I came up to you and you saw his naked dick, though you tried to do something, but he grabbed you by the hair and then in your mouth turned his penis. <<$bname3>> I came up to you from behind and you feel his hands on your hips.'
+
+						dynamic $sexstart
+						dynamic $sexstart2
+						dynamic $sexcum
+
+						'You feel like your mouth begins to cock and cum <<$bname2>> tighter keeps your hair.'
+
+						dynamic $din_gop_end2
+					end
+				end
+			end
+		end
+	end
+elseif GorSlut > 3:
+	'You went out with a guy from the club he led you for your club. There are already two of his pals booze. On the ground, there was a bottle of vodka and plastic cups. The guy said, "I <<$bname>> this <<$bname2>> and <<$bname3>>. I am aware of the way, you are the light of local <<$gnikname>>. In short do not pull the rubber, take on canine."'
+
+	$din_gop_slut_triple_bj = {
+		act 'To squat':
+			cls
+			minut += 5
+			horny += 10
+			bj += 3
+			guy += 2
+			if boynumBlock = 0:guy += 1
+			if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+			bmBJ[Tboynum] += 1
+			bmGANG[Tboynum] += 1
+			sub += 1
+			gs'stat'
+
+			if rand1<30:'<center><img src="images/qwest/alter/Ev/gopdbj.jpg"></center>'
+			if rand1>=30:'<center><img src="images/nigma/gor/три0,'+rand(0,1)+'.jpg"></center>'
+			'You dutifully sat on his haunches and the guys took out their members. You wrapped around his dick two fingers and began to masturbate them. The third guy immediately slapped on you <<$liptalk2>> Member. You unclenched his lips and absorbed dick in your mouth hot and humid.'
+
+			act 'Suck':
+				cls
+				minut += 5
+				horny += 10
+				gs'stat'
+
+				if rand1<20:'<center><img src="images/qwest/alter/Ev/gopdbj2.jpg"></center>'
+				if rand1>=20:'<center><img src="images/nigma/gor/три0,'+rand(0,4)+'.gif"></center>'
+				'You have become members take turns sucking and caressing hands those who did not have dicks in your hot mouth. Finally, the guys are already ready to finish.'
+
+				act 'Close your eyes':
+					cls
+					minut += 5
+					horny += 10
+					facial += 1
+					cumface += 3
+					gs'stat'
+
+					if rand1<30:'<center><img src="images/qwest/alter/Ev/gopdbj3.jpg"></center>'
+					if rand1>=30 and rand1<60:'<center><img src="images/nigma/gor/трис0,0.jpg"></center>'
+					if rand1>=60:'<center><img src="images/nigma/gor/триф0,0.gif"></center>'
+					'You close your eyes and put her cheek. Almost immediately, you feel like a hot jet of sperm fall on your face. Soon the boys run out completely cover your face with sperm.'
+
+					act 'Escape':gt'gdk'
+				end
+			end
+		end
+	}
+
+	dynamic $din_gop_slut_triple_bj
+
+	if dom > 0:
+		act 'Takeout':
+			cls
+			manna = 0
+			health -= 10
+			sub += 1
+			gs'stat'
+
+			'You refused and furious guy. "What? You ohuel slut? Yes, I`ll break you now eblische!" After these words, he has hit you in the stomach with his fist. You gasped in pain and doubled over. "What creature? Change your mind? Or you otpizdet and then shove a bottle in the ass?"'
+
+			dynamic $din_gop_slut_triple_bj
+
+			if dom >= 5:
+				act 'Send it':
+					cls
+					manna = 0
+					health -= 10
+					sub += 1
+					zub += 1
+					GorSlut = 2
+					gs'stat'
+
+					'You guys have spat at his feet burning through his eyes "I fuck you in the dick boy." Immediately in my head ringing and you realized that you are lying on the ground. Very much a toothache, You spat on the ground and saw, that you have blood on earth is your tooth, which you have just knocked out. The guy jumped up in a rage to you, but he never dared "I went to dick here, slut."'
+
+					act 'Escape':gt'gdk'
+				end
+			end
+		end
+	end
+end
+--- EvgopBuh ---------------------------------
+

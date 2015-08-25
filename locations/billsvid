@@ -1,0 +1,189 @@
+# billsvid
+minut += 60
+bilrand = 0
+manna += 10
+bilsvidukiy = 0
+bilsvidkiy = 0
+gs'stat'
+
+'<center><b>Billiard room</b></center>'
+'<center><img src="images/img/bilsvid/0.jpg"></center>'
+'You and <<$telsob>> We rented a booth'
+
+act 'Play':
+	if $telsob = 'Alla':
+		alla += 1
+
+		if alla >= 20:
+			bilrand = RAND(0,10)
+			if bilrand > 0 and bilrand < 3:gt'billsvid','1'
+			if bilrand > 2 and bilrand < 5:gt'billsvid','2'
+			if bilrand = 0 or bilrand > 4:gt'billsvid','3'
+		elseif alla < 20:
+			gt'billsvid','3'
+		end
+	elseif $telsob = 'Masha':
+		masha += 1
+
+		if masha >= 20:
+			bilrand = RAND(0,10)
+			if bilrand > 0 and bilrand < 3:gt'billsvid','1'
+			if bilrand > 2 and bilrand < 5:gt'billsvid','2'
+			if bilrand = 0 or bilrand > 4:gt'billsvid','3'
+		elseif masha < 20:
+			gt'billsvid','3'
+		end
+	elseif $telsob = 'Katya':
+		kat += 1
+
+		if kat >= 20:
+			bilrand = RAND(0,10)
+			if bilrand > 0 and bilrand < 3:gt'billsvid','1'
+			if bilrand > 2 and bilrand < 5:gt'billsvid','2'
+			if bilrand = 0 or bilrand > 4:gt'billsvid','3'
+		elseif kat < 20:
+			gt'billsvid','3'
+		end
+	end
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	'<center><img src="images/img/bilsvid/1.jpg"></center>'
+	'When you are once again bent over the table to strike, <<$telsob>> He came up behind him and slipped her hands on your hips, back and stood on the chest.'
+
+	act 'Not now <<$telsob>>':gt'billsvid','3'
+	act 'Kiss her':
+		cla
+		*clr
+		lesbian += 1
+
+		'<center><img src="images/img/bilsvid/2.jpg"></center>'
+		'You turned around and kissed her, in response <<$telsob>> quickly took off her clothes, stole everything from you and throwing you jumped on the table top, continuing to kiss.'
+
+		act 'Make her Cooney':gt'billsvid','10'
+		act 'Cooney':gt'billsvid','11'
+	end
+end
+
+if $ARGS[0] = '10':
+	cla
+	*clr
+	'<center><img src="images/img/bilsvid/4.jpg"></center>'
+	'You put her cancer to the table, and themselves squatted pressed his lips to her pussy. You kissed her and caressed the tongue until it is finished.'
+
+	act 'Cooney':gt'billsvid','11'
+
+	if bilsvidkiy = 0:act 'Play with cue':gt'billsvid','12'
+	if bilsvidukiy = 0:act 'Ask her to play with the cue':gt'billsvid','13'
+end
+
+if $ARGS[0] = '11':
+	cla
+	*clr
+	'<center><img src="images/img/bilsvid/3.jpg"></center>'
+	'You stood at the table, legs spread, and <<$telsob>> dropping to his knees in front of you kissed your pussy, but her tongue could not bring you to the desired state.'
+
+	act 'Make her Cooney':gt'billsvid','10'
+
+	if bilsvidkiy = 0:act 'Play with cue':gt'billsvid','12'
+	if bilsvidukiy = 0:act 'Ask her to play with the cue':gt'billsvid','13'
+end
+
+if $ARGS[0] = '12':
+	cla
+	*clr
+	bilsvidkiy = 1
+
+	'<center><img src="images/img/bilsvid/6.jpg"></center>'
+	'<<$telsob>> She climbed on the table and spread her legs wide. Picking up the cue you lick the handle and slowly inserted it into her vagina. <<$telsob>> podmahivala carefully your movements to the beat and a few minutes on the table collapsed shuddering in orgasm.'
+
+	if bilsvidukiy = 0:act 'Ask her to play with the cue':gt'billsvid','13'
+
+	act 'Finish':gt'billsvid','3'
+end
+
+if $ARGS[0] = '13':
+	cla
+	*clr
+	orgasm += 1
+	vagina += 1
+	bilsvidukiy = 1
+
+	'<center><img src="images/img/bilsvid/5.jpg"></center>'
+	'You sat on the edge of the table, throwing one foot on the table and handed it to the cue, "Get into the pocket?". <<$telsob>> He smiled, and ostentatiously spending tongue handle cue, quickly put it to you pussy, You already squealed with surprise. As she carefully fuck you cue, turning it into different directions, you massaged her clitoris with a finger. After a few minutes of pleasant languor spread over your body, and for a moment you were disconnected from the cover with your orgasm.'
+
+	if bilsvidkiy = 0:act 'Play with cue':gt'billsvid','12'
+
+	act 'Finish':gt'billsvid','3'
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	'<center><img src="images/img/bilsvid/10.jpg"></center>'
+	'During the game <<$telsob>> constantly trying you hugged, it will hand over the hips, it accidentally touches the chest.'
+
+	act 'Continue to play':gt'billsvid','3'
+	act 'Kiss her':
+		cla
+		*clr
+		lesbian += 1
+
+		'<center><img src="images/img/bilsvid/11.jpg"></center>'
+		'When <<$telsob>> again put her hand on your stomach, You moved up closer to her and kissed, her hand immediately slid under your clothes and stood on his chest.'
+
+		act 'Proceed':
+			cla
+			*clr
+			'<center><img src="images/img/bilsvid/12.jpg"></center>'
+			'<<$telsob>> I knelt down and taking off your clothes started kissing down below your crotch, while her tongue under your pussy.'
+
+			act 'Lick it':
+				cla
+				*clr
+				'<center><img src="images/img/bilsvid/13.jpg"></center>'
+				'Raising her knees with her face you have deployed to the table and lifted her leg on the table, We began to kiss her pussy, the caressing tongue, then sucking in her lips.'
+
+				act 'Proceed':
+					cla
+					*clr
+					'<center><img src="images/img/bilsvid/14.jpg"></center>'
+					'Unfolding her to face him, you put it on the table and spread her legs continued to caress the tongue pussy until she finished.'
+
+					act 'Give her to lick':
+						cla
+						*clr
+						'<center><img src="images/img/bilsvid/15.jpg"></center>'
+						'When <<$telsob>> finished, You climbed on the table and positioned her pussy right in front of her face, <<$telsob>> immediately he began to fondle her, fingers parted lips she tried to thrust deeper language.'
+
+						act 'Lick it':
+							cla
+							*clr
+							orgasm += 1
+
+							'<center><img src="images/img/bilsvid/16.jpg"></center>'
+							'You turned around so that her pussy was over the face, and we have started to lick her pussy, after a few minutes you feel like her body trembled and <<$telsob>> Groaning, strongly pressed against your pussy, after which you wrapped the pleasant waves of orgasm.'
+
+							act 'Finish':gt'billsvid','3'
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '3':
+	cla
+	horny = 0
+	minut += 60
+	gs'stat'
+
+	'When you are finished playing <<$telsob>> She said that she needed to flee and left'
+
+	act 'Escape':gt'torgcentr'
+end
+--- billsvid ---------------------------------
+

@@ -1,0 +1,10 @@
+# party_boys
+cls
+minut += 5
+gs'stat'
+'<center><b><font color = maroon>Boys</font></b></center>'
+'<center><img src="images/qwest/alter/sisterQW/ReksHome/Party_boys.jpg"></center>'
+'Former classmates of your sister, you`re not familiar with them.'
+act 'Move away':gt'sbReksHome','party_home'
+--- party_boys ---------------------------------
+

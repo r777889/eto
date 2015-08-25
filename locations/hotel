@@ -1,0 +1,45 @@
+# hotel
+clr
+minut = minut + 5
+nom_o[1] = 100
+nom_o[2] = 1000
+nom_o[3] = 10000
+nom_o[4] = 100000
+gs'stat'
+
+'<right><img src="images/casino/metrd.jpg"></right>'
+
+if tobiQW < 2000:'In the hotel lobby deserted and alone bored girl at the reception.'
+if tobiQW >= 2000 and tobiQW < 2100:'The hotel lobby is very crowded. Everywhere swarm comely old men in scanty jacket with patches on the elbows.'
+
+if tobiQW = 2001:
+	'You notice, that one of the visitors of the hotel, sitting in a chair, reading a book, which are written squiggles, similar to the ones that scroll.'
+
+	act 'Sorry, to bother. And in what language it is written?':
+		cla
+		*clr
+		'<right><img src="images/casino/oldman.jpg"></right>'
+		'(You) - Sorry, to bother. And in what language it is written?'
+		'(Man) - This kind, Old Japanese language. What? Are you good in rare languages?'
+		'(You) - Not at all, but I have the parchment, in which the characters are written very similar.'
+		'(Man) - Prelyubopytny! You can take a look?'
+		'(You) - Well, not in the lobby!'
+		'(Man) - Oh yes, right word, it`s me. Me, by the way, Plato called Aristarkhovich, and you?'
+		'(You) - You can simply Igor.'
+		'(Plato Aristarkhovich) - Come to my room, if you do not mind.'
+
+		act 'Go with a man':gt'mqroom'
+	end
+end
+
+act 'To approach the reception desk':
+	gt'rack'
+end
+act 'To lift':
+	gt'Elevator'
+end
+act 'Back to the lobby':
+	gt'hall'
+end
+--- hotel ---------------------------------
+

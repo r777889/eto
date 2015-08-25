@@ -1,0 +1,17 @@
+# garmassiv
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>Garage array</H4></center>'
+'<center><img src="images/pic/garmassiv.jpg"></center>'
+'A large area is built up garages offsuit that motorists keep their cars.'
+
+if StoryLine = 1:'In one of the garages located <a href="exec:minut += 5 & GT ''gargazel''">Your stepfather`s garage</a>'
+
+act 'Go into town':minut += 5 & gt'gorodok'
+--- garmassiv ---------------------------------
+

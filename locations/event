@@ -1,0 +1,1044 @@
+# event
+if $ARGS[0] = 'klof 2':
+	cla
+	*clr
+	minut = minut + 5
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/klof/15_1.jpg"></center>'
+	'As baby come to us and get more fun, and if you will behave yourself and be able to earn more'
+	'- Good, guys leave address.'
+
+	act 'Get dressed':gt'event','klof 3'
+	!act 'Move away':gt'park','start'
+end
+
+if $ARGS[0] = 'klof 3':
+	cla
+	*clr
+	minut = minut + 5
+	klofQW = 2
+	clr
+	gs'stat'
+
+	'<center><img src="images/klof/15_1.jpg"></center>'
+	'You suddenly covered interest,and you asked:'
+	'- Guys you can help earn money?'
+	'- Of course, Come tomorrow after 10 hours of talk (the boy said with a smirk).'
+	'(It turned, they live in the house next door)'
+
+	act 'Escape':gt'park','start'
+end
+
+if $ARGS[0] = 'park':
+	cla
+	*clr
+
+	!'<center><img src="images/picVA/event.jpg"></center>'
+	'You find quiet, abandoned deadlock and pressed against the wall starts to kiss, but you want more.'
+
+	act 'Masturbate':gt'event','hand'
+	act 'Suck':gt'event','blow'
+	act 'Sex':gt'event','sex'
+end
+
+if $ARGS[0] = 'hand':
+	cla
+	*clr
+	hj = hj + 1
+	DOM = DOM + 1
+	bfa = bfa + 1
+
+	'<center><img src="images/picVA/event.jpg"></center>'
+	'Without breaking the kiss you deftly to unbutton his pants <<$boyA>> and start his nadrachivat <<dickA>> centimeter boyfriend. Unable to withstand such pressure he ends directly on the ground.'
+
+	act 'Complete outing':gt'park','start'
+end
+
+if $ARGS[0] = 'blow':
+	cla
+	*clr
+	bfa = bfa + 2
+	bj = bj + 1
+
+	'<center><img src="images/picVA/event1.jpg"></center>'
+	'You get up on your knees, unbuttoning his pants partner, and dramatically immerse himself in the mouth member, looking up at his face relaxed. After a few minutes the person <<$boyA>> tense in anticipation of orgasm'
+
+	act 'Continue to suck':
+		cla
+		swallow = swallow + 1
+		cumlip = cumlip + 1
+
+		!'<center><img src="images/picV/swallow.jpg"></center>'
+		'A jet of hot sperm hit you in the mouth. You began to swallow cum, and <<$boyA>> I continued to cum in your mouth. Finally, the flow of hot liquid with a pungent taste stopped.'
+
+		act 'Escape':
+			cla
+			gt'park','start'
+		end
+	end
+	act 'Remove from the mouth':
+		cla
+		if harakBoyA = 0:
+			!'<center><img src="images/picV/hand.jpg"></center>'
+			'You took out a member of his mouth and <<$boyA>> You finished in the palm.'
+		elseif harakBoyA = 1:
+			tiprand = RAND(0,3)
+			if tiprand < 3:
+				!'<center><img src="images/picV/hand.jpg"></center>'
+				'You took out a member of his mouth and <<$boyA>> You finished in the palm.'
+			elseif tiprand = 3:
+				facial = facial + 1
+				cumface = cumface + 1
+
+				!'<center><img src="images/picV/facial.jpg"></center>'
+				'You took out a member and at this point <<$boyA>> discharged directly on your face, covering it with a warm and sticky sperm.'
+			end
+		elseif harakBoyA = 2:
+			facial = facial + 1
+			cumface = cumface + 1
+
+			!'<center><img src="images/picV/facial.jpg"></center>'
+			'<<$boyA>> hold your hair pulled dick out of your mouth, and finished your face, covering it with a warm and sticky sperm.'
+		end
+
+		act 'Escape':
+			cla
+			gt'park','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'sex':
+	cla
+	*clr
+	'<center><img src="images/picVA/event2.jpg"></center>'
+	sex = sex + 1
+	bfa = bfa + 3
+	pose = 1
+	$nameV = $boyA
+	dick = dickA
+	silavag = silavagA
+
+	'<center><img src="images/picV/dog.jpg"></center>'
+	'"You will find clean heels and tightens pants, invitingly ass shaking. <<$boyA>> pushes you, putting cancer, and abruptly comes into you.'
+	gs'orgazm','start'
+
+	act 'Complete outing':gt'park','start'
+end
+
+if $ARGS[0] = 'dima':
+	cla
+	*clr
+	clr
+	gs'stat'
+
+	'Seeing, that you treat it, a man went to you.'
+	'He came over and politely asked:'
+	'-Girl, sorry, and you can invite? Just you, I see, lonely.'
+
+	act 'No':gt'shop','start'
+	act 'To invite?':
+		cla
+		'To invite? asked you.'
+		'Understand, to my wife and a friend arrived and I thought, You can join us, sit, CONTACT. Will not be boring, promise!'
+
+		act 'No':gt'shop','start'
+		act 'Yes':
+			cla
+			*clr
+			minut = minut + 60
+
+			'"That`s good, My name is Dmitry".'
+			'You held out her hand to him - "Sveta".'
+			'It was a man in his forties, average height, a pretty strong constitution, dark short hair, nose slightly aquiline. Did you go, speaking on the topic of weather, and any other things. Finally, Dima said that you came, He started you in your home. The house was a two-story, pretty cute. In the living room there was a man with a bottle of beer in his hand.'
+			'-About Dimon, I already bored do not know what to do, - he said, and added,, - that behind the beauty you brought with you, really brighten up this evening is a beautiful girl?- His gaze assessing walked all over your body and stood on his chest.'
+			'-Sveta, meet people - Alex is, a friend of mine, wife still is not home, she went to her mother, the train to come in 24.00, Luda so soon will come soon and we will be at full strength,- smiling, Dima told me.'
+			'Alexey, you can simply Lech - He introduced his friend. It was slightly higher Dima and I looked a little older. The dark-haired with blue eyes, quite a nice man. For myself, you thought:"What, I`m doing here? Surely, and no wife, until late run from here!" But Dmitry put his arm around you waist and led to the kitchen. Lech, you`ve organized the table without me,well done! Yes, I did not lose time,, Light a seat in the middle,You have until one, we will take care of you, - helping you to sit said Alexey. On the table were plates with a snack and a bottle of vodka. Dima poured vodka. You said:'
+			'- You know, I do vodka, how-not very. Maybe you have something-a poslabzhe?'
+
+			act 'You`re sorry, but I probably will go':gt'street'
+			act 'Drink vodka':gt'event','dima2'
+		end
+	end
+end
+
+if $ARGS[0] = 'dima2':
+	cla
+	*clr
+	minut = minut + 60
+	clr
+	gs'stat'
+
+	'You drank, then another, yet you were already a little drunk. The men took turns telling funny stories, you had a lot of fun. The wife did not come naturally, but you have not thought to ask about it. Dima included music, and invited to dance. Alex protested:'
+	'- I do not want to miss one, Can I join?!'
+	'You smiled back. Dima immediately began to touch your ass, you danced slowly, He held you to my, so that you feel it standing member, He pressed just your crotch. Alex came up behind, He took his shoulders and his hands began to slowly sink your chest. Alcohol drunk and the presence of two excited men made themselves felt. You shamelessly twisted hips, then pushing his booty to a member of the pubis to Alexei Dime. Alexei stroking and squeezing your chest, pinching her nipples through the fabric, Dima began stroking through clothing your pussy. You softly moaned with excitement. Then the men began to undress you. You stood between the two men in shorts, and terribly wanted each of them.'
+	'-What you`re lovely. See Lech, some lustful bitch I brought!'
+	'-Yes, please others. Will our whore, today. Do you want us to you fucked?-I addressed to you by Lech.'
+	'-Yes, this whore is already all wet, she is waiting for her when vyebut! - Dima roughly pushed her panties,and I began poking his fingers in your pussy.'
+
+	act 'Moaning with pleasure':gt'event','dima3'
+end
+
+if $ARGS[0] = 'dima3':
+	cla
+	*clr
+	minut = minut + 10
+	clr
+	gs'stat'
+
+	'They took you to the bedroom. In an instant, your gallant become public-the loons, and you - whore. But I admit it to you great pleasure. In the bedroom was a large bed, man unbuttoned his pants pulled from his huge dick panties.'
+	'-Come suck, I see you can not wait,- He said Lech.'
+
+	act 'Kneeling down':gt'event','dima4'
+end
+
+if $ARGS[0] = 'dima4':
+	cla
+	clr
+	*clr
+	minut = minut + 10
+	guy = guy + 2
+	bj = bj + 2
+	throat = throat + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima.jpg"></center>'
+	'They stood next to the bed, you knelt down and took the dick in your mouth first, Alexei, Then Dima. You sucked and licked the head, swallowing members of the throat. Dima took your chin, I spit in his mouth and began to whip her cheeks, then sat down on the bed, I grabbed you by the hair and began to brutally fuck you in the mouth, periodically pohlestyvaya cheeks. "Come on bitch, huesoska" - he said to you, from your eyes tears flowed, he humiliated you, I called names. And tougher stick your mouth on your dick. You tried to please him. And Lech put you on your knees, I rip your panties, He puts his fingers in the pussy and ass began to smear grease, He spat on the hole, then he sent his penis and abruptly entered you in the ass.'
+
+	act 'Scream in pain':gt'event','dima5'
+end
+
+if $ARGS[0] = 'dima5':
+	cla
+	clr
+	*clr
+	minut = minut + 10
+	group = group + 1
+	throat = throat + 1
+	anus = anus + 1
+	cumass = cumass + 1
+	cumlip = cumlip + 1
+	orgasm = orgasm + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima1.jpg"></center>'
+	'You want to scream, but in a company was a member of Dima, You have published a-it is not clear sound. swallowing cock deep throat. Your anus burning pain, Lech fucked you in the ass, Dima and in the mouth.'
+	'-Whore, We are going to fuck you all night, in all holes,- He said Lech.'
+	'The room was the noise frenzied fucked. Have you experienced an orgasm. Dima sometimes pulls his dick spit in your mouth and pulled again started your mouth on his penis. And Lech beat you in the ass, with every jolt of his balls beat your pussy, bringing you all the new fun. "Ebite my boys, I`ll do whatever you want", - you think to yourself. Dima stiffened and said,:'
+	'-To swallow all, I`ll set! Understood, bitch?!'
+	'And he began to pour cum in your throat, You almost drowned, swallowing it. You are all swallowed and licked his cock.'
+	'-Come on, Lech, Pull it properly slut.'
+	'Lech also began to finish, of his sperm was hot inside. He pulled out a dick and ordered:'
+	'- On, lick it, bitch.'
+
+	act 'Lick':gt'event','dima6'
+end
+
+if $ARGS[0] = 'dima6':
+	cla
+	clr
+	*clr
+	if mop > 1:mop = 0
+	minut = minut + 10
+	cumlip = cumlip + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima2.jpg"></center>'
+	'You turned around and took in the mouth member, began to chew it thoroughly. When we finished, all together we went to the kitchen. Once again drink.'
+	'-Did you like how we fuck you?'
+
+	act 'Very':gt'event','dima7'
+end
+
+if $ARGS[0] = 'dima7':
+	cla
+	clr
+	*clr
+	minut = minut + 10
+	group = group + 1
+	vagina = vagina + 1
+	anus = anus + 1
+	cumpussy = cumpussy + 1
+	cumass = cumass + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima3.jpg"></center>'
+	'-Are you a real slut, Now we to fuck you from both sides, - said Dima.'
+	'Dima clutching your chest and biting nipples, Leh and began to knead your ass. You slowly got up and went back into the bedroom. Lech lay back, you got, giving him his dick pussy, fucking, He drew you to her to kiss, You bent down, Dima and sharply came to you in the ass. As you had two huge dick. You moan. "Another, more, fuck me, I am your whore! Ebite my hole!",- you cried. It`s terrific fun, Two dick digging your hole, Two foreign guy you fucked, and you moan, as the last whore. And asks them not to stop. You end and finishing. They finished almost simultaneously directly into you. You got up again and went to the kitchen, with priests and pussy on his feet flowed sperm. You were barely.'
+	'-Lech, you`ll be two more days,and my coming in a week, You can leave this bitch is currently, We are going to fuck her?'
+	'- Of course leave. Only need to properly spank her thong, I was obedient to.'
+	'Dima said:'
+	'- Do with it what you want, I need to work in the morning, I went to bed.'
+	'Lech went for belt, I grabbed you by the hand and led her into the hall. Dima went to bed.'
+
+	act 'Do not... I`ll do whatever you want!':gt'event','dima8'
+end
+
+if $ARGS[0] = 'dima8':
+	cla
+	clr
+	*clr
+	spank = spank + 1
+	minut = minut + 10
+	gs'stat'
+
+	'<center><img src="images/picQW/dima4.jpg"></center>'
+	'-Do not,- I am begging you in tears, -I will do everything, what you want.'
+	'- Sure to make, but you have to spank you for the future.'
+	'He made you a cancer on the floor and started kicking strap on the pope, you cried and begged him to stop. Buttock burning pain. Each blow was getting harder.'
+	'-Stand up bitch,- He linked this strap your hands, He puts on his knees,- Otsosesh my dick before bedtime.'
+
+	act 'Suck':gt'event','dima9'
+end
+
+if $ARGS[0] = 'dima9':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	throat = throat + 1
+	bj = bj + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima5.jpg"></center>'
+	'Lech took your head and began to fuck in the mouth, it lasted a very long time. His dick was bigger and went deep into the throat, He held your hair. Then it all-yet finished, you tied to a radiator and fell on the sofa bed.'
+
+	act 'Cry of the battery':gt'event','dima10'
+end
+
+if $ARGS[0] = 'dima10':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	dimaQW = 2
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'You were tied by his hands and wept battery. Ass on fire after undergoing whipping. Drunken men went to bed. Finally you hear the mighty snoring.'
+
+	act 'Elope':gt'street'
+	act 'Fall asleep':gt'event','dima11'
+end
+
+if $ARGS[0] = 'dima11':
+	cla
+	clr
+	*clr
+	minut = minut + 480
+	datster = 1
+	bj = bj + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima7.jpg"></center>'
+	'You came from, what who-then he grabbed you by the hair and began to fuck in the mouth shamelessly.'
+	'-Hungry, I suppose?,- You know the voice of Dima,- Breakfast must be earned!'
+
+	act 'Suck':gt'event','dima12'
+end
+
+if $ARGS[0] = 'dima12':
+	cla
+	clr
+	*clr
+	minut = minut + 10
+	throat = throat + 1
+	bj = bj + 1
+	swallow = swallow+1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima8.jpg"></center>'
+	'You feel, his cock stiffened and began to wring out streams of warm sperm. As soon as he finished with a satisfied sigh - Lech came and unquestioning tone ordered to lick his balls to shine, otherwise no breakfast you can not see'
+
+	act 'Dutifully fulfill':gt'event','dima13'
+	act 'Comply with enthusiasm':gt'event','dima14'
+	act 'Try to bite':gt'event','dima31'
+end
+
+if $ARGS[0] = 'dima13':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	eggs = eggs+1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima9.jpg"></center>'
+	'You lick and suck eggs shaven Lehiny, but he did not much like it. After a couple of minutes, he weighed slap you with words:'
+	'-What is this garbage? I`ll teach you to execute commands!'
+
+	act 'Downcast eyes':gt'event','dima39'
+end
+
+if $ARGS[0] = 'dima14':
+	cla
+	clr
+	*clr
+	minut = minut + 10
+	eggs = eggs+1
+	throat = throat + 1
+	bj = bj + 1
+	swallow = swallow+1
+	gs'stat'
+
+	'<center><img src="images/picQW/dima9.jpg"></center>'
+	'You remember everything, seen before, and try to repeat the same. Your tongue and lips lick and kiss every millimeter, Moisten the tender skin. Then a smooth transition to Lehinomu member and swallow whole, he immediately pushes you on the head and rapidly discharged in your throat, without releasing until, until his term does not cease to shudder in convulsions'
+
+	act 'To swallow':gt'event','dima15'
+end
+
+if $ARGS[0] = 'dima15':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	runrnd = RAND(0,10)
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'Dima unties you from batteries, It throws you some-the parcel and orders go to the bathroom to freshen up. Meanwhile They Lyokha that-then discuss'
+
+	act 'Try to escape':
+		if runrnd < 9:
+			gt'event','dima18'
+		else
+			gt'street'
+		end
+	end
+	act 'Going to the bathroom':gt'event','dima16'
+end
+
+if $ARGS[0] = 'dima16':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	lobkoef = 3
+	legkoef = 3
+	cumpussy = 0
+	cumbelly = 0
+	cumass = 0
+	cumlip = 0
+	cumface = 0
+	cumfrot = 0
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'The convolution you find mesh body, that you have to wear. In the bathroom, you wash off the thick layer of sperm and clean shave there is vegetation, where it should not be, then apply war paint on face.'
+
+	act 'Wear grid':gt'event','dima19'
+	act 'Do not put on and get out of the bath':gt'event','dima17'
+end
+
+if $ARGS[0] = 'dima17':
+	cla
+	clr
+	*clr
+	dom = dom+2
+	minut = minut + 30
+	runrnd = RAND(0,10)
+	lobkoef = 3
+	legkoef = 3
+	cumpussy = 0
+	cumbelly = 0
+	cumass = 0
+	cumlip = 0
+	cumface = 0
+	cumfrot = 0
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'In the bathroom, you wash off the thick layer of sperm and clean shave there is vegetation, where it should not be, but not net dress. You get out of the bathroom in the buff, despite instructions'
+
+	act 'Look at the men to call':
+		if runrnd < 9:
+			gt'event','dima18'
+		else
+			gt'event','dima21'
+		end
+	end
+end
+
+if $ARGS[0] = 'dima18':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'"Oh Well bitch defiant! Thought, you can do what you want? Fuck! You`re nobody here, and thou shalt do, what do you say we! I like to go naked in public? Great! We`ll help you!" - With these words of Lech sprinkled some in your face-then spray, and you passed out'
+
+	act 'Fell asleep':gt'event','dima49'
+end
+
+if $ARGS[0] = 'dima19':
+	clr
+	minut = minut + 5
+	gs'stat'
+
+	'"Here`s, well done, it seems, You have penetrated, what to do?"'
+
+	act 'Serve the men on the highest level':gt'event','dima20'
+end
+
+if $ARGS[0] = 'dima20':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'"Here`s, well done, it seems, You have penetrated, what to do?"'
+
+	act 'Serve the men on the highest level':gt'event','dima21'
+end
+
+if $ARGS[0] = 'dima21':
+	cla
+	clr
+	*clr
+	hour = hour+3
+	dimaQW = 2
+	gs'stat'
+
+	'<center><img src="images/picQW/dima3.jpg"></center>'
+	'Fuck you for a long time in various poses, some of them would have envied ardent lovers of perverted sex. After all this, you let go'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'dima30':
+	cla
+	clr
+	*clr
+	hour = hour+3
+	dimaQW = 2
+	gs'stat'
+
+	'I confess, sinner, writer from my worthless, and all my dark little thoughts went to the recent arrival of women. If you have any interesting ideas/scenario to continue - fling in PM, zabubenyu'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'dima31':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	dimaQW = 2
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'You squeeze teeth, but Lech lightning grabs your face and jaw strength decompresses.'
+	'-Bitch, that you conceived?!'
+	'You get a strong blow in the face and lost consciousness.'
+
+	act 'Wake':gt'event','dima32'
+end
+
+if $ARGS[0] = 'dima32':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/picQW/10028_TommyPistolJacquelineBlackLady_180.jpg"></center>'
+	'You woke up in the bright light, beating on the eyes. His mouth was dry. What-it just does not give you shut your mouth. The body ached.'
+	'-Oh, woke up! And I came up here, how you re!- He said Lech.'
+	'You look around. It seems, while you were unconscious, you threw a-the dress and taken to the street. In the mouth, metallic taste. Hands tied behind his back.'
+	'-And now, bitch, I`ll show you, what "safe sex".'
+	'With these words, Lech put you on your knees in front of him, He pulled out his penis and sent to you in the mouth.'
+
+	act 'Resist':gt'event','dima33'
+	if Kik > 50:
+		act 'Kick':gt'event','dima37'
+	end
+end
+
+if $ARGS[0] = 'dima33':
+	cla
+	clr
+	*clr
+	minut = minut + 10
+	throat = throat + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/10028_TommyPistolJacquelineBlackLady_183.jpg"></center>'
+	'Despite your attempts at resistance, Lech recorded and put your head in your mouth his dick. The device in the mouth did not allow you to close it, so you have attempted to push him. But hitched failed. It seems, the device is securely fixed, and your tongue movements only provoke Lech.'
+	'- Oh, i look, do you like "safe sex"? Come on, Do not stop!'
+
+	act 'Continue to please':gt'event','dima38'
+	act 'Stop moving the tongue':gt'event','dima34'
+end
+
+if $ARGS[0] = 'dima34':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/picQW/10028_TommyPistolJacquelineBlackLady_187.jpg"></center>'
+	'Lech realized, you`re not going to continue his humor:'
+	'-Yesterday you did it with pleasure! Well, so we are still nowhere to come. A lesson on, the mouth is to be opened, you`ve learned!'
+	'With these words, he took out his penis, You picked up by the hair and took down.'
+	'You are trapped in an empty underground passage. Lech took the gag out of your mouth, and you finally, able to close. Then your eyes closed bandage. Lech slightly bent you, and turned back to him.'
+
+	act 'Stand still':gt'event','dima35'
+end
+
+if $ARGS[0] = 'dima35':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	vagina = vagina + 1
+	rape = rape + 1
+	cumface = cumface + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/10028_TommyPistolJacquelineBlackLady_301.jpg"></center>'
+	'Lech swung entered into you. Takes place on the ladder has brought you, and now it slid easily, publishing squish. After a while, you covered the orgasm.'
+	'-It was necessary to start the morning so. And no risk!- He said Lech, increasing the tempo.'
+	'Suddenly he stopped, You turned and abruptly put on her knees. You hit hard on the marble floor, and felt, like that-the warm start to beat and run down your face.'
+	'-Your Stuff for the urn. Hope, You learned a lesson, - With these words of Lech loosened the straps on your hands, and you heard postpones steps.'
+
+	act 'Recover':gt'event','dima36'
+end
+
+if $ARGS[0] = 'dima36':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><img src="images/picQW/10028_TommyPistolJacquelineBlackLady_352.jpg"></center>'
+	'After sitting in this position for a few minutes, you start the hands-free. When you do it, You tore the bandage from his face, I wiped it off the face of sperm and pushed as far as possible. Looking around, you notice urn, behind which lie your stuff. You get dressed and get out of the transition.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'dima37':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	money = 0
+	gs'stat'
+
+	'<center><img src="images/pic/Kik.jpg"></center>'
+	'Classes at the fitness-heart not in vain. You manage to hit Lech foot so, he falls and loses consciousness. You start to run away, and only remove far enough stop, and start looking for a way to free your hands. In his eyes you come across a sharpened stone, and when your hands are free, you remove the gag from his mouth, and finally, You can close it. Teeth grind dust, nabilas that in the mouth while running. Dress trampled and torn places, but still able to cover your body. You can not find the right direction, and after a while you find yourself near the supermarket, which we met Dima. Here you see, that Lehi left all your money.'
+
+	act 'Relax':gt' street'
+end
+
+if $ARGS[0] = 'dima38':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	bj = bj + 1
+	cumlip = cumlip + 1
+	throat = throat + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/10028_TommyPistolJacquelineBlackLady_184.jpg"></center>'
+	'You start to caress carefully member Lehi language, while trying to swallow it periodically as far as possible. The device in the mouth restrict your ability, and you thought, that eternity, before you were able to make Lech finish.'
+	'-Yes, Now lesson learned. I think, in the future you will have no problems. After all, I`m right? - He said,, clutching your hair.'
+	'You nod. Then Lech loosened the ties on your hands and, pointing to the bushes, said:'
+	'-They find their stuff.'
+	'After Lech retired, you free your hands, mouth, and find my stuff in the specified location.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'dima39':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/picQW/13606_ZenzaRaggiNikiSweet085.jpg"></center>'
+	'Lech suits you and stick in the mouth gag. Then he removes from the apartment, and you get into a bus to the center. It, surprisingly, empty.'
+	'-Listen, I then remembered, you tried yesterday, and thought, You can now simply do not get enough sleep? Can fix the mistake right here?'
+
+	act 'Beckon':gt'event','dima40'
+	act 'Takeout':gt'event','dima45'
+end
+
+if $ARGS[0] = 'dima40':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	vagina = vagina + 2
+	gs'stat'
+
+	'<center><img src="images/picQW/13606_ZenzaRaggiNikiSweet113.jpg"></center>'
+	'-That`s great, - With these words of Lech pulls you dress, I got already got stronger member, and skewer you.'
+	'You begin to move rhythmically, but rough road knocks you, adding new sensations.'
+
+	act 'Change of station':gt'event','dima41'
+end
+
+if $ARGS[0] = 'dima41':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/picQW/13606_ZenzaRaggiNikiSweet154.jpg"></center>'
+	'You park between the seats, Lech and adjusts the rear, removing the gag, saying,:'
+	'-You do me now not going to disappoint?'
+	'It seems, Lyokha not like sex on the go, and it stops, and asks the driver to stop the bus between stops, in the park. The driver is not against, it stops, and you leave the trucks. It seems, he saw your nakedness, and you feel his eyes, is not to hide among the trees of Lyokha.'
+	'Soon you will find a meadow near the road.'
+	'-And now prove, He showed that in the morning is not all, that is capable of!'
+
+	act 'Kneel down':gt'event','dima42'
+end
+
+if $ARGS[0] = 'dima42':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	bj = bj + 1
+	cumlip = cumlip + 1
+	throat = throat + 1
+	cumface = cumface + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/13606_ZenzaRaggiNikiSweet231.jpg"></center>'
+	'Kneeling, you begin diligently to please Lech, something completely swallowing, releasing the full member. Your diligence today would envy best porn actress. Not surprising, Lech soon breathing hard, and removing the member finished your face.'
+	'-There is a good boy,- he said - because you can, whenever you want! I think, on your ability to have to learn all!'
+	'Lech ties your hands, naked and takes you on the road. Put you on your knees, He took a marker and wrote on your stomach "Sperm" and the up arrow, and reported:'
+	'- I`m away for a couple of hours, when I come back, I bring your stuff. And yet you sit here and show off their skills.'
+
+	act 'Wait return':gt'event','dima43'
+	act 'Escape':gt'event','dima44'
+end
+
+if $ARGS[0] = 'dima43':
+	cla
+	clr
+	*clr
+	minut = minut + 50
+	gs'stat'
+
+	'<center><img src="images/picQW/13606_ZenzaRaggiNikiSweet263.jpg"></center>'
+	'You have decided to wait for the return of Lehi. First 15 minutes passed quietly. On the road was deserted. But then began the most unpleasant pastime in your life. I passed a crowd of young people, I notice you. They took some photos, You obsmeyat, and, loss of interest, gone. You seem, what passes grandmother told the eternity of morality, and that, that in its time, this was unacceptable. There were other personalities, which you tried not to think.'
+	'When Lech returned, he untied you, I handed your stuff, and he said,, that he was sorry about his imminent departure from, t.to. I would be very happy new "rendezvous" with you.'
+	'You dressed, They took my things and hurriedly left his company.'
+
+	act 'To go into the yard':gt'street'
+end
+
+if $ARGS[0] = 'dima44':
+	cla
+	clr
+	*clr
+	minut = minut + 15
+	money = 0
+	gs'stat'
+
+	'<center><img src="images/picQW/13606_ZenzaRaggiNikiSweet264.jpg"></center>'
+	'You decide, to sit covered with sperm, naked on the road - too humiliating for you. When Lech hidden from view, you go, You grab your clothes, left close, and ran into the midst. Unfortunately your handbag, he took with him. In his eyes you come across a sharpened stone, and when your hands are free, you carefully wipe traces of semen from the face. You can not find the right direction, and after a while you find yourself near the supermarket, where you met Dima'
+
+	act 'Relax':gt' street'
+end
+
+if $ARGS[0] = 'dima45':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/picQW/13606_ZenzaRaggiNikiSweet084.jpg"></center>'
+	'-As you want. Then you will get new experience. Many new experiences! And I benefit, - He said Lech, smiling.'
+	'Then he was silent all the way, until you have passed the desired stop. Lech brought you out of the bus and led to the sex shops.'
+	'-And here you are, - Welcome to Girl. She unceremoniously grabs you and takes a back room. There she undresses you and connects.'
+	'-And now me, - the girl you brought to the stairs.'
+
+	act 'Go to the basement':gt'event','dima46'
+end
+
+if $ARGS[0] = 'dima46':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	throat = throat + 1
+	cumlip = cumlip + 1
+	swallow = swallow + 1
+	bj = bj + 1
+	gloryhole = gloryhole+1
+	gs'stat'
+
+	'<center><img src="images/picQW/15933_MarkDavisDonnaAnnika_447.jpg"></center>'
+	'When you`re down, the girl has got you in a dark room with a round hole in one wall. Almost immediately, It appears in a hole whose-the member.'
+	'-Proceed, - commanded girl.'
+	'Once your cancellation, she grabbed you by the neck, and force pressed to the hole.'
+	'Attempts to push out a member of your mouth, Only very excited stranger behind the wall, and unable to withstand a minute, he cums. From-the fact, that your head tight against, you can not spit, and forced to swallow.'
+	'-Your companion got the money for a certain number of customers. Then she can handle, or I should stay, and control?'
+
+	act 'Agree to suck':gt'event','dima47'
+	act 'Refused to continue':gt'event','dima48'
+end
+
+if $ARGS[0] = 'dima47':
+	cla
+	clr
+	*clr
+	minut = minut + 50
+	throat = throat + 5
+	cumlip = cumlip + 8
+	swallow = swallow + 8
+	bj = bj + 8
+	gloryhole = gloryhole+8
+	vagina = vagina + 1
+	money = money+1000
+	gs'stat'
+
+	'<center><img src="images/picQW/15933_MarkDavisDonnaAnnika_494.jpg"></center>'
+	'-That`s wonderful, - she said,- I will call your friend, Let him until the next. And you do not get distracted, - With these words, she pointed to a hole, which already has a new member.'
+	'You dutifully bent down, and became a stranger to humor the next. You tried. Men erupted one after another.'
+	'It seems, you are so enthusiastic, that have not heard, like Lech entered the room.'
+	'The realization, that you are not alone in the room it was at that moment, when he went with all the force within you.'
+	'You have decided not to be distracted, and continued to suck, despite the ramming you from behind Lech.'
+	'When a man, you serve, finished, you, as before, swallowed, and they were ready to accept the new, but a hole remained empty. It seems, money, received Lyokha, you have worked.'
+	'Lehi`s efforts have not gone unnoticed, and soon you shaking in orgasm. Almost immediately, He pulled out his penis, and expanding your, I am jabbing you in the face. You have a couple of familiar movements were able to get him to finish.'
+	'After, you cleaned his cock, he came out of the booth, and you have a few minutes came a. Oklemavshis, you are out of the room. At the door of the girl you met, and that led you to this basement. She took you in a lavatory, where you could wash your face and rinse your mouth. When you are out, she handed you pack your things, and several bills, adding, it asked me to tell you your friend, for a job well done. You dressed.'
+
+	act 'To go out':gt'nord'
+end
+
+if $ARGS[0] = 'dima48':
+	cla
+	clr
+	*clr
+	minut = minut + 50
+	throat = throat + 5
+	cumlip = cumlip + 8
+	swallow = swallow + 8
+	bj = bj + 8
+	gloryhole = gloryhole + 8
+	gs'stat'
+
+	'<center><img src="images/picQW/15933_MarkDavisDonnaAnnika_481.jpg"></center>'
+	'It seems, Woman did not satisfy your refusal.'
+	'-You do not want for good, then we continue on the poor.'
+	'With these words,, Girl let down your head back to the hole.'
+	'When it appeared a new member, She put it to you in the mouth, and began to drive your head. Impression, she fucks a stranger behind the wall of your head. It took more time, but this ended in your mouth. At this time,, she shrank your head against the wall, not giving you spit on the floor. This was repeated several times.'
+	'When the last "customer" He disappeared into the hole, she let go of your head, and left the room. Soon she was back with your stuff. You dressed, and she put you out of the room.'
+
+	act 'To go out':gt'nord'
+end
+
+if $ARGS[0] = 'dima49':
+	cla
+	clr
+	*clr
+	minut = minut + 50
+	gs'stat'
+
+	'<center><img src="images/picQW/10022_ParisTommy_021.jpg"></center>'
+	'You woke up in the midst of a-the area. Your hands were chained to a pole, and things were a step away from you. In the mouth gag. In the distance there were people, but no one dared to come to you. And their okriknut you too could. So it took about an hour. Just to say you could not. Your legs are tired, but his hands behind his back did not give you the opportunity to sit down.'
+	'Suddenly you notice, that a-the man sent to you.'
+	'-Do you need help? - He asked'
+
+	act 'Nod':gt'event','dima50'
+end
+
+if $ARGS[0] = 'dima50':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/picQW/10022_ParisTommy_028.jpg"></center>'
+	'The guy came closer, I liberate your hands and took the gag out of his mouth.'
+	'He helped to collect your stuff, and he offered to withdraw from the area as soon as possible. Very near the river was, and he suggested you wear under the bridge.'
+	'When you`re down, the guy said,:'
+	'- Can you thank the savior?'
+
+	act 'Suck':gt'event','dima51'
+	if agil < 50:
+		act 'Send':gt'event','dima52'
+	elseif agil >= 50:
+		act 'Send':gt'event','dima53'
+	end
+end
+
+if $ARGS[0] = 'dima51':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	throat = throat + 1
+	cumlip = cumlip + 1
+	swallow = swallow + 1
+	cumface = cumface + 1
+	bj = bj + 1
+	gs'stat'
+
+	'<center><img src="images/picQW/10022_ParisTommy_088.jpg"></center>'
+	'You will immediately understand, that hints at man. Kneeling, you unzipped his fly guy, and got down to business. Barely a couple of minutes, as the guy began to finish. Finished, He said goodbye to you, and quickly retired.'
+
+	act 'Freshen up':gt'nord'
+end
+
+if $ARGS[0] = 'dima52':
+	cla
+	clr
+	*clr
+	minut = minut + 20
+	throat = throat + 2
+	cumlip = cumlip + 1
+	swallow = swallow + 2
+	cumface = cumface + 1
+	bj = bj + 2
+	money = 0
+	gs'stat'
+
+	'<center><img src="images/picQW/10022_ParisTommy_308.jpg"></center>'
+	'Enraged by your refusal, man pushes you, grabs your stuff, throwing them into the river and, you have time to grab clothes, but the bag goes to the bottom of your savings and keys.'
+	'When you go to the bridge, both appear out of thin air a couple of guys. They grab you, and bind your hands. Judging by their actions, they follow you from the area.'
+	'When you find yourself on the lap, They lowered the pants. It seems, you have no choice. You begin to please them.'
+	'When you finish with the last, guys free your hands and run away.'
+	'Recovering, you find the right direction, and soon you find yourself far from the supermarket, which we met Dima'
+
+	act 'Relax':gt' street'
+end
+
+if $ARGS[0] = 'dima53':
+	cla
+	clr
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/ode/skirt1.jpg"></center>'
+	'Enraged by your refusal, man pushes you, but you are standing firmly on his feet. Realizing, that you better not mess, man escapes.'
+
+	act 'Freshen up':gt'nord'
+end
+
+if $ARGS[0] = 'scoreslut1':
+	cla
+	clr
+	*clr
+	minut = minut+30
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'You woke up, tied hands of the battery. From the sofa you looked expectantly Dima.'
+
+	act 'Frightened look':gt'event','scoreslut2'
+	act 'Trying to escape':gt'event','scoreslut3'
+end
+
+if $ARGS[0] = 'scoreslut2':
+	cla
+	clr
+	*clr
+	SUB = SUB+2
+	minut = minut+5
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'"Woke up, bitch? We told you that?.'
+
+	act 'Frightened look':gt'event','dima30'
+end
+
+if $ARGS[0] = 'scoreslut3':
+	cla
+	clr
+	*clr
+	SUB = SUB+2
+	minut = minut+5
+	gs'stat'
+
+	'<center><img src="images/picQW/dima6.jpg"></center>'
+	'"What do you know, kicks"'
+
+	act 'Frightened look':gt'event','dima30'
+end
+
+if $ARGS[0] = 'lesbi':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'Woman, staring at you, I caught your opinion. Appraising look around you, She smiled and quickly held tongue on her lips.'
+
+	act 'Turn':gt'butik','start'
+	act 'Become acquainted':gt'event','lesbi1'
+end
+
+if $ARGS[0] = 'lesbi1':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	lesbiQW = 1
+	gs'stat'
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'You came to the woman. She looked at you with a twinkle in his eye "I am Natalya Petrovna, and you do, on my card, Call me, We descend like some one interesting place." Then a woman comes out of the boutique graceful and confident gait.'
+
+	act 'Move away':gt'butik','start'
+end
+
+if $ARGS[0] = 'lesbi2':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'- Minnows?! Yes, I have had more guys than you!!! you misbehaved.'
+	'- Boys? Yes they can twist as you like, if Bcki has, Yes Cute muzzle. Do you even when-some tried to force'
+	'another girl to live, that it will be ready to do anything for your attention?'
+
+	if lesbian > 0:'- Nuu..no..I do not understand it - You mumble. With a girl I tried, but that so..'
+	if lesbian = 0:'- Nuu..no..I do not understand it - You mumble. I`m with a girl-it really did not try..'
+
+	act 'Move away':gt'park','start'
+	act 'Ask to learn':gt'event','lesbi3'
+end
+
+if $ARGS[0] = 'lesbi3':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	lesbiQW = 2
+	gs'stat'
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'You suddenly covered interest, how does this make the other girls because you read? Maybe he asks this woman to teach me.'
+	'Then you can find yourself a very obedient simpleton, that will make your small household chores and help you escape'
+	'from the guys. And daring you asked:'
+	'- Can you teach me that?'
+	'- Teach? - she asked in surprise. - Teach.. huh.. let`s try! - the lady said with a smirk. - Come tomorrow 10 My hours'
+	'apartment (curiously enough, It turned, she lives on the floor below you'
+
+	act 'Go in turmoil':gt'park','start'
+end
+--- event ---------------------------------
+

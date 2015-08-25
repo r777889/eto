@@ -1,0 +1,327 @@
+# stwork
+if $ARGS[0] = 'start':
+	$stripgirl = {
+		cls
+		gs'stat'
+
+		striptalkrand = RAND(0,10)
+		if striptalkrand = 0:$striptalk = 'Heard? Here, as-then came one girl, all so beautiful, but I came to the stage, absolute zero, He did not know how, so it only booed.'
+		if striptalkrand = 1:$striptalk = 'I`m telling you, men give birth to girls with tattoos.'
+		if striptalkrand = 2:$striptalk = 'On the sixth over a much more profitable than just dancing a striptease, it is easier to excite the customer, But the pole is rather difficult.'
+		if striptalkrand = 3:$striptalk = 'Fuh, they do not go out on stage, back all sweaty, disheveled hair and makeup certainly splyvet. Here one can be ruined makeup.'
+		if striptalkrand = 4:$striptalk = 'In general, these private dances, though guaranteed money but not, on the stage, you can earn more.'
+		if striptalkrand = 5:$striptalk = 'There was one ugly girl, came on the scene, Let`s just her boo, but as the beginning revolves around a pole, customers have fallen jaw, it is not bad, it earned.'
+		if striptalkrand = 6:$striptalk = 'And why the manager never says, male or female day? I recently rushed to work, even a broken nail, seek refuge, and now these bears jump on stage. I turned around and went back.'
+		if striptalkrand = 7:$striptalk = 'Some girls were told that they had problems arise because of the work. For many stritizersha still a whore.'
+		if striptalkrand = 8:$striptalk = 'There is one fat woman trying on a pole dance, so I flopped muzzle on the floor and put a strong bruise.'
+		if striptalkrand = 9:$striptalk = 'Recently one zhirnuhu raised a laugh in the hall. Like and simpotnaya and dances well, but it did not help.'
+		if striptalkrand = 10:$striptalk = 'I heard in decent clubs abroad strippers themselves pay for the right to work at the club.'
+
+		'Girls are engaged in their appearance before the mirror fun talking about all sorts of trivia.'
+		'<<$striptalk>>'
+
+		act 'Move away':gt $curloc,'start'
+	}
+
+	$stripohr = {
+		cls
+		gs'stat'
+
+		'Hefty bored guard at the door. Seeing you, he lazily throws "Hello World."'
+
+		act 'Move away':gt $curloc,'start'
+	}
+
+	$striptoilet2 = {
+		cls
+		gs'stat'
+
+		'You rinsed razor, Blades which will suffice for <<stanok>> time.'
+
+		if leghair > 0 and stanok > 0:
+			act 'Shaving legs 15 min':
+				cla
+				*clr
+				minut = minut + 15
+				leghair = -5
+				horny = horny + 5
+				stanok = stanok - 1
+
+				'<center><img src="images/pics/shave.jpg"></center>'
+				'You lathered and shaved off his feet with their hair.'
+
+				act 'Takeout machine':dynamic $striptoilet2
+			end
+		end
+
+		if lobok > 0 and stanok > 0:
+			act 'Shaved 15 min':
+				cla
+				*clr
+				minut = minut + 15
+				lobok = -5
+				horny = horny + 5
+				stanok = stanok - 1
+
+				'<center><img src="images/pics/shave3.jpg"></center>'
+				'You lathered pubis, then shaved all the hair off his.'
+
+				act 'Takeout machine':dynamic $striptoilet2
+			end
+		end
+
+		act 'Exit out of the shower and get dressed':dynamic $striptoilet
+	}
+
+	$striptoilet = {
+		cls
+		gs'stat'
+
+		'<center><img src="images/LakeCafe/Toilet.jpg"></center>'
+		'Dirty and smelly toilet, in which, It seems, never cleaned'
+
+		if tanga = 1:
+			act 'Remove underwear':
+				cla
+				tanga = 0
+				dynamic $striptoilet
+			end
+		end
+
+		if hapri = 0:
+			act 'Coiffured':
+				cla
+				minut = minut + 3
+				hapri = 1
+
+				act 'View results':dynamic $striptoilet
+			end
+		end
+
+		if mop ! 1:
+			act 'Rinse with makeup':
+				cla
+				*clr
+				minut += 5
+				mop = 1
+
+				'<center><img src="images/pic/mop.jpg"></center>'
+				'You washed-up.'
+
+				act 'Logout':dynamic $striptoilet
+			end
+		end
+
+		if mop = 1 and kosmetica > 0:
+			act 'Apply Makeup':
+				cla
+				*clr
+				'<center><img src="images/pic/mop.jpg"></center>'
+
+				act 'Light make-up':
+					cla
+					minut = minut + 3
+					kosmetica = kosmetica - 1
+					mop = 2
+
+					'You legonechko summed eyes and slightly tint the lips.'
+
+					act 'Logout':dynamic $striptoilet
+				end
+
+				if kosmetica >= 2:
+					act 'Normal make-up':
+						cla
+						minut = minut + 5
+						kosmetica = kosmetica - 2
+						mop = 3
+
+						'You lipstick, summed up the eyes and eyelids.'
+
+						act 'Logout':dynamic $striptoilet
+					end
+				end
+
+				if kosmetica >= 3:
+					act 'The caller makeup':
+						cla
+						minut = minut + 10
+						kosmetica = kosmetica - 3
+						vidageday = vidageday - 1
+						mop = 4
+
+						'You densely nakrasili eyes, imposed a shadow and mascara, nakrasili contour lip pencil and lipstick.'
+
+						act 'Logout':dynamic $striptoilet
+					end
+				end
+			end
+		end
+
+		act 'Take a shower 15 min':
+			cla
+			*clr
+			minut = minut + 15
+			sweat = -3
+			horny = horny + 1
+			hapri = 0
+			mop = 1
+			cumpussy = 0
+			cumbelly = 0
+			cumass = 0
+			cumanus = 0
+			cumlip = 0
+			cumface = 0
+			cumanus = 0
+
+			'<center><img src="images/pics/dush.jpg"></center>'
+			'You got into the bathroom and turned on the shower. Lathered body and washed off in the shower.'
+
+			if leghair > 0 and stanok > 0 or lobok > 0 and stanok > 0:
+				act 'Get razor':dynamic $striptoilet2
+			end
+
+			if horny >= 90:
+				act 'Point the shower pussy':
+					cla
+					*clr
+					horny = 0
+					minut = minut + 30
+					mastr = mastr + 1
+					orgasm = orgasm + 1
+					manna = manna + 15
+					willpower = willpower + 15
+
+					'<center><img src="images/pics/wash2.jpg"></center>'
+					'You sent a shower pussy and tight jet of warm water began to caress you. Soon you will feel like a warm wave covers your entire body and you began to shudder in orgasm.'
+
+					act 'Exit the bathroom and get dressed':dynamic $striptoilet
+				end
+			elseif horny >= 40 and hormy < 90:
+				act 'Point the shower pussy':
+					cla
+					*clr
+					horny = horny + 5
+					minut = minut + 30
+					manna = manna + 10
+					willpower = willpower + 10
+
+					'<center><img src="images/pics/wash2.jpg"></center>'
+					'You sent a shower pussy and tight jet of warm water began to caress you. First, you were very nice, but after a while it became even as it hurts. The excitement subsided and you stop masturbating.'
+
+					act 'Exit the bathroom and get dressed':dynamic $striptoilet
+				end
+			end
+
+			act 'Exit out of the shower and get dressed':dynamic $striptoilet
+		end
+
+		if cumpussy > 0 or cumbelly > 0 or cumass > 0 or cumanus > 0:
+			act 'Substitution 15 min':
+				cla
+				*clr
+				cumpussy = 0
+				cumbelly = 0
+				cumass = 0
+				cumanus = 0
+				cumlip = 0
+				cumface = 0
+				sweat = sweat - 1
+				minut = minut + 15
+
+				'<center><img src="images/pics/wash5.jpg"></center>'
+				'You carefully washed sperm from itself.'
+
+				act 'Logout':dynamic $striptoilet
+			end
+		end
+
+		if cumlip > 0 or cumface > 0:
+			act 'Wash off with facial cum 15 min':
+				cla
+				*clr
+				cumlip = 0
+				cumface = 0
+				sweat = sweat - 1
+				minut = minut + 15
+
+				'<center><img src="images/pic/facesp.jpg"></center>'
+				'You carefully washed sperm from the face.'
+
+				act 'Logout':dynamic $striptoilet
+			end
+		end
+
+		if cumfrot > 0:
+			act 'Clear semen from clothing 15 min':
+				cla
+				*clr
+				cumfrot = 0
+				sweat = sweat - 1
+				minut = minut + 15
+
+				!'<center><img src="images/pic/facesp.jpg"></center>'
+				'You have erased the traces of semen from clothing.'
+
+				act 'Logout':dynamic $striptoilet
+			end
+		end
+
+		act 'Exit out of the closet':gt $curloc,'start'
+	}
+
+	$sexloc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	clr
+	minut = minut + 5
+	stripMir = 1
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Dressing for strippers</font></b></center>'
+	'<center><img src="images/pic/striprazd.jpg"></center>'
+	'On the wall a lot <a href="exec:GT ''mirror'',''start''">Mirrors</a> to whom <a href="exec:dynamic $stripgirl">Girls</a> give himself up before performances.'
+	'<a href="exec:stripMir = 0 & GT ''stripclub'',''start''">Do not perceptible, steel door</a> in the hallway out to the backyard and the whole staff walks through the door to work, and not through the front entrance. About this input is always <a href="exec:dynamic $stripohr">security guard</a>.'
+	'Behind the wooden door located <a href="exec:dynamic $striptoilet">toilet for staff</a>'
+
+	if tatplech > 0:stripKoef = RAND(1,3)
+	if tatback > 0:stripKoef2 = RAND(1,3)
+	if tatback > 0:stripKoef3 = RAND(1,3)
+	if tatupb > 0:stripKoef4 = RAND(3,6)
+	if tatleg > 0:stripKoef5 = RAND(1,3)
+	publichot = vnesh-10+stripKoef+stripKoef2+stripKoef3+stripKoef4+stripKoef5
+	publichotstart = publichot
+
+	if hour >= 15 or hour <= 2:
+		if mop >= 4:
+			if hapri = 1:
+				if sweat <= 0:
+					if leghair <= 0 and lobok <= 0:
+						if fingal <= 0:
+							act 'Going on stage':stpredmet = 3 & gt'stwork2'
+						else
+							'With a black eye like you, on stage doing nothing.'
+						end
+					else
+						'There is nothing more terrible than a stripper with hairy legs and pubis, as such can not work.'
+					end
+				else
+					'Jesus, yes from you also stinks like a horse, must first wash.'
+				end
+			else
+				'It is impossible with the disheveled hair to appear in public.'
+			end
+		else
+			'To work need a very caller makeup.'
+		end
+	else
+		'Working time is over. Time to go home.'
+	end
+end
+--- stwork ---------------------------------
+

@@ -1,0 +1,25 @@
+# kathouse0
+hour = 31
+son = 20
+gs'stat'
+
+'<center><img src="images/img/Kathouse/slip.jpg"></center>'
+'Kate brought you to Me, I put her to bed and she lay down with you. Early in the morning you felt like it slipped out of your embrace and opened his eyes.'
+'"Sleep, I need to work, I`ll leave the keys." He said Kate and smacking you ran.'
+'Do you get enough sleep and began to look around, on the couch opposite the bed lay a guy staring at you. Probably this is one of its many guys about whom she told you.'
+
+act 'Escape':gt'street'
+act 'Seduce':
+	cla
+	*clr
+	'<center><img src="images/img/Kathouse/kathouse1.jpg"></center>'
+	'You throw off the covers and start stroking yourself, First chest and then in the area of ​​pussy panties, when you feel that pussy sufficiently wetted allot panties to the side and puts a couple of fingers into the vagina, slightly moaning.'
+	'The boy sat on the couch and looking at you without blinking.'
+
+	act 'Called':
+		$sexloc = 'katspalnya'
+		gt'sex','start'
+	end
+end
+--- kathouse0 ---------------------------------
+

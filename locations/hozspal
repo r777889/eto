@@ -1,0 +1,71 @@
+# hozspal
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	minut += 5
+	gs'stat'
+
+	'<center><b>Bedroom</b></center>'
+	'<center><img src="images/img/centr/hozspaln.jpg"></center>'
+
+	act 'In the corridor':gt'house'
+
+	if week < 6 and hour > 8 and hour < 20 and tanwork = 1:
+		act 'Remove':
+			minut += 60
+			gs'stat'
+
+			housespalrand = RAND(0,4)
+			if hour > 17 and hour < 20 and housespalrand = 0 and nikslut = 1 and niksexday ! day:
+				cla
+				*clr
+				niksexday = day
+				money += 2000
+				SUB += 1
+				guy += 1
+				picrand = 23
+
+				'<center><img src="images/img/centr/niks1.jpg"></center>'
+				'Nicholas and another man discussing something, You saw Nicholas beckons you to her and took a member of the inserts it into your mouth, You dutifully begins to suck. The second man also joined.'
+
+				act 'Sex':xgt'sexdvoe','var'
+			elseif hour < 14 and housespalrand = 0 and houserab = 1:
+				cla
+				*clr
+				SUB += 3
+
+				'<center><img src="images/img/centr/gosps1.jpg"></center>'
+				'Mistress tells you to undress and lie on the bed, you dutifully perform, She pulls out a dildo and inserts you in the pussy, after a few minutes you orgasm covers. It looks like you squirm on the bed ending.'
+				'"Well, the cat hungry, You went to feed the." she says, putting a collar on you'
+
+				act 'Go with it':
+					cla
+					*clr
+					'<center><img src="images/img/centr/gosps2.jpg"></center>'
+					'You slide off the bed on all fours and the hostess leads you to the kitchen. You barge on all fours trying to keep, that would not anger her.'
+
+					act 'In the kitchen':
+						cla
+						*clr
+						'<center><img src="images/img/centr/gosps3.jpg"></center>'
+						'She pours a bowl of milk and puts on the floor, you freeze in indecision over the plate, Then she puts the power of your head in a bowl, you are literally driving in her face.'
+						'"Ah, you see all the pig muck floor, fast licks that-I would have shone." she cried.'
+
+						act 'Lick':
+							cla
+							*clr
+							'<center><img src="images/img/centr/gosps4.jpg"></center>'
+							'You dutifully begin to lick the milk off the floor, and she presses you face to the floor, saying that you better lick. When you lick the entire floor from milk, she leaves leaving you naked on the floor.'
+
+							act 'In the corridor':gt'house'
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- hozspal ---------------------------------
+

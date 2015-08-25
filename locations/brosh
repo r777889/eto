@@ -1,0 +1,163 @@
+# brosh
+gs'stat'
+minut += 60
+
+evgentipe = RAND(0,3)
+if evgentipe = 0:
+	'During the break you came Zhendos, a friend of your brother "Svetik! Riser tortured, go after school."'
+
+	act 'Going beyond school':
+		cls
+		gs'stat'
+
+		'At the Zhendosom you left for school, where they found a nook.'
+
+		act 'Suck Zhendosu':
+			cls
+			bj += 1
+			sub += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/ev2/bs.jpg"></center>'
+			'You sat down on his haunches and took Zhendos member of his pants pulling your face to its members, You dutifully wrapped around his lips and began to suck.'
+
+			act 'Suck':
+				cls
+				!cumface += 1
+				cumlip += 1
+				swalllow += 1
+				!cumfrot += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/ev2/bscum.jpg"></center>'
+				'Zhendos did not last long and your mouth spurted sperm, you quickly began to swallow.'
+
+				dynamic $din_sekondparturok
+			end
+		end
+	end
+	exit
+elseif evgentipe = 1:
+	'During the break you came Mishan, a friend of your brother "Svetik! Let`s go to school, I have for you sweetie."'
+
+	act 'Going beyond school':
+		cls
+		gs'stat'
+
+		'At the Mishanya you left for school, where they found a nook.'
+
+		act 'Suck Mishanya':
+			cls
+			bj += 1
+			sub += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/ev2/bs1.jpg"></center>'
+			'You sat down on his haunches and took a member of Mishan pants pulling your face to its members, You dutifully wrapped around his lips and began to suck.'
+
+			act 'Suck':
+				cls
+				!cumface += 1
+				cumlip += 1
+				swalllow += 1
+				!cumfrot += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/ev2/bscum1.jpg"></center>'
+				'Mishan did not last long and your mouth spurted sperm, you quickly began to swallow.'
+
+				dynamic $din_sekondparturok
+			end
+		end
+	end
+	exit
+elseif evgentipe = 2:
+	'During the break you went to your brother Kolka "Svetik! Let`s go to school, I need to relieve tension."'
+
+	act 'Going beyond school':
+		cls
+		gs'stat'
+
+		'At the Kolka you left for school, where they found a nook.'
+
+		act 'Suck Kolka':
+			cls
+			bj += 1
+			sub += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/ev/bj.jpg"></center>'
+			'You sat down on his haunches and took Kolka <<brotherDick>>-five inch penis from his pants pulling your face to its members, You dutifully wrapped around his lips and began to suck.'
+
+			act 'Suck':
+				cls
+				!cumface += 1
+				cumlip += 1
+				swalllow += 1
+				!cumfrot += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alexey/bjcum9.jpg"></center>'
+				'Kolka did not last long and your mouth spurted sperm, you quickly began to swallow.'
+
+				dynamic $din_sekondparturok
+			end
+		end
+		if brotherSex > 6:
+			act 'Bend':
+				cls
+				minut += 5
+				horny += 10
+				$boy = 'Kolka'
+				dick = brotherDick
+				silavag = 0
+				pose = 1
+				rand1=rand(0,100)
+
+				gs'stat'
+				'Did you decide, rotika brother that would not be enough and decided to give him.'
+				if rand1<5:'<center><img src="images/qwest/alter/Ev/boysex.jpg"></center>'
+				if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,'+rand(0,2)+'.gif"></center>'
+				if rand1>=30:'<center><img src="images/nigma/gor/publ1,'+rand(0,6)+'.jpg"></center>'
+				'You bent down and framed mooning brother.'
+				dynamic $sexstart
+				dynamic $sexstart2
+				dynamic $sexcum
+
+				dynamic $brotherSexEnd
+				
+				dynamic $din_sekondparturok
+			end
+		end
+	end
+	exit
+elseif evgentipe = 3:
+	'During the break you came Zhendos and Mishan, friends of your brother "Svetik! Let`s go to school, Amuse."'
+
+	act 'Going beyond school':
+		cls
+		gs'stat'
+
+		'At the Zhendosom Mishanya and you`re out of school, where they found a nook.'
+
+		act 'Suck Guys':
+			cls
+			gang += 1
+			bj += 2
+			sub += 1
+			cumlip += 2
+			swalllow += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/ev2/bs2.jpg"></center>'
+			'You sat down on his haunches and the guys got members, you began to take turns stroking and suck. Guys did not last long and your mouth gushed their semen ,you began to swallow.'
+
+			dynamic $din_sekondparturok
+		end
+	end
+	exit
+end
+
+!dynamic $din_sekondparturok
+--- brosh ---------------------------------
+

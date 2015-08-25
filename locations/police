@@ -1,0 +1,62 @@
+# police
+if $ARGS[0] = '1':
+	gopstop = 0
+	minut += 60
+	gs'stat'
+
+	'<center><b>Police Station</b></center>'
+	'<center><img src="images/img/police/a1.jpg"></center>'
+	'The doorbell rings, you open. On the threshold stands a pretty girl "Welcome Svetlana." she says.'
+	'"Hello, and we know?" you ask.'
+	'"While only in absentia, but now personally acquainted" she says, and you`re holding snap cuffs.'
+	'"What`s happening?" you start.'
+	'"Arrest, fool." she says, and then there are two men in the form of, they take you by the hand and lead out to the street. You are pushed into a car and taken to the department, on arrival she leads you to the office.'
+	'"Here is our hooligan" the girl says a man sitting in the office.'
+	'"Take care of it myself, I still have things" responsible man and goes out of office.'
+	'"Come tell" she tells you.'
+	'"What to tell, I did not do anything" you answer.'
+	'"You hymen itself is not operational, who are in the park for the people of money and mobile phones squeezed, You have identified a fool, not far from his home to engage in looting, you idiot or something, Let`s tell. We do not need you, tell me who you were, many who robbed and where merged, tell me let go, do not tell the camera will send the chicken. There you quickly put on his knees." she yelled.'
+	'You began frantically thinking, what to do. If you tell her everything, Gopnik with your skin will descend, and in the literal sense, and if she does not tell you to send a camera, and there you can also do what the hell.'
+
+	act 'Abut':
+		cla
+		*clr
+		minut += 60
+		anal += 1
+		guy += 1
+		cumanus += 1
+
+		'<center><img src="images/img/police/a2.jpg"></center>'
+		'"I do not know." you said.'
+		'"Here you are a fool, do you have any idea what`s wrong in the chamber do" she said, "Will the clock pissing hole licking, Think about it, it`s worth it" she asked.'
+		'You imagine, as you lie on the floor spat, and sitting on your face carcass, kilogram under stopyatdesyat and third, his month is not washed crotch of your face. You wince, but the prospect of being raped by a dozen Gopnik and buried in a ditch, I scare you more and you reiterated that do not know anything.'
+		'The girl sat down at the table in front of you and the outstretched legs, She pushed her panties revealing a pussy. "I think about you fool, You see a beautiful well-kept clean pussy, And imagine there will be, not washed for months, overgrown, smelly, here you are my smell, it smacks slightly usche, But I`m only a few hours ago, washed". With these words she took the baton and hooking it over your neck pulled to his crotch. "That feeling is a little smells, and now lick" she said. You hesitated and then she shrank force you face in her pussy "Lick" she hissed. You began to lick "You see, Gorny shaved, nice lick, and there will be those thickets, that removing the language, you can not get to the clitoris, and then you beaten and his head tucked sloptank, Here it is necessary to you, Let`s tell." she continued.'
+
+		act 'Takeout':
+			cla
+			*clr
+			'<center><img src="images/img/police/a3.jpg"></center>'
+			'You refused to speak again, it is the beginning of anger, hand she wiped away all the table, and roughly pushed you ordered to undress, You took off the handcuffs. When you are left with no clothes, she again handcuffed and ordered you to lie on a table, She undressed herself. Once you have laid on the table, she, too, climbed on it and sat on your face. "Well like, and the camera is the only way you`re going to breathe and, through someone else`s crotch" she continued tryas of your face. A few minutes later you hear the door slam cabinet, You wanted to see who came, but the girl pressed on your face all the weight, dent your head on the table. You have not seen anything except her ass, only felt, like who-it took your legs and held up, then you feel like you pressed the anus, that it forces you squeezed anus and your feet are released, but not for long, a few seconds later they again raised, and your anus greased than-the cold, then he entered the finger, followed by the second and third. A minute later removed fingers and put her head in the anus member, you unceremoniously pushed the buttocks and pushed with force member in the ass, not allowing you to get used to, Member began to move gaining crazy pace. You tried to get rid or at least prevent it, but the girl sat on your face tightly pressing your hands shackled to his chest, and his legs gripped the man, VIOLENCE your anus.'
+			'"What`s not to like" the girl spoke again "And this is just the beginning, I will be silent on your inmates betray strapon, that-would you round the clock in the ass flogged, will speak scum?" she screamed and sat up a little, that-you could answer.'
+			'"Give them a bigger size, and this I do not even feel the pipette." Answer You, barely restraining that-I would not scream in pain.'
+			'"Bitch!" the girl screamed and climbed down from the table "Send it to the camera" she said to the man dressed.'
+			'"Wait, I have not finished" he said. A few minutes later he went, until I came to you.'
+			'He undid the handcuffs you, that-you could dress, and led him into the chamber.'
+
+			act 'In chamber':gt'kamera'
+		end
+	end
+	act 'Share':
+		cla
+		gopdeath = 1
+		minut += 180
+		vsehsdaladay = day
+		gs'stat'
+
+		'You told all they knew, and even then only heard about from conversations Gopnik. Then you let go.'
+
+		act 'Escape':gt'nord'
+	end
+end
+--- police ---------------------------------
+

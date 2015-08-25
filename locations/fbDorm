@@ -1,0 +1,27 @@
+# fbDorm
+gs'stat'
+gs'fbDormD'
+
+'<<$bname>> I led you to ptushnoy hostel. "Well, go to my room."'
+
+dynamic $d_fbd_start
+
+act 'E... I have changed my mind':
+	cls
+	minut += 5
+	gs'stat'
+
+	'Seeing that <<$bname>> I brought you to the hostel you decide to retreat until it is too late. <<$bname>> You began to persuade, promising that everything will be fine, nobody knows.'
+
+	if dom > 0:
+		'But you were adamant, and how you could not persuade the guy do decide to leave.'
+
+		act 'Escape':gt'gorodok'
+	else
+		'The boy managed to convince you and you bit her lip thinking, why all of you weave ropes, and will not have any regret for his act this.'
+
+		dynamic $d_fbd_start
+	end
+end
+--- fbDorm ---------------------------------
+

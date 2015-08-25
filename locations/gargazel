@@ -1,0 +1,63 @@
+# gargazel
+$metka = $ARGS[0]
+$loc = $CURLOC
+fatherdrunk=0
+'<center><H4>Garage</H4></center>'
+if father_go=1 and hour>=16 and hour<21:
+'<center><img src="images/pic/gargazel.jpg" ></center>'
+'Large garage in which gazelle kept stepfather.'
+else
+'<center><img src="images/pic/gargazel_empty.jpg" ></center>'
+'Large garage in which gazelle kept stepfather. Now the garage is closed on the lock.'
+end
+clr
+gs'stat'
+
+act '<B>Escape</B>':minut+=5&gt'garmassiv'
+
+if father_go=1 and hour>=16 and hour<20:
+'Right now <a href="exec:GT ''garfather''">stepfather</a> in the garage, car repairs.'
+end
+
+if father_go=1 and hour>=20 and hour<21:
+	'Right now <a href="exec:GT ''garfather''">stepfather c Uncle Misha</a> garage drink vodka.'
+	set fatherdrunk=1
+end
+
+if YouCanGar>0:
+'In the garage there is stored <<GarTorgItem>> One unit of goods, with a total capacity 100 One unit. For, that would be able to sell the product out of the garage, you have to transfer it to your room.'
+	if tovarL>=30:
+	'Houses and everything culled item, carry nowhere.'
+	end
+	if tovarL<30:
+	perenGarTov=30-tovarL
+	'I could move out of the garage <<perenGarTov>> One unit of the goods in the room.'
+		if GarTorgItem>0:
+			if GarTorgItem>=perenGarTov:
+				act 'Move <<perenGarTov>> One unit of goods':
+				cls
+				minut+=60
+				tovarL+=perenGarTov
+				GarTorgItem-=perenGarTov
+				gs'stat'
+				'You dealt with an hour item and transferred it from the garage to the apartment.'
+				act 'Further':gt $curloc
+				end
+			end
+			if GarTorgItem<perenGarTov:
+				act 'Move <<GarTorgItem>> One unit of goods':
+				cls
+				minut+=60
+				tovarL+=GarTorgItem
+				GarTorgItem=0
+				gs'stat'
+				'You dealt with an hour item and transferred it from the garage to the apartment.'
+				act 'Further':gt $curloc
+				end
+			end
+			
+		end
+	end
+end
+--- gargazel ---------------------------------
+

@@ -1,0 +1,19 @@
+# bldzh
+clr
+minut = minut + 10
+gs'stat'
+
+'<right><img src="images/casino/stolbd.jpg"></right>'
+'You are standing at the table playing blackjack'
+
+act 'To approach the dealer':
+	gt'croupier1'
+end
+act 'Sit down':
+	gt'igrkart1'
+end
+act 'Move away from the table':
+	gt'cards'
+end
+--- bldzh ---------------------------------
+

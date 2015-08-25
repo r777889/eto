@@ -1,0 +1,43 @@
+# annafrends2
+gs'stat'
+
+'Poltorashka beer was quickly drained and the guys got a new bottle.'
+
+temarand = RAND(0,1)
+if temarand = 0:
+	gennpc = RAND(0,2)
+	if gennpc = 0:
+		'Anya came to you. "Light, go to the toilet."'
+	elseif gennpc = 1:
+		'Lena came up to you. "Light, You do not want to use the toilet?"'
+	elseif gennpc = 2:
+		'Ira came to you. "Sveta, you do not want to go some where?"'
+	end
+
+	act 'Sing along':gt'annafrendtoilet'
+elseif temarand = 1:
+	'The boys went to the corner of the club, that would empty the bladder leaving the girls alone.'
+end
+if temarand = 2:
+	''
+end
+if temarand = 3:
+	''
+end
+if temarand = 4:
+	''
+end
+if temarand = 5:
+	''
+end
+if temarand = 6:
+	''
+end
+if temarand = 7:
+	''
+end
+
+act 'Escape':SiSonWork = 0 & SiSgdk = 0 & gt'gdk'
+if sisboyparty = 2 and sisboyparty_day + 1 = daystart and hour = 18:act 'Go to the party':gt'sisterQW','sisboyQW_party'
+--- annafrends2 ---------------------------------
+

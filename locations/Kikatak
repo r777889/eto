@@ -1,0 +1,106 @@
+# Kikatak
+if $ARGS[0] = 'player':
+	defsumV = agilV + reaktV + KikDefV
+	defkofV = defsumV*20/100
+
+	defV = RAND(defsumV - defkofV,defsumV + defkofV)
+	if popad >= defV*2:
+		'<b><font color = green>CRETE</font></b>'
+
+		damageKrit = damage*20/100
+		damage = damage + damageKrit
+		healthV = healthV - damage
+		pointKik = pointKik + 1
+
+		'<font color = green>You have caused <<damage>> points of damage</font>'
+
+		if damage >= healthV*20/100:
+			pointKik = pointKik + 1
+
+			'<font color = green><<$nameV>> I fell into the ring</font>'
+
+			if healthV < (vitalV*10 + strenV*5)/4:
+				'<font color = green><<$nameV>> knocked out. This is a victory!!!</font>'
+
+				xgt'enderKik','winKO'
+				exit
+			end
+		end
+	elseif popad < defV*2 and popad >= defV:
+		'<font color = green>Hit</font>'
+
+		healthV = healthV - damage
+		pointKik = pointKik + 1
+
+		'<font color = green>You have caused <<damage>> points of damage</font>'
+
+		if damage >= healthV*20/100:
+			pointKik = pointKik + 1
+
+			'<font color = green><<$nameV>> I fell into the ring</font>'
+
+			if healthV < (vitalV*10 + strenV*5)/4:
+				'<font color = green><<$nameV>> knocked out. This is a victory!!!</font>'
+
+				xgt'enderKik','winKO'
+				exit
+			end
+		end
+	elseif popad < defV:
+		'<font color = red>Bloomer</font>'
+	end
+end
+
+if $ARGS[0] = 'enemy':
+	defsum = agil + reakt + KikDef
+	defkof = defsum*20/100
+
+	def = RAND(defsum - defkof,defsum + defkof)
+	if popad >= def*2:
+		'<b><font color = red>CRETE</font></b>'
+
+		damageKrit = damage*20/100
+		damage = damage + damageKrit
+		health = health - damage
+		pointKikV = pointKikV + 1
+
+		'<font color = red>You have caused <<damage>> points of damage</font>'
+
+		if damage >= health*20/100:
+			pointKikV = pointKikV + 1
+
+			'<font color = red>You fell into the ring</font>'
+
+			if health < (vital*10 + stren*5)/4:
+				'<font color = red>You knocked out. This defeat!</font>'
+
+				xgt'enderKik','loss'
+				exit
+			end
+		end
+	elseif popad < def*2 and popad >= def:
+		'<font color = red>Hit</font>'
+
+		health = health - damage
+		pointKikV = pointKikV + 1
+
+		'<font color = red>You have caused <<damage>> points of damage</font>'
+
+		if damage >= health*20/100:
+			pointKikV = pointKikV + 1
+
+			'<font color = red>You fell into the ring</font>'
+
+			if health < (vital*10 + stren*5)/4:
+				'<font color = red>You knocked out. This defeat!</font>'
+
+				xgt'enderKik','loss'
+				exit
+			end
+		end
+	elseif popad < def:
+		'<font color = green>Bloomer</font>'
+	end
+end
+--- Kikatak ---------------------------------
+

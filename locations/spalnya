@@ -1,0 +1,57 @@
+# spalnya
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+minut += 5
+tanhouse1 = 1
+gs'stat'
+
+'<center><b>Bedroom</b></center>'
+'<center><img src="images/img/centr/spaln.jpg"></center>'
+if komp = 1:'<a href="exec:GT ''Komp'',''start''">Notebook</a>.'
+
+act 'In the corridor':gt'house'
+act 'Do(2 hours)':
+	cla
+	minut += 120
+	intel += 1
+
+	'You prozanimavshis two o`clock, I think in your head that-then postponed'
+
+	act 'Finish':gt'spalnya'
+end
+
+if student > 0 and kursovik < 100:
+	act 'Write kursovik 1 h':
+		cla
+		*clr
+		minut = minut + 60
+		kursovik = kursovik + RAND(intel/20,intel/10)
+		if kursovik > 100:kursovik = 100
+		manna = manna - 10
+
+		'<center><img src="images/pic/study.jpg"></center>'
+		'You sat on the course work and prepare it on <<kursovik>> percent.'
+
+		act 'Finish':gt'spalnya'
+	end
+end
+act 'Mirror':gt'mirror','start'
+act 'Cupboard':gt'loker','start'
+act 'In bed':gt'bed','start'
+
+if tanga = 0 and clrbelo > 0:
+	act 'Wear underwear':
+		cla
+		tanga = 1
+		gt'spalnya'
+	end
+else
+	act 'Remove underwear':
+		cla
+		tanga = 0
+		gt'spalnya'
+	end
+end
+--- spalnya ---------------------------------
+

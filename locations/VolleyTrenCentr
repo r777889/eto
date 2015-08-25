@@ -1,0 +1,63 @@
+# VolleyTrenCentr
+minut += 15
+gs'stat'
+'<center><img src="images/qwest/alter/volley/VoltrenerSpeak18.jpg"></center>'
+if centr=1:
+	'You came up to the coach to talk to a strange man.'
+	act 'Hello':
+		cla & *clr
+		'<center><img src="images/qwest/alter/volley/VoltrenerSpeak11.jpg"></center>'
+		'Shaking hands with both, then you froze in an awkward silence, without knowing, what to say. Mikhail looked at you with a puzzled,  I asked:  «Sveta, What are you doing here?». You said about the activity and the strengthening of the physical form. The coach looked approvingly on you. A stranger, smile, said: «I Guang, each of your coach, as far as I understand, you do not look at me surprised, I`m a Chinese long have you live, we met in the competition Miha, Here we meet from time to time».  So far, the Chinese seemed, Coach concerned glances at the clock, and then said,, it is late and leaves you in the care of Guang.'
+		act 'Ask about the coach':
+			cla & *clr
+			'<center><img src="images/qwest/alter/volley/VoltrenerSpeak12.jpg"></center>'
+			'As soon as Mikhail Nikolayevich left you filled other coaches questions,  about his life, about girlfriend, about competitions and, of course, about the European Championships. Startled Guang few minutes could not, insert into your monologue word. Finally wedged at the moment, when you typed the air,  the following issues, he said,: «If you do not know, so, Misha did not tell you, and why do I need to tell you again my friend against?»,- you confused, then this should be cunning Chinaman, if he will harass you, you decided to leave it. But Guang said dreamily: «Now, if you had rice wine. I would have answered some of your questions», - You stared at Chinese, You do not normally sell, and he kind-the rice requests: «Okay, Bring a bottle of wine, where did you get rice wine».'
+			centr=2
+			act 'Move away':gt 'fit','raz'
+		end
+	end
+elseif centr=2: 
+       'Seeing the Chinese you are hurried to it.'
+    act 'Hello': 
+		cla & *clr
+		'<center><img src="images/qwest/alter/volley/VoltrenerSpeak13.jpg"></center>'
+		'You have come to the Chinese and greeted. «Brought?», - he asked.'
+		if wine = 1: 
+			act'Give wine': 
+				cla 
+				wine = 0
+				centr = 3 &! close Chinese
+				'Giving a bottle of wine, You stare at each other questioningly trainer.  Guang sigh: «Okay, One answer your question, but do not torment me any more, and chattering like a mad monkey». You can even offended what are you mad monkey, but restrained. '
+				act 'Ask a Question':
+					cla & *clr
+					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak15.jpg"></center>'	
+					'About EM tell why the coach did not want to talk about it. Chewing lips, Chinese began the story: «Generally, rumors are true, and your coach really got into the national team. And Cathedral selected for the European Championship», - you breathless, listened to the story.'
+					act 'Play on':
+						cla & *clr
+						'<center><img src="images/qwest/alter/volley/VoltrenerSpeak14.jpg"></center>'
+						'«So, There he met with the player team of another country ... ahem women`s national team of another country, Well acquaintance grew into something more...'
+						act 'Play on':
+							cla & *clr
+							'<center><img src="images/qwest/alter/volley/VoltrenerSpeak16.gif"></center>'
+							'In general, he slammed the sbornitsu», - and then giggled Chinese. «And though she ando adult team was, It turned out to be a minor, her 15 years, whether that was, immediately ruffled in his team and went running.'
+							act 'Surprise':
+								cla & *clr
+								'<center><img src="images/qwest/alter/volley/VoltrenerSpeak17.jpg"></center>'
+								'«Just do not put him, but the matter was hushed up and turnuli our Michael with the team», - waiting to hear Chinese, you have been laid heard in my head.  Now it is clear, Why coach shies away from you, as soon as it comes about-something serious.'
+								
+				act 'Move away':gt 'fit','raz'
+							end
+						end
+					end
+				end
+			end
+		else
+			'Why then came?'
+			act 'Move away':gt 'fit','raz'
+		end
+	end
+ end
+	
+
+--- VolleyTrenCentr ---------------------------------
+

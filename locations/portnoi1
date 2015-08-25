@@ -1,0 +1,398 @@
+# portnoi1
+if $ARGS[0] = 'start':
+	gs'stat'
+	cla
+
+	if odetjeans = 1 and numdress ! 1 and jeans[1] = 1 or odetjeans = 0 and jeans[1] = 1:'Jeans 1 (Remaining strength <<jeansH[1]>>, The size of the hips <<jeansB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''jeans''">take in</a>'
+	if odetjeans = 1 and numdress ! 2 and jeans[2] = 1 or odetjeans = 0 and jeans[2] = 1:'Jeans 2 (Remaining strength <<jeansH[2]>>, The size of the hips <<jeansB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''jeans''">take in</a>'
+	if odetjeans = 1 and numdress ! 3 and jeans[3] = 1 or odetjeans = 0 and jeans[3] = 1:'Jeans 3 (Remaining strength <<jeansH[3]>>, The size of the hips <<jeansB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''jeans''">take in</a>'
+	if odetjeans = 1 and numdress ! 4 and jeans[4] = 1 or odetjeans = 0 and jeans[4] = 1:'Jeans 4 (Remaining strength <<jeansH[4]>>, The size of the hips <<jeansB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''jeans''">take in</a>'
+	if odetjeans = 1 and numdress ! 5 and jeans[5] = 1 or odetjeans = 0 and jeans[5] = 1:'Jeans 5 (Remaining strength <<jeansH[5]>>, The size of the hips <<jeansB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''jeans''">take in</a>'
+
+	if odetshort = 1 and numdress ! 1 and short[1] = 1 or odetshort = 0 and short[1] = 1:'Black shorts with a purple T-shirt (Remaining strength <<shortH[1]>>, The size of the hips <<shortB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''short''">take in</a>'
+	if odetshort = 1 and numdress ! 2 and short[2] = 1 or odetshort = 0 and short[2] = 1:'Black shorts with a striped T-shirt (Remaining strength <<shortH[2]>>, The size of the hips <<shortB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''short''">take in</a>'
+	if odetshort = 1 and numdress ! 3 and short[3] = 1 or odetshort = 0 and short[3] = 1:'Black shorts with a black T-shirt (Remaining strength <<shortH[3]>>, The size of the hips <<shortB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''short''">take in</a>'
+	if odetshort = 1 and numdress ! 4 and short[4] = 1 or odetshort = 0 and short[4] = 1:'Pink shorts with pink favorite topics (Remaining strength <<shortH[4]>>, The size of the hips <<shortB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''short''">take in</a>'
+	if odetshort = 1 and numdress ! 5 and short[5] = 1 or odetshort = 0 and short[5] = 1:'Sexy white shorts (Remaining strength <<shortH[5]>>, The size of the hips <<shortB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''short''">take in</a>'
+
+	if odetskirt = 1 and numdress ! 1 and skirt[1] = 1 or odetskirt = 0 and skirt[1] = 1:'White skirt with a colorful blouse (Remaining strength <<skirtH[1]>>, The size of the hips <<skirtB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''skirt''">take in</a>'
+	if odetskirt = 1 and numdress ! 2 and skirt[2] = 1 or odetskirt = 0 and skirt[2] = 1:'Black leather skirt with a red jacket (Remaining strength <<skirtH[2]>>, The size of the hips <<skirtB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''skirt''">take in</a>'
+	if odetskirt = 1 and numdress ! 3 and skirt[3] = 1 or odetskirt = 0 and skirt[3] = 1:'The white skirt with a striped blouse (Remaining strength <<skirtH[3]>>, The size of the hips <<skirtB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''skirt''">take in</a>'
+	if odetskirt = 1 and numdress ! 4 and skirt[4] = 1 or odetskirt = 0 and skirt[4] = 1:'White skirt with a colorful blouse (Remaining strength <<skirtH[4]>>, The size of the hips <<skirtB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''skirt''">take in</a>'
+	if odetskirt = 1 and numdress ! 5 and skirt[5] = 1 or odetskirt = 0 and skirt[5] = 1:'Black leather skirt with a red blouse (Remaining strength <<skirtH[5]>>, The size of the hips <<skirtB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''skirt''">take in</a>'
+
+	if odetdress = 1 and numdress ! 1 and dress[1] = 1 or odetdress = 0 and dress[1] = 1:'Black dress (Remaining strength <<dressH[1]>>, The size of the hips <<dressB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 2 and dress[2] = 1 or odetdress = 0 and dress[2] = 1:'Yellow Dress (Remaining strength <<dressH[2]>>, The size of the hips <<dressB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 3 and dress[3] = 1 or odetdress = 0 and dress[3] = 1:'Blue Dress (Remaining strength <<dressH[3]>>, The size of the hips <<dressB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 4 and dress[4] = 1 or odetdress = 0 and dress[4] = 1:'Black short dress (Remaining strength <<dressH[4]>>, The size of the hips <<dressB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 5 and dress[5] = 1 or odetdress = 0 and dress[5] = 1:'Red long dress (Remaining strength <<dressH[5]>>, The size of the hips <<dressB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 6 and dress[6] = 1 or odetdress = 0 and dress[6] = 1:'Red polka dot dress (Remaining strength <<dressH[6]>>, The size of the hips <<dressB[6]>>) <a href="exec:numdres = 6 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 7 and dress[7] = 1 or odetdress = 0 and dress[7] = 1:'Brown dress (Remaining strength <<dressH[7]>>, The size of the hips <<dressB[7]>>) <a href="exec:numdres = 7 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 8 and dress[8] = 1 or odetdress = 0 and dress[8] = 1:'Dress 8(Remaining strength <<dressH[8]>>, The size of the hips <<dressB[8]>>) <a href="exec:numdres = 8 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 9 and dress[9] = 1 or odetdress = 0 and dress[9] = 1:'Dress 9(Remaining strength <<dressH[9]>>, The size of the hips <<dressB[9]>>) <a href="exec:numdres = 9 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 10 and dress[10] = 1 or odetdress = 0 and dress[10] = 1:'Dress 10(Remaining strength <<dressH[10]>>, The size of the hips <<dressB[10]>>) <a href="exec:numdres = 10 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 11 and dress[11] = 1 or odetdress = 0 and dress[11] = 1:'Dress 11(Remaining strength <<dressH[11]>>, The size of the hips <<dressB[11]>>) <a href="exec:numdres = 11 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 12 and dress[12] = 1 or odetdress = 0 and dress[12] = 1:'Dress 12(Remaining strength <<dressH[12]>>, The size of the hips <<dressB[12]>>) <a href="exec:numdres = 12 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 13 and dress[13] = 1 or odetdress = 0 and dress[13] = 1:'Dress 13(Remaining strength <<dressH[13]>>, The size of the hips <<dressB[13]>>) <a href="exec:numdres = 13 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 14 and dress[14] = 1 or odetdress = 0 and dress[14] = 1:'Dress 14(Remaining strength <<dressH[14]>>, The size of the hips <<dressB[14]>>) <a href="exec:numdres = 14 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 15 and dress[15] = 1 or odetdress = 0 and dress[15] = 1:'Dress 15(Remaining strength <<dressH[15]>>, The size of the hips <<dressB[15]>>) <a href="exec:numdres = 15 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 16 and dress[16] = 1 or odetdress = 0 and dress[16] = 1:'Dress 16(Remaining strength <<dressH[16]>>, The size of the hips <<dressB[16]>>) <a href="exec:numdres = 16 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 17 and dress[17] = 1 or odetdress = 0 and dress[17] = 1:'Dress 17(Remaining strength <<dressH[17]>>, The size of the hips <<dressB[17]>>) <a href="exec:numdres = 17 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 18 and dress[18] = 1 or odetdress = 0 and dress[18] = 1:'Dress 18(Remaining strength <<dressH[18]>>, The size of the hips <<dressB[18]>>) <a href="exec:numdres = 18 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 19 and dress[19] = 1 or odetdress = 0 and dress[19] = 1:'Dress 19(Remaining strength <<dressH[19]>>, The size of the hips <<dressB[19]>>) <a href="exec:numdres = 19 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 20 and dress[20] = 1 or odetdress = 0 and dress[20] = 1:'Dress 20(Remaining strength <<dressH[20]>>, The size of the hips <<dressB[20]>>) <a href="exec:numdres = 20 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 21 and dress[21] = 1 or odetdress = 0 and dress[21] = 1:'Dress 21(Remaining strength <<dressH[21]>>, The size of the hips <<dressB[21]>>) <a href="exec:numdres = 21 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 22 and dress[22] = 1 or odetdress = 0 and dress[22] = 1:'Dress 22(Remaining strength <<dressH[22]>>, The size of the hips <<dressB[22]>>) <a href="exec:numdres = 22 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 23 and dress[23] = 1 or odetdress = 0 and dress[23] = 1:'Dress 23(Remaining strength <<dressH[23]>>, The size of the hips <<dressB[23]>>) <a href="exec:numdres = 23 & GT ''portnoi1'',''dress''">take in</a>'
+	if odetdress = 1 and numdress ! 24 and dress[24] = 1 or odetdress = 0 and dress[24] = 1:'Dress 24(Remaining strength <<dressH[24]>>, The size of the hips <<dressB[24]>>) <a href="exec:numdres = 24 & GT ''portnoi1'',''dress''">take in</a>'
+
+	if odetprofi = 1 and numdress ! 1 and profi[1] = 1 or odetprofi = 0 and profi[1] = 1:'Office clothing 1(Remaining strength <<profiH[1]>>, The size of the hips <<profiB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''profi''">take in</a>'
+	if odetprofi = 1 and numdress ! 2 and profi[2] = 1 or odetprofi = 0 and profi[2] = 1:'Office clothing 2(Remaining strength <<profiH[2]>>, The size of the hips <<profiB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''profi''">take in</a>'
+
+	if odetpants = 1 and numdress ! 1 and pants[1] = 1 or odetpants = 0 and pants[1] = 1:'Black leggings with tight black top (Remaining strength <<pantsH[1]>>, The size of the hips <<pantsB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''pants''">take in</a>'
+	if odetpants = 1 and numdress ! 2 and pants[2] = 1 or odetpants = 0 and pants[2] = 1:'Black skinny leggings with red blouse (Remaining strength <<pantsH[2]>>, The size of the hips <<pantsB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''pants''">take in</a>'
+	if odetpants = 1 and numdress ! 3 and pants[3] = 1 or odetpants = 0 and pants[3] = 1:'Purple tight leggings with black top (Remaining strength <<pantsH[3]>>, The size of the hips <<pantsB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''pants''">take in</a>'
+	if odetpants = 1 and numdress ! 4 and pants[4] = 1 or odetpants = 0 and pants[4] = 1:'Black skinny leggings with black short topic (Remaining strength <<pantsH[4]>>, The size of the hips <<pantsB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''pants''">take in</a>'
+	if odetpants = 1 and numdress ! 5 and pants[5] = 1 or odetpants = 0 and pants[5] = 1:'White skinny jeans with black top (Remaining strength <<pantsH[5]>>, The size of the hips <<pantsB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''pants''">take in</a>'
+
+	if odetlatex = 1 and numdress ! 1 and latex[1] = 1 or odetlatex = 0 and latex[1] = 1:'Black latex jumpsuit (Remaining strength <<latexH[1]>>, The size of the hips <<latexB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''latex''">take in</a>'
+	if odetlatex = 1 and numdress ! 2 and latex[2] = 1 or odetlatex = 0 and latex[2] = 1:'Purple latex dress (Remaining strength <<latexH[2]>>, The size of the hips <<latexB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''latex''">take in</a>'
+
+	if odethooker = 1 and numdress ! 1 and hooker[1] = 1 or odethooker = 0 and hooker[1] = 1:'Attire prostitutes number1 (Remaining strength <<hookerH[1]>>, The size of the hips <<hookerB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''hooker''">take in</a>'
+	if odethooker = 1 and numdress ! 2 and hooker[2] = 1 or odethooker = 0 and hooker[2] = 1:'Attire prostitutes number2 (Remaining strength <<hookerH[2]>>, The size of the hips <<hookerB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''hooker''">take in</a>'
+	if odethooker = 1 and numdress ! 3 and hooker[3] = 1 or odethooker = 0 and hooker[3] = 1:'Attire prostitutes number3 (Remaining strength <<hookerH[3]>>, The size of the hips <<hookerB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''hooker''">take in</a>'
+	if odethooker = 1 and numdress ! 4 and hooker[4] = 1 or odethooker = 0 and hooker[4] = 1:'Attire prostitutes number4 (Remaining strength <<hookerH[4]>>, The size of the hips <<hookerB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''hooker''">take in</a>'
+	if odethooker = 1 and numdress ! 5 and hooker[5] = 1 or odethooker = 0 and hooker[5] = 1:'Attire prostitutes number5 (Remaining strength <<hookerH[5]>>, The size of the hips <<hookerB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''hooker''">take in</a>'
+
+	if odetkis = 1 and numdress ! 1 and odekis[1] = 1 or odetkis = 0 and odekis[1] = 1:'Youth outfit number1 (Remaining strength <<odekisH[1]>>, The size of the hips <<odekisB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 2 and odekis[2] = 1 or odetkis = 0 and odekis[2] = 1:'Youth outfit number2 (Remaining strength <<odekisH[2]>>, The size of the hips <<odekisB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 3 and odekis[3] = 1 or odetkis = 0 and odekis[3] = 1:'Youth outfit number3 (Remaining strength <<odekisH[3]>>, The size of the hips <<odekisB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 4 and odekis[4] = 1 or odetkis = 0 and odekis[4] = 1:'Youth outfit number4 (Remaining strength <<odekisH[4]>>, The size of the hips <<odekisB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 5 and odekis[5] = 1 or odetkis = 0 and odekis[5] = 1:'Youth outfit number5 (Remaining strength <<odekisH[5]>>, The size of the hips <<odekisB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 6 and odekis[6] = 1 or odetkis = 0 and odekis[6] = 1:'Youth outfit number6 (Remaining strength <<odekisH[6]>>, The size of the hips <<odekisB[6]>>) <a href="exec:numdres = 6 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 7 and odekis[7] = 1 or odetkis = 0 and odekis[7] = 1:'Youth outfit number7 (Remaining strength <<odekisH[7]>>, The size of the hips <<odekisB[7]>>) <a href="exec:numdres = 7 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 8 and odekis[8] = 1 or odetkis = 0 and odekis[8] = 1:'Youth outfit number8 (Remaining strength <<odekisH[8]>>, The size of the hips <<odekisB[8]>>) <a href="exec:numdres = 8 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 9 and odekis[9] = 1 or odetkis = 0 and odekis[9] = 1:'Youth outfit number9 (Remaining strength <<odekisH[9]>>, The size of the hips <<odekisB[9]>>) <a href="exec:numdres = 9 & GT ''portnoi1'',''odekis''">take in</a>'
+	if odetkis = 1 and numdress ! 10 and odekis[10] = 1 or odetkis = 0 and odekis[10] = 1:'Youth outfit number10 (Remaining strength <<odekisH[10]>>, The size of the hips <<odekisB[10]>>) <a href="exec:numdres = 10 & GT ''portnoi1'',''odekis''">take in</a>'
+
+	if odetnewclo = 1 and numdress ! 1 and newclo[1] = 1 or odetnewclo = 0 and newclo[1] = 1:'Clothing number of Fashionistas1 (Remaining strength <<newcloH[1]>>, The size of the hips <<newcloB[1]>>) <a href="exec:numdres = 1 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 2 and newclo[2] = 1 or odetnewclo = 0 and newclo[2] = 1:'Clothing number of Fashionistas2 (Remaining strength <<newcloH[2]>>, The size of the hips <<newcloB[2]>>) <a href="exec:numdres = 2 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 3 and newclo[3] = 1 or odetnewclo = 0 and newclo[3] = 1:'Clothing number of Fashionistas3 (Remaining strength <<newcloH[3]>>, The size of the hips <<newcloB[3]>>) <a href="exec:numdres = 3 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 4 and newclo[4] = 1 or odetnewclo = 0 and newclo[4] = 1:'Clothing number of Fashionistas4 (Remaining strength <<newcloH[4]>>, The size of the hips <<newcloB[4]>>) <a href="exec:numdres = 4 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 5 and newclo[5] = 1 or odetnewclo = 0 and newclo[5] = 1:'Clothing number of Fashionistas5 (Remaining strength <<newcloH[5]>>, The size of the hips <<newcloB[5]>>) <a href="exec:numdres = 5 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 6 and newclo[6] = 1 or odetnewclo = 0 and newclo[6] = 1:'Clothing number of Fashionistas6 (Remaining strength <<newcloH[6]>>, The size of the hips <<newcloB[6]>>) <a href="exec:numdres = 6 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 7 and newclo[7] = 1 or odetnewclo = 0 and newclo[7] = 1:'Clothing number of Fashionistas7 (Remaining strength <<newcloH[7]>>, The size of the hips <<newcloB[7]>>) <a href="exec:numdres = 7 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 8 and newclo[8] = 1 or odetnewclo = 0 and newclo[8] = 1:'Clothing number of Fashionistas8 (Remaining strength <<newcloH[8]>>, The size of the hips <<newcloB[8]>>) <a href="exec:numdres = 8 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 9 and newclo[9] = 1 or odetnewclo = 0 and newclo[9] = 1:'Clothing number of Fashionistas9 (Remaining strength <<newcloH[9]>>, The size of the hips <<newcloB[9]>>) <a href="exec:numdres = 9 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 10 and newclo[10] = 1 or odetnewclo = 0 and newclo[10] = 1:'Clothing number of Fashionistas10 (Remaining strength <<newcloH[10]>>, The size of the hips <<newcloB[10]>>) <a href="exec:numdres = 10 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 11 and newclo[11] = 1 or odetnewclo = 0 and newclo[11] = 1:'Clothing number of Fashionistas11 (Remaining strength <<newcloH[11]>>, The size of the hips <<newcloB[11]>>) <a href="exec:numdres = 11 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 12 and newclo[12] = 1 or odetnewclo = 0 and newclo[12] = 1:'Clothing number of Fashionistas12 (Remaining strength <<newcloH[12]>>, The size of the hips <<newcloB[12]>>) <a href="exec:numdres = 12 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 13 and newclo[13] = 1 or odetnewclo = 0 and newclo[13] = 1:'Clothing number of Fashionistas13 (Remaining strength <<newcloH[13]>>, The size of the hips <<newcloB[13]>>) <a href="exec:numdres = 13 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 14 and newclo[14] = 1 or odetnewclo = 0 and newclo[14] = 1:'Clothing number of Fashionistas14 (Remaining strength <<newcloH[14]>>, The size of the hips <<newcloB[14]>>) <a href="exec:numdres = 14 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 15 and newclo[15] = 1 or odetnewclo = 0 and newclo[15] = 1:'Clothing number of Fashionistas15 (Remaining strength <<newcloH[15]>>, The size of the hips <<newcloB[15]>>) <a href="exec:numdres = 15 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 16 and newclo[16] = 1 or odetnewclo = 0 and newclo[16] = 1:'Clothing number of Fashionistas16 (Remaining strength <<newcloH[16]>>, The size of the hips <<newcloB[16]>>) <a href="exec:numdres = 16 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 17 and newclo[17] = 1 or odetnewclo = 0 and newclo[17] = 1:'Clothing number of Fashionistas17 (Remaining strength <<newcloH[17]>>, The size of the hips <<newcloB[17]>>) <a href="exec:numdres = 17 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 18 and newclo[18] = 1 or odetnewclo = 0 and newclo[18] = 1:'Clothing number of Fashionistas18 (Remaining strength <<newcloH[18]>>, The size of the hips <<newcloB[18]>>) <a href="exec:numdres = 18 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 19 and newclo[19] = 1 or odetnewclo = 0 and newclo[19] = 1:'Clothing number of Fashionistas19 (Remaining strength <<newcloH[19]>>, The size of the hips <<newcloB[19]>>) <a href="exec:numdres = 19 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 20 and newclo[20] = 1 or odetnewclo = 0 and newclo[20] = 1:'Clothing number of Fashionistas20 (Remaining strength <<newcloH[20]>>, The size of the hips <<newcloB[20]>>) <a href="exec:numdres = 20 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 21 and newclo[21] = 1 or odetnewclo = 0 and newclo[21] = 1:'Clothing number of Fashionistas21 (Remaining strength <<newcloH[21]>>, The size of the hips <<newcloB[21]>>) <a href="exec:numdres = 21 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 22 and newclo[22] = 1 or odetnewclo = 0 and newclo[22] = 1:'Clothing number of Fashionistas22 (Remaining strength <<newcloH[22]>>, The size of the hips <<newcloB[22]>>) <a href="exec:numdres = 22 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 23 and newclo[23] = 1 or odetnewclo = 0 and newclo[23] = 1:'Clothing number of Fashionistas23 (Remaining strength <<newcloH[23]>>, The size of the hips <<newcloB[23]>>) <a href="exec:numdres = 23 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 24 and newclo[24] = 1 or odetnewclo = 0 and newclo[24] = 1:'Clothing number of Fashionistas24 (Remaining strength <<newcloH[24]>>, The size of the hips <<newcloB[24]>>) <a href="exec:numdres = 24 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 25 and newclo[25] = 1 or odetnewclo = 0 and newclo[25] = 1:'Clothing number of Fashionistas25 (Remaining strength <<newcloH[25]>>, The size of the hips <<newcloB[25]>>) <a href="exec:numdres = 25 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 26 and newclo[26] = 1 or odetnewclo = 0 and newclo[26] = 1:'Clothing number of Fashionistas26 (Remaining strength <<newcloH[26]>>, The size of the hips <<newcloB[26]>>) <a href="exec:numdres = 26 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 27 and newclo[27] = 1 or odetnewclo = 0 and newclo[27] = 1:'Clothing number of Fashionistas27 (Remaining strength <<newcloH[27]>>, The size of the hips <<newcloB[27]>>) <a href="exec:numdres = 27 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 28 and newclo[28] = 1 or odetnewclo = 0 and newclo[28] = 1:'Clothing number of Fashionistas28 (Remaining strength <<newcloH[28]>>, The size of the hips <<newcloB[28]>>) <a href="exec:numdres = 28 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 29 and newclo[29] = 1 or odetnewclo = 0 and newclo[29] = 1:'Clothing number of Fashionistas29 (Remaining strength <<newcloH[29]>>, The size of the hips <<newcloB[29]>>) <a href="exec:numdres = 29 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 30 and newclo[30] = 1 or odetnewclo = 0 and newclo[30] = 1:'Clothing number of Fashionistas30 (Remaining strength <<newcloH[30]>>, The size of the hips <<newcloB[30]>>) <a href="exec:numdres = 30 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 31 and newclo[31] = 1 or odetnewclo = 0 and newclo[31] = 1:'Clothing number of Fashionistas31 (Remaining strength <<newcloH[31]>>, The size of the hips <<newcloB[31]>>) <a href="exec:numdres = 31 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 32 and newclo[32] = 1 or odetnewclo = 0 and newclo[32] = 1:'Clothing number of Fashionistas32 (Remaining strength <<newcloH[32]>>, The size of the hips <<newcloB[32]>>) <a href="exec:numdres = 32 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 33 and newclo[33] = 1 or odetnewclo = 0 and newclo[33] = 1:'Clothing number of Fashionistas33 (Remaining strength <<newcloH[33]>>, The size of the hips <<newcloB[33]>>) <a href="exec:numdres = 33 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 34 and newclo[34] = 1 or odetnewclo = 0 and newclo[34] = 1:'Clothing number of Fashionistas34 (Remaining strength <<newcloH[34]>>, The size of the hips <<newcloB[34]>>) <a href="exec:numdres = 34 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 35 and newclo[35] = 1 or odetnewclo = 0 and newclo[35] = 1:'Clothing number of Fashionistas35 (Remaining strength <<newcloH[35]>>, The size of the hips <<newcloB[35]>>) <a href="exec:numdres = 35 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 36 and newclo[36] = 1 or odetnewclo = 0 and newclo[36] = 1:'Clothing number of Fashionistas36 (Remaining strength <<newcloH[36]>>, The size of the hips <<newcloB[36]>>) <a href="exec:numdres = 36 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 37 and newclo[37] = 1 or odetnewclo = 0 and newclo[37] = 1:'Clothing number of Fashionistas37 (Remaining strength <<newcloH[37]>>, The size of the hips <<newcloB[37]>>) <a href="exec:numdres = 37 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 38 and newclo[38] = 1 or odetnewclo = 0 and newclo[38] = 1:'Clothing number of Fashionistas38 (Remaining strength <<newcloH[38]>>, The size of the hips <<newcloB[38]>>) <a href="exec:numdres = 38 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 39 and newclo[39] = 1 or odetnewclo = 0 and newclo[39] = 1:'Clothing number of Fashionistas39 (Remaining strength <<newcloH[39]>>, The size of the hips <<newcloB[39]>>) <a href="exec:numdres = 39 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 40 and newclo[40] = 1 or odetnewclo = 0 and newclo[40] = 1:'Clothing number of Fashionistas40 (Remaining strength <<newcloH[40]>>, The size of the hips <<newcloB[40]>>) <a href="exec:numdres = 40 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 41 and newclo[41] = 1 or odetnewclo = 0 and newclo[41] = 1:'Clothing number of Fashionistas41 (Remaining strength <<newcloH[41]>>, The size of the hips <<newcloB[41]>>) <a href="exec:numdres = 41 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 42 and newclo[42] = 1 or odetnewclo = 0 and newclo[42] = 1:'Clothing number of Fashionistas42 (Remaining strength <<newcloH[42]>>, The size of the hips <<newcloB[42]>>) <a href="exec:numdres = 42 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 43 and newclo[43] = 1 or odetnewclo = 0 and newclo[43] = 1:'Clothing number of Fashionistas43 (Remaining strength <<newcloH[43]>>, The size of the hips <<newcloB[43]>>) <a href="exec:numdres = 43 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 44 and newclo[44] = 1 or odetnewclo = 0 and newclo[44] = 1:'Clothing number of Fashionistas44 (Remaining strength <<newcloH[44]>>, The size of the hips <<newcloB[44]>>) <a href="exec:numdres = 44 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 45 and newclo[45] = 1 or odetnewclo = 0 and newclo[45] = 1:'Clothing number of Fashionistas45 (Remaining strength <<newcloH[45]>>, The size of the hips <<newcloB[45]>>) <a href="exec:numdres = 45 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 46 and newclo[46] = 1 or odetnewclo = 0 and newclo[46] = 1:'Clothing number of Fashionistas46 (Remaining strength <<newcloH[46]>>, The size of the hips <<newcloB[46]>>) <a href="exec:numdres = 46 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 47 and newclo[47] = 1 or odetnewclo = 0 and newclo[47] = 1:'Clothing number of Fashionistas47 (Remaining strength <<newcloH[47]>>, The size of the hips <<newcloB[47]>>) <a href="exec:numdres = 47 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 48 and newclo[48] = 1 or odetnewclo = 0 and newclo[48] = 1:'Clothing number of Fashionistas48 (Remaining strength <<newcloH[48]>>, The size of the hips <<newcloB[48]>>) <a href="exec:numdres = 48 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 49 and newclo[49] = 1 or odetnewclo = 0 and newclo[49] = 1:'Clothing number of Fashionistas49 (Remaining strength <<newcloH[49]>>, The size of the hips <<newcloB[49]>>) <a href="exec:numdres = 49 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 50 and newclo[50] = 1 or odetnewclo = 0 and newclo[50] = 1:'Clothing number of Fashionistas50 (Remaining strength <<newcloH[50]>>, The size of the hips <<newcloB[50]>>) <a href="exec:numdres = 50 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 51 and newclo[51] = 1 or odetnewclo = 0 and newclo[51] = 1:'Clothing number of Fashionistas51 (Remaining strength <<newcloH[51]>>, The size of the hips <<newcloB[51]>>) <a href="exec:numdres = 51 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 52 and newclo[52] = 1 or odetnewclo = 0 and newclo[52] = 1:'Clothing number of Fashionistas52 (Remaining strength <<newcloH[52]>>, The size of the hips <<newcloB[52]>>) <a href="exec:numdres = 52 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 53 and newclo[53] = 1 or odetnewclo = 0 and newclo[53] = 1:'Clothing number of Fashionistas53 (Remaining strength <<newcloH[53]>>, The size of the hips <<newcloB[53]>>) <a href="exec:numdres = 53 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 54 and newclo[54] = 1 or odetnewclo = 0 and newclo[54] = 1:'Clothing number of Fashionistas54 (Remaining strength <<newcloH[54]>>, The size of the hips <<newcloB[54]>>) <a href="exec:numdres = 54 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 55 and newclo[55] = 1 or odetnewclo = 0 and newclo[55] = 1:'Clothing number of Fashionistas55 (Remaining strength <<newcloH[55]>>, The size of the hips <<newcloB[55]>>) <a href="exec:numdres = 55 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 56 and newclo[56] = 1 or odetnewclo = 0 and newclo[56] = 1:'Clothing number of Fashionistas56 (Remaining strength <<newcloH[56]>>, The size of the hips <<newcloB[56]>>) <a href="exec:numdres = 56 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 57 and newclo[57] = 1 or odetnewclo = 0 and newclo[57] = 1:'Clothing number of Fashionistas57 (Remaining strength <<newcloH[57]>>, The size of the hips <<newcloB[57]>>) <a href="exec:numdres = 57 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 58 and newclo[58] = 1 or odetnewclo = 0 and newclo[58] = 1:'Clothing number of Fashionistas58 (Remaining strength <<newcloH[58]>>, The size of the hips <<newcloB[58]>>) <a href="exec:numdres = 58 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 59 and newclo[59] = 1 or odetnewclo = 0 and newclo[59] = 1:'Clothing number of Fashionistas59 (Remaining strength <<newcloH[59]>>, The size of the hips <<newcloB[59]>>) <a href="exec:numdres = 59 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 60 and newclo[60] = 1 or odetnewclo = 0 and newclo[60] = 1:'Clothing number of Fashionistas60 (Remaining strength <<newcloH[60]>>, The size of the hips <<newcloB[60]>>) <a href="exec:numdres = 60 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 61 and newclo[61] = 1 or odetnewclo = 0 and newclo[61] = 1:'Clothing number of Fashionistas61 (Remaining strength <<newcloH[61]>>, The size of the hips <<newcloB[61]>>) <a href="exec:numdres = 61 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 62 and newclo[62] = 1 or odetnewclo = 0 and newclo[62] = 1:'Clothing number of Fashionistas62 (Remaining strength <<newcloH[62]>>, The size of the hips <<newcloB[62]>>) <a href="exec:numdres = 62 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 63 and newclo[63] = 1 or odetnewclo = 0 and newclo[63] = 1:'Clothing number of Fashionistas63 (Remaining strength <<newcloH[63]>>, The size of the hips <<newcloB[63]>>) <a href="exec:numdres = 63 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 64 and newclo[64] = 1 or odetnewclo = 0 and newclo[64] = 1:'Clothing number of Fashionistas64 (Remaining strength <<newcloH[64]>>, The size of the hips <<newcloB[64]>>) <a href="exec:numdres = 64 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 65 and newclo[65] = 1 or odetnewclo = 0 and newclo[65] = 1:'Clothing number of Fashionistas65 (Remaining strength <<newcloH[65]>>, The size of the hips <<newcloB[65]>>) <a href="exec:numdres = 65 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 66 and newclo[66] = 1 or odetnewclo = 0 and newclo[66] = 1:'Clothing number of Fashionistas66 (Remaining strength <<newcloH[66]>>, The size of the hips <<newcloB[66]>>) <a href="exec:numdres = 66 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 67 and newclo[67] = 1 or odetnewclo = 0 and newclo[67] = 1:'Clothing number of Fashionistas67 (Remaining strength <<newcloH[67]>>, The size of the hips <<newcloB[67]>>) <a href="exec:numdres = 67 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 68 and newclo[68] = 1 or odetnewclo = 0 and newclo[68] = 1:'Clothing number of Fashionistas68 (Remaining strength <<newcloH[68]>>, The size of the hips <<newcloB[68]>>) <a href="exec:numdres = 68 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 69 and newclo[69] = 1 or odetnewclo = 0 and newclo[69] = 1:'Clothing number of Fashionistas69 (Remaining strength <<newcloH[69]>>, The size of the hips <<newcloB[69]>>) <a href="exec:numdres = 69 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 70 and newclo[70] = 1 or odetnewclo = 0 and newclo[70] = 1:'Clothing number of Fashionistas70 (Remaining strength <<newcloH[70]>>, The size of the hips <<newcloB[70]>>) <a href="exec:numdres = 70 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 71 and newclo[71] = 1 or odetnewclo = 0 and newclo[71] = 1:'Clothing number of Fashionistas71 (Remaining strength <<newcloH[71]>>, The size of the hips <<newcloB[71]>>) <a href="exec:numdres = 71 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 72 and newclo[72] = 1 or odetnewclo = 0 and newclo[72] = 1:'Clothing number of Fashionistas72 (Remaining strength <<newcloH[72]>>, The size of the hips <<newcloB[72]>>) <a href="exec:numdres = 72 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 73 and newclo[73] = 1 or odetnewclo = 0 and newclo[73] = 1:'Clothing number of Fashionistas73 (Remaining strength <<newcloH[73]>>, The size of the hips <<newcloB[73]>>) <a href="exec:numdres = 73 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 74 and newclo[74] = 1 or odetnewclo = 0 and newclo[74] = 1:'Clothing number of Fashionistas74 (Remaining strength <<newcloH[74]>>, The size of the hips <<newcloB[74]>>) <a href="exec:numdres = 74 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 75 and newclo[75] = 1 or odetnewclo = 0 and newclo[75] = 1:'Clothing number of Fashionistas75 (Remaining strength <<newcloH[75]>>, The size of the hips <<newcloB[75]>>) <a href="exec:numdres = 75 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 76 and newclo[76] = 1 or odetnewclo = 0 and newclo[76] = 1:'Clothing number of Fashionistas76 (Remaining strength <<newcloH[76]>>, The size of the hips <<newcloB[76]>>) <a href="exec:numdres = 76 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 77 and newclo[77] = 1 or odetnewclo = 0 and newclo[77] = 1:'Clothing number of Fashionistas77 (Remaining strength <<newcloH[77]>>, The size of the hips <<newcloB[77]>>) <a href="exec:numdres = 77 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 78 and newclo[78] = 1 or odetnewclo = 0 and newclo[78] = 1:'Clothing number of Fashionistas78 (Remaining strength <<newcloH[78]>>, The size of the hips <<newcloB[78]>>) <a href="exec:numdres = 78 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 79 and newclo[79] = 1 or odetnewclo = 0 and newclo[79] = 1:'Clothing number of Fashionistas79 (Remaining strength <<newcloH[79]>>, The size of the hips <<newcloB[79]>>) <a href="exec:numdres = 79 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 80 and newclo[80] = 1 or odetnewclo = 0 and newclo[80] = 1:'Clothing number of Fashionistas80 (Remaining strength <<newcloH[80]>>, The size of the hips <<newcloB[80]>>) <a href="exec:numdres = 80 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 81 and newclo[81] = 1 or odetnewclo = 0 and newclo[81] = 1:'Clothing number of Fashionistas81 (Remaining strength <<newcloH[81]>>, The size of the hips <<newcloB[81]>>) <a href="exec:numdres = 81 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 82 and newclo[82] = 1 or odetnewclo = 0 and newclo[82] = 1:'Clothing number of Fashionistas82 (Remaining strength <<newcloH[82]>>, The size of the hips <<newcloB[82]>>) <a href="exec:numdres = 82 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 83 and newclo[83] = 1 or odetnewclo = 0 and newclo[83] = 1:'Clothing number of Fashionistas83 (Remaining strength <<newcloH[83]>>, The size of the hips <<newcloB[83]>>) <a href="exec:numdres = 83 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 84 and newclo[84] = 1 or odetnewclo = 0 and newclo[84] = 1:'Clothing number of Fashionistas84 (Remaining strength <<newcloH[84]>>, The size of the hips <<newcloB[84]>>) <a href="exec:numdres = 84 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 85 and newclo[85] = 1 or odetnewclo = 0 and newclo[85] = 1:'Clothing number of Fashionistas85 (Remaining strength <<newcloH[85]>>, The size of the hips <<newcloB[85]>>) <a href="exec:numdres = 85 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 86 and newclo[86] = 1 or odetnewclo = 0 and newclo[86] = 1:'Clothing number of Fashionistas86 (Remaining strength <<newcloH[86]>>, The size of the hips <<newcloB[86]>>) <a href="exec:numdres = 86 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 87 and newclo[87] = 1 or odetnewclo = 0 and newclo[87] = 1:'Clothing number of Fashionistas87 (Remaining strength <<newcloH[87]>>, The size of the hips <<newcloB[87]>>) <a href="exec:numdres = 87 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 88 and newclo[88] = 1 or odetnewclo = 0 and newclo[88] = 1:'Clothing number of Fashionistas88 (Remaining strength <<newcloH[88]>>, The size of the hips <<newcloB[88]>>) <a href="exec:numdres = 88 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 89 and newclo[89] = 1 or odetnewclo = 0 and newclo[89] = 1:'Clothing number of Fashionistas89 (Remaining strength <<newcloH[89]>>, The size of the hips <<newcloB[89]>>) <a href="exec:numdres = 89 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 90 and newclo[90] = 1 or odetnewclo = 0 and newclo[90] = 1:'Clothing number of Fashionistas90 (Remaining strength <<newcloH[90]>>, The size of the hips <<newcloB[90]>>) <a href="exec:numdres = 90 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 91 and newclo[91] = 1 or odetnewclo = 0 and newclo[91] = 1:'Clothing number of Fashionistas91 (Remaining strength <<newcloH[91]>>, The size of the hips <<newcloB[91]>>) <a href="exec:numdres = 91 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 92 and newclo[92] = 1 or odetnewclo = 0 and newclo[92] = 1:'Clothing number of Fashionistas92 (Remaining strength <<newcloH[92]>>, The size of the hips <<newcloB[92]>>) <a href="exec:numdres = 92 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 93 and newclo[93] = 1 or odetnewclo = 0 and newclo[93] = 1:'Clothing number of Fashionistas93 (Remaining strength <<newcloH[93]>>, The size of the hips <<newcloB[93]>>) <a href="exec:numdres = 93 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 94 and newclo[94] = 1 or odetnewclo = 0 and newclo[94] = 1:'Clothing number of Fashionistas94 (Remaining strength <<newcloH[94]>>, The size of the hips <<newcloB[94]>>) <a href="exec:numdres = 94 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 95 and newclo[95] = 1 or odetnewclo = 0 and newclo[95] = 1:'Clothing number of Fashionistas95 (Remaining strength <<newcloH[95]>>, The size of the hips <<newcloB[95]>>) <a href="exec:numdres = 95 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 96 and newclo[96] = 1 or odetnewclo = 0 and newclo[96] = 1:'Clothing number of Fashionistas96 (Remaining strength <<newcloH[96]>>, The size of the hips <<newcloB[96]>>) <a href="exec:numdres = 96 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 97 and newclo[97] = 1 or odetnewclo = 0 and newclo[97] = 1:'Clothing number of Fashionistas97 (Remaining strength <<newcloH[97]>>, The size of the hips <<newcloB[97]>>) <a href="exec:numdres = 97 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 98 and newclo[98] = 1 or odetnewclo = 0 and newclo[98] = 1:'Clothing number of Fashionistas98 (Remaining strength <<newcloH[98]>>, The size of the hips <<newcloB[98]>>) <a href="exec:numdres = 98 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 99 and newclo[99] = 1 or odetnewclo = 0 and newclo[99] = 1:'Clothing number of Fashionistas99 (Remaining strength <<newcloH[99]>>, The size of the hips <<newcloB[99]>>) <a href="exec:numdres = 99 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 100 and newclo[100] = 1 or odetnewclo = 0 and newclo[100] = 1:'Clothing number of Fashionistas100 (Remaining strength <<newcloH[100]>>, The size of the hips <<newcloB[100]>>) <a href="exec:numdres = 100 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 101 and newclo[101] = 1 or odetnewclo = 0 and newclo[101] = 1:'Clothing number of Fashionistas101 (Remaining strength <<newcloH[101]>>, The size of the hips <<newcloB[101]>>) <a href="exec:numdres = 101 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 102 and newclo[102] = 1 or odetnewclo = 0 and newclo[102] = 1:'Clothing number of Fashionistas102 (Remaining strength <<newcloH[102]>>, The size of the hips <<newcloB[102]>>) <a href="exec:numdres = 102 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 103 and newclo[103] = 1 or odetnewclo = 0 and newclo[103] = 1:'Clothing number of Fashionistas103 (Remaining strength <<newcloH[103]>>, The size of the hips <<newcloB[103]>>) <a href="exec:numdres = 103 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 104 and newclo[104] = 1 or odetnewclo = 0 and newclo[104] = 1:'Clothing number of Fashionistas104 (Remaining strength <<newcloH[104]>>, The size of the hips <<newcloB[104]>>) <a href="exec:numdres = 104 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 105 and newclo[105] = 1 or odetnewclo = 0 and newclo[105] = 1:'Clothing number of Fashionistas105 (Remaining strength <<newcloH[105]>>, The size of the hips <<newcloB[105]>>) <a href="exec:numdres = 105 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 106 and newclo[106] = 1 or odetnewclo = 0 and newclo[106] = 1:'Clothing number of Fashionistas106 (Remaining strength <<newcloH[106]>>, The size of the hips <<newcloB[106]>>) <a href="exec:numdres = 106 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 107 and newclo[107] = 1 or odetnewclo = 0 and newclo[107] = 1:'Clothing number of Fashionistas107 (Remaining strength <<newcloH[107]>>, The size of the hips <<newcloB[107]>>) <a href="exec:numdres = 107 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 108 and newclo[108] = 1 or odetnewclo = 0 and newclo[108] = 1:'Clothing number of Fashionistas108 (Remaining strength <<newcloH[108]>>, The size of the hips <<newcloB[108]>>) <a href="exec:numdres = 108 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 109 and newclo[109] = 1 or odetnewclo = 0 and newclo[109] = 1:'Clothing number of Fashionistas109 (Remaining strength <<newcloH[109]>>, The size of the hips <<newcloB[109]>>) <a href="exec:numdres = 109 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 110 and newclo[110] = 1 or odetnewclo = 0 and newclo[110] = 1:'Clothing number of Fashionistas110 (Remaining strength <<newcloH[110]>>, The size of the hips <<newcloB[110]>>) <a href="exec:numdres = 110 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 111 and newclo[111] = 1 or odetnewclo = 0 and newclo[111] = 1:'Clothing number of Fashionistas111 (Remaining strength <<newcloH[111]>>, The size of the hips <<newcloB[111]>>) <a href="exec:numdres = 111 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 112 and newclo[112] = 1 or odetnewclo = 0 and newclo[112] = 1:'Clothing number of Fashionistas112 (Remaining strength <<newcloH[112]>>, The size of the hips <<newcloB[112]>>) <a href="exec:numdres = 112 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 113 and newclo[113] = 1 or odetnewclo = 0 and newclo[113] = 1:'Clothing number of Fashionistas113 (Remaining strength <<newcloH[113]>>, The size of the hips <<newcloB[113]>>) <a href="exec:numdres = 113 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 114 and newclo[114] = 1 or odetnewclo = 0 and newclo[114] = 1:'Clothing number of Fashionistas114 (Remaining strength <<newcloH[114]>>, The size of the hips <<newcloB[114]>>) <a href="exec:numdres = 114 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 115 and newclo[115] = 1 or odetnewclo = 0 and newclo[115] = 1:'Clothing number of Fashionistas115 (Remaining strength <<newcloH[115]>>, The size of the hips <<newcloB[115]>>) <a href="exec:numdres = 115 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 116 and newclo[116] = 1 or odetnewclo = 0 and newclo[116] = 1:'Clothing number of Fashionistas116 (Remaining strength <<newcloH[116]>>, The size of the hips <<newcloB[116]>>) <a href="exec:numdres = 116 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 117 and newclo[117] = 1 or odetnewclo = 0 and newclo[117] = 1:'Clothing number of Fashionistas117 (Remaining strength <<newcloH[117]>>, The size of the hips <<newcloB[117]>>) <a href="exec:numdres = 117 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 118 and newclo[118] = 1 or odetnewclo = 0 and newclo[118] = 1:'Clothing number of Fashionistas118 (Remaining strength <<newcloH[118]>>, The size of the hips <<newcloB[118]>>) <a href="exec:numdres = 118 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 119 and newclo[119] = 1 or odetnewclo = 0 and newclo[119] = 1:'Clothing number of Fashionistas119 (Remaining strength <<newcloH[119]>>, The size of the hips <<newcloB[119]>>) <a href="exec:numdres = 119 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 120 and newclo[120] = 1 or odetnewclo = 0 and newclo[120] = 1:'Clothing number of Fashionistas120 (Remaining strength <<newcloH[120]>>, The size of the hips <<newcloB[120]>>) <a href="exec:numdres = 120 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 121 and newclo[121] = 1 or odetnewclo = 0 and newclo[121] = 1:'Clothing number of Fashionistas121 (Remaining strength <<newcloH[121]>>, The size of the hips <<newcloB[121]>>) <a href="exec:numdres = 121 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 122 and newclo[122] = 1 or odetnewclo = 0 and newclo[122] = 1:'Clothing number of Fashionistas122 (Remaining strength <<newcloH[122]>>, The size of the hips <<newcloB[122]>>) <a href="exec:numdres = 122 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 123 and newclo[123] = 1 or odetnewclo = 0 and newclo[123] = 1:'Clothing number of Fashionistas123 (Remaining strength <<newcloH[123]>>, The size of the hips <<newcloB[123]>>) <a href="exec:numdres = 123 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 124 and newclo[124] = 1 or odetnewclo = 0 and newclo[124] = 1:'Clothing number of Fashionistas124 (Remaining strength <<newcloH[124]>>, The size of the hips <<newcloB[124]>>) <a href="exec:numdres = 124 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 125 and newclo[125] = 1 or odetnewclo = 0 and newclo[125] = 1:'Clothing number of Fashionistas125 (Remaining strength <<newcloH[125]>>, The size of the hips <<newcloB[125]>>) <a href="exec:numdres = 125 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 126 and newclo[126] = 1 or odetnewclo = 0 and newclo[126] = 1:'Clothing number of Fashionistas126 (Remaining strength <<newcloH[126]>>, The size of the hips <<newcloB[126]>>) <a href="exec:numdres = 126 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 127 and newclo[127] = 1 or odetnewclo = 0 and newclo[127] = 1:'Clothing number of Fashionistas127 (Remaining strength <<newcloH[127]>>, The size of the hips <<newcloB[127]>>) <a href="exec:numdres = 127 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 128 and newclo[128] = 1 or odetnewclo = 0 and newclo[128] = 1:'Clothing number of Fashionistas128 (Remaining strength <<newcloH[128]>>, The size of the hips <<newcloB[128]>>) <a href="exec:numdres = 128 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 129 and newclo[129] = 1 or odetnewclo = 0 and newclo[129] = 1:'Clothing number of Fashionistas129 (Remaining strength <<newcloH[129]>>, The size of the hips <<newcloB[129]>>) <a href="exec:numdres = 129 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 130 and newclo[130] = 1 or odetnewclo = 0 and newclo[130] = 1:'Clothing number of Fashionistas130 (Remaining strength <<newcloH[130]>>, The size of the hips <<newcloB[130]>>) <a href="exec:numdres = 130 & GT ''portnoi1'',''newclo''">take in</a>'
+	if odetnewclo = 1 and numdress ! 132 and newclo[132] = 1 or odetnewclo = 0 and newclo[132] = 1:'Gift Rex (Remaining strength <<newcloH[132]>>, The size of the hips <<newcloB[132]>>) <a href="exec:numdres = 132 & GT ''portnoi1'',''newclo''">take in</a>'
+
+	act 'Finish':gt'clener','start'
+end
+
+if $ARGS[0] = 'jeans':
+	cla
+
+	'<center><img src="images/ode/jeans<<numdres>>.jpg"></center>'
+	'(Remaining strength <<jeansH[numdres]>>, The size of the hips <<jeansB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if jeansB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			jeansB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'short':
+	cla
+	'<center><img src="images/ode/short<<numdres>>.jpg"></center>'
+	'(Remaining strength <<shortH[numdres]>>, The size of the hips <<shortB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if shortB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			shortB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'skirt':
+	cla
+	'<center><img src="images/ode/skirt<<numdres>>.jpg"></center>'
+	'(Remaining strength <<skirtH[numdres]>>, The size of the hips <<skirtB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if skirtB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			skirtB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'dress':
+	cla
+	'<center><img src="images/ode/dress<<numdres>>.jpg"></center>'
+	'(Remaining strength <<dressH[numdres]>>, The size of the hips <<dressB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if dressB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			dressB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'profi':
+	cla
+	'<center><img src="images/ode/profi<<numdres>>.jpg"></center>'
+	'(Remaining strength <<profiH[numdres]>>, The size of the hips <<profiB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if profiB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			profiB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'pants':
+	cla
+	'<center><img src="images/ode/pants<<numdres>>.jpg"></center>'
+	'(Remaining strength <<pantsH[numdres]>>, The size of the hips <<pantsB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if pantsB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			pantsB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'latex':
+	cla
+	'<center><img src="images/ode/latex<<numdres>>.jpg"></center>'
+	'(Remaining strength <<latexH[numdres]>>, The size of the hips <<latexB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if latexB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			latexB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'hooker':
+	cla
+	'<center><img src="images/ode/hooker<<numdres>>.jpg"></center>'
+	'(Remaining strength <<hookerH[numdres]>>, The size of the hips <<hookerB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if hookerB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			hookerB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'odekis':
+	cla
+	'<center><img src="images/ode/k<<numdres>>.jpg"></center>'
+	'(Remaining strength <<odekisH[numdres]>>, The size of the hips <<odekisB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if odekisB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			odekisB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'newclo':
+	cla
+	if numdres ! 132:
+		'<center><img src="images/ode/<<numdres>>.jpg"></center>'
+	else
+		'<center><img src="images/qwest/alter/Reks/newclo/8.jpg"></center>'
+	end
+	'(Remaining strength <<newcloH[numdres]>>, The size of the hips <<newcloB[numdres]>>)'
+
+	act 'To Top':gt'portnoi1','start'
+
+	if newcloB[numdres] ! bedra and money >= 500:
+		'You can take in for 500 RUB.'
+
+		act 'Take in':
+			newcloB[numdres] = bedra
+			money -= 500
+			gt'portnoi1','start'
+		end
+	end
+end
+--- portnoi1 ---------------------------------
+

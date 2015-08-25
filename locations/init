@@ -1,0 +1,134 @@
+# init
+!Calculation initiative
+!Be sure to check for mills
+!hod variable is responsible for who will attack
+!hod = 0 player attacks hod = 1 enemy attacks
+!<font color = red><<$name>> </font>
+
+if GedoMazo = 1 and stunV > 0:stunV = 0 & mannaV = mannaV - 1000 & '<font color = red><<$nameV>> with a deafening roar,, It allocates a large amount of energy which allows him to attack you again.</font>'
+
+initi = react*20/100
+initi = initi - dospehVes
+if initi < 0:initi = 0
+init = RAND(react-initi,react+initi) + initBonus
+initiV = reactV*20/100
+initiV = initiV - dospehVesV
+if initiV < 0:initiV = 0
+initV = RAND(reactV-initiV,reactV+initiV) + initBonusV
+
+if hodtime >= 3 and stun = 0 and stunV = 0 and initBonus = 0:
+	!the player has already attacked three times
+	'<font color = red><<$nameV>> I took the initiative</font>'
+
+	hod = 1
+	hodtime = 0
+	exit
+elseif hodtimeV >= 3 and stun = 0 and stunV = 0 and initBonusV = 0:
+	!the opponent three times already attacked
+	'<font color = green>You seized the initiative</font>'
+
+	hod = 0
+	hodtimeV = 0
+	exit
+end
+
+if stun = 0 and stunV = 0 and hodtime < 3 and hodtimeV < 3 or stun = 0 and stunV = 0 and initBonus > 0 or stun = 0 and stunV = 0 and initBonusV > 0:
+	!neither in the camp
+	if tuman = 0 and tumanV = 0:
+		!no fog
+		if init > initV:
+			!initiative tackler
+			'<font color = green>You took the initiative</font>'
+
+			hod = 0
+			hodtime = hodtime + 1
+			exit
+		elseif init < initV:
+			!the initiative has captured the enemy
+			'<font color = red><<$nameV>> He seized the initiative</font>'
+
+			hod = 1
+			hodtimeV = hodtimeV + 1
+			exit
+		elseif init = initV:
+			hod = RAND(0,1)
+			if hod = 0:'<font color = green>You hardly took the initiative</font>'
+			if hod = 1:'<font color = red><<$nameV>> hardly seized the initiative</font>'
+			exit
+		end
+	elseif tuman > 0:
+		!fog player
+		tuman = tuman - 1
+		initV = reactV-initiV
+
+		if init > initV:
+			!initiative tackler
+			'<font color = green>In your fog <<$nameV>> I do not have time for you, and you took the initiative</font>'
+
+			hod = 0
+			hodtime = hodtime + 1
+			exit
+		elseif init < initV:
+			!the initiative has captured the enemy
+			'<font color = red>Although your fog <<$nameV>> He seized the initiative</font>'
+
+			hod = 1
+			hodtimeV = hodtimeV + 1
+			exit
+		elseif init = initV:
+			hod = RAND(0,1)
+			if hod = 0:'<font color = green>You hardly seized the initiative in spite of your fog</font>'
+			if hod = 1:'<font color = red><<$nameV>> despite your fog still took the initiative</font>'
+			exit
+		end
+	elseif tumanV > 0:
+		!fog opponent
+		tumanV = tumanV - 1
+		init = react-initi
+
+		if init > initV:
+			!initiative tackler
+			'<font color = green>Despite the fog, You took the initiative</font>'
+
+			hod = 0
+			hodtime = hodtime + 1
+			exit
+		elseif init < initV:
+			!the initiative has captured the enemy
+			'<font color = red><<$nameV>> Using a mist easily captures initiative</font>'
+
+			hod = 1
+			hodtimeV = hodtimeV + 1
+			exit
+		elseif init = initV:
+			hod = RAND(0,1)
+			if hod = 0:'<font color = green>You hardly seized the initiative in spite of the fog</font>'
+			if hod = 1:'<font color = red><<$nameV>> Using a mist seized the initiative</font>'
+			exit
+		end
+	end
+end
+
+if stun > 0:
+	!player in the camp
+	stun = stun - 1
+	hod = 1
+	if tuman > 0:tuman = tuman - 1
+	if tumanV > 0:tumanV = tumanV - 1
+
+	'<font color = red>You can not move, and <<$nameV>> easy to seize the initiative</font>'
+
+	exit
+elseif stunV > 0:
+	!the enemy in the camp
+	stunV = stunV - 1
+	hod = 0
+	if tuman > 0:tuman = tuman - 1
+	if tumanV > 0:tumanV = tumanV - 1
+
+	'<font color = green><<$nameV>> It can not move and you can easily grab the initiative</font>'
+
+	exit
+end
+--- init ---------------------------------
+

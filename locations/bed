@@ -1,0 +1,369 @@
+# bed
+*P '3'
+if $ARGS[0] = 'start':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+	cla
+	clr
+	shour = 24 - hour
+	houserabrand = RAND(0,100)
+	housevorrand = RAND(0,200)
+	gs'stat'
+
+	if hour > 22 and houserabrand < 2 and houserab = 1 and houserabday ! day and son < 10 and tanhouse1 = 1:gt'bed','rab'
+	if hour > 22 and housevorrand = 0 and housrA = 1 and husband = 0:gt'bed','vor'
+
+	if nude = 0:'<center><img src="images/pics/bed.jpg"></center>'
+	if nude = 1:'<center><img src="images/pics/son.jpg"></center>'
+
+	'You`re lying on the bed. Alarm clock wound on <<timer>> hours, <<timerM>> minutes. (<<$budilnikInfo>>)'
+	if mop ! 1:'<b><font color = red>You need to wash off makeup before going to bed.</font></b>'
+
+	!if daystart < 10:''
+	!if daystart >= 10 and daystart < 30:''
+	!if daystart >= 30:''
+
+	if son > 10:
+		'Sleep is why you do not want.'
+		act 'Try to sleep':gt'bed2','dosip'
+	end
+
+	act 'Start the Service':gt'budilnik','start'
+
+	if son < 10:
+		act 'Undress and go to bed':gt'bed2'
+	end
+
+	if dildo > 0 and horny >= 50:
+		act 'Masturbate':
+			cla
+			*clr
+			minut += 30
+			mastr += 1
+			manna += 15
+			willpower += 15
+			vagina += 1
+
+			if husband > 0 and housrA = 1 and husbandrink ! 10:
+				if week > 5 or week < 6 and hour > 16:
+					cla
+					*clr
+					'<center><img src="images/img/hasb/m21.jpg"></center>'
+					'You sit down and enter his dildo pussy'
+
+					if hour > 22 or hour < 7:'<<$husName>> looking at you, obviously a little dumbfounded.'
+					if hour >= 7 and hour <= 22:'Once you get a taste of how the room included <<$husName>>'
+
+					if harakHusb = 0:
+						'"What are you doing expensive?" he asks.'
+						'"Sorry, honey, but I really need, and you were busy" you answer, while continuing to masturbate.'
+						'"And often you do that" he asks.'
+						'"Exactly, often, ass less, you want to see?" you ask'
+
+						if izvratH = 0:
+							husband -= 1
+							horny = 0
+							orgasm += 1
+
+							'"I`ll wait at the door until you`re done" he said, and went. You continue to satisfy itself rapidly, and soon finished.'
+
+							act 'Finish':gt'bed','start'
+						elseif izvratH = 1:
+							'"Well, I do not know" He hesitated.
+							"So you want" you said'
+
+							act 'Show':
+								cla
+								*clr
+								'<center><img src="images/img/hasb/m22.jpg"></center>'
+								'You pull out a dildo pussy and winking at her husband, insert a dildo in his anus. <<$husName>> closely watching how the dildo disappears in your ass and then reappears. You see his pants swell.'
+								'"Dear what are you-Anything else you want?" smiling you ask.'
+								'"You can join me?" he asked a little sheepishly.'
+
+								act 'Solve':
+									cla
+									*clr
+									analorgasm += 1
+									orgasm += 1
+									horny = 0
+
+									'<center><img src="images/img/hasb/m23.jpg"></center>'
+									'<<$husName>> He takes out a member and began to masturbate, this is not what you expected and at first you even felt a little sorry that he did not enter in you, and I began to masturbate, but then you start it even the beginning. You looked at her husband who masturbate looking at, as you drive the dildo his ass and is served, delight, you cried out and fell on the table, orgasm, dildo still sticking out of your ass. <<$husName>> furiously masturbate looking at you stretched out on the table, you removed the dildo from ass and started licking his, Despite her husband`s eyes, from such a spectacle it once discharged to the floor. You reached out to him sticking out his lips, A moment later he had passionately kissed you.'
+
+									act 'Finish':gt'bed','start'
+								end
+							end
+						end
+					elseif harakHusb = 1:
+						'"That`s number and I mean you do not have enough?" he asks.'
+						'"Sorry, honey, but I really need, and you were busy" you answer, while continuing to masturbate.'
+						'"Well, then show me that you know how I look" he says.'
+						'"And how do I do it in the ass, too, show?" you ask'
+
+						if izvratH = 0:
+							husband += 1
+							husbizvradd += 1
+							horny = 0
+							orgasm += 1
+
+							'"No, do not, and this is enough" he said, and sat down on a chair began to watch. You continue to satisfy itself rapidly, and soon finished in front of husband. <<$husName>> I stood up and began to applaud "Bravo, as an encore once more?" he said laughing.'
+							'"For such a wonderful audience anything, but only after the intermission," You laughed. <<$husName>> I helped you to get off the table.'
+
+							act 'Finish':gt'bed','start'
+						elseif izvratH = 1:
+							husband += 1
+
+							'"And how is it, be sure to Demonstrate" he said.'
+							'"Whatever you want" you said'
+
+							act 'Show':
+								cla
+								*clr
+								'<center><img src="images/img/hasb/m22.jpg"></center>'
+								'You pull out a dildo pussy and winking at her husband, insert a dildo in his anus. <<$husName>> closely watching how the dildo disappears in your ass and then reappears. You see his pants swell.'
+								'"Dear what are you-Anything else you want?" smiling you ask.'
+								'"I do not just want but do" he said, unbuttoning his pants and exposing a member to your face.'
+
+								act 'Take in the mouth':
+									cla
+									*clr
+									'<center><img src="images/img/hasb/m24.jpg"></center>'
+									'You are a little bow of his lips flaccid penis and starts sucking, continuing to drive the dildo his anus. When he finally got stronger member, <<$husName>> I stopped you "Well, now I`ll take this hole."'
+
+									act 'Substitute the ass':
+										picrand = 89
+										gt'sex','anal'
+									end
+								end
+							end
+						end
+					elseif harakHusb = 2:
+						'"What a hole combed?" he asks.'
+						'"I`m sorry dear, but I really need, and you were busy" you answer, while continuing to masturbate.'
+
+						if izvratH = 0:
+							husband += 1
+							husbizvradd += 1
+
+							'"Well then, open your mouth" he said pulling member and roughly pushing it into your mouth, He gripped you by the hair and fucked in the mouth, saying that-you did not stop masturbating. Soon, he was tired of your mouth "Now take out the rubber hole of rubbish, now I`ll fuck you"'
+
+							act 'Extend the legs':
+								picrand = 89
+								gt'sex','vag'
+							end
+						elseif izvratH = 1:
+							husband += 1
+							SUB += 1
+
+							'"Embed this crap yourself in the ass and mash, I soon his popolzuyutsya, and while pine Quick" he said, pulling member. You will quickly rearrange pussy dildo from anus and humbly open your mouth.'
+
+							act 'Take in the mouth':
+								cla
+								*clr
+								'<center><img src="images/img/hasb/m24.jpg"></center>'
+								'You are a little bow of his lips flaccid penis and starts sucking, continuing to drive the dildo his anus. When he finally got stronger member, <<$husName>> I stopped you "All, cup your point is now I`ll ass flare."'
+
+								act 'Substitute the ass':
+									picrand = 89
+									gt'sex','anal'
+								end
+							end
+						end
+					end
+				else
+					horny = 0
+					orgasm += 1
+
+					'<center><img src="images/pics/mastr.gif"></center>'
+					'You dildo stuck to the floor and planted a wet pussy on him, actively jumping on a dildo you will quickly feel the excitement and orgasm you covered.'
+
+					act 'Breathe':gt'bed','start'
+				end
+			else
+				horny = 0
+				orgasm += 1
+
+				'<center><img src="images/pics/mastr.gif"></center>'
+				'You dildo stuck to the floor and planted a wet pussy on him, actively jumping on a dildo you will quickly feel the excitement and orgasm you covered.'
+
+				act 'Breathe':gt'bed','start'
+			end
+		end
+	end
+
+	act 'Off to bed':gt'bed','fin'
+	act 'Try to sleep':gt'bed2','dosip'
+
+	if zoo > 6 and housrA = 1 and dogday ! day and houserabrand < 4:gt'bed1','sog1'
+end
+
+if $ARGS[0] = 'fin':
+	cla
+	gt $locM, $metkaM
+	!SAVEGAME 'avtosave.sav'
+!'
+	if housr = 1 and housrA = 1:
+		if nude = 0:$nude = 'In the corridor'
+		if nude = 1:$nude = 'Get dressed'
+		housrA = 0
+		gt'bedr'
+	end
+
+	if houseob = 1:
+		houseob = 0
+		gt'obroom','start'
+	end
+
+	if tanhouse1 = 1:
+		tanhouse1 = 0
+		gt'spalnya'
+	end
+'
+end
+
+if $ARGS[0] = 'rab':
+	cla
+	*clr
+	minut += 120
+	houserabday = day
+
+	'<center><img src="images/img/th/r0.jpg"></center>'
+	'Once you go to bed as your room comes hostess, "That bitch was going to bed?" she says with a threshold.'
+	'"Yes" you answer.'
+	'"Yes, who?" she continues.'
+	'"Yes, Mrs." answer you and sit on the bed, she was drunk and barely standing on his feet, and in the hands of a bottle of wine, from which it often takes a sip.'
+	'"That`s better, but today you have to be punished" She lifts up her skirt and she jumps out of the strap. "Suck" she commands.'
+
+	act 'Take in the mouth':
+		cla
+		*clr
+		SUB += 2
+		lesbian += 1
+		if analplugIN = 1:analplugIN = 0
+		if mop ! 1:mop = 0
+
+		'<center><img src="images/img/th/r1.jpg"></center>'
+		'You have a strap in his mouth and began to suck it, not the taste of rubber gives you pleasure and you did it without enthusiasm. The hostess, though she was drunk, but well see, that you have not tried, Then she began podmahivat your movements to the beat, will drive it deeper into your mouth. You have become a step back on and it did not like.'
+		'"Oh damn stubborn, Lie down on the bed quickly" With that, she strongly pushed you in Bed.'
+
+		act 'Lie':
+			cla
+			*clr
+			'<center><img src="images/img/th/r2.jpg"></center>'
+			'You lay down on the bed, and she climbed on top and you kneeling over you, You grabbed her head and force her mouth planted on the strap. You tried to pull away, but it was useless, her hands tightly holding your head. She went on to rape your mouth, you barely caught the moment that-to get air, and she thrust it deeper and deeper, eventually he began to slip in your throat, and breathe it became absolutely nothing. When you`re starting to lose consciousness, she took it out of your throat and you passes to one side, wheezing inhaled.'
+			'"And now proceed to penalty, Arise cancer" she said. "And what if it was" We think you, but say the rumor did not.'
+
+			act 'Stand in the position':
+				cla
+				*clr
+				anal += 1
+
+				'<center><img src="images/img/th/r3.jpg"></center>'
+				'You get up on all fours on the bed. "But this is unnecessary" says the hostess and erases your saliva with strap, "You also need to be punished, and not to encourage. Spreading ass."'
+				'Realizing that you have to, you dilute the buttocks with his hands and try to relax your ass, but as you have not tried, pain pierces your body, when she pushes with a force strap you in the ass and not having to get used to your ass is gaining crazy pace, you let your buttocks and grabs in a blanket with his hands and teeth. Tears poured from her eyes, you whine, but she still continues, Finally a little tired, it lowers the tempo and asks "Well it hurts."'
+				'"Yes, Ms., It hurts a lot" through tears you say.'
+				'"Well, I`m good today, grease the bit" she says and begins to pour the wine from the bottle on the strap and your ass.'
+				'"Thank you, Ms." you say, and it is again gaining momentum. First you become a little easier, but then the wine is dry and start to dry your skin, you had to manage so much hurt, you`ve already cried loudly. "Why did not anyone will not prevent it" We think you, After all, your cries have been heard not only in the apartment, but also around the entrance, but no one came, nor Tanya, nor Nikolai. Finally she was tired, and pulling the strap out of the room without saying anything. You collapsed on the bed and whined, your ass burned with fire, and you were afraid to even move, after spending an hour so you fall asleep.'
+
+				act 'Sleep':gt'bed2'
+			end
+		end
+	end
+
+	if DOM > 20:
+		act 'Takeout':
+			cla
+			*clr
+			DOM += 1
+			lesbian += 1
+			orgasm += 1
+			houserab = 2
+
+			'<center><img src="images/img/th/r4.jpg"></center>'
+			'"No" you answer.'
+			'"Are you syavka vyaknula, suck alive is not become worse" She started up.'
+			'"No" again the answer you.'
+			'"Well all, you yourself asked for it" she cried and waved, about to hit you, you did not wait for punch and kick her in the stomach.'
+			'"Bitch" she moaned, bent in half. And then you have suffered, You jumped out of bed and grabbed her head hit a knee to the face, She flew into the corner of the room, but you were not satisfied, remembering the taste of her dirty boots and sneakers, you have up to her, They began to push it in his mouth, When you could not shove it in its entirety, you threw sneakers aside and grabbed her by the hair yanked from the floor and tossed on the bed. She lay on the bed covering her face with her hands, You jumped on the bed and unfolded her face sat on the top of it. "Lick bitch, lick" you yell, She tried to throw you, but nothing happened, you sat straight in her face, continuing to yell that-she licked, soon you will feel her tongue on her pussy, but you did not care, you fidgeting on her face increasing pace, Soon you began to get excited. She did not resist his tongue and tried to catch him your pussy, terevshuyusya furiously on her face. You start to like her obedience and you more excited thinking about it that you nasiluete, you even start to think about what-Strap to wear it and have fun with it, how you became a cover orgasm, you shrank his crotch in her face and finished. When you finally got off her, All her face was covered by your secretions, she quietly got out of bed, He straightened his clothes and left the room leaving you goodbye "Creature". She obviously did not forget, Now you should be careful, who knows what she has in mind.'
+
+			act 'Breathe':gt'bed','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'vor':
+	cla
+	*clr
+	minut += 60
+
+	'<center><img src="images/img/spaln/g0.jpg"></center>'
+	'You lay down on the bed, when he heard a sound in the hallway. Once you decide to get into the room to see how two masked men ran, You do not have time to open his mouth like a knife to your throat appeared. "Only female piskni, prirezhu." croaked one. They tied your hands and one went to search the apartment, and the second was to guard you. He sat and looked carefully to you, then he took the knife and began to drive them on your body "What, frightfully?" he asked, having decided that it is better you keep quiet, you did not answer and looked downcast gaze at the floor. "I see that scary" He grinned. Then he started to feel you, You have tried to move away, but the knife was back in your throat "Sit still bitch, until the pen is not planted" he croaked, and continued to feel you. Finally he returned to the second "All we bring down here" he said.'
+	'"Wait let the pacifier Remember, See what juicy" I said, sitting with you,'
+
+	if vnesh >= 30:
+		guy += 2
+		bj += 1
+		sex += 1
+		rape += 1
+
+		'"What, savory nipple, even when this happen to fuck" He said first.'
+
+		act 'Plead':
+			cla
+			*clr
+			minut += 30
+
+			'<center><img src="images/img/spaln/g1.jpg"></center>'
+			'You shrank in horror, "Well nipple get up on his knees and opens her mouth, Yes, see, kosneshsya teeth, from ear to ear throat shall open" He said second pulling member. You started to beg you not to touch, but received a slap knelt. He poked a member of your lips, You reluctantly opened his mouth and then turned his penis in your mouth, clenched hands your head, he began to fuck you in the mouth, for the second, too, I did, Then they tried to shove into your mouth both members, but decided, that their members will relate to each other, and that in their opinion, even if they are in the female`s mouth, blue smacks, back to the first option and continued to rape your mouth turns. All event was to cause you disgust, and that was the first couple of minutes, but then you are surprised to find yourself, that their hands are now simply lie on your head, and all the movements you make for yourself and are actively working language.'
+			'"Let`s get up cancer" commanded one.'
+
+			act 'Up':
+				cla
+				*clr
+				picrand = 38
+				orgasm += 1
+
+				'<center><img src="images/img/spaln/g2.jpg"></center>'
+				'You got up and bent over one of them got up from behind and put your dick pussy, I went inside. "Yes, it all flows, Listen Gray that bitch like" he said.'
+				'"Mouth Shut" growled at him a second, inserting a member into your mouth. They continued to rape you on both sides, but you are overwhelmed by a desire to, You were cancer related hands behind their backs and two strangers were you. You diligently podmahivat one second while sucking dick suddenly darkened in the eyes, the body ran a nice shiver and you huddled in orgasm. The one that had pulled out a member of your mouth "What`s with this bitch, her epilepsy" he cried. "Yes, no, I told it like that, bitch finished." said second. They unleashed your hands "Let`s see what it can do with his hands untied" said one.'
+
+				act 'Continue':xgt'sexdvoe','var'
+			end
+		end
+	elseif vnesh < 30:
+		'"I said Valim" He repeated the first "And fall it close" he added. The second did not argue and took the clothes from your closet stuffed into your mouth. "If earlier than half an hour vylezesh, do not live" He said first and they have gone. You will not have to wait half an hour and began to try to break free, well that the nodes they really did not know how to knit and soon you managed to untie'
+
+		act 'Assess the damage':gt'bed','vorend'
+	end
+end
+
+if $ARGS[0] = 'vorend':
+	cla
+	*clr
+
+	if remsitr = 0:'<center><img src="images/pic/sitr.jpg"></center>'
+	if remsitr = 1:'<center><img src="images/pic/sitr2.jpg"></center>'
+	'When it was over, you pass through the apartment to see what was lost.'
+
+	if stolmoney > 0:
+		stolmoney = 0
+
+		'They took <<stolmoney>> rubles from the table.'
+	end
+
+	if money > 0:
+		money = 0
+		'They took <<money>> rubles that you were with him.'
+	end
+
+	if komp = 1:
+		'They took a laptop.'
+		komp = 0
+	end
+
+	gs'stat'
+
+	act 'Finish':gt'sitr'
+end
+--- bed ---------------------------------
+

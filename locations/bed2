@@ -1,0 +1,125 @@
+# bed2
+if $ARGS[0] = 'dosip':
+	dosip = 1
+else
+	dosip = 0
+end
+
+if disable_autosave = 0:
+	if StoryLine = 0:
+		SAVEGAME 'autosave.sav'
+	else
+		SAVEGAME 'autosave_alt<<day>>.sav'
+	end
+end
+
+notathomesleep+=1
+nude = 1
+odedosna = numdress
+numdress = 0
+health = health + 5
+hapri = 0
+InSleep = 1
+cloth_vid = 0
+
+'<center><img src="images/pics/son.jpg"></center>'
+if analplugIN = 1:analplugIN = 0 & 'Before going to bed, you took out a butt plug.'
+if vibratorIN = 1:vibratorIN = 0 & 'Before going to bed, you took out a vibrator.'
+if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
+
+slep = RAND(0,10)
+if StoryLine = 0:slep = 0
+if slep = 0:$slep = 'do not dream'
+if slep = 1:$slep = 'What dream is not clear images from the past'
+if slep = 2:$slep = 'dreaming moon looking at the world with his one eye bloody'
+if slep = 3:$slep = 'dream that you are a man again'
+if slep = 4:$slep = 'do not dream'
+if slep = 5:$slep = 'do not dream'
+if slep = 6:$slep = 'do not dream'
+if slep = 7:$slep = 'do not dream'
+if slep = 8:$slep = 'do not dream'
+if slep = 9:$slep = 'do not dream'
+if slep = 10:$slep = 'do not dream'
+'You sleep and you <<$slep>>.'
+
+:loopson
+clr
+cls
+minut = minut + 1
+stime = stime + 1
+if stime = 60:stime = 0 & son = son + 3
+gs'stat'
+
+if hour = timer and minut = timerM and budilnikOn = 1:
+	manna = manna - 10
+
+	'Ringing Service'
+
+	if daystart < 10 and StoryLine = 0:'My first thought was you wake up "Damn. It is not a dream, Now I`m really a woman."'
+	if daystart >= 10 and daystart < 30 and StoryLine = 0:'You`re a little sleepy stare in amazement at his female body.'
+
+	act 'Get out of bed and get dressed (15 minutes)':
+		cla
+		numdress = odedosna
+		InSleep = 0
+		minut += 15
+		tanga = 1
+		nude = 0
+		gt'bed','fin'
+	end
+	act 'Off to bed':
+		cla
+		InSleep = 0
+		gt'bed','fin'
+	end
+	act 'Try to sleep':gt'bed2','dosip'
+elseif son > 23 and dosip = 0:
+	manna = manna - 10
+
+	'You slept'
+
+	if daystart < 10 and StoryLine = 0:'My first thought was you wake up "Damn. It is not a dream, Now I`m really a woman."'
+	if daystart >= 10 and daystart < 30 and StoryLine = 0:'You`re a little sleepy stare in amazement at his female body.'
+
+	act 'Get out of bed and get dressed (15 minutes)':
+		cla
+		numdress = odedosna
+		InSleep = 0
+		minut += 15
+		tanga = 1
+		nude = 0
+		gt'bed','fin'
+	end
+	act 'Off to bed':
+		cla
+		InSleep = 0
+		gt'bed','fin'
+	end
+	act 'Try to sleep':gt'bed2','dosip'
+elseif son > 47 and dosip = 1:
+	manna = manna - 10
+	dosip = 0
+	son = son - 24
+
+	'You slept'
+
+	act 'Get out of bed and get dressed (15 minutes)':
+		cla
+		numdress = odedosna
+		InSleep = 0
+		minut += 15
+		tanga = 1
+		nude = 0
+		gt'bed','fin'
+	end
+	act 'Off to bed':
+		cla
+		InSleep = 0
+		gt'bed','fin'
+	end
+	act 'Try to sleep':gt'bed2','dosip'
+else
+	jump 'loopson'
+end
+--- bed2 ---------------------------------
+

@@ -1,0 +1,52 @@
+# Gresep
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+
+'<center><H4>Reception</H4></center>'
+'<center><img src="images/pic/Gotel.jpg"></center>'
+'Behind the counter is a cute brunette.'
+
+if GotelWork = 0 and GotelRoom = 0:
+	if BeInOtel < 10:
+		'She smiles at you and asks "You want a room? 500 rubles per day."'
+	elseif BeInOtel >= 10:
+		'She slyly smiling at you and asks "You want a room? 500 rubles per day. Or are you here for another case?"'
+	end
+
+!'
+	if money >= 500:
+		act 'Pay room':
+			cls
+			money -= 500
+			Goteldaytot = daystart+1
+			GotelRoom = 1
+			gs'stat'
+
+			'You pay at the hotel.'
+
+			act 'Move away':gt'Gotel'
+		end
+	end
+'
+
+	act 'Ask job':
+		cls
+		if GermanQW = 0:GermanQW = 1
+		gs'stat'
+
+		'You asked the girl working at the hotel. She shrugged, "Hiring workers engaged innkeeper German Leonidovich, it is mainly in the hotel with 12 to 13."'
+
+		act 'Move away':gt'Gotel'
+	end
+end
+
+act 'Move away':gt'Gotel'
+
+if GotelRoom > 0:
+	act 'Go into the room':gt'Gotelroom'
+end
+--- Gresep ---------------------------------
+

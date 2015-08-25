@@ -1,0 +1,151 @@
+# volley
+minut += 30
+gs'stat'
+
+if volltime = 0:
+	'The teams took to the field and start playing.'
+
+	if volleysostav = 1:'<center><img src="images/qwest/alter/volley/game3.jpg"></center>'&'You are sitting on the bench watching how your team plays.'
+	if volleysostav = 2:
+		'<center><img src="images/qwest/alter/volley/game4.jpg"></center>'
+		'Mash you ran on a platform with teammates.'
+		poverkomand -= 100
+		poverkomand += volleyboll
+	end
+
+	poverkomandV = RAND(500,1500)
+	if poverkomand > poverkomandV:
+		volpoint += 1
+
+		'Your team plays a team opponents.'
+	elseif poverkomand = poverkomandV:
+		volpoint += 1
+		volpointv += 1
+
+		'The scales range in one direction, then the other, obviously teams are equal in force.'
+	elseif poverkomand < poverkomandV:
+		volpointv += 1
+
+		'Team beats rivals your team.'
+	end
+
+	act 'Further':volltime = 1 & gt $curloc
+elseif volltime = 1:
+	'There was a break, and both teams have a rest.'
+	'At half-time coach of speech. '
+	if poverkomand > poverkomandV: 
+		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener6.jpg"></center>'
+		'About, that you can not relax,  though that win still need to be focused and not let the opponent take the initiative.'
+	elseif poverkomand = poverkomandV:	
+		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener1.jpg"></center>'
+		'About, a draw is not the result, which he expected to continue, we need to increase the pressure. And it is collected and tougher. '
+	elseif poverkomand < poverkomandV:	
+		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener2.jpg"></center>'
+		'About, that lost the first time is bad, but it`s not a disaster, you need to pack up and slapped them on their asses. And try to win the second half.'
+	end
+
+	if volleysostav = 1:
+		'You are sitting on the bench.'
+
+		act 'Asks play':
+			cls
+			gs'stat'
+
+			trenereparand = RAND(0,80)+dobav+seealko
+			seealko=0
+			if trenerepa >= trenereparand:
+				volleysostav = 2
+				dom += 1
+				poverkomand -= 100
+				poverkomand += volleyboll
+
+				'The coach agreed to release you on the field.'
+
+				act 'Further':volltime = 2 & gt $curloc
+			else
+				'You have been asking the coach to play, but he shook his head and went on to explain the strategy of the girls.'
+
+				act 'Further':volltime = 2 & gt $curloc
+			end
+		end
+	end
+
+	act 'Further':volltime = 2 & gt $curloc
+elseif volltime = 2:
+	*clr & cla
+	'<center><img src="images/qwest/alter/volley/game5.jpg"></center>'
+	'The break is over and the team began to play again.'
+
+	if volleysostav = 1:
+		'You are sitting on the bench watching how your team plays.'
+	end
+
+	if poverkomand > poverkomandV:
+		volpoint += 1
+
+		'Your team plays a team opponents.'
+
+		if volleysostav = 2:
+			if volpointv > 0:
+				trenerepa += 10
+			end
+		end
+	elseif poverkomand = poverkomandV:
+		volpoint += 1
+		volpointv += 1
+
+		'The scales range in one direction, then the other, obviously teams are equal in force.'
+
+		if volleysostav = 2:
+			if volpointv > 0:
+				trenerepa += 5
+			end
+		end
+	elseif poverkomand < poverkomandV:
+		volpointv += 1
+
+		'Team beats rivals your team.'
+
+		if volleysostav = 2:
+			if volpoint > 0:
+				trenerepa -= 10
+			end
+		end
+	end
+
+	act 'Further':volltime = 3 & gt $curloc
+elseif volltime = 3:
+	*clr & cla
+	volsesongame += 1
+
+	'Final whistle.'
+
+	if volpoint > volpointv:
+		volsesonwin += 1
+		*clr
+		'<center><img src="images/qwest/alter/volley/game6.jpg"></center>'
+
+		'Your team won.'
+	elseif volpoint = volpointv:
+		volsesondraw += 1
+		*clr
+		'<center><img src="images/qwest/alter/volley/game7.jpg"></center>'
+
+		'Draw.'
+	elseif volpoint < volpointv:
+		volsesonloss += 1
+		*clr
+		'<center><img src="images/qwest/alter/volley/game8.jpg"></center>'
+		'Your team lost.'
+	end
+
+	if volleysostav = 2:volleysostav = 1 & poverkomand -= volleyboll & poverkomand += 110
+	volpoint = 0
+	volpointv = 0
+    if trener_Speak=>9:volleysostav = 2
+
+	act 'Escape':gt'gdksport'
+	act 'Go to coaching':gt'Voltrener'
+end
+--- volley ---------------------------------
+

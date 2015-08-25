@@ -1,0 +1,49 @@
+# FSgame
+minut += 1
+gs'stat'
+gs'FSstat'
+
+'<center><b>Hotel room</b></center>'
+''
+
+if FSmedkit > 0:
+	'Kits <<FSmedkit>> pcs'
+
+	if FSHP < 100:
+		act 'Dermatologic':
+			cls
+			FShour += 1
+			FSHP = 100
+			FSmedkit -= 1
+			minut += 1
+			gs'stat'
+
+			'You are cured with the help of health kits.'
+
+			act 'Further':gt $curloc
+		end
+	end
+end
+
+act 'Laze':
+	cls
+	FShour += 1
+	minut += 1
+	gs'stat'
+
+	'You sit in the apartment, lounging on the couch and thinking, how do you get out of this situation.'
+
+	act 'Further':gt $curloc
+end
+act 'Exit the room':
+	cls
+	FShour += 1
+	minut += 1
+	gs'stat'
+
+	!'You left the room.'
+
+	gt'FSroom'
+end
+--- FSgame ---------------------------------
+

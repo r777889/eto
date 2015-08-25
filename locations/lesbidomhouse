@@ -1,0 +1,557 @@
+# lesbidomhouse
+gs'stat'
+
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	minut = minut + 5
+	lesrand = RAND(1,3)
+	clr
+	gs'stat'
+
+	if lesrand = 1:
+		'You have reached, but the door to you no one opened. On the second call, too, no one answered'
+
+		act 'Escape':gt'street'
+	elseif lesrand >= 2:
+		'You rang the bell several times. Times you opened the third.'
+
+		act 'Go':gt'lesbidomhouse','ev1'
+		act 'Escape':gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev1':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'We rang the doorbell.'
+	'You do not open and you want to leave, but the desire to learn povelevaniyu girls you overcame and you call again.'
+	'Finally, you have opened.'
+	'-Hello - said Light'
+	'-and, it`s you, the lady said disdainfully, Come.'
+
+	act 'Go':gt'lesbidomhouse','ev2'
+end
+
+if $ARGS[0] = 'ev2':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/pic/irinaroom.jpg"></center>'
+	'You looked around, the apartment was very clean, but comfort is not caused.'
+	'-How-not comfortable you - you said, and immediately met with a cold stare ladies.'
+	'You become very uncomfortable.'
+	'-Sorry - you said'
+	'-Nothing, you have to get used to this situation,. After all, what would make a girl, to, to make her feel uncomfortable, weak, helpless.'
+	'-Good, I will remember. I never asked your name.'
+	'- Call me Mistress.'
+
+	act 'Agree':gt'lesbidomhouse','ev4'
+	if sub < 30 and horny < 75:
+		act 'Row':gt'lesbidomhouse','ev3'
+	end
+end
+
+if $ARGS[0] = 'ev3':
+	cla
+	*clr
+	minut = minut+5
+	lesbiQW = -1
+	if dom > 0:dom = dom+5
+	if sub > 0:sub = sub-5
+
+	'<center><img src="images/picQW/pnx.jpg"></center>'
+	'Did you decide, she wants to make you a slave and nothing more, so you yell at the woman and went away'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'ev4':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'You think, she wants to make you a slave, do not teach. But still did not say anything.'
+	'-Good, Hostess. And then we`ll start my training?'
+	'-The very first, it is not to hurry. You must know well the sacrifice. For example, to start, drink and rub into credibility. From this'
+	'And start, you will be subject to, which I will show you all my tricks.'
+
+	act 'Play on':gt'lesbidomhouse','ev5'
+end
+
+if $ARGS[0] = 'ev5':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/picQW/zst.jpg"></center>'
+	'You agree, We went into the room, which was already prepared drink and snack.'
+
+	act 'Drink':gt'lesbidomhouse','ev6'
+end
+
+if $ARGS[0] = 'ev6':
+	cla
+	*clr
+	hour = hour+23
+	minut = minut+5
+	lesbiQW = 3
+
+	'<center><img src="images/picQW/zst.jpg"></center>'
+	'You started drinking and soon your stiffness and uncertainty was gone, and you started to tell his adventures Mistress,'
+	'as you had guys, How many times were given in the ass, much sucked, and drinking more to say, that the sex was even'
+	'unknown guys in clubs and parks and other your adventure.'
+	'At the end of the drunk you decide to go home. The hostess did not accompany you, but you were so drunk, that scored it.'
+
+	if oral >= anal and oral >= sex:
+		callnm = 1
+	elseif anal >= oral and anal >= sex:
+		callnm = 2
+	elseif sex >= oral and sex >= anal:
+		callnm = 3
+	end
+
+	if vaf >= 100:
+		callnm = 4
+	end
+
+	act 'Go home':gt'street'
+end
+
+if $ARGS[0] = 'start1':
+	cla
+	*clr
+	minut = minut + 5
+	lesrand = RAND(1,3)
+	clr
+	gs'stat'
+
+	if lesrand = 1:
+		'You have reached, but the door to you no one opened. On the second call, too, no one answered'
+
+		act 'Escape':gt'street'
+	end
+	if lesrand >= 2:
+		'You rang the bell several times. Times you opened the third.'
+
+		act 'Go':gt'lesbidomhouse','ev7'
+		act 'Escape':gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev7':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'You decided to go to the, hmmm, Mistress? I do not know whether yesterday that-the shameful and what you have to train a lesson'
+	'They had to endure? because you remember little from the day.'
+
+	act 'Greet':gt'lesbidomhouse','ev8'
+end
+
+if $ARGS[0] = 'ev8':
+	cla
+	*clr
+	minut = minut+5
+
+	if callnm = 1:
+		$callnm = 'nipple'
+	elseif callnm = 2:
+		$callnm = 'analschitsa'
+	elseif callnm = 3:
+		$callnm = 'davalka'
+	elseif callnm = 4:
+		$callnm = 'spermoedka'
+	end
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'-Hello, Hostess.'
+	'-Hello <<$callnm>>'
+	'-How do you call me? - you are taken aback. And blushed, because the hostess told the truth.'
+	'-This is lesson number 2. Humiliates his goal. Use the, I found out about it.'
+
+	act 'Asked not to call you that':gt'lesbidomhouse','ev9'
+end
+
+if $ARGS[0] = 'ev9':
+	cla
+	*clr
+	minut = minut+5
+
+	if callnm = 1:
+		$callnm = 'nipple'
+	elseif callnm = 2:
+		$callnm = 'analschitsa'
+	elseif callnm = 3:
+		$callnm = 'davalka'
+	elseif callnm = 4:
+		$callnm = 'spermoedka'
+	end
+
+	'-No, you have the hard feel all, <<$callnm>>'
+	'-Continuing education. If the, you learned about the girl, it touches, it is considered that it is yours. Make her do, what she'
+	'most of all loves.'
+	'-but if she likes ёblyu and anal or sucking dick and swallow cum, I`ll make her do it? I do not have a member of the same and I do not'
+	'what-Thread is fantasy feet.'
+	'On this account, do not worry, I`ll give you (may be) Special strap, He can give the flow of sperm.'
+
+	act 'Ask to try':gt'lesbidomhouse','ev10'
+end
+
+if $ARGS[0] = 'ev10':
+	cla
+	*clr
+	minut = minut+5
+
+	'-On but I did not know about such, You can try?'
+	'-Unavailable, I told, first you try everything for yourself.'
+	'-Good - hesitantly told you.'
+	'-Proceed.'
+
+	act 'Proceed':gt'lesbidomhouse','ev10a'
+end
+
+if $ARGS[0] = 'ev10a':
+	cla
+	*clr
+	minut = minut+35
+	horny = 95
+
+	'<center><img src="images/picQW/lesbi2.jpg"></center>'
+
+	if callnm = 1 or callnm = 4:
+		'Hostess beginning you have. First, it will make you suck the plastic member, and then he shoved a plastic member in your throat and began shamelessly fuck you there. You were close to the peak of pleasure, The hostess suddenly stopped.'
+	elseif callnm = 2:
+		'Hostess beginning you have. First, it will make you suck the plastic member, You then turned and began to mercilessly fuck your pussy. You were close to the peak of pleasure, The hostess suddenly stopped.'
+	elseif callnm = 3:
+		'Hostess beginning you have. First, it will make you suck the plastic member, You then turned and began to mercilessly rape your ass. You were close to the peak of pleasure, The hostess suddenly stopped.'
+	end
+
+	act 'Rebelled':gt'lesbidomhouse','ev11'
+end
+
+if $ARGS[0] = 'ev11':
+	cla
+	*clr
+	minut = minut+5
+	lesbiQW = 4
+	sub = sub+2
+	lesbian += 1
+	if ldmistresex = 0:ldmistresex = 1 & girl += 1
+	lesbiday = day
+
+	'-Come on, I`m almost finished - moaned you.'
+	'-Next lesson - do not give the girl something, that it has not yet earned. Do you want to finish? Please lick my pussy.'
+	'You started with a zeal to lick pussy Mistress, obediently and unquestioningly.'
+	'Having proper enjoyment, The hostess put a hand on your head and let down your tongue to his anus.'
+
+	act 'Protest':gt'lesbidomhouse','ev12'
+	act 'Ass licking':gt'lesbidomhouse','ev13'
+end
+
+if $ARGS[0] = 'ev12':
+	cla
+	*clr
+	minut = minut+5
+
+	'-Phew, he is not washed, cal here - you began to pull away.'
+	'-Requirements should not be easy, otherwise the girl would not be so submissive. But then it will be waiting for a very good'
+	'promotion.'
+
+	act 'Escape':
+		lesbiQW = -1
+		gt'street'
+	end
+	act 'Ass licking':gt'lesbidomhouse','ev13'
+end
+
+if $ARGS[0] = 'ev13':
+	cla
+	*clr
+	anllick = anllick+1
+	anllicka += 1
+	minut = minut+5
+	energy += 1
+
+	'<center><img src="images/picQW/lesbi3.jpg"></center>'
+	'You reluctantly began to lick anus Mistress. You almost puked, but more excitement and a desire to learn, what kind of'
+	'reward awaits her after, They forced you to continue.'
+	'Mistress of all shuddered, Enough of your hair. She finished.'
+	'-Well, what reward awaits me, Hostess?'
+	'-No...'
+
+	act 'Blankly watching':gt'lesbidomhouse','ev14'
+	act 'Escape':
+		lesbiQW = -1
+		gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev14':
+	cla
+	*clr
+	lesbiQW = 5
+
+	'<center><img src="images/picQW/lesbi9.jpg"></center>'
+	'-Chtoooo?! You said, that then I will be rewarded!!!'
+	'-This is another lesson, the girl can not give rewards immediately. It should be understood, what to get that-it is not so easy. All, Go.'
+	'See you tomorrow!'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'ev15':
+	cla
+	*clr
+	lesbiday = day
+	minut = minut+30
+
+	if callnm = 1:
+		$callnm = 'nipple'
+	elseif callnm = 2:
+		$callnm = 'analschitsa'
+	elseif callnm = 3:
+		$callnm = 'davalka'
+	elseif callnm = 4:
+		$callnm = 'spermoedka'
+	end
+
+	'-Come, <<$callnm>>'
+	'-Hello, Hostess.'
+	'-Well, you know, what to do, to receive the award.'
+
+	act 'Lick Mistress':gt'lesbidomhouse','ev16'
+end
+
+if $ARGS[0] = 'ev16':
+	cla
+	*clr
+	minut = minut+5
+	anllick = anllick+1
+	anllicka += 1
+	horny = horny+20
+	energy += 1
+
+	'<center><img src="images/picQW/lesbi4.jpg"></center>'
+	'You first began to lick pussy Mistress, and then a dirty anus...You could not understand why, but you start to like it.'
+	'When the hostess enjoyed in abundance, she stood up and said,:'
+	'-Well, slut, Now it`s time to reward you.'
+	'-And what is the reward? - Light did not even resent, its so called, It just so myself and felt.'
+	'-Arise cancer.'
+
+	act 'Do, both said':gt'lesbidomhouse','ev17'
+end
+
+if $ARGS[0] = 'ev17':
+	cla
+	*clr
+	minut = minut+5
+	horny = 95
+
+	'<center><img src="images/picQW/lesbi5.jpg"></center>'
+	'You, in anticipation of bliss, We got up on all fours and relaxed.'
+	'First pussy entered one finger and began to move it.'
+	'then the second.'
+	'Behind him the third.'
+	'You start having fun...and was on the verge, in pussy entered the fourth finger.'
+	'The vagina is beginning to move apart more and you are struck by the pain, you cried.'
+	'But the hostess did not seem to hear this, she began to insert the whole hand.'
+	'You are once again cried out in pain and were ready to jump to his feet.'
+
+	act 'Yell and go':gt'lesbidomhouse','ev18'
+	act 'Meekly tolerate':gt'lesbidomhouse','ev19'
+end
+
+if $ARGS[0] = 'ev18':
+	cla
+	*clr
+	horny = 0
+	minut = minut+5
+	lesbiQW = 6
+
+	'<center><img src="images/picQW/pnx.jpg"></center>'
+	'-Fuck you, pervert crappy!!! And it`s a reward for your fucking ass!!! Go fuck!!!'
+	'You grabbed the clothes and rushed naked in his apartment.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'ev19':
+	cla
+	*clr
+	minut = minut+5
+	lesbiQW = 7
+	sub = sub+5
+	vagina += 5
+	lesbian += 1
+	horny = 5
+	orgasm += 1
+
+	'<center><img src="images/picQW/lesbi6.jpg"></center>'
+	'You were wildly hurt, but you, in spite of everything, suffered pain. Even the tears gushed from my eyes. But the hostess continued to move his arm, and you did not even know, that your cat can get into a fist. But eventually, you even began to like, and you hit the orgasm.'
+
+	act 'Escape':gt'street'
+	act 'Thank the owner':gt'lesbidomhouse','ev20'
+end
+
+if $ARGS[0] = 'ev20':
+	cla
+	*clr
+	lesbiQW = 8
+	minut += 3
+
+	'<center><img src="images/picQW/lesbi4.jpg"></center>'
+	'You have got to the vagina mistress, in order to thank her for such a powerful orgasm, what she grinned and said,:'
+	'"You quickly grasp, Svetik! You really learn, or you just like to do everything, what you ordered?"'
+
+	act 'Rebelled':gt'lesbidomhouse','ev18'
+	act 'Silently licking pussy':gt'lesbidomhouse','ev21'
+end
+
+if $ARGS[0] = 'ev21':
+	cla
+	*clr
+	lesbiQW = 9
+	sub = sub+5
+	lesbian += 1
+	minut += 30
+
+	'<center><img src="images/picQW/lesbi4.jpg"></center>'
+	'After a few minutes of your skilful work language, Hostess shuddered in orgasm. You, saying nothing, We got up and went home'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'ev22':
+	cla
+	*clr
+	minut += 5
+	horny += 50
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'Bs thought:"fuck this thing". But passing a flight of stairs, remembered, licking ass and dirty'
+	'As You Like It...'
+	'Pancake, She used me, rather than taught...And to hell with it..'
+	'We thought you decided to visit pervert, but just to lick her.'
+	'-Hostess, I`m here this..came..Well in general..'
+	'-Liked obey me? - I asked the hostess, - Oh well, but you insulted me. This is not good!'
+	'-I`m ready to lick his guilt in front of you...but without it, Your fisting..'
+	'-That will not be enough, will have to do something-what else!'
+	'-Hopefully without battering?'
+	'-do not worry.'
+
+	act 'To correct their actions':gt'lesbidomhouse','ev23'
+end
+
+if $ARGS[0] = 'ev23':
+	cla
+	*clr
+	lesbiday = day
+	lesbiQW = 8
+	sub = sub+1
+	lesbian += 1
+	minut += 30
+	anllick = anllick+1
+	anllicka += 1
+
+	'<center><img src="images/picQW/lesbi7.jpg"></center>'
+	'You have again started to lick Mistress of all places, and you will definitely like this.'
+	if sub < 50 or vaf < 100:'"Well is it with me"- We think you'
+	'-And now on their knees and open your mouth - said Mistress.'
+
+	act 'Kneel down and open your mouth':gt'lesbidomhouse','ev24'
+end
+
+if $ARGS[0] = 'ev24':
+	cla
+	*clr
+	minut += 5
+	goldenrain += 1
+	goldenraina += 1
+	orgasm += 1
+	horny += 5
+	water += 1
+
+	'<center><img src="images/picQW/lesbi8.jpg"></center>'
+	'The landlady stood over you and start writing your mouth. Urine hit all over the face, in the mouth or on the body.'
+	'You embraced indescribable orgasm, It seems like you become subject to.'
+	'You again pussy licked, dripping with drops of urine. Then hostess pointed to the door.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'ev25':
+	cla
+	*clr
+	minut += 5
+	horny += 25
+
+	'<center><img src="images/picQW/lesbi.jpg"></center>'
+	'You`ve come to the hostess for a refill fisting, but she said, you did very poorly, without thanking her, and therefore do not get.'
+	'Strangely, but such a ban have only stirred up'
+
+	act 'Find out, how to make amends':gt'lesbidomhouse','ev26'
+end
+
+if $ARGS[0] = 'ev26':
+	cla
+	*clr
+	minut += 5
+	horny += 25
+
+	'<center><img src="images/picQW/lesbi10.jpg"></center>'
+	'To start the hostess took off panties (He struck out the smell of unwashed vagina) and I ordered you to do regular work tab.'
+
+	act 'Lick':gt'lesbidomhouse','ev23'
+end
+
+if $ARGS[0] = 'ev28':
+	cla
+	*clr
+	minut += 5
+	horny += 25
+	lesbiday = day
+	energy += 1
+
+	'<center><img src="images/picQW/lesbi11.jpg"></center>'
+	'You`ve come to the hostess for a new portion of feces and golden rain, inter alia - licked her pussy'
+
+	lrnd = RAND(1,10)
+	if lrnd > 7:
+		'During all these distortions have embraced orgasm'
+		orgasm += 1
+	elseif lrnd <= 7:
+		horny += 75
+		'Unfortunately, you do not get an orgasm, but very excited.'
+	end
+
+	goldenrain += 1
+	goldenraina += 1
+	anllick = anllick+1
+	anllicka += 1
+	lesbian += 1
+	lesbimeet += 1
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'ev29':
+	cla
+	*clr
+	minut += 5
+	horny += 25
+
+	'<center><img src="images/picQW/lesbi3.jpg"></center>'
+	'You`ve come to the hostess, once again to lick her all, which can be, but she said, that she has a small gift for a good girl, how are you, but the tongue to start to work still have to'
+
+	act 'Make the, for what you came':gt'lesbidomhouse','ev23'
+end
+--- lesbidomhouse ---------------------------------
+

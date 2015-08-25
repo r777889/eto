@@ -1,0 +1,102 @@
+# mqroom
+clr
+minut = minut + 5
+gs'stat'
+
+'<center><img src="images/casino/oldman1.jpg"></center>'
+'You went to Plato in his room Aristarkhovich, he sat down at the table and you, from his pocket a roll, We put it in front of him.'
+'Plato became Aristarkhovich scrutinize roll. You shifted from foot to foot in anticipation of what he says.'
+'(Plato Aristarkhovich) - Prelyubopytny thing. Despite, that most of the characters familiar to me, common sense written eludes my understanding. I knew only a few phrases. Then, this is called a scroll and scroll Rikudo need to stamp on the foot print. Print - it`s this big character in the center of the scroll.'
+'(You) - Stamp his foot? This is why?'
+'(Plato Aristarkhovich) - I have no idea. I never have not seen. But this phrase clearly indicates, out, that it is necessary to stamp on the central hieroglyph. Next comes, that-something about the increase in power, but it is unclear.'
+
+act 'Place the roll on the floor and stamp his foot':
+	cla
+	*clr
+	magika = 1
+
+	'You put the roll on the floor and stamped his foot on the central large hieroglyph.'
+	'A bright flash and scroll erupted beneath your feet. Are you-it felt, what-the breeze and you dramatically headache.'
+
+	act 'Fuck! Head like a bursting!':
+		cla
+		'His head buzzed and was pounding like a steam hammer. You flew idea: "I think now I will stroke". You grabbed his head and sat in a chair, can not think about anything.'
+		'Plato bustled around Aristarkhovich, "what the hell is going on, do not worry, I`ll call doctors."'
+		'The man ran from the room and returned with a girl. She came to you and you took his hand under the chin.'
+
+		act 'View her eyes':
+			cla
+			*clr
+			inited = 1
+			music_on = 1
+			volume = 100
+			$music_theme = 'orochimaru'
+			gs'init_music'
+
+			'<center><img src="images/casino/oro.jpg"></center>'
+			'Mother of God. Just thought you looked into her eyes. Deathly pale skin, cruel and cold snake eyes. The creature grinned.'
+			'(Being) - "So you see my true form. Great." Creature snake hissed voice.'
+			'Looking into those eyes and you just managed to whisper: "Who are you?". Being giggled: "Long story, you do not break down and will soon die".'
+			'At this point you are physically, all over, We felt as a reality and that is broken-something terrible and powerful squeezed into reality, You trying to see his one eye.'
+			'Being with snake eyes sharply turned around and looked at the door. "He came! We should skedaddle" - creature hissed angrily. At this moment, the door to the room shattered to pieces, and in the doorway there was a dark silhouette.'
+
+			act 'See the stranger':
+				cla
+				*clr
+				'<center><img src="images/casino/tobi.jpg"></center>'
+				'In the doorway stood a man in a black robe, which were painted red clouds. His face was covered with a mask of a slit for the eyes. You feel the enormous power, literally pervades space, coming out of this eye. The masked man said dully: "So we saw each other Orochimaru. Again, you will flee?"'
+				'Zmeeglazoe creature with a woman`s body and a snake hissed angrily eyes: "What else do Toby? As long as you control Tsukuyomi, I can only escape. But believe me, I will change very quickly. Are you from becoming a victim of the hunter."'
+				'Suddenly a man in a mask named Toby attacked zmeeglazogo, He rushed forward, trying to grab the throat zmeeglazogo. At Orochimaru literally flew out of the sleeve in the direction of the snake Toby, but to your surprise snake through Toby flew and crashed into the door jamb.'
+				'Toby grabbed Orochimaru`s hand by the throat and lifted like a feather above the ground. "Now you die!" - Toby said grimly. Zmeeglazy opened his mouth, and you heard how cracked his jaw, out of his mouth, that-the beginning of the show. Toby said in surprise: "What is this trick, die with dignity."'
+				'But zmeeglazy not want to die and leave in the hands of Toby empty shell, he literally flew out of his mouth.'
+				'You watched in amazement through the headache Toby is holding an empty skin zmeeglazogo, and he stands aside zmeeglazy. It lasted a second and Orochimaru, grab you like a feather, I jumped out the window from the tenth floor.'
+
+				act 'Screaming in panic':
+					cla
+					*clr
+					'<center><img src="images/casino/oro.jpg"></center>'
+					'Seeing the approaching ground, You panicked, with the idea that now you will die. But zmeeglazy, You hold in your hands, He landed on his feet, after breaking kicks asphalt. You looked at this strange creature`s face, it was cold and focused. Suddenly-the cracked and looking down, you saw the legs zmeeglazogo turn into a snake`s tail.'
+					'Sitting in the hands of steel Orochimaru, you literally flew through the streets, winding alleys and hop fences. You were flying over the earth with tremendous speed, no time to even understand where you are. Very quickly the city is left behind and sped Orochimaru using your snake`s tail has the fields and forests. You feel physically as reality collapses behind you. Your pursuer Toby persisted, it, breaking reality, teleported, trying to overtake you.'
+					'With a busy person zmeeglazogo sweat started to drip. It hissed: "You also feel. He catches up with us. Remember, if I did not save, nobody will save. You`re going to die." Suddenly, you hear a voice of thunder "Shinra Tensei" and it had the feeling that you came down on the wall. You thrown somewhere and you rolled on the grass, corner of my eye noticed, zmeeglazy that also bounced from the impact.'
+
+					act 'Head up':
+						cla
+						*clr
+						'<center><img src="images/casino/pain.jpg"></center>'
+						'Not far away from you was a tall, thin man with bright red hair, covered with piercings. Even the figure could be seen, it is not one-eyed Tobey. Although hoodie was exactly the same, black, with drawings of red clouds.'
+						'Orochimaru raised his head and hissed: "Payne!" Skinny guy walked slowly toward Orochimaru: "One can not just walk away from the Dawn. Now I will kill your immortal life."'
+						'Zmeeglazy opened his mouth and flew out of the blade of the sword. But Payne even not blink, blade, before reaching a few centimeters, It shattered into splinters. "That`s all, you can Orochimaru? Skedaddle from Toby into my hands, and before his death show a miserable spell?"'
+						'Payne raised his hand clenched and unclenched his hand. "CHIBAKU TENS" - he said, and flew out of his hand a small black ball and slowly began to soar in the sky. Orochimaru yelled "No!"'
+						'Did you feel like your body has become as easier, sand from the ground began to rise into the air and fly to the ball. Soon, you too began to rise above the ground and pull the black ball. You clung to a tree stump, that you are not utyanulo. It is a black hole, you understand, this guy with piercings just, my eyes created a black hole and now we have to prolong and grind. Pieces of land began to come off and fly toward the black hole. Trees cracked. Orochimaru screaming rushed travel along the ground to you. He grabbed you and then you both get off the ground and carried to the black ball.'
+
+						act 'View on Orochimaru':
+							cla
+							*clr
+							'<center><img src="images/casino/oro.jpg"></center>'
+							'Orochimaru, keeping your hands, grinning. But you felt his fear. You promptly flew into a black hole, located high in the sky and realized, that once there, you will perish with zmeeglazym.'
+							'Orochimaru hissed: "It remained the last hope. I opened my mouth, and you stick your hand in there, I roll in, open it and put her hand. Do it or we both die."'
+							'Zmeeglazy opened his mouth so, that there is not something, that the arm, and you could get through the whole. You disgust put his hand in his mouth and essentially feel there is a roll. Pulling it you will quickly launched a roll, flecked hieroglyphs.'
+							'Looking up you realize, that you have a few seconds before contact with a black hole.'
+
+							act 'Attach a hand to print in a book':
+								cla
+								*clr
+								cursed = 1
+								music_on = 0
+
+								'<center><img src="images/casino/oro.jpg"></center>'
+								'You put a hand to scroll and scroll of lightning burned. You embraced the same strange feeling, and that on approaching Toby. There was a feeling, the reality burst, but this time the center of this hole were you. The feeling you tore the fact, Orochimaru that sank his teeth into the neck you. You pierced the deafening pain. Suddenly zmeeglazy let you and with all his strength hurled towards the ground away from the black hole. You realized that he had spent everything forces trying to save you from destroying the spell Payne.'
+								'You flew down against the force of a black hole, while watching Orochimaru reached the black hole and his body began to break apart. But Orochimaru smiled despite his terrible, mortal pain and agony of his dying body. Finally on zmeeglazogo was only bloody mess that, I swallow hole. The momentum imparted to you last effort Orochimaru ended and you start again to attract a black hole. You flew to her side feeling how slowly you go out of reality, just a little-a little and you`ll be far away from this place.'
+								'But the black hole is near, you feel its effects, trying to tear you to shreds.'
+
+								act 'Close your eyes':gt'tuman'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- mqroom ---------------------------------
+

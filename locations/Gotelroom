@@ -1,0 +1,14 @@
+# Gotelroom
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+
+'<center><H4>Room</H4></center>'
+'<center><img src="images/pic/Gotelroom.jpg"></center>'
+'A small room in the hotel.'
+
+act 'Escape':gt'Gotel'
+--- Gotelroom ---------------------------------
+

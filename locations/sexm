@@ -1,0 +1,1142 @@
+# sexm
+if $ARGS[0] = 'start':
+	cla
+	*clr
+
+	if love = 0 and bfa >= 100 and daya >= 30 and husband = 0:
+		act 'Talk about cohabitation':gt'love','start'
+	end
+
+	'<<$boyA>> I take you to the entrance.'
+
+	if harakBoyA = 2:'Svetik, You can invite me over for a cup of coffee?'
+	if harakBoyA = 1:'Let me give you a kiss, beloved.'
+	if harakBoyA = 0:'While Light, I will wait for the moment when we meet again, and I will miss you.'
+
+	act 'Kiss goodbye to':
+		cla
+
+		if boyonceA = 0:
+			if harakBoyA = 2:
+				if daya < 3:
+					bfa = bfa + 1
+
+					'<<$boyA>> I kiss you on the lips goodbye hands and squeezes your ass.'
+				elseif daya >= 3:
+					bfa = bfa - 2
+
+					'<<$boyA>> I kiss you on the lips and pulled away from the kiss mumbling irritably "Okay, while, dynamo."'
+				end
+			elseif harakBoyA = 1:
+				if daya < 10:
+					bfa = bfa + 2
+
+					'<<$boyA>> I kiss you on the lips goodbye hugging your waist.'
+				elseif daya >= 10:
+					bfa = bfa - 2
+
+					'<<$boyA>> I kiss you on the lips goodbye and says goodbye "How long we will be pioneers handles stay?".'
+				end
+			elseif harakBoyA = 0:
+				if daya < 20:
+					bfa = bfa + 3
+
+					'<<$boyA>> I kiss you on the lips goodbye and gently hugging your waist.'
+				elseif daya >= 20:
+					bfa = bfa - 1
+
+					'<<$boyA>> I kiss you on the lips goodbye and broke away from the kiss, looking at you the big sad eyes.'
+				end
+			end
+		elseif boyonceA = 1:
+			if harakBoyA = 2:
+				if daya < 3:
+					bfa = bfa - 2
+
+					'<<$boyA>> I kiss you on the lips goodbye hands and squeezes your ass.'
+				elseif daya >= 3:
+					bfa = bfa - 3
+
+					'<<$boyA>> I kiss you on the lips and pulled away from the kiss mumbling irritably "And you today that you do not want sex?"'
+				end
+			elseif harakBoyA = 1:
+				if daya < 10:
+					bfa = bfa - 1
+
+					'<<$boyA>> I kiss you on the lips goodbye hugging your waist.'
+				elseif daya >= 10:
+					bfa = bfa - 2
+
+					'<<$boyA>> I kiss you on the lips goodbye and says goodbye "Okay, I live a day without sex.".'
+				end
+			elseif harakBoyA = 0:
+				if daya < 20:
+					bfa = bfa + 1
+
+					'<<$boyA>> I kiss you on the lips goodbye and gently hugging your waist.'
+				elseif daya >= 20:
+					bfa = bfa - 1
+
+					'<<$boyA>> I kiss you on the lips goodbye and broke away from the kiss, looking at you the big sad eyes.'
+				end
+			end
+		end
+
+		act 'Go to the apartment':dynamic $brodilr
+	end
+	act 'Say goodbye':
+		cla
+
+		if boyonceA = 0:
+			if harakBoyA = 2:
+				if daya < 3:
+					bfa = bfa - 1
+
+					'<<$boyA>> slightly annoyed "Do not make a saint innocence."'
+				elseif daya >= 3:
+					bfa = bfa - 3
+
+					'<<$boyA>> greatly annoyed "So you do not want to kiss? Oh well."'
+				end
+			elseif harakBoyA = 1:
+				if daya < 10:
+					bfa = bfa + 1
+
+					'<<$boyA>> He waved and walked out of the house.'
+				elseif daya >= 10:
+					bfa = bfa - 2
+
+					'<<$boyA>> irritably waved your hand in farewell, and quickly went out of the house.'
+				end
+			elseif harakBoyA = 0:
+				if daya < 20:
+					bfa = bfa + 2
+
+					'<<$boyA>> waving you goodbye and smiling.'
+				elseif daya >= 20:
+					bfa = bfa - 1
+
+					'<<$boyA>> waving goodbye to you and looking at you big sad eyes.'
+				end
+			end
+		elseif boyonceA = 1:
+			if harakBoyA = 2:
+				if daya < 3:
+					bfa = bfa - 2
+
+					'<<$boyA>> annoyed "Well, you`re a dick of yourself you break hymen?"'
+				elseif daya >= 3:
+					bfa = bfa - 4
+
+					'<<$boyA>> furious "Brezguesh?"'
+				end
+			elseif harakBoyA = 1:
+				if daya < 10:
+					bfa = bfa - 1
+
+					'<<$boyA>> He waved and walked out of the house.'
+				elseif daya >= 10:
+					bfa = bfa - 3
+
+					'<<$boyA>> irritably waved your hand in farewell, and quickly went out of the house.'
+				end
+			elseif harakBoyA = 0:
+				if daya < 20:
+					bfa = bfa + 1
+
+					'<<$boyA>> waving you goodbye and smiling.'
+				elseif daya >= 20:
+					bfa = bfa - 2
+
+					'<<$boyA>> waving goodbye to you and looking at you big sad eyes.'
+				end
+			end
+		end
+
+		act 'Go to the apartment':dynamic $brodilr
+	end
+
+	if husband = 0:
+		act 'Invite to himself':
+			cla
+			gt'sexm','room'
+		end
+	elseif husband > 0:
+		if week < 6 and hour < 17 and hour > 7:
+			act 'Invite to himself':gt'sexm','room'
+		elseif week > 5 or week < 6 and hour > 16:
+			act 'To say that the house husband, and you can not':
+				cla
+
+				if harakBoyA = 0:
+					bfA = 0
+
+					'"What? Are you married, You lied to me, I love you so, adieu!" he shouted and ran away in tears.'
+
+					act 'Go to the apartment':gt'korr'
+				elseif harakBoyA = 1:
+					'"Well then,, see you, I`ll call you" he said, and quietly left.'
+
+					act 'Go to the apartment':gt'korr'
+				elseif harakBoyA = 2:
+					'"My husband is not a wall, may move up, and maybe climb a little higher, For example let us enter into the attic?" he said, pretty grin.'
+
+					act 'Takeout':bfa -= 1 & dynamic $brodila
+					act 'Agree':
+						bfa += 1
+						boycherdaksex = 1
+						gt'sexm','room'
+					end
+				end
+			end
+		end
+	end
+end
+
+!harakHusb > 0
+
+if $ARGS[0] = 'room':
+	clr
+	minut += 20
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	if boycherdaksex = 1:
+		'<center><img src="images/etogame/cherdak.jpg"></center>'
+		'You are a man climbed up to the attic.'
+	elseif boycherdaksex = 0:
+		'<center><b><font color = maroon>Bedroom</font></b></center>'
+		if rembedr = 0:'<center><img src="images/pic/bedr.jpg"></center>'
+		if rembedr = 1:'<center><img src="images/pic/bedr2.jpg"></center>'
+		'You took off his shoes and went with the guy in the bedroom.'
+	end
+
+	if harakBoyA = 2:
+		'<<$boyA>> It grabs you and roughly pushes you to your starting passionately kiss you and try to steal your clothes.'
+		'Finally, the <<$boyA>> I won in an unequal battle with the straps of your bra and your profile.'
+
+		if boyonceA = 1:
+			sexrand = RAND(0,3)
+			if sexrand = 0:
+				'"Svetik, I pine juicy huytsa."'
+
+				act 'Make a blowjob':
+					cla
+					bfa = bfa + 3
+					gt'sexm','minet'
+				end
+				act 'I do not want, Let`s take another':gt'sexm','variant'
+			elseif sexrand = 1:
+				'"Svetik, cup your ass."'
+
+				act 'Anal':
+					cla
+					bfa = bfa + 5
+					gt'sexm','anal'
+				end
+				act 'Oh nafig, Let`s take another':gt'sexm','variant'
+			elseif sexrand = 2:
+				'"Get down and push the thighs Svetsik."'
+
+				act 'Extend the legs':gt'sexm','miss'
+				act 'I do not want, Let`s take another':gt'sexm','variant'
+			elseif sexrand = 3:
+				'"Get up crustaceans Svetsik."'
+
+				act 'Get cancer':gt'sexm','dog'
+				act 'I do not want, Let`s take another':gt'sexm','variant'
+			end
+		elseif boyonceA = 0:
+			'<<$boyA>> I threw you on the bed and stared at your breasts lips.'
+
+			act 'Sex':gt'sexm','miss'
+			act 'I do not want, Let`s take another':gt'sexm','variant'
+		end
+	elseif harakBoyA = 1:
+		'<<$boyA>> gently hugging you and cuddle.'
+		'You slowly undress and <<$boyA>> It tells you, as you want, beloved.'
+		act 'I want so, how do you want':
+			cla
+
+			if boyonceA = 1:
+				sexrand = RAND(0,3)
+				if sexrand = 0:
+					'"Svetulya, suck me."'
+
+					act 'Make a blowjob':
+						cla
+						bfa = bfa + 2
+						gt'sexm','minet'
+					end
+					act 'I do not want, Let`s take another':gt'sexm','variant'
+				elseif sexrand = 1:
+					'"Svetulya, I want you in the ass."'
+
+					act 'Anal':
+						cla
+						bfa = bfa + 4
+						gt'sexm','anal'
+					end
+					act 'I do not want, Let`s take another':gt'sexm','variant'
+				elseif sexrand = 2:
+					'"Svetulya, I want you."'
+
+					act 'Extend the legs':gt'sexm','miss'
+					act 'I do not want, Let`s take another':gt'sexm','variant'
+				elseif sexrand = 3:
+					'"Svetulya, Get up on all fours."'
+
+					act 'Get cancer':gt'sexm','dog'
+					act 'I do not want, Let`s take another':gt'sexm','variant'
+				end
+			elseif boyonceA = 0:
+				'<<$boyA>> I threw you on the bed and stared at your breasts lips.'
+
+				act 'Sex':gt'sexm','miss'
+				act 'I do not want, Let`s take another':gt'sexm','variant'
+			end
+		end
+		act 'Suggest options':gt'sexm','variant'
+	elseif harakBoyA = 0:
+		'<<$boyA>> shy and does not know, what to do.'
+
+		act 'Suggest options':gt'sexm','variant'
+	end
+end
+
+if $ARGS[0] = 'variant':
+	if harakBoyA = 0:bfa = bfa + 1
+	if harakBoyA = 2:bfa = bfa - 1
+
+	'<<$boyA>> He is looking at you and waiting for what you say'
+
+	act 'Extend the legs':gt'sexm','miss'
+	act 'Get cancer':gt'sexm','dog'
+	act 'Anal':gt'sexm','anal'
+	act 'Make a blowjob':gt'sexm','minet'
+	act 'Masturbate him':gt'sexm','hand'
+
+	if kunday ! day:
+		act 'Cooney':gt'sexm','kuni'
+	end
+
+	if DOM > 0 and boyonceA = 1 and harakBoyA = 0 and izvratA = 1 and strapon > 0:
+		act 'Otstraponit':gt'sexm','strapon'
+	end
+end
+
+if $ARGS[0] = 'minet':
+	*clr
+	popolaini = 1
+	bfA = bfA + 1
+	bj = bj + 1
+	bja += 1
+	dick = dickA
+	harakBoy = harakBoyA
+	minut = minut + 30
+	$nameV = $boyA
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/bj.jpg"></center>'
+	'<<$boyA>> as a member you spent on the lips.'
+	if bj = 1:'You think "Hell, I rolled, I am sitting in front of a man, and he told me in the mouth by a dick pokes."'
+
+	gs'oral','start'
+
+	act 'Continue to suck':
+		cla
+		*clr
+		swallow = swallow + 1
+		cumlip = cumlip + 1
+		bfa = bfa + 3
+
+		'<center><img src="images/picV/swallow.jpg"></center>'
+		'A jet of hot sperm hit you in the mouth. You began to swallow cum, and <<$boyA>> I continued to cum in your mouth. Finally, the flow of hot liquid with a pungent taste stopped.'
+
+		act 'Escape':gt'sexm','endsex'
+	end
+	act 'Remove from the mouth':
+		cla
+		*clr
+
+		if harakBoyA = 0:
+			'<center><img src="images/picV/hand.jpg"></center>'
+			'You took out a member of his mouth and <<$boyA>> You finished in the palm.'
+		elseif harakBoyA = 1:
+			tiprand = RAND(0,3)
+			if tiprand < 3:
+				'<center><img src="images/picV/hand.jpg"></center>'
+				'You took out a member of his mouth and <<$boyA>> You finished in the palm.'
+			elseif tiprand = 3:
+				facial = facial + 1
+				cumface = cumface + 1
+				bfa = bfa + 1
+
+				'<center><img src="images/picV/facial.jpg"></center>'
+				'You took out a member and at this point <<$boyA>> discharged directly on your face, covering it with a warm and sticky sperm.'
+			end
+		elseif harakBoyA = 2:
+			facial = facial + 1
+			cumface = cumface + 1
+			bfa = bfa + 1
+
+			'<center><img src="images/picV/facial.jpg"></center>'
+			'<<$boyA>> hold your hair pulled dick out of your mouth, and finished your face, covering it with a warm and sticky sperm.'
+		end
+
+		act 'Escape':gt'sexm','endsex'
+	end
+end
+
+if $ARGS[0] = 'hand':
+	*clr
+	popolaini = 1
+	DOM = DOM + 1
+	hj = hj + 1
+	hja += 1
+	minut = minut + 30
+	horny = horny + DOM
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/hand1.jpg"></center>'
+	'You got it <<dick>> inch cock and began to caress her arms around his hands, moving the skin of purple head.'
+	'Soon on your skillful movements guy you left off her hands, covering them with warm and sticky sperm.'
+
+	if harakBoyA = 0:bfA = bfA - 1
+	if harakBoyA = 1:bfA = bfA - 5
+	if harakBoyA = 2:bfA = bfA - 10
+
+	act 'Wipe your hands and perform a Man-to-door':gt'sexm','endsex'
+end
+
+if $ARGS[0] = 'kuni':
+	*clr
+	kunday = day
+	DOM = DOM + 1
+	kuni = kuni + 1
+	minut = minut + 30
+	horny = horny + DOM + (silaVag*2 + 5)
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/kuni.jpg"></center>'
+	'You undressed and lay on the bed, I am saying that the guy you caressed his tongue.'
+	'<<$boyA>> I lay down between your legs and began to work on the tongue of your pussy.'
+
+	if harakBoyA = 0:bfA = bfA - 1
+	if harakBoyA = 1:bfA = bfA - 5
+	if harakBoyA = 2:bfA = bfA - 10
+
+	if horny >= 90:
+		horny = 0
+		manna = manna + 15
+		willpower = willpower + 15
+		orgasm = orgasm + 1
+
+		'From the skillful actions guy you covered orgasm.'
+	else
+		'Action Man, though were exciting, but they began to bore you.'
+	end
+
+	act 'Further':
+		cla
+		if husband > 0 and hour < 17 and hour > 7 and boycherdaksex = 0:popolaini = 2 & gt'sexm','popala'
+		gt'sexm','variant'
+	end
+end
+
+if $ARGS[0] = 'strapon':
+	*clr
+	DOM = DOM + 5
+	pegging = pegging + 1
+	minut = minut + 30
+	horny = horny + DOM
+	bfA = bfA + 5
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/pegging.jpg"></center>'
+	'You got the strap from the box and put it. <<$boyA>> I got cancer on the bed.'
+	'Greased lubricated anus guy and stuck it Strap. While you fuck his ass, he groaned, and finally finished. You took the strap from him and went to the bathroom.'
+
+	act 'Wipe your hands and perform a Man-to-door':
+		cla
+		dynamic $brodila
+	end
+end
+
+if $ARGS[0] = 'anal':
+	*clr
+	popolaini = 3
+	bfA = bfA + 1
+	minut += 30
+	anal = anal + 1
+	anala += 1
+	if dickA < anus:anus = anus + 1
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/dog2.jpg"></center>'
+
+	if analplugin = 1:
+		analpluginbonus = 10
+		analplugin = 0
+
+		if anus < 16:
+			'<<$boyA>> I pulled out of your more narrow and tight ass plug, '
+		elseif anus >= 16:
+			'<<$boyA>> I pulled out of your ass flushed oozing juices cork, '
+		end
+
+		'and you feel like a hard cock ran into your hole.'
+
+		if anus + analpluginbonus < dick:
+			'You screamed and bit his lip from a sharp pain when <<dickA>> Member inch apart your ass you entered.'
+		elseif anus + analpluginbonus >= dick:
+			'You groaned when his fullness <<dickA>> Member inch apart your ass you entered.'
+		end
+
+		'Lastly <<$boyA>> I grabbed you tight for the ass and drove into your aching ass dick down to the eggs you had finished inside.'
+
+		cumass += 1
+		minut = minut + 3
+		cumanus = cumanus + 1
+		if anus < dickA:anus = anus + 1
+		horny = horny + ((anus-dickA)*3)
+		if horny < 1:horny = 1
+		if horny >= 100:
+			horny = 1
+			orgasm = orgasm + 1
+			analorgasm = analorgasm+1
+
+			'The anus blazing fire and waves of pleasure swept body, You do groaning and stick her ass on dick.'
+		end
+		gs'stat'
+
+		act 'Carry-to-door':gt'sexm','endsex'
+	else
+		if lubri = 0:
+			lubonus = 2
+
+			'Lubricants, and you do not <<$boyA>> spitting on his fingers became saliva to lubricate your ass.'
+		elseif lubri > 0:
+			lubri = lubri - 1
+			lubonus = 10
+
+			'You got out of the box with a tube of lubricant and handed him over to the guy, He choked a little on his palm and rubbed your anus.'
+		end
+
+		'<<$boyA>> put your stomach on the bed and parted your buttocks began to massage your anus with your fingers, first one, then two.'
+		if anus < 10:'When your ass you entered three fingers involuntarily groaned in pain.'
+		if anus >= 10:'Then the man brought you three fingers and began to stretch your anus.'
+		'<<$boyA>> He pulled his fingers out of your priests, and you feel his hard cock ran into your hole.'
+
+		if anus + lubonus < dickA:
+			'You screamed and bit his lip from a sharp pain when a member of your ass apart came into you.'
+		elseif anus + lubonus >= dickA:
+			'You groaned feeling of fullness when his penis parted your ass you entered.'
+		end
+
+		'<<$boyA>> froze for a moment giving your ass sticking out adapt to its members, then he began to drive them all the more insistent.'
+
+		if anus + lubonus + 2 < dickA:
+			if mop > 1:mop = 0
+
+			'You cried and sank his teeth into the pillow when <<dickA>> inch cock began to fuck your ass at full power.'
+		elseif anus + lubonus + 2 >= dickA:
+			'You started moaning rhythmically to the beat of limb movements inside you.'
+		end
+
+		'Lastly <<$boyA>> I grabbed you tight for the ass and drove into your aching ass dick down to the eggs you had finished inside.'
+
+		if klismaday ! day:
+			bfA = bfA - 8
+
+			'<<$boyA>> I took out a member of your ass and seeing shit on his dick told, "Oban, Charlie and the Chocolate Factory, Babe, before anal enema to do, and that is not hygienic to knead the clay by a dick."'
+		elseif klismaday = day:
+			bfA = bfA + 5
+			cumanus = cumanus + 1
+			if anus < dickA:anus = anus + 1
+			horny = horny + ((anus-dickA)*3)
+			if horny< 1:horny = 1
+			if horny >= 100:
+				horny = 1
+				orgasm = orgasm + 1
+				analorgasm = analorgasm+1
+				'The anus blazing fire and waves of pleasure swept body, You do groaning and stick her ass on dick.'
+			end
+
+			'<<$boyA>> I took a member of you and kiss you went to the bathroom.'
+		end
+
+		if anus < dick:anus = anus + 1
+		gs'stat'
+
+		act 'Carry-to-door':lubonus = 0 & gt'sexm','endsex'
+	end
+end
+
+if $ARGS[0] = 'miss':
+	*clr
+	popolaini = 3
+	bfA = bfA + 1
+	sex = sex + 1
+	sexa += 1
+	minut = minut + 30
+	pose = 0
+	$nameV = $boyA
+	dick = dickA
+	silavag = silavagA
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/vag.jpg"></center>'
+	'<<$boyA>> spread your legs and fingers began to caress pussy.'
+
+	gs'orgazm','start'
+
+	act 'Carry-to-door':gt'sexm','endsex'
+end
+
+if $ARGS[0] = 'dog':
+	*clr
+	popolaini = 3
+	bfA = bfA + 1
+	sex = sex + 1
+	sexa += 1
+	minut = minut + 30
+	pose = 1
+	$nameV = $boyA
+	dick = dickA
+	silavag = silavagA
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/dog1.jpg"></center>'
+	'<<$boyA>> put your cancer and spread your bread before you enter the.'
+
+	gs'orgazm','start'
+
+	act 'Carry-to-door':gt'sexm','endsex'
+end
+
+if $ARGS[0] = 'startPod':
+	podrand = RAND(0,1)
+	if podrand = 0:
+		'<<$boyA>> I whispered to you, Take in the mouth.'
+
+		act 'Get lost!':
+			cla
+			DOM = DOM + 1
+			bfA = 0
+			dynamic $brodilr
+		end
+		act 'Embark on his heels':gt'sexm','blow'
+	elseif podrand = 1:
+		'<<$boyA>> I began to rip off your clothes.'
+
+		act 'Get lost!':
+			cla
+			DOM = DOM + 1
+			bfA = 0
+			gt'street'
+		end
+		act 'Get cancer':gt'sexm','doggy'
+	end
+end
+
+if $ARGS[0] = 'doggy':
+	bfA = bfA + 1
+	sex = sex + 1
+	sexa += 1
+	minut = minut + 30
+	pose = 1
+	$nameV = $boyA
+	dick = dickA
+	silavag = silavagA
+	gs'brosok'
+	gs'stat'
+
+	'<center><img src="images/picV/dog.jpg"></center>'
+	'<<$boyA>> put your cancer and spread your bread before you enter the.'
+
+	gs'orgazm','start'
+
+	act 'Correct clothes and go':
+		cla
+		dynamic $brodilr
+	end
+end
+
+if $ARGS[0] = 'blow':
+	minut = minut + 20
+	gs'stat'
+
+	'You sat down on his haunches and <<$boyA>> He pulled out his penis.'
+
+	act 'Take in the mouth':
+		cla
+		*clr
+		bfA = bfA + 1
+		bj = bj + 1
+		bja += 1
+		dick = dickA
+		harakBoy = harakBoyA
+		minut = minut + 30
+		$nameV = $boyA
+		gs'brosok'
+		gs'stat'
+
+		'<center><img src="images/picV/bj.jpg"></center>'
+		'<<$boyA>> as a member you spent on the lips.'
+		if bj = 1:'You think "Hell, I rolled, I am sitting in front of a man, and he told me in the mouth by a dick pokes."'
+
+		gs'oral','start'
+
+		act 'Continue to suck':
+			cla
+			*clr
+			swallow = swallow + 1
+			cumlip = cumlip + 1
+
+			'<center><img src="images/picV/swallow.jpg"></center>'
+			'A jet of hot sperm hit you in the mouth. You began to swallow cum, and <<$boyA>> I continued to cum in your mouth. Finally, the flow of hot liquid with a pungent taste stopped.'
+
+			act 'Escape':
+				cla
+				dynamic $brodila
+			end
+		end
+		act 'Remove from the mouth':
+			cla
+			*clr
+
+			if harakBoyA = 0:
+				'<center><img src="images/picV/hand.jpg"></center>'
+				'You took out a member of his mouth and <<$boyA>> You finished in the palm.'
+			elseif harakBoyA = 1:
+				tiprand = RAND(0,3)
+				if tiprand < 3:
+					'<center><img src="images/picV/hand.jpg"></center>'
+					'You took out a member of his mouth and <<$boyA>> You finished in the palm.'
+				elseif tiprand = 3:
+					facial = facial + 1
+					cumface = cumface + 1
+
+					'<center><img src="images/picV/facial.jpg"></center>'
+					'You took out a member and at this point <<$boyA>> discharged directly on your face, covering it with a warm and sticky sperm.'
+				end
+			elseif harakBoyA = 2:
+				facial = facial + 1
+				cumface = cumface + 1
+
+				'<center><img src="images/picV/facial.jpg"></center>'
+				'<<$boyA>> hold your hair pulled dick out of your mouth, and finished your face, covering it with a warm and sticky sperm.'
+			end
+
+			act 'Escape':
+				cla
+				dynamic $brodila
+			end
+		end
+	end
+	act 'Masturbate him':
+		cla
+		*clr
+		DOM = DOM + 1
+		hj = hj + 1
+		hja += 1
+		minut = minut + 30
+		horny = horny + DOM
+		gs'brosok'
+		gs'stat'
+
+		'<center><img src="images/picV/hand1.jpg"></center>'
+		'You got his penis and began to caress her arms around his hands.'
+		'Soon on your skillful movements guy you left off her hands.'
+
+		if harakBoyA = 0:bfA = bfA - 1
+		if harakBoyA = 1:bfA = bfA - 5
+		if harakBoyA = 2:bfA = bfA - 10
+
+		act 'Wipe your hands and walk away':
+			cla
+			dynamic $brodila
+		end
+	end
+end
+
+if $ARGS[0] = 'gangrape':
+	'You break out and become one of the guys hit you with his hand on the cheek, saying, "Shut up slut thighs and Spreads! And that`ll blow today ebalo!"'
+
+	act 'Submit':gt'sexm','gangbang'
+	act 'Start a fight':
+		cla
+		$nameV = 'Drunken mug'
+		!The stats
+		strenV = 100
+		speedV = 20
+		agilV = 10
+		reactV = 10
+		vitalV = 50
+		intelV = 10
+		willV = 10
+		!Skills
+		magikV = 100
+		boxingV = 10
+		shootV = 100
+		!Parameters
+		healthV = vitalV*10 + strenV*5
+		mannaV = intelV*10 + magikV*10
+		willpowerV = willV*10
+		BonusAtakV = 0
+		BonusDefV = 0
+		!Action Programme
+		program = 0
+		gangrapeFight = 1
+		if spellavtoklon = 1:klon = 3
+		if spellbefshild = 1:defence = 500
+		gt'fight','start'
+	end
+end
+
+if $ARGS[0] = 'gangbang':
+	if izvrat = 1:
+		bfA = bfA + 5
+	else
+		bfa = 0
+	end
+
+	minut = minut + 30
+	gang = gang + 1
+	guy = guy + 4
+	bj += 4
+	anal += 1
+	sex += 1
+	cumface = cumface + 1
+	cumlip = cumlip + 1
+	facial = facial + 1
+	vagina = vagina + 1
+	anus = anus + 1
+	throat = throat + 1
+	if mop > 1:mop = 0
+	SUB = SUB + 3
+	horny = horny + SUB*10
+	gs'stat'
+
+	'<center><img src="images/picV/gangbang.jpg"></center>'
+	'One of the boys lives in the entrance and you are dragged into his apartment, it tore your clothes.'
+	'The boys undressed and put you on your knees substituting your peppers for maintenance. You dutifully began treating mouth and hands fat cock like a real mnogostanochnitsa.'
+	'One of the boys lay down on the couch and grab you by the waist pulled up to her and planted your pussy on his dick, You do not have time to come round as your lips pressed against two wet from your saliva member.'
+	'You feel like your anus lubricated than cold and then go to the beginning of something big and solid.'
+
+	act 'Moan':
+		cla
+		*clr
+		'<center><img src="images/picV/gangbang1.jpg"></center>'
+		'You groaned when you in the ass planted thick cock and started to fuck you in all holes.'
+
+		if anus >= 10:
+			horny = horny + anus + SUB
+
+			'Two members of the hammering you from behind, you feel like they rub through the thin barriers according blazing between the anus and the vagina sloshing. You redoubled enthusiasm handle two dick her lips swollen from work.'
+		elseif anus < 10:
+			horny = horny + (10 - anus)
+
+			'From your eyes dripping tears of terrible pain, when hard cock ramming your ass and rubbing through a fine stenochku with another member of your pussy.'
+		end
+
+		if horny >= 90:
+			orgasm = orgasm + 1
+
+			'Feeling the abdomen began to grow and soon your whole body as though struck shock, You moan orgasm.'
+		end
+
+		'I think the guys played enough with you and the person you decide to obkonchat. You removed from the Member States and pointed to the floor.'
+
+		act 'Kneel down':
+			cla
+			*clr
+			'<center><img src="images/picV/gangbang2.jpg"></center>'
+			'You humbly knelt before the guys, They surrounded you and began to cum on your face, covering it with adhesive, warm and fragrant sperm.'
+			'After the boys run out, they lost interest in you and began to gather to go.'
+
+			act 'Escape':
+				cla
+				dynamic $brodila
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'popala':
+	cla
+	*clr
+
+	if popolaini = 1:
+		'<center><img src="images/img/hasb/p0.jpg"></center>'
+		'Once you have gathered to go to the bath to wash that both appeared on the threshold of your husband, I find you kneeling all in the semen before dipping member.'
+	elseif popolaini = 2:
+		'<center><img src="images/img/hasb/p5.jpg"></center>'
+		'Once you have gathered to change the position as the husband enters the room.'
+	end
+!'
+	if popolaini = 2:
+		'<center><img src="images/img/hasb/p4.jpg"></center>'
+		'Once you`ve acquired a taste for both the husband enters the room.'
+	end
+'
+
+	if harakHusb = 0:
+		'"Dear happening here, Are you cheating on me" babbled <<$husName>> looking at you.'
+		'"<<$husName>> it`s not what you think, it`s just sex, no feelings, I love only you. It is for me nothing, come to me I`ll show you how much I love you." Answer You, You do not understand how you can bear such nonsense.'
+
+		if izvratH = 0:
+			husbizvradd = 0
+			husbharmin = 0
+			husbandMark = 0
+			husband = 0
+			divorced += 1
+
+			'"No, I`m leaving, you betrayed our love." He stammered and ran out of the room almost crying.'
+
+			if harakBoyA = 0:
+				bfA = 0
+
+				'"So you`re married, You lied to me, I love you so, adieu!" your guy shouted and ran after her husband.'
+
+				act 'Escape':dynamic $brodila
+			elseif harakBoyA = 1:
+				'"Well, I see you are not up to me, so I`ll probably, but if you want I can and stay, comfort" said <<$boyA>>'
+
+				act 'Let him go':dynamic $brodila
+				act 'Let it remain':
+					bfA += 1
+					picrand = 83
+					if popolaini = 3:picrand = 84
+					xgt'sex','var'
+				end
+			elseif harakBoyA = 2:
+				'"That`s number, Well, okay clown escaped, and I once again ready, let`s continue, let this wimp fells" said <<$boyA>>, clearly intending to continue the evening.'
+
+				act 'Takeout':bfA -= 1 & dynamic $brodila
+				act 'Continue':
+					bfA += 2
+					picrand = 83
+					if popolaini = 3:picrand = 84
+					xgt'sex','var'
+				end
+			end
+		elseif izvratH = 1:
+			'"Do you really love me only." I asked <<$husName>>.'
+			'"Yes, only you, come to me, I`ll give you anything you did it, but it will be with love and you will understand what is the difference" Answer You, without ceasing to marvel at how he believes in this nonsense. <<$husName>> came up to you and you unbuttoned his pants got dick.'
+
+			if harakBoyA = 0:
+				bfA = 0
+				husbizvradd = 0
+				husbharmin = 0
+				husbandMark = 0
+				husband = 0
+				divorced += 1
+
+				'"So you`re married, You lied to me, I love you so, You despicable liar, adieu!" your guy shouted and ran out of the room.'
+				'"He`s right, you`re a liar, and you do not deserve me, you are a fallen woman, I do not want to see you" your husband burst into tears and ran out in the wake of a guy.'
+
+				act 'Escape':gt'korr'
+			elseif harakBoyA = 1:
+				'<<$boyA>> He is standing and looking like you were aspirated husband "Well, in my opinion it is false, so do not compare, let you enter into it, I`ll give her mouth only then will something to compare" he said.'
+				'"And let`s." brightened <<$husName>> "Dear lie down on the bed"'
+
+				act 'Lie down':
+					cla
+					*clr
+					houseslut += 1
+
+					'<center><img src="images/img/hasb/p1.jpg"></center>'
+					'You lay down on the bed and <<$husName>> You went into the vagina, and <<$boyA>> I lay before you substitute member to the mouth. You diligently podmahivat husband without forgetting to meet a lover mouth.'
+					'"Maybe on another try, that would say so check all the positions and be sure to end." again offered <<$boyA>>, and her husband agreed.'
+
+					act 'Continue':
+						bfA += 1
+						if popolaini = 1:picrand = 40
+						if popolaini = 2:picrand = 41
+						if popolaini = 3:picrand = 42
+						xgt'sexdvoe','var'
+					end
+				end
+			elseif harakBoyA = 2:
+				'"That`s right, fuck her in the mouth, and even better Poimena her ass, and I will be in my mouth it dryuchit, Let`s see how she could bum show your love, or not" said <<$boyA>>, Your husband is clearly podnachivaya.'
+				'"Yes, Come on the bed, let`s see how you`ll love her ass" said <<$husName>>.'
+
+				act 'Lie down':
+					cla
+					*clr
+					houseslut += 1
+
+					'<center><img src="images/img/hasb/p2.jpg"></center>'
+					'You lay down on the bed and <<$husName>> You went into the anus, and <<$boyA>> I lay before you substitute member to the mouth. You diligently podmahivat husband trying to put her ass on his dick for the very root, not forgetting to meet the lover mouth.'
+					'"Now let`s change, let them show their love to your member, Take out of her ass, mouth." again offered <<$boyA>>, and her husband agreed.'
+
+					act 'Continue':
+						bfA += 1
+						if popolaini = 2:picrand = 41
+						if popolaini = 1:picrand = 40
+						if popolaini = 3:picrand = 42
+						xgt'sexdvoe','var'
+					end
+				end
+			end
+		end
+	elseif harakHusb = 1:
+		husbizvradd = 0
+		husbharmin = 0
+		husbandMark = 0
+		husband = 0
+		divorced += 1
+
+		'"What is this crap going on here" said <<$husName>> looking at you.'
+		'"<<$husName>> it`s not what you think, it`s just sex, no feelings, I love only you. It is for me nothing, come to me I`ll show you how much I love you." Answer You, You do not understand how you can bear such nonsense.'
+
+		if izvratH = 0:
+			'"You do ohrenela slut, what love. you fuck with everyone, but I can see she loves, Come thou forest slut." he said and left the room slamming the door.'
+
+			if harakBoyA = 0:
+				bfA = 0
+
+				'"So you`re married, You lied to me, I love you so, adieu!" your guy shouted and ran out of the room.'
+
+				act 'Escape':gt'korr'
+			elseif harakBoyA = 1:
+				'"Well, I see you are not up to me, so I`ll probably, but if you want I can and stay, comfort" said <<$boyA>>'
+
+				act 'Let him go':gt'korr'
+				act 'Let it remain':
+					bfA += 1
+					picrand = 83
+					if popolaini = 3:picrand = 84
+					xgt'sex','var'
+				end
+			elseif harakBoyA = 2:
+				'"That`s number, but oh well hubby dumped, and I once again ready, let`s continue, Let this is cuckold horns schools knocks" said <<$boyA>>, clearly intending to continue the evening.'
+
+				act 'Takeout':bfA -= 1 & gt'korr'
+				act 'Continue':
+					bfA += 2
+					picrand = 83
+					if popolaini = 3:picrand = 84
+					xgt'sex','var'
+				end
+			end
+		elseif izvratH = 1:
+			bfA = 0
+
+			'"You do it yourself you hear, You are talking about some stuff" I asked <<$husName>>.'
+			'"Forgive" just told you, downcast eyes.'
+			'<<$husName>> I came up to you "Today, I`ll leave and will file for divorce, but finally I will punish you" he said, unbuttoning his pants and pulling member. "Well, what froze suck, whore."'
+
+			if harakBoyA = 0:
+				act 'Take in the mouth':
+					cla
+					*clr
+					'<center><img src="images/img/hasb/p3.jpg"></center>'
+					'"So you`re married, You lied to me, I love you so, You despicable liar, adieu!" your guy shouted and ran out of the room.'
+					'<<$husName>> I did not pay attention to him, He put you dick in her mouth and holding your head just started to fuck you in the mouth with each thrust pushing it deeper. You frantically grabbed the air, trying not to choke as he continued, Suddenly he made a sudden movement and his cock jumped down your throat, you tried to pull away, but it is telling you to endure obmateril. He gave you a few seconds to get used to the term in the throat and began to fuck your throat, you do not get enough air and you become frantically trying to beat him free, but <<$husName>> only tightened his grip on your head. When you`re starting to lose consciousness, he finally finished, you feel his sperm spread your throat, making a couple of strong aftershocks, he let you go and you collapsed on the floor coughing sperm mixed with your saliva and swallowed air wheezing. <<$husName>> I looked like you writhe on the floor, I spat on the floor next to you, and left.'
+
+					act 'Escape':gt'korr'
+				end
+			elseif harakBoyA = 1:
+				'<<$boyA>> He is standing and looking like you were aspirated husband "Well, I probably will go." he said.'
+				'"Wait, let this whore for two write out" I offered him <<$husName>>.'
+				'"And let`s, I have it still does not intend to meet more." said <<$boyA>>'
+
+				act 'Lie down on the bed':
+					cla
+					*clr
+					'<center><img src="images/img/hasb/p1.jpg"></center>'
+					'You lay down on the bed and <<$husName>> You went into the vagina, and <<$boyA>> I lay before you substitute member to the mouth. You diligently podmahivat husband without forgetting to meet a lover mouth.'
+					'"And he still fucking cool" said the husband.'
+					'"I could not agree" supported <<$boyA>>'
+
+					act 'Continue':
+						if popolaini = 1:picrand = 40
+						if popolaini = 2:picrand = 41
+						if popolaini = 3:picrand = 42
+						xgt'sexdvoe','var'
+					end
+				end
+			elseif harakBoyA = 2:
+				'"That`s right these whores should be punished, if you want to give help, otimeem it together so that the week will not be able to sit" said <<$boyA>>, Your husband is clearly podnachivaya.'
+				'"Yes, Let`s punish the bitch, and then go to the pub celebrate my divorce and remove a couple of bitches and punish, I stamped" said <<$husName>>.'
+
+				act 'Lie down on the bed':
+					cla
+					*clr
+					'<center><img src="images/img/hasb/p2.jpg"></center>'
+					'You lay down on the bed and <<$husName>> You went into the anus, and <<$boyA>> I lay before you substitute member to the mouth. You diligently podmahivat husband trying to put her ass on his dick for the very root, not forgetting to meet the lover mouth.'
+					'"And the ass she still works smartly" said <<$husName>>.'
+					'"Yeah, and leave me a little" said <<$boyA>>'
+
+					act 'Continue':
+						if popolaini = 1:picrand = 40
+						if popolaini = 2:picrand = 41
+						if popolaini = 3:picrand = 42
+						xgt'sexdvoe','var'
+					end
+				end
+			end
+		end
+	elseif harakHusb = 2:
+		fingal += 1
+
+		'"Oh damn" You had to hear before you flew to the wall by a powerful blow in the face.'
+
+		if izvratH = 0:
+			husbizvradd = 0
+			husbharmin = 0
+			husbandMark = 0
+			husband = 0
+			divorced += 1
+			bfA = 0
+			mop = 0
+			minut += 120
+			stolmoney = 0
+			money = 0
+			komp = 0
+
+			'Lying in the corner you see a husband deals blow after blow on the guy, and <<$boyA>> difficulty fighting off attempts to jump out the door, Finally he succeeds and he runs out of the apartment at breakneck speed.'
+			'<<$husName>> suited to you "Here`s...you...whore...member...and pussy...and in the ass...but in the mouth." he says, putting a strong kick in the stomach at every word, the last word, it hits you in the face and leg you are off. You woke up two hours later her husband nor any of his things in the house were not so, and some of your too.'
+
+			act 'Escape':gt'korr'
+		elseif izvratH = 1:
+			bfA = 0
+			houseslut += 1
+
+			'"Oh damn, I have allowed you to substitute him his hole" I asked <<$husName>>, "And you tell me now the money must, you have to pay for the pleasure, this is my whore" he added, referring to the guy.'
+			'"And now we have it together fuck that-It not povadno." he added, picking you up from the floor and tossing on the bed.'
+
+			if harakBoyA = 0:'<<$boyA>> I tried to argue, but seeing your face contorted with fury husband agreed'
+			if harakBoyA = 1:'<<$boyA>> I acquiesced'
+			if harakBoyA = 2:'<<$boyA>> gladly accepted'
+
+			act 'Continue':
+				if popolaini = 1:picrand = 40
+				if popolaini = 2:picrand = 41
+				if popolaini = 3:picrand = 42
+				xgt'sexdvoe','var'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'endsex':
+	if husband > 0 and hour < 17 and hour > 7 and boycherdaksex = 0:gt'sexm','popala'
+	boycherdaksex = 0
+	gt'korr'
+end
+--- sexm ---------------------------------
+

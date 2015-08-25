@@ -1,0 +1,90 @@
+# restaurant
+if $ARGS[0] = 'start':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Bank</font></b></center>'
+	'<center><img src="images/pic/bank.jpg"></center>'
+	'Working hours 9 to 21.'
+
+	act 'Logout':
+		cla
+		minut = minut + 5
+		gt'hall'
+	end
+
+	if hour >= 9 and hour <= 21:act 'Going to the bank':gt'bank','1'
+end
+
+if $ARGS[0] = '1':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Bank</font></b></center>'
+	'<center><img src="images/pic/bank1.jpg"></center>'
+
+	if bankfond > 0:'Personal account <<bankfond>> RUB'
+
+	act 'Logout':
+		cla
+		minut = minut + 5
+		gt'restaurant','start'
+	end
+
+	if bankfond >= 0:
+		act 'Put your money to a personal account':
+			cla
+			minut = minut + 5
+
+			kartaIN = input ("How much money you want to deposit?")
+			if kartaIN <= 0 or kartaIN > money:
+				'Incorrect operation.'
+			else
+				bankfond = bankfond + kartaIN
+				money = money - kartaIN
+
+				'You put on the account <<kartaIN>> rubles, Now your account <<bankfond>> rubles.'
+			end
+
+			act 'Move away':gt'restaurant','1'
+		end
+		act 'Withdraw money from the personal account':
+			cla
+			minut = minut + 5
+
+			kartaOUT = input ("How much money you want to withdraw?")
+			if kartaOUT <= 0 or kartaOUT > bankfond:
+				'Not correct operation.'
+			else
+				bankfond = bankfond - kartaOUT
+				money = money + kartaOUT
+
+				'You removed from the account <<kartaOUT>> rubles, Now your account <<bankfond>> rubles.'
+			end
+
+			act 'Move away':gt'restaurant','1'
+		end
+	end
+end
+--- restaurant ---------------------------------
+

@@ -1,0 +1,132 @@
+# roadPRE
+minut = minut + 5
+clr
+gs'statPRE'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><img src="images/picPRE/carPRE.jpg"></center>'
+'Once in the car you will immediately dial the phone your wife Luda. I explained to her the situation and ending the conversation went to the construction site of the complex.'
+
+act 'Go':
+	cla
+	*clr
+	minut = minut + 500
+	clr
+	gs'statPRE'
+
+	'<center><img src="images/picPRE/kotPRE.jpg"></center>'
+	'You went on the road for a long time and tired, but before a rest in the hotel, to visit the pit. So you come to the site. Igor phoned and he told you to run protection construction.'
+	'Putting the car you`ve seen, that you are Igor.'
+
+	act 'Say hello to Igor':
+		cla
+		*clr
+		minut = minut + 15
+		clr
+		gs'statPRE'
+
+		'<center><img src="images/picPRE/igor.jpg"></center>'
+		'You are greeted with Igor. He is clearly concerned about the situation, and therefore without long delay made you in a fenced place in the pit, near where a guard hovered gloomily.'
+		'"I have prepared a ladder, that would go down into the breach. The air there, I checked threw a burning piece of paper. It`s not like a bunker or a natural cave, it is rather what the ancient catacombs." Igor said as long as you waded through the mud to failure.'
+		'You came to the hole in the ground and looked back. Floor-five meters, We think you. "See Michael, certainly seems the natural cave, but it is not, too regular shapes. Well, go down?" I asked Igor.'
+
+		act 'Descend':
+			cla
+			*clr
+			minut = minut + 15
+			clr
+			gs'statPRE'
+
+			'<center><img src="images/picPRE/dunPRE.jpg"></center>'
+			'You have a powerful flashlight while Igor with the guard lowered a ladder into the abyss. Then Igor first started down there. Behind him, You went down the aluminum ladder to the cave.'
+			'The cave was quiet and dim, You can breathe but not bad and lantern illuminates the wall. You sent a ray into the hallway and saw in the distance something like a door.'
+			'"Hell. Now just all sorts of historians ponabegut here with your stupid research." muttered Igor.'
+			'You came to the door and saw her what the drawings, like hieroglyphics.'
+
+			act 'Open the door':
+				cla
+				*clr
+				minut = minut + 15
+				clr
+				gs'statPRE'
+
+				'<center><img src="images/picPRE/dunPRE1.jpg"></center>'
+				'Leaning against the door you were able to open it. "Fuck. Mish, you look here. It`s human bones." nervously said Igor.'
+				'Looking around the pile in which a finger poked Igor see for yourself, it`s really a bunch of bones and skulls on top. "Tomb, something." Igor muttered, looking at the bones.'
+
+				act 'Go further':
+					cla
+					*clr
+					minut = minut + 15
+					clr
+					gs'statPRE'
+
+					'<center><img src="images/picPRE/dunPRE2.jpg"></center>'
+					'Going further, you have found a dilapidated gallery. The stone walls of the gallery had recesses that lay dusty scrolls of something resembling parchment.'
+					'Igor took one of the rolls and spread it. "The hell it is not clear, some sort of cuneiform. I will take with me ka, I find a special on something ancient languages, let him decrypt" said Igor'
+					'Have you noticed a door in the wall and opened it.'
+
+					act 'Enter the room':
+						cla
+						*clr
+						minut = minut + 15
+						clr
+						gs'statPRE'
+
+						'<center><img src="images/picPRE/dunPRE3.jpg"></center>'
+						'The room on the stone dais in the center stood a variety of vessels. You have come to see them trying to figure, on what is you met.'
+						'Looking at the room you notice a strange little statue standing on the top of a hill with stone vessels.'
+
+						act 'Take sculpture':
+							cla
+							*clr
+							energy = 21
+							water = 21
+							son = 21
+							minut = minut + 15
+							magik = 1
+							manna = (intel*magik) + vital*5
+							clr
+							gs'statPRE'
+
+							'<center><img src="images/picPRE/amuletPRE.jpg"></center>'
+							'You picked up a strange sculpture and began to look at it. This is clearly something very ancient. Holding the amulet, you get the idea, he warm, hot and almost instinctively felt like some sort of strange force comes into you.'
+							'Did you feel a surge of strength. As if it was not a long journey. Do you even eat and drink no longer wanted.'
+							'Igor came into the room holding a roll of parchment. "Hmm. Interesting little room. What exactly is not clear, we came. And most importantly, what we do with this finding. Either destroy and build complex, whether to make public."'
+
+							act 'You`ve got to think and consult with the boss':
+								cla
+								*clr
+								minut = minut + 15
+								clr
+								gs'statPRE'
+
+								'<center><img src="images/picPRE/dunPRE3.jpg"></center>'
+								'"You`ve got to think and consult with the boss." You say you`re poking a strange amulet in his pocket.'
+								'"Well, here`s for sure you can not call the boss, Let`s get out of this vault." said grimly Igor.'
+
+								act 'To surface':
+									cla
+									*clr
+									minut = minut + 15
+									clr
+									gs'statPRE'
+
+									'<center><img src="images/picPRE/kotPRE.jpg"></center>'
+									'You and Igor got to the stairs and got to the surface. Igor noticed "Too late, Karlovy Vary in the hotel. From there and phoned Vsevolodovich."'
+
+									act 'The ride to the hotel':gt'otelPRE'
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- roadPRE ---------------------------------
+

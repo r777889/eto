@@ -1,0 +1,165 @@
+# obroom
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	cla
+	*clr
+	odkomp = 1
+	gs'stat'
+
+	'<center><b>Your room</b></center>'
+	'<center><img src="images/img/centr/obroom.jpg"></center>'
+	'This is your room, with you it lives another girl Vika'
+	'Right next door is the old <a href="exec:GT ''loker'',''start''">cupboard</a>.'
+	'On the wall, near the hanging cabinet <a href="exec:GT ''mirror'',''start''">mirror</a>.'
+	'Near the wall is your <a href="exec:GT ''bed'',''start''">bed</a>.'
+	if komp = 1:'On your bed lying <a href="exec:GT ''Komp'',''start''">notebook</a>.'
+	''
+	if hour > 14 and hour < 20 and vika>=60 and birthday = day and birthmonth = month and vikaslut = 1 and bordel = 1 and slutty > 0 and b_vika_present_Day!day:
+		vika_sleep = 0
+		'Near the little white stockings cabinet puts your neighbor <a href="exec:gt''Vika''">Vetch</a>.'
+	elseif hour > 14 and hour < 20:
+		vika_sleep = 0
+		'It is lying on his bed your neighbor <a href="exec:gt''Vika''">Vetch</a>.'
+	end
+	if hour > 3 and hour < 8 and vikaslut = 0:
+		vika_sleep = 1
+		'<a href="exec:gt''Vika''">Vetch</a> He is sleeping in his bed, after a night of adventures. I wonder where she lost in the night.'
+	end
+	if hour > 3 and hour < 8 and vikaslut = 1:
+		vika_sleep = 1
+		'<a href="exec:gt''Vika''">Vetch</a> He is sleeping in his bed, after working in a brothel.'
+	end
+
+	act 'In the corridor':
+		if nude = 0:
+			odkomp = 0
+			minut += 5
+			gt'dorm','korr'
+		elseif nude > 0:
+			'You have to get dressed'
+		end
+	end
+	act 'Do(2 hours)':
+		cla
+		minut += 120
+		intel += 1
+
+		'You prozanimavshis two o`clock, I think in your head that-then postponed'
+
+		act 'Finish':gt'obroom','start'
+	end
+
+	if student > 0 and kursovik < 100:
+		act 'Write kursovik 1 h':
+			cla
+			*clr
+			minut = minut + 60
+			manna = manna - 10
+			kursovik = kursovik + RAND(intel/20,intel/10)
+			if kursovik > 100:kursovik = 100
+
+			'<center><img src="images/pic/study.jpg"></center>'
+			'You sat on the course work and prepare it on <<kursovik>> percent.'
+
+			act 'Finish':gt'obroom','start'
+		end
+	end
+
+	if tanga = 0 and clrbelo > 0:
+		act 'Wear underwear':
+			cla
+			tanga = 1
+			gt'obroom','start'
+		end
+	else
+		act 'Remove underwear':
+			cla
+			tanga = 0
+			gt'obroom','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'vika':
+	cla
+	gs'stat'
+
+	'<center><img src="images/img/centr/kat.jpg"></center>'
+
+	act 'Escape':gt'obroom','start'
+
+	if hour < 20:
+		act 'Chatting with Vika (1 h)':
+			cla
+			minut += 60
+			vika += 1
+
+			talkrand = RAND(0,10)
+			if talkrand = 0:'You started talking with Vika, It tells you about the boys she met, about parties, about cosmetics.'
+			if talkrand = 1:'Vic says she was in the cafe and it invited to dance the guy who then even paid her bill.'
+			if talkrand = 2:'Vick says that working in a strip club dancer, rather profitable job for students, Although clients are very pristavuchy.'
+			if talkrand = 3:'Vic tells you that a few girls from the section running at the university came to the European level of sports competition and earn big money, though of course Vic admits that she too lazy to plow because they.'
+			if talkrand = 4:'Vick says that one of her friends flew from a guy who did not get out of it. But Vick smarter, she buys at the pharmacy control, 100% guarantee.'
+			if talkrand = 5:'Vick says in the park, she accidentally went to the panel, and she was offered sex for money.'
+			if talkrand = 6:'Vic tells how she acted naked in studio, not dusty work, but the reputation of suffering.'
+			if talkrand = 7:'Vic tells a horror story about how a nice girl not washed or shaved legs, then he began to so terrible, that its per kilometer all obbegat.'
+			if talkrand = 8:'Vick says that she buys tampons always reserve, and even if you go without them monthly is quickly turned into a slut.'
+			if talkrand = 9:'Vic tells how one of her guys like anal sex, but she was not in possession of Vaseline.'
+			if talkrand = 10:'Vic tells how she was sunbathing in the summer on the beach, however for this she had to buy a swimsuit, but it is useful in winter and walking in the pool. The pool is not a bad tool to keep yourself in good shape.'
+
+			act 'Finish':gt'obroom','vika'
+		end
+		act 'Engage with Vika (1 h)':
+			cla
+			minut += 60
+			intel += 1
+			vika += 1
+
+			'You overlaid textbooks and become engaged with Vika, together all digested twice as fast.'
+
+			act 'Finish':gt'obroom','vika'
+		end
+
+		if vikasex > 0 and vika > 20:
+			act 'Suggest fun':
+				minut += 60
+				gt'lezbsex','start'
+			end
+		end
+
+		if vika > 70 and vikaslut = 0:
+			act 'Ask where it is at night':
+				cla
+				minut += 30
+				vikaslut = 1
+
+				'Vick hesitated, and blushed "I`m just looking around."'
+				'"Aha, She walks, at night on the street, so you and I believe, kolis friend where you are wearing." You were not appeased.'
+				'"I work in a club" Vic mumbled hesitantly.'
+				'"Many times I was at the club, and you have not seen, Enough already lie." you misbehaved, and a little later added "Do you want so do not tell, not very much and wanted." and turned away from it.'
+				'"Well do not be mad, I`ll show you just promise, then you at least talk to me going"'
+				'You are taken aback by these words, than it can deal with, you stop to talk to her, Dogs are not as public fucking. "Yes, Of course I`ll talk to you, that a stupid question."'
+				'"Well go show"'
+
+				act 'Go Vika':gt'bordelv','start'
+			end
+		elseif vika > 70 and vikaslut = 1 and bordel = 0:
+			act 'Ask about work':
+				cla
+				vika += 5
+				bordel = 1
+				odkomp = 0
+
+				'"And I have arranged to work in a brothel, I know how much." you ask.'
+				'"Well I will tell the administrator, but I can not guarantee it can not take."'
+
+				act 'Finish':gt'obroom','vika'
+			end
+		end
+	end
+end
+--- obroom ---------------------------------
+

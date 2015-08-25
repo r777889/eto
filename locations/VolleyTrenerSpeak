@@ -1,0 +1,269 @@
+# VolleyTrenerSpeak
+minut += 15
+gs'stat'
+$din_trener_discoSex={
+	*clr & cla
+	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener4.jpg"></center>'
+	'«Lebedev, said catch in a secluded place fuck»,- you began to say that there is no hiding place. Trainer, hopefully with a smile, He said to follow him.'
+	act 'Watered him': 
+		*clr & cla
+		Joke=0
+		if horny>80:
+		'<center><img src="images/qwest/alter/volley/voitrensexdisco1.gif"></center>'
+		'Let you down to the toilet, Coach delayed about an open door, letting you forward. You think, that secluded place out of the closet so-so, but did not break, because I feel like a member to abdominal cramps, and went to the toilet.'
+			act'Zadran hem':
+				*clr&cla
+				trenerepa+= 5
+				hory+=10
+				if tanga= 1: '<center><img src="images/qwest/alter/volley/voitrensexdisco2.gif"></center>' & 'You sat on the toilet and spread legs, lustfully looking at Mikhail Nikolayevich. It, admiring,  You raised, I put to the sink and pulled off your panties.'
+				if tanga= 0: '<center><img src="images/qwest/alter/volley/voitrensexdisco3.jpg"></center>' & 'You arranged the legs and pulled up the hem, showing her bare pussy coach,  lustfully looking at Mikhail Nikolayevich. It, admiring,  I put to the pushing back forcing, bend over backwards.'
+				act'Align the ass':
+					*clr&cla
+					hory+=10
+					minut += 20
+					gs'stat'
+					'<center><img src="images/qwest/alter/volley/voitrensexdisco4.gif"></center>'
+					'You bent over the sink, coach pulled out a member and began to drive them on your ass, until he stopped at the anus and has already begun prisovyvat, but was not a member, and you painfully wince. Mentor said after a moment: «First, it is better to treat».'
+					act'Podmahivat':
+						*clr&cla
+						'<center><img src="images/qwest/alter/volley/voitrensexdisco5.gif"></center>'
+						$analsexorgazm3='You podmahivat, ottopyrivaya his ass towards the member coach, Member has so deeply, eggs partner beat you on the pussy,  member, penetrating the entire length, evoked a feeling of sweet languor in the chest, lower abdomen.  You moan... And shouting... And wheezed... But these were not cries of pain, You shook orgasm...'
+						$analsexorgazm2=$analsexorgazm3
+						dynamic $analsex
+						act'Further':
+							*clr&cla
+							cumass = cumass + 1
+							'<center><img src="images/qwest/alter/volley/voitrensexdisco6.gif"></center>'
+							'In the throes of pleasure you tightly wrapped around his anus drin trainer, howling out loud with you, coach pulled dick from anus and began to cover your ass with sperm.'
+							act'Go with a trainer':
+								Discoclose=1 &!closing the disc on this day to forget stat
+								minut += 20
+								gs'stat'
+								*clr&cla
+								'<center><img src="images/pic/gorodok.jpg"></center>'
+								'You go on the road chipped town, to his home, next comes the coach, and looks at you.'
+								dynamic $din_trener_Speak			
+							end
+						end
+					end
+				end
+			end
+		else   
+		      '<center><img src="images/qwest/alter/volley/voitrensexdisco7.jpg"></center>'
+			'Let you down to the toilet, Coach delayed about an open door, letting you forward. «Not a quiet place Mikhail»,- Say you and turned, gone. Coach just spent your ass lustful glance. But after, catch up with you, said: «We are going to spend at home, once you are so impregnable». '
+			act'Go with a trainer':
+				Discoclose=1 &!closing the disc on this day to forget stat
+				minut += 20
+				gs'stat'
+				*clr&cla
+				'<center><img src="images/pic/gorodok.jpg"></center>'
+				'You go on the road chipped town, to his home, next comes the coach, and looks at you.'
+				dynamic $din_trener_Speak			
+			end
+		end
+	end
+
+}
+$din_trener_Speak={
+	act 'Try to talk': 
+	cla 
+	if trenerepa=>0 and trener_Speak=0: 
+		trener_Speak+=1 & ! Counter hanging out with a trainer
+		'You have decided to ask around the coach, he reportedly participated in the European Championships. But the coach as it is painfully react to your inquiries and besieged you: «Lebedev, I have no time to meet your curiosity».'
+		if horny>80 or GorSlut > 0: trenerepa += 2 & '«You can not satisfy your curiosity? How about just meet», - flirtatiously whispered you. Coach just looked at you in bewilderment, and turned away.'
+	elseif trenerepa>10 and trener_Speak=1:
+		trener_Speak+=1		
+		'Seeing how-the pucker, Mikhail Nikolayevich you have made attempts to cheer. Bolt and asking nonsense. Twitter all sorts of nonsense, you like, by the way, I asked about his girlfriend or wife. What the coach said,: « Lebedev, you do nothing but to all the small stuff does not concern you ask?». But you continued to moan and argue that you are very interesting. Trainer, all-still I gave up and told: «There are, of course, beautiful and jealous, so see, you around me Steep, get on the first number».'
+		if horny>80 or GorSlut > 0: trenerepa += 2 & '«And suddenly I`m not afraid, and really prettier than me», - your words of coach just smiled.'
+	elseif trenerepa>20  and trener_Speak=2:
+		trener_Speak+=1	
+		'Carefully avoiding the mention of the Euro, you asked the coach to talk about the past, volleyball. He tells youngsters that previously responsible approach to competition, I not wandered for dance and gushing beer, respectful to elders. Are you hoping to hear something more interesting, and got a lecture about that before the grass was greener and the trees above.'	
+		if horny>80 or GorSlut > 0: trenerepa += 3 & 'Pretty soon you`re bored decided to interrupt the monologue, bit provocative actions.'
+		act'Cancel': 
+			delact 'Cancel'
+			*clr 
+			horny+= 10
+			gs'stat'
+			if Discoclose=1:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak1.jpg"></center>'&'You swirled around him, and your skirt ridden up, so the coach could see the legs and even your little ass.  Looking coach chased your ass and legs. «For most of the ball on the floor so you do not watch carefully», - rather you noticed. Michael N., a little confused, I turned away. "Still beautiful legs coach interesting trees", -  You chuckled to himself, and thought:-" What is the main part of all of you get".'
+			if trenerskaia=1 and Discoclose=0:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak2.jpg"></center>'&'You went to the window and straightening hair gave the coach the opportunity to enjoy the flexibility of your figure. "Yet young girls coach interesting trees", -  You chuckled to himself, and thought:-" What is the main part of all of you get".'
+		end
+      elseif trenerepa>30   and trener_Speak=3:
+		trener_Speak+=1	
+		'Once again you have decided to ask around about the last volleyball coach, Coach bit posoprotivlyatsya, He gave way to your head and began his story: «During the next Games of the peoples of the USSR have settled in the hotel.  I was far from being small 194 cm height, And in anticipation of the elevator I was very impressed by our team of ordinary Soviet athletes, standing together. I felt like a pygmy beside these monumental figures from the big sport. All together, we went to the elevator and began to climb up. On the middle floor elevator brakes, go two puny Asian growth "meter with a cap" and begin to sputter admiringly, Looking at the bottom of our girls. Apparently, They argued among themselves in frivolous topic, because when you exit the elevator girls from one of the Asians playful slaps on the ass coming out the last. That, without turning, pure reflex, It makes a sudden movement, elbows ago, shlepalschiku falling right between the ears. You hear a thud and unfortunate falls unconscious at the back wall of the elevator to the laughter of his friend. Lady lazily turns his head and utters the immortal phrase: - «Look, exotic wanted...»'
+		'You are thinking, especially if the coach told a story. With some overtones, and decide to check out a guess.'
+		volleytanga=1 & ! flag run trenerovok without panties in gdksport - go to coaching
+		act'Check': 
+			delact 'Check'
+			*clr 
+			horny+= 10
+			gs'stat'
+			if Discoclose=1:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak3.jpg"></center>'&'Parted neckline, so your tits burst forth, you turned to the coach, arching her back and put her juicy melons forward. view coach immediately focused on them, difficulty swallowing coach looked up from your boobs. "I`ll still at his tease, can not wear shorts to the gym", - I flashed the thought in your head, and the thought sinking feeling in the abdomen increased.'
+			if trenerskaia=1 and Discoclose=0:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak4.jpg"></center>'&'You pulled shorts, like adjusting their, and pulled them so much, that clearly we have fitted your pussy.  Looking coach stared at you between the legs. «For most of the ball on the floor so you do not watch carefully», - rather you noticed. Michael N., a little confused, I turned away. "I`ll still at his tease, can not wear shorts to the gym", - I flashed the thought in your head, and the thought sinking feeling in the abdomen increased.'
+		end
+	elseif trenerepa>40  and trener_Speak=4 and VoltrenerVoyeur=3:
+		trener_Speak+=1	
+		'"Mikhail and you like me? You like to spy on me in the shower, and cum on me ?", - making large enthusiastic eyes and trying to look at the coach asked you adoringly. On the coach took your hand in his, He said pathetically: "Sveta, you are a very beautiful girl, and will be an excellent athlete, unless of course take up the mind, but I tell you that I have a woman, and I am very worried because of what happened". You angrily frowned not expecting such words. "Well, at least not already Lebedev and Light, it is necessary as that still stir, It can be a sense of ownership in it to play, it is necessary that to someone I was jealous", - flying thoughts in your head.'
+		sopr=1
+		ShowerIvan=1 & ! Flag launch Peeping trainer for you and Vanya
+		if horny>80: trenerepa += 3 & 'You decide to check so he is experiencing it says.'
+		act'Check': 
+			delact 'Check'
+			*clr 
+			horny+= 10
+			gs'stat'
+			if Discoclose=1 and tanga= 1:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak5.jpg"></center>'&'"Mikhail could you help me", - waiting for a positive nod from coach, you cant get down panties, and say,: "Please see I think I have it during a workout that is rubbed, But soon the game", - coach trying to look indifferent carefully consider your holes: "Nothing you have is not there, and generally to the shape of underwear should be worn and then rub will not", but in spite of his grumbling you see as a member in the pants from the trainer took the firing position.'
+			if Discoclose=1 and tanga= 0:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak6.png"></center>' & '"Mikhail could you help me", - waiting for a positive nod from coach, you run into the back of the bench passed by at that moment, you do not have panties and perfectly visible to coach your crotch, and say,: "Please see I think I have it during a workout that is rubbed, But soon the game", - coach trying to look indifferent carefully consider your holes: "Nothing you have is not there, and generally have to wear pants instead of bare ass flash, then rub will not", but in spite of his grumbling you see as a member in the pants from the trainer took the firing position.'
+			if trenerskaia=1 and Discoclose=0:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak7.gif"></center>'&'"Mikhail could you help me", - waiting for a positive nod from coach, you go down on my knees turned to the coach ass and lower a little off his shorts: "Please see I think I have it during a workout that is rubbed, But soon the game", - coach trying to look indifferent carefully consider your holes:"Nothing you have is not there, and generally to the shape of underwear should be worn and then rub will not", - but in spite of his grumbling you see as a member in the pants from the trainer took the firing position.'
+		end
+	elseif trenerepa>50  and trener_Speak=5  and VoltrenerVoyeur=5:
+		trener_Speak+=1	
+		'«Michael N., you do not get mad at me for Vanya, we have nothing serious, he competition, I have competition. And in general I like you».  Trainer, who was going, that-the answer, Only he choked and coughed. And you continued: «And for a long time I wanted to ask, Are coaches youth volleyball teams are well paid? Then I, too, want to become a coach, you have won and the car is and you dress in style, or you as a former player and team member of the European Championship that- the underpaid», - you have decided to once again touch the topic gradually Championship.'
+		act'Humbly listen': 
+			cla & *clr 
+			'<center><img src="images/qwest/alter/volley/VoltrenerSpeak20.jpg"></center>'
+			'But, It seems, the coach did not like your return on this subject:  «Lebedev, I`m talking about those championship will not tell, and money do not give a lot of coaches, I`m just in the morning on Sundays, the rich tetenek train in the fitness center, and there after only one session get more than a month, working as a coach in our town», - Well, here again Lebedev, although he told me about a class at the fitness center it is necessary to go there.'
+			trenerepa += 3 & 'Seeing, the coach a little upset your questions, You decide to cheer him up a bit.'
+			centr=1 & ! flag on the appearance of Turner in the center
+			act'Kiss': 
+				cla & *clr 
+				'<center><img src="images/qwest/alter/volley/VoltrenerSpeak8.jpg"></center>'&'Clasping his hands neck Coach, you bit into his mouth with a kiss. The coach stood dumbfounded, wide-eyed.  Determined not to rest on our laurels local success, you have got to the coach`s pants ...'
+				act 'Get Member':
+					cla & *clr 
+					'<center><img src="images/qwest/alter/volley/VoltrenerSpeak9.jpg"></center>'&'Wasting no time, you pulled a stake standing member, I squeezed it into fist several times and walked down the top of the barrel ...'
+					act 'Take in the mouth':
+						cla & *clr  
+						horny+= 10
+						gs'stat'
+						'<center><img src="images/qwest/alter/volley/VoltrenerSpeak10.jpg"></center>'&'But as soon as your wound sponge standing member of the stake, coach pushed your head and hurriedly tucked in his pants member:  «Sveta, stop pestering me.  I explained all those, be fine.  And who knows-and then something I never justified, especially after what happened in the championship», - You pretended to be a girl pie, and myself have decided that it is necessary to take a trip to the fitness center can get something there to learn something about the damn Championship.'
+						act'Say goodbye': 
+							if Discoclose=1:gt 'korrPar'
+							if trenerskaia=1:gt 'gdksport'
+						end
+					end
+				end	
+			end	
+		end 
+	elseif trener_Speak=6 and centr=3: 
+		cla & *clr
+		'<center><img src="images/qwest/alter/volley/VoltrenerSpeak19.jpg"></center>'
+		'You took my hand coach: «Mikhail, I want to tell you, that will never betray you, I certainly chatterbox, but human relationships are not a reason to talk. I do not like the girl from the team»,- blurted it, you looked at the coach and waited for his reaction: «Damn Chinese, blabbed yet», - saying it, coach smiled and continued: «And you`re pushy girl Lebedev, I will think about your words, and now go home».'	
+		centr=4
+		trener_Speak+=1 
+	elseif trener_Speak=7 and trenerSex => 1:
+		cla & *clr
+		'<center><img src="images/qwest/alter/volley/VoltrenerSpeak21.jpg"></center>'
+		'You have decided to ask the coach whether he will take you into the main part, while trying to look sexy as possible. But why Mikhail-then he frowned and said,:"Look at your behavior Lebedev". You have already caught his breath with resentment, as you tear your ass so he does not look at behavior, but as part of the turn so it will look.'
+		act 'Remind me about what happened':
+			cla & *clr 
+			trenerepa = -50
+			volleysostav = -1
+			'<center><img src="images/qwest/alter/volley/VoltrenerSpeak22.jpg"></center>'
+			'«Lebedev, You ohrenela, think their holes in the base to get there», -  the coach said with anger. «I seem wrong when they believed your words, do not come near me, I was very disappointed in you, and on the training too, can no longer come, do not place in the team», - Mikhail zyrknuv your way quite furious glance, He turned and walked away. '
+			act'Escape': 
+				if Discoclose=1:gt 'korrPar'
+				if trenerskaia=1:gt 'gdksport'
+			end
+		end
+		act'Bear a grudge':
+			cla & *clr 
+			trenerepa += 5
+			trener_Speak+=1 
+			'You really wanted to blurt out-something evil, but you are restrained, still faithfully looking into the eyes of coach, you said, that even now ready to demonstrate good behavior. Leaning forward and putting the ass,'
+			if Discoclose=1 and tanga= 1:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak25.jpg"></center>'&'you pull off her panties, along with clothing. Coach inetersom posmotrelna with you.'
+			if Discoclose=1 and tanga= 0:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak24.gif"></center>' & 'the hem of your dress rode up and looked out of his pussy not covered with panties, coach with interest looked at you, your ass and lifted the hem is even higher, freeing up the ass of a dress.'
+			if trenerskaia=1 and Discoclose=0:'<center><img src="images/qwest/alter/volley/VoltrenerSpeak23.gif"></center>'&'putting his hand on your ass coach, pushed aside shorts, spread ass and held her firm trained thousands innings and tricks, fingers on the holes you.'
+			'And you are interested, you can be considered a good behavior. «Light I`m not talking about that, I`m generally, Why do you feel it all comes down»,- You chuckled and agreed to tolerate quirks coach well and potrahatsya him. It seems, based on the move so you will not get.'
+			act'Escape': 
+				if Discoclose=1:gt 'korrPar'
+				if trenerskaia=1:gt 'gdksport'
+			end
+		end
+	elseif trener_Speak=8 and trenerepa > 150 and volleyboll>150:
+		trener_Speak+=1 
+		cla & *clr
+		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener5.jpg"></center>'
+		'The coach smiled and you, raising thumbs up, said: «Svetik, I want to congratulate you think, Now that you`re starting players, but most importantly do not relax, continue to train, Well and less pyanok-gulyanok». You joyfully squealed and rushed to the neck coach. «Now we have them ... I always ... yes we like ...»,- surprise thoughts confused, and the coach just smiled at the confusion, and he said,, Go.'
+		volleysostav = 2
+	else
+		dynamic $din_trener_SpeakHis
+	end 
+
+	act'Say goodbye': 
+		if Discoclose=1:gt 'korrPar'
+		if trenerskaia=1:gt 'gdksport'
+	end
+end
+}
+
+$din_trener_SpeakHis={
+	trenerepa += 1
+	'I`ll tell you a better story volleyball, and you know what:'
+	$volleyhistory[1]='The 1895 Uilyaam J.. Morgan Instructor YMCA (YMCA,Holyoke, Mass.) - Religion cradle of civilization)) I decided to blend elements of basketball, Baseball, tennis and handball (well it does not go bobsledding are mixed) for, to create a new game to their friends-business, that is less contact, rather than basketball (He was such a touchy...). He created the game Volleyball (at the time it was called mintonette - good title, nothing is not left..). Morgan borrowed the net from tennis, and set it at an altitude of approximately 196 cm from the floor, that the net just above the average man`s head at the time of growth.'
+	$volleyhistory[2]='During a demonstration of the game who-it drew the attention of Morgan, players being moved (to volley) the ball back and forth over the net, and possibly «Volleyball» (volleyball) , It would be the most appropriate name for this sport. 7 July 1896 g. College Mr.. Springfield was played the first game of volleyball'
+	$volleyhistory[3]='The 1916 In the Philippines, it was demonstrated for the first time the combination of the pass and the striker impact, while the ball was at a high trajectory for the attack hit by another player'
+	$volleyhistory[4]='The 1920 There were established the rule of three touches of the ball players of one team to move it to the opponent, and usually attack players in the back line. '
+	$volleyhistory[5]='The 1930 Played the first game of beach volleyball in the team that had two players.'
+	$volleyhistory[6]='The 1934 Approval volleyball referees (Before the match, he refereed fat priest in a cassock of the YMCA).'
+	$volleyhistory[7]='The 1947 Creation of the International Volleyball Federation (FIVB)'
+	$volleyhistory[8]='The 1948 After spending the first beach volleyball tournament'
+	$volleyhistory[9]='The 1949 In Prague, the first World Cup'
+	$volleyhistory[10]='The 1964 Volleyball is included in the Olympic program at the Olympics in Tokyo'
+	*pl $volleyhistory[rand(1,10)]
+}
+
+!---------------------------While not part-------------------------
+if volleysostav = 0: 
+	'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener1.jpg"></center>'
+	'You came to Mikhail, volleyball coach and politely greeted.'
+	if volleyboll>0 and volleyboll<20:' Mikhail turned, You looked up in surprise:  «Uh ... you went to training?», - it seems you do not know. « But Lebedev, you try to be like good data on training».'
+	if volleyboll>20 and volleyboll<35:'The coach looked at you with conviction: «Lebedev, well done, that go to training.  But you do not belong here ... but what my business».'
+	if volleyboll>35 and volleyboll<60:'The coach looked at you with conviction: «Lebedeva you pretty well in training, a place like this contribute to regress in the making skills. So you`d better go home».'
+	if volleyboll>60 and volleyboll<80:
+		'The coach looked at you with conviction: 
+-What are you doing here?
+-And what are you doing here? - Responded to the call you.
+-Lebedev, Do not make me angry, what I`m doing here is my business, and what are you doing here, too, my.'
+		if horny>79: 
+			'- Truth? Michael N., you`re here because of me? - You come closer to the coach, and look fool looked him in the eye.'
+			'-I mean like your coach,  and do not blink at me with eyes. Want to join the team, training, and no gulyanok.'
+		else
+			'-As your coach, - he added.'
+		end
+	end
+	if volleyboll>80:
+		'The coach looked at you with conviction: 
+- Lebedev once you`re here, what he ... uh, in general it is not a place for candidates to the team.
+- Michael N., and you have not told, what you are doing here is on Fridays.
+- Lebedev, you just fool, when the team travel? 
+- On Saturday, - offended you say.
+- And on Friday I was there I catch his mares volleyball. In order not hung out there while sleeping. And during the game by the ball does not fly. Clear? Get into the team, and you`ll catch.  Yes, you can go after a workout, see, You can come near the team.'
+	end
+end
+!------------------------------------------Entered into the--------------------------------------
+if volleysostav > 0:
+
+	if Joke=>3:  
+	dynamic $din_trener_discoSex
+	else
+		'<center><img src="images/qwest/alter/volley/Tren/VolleyTrener2.jpg"></center>'
+		'You came to Mikhail, and politely greeted.'
+		'- Lebedeva I also warned that they will catch, those that have no brains, game tomorrow,- He threw coach.'
+		'- And I...this...girlfriend give notebook. - Only you and mumbled.'
+		if alko > 0: '-You`re still drunk, before departure. I do not approve, tomorrow will not play' & trenerepa -= 1 & seealko=500 &! Флаг не допуска к игре в субботу
+		'- Come on, I`ll take you home, but then again where-some run away, - said coach. Looks like you here today, it is better not to return.'
+		
+		act'Go with a trainer':
+			Discoclose=1 &!closing the disc on this day to forget stat
+			minut += 20
+			gs'stat'
+			*clr&cla
+			'<center><img src="images/pic/gorodok.jpg"></center>'
+			'You go on the road chipped town, to his home, next comes the coach, and looks at you.'
+			 dynamic $din_trener_Speak			
+		end
+	end	
+end	
+ 
+act 'Move away':gt $loc, $metka
+--- VolleyTrenerSpeak ---------------------------------
+

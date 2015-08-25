@@ -1,0 +1,233 @@
+# gevent
+if $ARGS[0] = '1':
+	cla
+	*clr
+	dyadyamishaevent = 1
+	dick = 18
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'You agreed and went with Uncle Misha cafe before reaching his house by car, and went to the apartment. When your back lock clicked, He ran back and chill you felt something was wrong, but no more time to do. Misha pulled you to the wall with his massive body and holding hand over her mouth,He said curtly, looking at his scary eyes - Softly, Sveta. I know about your mother`s affair with Slavik. And not only to him. If you do not want, that would be learned about this stepfather, and your family split, you`ll listen to me, I realized? - and taking the assent your trembling lip and legs gave way, he rudely dragged you by the hand in the darkened bedroom with curtained windows, and pushed into the side of the bed, I closed the door. Then firmly taking the hair, He dropped to his knees and you, He dropped his pants and took his penis in his hand, I thrust it in your lips.'
+	'-Open mouth, Sveta.'
+	'<center><img src="images/gevent/1.jpg"></center>'
+	'You tried to resist, Then he slapped you slapped and said,, so you do not make excuses. You had to open your mouth and take his thick, repulsively smelling cock in her mouth.'
+	'-Suck let, not shirk.'
+	'You started to suck him, constantly nuzzling his hairy pubis. Some time later, He took out a member of your mouth, and said,:'
+	'-Lie, it`s time to take you on this.'
+
+	act 'Lie down on the bed':
+		cla
+		*clr
+
+		'You are no longer resisting, and lost all hope, wearily lay down on the bed. He undressed you, and mash your breasts, I lay down at your feet and spread them, then examined your pussy'
+
+		if vagina = 0 and sex = 0:
+			'-Play the virgin More? Who will fix it'
+			'<center><img src="images/gevent/mishasex1.jpg"></center>'
+			'He got closer to you, and rested a member of your crotch. He abruptly introduced into your member, tearing the hymen, and I began to fuck rough and flourish, completely ignoring the fact, you moaning and wincing in pain and discomfort . He soon began to puff, after which he took a cock and crawled to your face, forcibly stuck in your mouth his dick, and finished it.'
+		else
+			'-You already torn, slut? Dai and I`ll popolzuyutsya'
+			'<center><img src="images/gevent/mishasex1.jpg"></center>'
+			'He got closer to you, and rested a member of your crotch. He introduced the term in you and began to fuck rough and tough.'
+
+			if dick - vagina > 10 and dick - vagina <= 7:'You were very sick and you pray, that it quickly ended'
+			if dick - vagina > 6 and dick - vagina <= 3:'You were painful and unpleasant'
+
+			'He soon began to puff, after which he took a cock and crawled to your face, forcibly stuck in your mouth his dick, and finished it, you feel his hot cum.'
+		end
+
+		act 'Swallow':
+			cla
+			*clr
+			sex += 1
+			bj += 1
+			swallow += 1
+			cumlip += 1
+			throat += 1
+			if vagina < dick:vagina += 1
+			rape = rape + 1
+			minut = minut + 75
+			money = money + 500
+			gs'stat'
+
+			'<center><img src="images/gevent/mishasex2.jpg"></center>'
+			'You gulped sperm. In the mouth, the bitterness remained disgusting.'
+			'-Swallowed, girl? - He abruptly kinder, I patted you on the head and gave things - Dress. I will give you a present'
+			'You got dressed and waited rapist, which came out of the room. He is back, holding a bill of five hundred rubles, I gave you'
+			'-On, detochka, buy yourself some ice cream. I know, your family is now broke, So, come to visit, play, More money for you ladies. And remember, What can I do, so keep your mouth shut.'
+			'You took the bill from the hands of Uncle Misha.'
+
+			act 'Escape':gt'gorodok'
+		end
+	end
+end
+
+if $ARGS[0] = '1-1':
+	cla
+	*clr
+	dmishaday = day
+	dick = 18
+	sex += 1
+	bj += 1
+	cumbelly += 1
+	throat += 1
+	if vagina < dick:vagina += 1
+	minut = minut + 75
+	money = money + 200
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><img src="images/gevent/mishasex.jpg"></center>'
+	'You went to visit Uncle Misha. It, as soon as the door closed, I began to undress me, touching my body with their rough, hairy arms. Undressed, He sat on the couch and gave me a job. You made him a blowjob, then he put you on the couch and began to have rough and hard fucking.'
+
+	if dick - vagina > 10 and dick - vagina <= 7:'You were very sick and you pray, that it quickly ended'
+	if dick - vagina > 6 and dick - vagina <= 3:'You were painful and unpleasant'
+
+	'Lastly, Misha puffed and pulled his penis out of you, wheezing with breathing, and finished on your stomach, then I kiss your pussy and gave you a couple of crumpled bills on expenses.'
+	'<center><img src="images/gevent/mishasex3.jpg"></center>'
+
+	act 'Escape':gt'gorodok'
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	minut = minut + 15
+	cumface = 1
+	cumlip = 1
+	bj = bj + 1
+	GorSlut = GorSlut + 1
+	money = money + 10
+	gs'stat'
+
+	'<center><img src="images/gevent/2.jpg"></center>'
+	'You left him out of the room, after which he held you in the men`s room. Having got you into one of the booths, They closed it behind him and put it on his knees, and then he pulled out his penis and gave you a service, starting to shoot you on the phone. You suck at it, after which he came to you in the face, pulled from his pocket a crumpled ten, you threw your feet and left.'
+
+	act 'Wash and exit':
+		cumpussy = 0
+		cumbelly = 0
+		cumass = 0
+		cumlip = 0
+		cumface = 0
+		cumfrot = 0
+		minut = minut + 5
+		gt'gskver','kino'
+	end
+	act 'Logout':gt'gskver','kino'
+end
+
+if $ARGS[0] = '3':
+	cla
+	*clr
+	alko = alko + 10
+	minut = minut + 120
+	bj = bj + 3
+	anal = anal + 3
+	sex = sex + 3
+	vagina = vagina + 3
+	anus = anus + 3
+	throat = throat +3
+	guy = guy + 3
+	gang = gang + 1
+	cumpussy = 1
+	cumbelly = 1
+	cumass = 1
+	cumlip = 1
+	cumface = 1
+	GorSlut = GorSlut + 1
+	gs'preg'
+	gs'stat'
+
+	'<center><img src="images/gevent/3.jpg"></center>'
+	'You go home to an Armenian. He turned in the apartment two more people, Armenians also. They have Fingered, speaking in his own language, given to drink alcohol in your trash, then stripped and began to fuck you, inserting one by one in all your holes, ending with you and in you, soldering and having more, thus removing you on camera all the time. Lastly, when they played enough with you, They kicked you out of the apartment.'
+
+	act '...':gt'gorodok'
+end
+
+if $ARGS[0] = '4':
+	cla
+	*clr
+	guy = guy + 1
+	alko = alko + 2
+	sex = sex + 1
+	vagina = vagina + 1
+	cumass = 1
+	minut = minut + 50
+	gs'stat'
+
+	'<center><img src="images/gevent/4.jpg"></center>'
+	'You have come a man to his home, where you drank with him and have sex. Fuck your pussy, He pulled out his penis and you finished in the ass, after which he gave you your clothes, you talk to him, We drank tea, and left.'
+
+	act '...':gt'gorodok'
+end
+
+if $ARGS[0] = '5':
+	cla
+	*clr
+	guy = guy + 1
+	sex = sex + 1
+	vagina = vagina + 1
+	cumass = 1
+	minut = minut + 15
+	money = money + 100
+	gs'stat'
+
+	'<center><img src="images/gevent/5.jpg"></center>'
+	'The guy you started the woods, where section, I put a tree and fucked Quick, Cum on the ass, then I gave you a hundred rubles and left.'
+
+	act 'Escape':gt'gorodok'
+end
+
+if $ARGS[0] = '6':
+	day = day + 1
+	week = week + 1
+	hour = 12
+	minut = 17
+	GorSlut = GorSlut + 1
+	guyondiso = RAND(5,10)
+	guy = guy + guyondisco
+	bj = bj + guyondisco
+	sex = sex + guyondisco
+	vagina = vagina + guyondisco
+	throat = throat + guyondisco
+	gang = gang + 1
+	cumpussy = 1
+	cumbelly = 1
+	cumass = 1
+	cumlip = 1
+	cumface = 1
+	gs'stat'
+	gs'time'
+	gs'preg'
+
+	'<center><img src="images/gevent/6.jpg"></center>'
+	'You vaguely remember, what happened. Hands, You probe, that-something hard and hot, rests against your palms into your body. A little and you`ve done some blowjob-the guy, and when he came, something in its place becomes another. Disco continued, who-then filmed, who-then stand in line, who-it is attached to your back. You woke up the next day afternoon, all in the semen, and without clothes, about DK. Finding your clothes, You got dressed and got up.'
+
+	act 'Escape':gt'gorodok'
+end
+
+if $ARGS[0] = '7':
+	cla
+	*clr
+	guy = guy + 2
+	anal = anal + 2
+	bj = bj + 2
+	sex = sex + 2
+	vagina = vagina + 2
+	anus = anus + 2
+	throat = throat + 2
+	gang = gang + 1
+	gs'stat'
+
+	'<center><img src="images/gevent/7.jpg"></center>'
+	'Guys have brought you to the apartment, where you undressed and fucked in all holes, having finished your face and, prevent wash, We drove from the apartment.'
+
+	act 'Escape':gt'gorodok'
+end
+--- gevent ---------------------------------
+

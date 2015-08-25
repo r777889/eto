@@ -1,0 +1,32 @@
+# stolPar
+gs'stat'
+
+'<center><img src="images/pics/stol.jpg"></center>'
+'You sat down at his desk.'
+
+act 'Get up from the table':gt $locM, $metkaM
+
+if komp = 1:'On the table is yours <a href="exec:GT ''Komp'',''start''">notebook</a>.'
+
+if lernHome > 0:
+	act 'Learning lessons':
+		cls
+
+		if lernHome <= 2:
+			minut += 60*lernHome
+			lernHome = 0
+			lern += 1
+			gs'stat'
+		elseif lernHome > 2:
+			minut += 60*2
+			lernHome = 0
+			gs'stat'
+		end
+
+		'Sitting for a long time you learned yet they were able to learn.'
+
+		act 'Get up from the table':gt $locM, $metkaM
+	end
+end
+--- stolPar ---------------------------------
+

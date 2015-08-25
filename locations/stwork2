@@ -1,0 +1,380 @@
+# stwork2
+!minut = minut + 15
+clr
+gs'stat'
+
+'<center><b><font color = maroon>Scene</font></b></center>'
+'<center><img src="images/pic/stripclub1.jpg"></center>'
+
+if publichot < 10:$pubhot = 'and you boo, heard cries "remove this stupid cow"'
+if publichot >= 10 and publichot < 20:$pubhot = 'and you boo'
+if publichot >= 20 and publichot < 30:$pubhot = 'and frankly bored doing drinking and talking to each other'
+if publichot >= 30 and publichot < 60:$pubhot = 'sometimes throws at you looks accompanied by smiles'
+if publichot >= 60 and publichot < 70:$pubhot = 'and with a slight interest in you and are looking at conversations between a glass of beer'
+if publichot >= 70 and publichot < 80:$pubhot = 'with interest to examine you'
+if publichot >= 80 and publichot < 90:$pubhot = 'with strained faces, some even noticeable sweat on their foreheads'
+if publichot >= 90:$pubhot = 'forgotten about their drinking, hooting and shaking money'
+'Before the scene of a man sitting <<$pubhot>>.'
+
+if hour >= 15 or hour <= 2:
+	if stpredmet > 0:
+		act 'Striptease 5 minutes (<<stpredmet>> garments)':
+			cls
+			minut += 5
+			stpredmet -= 1
+			sweat += 1
+			fat -= 3
+			manna -= RAND(5,10)
+			if stpredmet = 1:sweat += 1
+			if stpredmet = 0:hapri = 0 & stripdancesum += 1
+			publichot += RAND(stripdance/30,stripdance/10)
+			if publichotstart = publichot:publichot -= RAND(5,10) & publichotstart = publichot
+			gs'stat'
+
+			'<center><img src="images/pic/stripclub2.jpg"></center>'
+			'You danced on stage before an audience undressing.'
+
+			if ves > rost-90:
+				vesrand = RAND(0,100)
+				if vesrand >= 75:
+					publichot -= RAND(5,10)
+
+					'In the hall laugh at you, "Look how fat she hang. Yeah, and ass shaking like jelly."'
+				end
+			end
+
+			dynamic $pubhotdi
+
+			act 'Further':gt $curloc
+		end
+		act 'Dancing around a pole 5 minutes (<<stpredmet>> garments)':
+			cls
+			minut += 5
+			stpredmet -= 1
+			sweat += 2
+			fat -= 5
+			manna -= RAND(10,50)
+			if stpredmet = 1:hapri = 0
+			if stpredmet = 0:mop = 0 & stripdancesum += 1
+			hapri = 0
+			publichot += RAND(stripdance/20,stripdance/5)+ RAND(poledance/20,poledance/5)
+			if publichotstart = publichot:publichot -= RAND(5,10) & publichotstart = publichot
+			gs'stat'
+
+			'<center><img src="images/pic/strippole.jpg"></center>'
+			'You are dancing around the pole and acrobatics featuring sexy undressing in public.'
+
+			if ves > rost-90:
+				vesrand = RAND(0,100)
+				if vesrand >= 75:
+					publichot = 15
+
+					'Fulfilling another trick on a pole, you have not kept your weight and crashed to the floor. The crowd laughed "Hey hippopotamus, stamp into a swamp where it came from."'
+
+					fingalrand = RAND(0,100)
+					if fingalrand >= 75:
+						fingal += RAND(2,5)
+
+						'If you fall much venerated person on the floor and it seems you have a bruise on his face blurred.'
+					end
+				elseif vesrand >= 50:
+					publichot -= RAND(5,10)
+
+					'In the hall laugh at you, "Look how fat she hang. Yeah, and ass shaking like jelly."'
+				end
+			end
+
+			dynamic $pubhotdi
+
+			act 'Further':gt $curloc
+		end
+	end
+
+	if stpredmet = 0:
+		if publichot >= 80 and publichot < 90:
+			privatrand = RAND(0,100)
+			if privatrand >= 90:
+				'After the dance, the guard showed you that you have a customer for a private dance.'
+
+				dynamic $privatdancedi
+
+				exit
+			end
+		elseif publichot >= 90:
+			privatrand = RAND(0,100)
+			if privatrand >= 70:
+				'After the dance, the guard showed you that you have a customer for a private dance.'
+
+				dynamic $privatdancedi
+
+				exit
+			end
+		end
+	end
+else
+	'Working time is over. Time to go home.'
+end
+
+act 'Quit the stage':gt'stwork','start'
+
+$pubhotdi = {
+	if publichot < 30:
+		payrand = 0
+		'No one paid any attention to your movements on stage.'
+	elseif publichot >= 30 and publichot < 60:
+		payrand = 0
+		'A couple of people looked at you but not much else, tips gave you no.'
+	elseif publichot >= 60 and publichot < 70:
+		payrand = RAND(0,1)
+		if payrand = 0:
+			'A couple of people looked at you but not much else, tips gave you no.'
+		elseif payrand = 1:
+			paymoneyrand = RAND(1,3)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		end
+	elseif publichot >= 70 and publichot < 80:
+		payrand = RAND(0,5)
+		if payrand = 0:
+			'Tipped nobody gave you.'
+		elseif payrand = 1:
+			paymoneyrand = RAND(1,3)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 2:
+			paymoneyrand = RAND(2,4)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 3:
+			paymoneyrand = RAND(3,5)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 4:
+			paymoneyrand = RAND(4,6)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 5:
+			paymoneyrand = RAND(5,10)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		end
+	elseif publichot >= 80 and publichot < 90:
+		payrand = RAND(0,10)
+		if payrand = 0:
+			'Tipped nobody gave you.'
+		elseif payrand = 1:
+			paymoneyrand = RAND(1,3)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 2:
+			paymoneyrand = RAND(2,4)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 3:
+			paymoneyrand = RAND(3,5)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 4:
+			paymoneyrand = RAND(4,6)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 5:
+			paymoneyrand = RAND(5,10)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 6:
+			paymoneyrand = RAND(7,12)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 7:
+			paymoneyrand = RAND(10,15)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 8:
+			paymoneyrand = RAND(15,20)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 9:
+			paymoneyrand = RAND(20,30)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 10:
+			paymoneyrand = RAND(30,50)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		end
+	elseif publichot >= 90:
+		payrand = RAND(0,15)
+		if payrand = 0:
+			'Tipped nobody gave you.'
+		elseif payrand = 1:
+			paymoneyrand = RAND(1,3)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 2:
+			paymoneyrand = RAND(2,4)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 3:
+			paymoneyrand = RAND(3,5)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 4:
+			paymoneyrand = RAND(4,6)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 5:
+			paymoneyrand = RAND(5,10)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 6:
+			paymoneyrand = RAND(7,12)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 7:
+			paymoneyrand = RAND(10,15)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 8:
+			paymoneyrand = RAND(15,20)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 9:
+			paymoneyrand = RAND(20,30)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 10:
+			paymoneyrand = RAND(30,40)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 11:
+			paymoneyrand = RAND(40,50)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 12:
+			paymoneyrand = RAND(50,60)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 13:
+			paymoneyrand = RAND(60,70)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 14:
+			paymoneyrand = RAND(70,80)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		elseif payrand = 15:
+			paymoneyrand = RAND(80,100)
+			money += paymoneyrand*10
+
+			'What a guy shoved you in panties <<paymoneyrand>>0 rubles'
+		end
+	end
+}
+
+$privatdancedi = {
+	act 'Go for a lap dance':
+		cls
+		minut += 30
+		money += 800
+		sweat = 1
+		hapri = 0
+		mop = 0
+		fat -= 5
+		stripdancesum += 1
+		if stprrand = 0:gt'stwork2','pr1'
+		if stprrand = 1:gt'stwork2','pr2'
+		if stprrand = 2:gt'stwork2','pr3'
+		gs'stat'
+
+		'<center><img src="images/pic/privatstrip.jpg"></center>'
+		'In a separate room to the music you within half an hour showed different erotic dances client.'
+
+		act 'Go to the locker room':gt'stwork','start'
+	end
+}
+
+if $ARGS[0] = 'pr1':
+	cla
+	*clr
+	!money += 2000
+
+	'<center><img src="images/img/centr/pr1.jpg"></center>'
+	'You dance to four guys, after some time they offer you, serve them in full for 5000 RUB.'
+
+	act 'Escape':gt'stwork','start'
+	act 'Agree':
+		gang += 1
+		guy += 4
+		picrand = 12
+		money += 5000
+		gt'paysex','var'
+	end
+end
+
+if $ARGS[0] = 'pr2':
+	cla
+	*clr
+	!money += 2000
+
+	'<center><img src="images/img/centr/pr2.jpg"></center>'
+	'You dance in front of a guy, as he Fingering, he soon offers, serve it in full for 3000 RUB.'
+
+	act 'Escape':gt'stwork','start'
+	act 'Agree':
+		guy += 1
+		picrand = 39
+		money += 3000
+		xgt'sex','var'
+	end
+end
+
+if $ARGS[0] = 'pr3':
+	cla
+	*clr
+	!money += 2000
+
+	'<center><img src="images/img/centr/pr3.jpg"></center>'
+	'Are you with another dancer portraying leysbiyskie games, after a few minutes you are offered to make your games more realistic for 2000rubles each.'
+
+	act 'Escape':gt'stwork','start'
+	act 'Agree':
+		girl += 1
+		lesbian += 1
+		picrand = 18
+		money += 2000
+		xgt'lezbsex','var'
+	end
+end
+--- stwork2 ---------------------------------
+

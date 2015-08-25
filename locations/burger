@@ -1,0 +1,652 @@
+# burger
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	rand1=rand(0,100)
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Snack Bystroeshka</font></b></center>'
+	'<center><img src="images/pic/burger.jpg"></center>'
+	'The most nutritious food in the neighborhood, Score and sing a couple of kilos, Bright says advertising on the wall.'
+	'Also in the works eatery <a href="exec:GT ''butoilet''">toilet</a> to the public.'
+	if BistroBoss > 0:'<a href="exec:GT ''burgerBoss''">The principal`s office</a> Anatoly Borisovich'
+
+	act 'Logout':
+		cla
+		minut = minut + 5
+		gt'down'
+	end
+
+	if money >= 100:
+		act 'Eat 100 RUB':
+			cla
+			*clr
+			minut = minut + 30
+			health = health + 10
+			money = money - 100
+			manna = manna + 5
+			willpower = willpower + 5
+
+			'<center><img src="images/pics/food.jpg"></center>'
+
+			if energy >= 30:
+				fat = fat + 8
+
+				'You can no longer have.'
+			elseif energy >= 20 and energy < 30:
+				fat = fat + 6
+				energy = energy + 10
+
+				'You pushed through the power of a meal.'
+			elseif energy < 20:
+				energy = energy +20
+				fat = fat + 4
+
+				'You will be happy to eat food.'
+			end
+
+			if water >= 20:
+				'Tea in you no longer climbs.'
+			elseif water < 20:
+				water = water +20
+
+				'You will be happy to drink a cup of tea.'
+			end
+
+			act 'Get up from the table':gt'burger','start'
+		end
+	end
+
+	if IvanPodstavaQW = 2:
+		act 'Go to the office to Anatoly Borisovich':
+			cls
+			gs'stat'
+
+			'You went to the office of the owner. He was in the right place, engaged in his papers. Anatoly Borisovich looked at you and said, "Well? There are some news?"'
+			act 'Logout':gt'burger','start'
+
+			if money >= 650000:
+				act 'Give duty':
+					cls
+					money -= 650000
+					IvanPodstavaQW = 5
+					gs'stat'
+
+					'You got the money and counted 650 Arkady Borisovich thousands. He counted the money and promised, that no prosecution will no longer be.'
+
+					act 'Logout':gt'burger','start'
+				end
+			end
+
+			if IvanEvidence = 1:
+				act 'Show proof':
+					cls
+					IvanPodstavaQW = 6
+					IvanKvartira = 0
+					IvanEvidence = 0
+					gs'stat'
+
+					'You showed record recognizing the camera Arkady Borisovich, where Ivan confessed and promised to return the money. Arkady Borisovich took you post and said, then what he will understand and take a statement from the police.'
+
+					act 'Logout':gt'burger','start'
+				end
+			end
+		end
+	end
+
+	if posuda = 0:
+		act 'Talk about the work':
+			cla
+			'You went to the office on which was written Manager. You met a lively woman. She began to tell you, you can work almost every day. Come at any time when running a snack bar and wash the dishes 1 h, for it will get 100 rubles immediately at hand.'
+
+			act 'Refuse and leave':gt'burger','start'
+			act 'Agree to work':
+				cla
+				posuda = 1
+
+				'You agreed to work.'
+
+				act 'Logout':gt'burger','start'
+			end
+		end
+	elseif posuda >= 3 and posudaA = 0:
+		act 'Go to the manager':
+			cla
+			'You went to the office of the Manager. She told the manager that you are not running bad and offered you one more part time. You can wash the floors in the morning, with 8 to 9ti. 1 hour cleaning the floors and get it 100 rubles immediately at hand.'
+
+			act 'Refuse and leave':gt'burger','start'
+			act 'Agree to work':
+				cla
+				posudaA = 1
+
+				'You agreed to work.'
+
+				act 'Logout':gt'burger','start'
+			end
+		end
+	elseif posuda >= 1 and posudaday ! day and NoBistroWork = 0 and PersSecWork = 0:
+		act 'Wash the dishes (1 h 100 RUB)':
+			cla
+			*clr
+			posudaday = day
+			minut = minut + 60
+			posuda = posuda + 1
+			manna = manna - 15
+			money = money + 100
+			sweat = sweat + 1
+			if bistroQW = 10:bistroQW = 0
+
+			'<center><img src="images/pics/dirt.jpg"></center>'
+			'You are within an hour washed the dirty dishes from the food residue and grease. Then you were given 100 rubles for the job.'
+
+			if vnesh >= 20 and posuda >= 7 and bistroQW < 10:
+				if bistroQW = 1:
+					'From the office of the owner came out and saw you Bystroezhki smiled. "Sveta. my offer is still in force. It pays to go to a restaurant?"'
+				elseif bistroQW = 0:
+					bistroQW = 1
+					'From the office of the owner came Bystroezhki and nearly bumped into you.'
+					'- Oh, sorry. How could I not notice this charming girl.'
+					'- Do not worry - you will answer with a smile,.'
+					'- Can meet you? I Anatoly Borisovich.'
+					'- Sveta.'
+					'Anatoly took your hand and kissed her.'
+					'-Would you like to have dinner at the restaurant, rather than in the hole?'
+				end
+
+				act 'Takeout':gt'burger','start'
+				act 'Agree':
+					cls
+					bistroQW = 10
+
+					'"Let`s go first to the shop, you pick up a chic dress. And the restaurant is not allowed in with anything." I Said Anatoly seeing you on the street to his car.'
+
+					act 'Sit in the car':
+						cls
+						minut += 15
+						bistroQW = 20
+						gs'stat'
+
+						'<center><img src="images/maggot/car.jpg"></center>'
+						'Ehav in the car Anatoly took you by the hand and not let go until the very end of the road.'
+						'When you come into a very expensive boutique with French title.'
+						'Anatoly said to you to choose the dress.'
+						'After a few dresses shown, He made a choice and told you to go into the fitting room.'
+
+						act 'To go into the fitting room':
+							cls
+							minut += 15
+							gs'stat'
+
+							'<center><img src="images/maggot/butic.jpg"></center>'
+							'You undressed and began to inspect the dresses.'
+							'Suddenly I went into the fitting room, Anatoly.'
+							'- Sorry, I could not resist, that would not look at his beautiful.'
+							'Looking at dresses, Anatoly said:'
+							'- I think you will here is gray. It is the most expensive way, that there is a. And you know, Sveta, for such gifts must be very good thanks.'
+							'Anatoly eyes pointed at his pants showing, what he wants from you.'
+
+							act 'Make a blowjob':
+								cls
+								minut += 15
+								bistroQW = 50
+								bj += 1
+								guy += 1
+								swallow += 1
+								cumlip += 1
+								dress[24] = 1
+								dressH[24] = 160
+								dressB[24] = bedra
+								gs'stat'
+
+								'<center><img src="images/maggot/bj.jpg"></center>'
+								'You went down and sat down in front of Anatoli, He unbuttoned his pants and pulled out his penis. You leaned toward his hard cock and kissed him, I feel its warmth. Glib tongue licking relish sucking dick and his pod in a large wet mouth and you start to suck his dick.'
+								'Soon Anatoly groaned and you feel in your mouth hit the jet of warm liquid. You do not become distracted by a blowjob swallow cum, trying not to choke. Anatoly straightened clothes and left.'
+								'Dressed as you are out and showed Anatolia.'
+								'He smiled and gestured seller, that takes Dress.'
+
+								act 'Exit boutique':
+									cls
+									minut += 15
+									gs'stat'
+
+									'<center><img src="images/maggot/car.jpg"></center>'
+									'Uff, Svetik. I`m tired of something. Let`s go to a restaurant like some other time. Chubais told you and taking you by the hand led to his car. You quickly get to your home and say goodbye to you, Anatoly.'
+
+									act 'Get out of the car':gt'street'
+								end
+							end
+							act 'Wrinkle':
+								cls
+								minut += 15
+								gs'stat'
+
+								'You hesitated not knowing what to do. Anatoly Borisovich took you by the shoulders and pushed you to them, from what you perplexed squatted. He unbuttoned his pants and pulled out her own already risen a member.'
+
+								act 'Frightened look':
+									cls
+									minut += 1
+									bistroQW = 50
+									bj += 1
+									guy += 1
+									!swallow += 1
+									!cumlip += 1
+									dress[24] = 1
+									dressH[24] = 160
+									dressB[24] = bedra
+									gs'stat'
+
+									'<center><img src="images/maggot/pr.jpg"></center>'
+									'You looked up and looked at the frightened Chubais and then you feel like a hot head of his cock rested against your lips. Anatoly began to move his cock your lips. "Do not be shy baby, oblizni him his tongue."'
+
+									act 'Lick':
+										cls
+										minut += 2
+										!swallow += 1
+										!cumlip += 1
+										gs'stat'
+
+										'<center><img src="images/maggot/pr1.jpg"></center>'
+										'You hesitantly stuck out his tongue and licked purple head. Then again and again, Finally, you become tongue licking his penis along the entire length wetting his saliva.'
+
+										act 'Lick member':
+											cls
+											minut += 2
+											!swallow += 1
+											!cumlip += 1
+											gs'stat'
+
+											'<center><img src="images/maggot/pr2.jpg"></center>'
+											'You continued to lick cock and Anatoly Borisovich taking you for a head pushed closer to the member. You feel like you lips rested Member. Your wet lips parted and hot and firm flesh became a member in your mouth completely filling it. "So baby, Now suck it." He said Anatoly Borisovich began to move his hips and slowly fuck your mouth. You are a member of the lips tightly wrapped around and began to feel like the skin on the penis moves along the rod.'
+
+											act 'Sucking dick':
+												cls
+												minut += 2
+												!swallow += 1
+												cumlip += 1
+												facial += 1
+												cumface += 1
+												gs'stat'
+
+												'<center><img src="images/maggot/pr3.jpg"></center>'
+												'You have been actively sucking dick and felt like getting tired jaw. Suddenly your mouth fired hot jet. From surprise you even released a member of his mouth and the next jet of sperm slapped you on the nose. It emerged from the mouth of the sperm and hung on your chin. Anatoly Borisovich taking you for a head start stronger stick your mouth on member ends.'
+
+												act 'Sit on the floor':
+													cls
+													minut += 2
+													gs'stat'
+
+													'<center><img src="images/maggot/pr4.jpg"></center>'
+													'Finally Anatoly Borisovich stopped to finish and put the term in the pants buttoned pants. You`re sitting stunned on the floor in front of him dressing, with semen dripping from his face, feeling totally crappy, for nothing like the taste of semen. Chubais helped you get to his feet and quickly walked out of the dressing room. You began to try to erase from the face of sperm removing traces.'
+
+													act 'Get out of the dressing room':
+														cls
+														minut += 2
+														gs'stat'
+
+														!'<center><img src="images/maggot/pr4.jpg"></center>'
+														'You came out of the dressing room, with red face of shame. You feel as if the surrounding already know about, that you just sucked dick in a public place. Chubais said the saleswoman, he buys for you to dress her and paid. The saleswoman wrapped dress and you feel her gaze on her face when she gave you a package with a dress.'
+
+														act 'Exit boutique':
+															cls
+															minut += 15
+															gs'stat'
+
+															'<center><img src="images/maggot/car.jpg"></center>'
+															'You came out of the boutique, along with Anatoly Borisovich. "Uff, Svetik. I`m tired of something. Let`s go to a restaurant like some other time." Chubais told you and taking you by the hand led to his car. You quickly get to your home and say goodbye to you, Anatoly.'
+
+															act 'Get out of the car':gt'street'
+														end
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+
+							if dom > 0:
+								act 'Thank you very much (Refuse)':
+									cls
+									dom += 5
+
+									'You smirked and said, "Thank you very much" Anatoly broke and said pressure, "You know what I mean." After that, he unzipped his fly and pulled out a member who gets.'
+									'You laughed, "That`s it, I understand perfectly, Can he pull this dress, If you think that I litter for each potbellied, fat cat, who thinks, that saddled future and imagines himself king of the world and brutal macho, so that not par my brain baby, and their chicks shoved back to the nest, until he fell out, and then I looked out there in the nest next to chick, a couple of eggs not hatched, So you treat, I help them hatch knee. In general, sebi away in horror, Casanova unfinished."'
+									'Anatoly erupted and began to threaten "Yes I, I fire you!"'
+									'You laughed in his face "Oh scared, All right tremble, dismiss and then he`ll be here this cloth to wash the dishes."'
+									'Anatoly paled, I blushed and jumped out angrily hissing fitting followed by your loud laughter.'
+
+									act 'Escape':
+										cla
+										minut = minut + 5
+										gt'down'
+									end
+								end
+							end
+						end
+					end
+				end
+
+				exit
+			elseif bistroQW = 20:
+				bisrand = RAND(0,10)
+				if bisrand = 10:
+					'From the office of the owner came Bystroezhki Anatoly Borisovich turned and saw you with arrogant mien.'
+				end
+			elseif bistroQW = 56:
+				'When you have finished work you suddenly approached manager Ivan. "Well Light. Sorry. I was wrong about you. I do not know, what fly bit me. We just needed a person to the post of assistant manager. I think you come near. The character you have. Well? You agree?"'
+
+				act 'Yes':
+					cls
+					gs'stat'
+
+					'You agreed to the proposal of Ivan to become assistant manager. Ivan immediately beamed with happiness. "Well then, you first work assignment, Here`s the keys to the cabinet Borisych. Leave them until at. Go to his office, open the safe and take from there the envelope. Do not forget to close only after safety deposit boxes. How to take the envelope come in to me. All I realized? Take Action!"'
+
+					act 'I have changed my mind':
+						cls
+						bistroQW = 57
+						gs'stat'
+
+						'You have refused offers of Ivan and noticed how his face flashed a shadow of annoyance. He said disappointedly you. "Well, as you know, my job offer."'
+
+						act 'Escape':gt'burger','start'
+					end
+					act 'Take the key and go to the office of Anatoly Borisovich':
+						cls
+						bistroQW = 111
+						gs'stat'
+
+						'Taking a clue from Ivan you went into the office of the owner. Opened its doors. We entered the room and walked to the safe. A second key on the ring, you open the safe and saw what the papers and thick envelope.'
+
+						act 'Look in the envelope':
+							cls
+							$burgerIvanText = 'And looked in the envelope. After that you have closed the safe and went to the exit.'
+							gs'stat'
+
+							'You looked in the envelope and saw a thick wad of money. Vskidku, that`s about half a million. From what he saw you whistled.'
+
+							act 'Include envelope Ivan':
+								cls
+								IvanPodstavaDay = day
+								IvanPodstavaQW = 1
+								NoBistroWork = 1
+								gs'stat'
+
+								'Coming out of the office, You saw that in the hallway near the cooler is Ivan and talking on cell. Seeing you, he waved his hand to you. You came and gave the envelope to Ivan. He quickly picked it up and put it in his jacket pocket. After that you nod. You can go. You want to give him the keys to the office of Anatoly Borisovich, but Ivan shook his head and his hand covering the phone told you. "Leave the keys is at. Come tomorrow, We discuss the details of your new appointment.'
+
+								act 'Escape':gt'burger','start'
+							end
+						end
+						act 'Include envelope Ivan':
+							cls
+							$burgerIvanText = 'You took the envelope and closed the safe headed for the exit.'
+							IvanPodstavaDay = day
+							IvanPodstavaQW = 1
+							NoBistroWork = 1
+							gs'stat'
+
+							'Coming out of the office, You saw that in the hallway near the cooler is Ivan and talking on cell. Seeing you, he waved his hand to you. You came and gave the envelope to Ivan. He quickly picked it up and put it in his jacket pocket. After that you nod. You can go. You want to give him the keys to the office of Anatoly Borisovich, but Ivan shook his head and his hand covering the phone told you. "Leave the keys is at. Come tomorrow, We discuss the details of your new appointment.'
+
+							act 'Escape':gt'burger','start'
+						end
+					end
+				end
+				act 'No':
+					cls
+					bistroQW = 57
+					gs'stat'
+
+					'You have refused offers of Ivan and noticed how his face flashed a shadow of annoyance. He said disappointedly you. "Well, as you know, my job offer."'
+
+					act 'Escape':gt'burger','start'
+				end
+
+				exit
+			elseif bistroQW = 50:
+				'During operation, you learned, that Anatoly Borisovich away, on business matters and he is replaced by Ivan manager. When you are ready to leave work, I came out of the office manager and Ivan came to you, conspiratorial tone said,. "Well Light, You obviously do not want to work for these pennies? Come to me, specials. the work of special. salary."'
+
+				act 'Go to the manager`s office':
+					cls
+					minut += 15
+					bistroQW = 55
+					!bj += 1
+					!guy += 1
+					!swallow += 1
+					!cumlip += 1
+					gs'stat'
+
+					'<center><img src="images/maggot/bj1.jpg"></center>'
+					'You went into the office and closed the pre-Ivan the front door of the castle, I sat in a chair in front of you, lounging at ease in it. You went to the manager and waited for what he would, he grinned arrogantly and deftly grabbed you by the hand pulling to yourself.'
+
+					act 'Bend':
+						cls
+						'<center><img src="images/maggot/bj2.jpg"></center>'
+						'You tilt and came face to face with Ivan, he whispered, unbuttoning his pants, "After working baby mouth."'
+
+						act 'Take in the mouth':
+							cls
+							minut += 3
+							bj += 1
+							guy += 1
+							gs'stat'
+
+							'<center><img src="images/maggot/bj3.jpg"></center>'
+							'Continuing to stand in front of you even stronger Ivan leaned over and gently licked his tongue member, then again and again. Finally, you lips wrapped around his cock and started to suck his cock absorbing into his hot mouth to the end, utykayas nose with every movement in curly pubis, that tickled your nose.'
+							'Ivan finally broke down and without warning began to finish in your mouth. A stream of hot liquid hit you in the mouth, You opened his eyes wide in surprise, but you continued to suck dick spewing seed, Finally, you have been a mouthful of seed and you could not keep it, and it flows through your mouth to a member of Ivan.'
+
+							act 'Swallow cum and clean his penis tongue':
+								cls
+								minut += 2
+								swallow += 1
+								cumlip += 1
+								money += 1500
+								gs'stat'
+
+								'<center><img src="images/maggot/bj4.jpg"></center>'
+								'You sit down in front of the manager and swallowing sperm, We began to lick the remains of the still standing, but quickly fall term.'
+								'Finally, a member of the fallen and completely satisfied Ivan gave you one and a half thousand rubles for the work you have done.'
+
+								act 'Escape':gt'burger','start'
+							end
+						end
+					end
+
+					if dom > 0 or dom = 0 and sub = 0:
+						act 'Pull out':
+							cls
+							bistroQW = 56
+							gs'stat'
+
+							'<center><img src="images/maggot/bj1.jpg"></center>'
+							'You have escaped from the hands of Ivan did not expect such a reaction. He glared at you "We then suck Borisych, and his deputy brezguesh?" You are taken aback by these words. How does he know about, What happened in the dressing room stall. Probably on your face that is affected and Ivan grunted. "Yes Borisych himself told about it. If you expect, but then, that will manage Okrut Borisych, something for nothing. You he does not really even need. And I`ll offer a good salary. So that, Be a good boy and show me, that he can your mouth."'
+
+							act 'Perebesh!':dom += 1 & gt'burger','start'
+							act 'Take in the mouth':
+								cls
+								bistroQW = 55
+								minut += 3
+								bj += 1
+								guy += 1
+								gs'stat'
+
+								'<center><img src="images/maggot/bj3.jpg"></center>'
+								'Continuing to stand in front of you even stronger Ivan leaned over and gently licked his tongue member, then again and again. Finally, you lips wrapped around his cock and started to suck his cock absorbing into his hot mouth to the end, utykayas nose with every movement in curly pubis, that tickled your nose.'
+								'Ivan finally broke down and without warning began to finish in your mouth. A stream of hot liquid hit you in the mouth, You opened his eyes wide in surprise, but you continued to suck dick spewing seed, Finally, you have been a mouthful of seed and you could not keep it, and it flows through your mouth to a member of Ivan.'
+
+								act 'Swallow cum and clean his penis tongue':
+									cls
+									minut += 2
+									swallow += 1
+									cumlip += 1
+									money += 1500
+									gs'stat'
+
+									'<center><img src="images/maggot/bj4.jpg"></center>'
+									'You sit down in front of the manager and swallowing sperm, We began to lick the remains of the still standing, but quickly fall term.'
+									'Finally, a member of the fallen and completely satisfied Ivan gave you one and a half thousand rubles for the work you have done.'
+
+									act 'Escape':gt'burger','start'
+								end
+							end
+						end
+					end
+
+					exit
+				end
+			elseif bistroQW = 55:
+				'Manager came to you and said Ivan "I`ll see you in the office."'
+
+				act 'Go to the manager`s office':
+					cls
+					bistroQW = 60
+
+					'You went to the office, Ivan sat at the table and motioned to you under the table. Do you understand, Ivan wants, what would you have climbed under the table.'
+
+					act 'Crawl under the table':
+						cls
+						minut += 3
+						bj += 1
+						swallow += 1
+						cumlip += 1
+						money += 1500
+						gs'stat'
+
+						'<center><img src="images/maggot/bjud.jpg"></center>'
+						'You crawled under the table and pulled Ivan in front of your face your dick. You wrapped around his lips and began to suck trying to incorporate it into his mouth as far as possible. Under the table was cramped and uncomfortable sucking, but you coped and just a few minutes your mouth poured semen Ivan you quickly began to swallow, that would not get dirty.'
+						'After that Ivan as the first time I got fifteen hundred and handed to you.'
+
+						act 'Escape':gt'burger','start'
+					end
+				end
+			elseif bistroQW = 60:
+				'Ivan that that is nowhere in sight, and you have not approached it, you had the idea to check his office.'
+
+				act 'Go to the manager`s office':
+					cls
+					bistroQW = 65
+
+					'You came to the office, but it was closed, you approached the deputy manager and said with a laugh to you "What Svetlana? Without "stick tea" not worked? I know all about you and our general manager. But it was not until the end of the week. And if you do not want me to tell the rest of the, how you earn a living, then you go to the office and serve me."'
+					''
+
+					act 'Meekly nod':
+						cls
+						bj += 1
+						swallow += 1
+						cumlip += 1
+						cumface += 1
+						guy += 1
+						gs'stat'
+
+						if rand1<10:'<center><img src="images/maggot/bj21.jpg"></center>'
+						if rand1>=10 and rand1<50:'<center><img src="images/nigma/city/managger0,'+rand(0,1)+'.gif"></center>'
+						if rand1>=50:'<center><img src="images/nigma/city/managger0,'+rand(0,3)+'.jpg"></center>'
+						'You went into the room and fell down in front of deputy manager, He took his dick and shoved in your face showering smell not washed perineum. You licked the salty member and sigh of despair, We began to suck. Pimply jerk lasted just a few of your movements and began to violently finish your mouth, you still could not fit in the mouth and came out of his mouth.'
+
+						act 'Escape':gt'burger','start'
+					end
+					act 'Send it':
+						cls
+						'You said contemptuously that pimply kid, that he would go to hell, with its threats.'
+						'Ha, Listen here slut! Chief - my father, he is the master Bystroezhki, and Borisych just hired director. And if Borisych know that you fuck and suck all, who offers, He will bury you alive! Could silently mouth a couple of days to work and all, as well as...'
+						'After these words, he called 2-x movers and said'
+						'- Children, You do not want to blow off steam on this lyarva? Do not be afraid, obliging it will. Catered for in full. I`m right, Svetik?'
+
+						act 'Yes':
+							cls
+							bistroQW = 70
+							bj += 1
+							guy += 3
+							gruzsex += 1
+							gs'stat'
+
+							'<center><img src="images/maggot/tri.jpg"></center>'
+							'You jitters mumbled yes, in front of three men and smiled loaders. You immediately took the hand was taken to the warehouse, We helped you to undress and put on his knees presenting three members to serve.'
+							'You became diligently serve the three members take turns sucking their hands and soon nadrachivaya men groaned and one of them grabbed you by the head removed from the penis.'
+
+							act 'Substitute person':
+								cls
+								cumface += 3
+								facial += 1
+								gs'stat'
+
+								'<center><img src="images/maggot/tri2.jpg"></center>'
+								'Hot jet of sperm slapped you in the face, You close your eyes and just feel the skin getting sharply smelling semen on the face. Soon after the bombing stopped, and your whole face is covered with a thick layer of sticky Cum, guys looked pretty and fun of you. Then they left the warehouse giving you, herself.'
+								''
+
+								act 'Escape':gt'burger','start'
+							end
+						end
+						act 'Yelled at full throat and run':bistroQW = 61 & gt'burger','start'
+					end
+				end
+			elseif bistroQW >= 65 and soplakTimes ! 3:
+				'To you came pimply assistant manager and took the hand led to his office.'
+				'In the office, he sat down on a chair and took a member of the set you on all fours in front of him.'
+
+				act 'Work mouth':
+					cls
+					bj += 1
+					sub += 1
+					gs'stat'
+
+					if rand1<10:'<center><img src="images/maggot/bj21.jpg"></center>'
+					if rand1>=10 and rand1<50:'<center><img src="images/nigma/city/managger0,'+rand(0,1)+'.gif"></center>'
+					if rand1>=50:'<center><img src="images/nigma/city/managger0,'+rand(0,3)+'.jpg"></center>'
+					'You kneel before sitting in the chair kid, They began to make him a blowjob diligently sucking dick, caressing tongue prick and testicles, and nadrachivaya trunk with one hand'
+
+					act '...':
+						cls
+						cumlip += 1
+						money += 300
+						soplakTimes1 += 1
+						if soplaktimes1=10:set soplaktimes=3
+						gs'stat'
+
+						if rand1<40:'<center><img src="images/maggot/bj32.jpg"></center>'
+						if rand1>=40:'<center><img src="images/nigma/city/cum0,'+rand(0,1)+'.jpg"></center>'
+						'Hot jet of sperm slapped you in the mouth, you continue nadrachivat hand member while being careful not to drop out of his mouth a drop of nasty-tasting liquid. Finally, the flow has dried up, and you show pimply zamu mouthful of his cum Cum swallow. He grinned and threw on the floor three hundred-paper. You pick them up and hid, He rose from his knees and went out of the office.'
+						''
+
+						act 'Escape':gt'burger','start'
+					end
+				end
+
+				exit
+			elseif bistroQW = 57 and BistroBoss = 0 or bistroQW >= 65 and BistroBoss = 0 and soplakTimes = 10:
+				BistroBoss = 1
+				if soplakTimes = 3:soplakTimes = 4
+
+				'When you have finished, Bystroezhki seemed on the verge of Anatoly Borisovich, He nodded to you "Hello World, finished, Come to me."'
+
+				act 'Escape':gt'burger','start'
+
+				exit
+			end
+
+			act 'Escape':gt'burger','start'
+		end
+	elseif posudaA >= 1 and posudaAday ! day and hour < 10 and NoBistroWork = 0 and PersSecWork = 0:
+		act 'To mop the floor (1 h 100 RUB)':
+			cla
+			*clr
+			posudaAday = day
+			minut = minut + 60
+			posuda = posuda + 1
+			manna = manna - 15
+			money = money + 100
+			sweat = sweat + 1
+
+			'<center><img src="images/pic/clener1.jpg"></center>'
+			'You are within an hour namyvali floor in a diner. Then you were given 100 rubles for the job.'
+
+			act 'Escape':gt'burger','start'
+		end
+	end
+end
+--- burger ---------------------------------
+

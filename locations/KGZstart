@@ -1,0 +1,62 @@
+# KGZstart
+minut += 1
+nosave = 1
+gs'stat'
+
+KGZrec = KGZday*24+KGZhour-32
+if KGZrecord < KGZrec:KGZrecord = KGZrec
+
+'<center><b>Sunset Dead</b></center>'
+'<center><b>Record <<KGZrecord>> hours</b></center>'
+if KGZdost = 1:'Achievement: Found Fort Bragg'
+'This is a game of survival, the task will hold as much as possible.'
+
+if KGZHP > 0:act 'Load a saved game':gt'KGZgame'
+
+act 'Play a new game':
+	cls
+	KGZHP = 100
+	KGZplace = 0
+	KGZday = 1
+	KGZhour = 8
+	KGZsup = 3
+	KGZmedkit = 1
+	KGZcopcar = 0
+	KGZgun = 0
+	bullet = 0
+	KGZgun2 = 0
+	bullet2 = 0
+	KGZgun3 = 0
+	bullet3 = 0
+	KGZgenerator = 0
+	KGZbolgarka = 0
+	KGZcopdoor = 0
+	KGZratia = 0
+	KGZfortQW = 0
+	KGZfortOru = 0
+	KGZgranade = 0
+	KGZdost = 0
+	KGZgruzBenz = 0
+	KGZgruzBenzMark = 0
+	KGZgruzovik = 0
+	KGZlok = 0
+	KGZlok2 = 0
+	KGZweapon = 0
+
+	'ENTRY'
+	'DeGross entertainment'
+	'in partnership with'
+	'PAPA_GANS inc.'
+	'are'
+	'Sunset Dead.'
+	'As harsh and merciless this world. Not that the past life was better or worse. Everywhere its advantages and disadvantages. You, right, wondering, what kind of a zombie apocalypse, there are pros? I`ll tell you... Freedom. Freedom of action and freedom of choice, everyone is free to do what, which really wants. For me, the beginning of the end of the world, It was liberation. And even now,, I understand, I was here only because of their own choice, their freedom.'
+	'In a past life I was an ordinary man: I go to work, I met a girl, I paid loans and was going to fly on vacation for some-a resort. In a day, when everything changed, I woke up early to surprise, the sun`s rays penetrated through the curtains and joyously heralded a new day, and with it the complete collapse of the old society.'
+	'My girlfriend was not around, Then I thought,, she left for work early. As I was wrong. To my surprise, the apartment was no light, and I put the coffee brewed in the old. Usually I do not have time, to watch him, but that day I decided not to rush to work, and just enjoy the morning. Fire a couple of eggs, He noted, that we ought to go to the grocery store and began to absorb the breakfast pleased and read for a long time pending Detective.'
+	'My calm interrupted some-the sound of the front door. Heart-rending cries were heard, which resulted in a few seconds. Even without understanding, what`s happening, I grabbed the phone and quickly dialed 911. The tube was silence, frightening and ruthless, no beeps, even a single sound, just my own echo was given in the endless corridors of the radio waves.'
+
+	act 'Play':gt'KGZgame'
+end
+
+act 'Logout':nosave = 0 & gt'Komp','start'
+--- KGZstart ---------------------------------
+

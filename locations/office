@@ -1,0 +1,1366 @@
+# office
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Office Engineering companies</font></b></center>'
+	'<center><img src="images/pic/office.jpg"></center>'
+
+	if workSec = 0:'Requires the Secretary to work the young girl with a diploma certifying the passed course.'
+	if workSec = 0:'Schedule to 9 to 17, every day except Saturday and Sunday.'
+	if workSec = 0:'Salary lists 25the number of the bank account. Salary 800 rubles per day.'
+	if workSec = 0:'For work required to come to the office clothes.'
+
+	if secrDiplom = 1 and workSec = 0 and ((work = 0 and workSec = 0 and cheatWork = 0) or (cheatWork = 0 and cheatWork = 1)):
+		act 'He is interviewed for a job':
+			cla
+			minut = minut + 60
+
+			'You`ve come to the personnel department, there look at your diploma and a resume and said, that can take you for a job Secretary.'
+
+			act 'Escape':gt'office','start'
+			act 'Apply for job':
+				cla
+				work = 1
+				workSec = 1
+				sekDay = 0
+
+				'You have taken the work book and said, that you can go to work the next business day.'
+
+				act 'Escape':gt'office','start'
+			end
+		end
+	end
+
+	if hour >= 9 and hour < 17 and workSec >= 1:'You`re late for work and you are sent home.'
+	if workSec >= 1 and ofclo = 0 and hour >= 9 and hour < 17:'You are not dressed in accordance with the corporate style.'
+
+	if hour < 9 and workSec >= 1 and ofclo = 1:
+		act 'Walk to the workplace':
+			sekDay = sekDay + 1
+			hour = 9
+			minut = 0
+			gt'office','work'
+		end
+	end
+
+	if worksec = 1:
+		act 'Dismissed':
+			cla
+			minut = minut + 30
+			work = 0
+			workSec = 0
+
+			'You quit, not having received money during the last month.'
+
+			act 'Logout':gt'down'
+		end
+	end
+
+	act 'Logout':gt'down'
+end
+
+if $ARGS[0] = 'work':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><b><font color = maroon>Your workplace</font></b></center>'
+	'<center><img src="images/pic/sekr.jpg"></center>'
+	'You sat down at his desk.'
+
+	if fidayoffice = 0:
+		fidayoffice = 1
+
+		'At the next table sat a girl, she smiled at you "Hello, I Light, and what`s your name."'
+		'"Sveta" Answer You.'
+		'"What, truth, it is likely that they would not be confused, All secretaries called Light, until you got a girl named Sveta works too." she laughed.'
+		'"Aha, what`s this-the chief of the new names would not remember." added you.'
+		'"Well laugh and that`s enough, let`s work, and now the boss will come and we will arrange for a laugh at work." she said and began to disassemble the paper on the table.'
+	elseif fidayoffice = 1:
+		'Light as always was buried up to his ears papers.'
+	end
+
+	if hour < 17:
+		act 'Work':
+			minut += 60
+			cla
+
+			'You print documents, parse the mail and bring the chief coffee.'
+
+			officerand = RAND(0,15)
+			if officerand > 8 and svetslut = 0:gt'office','sveta'
+			if officerand > 8 and svetslut = 2:gt'office','boss1'
+			if officerand > 8 and officelezb > 5 and officekom ! 1:gt'office','komer0'
+			if officerand = 10 and officekom = 1:gt'office','komer1'
+			if officerand = 11 and officebestslut >= 3:gt'office','motiv1'
+			if officerand = 12 and officebestslut >= 3:gt'office','motiv2'
+			if officerand = 13 and officebestslut >= 3:gt'office','motiv3'
+
+			if officerand = 9 and officeslut > 5:
+				cla
+				*clr
+				'<center><img src="images/img/office/m0.jpg"></center>'
+				'You are working, Light somewhere zapropastilas, Chef left. The cabinet includes one of the managers, "Hello Svetsik, can you help me?"'
+
+				act 'How can I help you?':
+					cla
+					*clr
+					'<center><img src="images/img/office/m1.jpg"></center>'
+					'"How can I help you?" you ask.'
+					'"Yes I was told, that you are able to shoot well voltage." With that, he walked right up to you and removing already standing member of his pants, You grabbed his head and began to move up to his penis.'
+
+					act 'Take in the mouth':
+						picrand = 54
+						officeslut += 1
+						guy += 1
+						gt'sex','minet'
+					end
+
+					if officeslut < 10:
+						act 'Send it':gt'office','work'
+					end
+				end
+			elseif officerand = 8 and officeslut > 5:
+				cla
+				*clr
+				'<center><img src="images/img/office/m2.jpg"></center>'
+				'You are working, Light somewhere zapropastilas, Chef left and how evil has broken air conditioner. You get too hot and you unbutton the top couple of buttons on her blouse, so now your breasts almost falling out of her. The cabinet includes one of the managers, "Hello Svetsik, chef at?".'
+				'"No, left." You are responsible and dive back into the paper.'
+				'"It`s hot here, you." He says it is gradually approaching you and the failure to exclude from the glance of your breasts, that and strive to jump out of the blouse.'
+
+				act 'Yes':
+					cla
+					*clr
+					'<center><img src="images/img/office/m3.jpg"></center>'
+					'"Yes, damn air conditioner has broken again" you answer, without looking up.'
+					'"Yes, I see, you just sweltering." He begins, and suddenly cut short, It unfolds you to her and jerked her blouse on you, well at least the buttons are not scattered on the sides, just jumped out of the loop, bites his lips to your breast, and with all the passion starts to fondle her. First you can not even understand what is happening, but this procedure is definitely beginning to like you.'
+
+					act 'Surrender':
+						picrand = 55
+						officeslut += 1
+						guy += 1
+						gt'sex','minet'
+					end
+
+					if officeslut < 10:
+						act 'Chased him':gt'office','work'
+					end
+				end
+			elseif officerand = 7 and officeslut > 5:
+				cla
+				*clr
+				'<center><img src="images/img/office/m4.jpg"></center>'
+				'You need to make copies of the documents, and you went to the archive where there was a huge copier. While you are copying, He entered the room one of the managers, and I began-search among the shelves with folders, you do not pay any attention to him and continued to do their work. After a minute, you felt his hand on my ass. "Sveta, truth to say that you have the best ass, and you`re always ready to prove it?" he said, and without waiting for your response, continued "Now I will test it." With these words, his hands slipped under your clothes.'
+
+				act 'Letting him':
+					cla
+					*clr
+					officeslut += 1
+
+					'<center><img src="images/img/office/m5.jpg"></center>'
+					'You are not saying anything turned to him and kiss, He began to undress you, and in a moment you were naked to the waist, and he was the one arm around you, and the second full-massaged your pussy. Your hand she reached for his pants and pulled out yet fully risen member and began to masturbate.'
+					'"There is a good boy, and now also, but the mouth" he said.'
+
+					act 'Squatting':
+						cla
+						*clr
+						'<center><img src="images/img/office/m6.jpg"></center>'
+						'You squatted down and took his penis in her mouth, he was still sluggish and you easily absorbed it all, moved his mouth taking it in one cheek, then for another, soon you will feel it began to increase and your mouth is now placed only a third of its. You selflessly sucked when the office door opened and a girl came marketer, She paused at the threshold of seeing you.'
+						'"Oh, I`m sorry, I do not think time" she said, and turned to the door.'
+						'"Come Masha you we are not prevented from doing, I wanted to, and you can even join" he said.'
+						'"No, no thank you, I will not be long." she said, and went to the shelves.'
+						'You continue to do blowjob without paying attention to her. A few minutes later she came out and finished-for shelving start watching you. Then she took the phone and began to shoot you, Commenting on the record. "Here is our secretary of Light sucks dick, izvesna it around the office as the trouble-free davalka, see with what pleasure it does. Svetik let myself masturbate, that-It has been clearly seen that you like it." You put his hand between her legs and began to actively play their clitoris. You damn excited that it takes you, and you have begun to show the camera the whole process, the releasing member of his mouth and licking it from the bottom to the head, the re-taking in the mouth and with a satisfied purr sweetly sucking it. She turned to the guy "She will suck, come on now fuck it, and I`ll post all Hire, and then send out around the office, Let look at our slut is capable, and you try to let, we`ll make a reputation for excellent whore, that-would you release from the men did not have, You like when you fuck all." With that, she walked to the corner and stopped, continuing to shoot.'
+						'"Now fuck, let a little pososet, it`s so pleasant that even do not want to tear off."'
+
+						act 'Continue':
+							picrand = 56
+							officeslut += 3
+							guy += 1
+							gt'sex','minet'
+						end
+					end
+
+					if officeslut < 10:
+						act 'Chased him':gt'office','work'
+					end
+				end
+
+				if officeslut < 10:
+					act 'Escape':gt'office','work'
+				end
+			elseif officerand = 6 and officeslut > 5:
+				cla
+				*clr
+				'<center><img src="images/img/office/m8.jpg"></center>'
+				'You are working, Light somewhere zapropastilas, Chef left. The cabinet includes one of the managers, "Hello Svetsik, chef at?".'
+				'"No, left." You are responsible and dive back into the paper.'
+				'"Why are you so tense, I let you do massazhik." he said, and without waiting for an answer comes behind you and start massaging your shoulders. This really helps you relax in the chair, You close your eyes and enjoy, until strong hands massaging your shoulders.'
+				'"Well liked?" His voice brought you to the ground'
+
+				act 'Yes':
+					cla
+					*clr
+					'<center><img src="images/img/office/m9.jpg"></center>'
+					'"Yes, very, thank you" you answer, eyes closed.'
+					'"Oh, thanks, it`s too much, but mutual aid will be just." he says.'
+					'"What are you talking about?" you started, but opened his eyes immediately understood what he meant. You had to stand in front of the eyes of a member of, and you do not understand how a hand grabbed him and pulled him into her mouth, and her mouth fell open a little bit already preparing to take his dildo. "What am I doing?" flashed through your mind. "It is evident I was so used to be given in the office, it is at the level of reflexes. So to take or not take, that is the question."'
+
+					act 'Take':
+						picrand = 57
+						officeslut += 1
+						guy += 1
+						gt'sex','minet'
+					end
+
+					if officeslut < 10:
+						act 'Chased him':gt'office','work'
+					end
+				end
+			elseif officerand = 5 and officeslut > 5:
+				cla
+				*clr
+				'<center><img src="images/img/office/m10.jpg"></center>'
+				'You are working, Light somewhere zapropastilas, Chef left and you re-freezes computer. Swearing you call your sysadmin and ask him to come. The cabinet includes a sysadmin looking at the computer and said that he would take it now and tomorrow will bring. "And what am I going to do tomorrow, Come here and now will correct." you started.'
+				'"No, Well it`s a long time, I have still a lot of other work, although we can agree and then I will fix it for you now!" he says'
+				'"And we agree?" you ask.'
+				'"Well, you`re the girl that in itself is not operational, everyone knows how you can negotiate." he says.'
+
+				act 'And how':
+					cla
+					*clr
+					'<center><img src="images/img/office/m11.jpg"></center>'
+					'"Yes, very, simply" answer he says, and quickly pulls his penis.'
+					'As long as you stand in a stupor trying to think of what to say, He pushes you into a chair and grabbed by the hair attracts his dildo. Once you open your mouth it-I would have-say something, he immediately took advantage of this and pushed his penis in your mouth.'
+
+					act 'Suck':
+						picrand = 58
+						officeslut += 1
+						guy += 1
+						gt'sex','minet'
+					end
+
+					if officeslut < 10:
+						act 'Bite':
+							cla
+							'You squeeze teeth, He pulls out a yelp and his penis out of your mouth and the words "Bitch!!!" He runs out of the office. You kick out of anger computer and lo, he again works.'
+
+							act 'Back to work':gt'office','work'
+						end
+					end
+				end
+			elseif officerand = 0 and officeslut > 20 and officebestslut < 1:
+				cla
+				*clr
+				officebestslut = 1
+				officeslut += 1
+				gang += 1
+				guy += 4
+
+				'<center><img src="images/img/office/g3.jpg"></center>'
+				'The office runs chef, and immediately begin to tell you "So as Light, in the conference room now sit four of our largest shareholder, I have here a little nakosyachil and now I need some time to prepare some documents, Your task now is to go to them and make sure that-to them this hour was the most well-, that-they do not even remember me. Well, you`re a smart girl, the whole office has peretrahat, so fuck four more, and I will appoint you to the position according to your talents. Let`s move your ass run, let them fuck your ass today, but not My. All Run." You got up and went to the room koferentsii, on the road thinking about what position he said, and what kind of talent you are, other than to fuck with everyone. On entering the study you see four men, It is clearly not in the best frame of mind. "Well, as I have now otebut" flashed through your mind, but to retreat later, you yourself have made the reputation of the office whore. You lifts up her skirt, bare the chest and quietly climb up on the table in front of them. "Lord for your contribution to the development of our business today, you are given a present from the company, can not only watch, but also to touch and where you wish to insert whatever you want and wherever you want." You do not believe what you are doing, You just close your eyes prepare for what is now holes on your living space will not leave.'
+
+				act 'Begin':
+					picrand = 17
+					gt'paysex','var'
+				end
+			end
+
+			act 'Finish':gt'office','work'
+		end
+
+		act 'In the principal`s office':gt'office','boss'
+		act 'Corridor':gt'office','kor'
+		act 'Chatting with Sveta':
+			cla
+			minut += 30
+
+			officerand = RAND(0,10)
+			if officeslut > 0 and officerand > 8:gt'office','negr'
+
+			officebolt = RAND(0,3)
+			if officebolt = 0:'"Imagine, say that our bookkeeper at corporate who are over 40, I stuck to one of the managers of trying to drag him into the office. He barely escaped." - said Light.'
+			if officebolt = 1:'"Imagine, one corporate party I plucked, that danced a striptease on the table for all, Then I was so ashamed, all went poked a finger, I even wanted to quit, but changed her mind, Chef award has given me even, I said, office decoration, and if the rest of the finger poke, so it is from that that they have nothing to show." - said Light.'
+			if officebolt = 2:'"We had one girl, marketing as it is on regular gatherings drunk and fell asleep in the lounge, and awoke naked and covered in sperm, around prezikov used pieces 20 strewn, I do not know how many raped her there, but after two days of labor I came vraskoryachku and could not sit down." - said Light.'
+			if officebolt = 3:'"Imagine, one corporate parties our sysadmin drunk and fell asleep on the toilet, so marketers girls opened his warehouse, where the old keyboard typing and what you pay, all strapped him with adhesive tape, turned knight in armor, so we all Office, morning waiting for the toilet when he wakes up, he went out and only then realized that to him that-the primotat. That laughter that was." - said Light.'
+
+			act 'Finish':gt'office','work'
+		end
+
+		if svetslut = 1:
+			act 'Ask Sveta about her relationship with the boss':
+				cla
+				minut += 30
+				svetslut = 2
+
+				'"Light and what is your relationship with the boss?" you ask.'
+				'"What, We have sung, that she asks a barefoot whore sleeps?" she snapped.'
+				'"No, no one spoke, I just opened the door, and you`re kneeling with by a dick in her mouth." You responded in the same tone.'
+				'"Come on do not be mad, I thought again, dear colleagues dismissed languages. And my boss so, perepihnemsya in the cabinet and run away, He underpaid me for it, if you do this." said Light'
+				'"No, I just asked,." you said.'
+				'"I`m sorry, I said so, just I thought that they were again forgotten, What he had pent." said Light.'
+				'"And why again?" you ask.'
+				'"Yes, they are already started to poke fingers, I was just going on vacation, well and it took a month to complete. So the chief of the month, all "fucked" without vazilina, I have returned, so they just all so kind and gentle, Sveta want it, want it, Hypocrites." she said.'
+				'"And the woman that he does not?" you ask'
+				'"And who knows, I`ve never seen it, Well, probably does not, I did when then came back from vacation, he gave me two days out of the office almost let, I then took a day off and spend the day in the bathroom lain, I do not believe it could hardly walk, and generally keep quiet about the board, I have not closed a week ass. So that`s how, pent-chief or secretary vyebet, or all. And I like to be a secretary, I`m lonely, healthy, a young girl, and I want it too, Here are just a month longer on vacation do not go, I remember, to sit to get hurt." she laughed.'
+				'Then I entered the room one of the managers with a pile of papers and you had to interrupt your conversation.'
+				act 'Finish':gt'office','work'
+			end
+		elseif svetslut = 3:
+			act 'Ask about sex in the office with you':
+				cla
+				minut += 30
+				svetslut = 4
+
+				'After waiting for when the boss is not at, you have decided to ask Amy about the incident in the office of the chief.'
+				'"Well, it was, You know, I`ll be back in a minute with tea?" you ask'
+				'"Sorry, I could not resist, when you came out he started to kiss me, I`m excited and if I do not stop. I was once in the metro who began-the paw, so I still tried his hand off his clean, in the crush was so excited, He gave right there in the car, in front of everyone, I was so ashamed, I still do not go on the subway. Chef really wanted to stay, but I said that you will not be talking and still the whole office knows." said Light.'
+				'"Are you really can not stop?" you ask.'
+				'"Well, not quite so, I`ve got a threshold, but it is very low. I have to be honest when you`re with tea saw something very like what you would now, Well, if you absolutely honest, I could not stop but continued specifically that-Would you saw and now." she said.'
+
+				act 'To say that you like it':
+					cla
+					*clr
+					officelezb = 1
+
+					'<center><img src="images/img/office/s2.jpg"></center>'
+					'"Well, in general I like you too, but only you, but he is not, so I went out and." you said.'
+					'"But with this point in detail" said Light, closing the door and sitting down at your desk, "We should definitely clarify this issue, so to say to delve into the basics." she continued.'
+
+					act 'Not now':
+						cla
+						'"We will examine this question with you, but not now, maybe later." you said'
+						'"Good, just do not forget, I was very interested in this issue" Light said, and opened the door back at his desk.'
+
+						act 'Back to work':gt'office','work'
+					end
+					act 'Raise no objection':
+						cla
+						*clr
+						'<center><img src="images/img/office/s3.jpg"></center>'
+						'"The issue does require closer scrutiny." With that, you got up and threw one knee on the table. Light immediately floated hands, They slipped through your body and now she unbuttoned you clothes.'
+
+						act 'Continue':
+							cla
+							*clr
+							girl += 1
+							lesbian += 1
+
+							'<center><img src="images/img/office/s4.jpg"></center>'
+							'You sat on the table allowing her to undress you. She undressed slowly you, licking each centimeter of your bared body, her tongue was enormous, very long and thick, you even think about, how it fits in her mouth. Are you excited to have so much that you feel like going to a puddle of your selections.'
+
+							act 'Let continue':
+								cla
+								*clr
+								orgasm += 1
+
+								'<center><img src="images/img/office/s5.jpg"></center>'
+								'You threw his legs on the table and spread his knees apart, giving it maximum access to your pussy. Light pulled off her panties and began to push them to you in the pussy, you first want to object, but the feeling of silk sliding in your pussy you like and you deprive leaned forward, urging her to continue. Light glared lips you pussy and began to caress your clitoris tongue, while slowly pulling her panties out of your vagina, when they are almost completely slipped she began to push them back language, This was repeated countless times. Soon you will feel that`s about to finish.'
+
+								act 'Come':
+									cla
+									'You began to finish and pleasant waves of orgasm enveloped you, when you are finished Light took from you your panties, He stuffed them into his mouth and began to slowly remove, embroidering of them literally every drop, "Snacks, Only next time do not be so selfish, and then I`ll stop with you friends." she said.'
+
+									act 'Back to work':gt'office','work'
+								end
+								act 'Meet each other':
+									cla
+									*clr
+									'<center><img src="images/img/office/s7.jpg"></center>'
+									'You stopped the Light and lie on the table, waving her tongue between his fingers spread apart. She smiled, understanding what you want and quickly climbed on the table. You have to follow its example panties and stuffed them in her pussy, but your language is not so great, and push in them in her vagina you can not, Then you began to do it with your fingers, and tongue began to handle her clitoris. Light at this time literally fuck you with my tongue, you have created a feeling that inside you are not a member of the language, but very nimble and agile. After a couple of minutes you will feel her body began to tremble and she came, after a few seconds, you followed her example, and you are enveloped orgasm.'
+
+									act 'Back to work':gt'office','work'
+								end
+							end
+							act 'Lick it':
+								cla
+								*clr
+								'<center><img src="images/img/office/s6.jpg"></center>'
+								'You helped to lie down on a table Light and began licking her pussy, she took her panties and began to push them into his pussy, You removed her hand and continued to do. You shoved her pussy panties, then slowly pulled them back thrust, while incessantly licking her clitoris. After a couple of minutes you will feel her body began to tremble, Ready to finish.'
+
+								act 'Let ends':
+									cla
+									'When she had finished, it said "Just let the next time you give yourself to me to meet, but I do not want to look selfish."'
+
+									act 'Back to work':gt'office','work'
+								end
+								act 'Meet each other':
+									cla
+									*clr
+									orgasm += 1
+
+									'<center><img src="images/img/office/s7.jpg"></center>'
+									'You stopped and spihnuv Light from the table, fell on his own, waving her tongue between his fingers spread apart. She smiled, understanding what you want and quickly climbed on the table. You took her panties and stuffed them in her pussy, continuing to actively handle her clitoris language. Light at this time literally fuck you with my tongue, you have created a feeling that inside you are not a member of the language, but very nimble and agile. After a couple of minutes you will feel her body began to tremble and she came, after a few seconds, you followed her example, and you are enveloped orgasm.'
+
+									act 'Back to work':gt'office','work'
+								end
+							end
+						end
+						act 'Not now':
+							cla
+							'"We will examine this question with you, but not now, maybe later." you said'
+							'"Good, just do not forget, I was very interested in this issue" Light said, and opened the door back at his desk.'
+
+							act 'Back to work':gt'office','work'
+						end
+					end
+				end
+				act 'Rebelled':
+					cla
+					'"What do you mean, I never would have joined, how do you do this come to a head. All have closed the topic and do not start." You cut.'
+
+					act 'Back to work':gt'office','work'
+				end
+			end
+		end
+
+		if officelezb > 0 or officeslut > 0:
+			act 'Stick to the World':
+				cla
+				*clr
+				minut += 30
+
+				officerand = RAND(0,10)
+				if officeslut > 0 and officerand > 8:gt'office','dostavka'
+
+				lesbian += 1
+				picrand = 19
+				officelezb += 1
+
+				'<center><img src="images/img/office/s8.jpg"></center>'
+				'You climb on the table and legs spread wide are calling the Light "Svetik you do not help me in the same intimate question?".'
+				'Light separates the head from the papers and her face smile slips, "Well, it does not help, necessarily help.". With that, she rises from-the table, and is sent to you, simultaneously closing the door with a key.'
+
+				act 'Begin':xgt'lezbsex','var'
+			end
+		end
+	elseif hour >= 17:
+		act 'Leave the job':gt'down'
+	end
+end
+
+if $ARGS[0] = 'boss':
+	cla
+	*clr
+	minut += 15
+
+	officerand = RAND(0,15)
+	if officeslut > 0 and officerand = 10:gt'office','boss2'
+	if officeslut > 0 and officerand = 9:gt'office','boss3'
+	if officeslut > 0 and officerand = 8:gt'office','boss4'
+	if officeslut > 0 and officerand = 7:gt'office','boss5'
+	if officeslut > 0 and officerand = 6:gt'office','boss6'
+
+	gs'stat'
+
+	'<center><b><font color = maroon>The principal`s office</font></b></center>'
+	'<center><img src="images/pic/boss.jpg"></center>'
+
+	if officebestslut = 1:
+		cla
+		'"And here you are, Well Come, sit down. I came for the new appointment." he says.'
+		'"And what is the position of?" you ask, Seated.'
+		'"Yes, actually it is not the position, and additional duties, but with very good surcharge." he says.'
+		'"And what I have to do." you ask.'
+		'"Yes, actually nothing new, will motivate some workers, and of helping to conclude contracts and delivery of objects." he says.'
+		'"And how to motivate" not realizing you ask.'
+		'"Yes, all the usual, is that people get tired, natural performance drops, deadlines are screwed, and we pay the penalty, but if their time promotivirovat the work will be completed on time. Here you will motivate them and, but as, I think you yourself can guess, and I tell them that you will monitor their work. Well, when contracting the same distract them from a careful reading of the treaty, his body. That something like this, suits?" he asks.'
+		'"I.e, you want what I would have become a regular whore, as well as supplement?" We ask yourself not believing, We do not send it directly, and even at the cost of interested.'
+		'"20000 per month plus a basic salary, Well I agree?" he says, and his face satisfied smile spreads, as if you have already agreed to.'
+
+		act 'Agree':
+			cla
+			officebestslut = 3
+
+			'"Good, I agree." you answer.'
+			'"That`s good, Well then going to the city just one solid client arrived, he is now at the hotel, We go to him together. See how you can do it." he said.'
+
+			act 'Go':gt'office','motiv0'
+		end
+		act 'Takeout':
+			cla
+			'"No, thank you, I`m not a prostitute, I fuck for fun, not for money" you answer.'
+			'"Well, then fuck for fun, Prize money and count up the good work. Bear in mind I`m not going to offer more than. So how exactly all the same refuse or agree?" he says.'
+
+			act 'Agree':
+				cla
+				officebestslut = 3
+
+				'"Good, I agree." you answer.'
+				'"That`s good, Well then going to the city just one solid client arrived, he is now at the hotel, We go to him together. See how you can do it." he said.'
+
+				act 'Go':gt'office','motiv0'
+			end
+			act 'Takeout':
+				officebestslut = 2
+				gt'office','work'
+			end
+		end
+	end
+
+	if officeslut > 0:
+		act 'Solicits chief':
+			cla
+			*clr
+			officeslut += 1
+			picrand = RAND(61,63)
+
+			'<center><img src="images/img/office/b<<picrand>>.jpg"></center>'
+			'Seeing that, in addition to the chief of the office of one, you close the door, Light it with a wink to let no one, She smiled and makes you wagged a finger, whispering "Slut". You go to the boss, in the course of getting rid of clothes. Going into the dense you kiss him and say, "Chef I`ve got something flowed, you do not see?" and slightly spreads his legs.'
+			'"Interestingly, what happened to my best employee, let`s watch" he says.'
+
+			act 'Extend the legs':gt'sex','kuni'
+		end
+	end
+
+	act 'Get out of the office':gt'office','work'
+end
+
+if $ARGS[0] = 'kor':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	'<center><b><font color = maroon>Corridor</font></b></center>'
+	'<center><img src="images/pic/office.jpg"></center>'
+
+	if hour < 17:
+		act 'In the workplace':gt'office','work'
+		act 'Restroom':gt'office','kuh'
+	elseif hour >= 17:
+		act 'Leave the job':gt'down'
+	end
+end
+
+if $ARGS[0] = 'kuh':
+	cla
+	*clr
+	minut += 5
+	gs'stat'
+
+	officerand = RAND(0,10)
+	if officerand > 8 and officeslut > 8:
+		gt'office','gang'
+	elseif officerand < 2 and (officeslut > 5 or horny >= 90):
+		cla
+		*clr
+		'<center><img src="images/img/office/m12.jpg"></center>'
+		'Entering the room, you can see the cooler one of the managers, "Hello World, to have a drink some water". It seems it does not interest you want to drink or not, it just brings the cup to your lips, literally forcing you to drink.'
+
+		act 'Drink':
+			cla
+			*clr
+			'<center><img src="images/img/office/m13.jpg"></center>'
+			'You have no choice but to drink, You open your mouth and start to drink. His second hand starts to hug your waist. "Well at least not reached under her skirt" We think you, But look at it pretty grin understood that rushed to conclusions.'
+			'"Here`s, good girl all drunk, you are so docile around?"'
+			if officeslut > 5:'And without waiting for an answer continued "I know that the obedient, I already told, you are a very hardworking girl"'
+			'With these words, his hand lifted up the back of your shoulder blades, and reaching, he began to press forward, so you started to bend down.'
+
+			act 'Do not resist':
+				cla
+				*clr
+				officeslut += 1
+
+				'<center><img src="images/img/office/m14.jpg"></center>'
+				'Second hand he unzipped his fly and released his already standing member. The first hand is moved to the back of your head and continued to push down putting your mouth on his penis.'
+				'"This is done keep itself" he said when he was a member of the half was in your mouth and began to stroke you on the head, you obediently began to suck his dick while masturbate his hand. In the office a couple of times someone-it looked, then you hear the door for women laughter, Girls seem to marketers from a nearby office all crowded at the door and spy on you, Soon the door opened a little bit and you began to distinguish a girl`s face. First, you want to stay, but his hand on your head but you are strongly pressed to the member. And when the door is already half, open and you could clearly see how some girls watched with interest you, and some of the phones in the hands of filming going on, this is your only spurred and you feel like at your feet have your juices flowing. Would you like that-they saw everything and turned slightly, opening them a better overview.'
+
+				act 'Continue':
+					picrand = 59
+					officeslut += 1
+					guy += 1
+					gt'sex','minet'
+				end
+			end
+
+			if officeslut < 10:
+				act 'To push him away and run':gt'office','work'
+			end
+		end
+
+		exit
+	end
+
+	'<center><b><font color = maroon>Restroom</font></b></center>'
+	'<center><img src="images/pic/kuh.jpg"></center>'
+
+	if hour < 17:
+		act 'Eat':
+			minut = minut + 30
+			health = health + 10
+			manna = manna + 5
+			willpower = willpower + 5
+
+			if energy >= 30:
+				fat = fat + 5
+
+				'You can no longer have.'
+			elseif energy >= 20 and energy < 30:
+				fat = fat + 3
+				energy = energy + 10
+
+				'You pushed through the power of a meal.'
+			elseif energy < 20:
+				energy = energy +20
+				fat = fat + 1
+
+				'You will be happy to eat food.'
+			end
+
+			if water >= 20:
+				'Tea in you no longer climbs.'
+			elseif water < 20:
+				water = water +20
+
+				'You will be happy to drink a cup of tea.'
+			end
+		end
+		act 'Corridor':gt'office','kor'
+	elseif hour >= 17:
+		act 'Leave the job':gt'down'
+	end
+end
+
+if $ARGS[0] = 'sveta':
+	cla
+	*clr
+	minut += 30
+	svetslut = 1
+
+	'<center><img src="images/img/office/s1.jpg"></center>'
+	'You brought documents, chief to sign, Light and I had just gone to him, after waiting for ten minutes you have decided to bring documents. Opening the door you stupefied, Chef standing at a table, and light makes him a blowjob on her knees and looking at it through the eyes of devotees. You quietly closed the door, "I hope they did not notice me" We think you.'
+
+	act 'Back to work':gt'office','work'
+end
+
+if $ARGS[0] = 'boss1':
+	cla
+	*clr
+	minut += 30
+
+	'<center><img src="images/img/office/b1.jpg"></center>'
+	'The chief called the Light to yourself, minute it was not 30, you have already decided what they`re having fun again, when suddenly he called and you, On entering the study, you have not seen anything, Light sat on the couch with notepad in hand and that-It is recorded.'
+	'"Come, sit down." said the boss.'
+	'You sat next to the light and he began to tell you, you have to do. Ten minutes later he looked at you and said, "Svetik, Bring all three of us a cup of tea, and then we sit there for a long time."'
+
+	act 'Bring tea':
+		cla
+		*clr
+		'<center><img src="images/img/office/b2.jpg"></center>'
+		'When he returned with the tea you are frozen at the threshold, Light lay on her side, on the couch with her legs spread wide, and the chief lying behind her bored her pussy with his cock. "That`s number, And what does it mean, because they know that I`ll be right back" We think you.'
+
+		act 'Join':
+			cla
+			*clr
+			officeslut += 1
+			eggs += 1
+			bj += 1
+			guy += 1
+			girl += 1
+			lesbian += 1
+
+			'<center><img src="images/img/office/b3.jpg"></center>'
+			'You put a tray of tea on the sofa and knelt down and begin to caress his scrotum language. Chef takes you behind your head and pulls strongly to their eggs, quickly realized that he wanted, you retract his balls in his mouth and begin to suck, yet he continues to fuck Light.'
+
+			act 'Continue':
+				cla
+				*clr
+				'<center><img src="images/img/office/b4.jpg"></center>'
+				'He pulled out a member of the standing light and put it to you mouth, Light a few seconds to join you, and together you start to suck his dildo.'
+
+				act 'Substitute pussy him':
+					cla
+					*clr
+					sex += 1
+
+					'<center><img src="images/img/office/b5.jpg"></center>'
+					'You get up from the couch with cancer, astraddle, chef immediately came to you in the vagina, began to fuck her strong sweeping movements. Light a little twirled around, I sat on the floor between your legs and her tongue began to caress your clitoris. A few minutes later he took of you with the words of his penis "Well now cup your ass Svetsik, We stretch our her little, and then I sat up in a chair all day."'
+
+					act 'Get cancer':
+						cla
+						*clr
+						anal += 1
+						orgasm += 1
+						analorgasm += 1
+
+						'<center><img src="images/img/office/b7.jpg"></center>'
+						'You get up on the couch on all fours sticking ass, Light immediately taken by you and it gets you a huge tongue in pussy. Chef arranged behind you and giving first light as follows lick member, brings it to you in the ass. When your ass a little bit used to the member inside, you lowered his head and began to please the Light language. When you become sick ass started to crawl and moan, Then he took out of you dildo and inserted in the mouth Light, lubrication, then got into your anus. Inside you moved two, on the one hand a huge Svetin language, I caress your vagina, the other in the anus with great speed moving member chief, these two pistons moving in sync bringing you great pleasure, and after a few minutes you shouted from the cover with your orgasm. Feed flooding in from your mouth and filled Svetin chef removing dildo out of your anus he sent his light in the mouth, your juices filled the pouring out of her mouth, shimmering through her lips and spreading across the face. He again put your dick in the ass increasing the tempo until you writhed in orgasm. Soon, his cock swelled and began to throb ready to finish.'
+
+						act 'Finish':gt'office','boss0'
+					end
+					act 'Take the top':
+						cla
+						*clr
+						anal += 1
+						orgasm += 1
+						analorgasm += 1
+
+						'<center><img src="images/img/office/b8.jpg"></center>'
+						'You push it onto the couch and sits down on his cock, Chef holds your hips until you sit down gently on his anus dildo, World waits until his cock in your ass away and knelt launches its huge language you pussy. When you become sick ass started to crawl and moan, Then he raises you holding the hip and removes dildo, Light immediately takes it in her mouth, liberally lubricating saliva, and then re-directs you in the ass. Inside you move two, on the one hand a huge Svetin language, I caress your vagina, the other in the anus with great speed moving member chief, these two pistons moving in sync bringing you great pleasure, and after a few minutes you shouted from the cover with your orgasm. Feed flooding in from your mouth filled Svetin. He is stepping up the pace until you writhed in orgasm. Soon, his cock swelled and began to throb ready to finish.'
+
+						act 'Finish':gt'office','boss0'
+					end
+					act 'Lie down on the couch':
+						cla
+						*clr
+						anal += 1
+						orgasm += 1
+						analorgasm += 1
+
+						'<center><img src="images/img/office/b9.jpg"></center>'
+						'You lie on the couch and pick up the legs to the top, Light immediately gets on you substitute your ass to your face, You Spreading her buttocks with his hands and bites tongue in her anus, then massaging it, then pushing inwards. Chef introduces you to a member of the anus and when your little ass accustomed to the member inside, he begins to rapidly increase the rate of. Soon, you can no longer caress Svetin ass but only groan under the pressure of a member moving with the speed of an express train, and gives you pleasure, after a few minutes, you cried out cover with your orgasm. It further accelerated while you writhed in orgasm. Soon, his cock swelled and began to throb ready to finish.'
+
+						act 'Finish':gt'office','boss0'
+					end
+				end
+				act 'Fill with her pussy':
+					cla
+					*clr
+					orgasm += 1
+
+					'<center><img src="images/img/office/b6.jpg"></center>'
+					'You sit down on the couch legs wide apart and calls Light, its language was very long, You even have the feeling that you have entered into the vagina a member, when she started to get your language. The chief also joined up with light from behind, member penetrating her vagina, Light moaned and her tongue penetrated deeper into your pussy, She moved them so deftly that a minute later you are finishing your sofa filling juices. A few minutes later the chief took his penis out of her and the words "Well now cup your ass Svetsik, We stretch our her little, and then I sat up in a chair all day." I looked at you.'
+
+					act 'Get cancer':
+						cla
+						*clr
+						anal += 1
+						orgasm += 1
+						analorgasm += 1
+
+						'<center><img src="images/img/office/b7.jpg"></center>'
+						'You get up on the couch on all fours sticking ass, Light immediately taken by you and it gets you a huge tongue in pussy. Chef arranged behind you and giving first light as follows lick member, brings it to you in the ass. When your ass a little bit used to the member inside, you lowered his head and began to please the Light language. When you become sick ass started to crawl and moan, Then he took out of you dildo and inserted in the mouth Light, lubrication, then got into your anus. Inside you moved two, on the one hand a huge Svetin language, I caress your vagina, the other in the anus with great speed moving member chief, these two pistons moving in sync bringing you great pleasure, and after a few minutes you shouted from the cover with your orgasm. Feed flooding in from your mouth and filled Svetin chef removing dildo out of your anus he sent his light in the mouth, your juices filled the pouring out of her mouth, shimmering through her lips and spreading across the face. He again put your dick in the ass increasing the tempo until you writhed in orgasm. Soon, his cock swelled and began to throb ready to finish.'
+
+						act 'Finish':gt'office','boss0'
+					end
+					act 'Take the top':
+						cla
+						*clr
+						anal += 1
+						orgasm += 1
+						analorgasm += 1
+
+						'<center><img src="images/img/office/b8.jpg"></center>'
+						'You push it onto the couch and sits down on his cock, Chef holds your hips until you sit down gently on his anus dildo, World waits until his cock in your ass away and knelt launches its huge language you pussy. When you become sick ass started to crawl and moan, Then he raises you holding the hip and removes dildo, Light immediately takes it in her mouth, liberally lubricating saliva, and then re-directs you in the ass. Inside you move two, on the one hand a huge Svetin language, I caress your vagina, the other in the anus with great speed moving member chief, these two pistons moving in sync bringing you great pleasure, and after a few minutes you shouted from the cover with your orgasm. Feed flooding in from your mouth filled Svetin. He is stepping up the pace until you writhed in orgasm. Soon, his cock swelled and began to throb ready to finish.'
+
+						act 'Finish':gt'office','boss0'
+					end
+					act 'Lie down on the couch':
+						cla
+						*clr
+						anal += 1
+						orgasm += 1
+						analorgasm += 1
+
+						'<center><img src="images/img/office/b9.jpg"></center>'
+						'You lie on the couch and pick up the legs to the top, Light immediately gets on you substitute your ass to your face, You Spreading her buttocks with his hands and bites tongue in her anus, then massaging it, then pushing inwards. Chef introduces you to a member of the anus and when your little ass accustomed to the member inside, he begins to rapidly increase the rate of. Soon, you can no longer caress Svetin ass but only groan under the pressure of a member moving with the speed of an express train, and gives you pleasure, after a few minutes, you cried out cover with your orgasm. It further accelerated while you writhed in orgasm. Soon, his cock swelled and began to throb ready to finish.'
+
+						act 'Finish':gt'office','boss0'
+					end
+				end
+			end
+		end
+		act 'Leave the tea and leave':
+			svetslut = 3
+			gt'office','work'
+		end
+	end
+end
+
+if $ARGS[0] = 'boss0':
+	cla
+	*clr
+	cumlip += 1
+
+	'<center><img src="images/img/office/b10.jpg"></center>'
+	'Taking a member of your ass, Chef gets you Sveta kneels before his throbbing dildo. The jet of sperm emitted light in the face, she immediately wraps his lips starting to suck the rest, and you need only to lick her face.'
+
+	act 'Back to work':gt'office','work'
+end
+
+if $ARGS[0] = 'komer0':
+	cla
+	*clr
+	officekom = 1
+	girl += 1
+	lesbian += 1
+	minut += 30
+	gs'stat'
+
+	'<center><img src="images/img/office/k0.jpg"></center>'
+	'You summoned the commercial director. You went to the office, at the table sat a woman much older than 30, she pointed out to you on a chair, you obediently sat down and waited.'
+	'She carefully examined you from head to toe, and began to speak "My name is Natalia, Well, did you already know, and you`re the new secretary, and how do you work for us?"'
+	'"Very good, i like everything" you started, but she stopped you gesture.'
+	'"Other you could not tell, and the second secretary, I watch you work well together." she continued, and you just nod confirming her words. "And you her tongue, really great?" she asked.'
+
+	act 'Wonder':
+		cla
+		*clr
+		'<center><img src="images/img/office/k1.jpg"></center>'
+		'"I do not understand, what are you talking about" you started, making a surprised face. You do not even understand how it was before you, a second ago she was sitting at the table, and now I stood in front of you, keeping your chin. Her face was in a couple of centimeters from your, "Do not lie to me, girl, I see right through you, or do you think that when you are in the office Svetka fuck no one sees or hears, to me it is better not to quarrel, and that will crush like a cockroach. Do you understand me?" she asked, and you just nodded in response. "Fine, now show me that you really understand me" With that, she lifted her skirt and turned to you bare buttocks.'
+
+		act 'Kiss':
+			cla
+			*clr
+			'<center><img src="images/img/office/k2.jpg"></center>'
+			'You took her by the hips and began to kiss the buttocks, with all possible passion. "There is a good boy, I see we work well together, and now over, that beginning" With that, she took off her panties and sat on the table.'
+
+			act 'Lick':
+				cla
+				*clr
+				'<center><img src="images/img/office/k4.jpg"></center>'
+				'You knelt down and pressed his lips to her pussy, you diligently licking her pussy and clitoris. "Stick inside" she commanded, you immediately put his tongue in her vagina. "Hmm, tab is too small, but it is fixable" she said, After these words, you feel like that happens to you-Something strange, whether your tongue began to grow, whether it decreased the vagina, you actively fucked her tongue, and he took out to her uterus, a few minutes later she came, and removing the language you understand, that he does not fit in your mouth. You looked at her in horror on the face, She smiled and began to decrease your language back to its normal size.'
+				'"All, you can go, the next time will be a mutual pleasure, promise." she said. You kept looking at her fingering your language, "Misha wonders, so someone who, and you should not be surprised magic. Well enough to sit on the floor sheepishly, Come to Me." With that, she went back behind his desk. You got up and headed for the door, decided not to tell anyone about what happened.'
+
+				act 'Back to work':gt'office','work'
+			end
+		end
+		act 'Push off':
+			cla
+			*clr
+			'<center><img src="images/img/office/k3.jpg"></center>'
+			'You pushed her away from him and jumped to his feet frozen, not knowing what is going on, You pushed her in front of him, Now she was not there, and then strong hands grabbed you from behind chest and sat back in his chair, I looked up you saw it on himself. She stood clutching your chest in hands, "Do not be so rude to me Misha, I`m angry and I, and then you will not girl, and with a point in the station toilet, and thou shalt be with me tender I can not give you a feel like a man again. so choose, We will be friends or will you swallow the crap until the end of."'
+
+			act 'Fight':
+				over = 5
+				gt'gameover'
+			end
+			act 'Ask about the man`s appearance':
+				cla
+				*clr
+				vagina += 1
+				officeman = 1
+
+				'<center><img src="images/img/office/k5.jpg"></center>'
+				'"You really can make me a man?" you ask.'
+				'"I said that I can give you a feel like a man again, for a few minutes, and we will have fun." she said.'
+				'"Well what do you want." Answer You.'
+				'"There is a good boy, the good girl, or a boy, but oh well what`s the difference, You did himself no longer know who you are. Now listen, and remember you do everything I say, what-you`d better remember and never thought bristle, I will punish you now a bit." when she is to tell how you got on her table completely naked. You could not move, and say nothing, too, could not, she came to you from behind and plunged his fingers into the vagina, inside they began to expand and lengthen, and that`s inside of you already wielded enormous tentacles, you tried to scream, but from an open mouth does not take off not sound. Soon she finished, and you hardly slipped off the table and began to dress. "And now back to work, I`ll get you yet." she said.'
+
+				act 'Back to work':gt'office','work'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'komer1':
+	cla
+	*clr
+	minut += 30
+	gs'stat'
+
+	'<center><img src="images/img/office/k6.jpg"></center>'
+	'As soon as you enter the office she dug her lips to your. "Well, that girl have fun?" she asked.'
+
+	act 'Begin':
+		picrand = 20
+		xgt'lezbsex','var'
+	end
+
+	if officeman = 1:
+		act 'Become a man':
+			cla
+			*clr
+			'<center><img src="images/img/office/k7.jpg"></center>'
+			'"Do you want to fuck me, Well come here let`s see what I got" she said, "So you make me a man" you started and then stopped short, I heard a man`s voice, Look at you, you realize that she has already done it, "Well, that froze, come to me, Let try to taste his creation." she said. You came up to her and she quickly took out your dick, He took it into his mouth and began to suck, You stood there and enjoyed, not believing that you do not suck someone`s dick, and you suck.'
+
+			act 'Fuck it':
+				cla
+				*clr
+				'<center><img src="images/img/office/k8.jpg"></center>'
+				'You pulled out a member of her mouth and lifting it, benefits on the table. By inserting a dildo in her pussy you started to fuck her with the force will drive cock in her pussy, Natalya moaned, pleasure and a few seconds later roughly finished, glaring claws at your back. You continued to fuck her enjoying your present position, but soon you feel inside you begins to-the change and your body gradually began again to turn in a woman.'
+
+				act 'Come':
+					cla
+					*clr
+					'<center><img src="images/img/office/k9.jpg"></center>'
+					'Until you finally turned into a girl, Natalya pulls you on the floor and are only going to plunge it into his mouth dildo, he starts to cum and a jet of sperm pouring on her chest, and only a few drops reaches the mouth. When it ends you will once again stand in front of her girlish body, and Natalia lick your sperm from his chest. "Here you smeared me, Now yielded pure" she says, and you go down on your knees and begin to lick his own sperm from her chest.'
+
+					act 'Back to work':gt'office','work'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'dostavka':
+	cla
+	*clr
+	minut += 30
+	gs'stat'
+
+	'<center><img src="images/img/office/s9.jpg"></center>'
+	'Once you have started to have fun in the office door knock. You barely managed to stop the Light, and sat her on a chair to fix it first, and then himself. However, she and Nars continue, Brake seen her already frustrated and stop she could not. You grief in half sat back in her chair and opened the door. The door came Courier "Well, you girls so long, I`m tired of standing. Sign for the parcel."'
+
+	act 'Sign':
+		cla
+		*clr
+		'<center><img src="images/img/office/s10.jpg"></center>'
+		'You get up and take in the paper carrier, that-to sign, and you notice that the light has jumped from his chair and walked toward him, is ripping off her blouse. "And then you have nothing fell?" She says she came up to him, already topless and grabs his pants. You understand that the brakes she finally tore, and you have the choice was not great.'
+
+		act 'Shoved him':
+			cla
+			'You will quickly signs the papers and lectured them to the courier pushes him out the door "Get out, you can not see the girl does not in itself." Closing the door, you turn around to light it, It is already completely naked, "Well, come to me, vredina." she says.'
+
+			act 'Begin':
+				lesbian += 1
+				picrand = 19
+				officelezb += 1
+				xgt'lezbsex','var'
+			end
+		end
+		act 'Close the door':
+			cla
+			*clr
+			officeslut += 1
+
+			'<center><img src="images/img/office/s11.jpg"></center>'
+			'You shut the door and turned see the light sitting on a table with her legs spread wide, and the courier is sitting beside him and caressed her breasts. Come to him and bent down removing his erection from his pants, clasping his lips, you start licking the head, sucking it.'
+
+			act 'Continue':
+				picrand = 26
+				guy += 1
+				lesbian += 1
+				gt'podrsex','var'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'negr':
+	cla
+	*clr
+	minut += 30
+	gs'stat'
+
+	'<center><img src="images/img/office/s12.jpg"></center>'
+	'While you`re chatting with Sveta entered the room of your handyman, a huge black man with a strange name Kas, When you-it said that it is an abbreviation of his real name, but you have not been able to remember it. He began to check for broken furniture, Do not loose anything. Light immediately asked him to check out the legs from the couch. Light sat on your desk and start to look at the Casa as he lifted the couch, noticing the attention to the person Cas defiantly began to lift the sofa with the different parties, carefully examining each foot. The muscles on his arms stood out strongly and diligently, he showed them. You have seen the light, which clearly liked the idea, and judging by the movements of her hips, her panties already soaked. Suddenly she turned to you and asked quietly, "Chocolates want?"'
+
+	act 'Want to':
+		cla
+		*clr
+		'<center><img src="images/img/office/s13.jpg"></center>'
+		'"Want to" without a second thought you said. Light surpassed your table and taking your hand rose from his chair "Well then, it must entice" she whispered, and grabbed you by the head dug into your lips, trying to push your tongue in your mouth.'
+
+		act 'To push it':
+			cla
+			'You pushed her, with words "Most sdurela?". Seeing that the situation is heating up fast Cas chose to leave the room. "Here you go, startled chocolate, vredina" Light and he said defiantly pouting back at his desk.'
+
+			act 'Back to work':gt'office','work'
+		end
+		act 'Respond to her':
+			cla
+			*clr
+			officeslut += 1
+
+			'<center><img src="images/img/office/s14.jpg"></center>'
+			'You decompress lips, running her tongue inside. A few seconds later you feel like a strong hand squeezes your buttocks, and then penetrates below to your pussy. You push the legs supple giving Cas room for maneuver, Light is removed from you, and now you kiss lips touch. You run his hand in his pants and discover, what was already being wielded Light, nadrachivaya his dick.'
+
+			act 'Continue':
+				picrand = 27
+				guy += 1
+				lesbian += 1
+				gt'podrsex','var'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'boss2':
+	cla
+	*clr
+	minut += 30
+	officeslut += 1
+
+	'<center><img src="images/img/office/b11.jpg"></center>'
+	'"A Svetsik, You come in just in time" With these words the chief got up and came to you without formally launched their own hands under your clothes, baring your breasts. "I just need to stay in power. So, to begin to work mouth." he continued.'
+
+	act 'Kneel down':
+		cla
+		*clr
+		'<center><img src="images/img/office/b12.jpg"></center>'
+		'"With pleasure" you answer and then squatted down to get it and start sucking dildo. Once you`ve acquired a taste for the door to the office opened and entered Courier.'
+		'"What the hell, What you need, do not you see I`m busy." said the boss, pointing at you, still sucking his dick.'
+		'"So for me there let the girl, I said that you can" he says, "That bitch Sveta, also I knew that I was here" We think you, releasing a member of the mouth. "So you sign for delivery?" continued Courier, without taking your eyes off your bare ass.'
+		'"Prove Svetsik" said the boss to help you rise'
+
+		act 'Sign':
+			cla
+			*clr
+			officeslut += 1
+
+			'<center><img src="images/img/office/b13.jpg"></center>'
+			'You calmly take the courier at the paper and turned to the table undersign, at this time the boss starts talking by courier. "How do you like her ass, really cool, and if you only knew what she might be up to her, Light shake rolls."'
+			'"With joy" you answer, and starts to shake buttocks.'
+			'"You`re not shy Sun her finger in the ass, she did so fuck that cum in his pants. Tell the World how much you love when you`re in the ass dryuchat." continued supervision'
+			'"Just I love, when hot cock fuck my ass, I love to milk it ochkom, to fill the hot seed my ass." inflames you. At this time, the courier stuck his finger into the anus to you and you began to actively fuck him.'
+			'"Well, what froze, Now take off your pants, this slut fuck us both. however Svetsik?" said the boss.'
+
+			act 'Yes':
+				picrand = 24
+				guy += 1
+				xgt'sexdvoe','var'
+			end
+		end
+
+		if officeslut < 10:
+			act 'Ran out of the office':
+				cla
+				'You run out of the office, is adjusting clothes. "Well arrived, and who I am now going to fuck, you something?" you hear the voice of the chief behind, and follow you out of the office runs Courier.'
+
+				act 'Back to work':gt'office','work'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'boss3':
+	cla
+	*clr
+	minut += 30
+	officeslut += 1
+
+	'<center><img src="images/img/office/b14.jpg"></center>'
+	'"A Svetsik, You come in just in time, we`re celebrating a deal with a partner." said the boss see you in the incoming cabinet.'
+	'"I just told you about, He has said that the secretary did not find better, and it works well, and fucking superbly, but he does not believe." he said, pointing to the second man, "He says that his best secretary, so you have to Svetsik defend the honor of the company, Show him how you are able to use their holes." continued supervision'
+
+	act 'Kneel down':
+		cla
+		*clr
+		'<center><img src="images/img/office/b15.jpg"></center>'
+		'"With pleasure" you answer and then squatted down and get your hands start sucking dildo. You try hard.'
+		'"Well, I said, Sveta best sucks." smiling boss said, seeing the contented individual partner.'
+		'"Yes, sucks perfectly, but as with the rest of holes, also skillfully controlled?" he said.'
+		'"Svetik Fall in crustaceans, arrange test-Drive your pussy" said the boss to help you rise'
+
+		act 'Bend':
+			cla
+			*clr
+			'<center><img src="images/img/office/b16.jpg"></center>'
+			'You bend down over the table, and plant thigh, only the head touches your labia, You do so in the Member, that his balls hit the your hips and start to move violently twisting her hips. "Wow, Here is the nipple." was all he said.'
+			'"And that you still have not tried the ass." I grinned the chief. "Anyway, I probably also join you, This slut handles two better than one, however Svetsik?" the boss said removing his pants.'
+
+			act 'Yes':
+				picrand = 25
+				guy += 1
+				xgt'sexdvoe','var'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'boss4':
+	cla
+	*clr
+	minut += 30
+	officeslut += 1
+
+	'<center><img src="images/img/office/b17.jpg"></center>'
+	'"A Svetsik, You come in just in time." said the boss see you in the incoming cabinet. He came up to you and grab the hips lifted and put on the table, spreading your legs, he dropped to his knees and fell down to your pussy, his tongue slid over your lips and tickle the clitoris, We are bringing you more pleasure. You were so passionate about the process that is not immediately seen as the entered the room one of the managers of the company. When you last saw him, he was standing a couple of meters away from you, carefully watching the process of.'
+
+	act 'Called':
+		cla
+		*clr
+		orgasm += 1
+		officeslut += 1
+
+		'<center><img src="images/img/office/b18.jpg"></center>'
+		'You beckon his gesture, and he immediately suited to you and begins to fondle your breasts. Operations initially did not even notice him, and continues to lick your pussy, but when you have an orgasm, and covers you with a shout ends, He looks up and sees it. "Well, Sveta, Well slut, like when you fuck two members, Well, right now we`ll fuck, which froze take your pants off." he said.'
+
+		act 'Begin':
+			picrand = 26
+			guy += 1
+			xgt'sexdvoe','var'
+		end
+	end
+
+	if officeslut < 10:
+		act 'Ran out of the office':gt'office','work'
+	end
+end
+
+if $ARGS[0] = 'gang':
+	cla
+	*clr
+	guy += 3
+	bj += 3
+	swallow += 6
+	minut += 30
+	officeslut += 1
+	gang += 1
+
+	'<center><img src="images/img/office/g0.jpg"></center>'
+	'Going to the restroom you`ve seen it three managers. "A Svetsik, Hello, we were just talking about you, you want to ask something." said one of them coming to you.'
+	'"Yes, and you wanted to know?" you ask. At this time, others also come to you, literally surrounded.'
+	'"Oh, suschuyu detail, When you-a right in all holes fucked." I asked one and then six hands began to slide over your body.'
+	'"Hey, Stop Refrain" You tried to escape, but it was useless.'
+	'"Come on, everyone knows that the first whore in the office and you like to be davalkoy, so do not bristle, and kneel and suck." With these words, they dropped you on your knees and took members began to poke them in your face.'
+
+	act 'Suck':
+		cla
+		*clr
+		'<center><img src="images/img/office/g1.jpg"></center>'
+		'Nothing to do, You have opened my mouth and began to serve them one by one, slowly at first reluctant, but gradually acquired a taste and began to try your best.'
+		'"You look like razduharilsya, that likes to suck?" said one.'
+		'"Yes" only able to answer you with a member in the mouth. You were running from one member to another and did not know how to take over, that-to satisfy all.'
+		'"Come on guys, let`s in a row, and that at this whore already giddy from such membership" He said one of them, and they lined up in front of you.'
+
+		act 'Suck':
+			cla
+			*clr
+			'<center><img src="images/img/office/g2.jpg"></center>'
+			'You started sucking one, masturbate while other two arms, and when he had finished, cum swallow, and moved on to the next, continuing nadrachivat others that-I would have fallen, So passed two laps, and you could not stop continuing with relish milk of their members and to swallow cum. "That insatiable, a couple of liters of sperm and swallowed all the little, so it must often feed" laughed one. "Aha, Sveta spermoedka" He supported the second. "Okay, that we are all in her mouth, yes in the mouth, let`s have in all holes fuck off." said third'
+
+			act 'Begin':
+				picrand = 16
+				gt'paysex','var'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'boss5':
+	cla
+	*clr
+	minut += 30
+	officeslut += 1
+
+	'<center><img src="images/img/office/b19.jpg"></center>'
+	'"A Svetsik, You come in just in time, I have so stiff neck knead it a bit" said the boss see you in the incoming cabinet. You immediately come to him and start to massage his neck and shoulders.'
+	'"So good?" you ask ten minutes.'
+	'"Yes Light well, Now remove the remains tense." he says.'
+
+	act 'Shoot':
+		cla
+		*clr
+		swallow += 1
+		bj += 1
+
+		'<center><img src="images/img/office/b20.jpg"></center>'
+		'You bend down to his crotch releasing member from captivity trousers, take into your mouth has not got stronger dildo chief, and starts to suck while tickling his balls hand, he soon swells and already struggling to fit in your mouth. A few minutes later you feel like it starts to throb, Chef puts you on the head and his arm and inserts a dildo deeper into your mouth so, it rests on your throat and begins to finish. You frantically swallow to not suffocate, when the stream has dried up, You lick the remains of the seed with his penis and already going to get him back into his pants, as the boss stops you. "Brain, let me thank you" With these words, he gets up, and you sits in a chair and spreads your feet.'
+
+		act 'Begin':
+			picrand = 60
+			gt'sex','kuni'
+		end
+	end
+
+	if officeslut < 10:
+		act 'Takeout':gt'office','work'
+	end
+end
+
+if $ARGS[0] = 'boss6':
+	cla
+	*clr
+	spank += 1
+	minut += 30
+	officeslut += 1
+
+	'<center><img src="images/img/office/b21.jpg"></center>'
+	'"A Svetsik, You come in just in time. Go to the archive and bring me some projects" He said the boss will see you in the incoming cabinet. You quickly go to the archives and collect all the necessary documents back to the office, and that`s bad luck at the very table you drop all the documents and they scatter in all directions, now you have two hours to lay out their folders. Operations today is clearly not in the best frame of mind, He starts yelling at you and then comes to you and grab the neck throws aside. You incident on his desk and spread on it, Tears streamed from his eyes, and he continues to yell at you'
+
+	act 'Further':
+		cla
+		*clr
+		'<center><img src="images/img/office/b22.jpg"></center>'
+		'He comes to you and pulling the belt of his trousers begins to smack you. You squeeze teeth and endure until the belt is your buttocks, charter, he lifts her skirt and you spit on your ass with a sweep puts you in the ass dick, you screams, and he throws the belt you in the mouth, and continues to furiously fuck your ass, he soon begins to slow down the tempo. Few come to himself, he knocks you off the table and commands to open his mouth.'
+
+		act 'Open mouth':
+			picrand = 64
+			gt'sex','minet'
+		end
+	end
+end
+
+if $ARGS[0] = 'motiv0':
+	cla
+	*clr
+	minut += 180
+
+	'<center><img src="images/img/office/m15.jpg"></center>'
+	'You chef come to the hotel and go up to the room to the client. While the chef discussing a contract with a client you park on the bed and pretend that that-the record. When it comes to controversial issues, chef transplanted to you on the bed and begins to stroke you. His hands glide over your body then crept under her skirt stroking the chest, Soon your skirt is Zadran to the belt. The client is looking to you between the legs without taking his eyes, Seeing this chief says "It may take a little break, relax." and grab your crotch pulls up, you go and find yourself standing on all fours on the bed with a bare ass. "How are you going to help us relax Svetsik?" Chief appeals to you.'
+
+	act 'Of course':
+		cla
+		*clr
+		'<center><img src="images/img/office/m16.jpg"></center>'
+		'"With pleasure, help" you answer and look at customer beckon his finger, He gets up and you see both in his trousers bulged impressive penis. He comes to you and you grabbed him by the member, first spend tongue trousers, then they start kissing and trying to take by mouth with straight pants, Chef at this time wielding fingers in your pussy. When you finally take out a member of the client`s pants, Chef draws his and joins you.'
+
+		act 'Begin':
+			picrand = 29
+			guy += 1
+			xgt'sexdvoe','var'
+		end
+	end
+end
+
+if $ARGS[0] = 'motiv1':
+	cla
+	*clr
+	minut += 120
+	picrand = RAND(65,68)
+
+	'<center><img src="images/img/office/m<<picrand>>.jpg"></center>'
+	'It is right for you and the boss says "So Svetsik Now come one client, Your task is to convince him to sign a contract. So dui in a conference room"'
+	'"Already running" You are responsible and sent to the conference room. A few minutes later comes the client, you give him a contract and he begins to read, you start to seduction, You then lightly touches his chest shaking all over, then spend himself on the thighs slightly lifting her skirt and setting the stage to hand, at the same time you close your eyes and arches her back. Soon your efforts reach the goal, the client is not looking at the contract, only you. Convinced that he is ready, You even higher lifts up her skirt and spreads her legs, so that it can be clearly seen that there is, between them. You put one hand on his leg and starts stroking it gradually approaching the already noticeable bulge in his pants Mount, He also did not wait. First, his arm "casually" As for your thighs and then you push the legs wider, He starts stroking your thighs, getting higher and that his hand was already under your skirt concerns are pretty pussy namoknuvshey. You unbutton his pants and releases it dildo.'
+
+	act 'Begin':
+		guy += 1
+		gt'sex','minet'
+	end
+end
+
+if $ARGS[0] = 'motiv2':
+	cla
+	*clr
+	officerand2 = RAND(1,4)
+	if officerand2 = 1:gt'office','motiv4'
+	picrand = RAND(69,73)
+	minut += 240
+	swallow += 2
+	bj += 2
+	guy += 2
+
+	'<center><img src="images/img/office/m<<picrand>>.jpg"></center>'
+	'It is right for you and the boss says "So Light, you have to go to the object, there is one of our artists has become much late with deadlines of works, promotiviruy it, you know how."'
+	'"Good, I have a meal." you answer and go to the object.'
+	'Arriving at the object you see a guy who goes from corner to corner and almost does nothing. Seeing you it starts to portray violent activities. "Well, you crawl like a sleepy fly" you say.'
+	'"I work, but the timing is simply unrealistic" he says.'
+	'"Or maybe it`s not unrealistic deadlines, and you just do not want to work?" you ask.'
+	'"No, I`m working, I just do not physically have time to do everything." he says.'
+	'"And so let`s, if you are three hours that`s finished, I thank you enough." you say.'
+	'"As if I did not thank you, but I do three hours do not have time, then work a couple of days, minimum" he says.'
+	'"Is that you just do not know how I will repay." you say'
+	'"And how?" he asks.'
+	'"Well, look, I`ll make you a little advance, as well as the finish to get the rest" With that, you come to him and pulled out his penis. The boy opened his mouth in surprise.'
+
+	act 'Take in the mouth':
+		cla
+		*clr
+		'<center><img src="images/img/office/m0<<picrand>>.jpg"></center>'
+		'You took the head in his mouth and began to suck slowly. Then he swallowed the you the most eggs, He jerked, but not fired. And you continued to lick the barrel and a head, while his hand caressed his balls. He lasted five minutes, and then his cock pulsed and your mouth flew the jet of sperm. When you swallow semen, it lapped up the remains of his penis and removed it back in your pants. "Well, since, have time to three hours to complete" you ask.'
+		'He did not answer, and immediately began clutching tool work. After two hours it was all over. Man standing in front of you with a satisfied smile on his face "I`m, finished" he said at, a little breathless.'
+		'"Well done, keep up the good work and we`ll meet again, And now accept my gratitude. But while I was waiting for you, it is quite cool, can you me a little razogreesh" you said, and pushed his feet, showing him her pussy. The guy did not waste time on words and immediately attached myself to your perineum.'
+
+		act 'Begin':gt'sex','kuni'
+	end
+end
+
+if $ARGS[0] = 'motiv3':
+	cla
+	*clr
+	picrand = RAND(30,33)
+	officerand2 = RAND(1,4)
+	if officerand2 = 1:gt'office','motiv5'
+	minut += 240
+	swallow += 2
+	bj += 2
+	guy += 2
+
+	'<center><img src="images/img/office/m<<picrand>>.jpg"></center>'
+	'It is right for you and the boss says "So Light, you have to go to the object, there are a couple of our artists have become much late with deadlines of works, promotiviruy them, you know how."'
+	'"Good, I have a meal." you answer and go to the object.'
+	'Arriving at the object you see two masters who do absolutely nothing. Seeing you, they did not even try to portray the kind of work. "So what are you seated" you say.'
+	'"We break" they replied.'
+	'"And your break is not delayed, you did the last three days have done nothing" you started'
+	'"Listen, here it is not so simple, here you need to consider how to, and even if we do do that tomorrow we will have to redo, In general it is still three days." said one'
+	'"And so let`s, if you three hours to think and how to do it, I will thank you" you say.'
+	'"How would you have not thanked, but then do three hours do not get, here work for three days, minimum" Second meets.'
+	'"That you just do not know how I ever thank you." you say'
+	'"And how?" asks the two in unison.'
+	'"Well, watch, I`ll do you a small advance, but how else will get done" With that, you come to them and get them members. They look at each other in surprise.'
+
+	act 'Take in the mouth':
+		cla
+		*clr
+		'<center><img src="images/img/office/m0<<picrand>>.jpg"></center>'
+		'Clasping his lips a member of one of them and lowering the tab on the head, We made a few up and down movements. Then they took the palm of his testicles and began to caress them, and the second hand at that time a member of another caressing. Sometimes you let a member of the mouth, giving him the opportunity to look at, as you play the tongue with his head. He lasted about two minutes, and then his cock pulsed and your mouth flew the jet of sperm. When you swallow semen, then moved on to the second, Repeat the whole procedure. "Well, since, You have time to three hours to complete, that-to get the main prize?" you ask, When we swallowed semen of the second and rose from his knees.'
+		'"Certainly we have time" in one voice they said, and grabbing the instrument began to work. After two hours it was all over. They came to you and proudly announced "We ended".'
+		'"So well done, Now accepting his gratitude" you said, throwing off his clothes.'
+
+		act 'Begin':xgt'sexdvoe','var'
+	end
+end
+
+if $ARGS[0] = 'motiv4':
+	cla
+	*clr
+	picrand = 29
+	minut += 180
+	guy += 1
+
+	'<center><img src="images/img/office/m17.jpg"></center>'
+	'It is right for you and the boss says "So Light, you have to go to the object, there is one of our artists has become much late with deadlines of works, promotiviruy it, you know how."'
+	'"Good, I have a meal." you answer and go to the object.'
+	'Once you leave the office catching up with you as the Light. "I`ll go with you" she says.'
+	'"Well, go." you answer.'
+	'Arriving at the object you see a guy who goes from corner to corner and almost does nothing. Seeing you it starts to portray violent activities. Just that you`re going to-say something, both wedged Light "Well, what we`re barely moving, do not you two just to sleep".'
+	'"What?" he said in surprise.'
+	'"Well what, We have sent, They say there is such a master work, qualified, responsible, Ride cheer him, to thank for the good work. And we come and what we see?" run against it on the guy.'
+	'"What?" still surprised with the views he says.'
+	'"Lazy gouging, here`s what. And do you think that`s what we reward you" He continues to shine.'
+	'"So I, to, Now all I do." he says, and adds a little thought "And you did not breed?".'
+	'"We, you, Yes, we need to hurt you for a divorce, look, If two hours all finished, get both of us, what-you would no doubt, Now I`ll make a small down payment." He said Light and sank to her knees and pulling his dick.'
+
+	act 'Watch':
+		cla
+		*clr
+		'<center><img src="images/img/office/m18.jpg"></center>'
+		'You watch his cock disappear in her mouth Svetin, She carefully sucking it, He caresses the head of the language, then swallows it whole, so that the tongue tickling his balls. The sight you get wet between the legs and once you decide to join, it ends with a groan cum pouring out of light in the mouth. "Well, since, have time to two hours to complete" you ask him, Light is licking the remnants of his semen dildo.'
+		'He did not answer, and immediately began clutching tool work. After two hours it was all over. Man standing in front of you with a satisfied smile on his face "I`m, finished" he said at, a little breathless.'
+		'"Brain, Now come to us" He praised his light starting to undress, You have followed her example.'
+
+		act 'Begin':gt'podrsex','var'
+	end
+end
+
+if $ARGS[0] = 'motiv5':
+	cla
+	*clr
+	picrand = 34
+	minut += 180
+	guy += 2
+
+	'<center><img src="images/img/office/m19.jpg"></center>'
+	'It is right for you and the boss says "So Light, you have to go to the object, there are a couple of our artists have become much late with deadlines of works, promotiviruy them, you know how."'
+	'"Good, I have a meal." you answer and go to the object.'
+	'Arriving at the object you see only one of the two masters, who had to finish the finish sauna. While he did not see you, you go out, find towels in the back and turn around undressed in one. You return to the master, You see, he looks stunned look "What are you doing here girl?" Finally he asks.'
+	'"Yes, that`s thought to warm up, and you are still tinkering, can be done more quickly and warm up together?" you answer.'
+	'"What?" he said in surprise.'
+	'"Here you are not teachable, I say that the time I though a little, but a couple of hours, I can wait, And if you`re in that time to complete all is allowed to rub my back, and not only its." you say.'
+	'"And if I finish, and you run away?" still surprised with the views he says.'
+
+	act 'Undress':
+		cla
+		*clr
+		'<center><img src="images/img/office/m20.jpg"></center>'
+		'"And where naked run away" you answer and throwing off his towel on the bench, perching on a.'
+		'He looks at you with even more surprised view. "Well, what you got, time goes" you say'
+		'"Yes, of course, already running" he says, and starts to work. An hour later, he ends, "Everything is ready." happily announces it.'
+		'"Well, come to me." you say, invocatory pushing the legs.'
+
+		act 'Begin':
+			cla
+			*clr
+			'<center><img src="images/img/office/m21.jpg"></center>'
+			'Once you jump into it, in the second the door bursts, Service food and beer.'
+			'He comes to you jumping on a limb and probably did not think of any better then, asks "Girl, and you do not want to have?"'
+			'You quickly grab his pants "Well, I would taste the sausage" you say.'
+			'He immediately begins to undress. "You said to sausage, and not lean sausage." laughs first.'
+			'"So you`re out of it a toothpick" Second meets, and extracts from his pants dignity, which is more like a decent loaf of sausage, rather than sausage.'
+
+			act 'Continue':xgt'sexdvoe','var'
+		end
+	end
+end
+--- office ---------------------------------
+

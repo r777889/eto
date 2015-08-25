@@ -1,0 +1,55 @@
+# BMloc
+gs'stat'
+
+'<<$text>>'
+
+act 'Dance':
+	cls
+	gs'stat'
+
+	if bmFrend[Tboynum] = 0:
+		if bmHJ[Tboynum] > 0 or bmBJ[Tboynum] > 0 or bmSEX[Tboynum] > 0 or bmANAL[Tboynum] > 0 or bmGANG[Tboynum] > 0:
+			if bmHJ[Tboynum] > 0:$text2 = 'you`re like me, I caressed the handle'
+			if bmBJ[Tboynum] > 0:$text2 = 'You took me in her mouth'
+			if bmSEX[Tboynum] > 0:$text2 = 'we have to sleep with you'
+			if bmANAL[Tboynum] > 0:$text2 = 'I took you in the ass'
+			if bmGANG[Tboynum] > 0:$text2 = 'I`ll fuck with a friend'
+
+			'<<$niknameboy>> It tells you "Remember me, <<$text2>>. I <<$bmNane[Tboynum]>>"'
+		else
+			if bmKISS[Tboynum] > 0 or bmTITS[Tboynum] > 0:
+				'<<$niknameboy>> It tells you "Remember me, We like that you were drinking beer together. I <<$bmNane[Tboynum]>>"'
+			else
+				'<<$niknameboy>> It tells you "Remember me, We like that you danced together. I <<$bmNane[Tboynum]>>"'
+			end
+		end
+	else
+		if bmFrend[Tboynum] = 1:
+		end
+		if bmFrend[Tboynum] = 2:
+		end
+		if bmFrend[Tboynum] = 3:
+		end
+	end
+
+	if bmTip[Tboynum] = 0:'After the dance, <<$bmNane[Tboynum]>> It offers to go out and drink beer.'
+	if bmTip[Tboynum] = 1:'After the dance, <<$bmNane[Tboynum]>> It offers to plunk.'
+	if bmTip[Tboynum] = 2:'After the dance, <<$bmNane[Tboynum]>> It offers to go to his hotel.'
+
+	act 'Agree':
+		cls
+		boynumBlock = 1
+		if bmTip[Tboynum] = 0:gt'EvBoyBuh'
+		if bmTip[Tboynum] = 1:gt'EvgopBuh'
+		if bmTip[Tboynum] = 2:gt'EvOtelMan'
+	end
+	act 'Takeout':
+		cls
+		willpower += RAND(0,1)
+		gt'gdkin'
+	end
+end
+
+act 'Escape':gt'gdkin'
+--- BMloc ---------------------------------
+

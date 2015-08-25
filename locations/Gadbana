@@ -1,0 +1,120 @@
+# Gadbana
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metka = $ARGS[0]
+$loc = $CURLOC
+frost = 0
+
+'<center><H4>Bath</H4></center>'
+'<center><img src="images/qwest/gadukino/bana.jpg"></center>'
+'Not a big room, with a low oven, water tanks of stainless steel, Low smoky ceiling, and blackened wooden shelf.'
+
+clr
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+act 'Exit the courtyard':minut += 5 & gt'Gaddvor'
+
+if week = 6:
+	if hour >= 12 and hour <= 18:
+		canpar = 1
+
+		'Steam burns. Somewhere to seven hours can be steamed.'
+	elseif hour > 18 and hour < 22:
+		canpar = 1
+
+		'The bath can be steamed'
+
+		if banaday ! day:
+			act 'Sweating in the bath':
+				cls
+				minut += 120
+				dynamic $showerdin
+				hapri = 0
+				mop = 1
+				sweat = -3
+				if frost > 0:frost = 0
+				skinvan += 5
+				if skinvan >= 20:skinvan = 0 & skin = skin + 1
+				gs'stat'
+
+				'<center><img src="images/qwest/gadukino/par.jpg"></center>'
+				'You soared in the bath, then doused with cold water and finally showered.'
+
+				act 'Exit the courtyard':gt'Gaddvor'
+			end
+		end
+	elseif hour >= 22:
+		canpar = 0
+	end
+elseif week ! 6:
+	canpar = 0
+end
+
+if canpar = 0:
+	act 'Wash':
+		cls
+		dynamic $showerdin
+		minut += 60
+		hapri = 0
+		mop = 1
+		sweat = -3
+		if frost > 0:frost = 0
+		gs'stat'
+
+		'<center><img src="images/qwest/gadukino/mit.jpg"></center>'
+		'You began to lather his body sponge. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
+
+		act 'Logout':gt'Gaddvor'
+	end
+end
+
+if tampon > 0 and mesec > 0 and isprok = 0:
+	act 'Change swab':
+		cla
+		*clr
+		tampon = tampon - 1
+		isprok = 1
+		minut = minut + 5
+		manna = manna - 5
+		gs'stat'
+
+		'<center><img src="images/pics/wash3.jpg"></center>'
+		'You have changed the swab.'
+
+		act 'Finish':gt $curloc
+	end
+end
+
+if mop ! 1:
+	act 'Rinse cosmetics':
+		cla
+		mop = 1
+		minut = minut + 15
+		gs'stat'
+
+		'<center><img src="images/pic/facesp.jpg"></center>'
+		'You have washed off cosmetics.'
+
+		act 'Finish':gt $curloc
+	end
+end
+
+if cumfrot > 0:
+	act 'Scour semen from clothing':
+		cla
+		cumfrot = 0
+		minut = minut + 15
+		gs'stat'
+
+		'<center><img src="images/pic/frotsp.jpg"></center>'
+		'You zamyli semen stains on your clothes.'
+
+		act 'Finish':gt $curloc
+	end
+end
+--- Gadbana ---------------------------------
+

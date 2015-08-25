@@ -1,0 +1,55 @@
+# Palatka
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	palMir = 1
+	gs'stat'
+
+	'<center><b><font color = maroon>Tent</font></b></center>'
+	'<center><img src="images/img/military/palatka.jpg"></center>'
+
+	palrand = RAND(0,10)
+	if palrand = 0:gt'Palatka','pal0'
+	if palrand = 1:gt'Palatka','pal1'
+
+	'To your surprise tent quite spacious there is a bed, <a href="exec: gt''mirror'',''start''">mirror</a> and even made improvizorovany <a href="exec: gt''vann'',''start''">shower</a>.'
+
+	act 'Logout':gt'Military','start'
+	act 'Sleep':
+		hour += 8
+		son = 24
+		gt'palatka','start'
+	end
+end
+
+if $ARGS[0] = 'pal0':
+	cla
+	*clr
+	'<center><img src="images/img/military/pal0.jpg"></center>'
+	'Once you start to change clothes in the tent are two soldiers and saw you half-naked, run up to you with the members on the edge, you grab them by the members of, But what to do to squeeze harder and get them out of the tent, or relax after a hard day.'
+
+	act 'Send':gt'palatka','start'
+	act 'Give':
+		guy += 2
+		picrand = 22
+		xgt'sexdvoe','var'
+	end
+end
+
+if $ARGS[0] = 'pal1':
+	cla
+	*clr
+	'<center><img src="images/img/military/pal1.jpg"></center>'
+	'By accessing the tent you stumble already flying into the ground nose, but then you pick up a strong hand, Opening his eyes, you see hefty Negro.'
+
+	act 'Say thanks':gt'palatka','start'
+	act 'To repay in full':
+		guy += 1
+		picrand = 43
+		gt'sex','minet'
+	end
+end
+--- Palatka ---------------------------------
+

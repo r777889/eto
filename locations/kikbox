@@ -1,0 +1,174 @@
+# kikbox
+if $ARGS[0] = 'start':
+	cla
+	if health <= 0:
+		'<b><font color = red>You lost by TKO</font></b>'
+		xgt'enderKik','loss'
+		exit
+	elseif healthV <= 0:
+		'<b><font color = green><<$nameV>> He lost by TKO</font></b>'
+		xgt'enderKik','win'
+		exit
+	end
+
+	gs'befKik'
+
+	'<b>= = = = = = = = = = = = = (ROUND <<round>>) = = = = = = = = = = = = =</b>'
+	if minround = 1:'<b>the battle 0:30</b>'
+	if minround = 2:'<b>the battle 1:00</b>'
+	if minround = 3:'<b>the battle 1:30</b>'
+	if minround = 4:'<b>the battle 2:00</b>'
+	if minround = 5:'<b>the battle 2:30</b>'
+	'<b><<$nameV>></b> life <b><font color = red><<healthV>></font></b>, Endurance <b><font color = green><<staminaV>></font></b>'
+	'Your life <b><font color = red><<health>></font></b>, Endurance <b><font color = green><<stamina>></font></b>'
+	'<b>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</b>'
+	'Your points <<pointKik>>, The opponent`s points <<pointKikV>>'
+	'<b>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</b>'
+
+	gs'initKik'
+
+	if hod = 0:
+		!player attacks
+		'<font color = green>You can attack</font>'
+
+		act 'Apply fast Jeb':
+			cla
+			damage = RAND(stren/12,stren/8)
+			if damage <= 0:damage = 1
+			koefatak = (speed + reakt + jab)*2
+			koefpop = koefatak*20/100
+			popad = RAND(koefatak - koefpop,koefatak + koefpop)
+
+			'<font color = green>You deal with a quick jab step forward.</font>'
+
+			gs'Kikatak','player'
+			xgt'kikbox','sta'
+		end
+		act 'Apply power punch':
+			cla
+			damkoef = stren*20/100
+			damage = RAND(stren - damkoef,stren + damkoef)
+			if damage <= 0:damage = 1
+			koefatak = (speed + reakt + punch)
+			koefpop = koefatak*20/100
+			popad = RAND(koefatak - koefpop,koefatak + koefpop)
+
+			'<font color = green>You deal a powerful punch.</font>'
+
+			gs'Kikatak','player'
+			xgt'kikbox','sta'
+		end
+		act 'Apply kick':
+			cla
+			damkoef = stren*20/100
+			damage = RAND((stren - damkoef)*3,(stren + damkoef)*3)
+			if damage <= 0:damage = 1
+			koefatak = (speed + reakt + kik)/2
+			koefpop = koefatak*20/100
+			popad = RAND(koefatak - koefpop,koefatak + koefpop)
+
+			'<font color = green>You deal a powerful leg kick.</font>'
+
+			gs'Kikatak','player'
+			xgt'kikbox','sta'
+		end
+	elseif hod = 1:
+		!enemy attacks
+		'<font color = red><<$nameV>> attacks</font>'
+
+		tiprand = RAND(0,2)
+		if tiprand = 0:
+			damage = RAND(strenV/12,strenV/8)
+			if damage <= 0:damage = 1
+			koefatak = (speedV + reaktV + JabV)*2
+			koefpop = koefatak*20/100
+			popad = RAND(koefatak - koefpop,koefatak + koefpop)
+
+			'<font color = red><<$nameV>> deals with a fast jab step forward.</font>'
+
+			gs'Kikatak','enemy'
+			xgt'kikbox','sta'
+		elseif tiprand = 1:
+			damkoef = strenV*20/100
+			damage = RAND(strenV - damkoef,strenV + damkoef)
+			if damage <= 0:damage = 1
+			koefatak = (speedV + reaktV + punchV)
+			koefpop = koefatak*20/100
+			popad = RAND(koefatak - koefpop,koefatak + koefpop)
+
+			'<font color = red><<$nameV>> causing a power punch.</font>'
+
+			gs'Kikatak','enemy'
+			xgt'kikbox','sta'
+		elseif tiprand = 2:
+			damkoef = strenV*20/100
+			damage = RAND((strenV - damkoef)*3,(strenV + damkoef)*3)
+			if damage <= 0:damage = 1
+			koefatak = (speedV + reaktV + kikV)/2
+			koefpop = koefatak*20/100
+			popad = RAND(koefatak - koefpop,koefatak + koefpop)
+
+			'<font color = red><<$nameV>> gets in a kick.</font>'
+
+			gs'Kikatak','enemy'
+			xgt'kikbox','sta'
+		end
+	end
+end
+
+if $ARGS[0] = 'sta':
+	cla
+	ionce = 0
+
+	'<b>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</b>'
+	if minround = 1:'<b>the battle 1:00</b>'
+	if minround = 2:'<b>the battle 1:30</b>'
+	if minround = 3:'<b>the battle 2:00</b>'
+	if minround = 4:'<b>the battle 2:30</b>'
+	if minround = 5:'<b>the battle 3:00</b>'
+	'<b>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</b>'
+	'<b><<$nameV>></b> life <b><font color = red><<healthV>></font></b>, Endurance <b><font color = green><<staminaV>></font></b>'
+	'Your life <b><font color = red><<health>></font></b>, Endurance <b><font color = green><<stamina>></font></b>'
+	'<b>= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =</b>'
+
+	act 'Further':gt'kikbox','start'
+
+	if minround = 5:
+		cla
+		minround = 0
+		round = round + 1
+
+		'The bell gong indicating the end of the round'
+
+		if round <= formula:
+			act 'Vacationing in the corner':
+				cla
+				'You will rest in his corner.'
+
+				act 'In the ring':gt'kikbox','start'
+			end
+		elseif round > formula and sparing = 0:
+			act 'Out in the middle of announcing the winner':
+				cla
+
+				if pointKik > pointKikV:
+					'You won.'
+
+					act 'Leaving the ring':gt'enderKik','win'
+				elseif pointKik < pointKikV:
+					'You lost.'
+
+					act 'Leaving the ring':gt'enderKik','loss'
+				elseif pointKik = pointKikV:
+					'Draw.'
+
+					act 'Leaving the ring':gt'enderKik','draw'
+				end
+			end
+		elseif round > formula and sparing = 1:
+			act 'Leaving the ring':gt'fit','start'
+		end
+	end
+end
+--- kikbox ---------------------------------
+

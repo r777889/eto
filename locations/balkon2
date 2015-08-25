@@ -1,0 +1,85 @@
+# balkon2
+if $ARGS[0] = 'kurit':
+	cla
+	clr
+	*clr
+	minut = minut + 10
+	vikureno = vikureno + 1
+	sigaret = sigaret - 1
+	son = son + 1
+	gs'stat'
+
+	'<center><img src="images/etogame/kurit.jpg"></center>'
+	'You lit a cigarette...'
+
+	act 'To throw a cigarette butt...':gt'balkon','start'
+end
+
+if $ARGS[0] = 'demo1':
+	cla
+	clr
+	*clr
+	horny += RAND(30,50)
+	minut = minut + 5
+	sosedBalDay = day
+	if exhibi = 2:exhibi = 3
+	gs'stat'
+
+	if tanga = 1:'<center><img src="images/etogame/pose_tanga.jpg"></center>'
+	if tanga = 0:'<center><img src="images/etogame/pose_nude.jpg"></center>'
+
+	'You defiantly posing on the balcony, to the delight of his neighbor. He eagerly looking at you furiously fingering. After 5 minutes later he finished and went to his apartment.'
+
+	act 'Further':gt'balkon','start'
+end
+
+if $ARGS[0] = 'palec1':
+	cla
+	clr
+	*clr
+	horny += RAND(10,30)
+	minut = minut + 1
+	sosedBalDay = day
+	gs'stat'
+
+	if tanga=1:'<center><img src="images/etogame/fuck_clo.jpg"></center>'
+	if tanga=0:'<center><img src="images/etogame/fuck_nude.jpg"></center>'
+
+	'You showed neighbor thumb and he left from the balcony.'
+
+	act 'Further':gt'balkon','start'
+end
+
+if $ARGS[0] = 'niz':
+	cla
+	clr
+	*clr
+	gs'stat'
+
+	if alcohol < 12:
+		if hour >= 8 and hour <= 19:
+			'<center><img src="images/etogame/bal1.jpg"></center>'
+		elseif hour >= 20 and hour <= 23 or hour >= 0 and hour <= 7:
+			'<center><img src="images/etogame/bal2.jpg"></center>'
+		end
+		'You`re looking at the panorama from your private balcony.'
+
+		act 'Further':gt'balkon','start'
+	end
+end
+
+if $ARGS[0] = 'sosed':
+	cla
+	clr
+	*clr
+	gs'stat'
+
+	'<center><b><font color=maroon>Balcony Apartment</font></b></center>'
+	'<center><img src="images/etogame/sosed.jpg"></center>'
+	'A neighbor on the left on the balcony, He looks at you closely.'
+
+	act 'Demonstrate body':gt'balkon2','demo1'
+	act 'Show pervert thumb':gt'balkon2','palec1'
+end
+--- balkon2 ---------------------------------
+

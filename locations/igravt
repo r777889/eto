@@ -1,0 +1,28 @@
+# igravt
+clr
+minut = minut + 10
+gs'stat'
+
+'<right><img src="images/casino/zaligravt.jpg"></right>'
+'You enter a room and see a lot of slot machines and a lot of people around them. Constantly hear the sound of pens twitching and falling coins.'
+'On the left side of the hall is very little free space.'
+'Apparently there is less than the required rate of, but the payoff is small.'
+'To the right of these people less and bid more.'
+'But at the far end of the hall sit units.'
+'There`s biggest bet required, but also the corresponding jackpot - 10 million. rubles.'
+
+act 'For machines for 10RUB':
+	minut = minut+10
+	gt'authors1'
+end
+act 'For machines for 100RUB':
+	gt'authors2'
+end
+act 'For machines for 1000RUB':
+	gt'authors3'
+end
+act 'Back to the lobby':
+	gt'hall'
+end
+--- igravt ---------------------------------
+

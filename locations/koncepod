@@ -1,0 +1,104 @@
+# koncepod
+set minut += 5
+gs'stat'
+
+if hour <= 7 or hour >= 21:
+'<center><img src="images/pic/koncepod1.jpg" ></center>'
+'Empty concierge counter.'
+    cla
+    *clr
+    '<center><img src="images/pic/koncepod.jpg" ></center>'
+    'At the entrance sits a concierge, cloudy kind old man.'
+end
+if hour >= 7 or hour <= 21:
+!if hausr >= 0 and hour >= 7 or hour <= 21:
+    'Sorry, but the apartment has already been rented.'
+end
+
+if ArendHouseSL = 0 and BuyHous = 0 and housr = 0:
+     if BuyHous!1:
+         if money>=6000:
+             'And you my dear flatlet?'
+             act 'Rent an apartment':
+             cls
+             money-=6000
+             housr = 3
+             BuyHous=2
+             ArendHouseSL+=30
+             gs'stat'
+             '<center><img src="images/pic/koncepod.jpg" ></center>'
+             'Stirikashka filled all the blanks'
+             'Young lady, pozdrvlyayu you rented flat. Now you <<ArendHouseSL>> rental days.'
+             'The apartment was very good for a beautiful girl, and for a ridiculous price. Trust me, you will not regret.'
+             'Then you notice a woman.'
+             act 'Step up':
+                 cls
+                 gs'stat'
+                 '<center><img src="images/pic/koncepod2.jpg" ></center>'
+                 'Hello Beautiful.So you now have live? - spprosila you spokeswoman added, without waiting for an answer - Do not worry, He Coward.'
+                 'You are misunderstanding the meaning of - You are on the Concierge?'
+                 'About himself. - the woman said, - After 9 This evening suchonysh hiding in his room until the morning.'
+                 'So then after the 9 evening going "Orgy".But in general-the people here are quiet, Most of are no longer young.There is no theft, the door is not closed.'
+                 'Incidentally mozhesh go anywhere and somehow, All trust.'
+                 'And from one to three nights a bare not tusuysya - fucked and debris and monthly will not help.'
+                 act 'Escape':gt'koncepod'
+                 end
+             end
+         end
+     end
+end
+
+!act 'Logout':gt'dvor'
+!end
+
+act '<font color = maroon>Outside</font>':
+	cls
+	if sick <= 72 and nude = 0:
+		xgt'dvor'
+	elseif nude = 0:
+		'<b><font color = red>YOU TOO MUCH THAT sick to walk down the street.</font></b>'
+		xgt $curloc
+	else
+		'<b><font color = red>You need to get dressed.</font></b>'
+		xgt $curloc
+	end
+end
+
+if housr = 3:
+	act '<b>Go home</b>':
+		gt'korr2x'
+	end
+end
+
+if tanga = 0 and ski = 1 and hour > 6 and hour <= 20 or tanga = 0 and glamur = 1 and hour >= 6 and hour <= 20:
+	nurand = RAND(0,100)
+	if nurand >= 90:
+		manna = manna - 5
+		SUB = SUB + 1
+		horny = horny + SUB
+		'You`ve heard the barely audible murmur Concierge "That bitch! He walks in a short skirt and no panties, shmonkoy creature shines!"'
+	end
+end
+
+!if housr = 3 and hour<=7 and hour >=21:
+!    act 'No Koserzha'
+!    cls
+!    gs'stat'
+!    '<center><img src="images/pic/koncepod.jpg" ></center>'
+!    'Hello Beautiful.'
+!    act 'Logout':gt'koncepod'
+!end
+
+if mop = 4 and hour >= 7 and hour <= 21:
+    'You`ve heard the barely audible murmur Concierge-"Oh, and now smeared, Shaw Festival in the Indian Rain.'
+end
+
+if nude = 1 and hour >= 7 or hour <= 21:
+    'The lady, and go naked then it is not necessary, do not.Shame plant...'
+    'Fined for disturbing the peace will.'
+    set horny -=10
+    !set mooney -=500
+end
+
+--- koncepod ---------------------------------
+

@@ -1,0 +1,113 @@
+# zal
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+
+	gs'stat'
+
+	'<center><b><font color = maroon>Fitness Center</font></b></center>'
+	'<center><img src="images/pic/fit.jpg"></center>'
+
+	act 'Escape':gt'fit','razd'
+end
+
+if $ARGS[0] = '0':
+	$sexloc = $CURLOC
+
+	cla
+	*clr
+
+	'<center><img src="images/img/centr/zal1.jpg"></center>'
+	'Near you been a nice guy.'
+
+	act 'Escape':gt'fit','razd'
+
+	if dom > 0:
+		act 'Covet':
+			cla
+			*clr
+			guy += 1
+			picrand = 17
+
+			'<center><img src="images/img/centr/zal2.jpg"></center>'
+			'You approach a guy lying on the simulator, squats and starts stroking his cock through his pants, man rises kisses you on the lips, then lower a little pants freeing his impressive size dildo.'
+
+			act 'Suck':gt'sex','minet'
+		end
+	end
+end
+
+if $ARGS[0] = '1':
+	$sexloc = $CURLOC
+
+	cla
+	*clr
+	'<center><img src="images/img/centr/zal3.jpg"></center>'
+	'As long as you do, suited to you from behind the guy and grabbing you by the chest kisses in my ear, sucking the lobe.'
+
+	if dom > 0:act 'Writing in the balls':gt'fit','razd'
+
+	act 'Enjoy':
+		cla
+		*clr
+		guy += 1
+		picrand = 18
+
+		'<center><img src="images/img/centr/zal4.jpg"></center>'
+		'Man avoids you, He pulls out his dick and puts him on your chest, gradually moving head to your mouth.'
+
+		act 'Suck':gt'sex','minet'
+	end
+end
+
+if $ARGS[0] = '2':
+	$sexloc = $CURLOC
+
+	cla
+	'As long as you do, a girl for you and offers to play with her squash, while her boyfriend did not come.'
+
+	act 'Takeout':gt'fit','razd'
+	act 'Agree':
+		cla
+		*clr
+		picrand = 15
+
+		'<center><img src="images/img/centr/zal5.jpg"></center>'
+		'You play fun playing with girl, you, as well, and she, It get pretty bad, but it only amuses you. After a while, there is her boyfriend and look at your clumsy attempts at starting to show how to play correctly. He approaches you from behind priobnimaet and one hand on your arm with the racket shows how to beat, and the second hand starts stroking your thighs gradually approaching the perineum. You feel like you are in the back rests against his penis, Woman looking at, You understand that it is well aware of what is happening and do not want less than men.'
+
+		act 'Send perverts':gt'fit','razd'
+		act 'Enjoy':
+			guy += 1
+			girl += 1
+			gt'podrsex','var'
+		end
+	end
+end
+
+if $ARGS[0] = '3':
+	$sexloc = $CURLOC
+
+	cla
+	*clr
+	'<center><img src="images/img/centr/zal6.jpg"></center>'
+	'Next to you is engaged in hedgehog one girl, suited to you two guys, apparently mistook you for girlfriends, and trying to start a conversation.'
+
+	act 'Send':gt'fit','razd'
+	act 'Flirt':
+		cla
+		*clr
+		picrand = 12
+
+		'<center><img src="images/img/centr/zal7.jpg"></center>'
+		'You chat with a guy, and notice that it is very excited and constantly glancing behind you, turning you can see that she is already on his heels, and with relish sucking the second guy.'
+
+		act 'Escape':gt'fit','razd'
+		act 'Suck':
+			guy += 2
+			girl += 1
+			gang += 1
+			xgt'sexdvanadva','var'
+		end
+	end
+end
+--- zal ---------------------------------
+

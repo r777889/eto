@@ -1,0 +1,176 @@
+# kazinosvid
+minut += 60
+kisvrand = 0
+manna += 10
+gs'stat'
+
+'<center><b>Theater</b></center>'
+'<center><img src="images/img/kazinosvid/0.jpg"></center>'
+'You and <<$telsob>> We sat at a table and start playing.'
+
+act 'Play':
+	if $telsob = 'Alla':
+		alla += 1
+
+		if alla >= 20:
+			kisvrand = RAND(0,10)
+			if kisvrand > 0 and kisvrand < 3:gt'kazinosvid','1'
+			if kisvrand > 2 and kisvrand < 5:gt'kazinosvid','2'
+			if kisvrand = 0 or kisvrand > 4:gt'kazinosvid','3'
+		elseif alla < 20:
+			gt'kazinosvid','3'
+		end
+	elseif $telsob = 'Masha':
+		masha += 1
+
+		if masha >= 20:
+			kisvrand = RAND(0,10)
+			if kisvrand > 0 and kisvrand < 3:gt'kazinosvid','1'
+			if kisvrand > 2 and kisvrand < 5:gt'kazinosvid','2'
+			if kisvrand = 0 or kisvrand > 4:gt'kazinosvid','3'
+		elseif masha < 20:
+			gt'kazinosvid','3'
+		end
+	elseif $telsob = 'Katya':
+		kat += 1
+
+		if kat >= 20:
+			kisvrand = RAND(0,10)
+			if kisvrand > 0 and kisvrand < 3:gt'kazinosvid','1'
+			if kisvrand > 2 and kisvrand < 5:gt'kazinosvid','2'
+			if kisvrand = 0 or kisvrand > 4:gt'kazinosvid','3'
+		elseif kat < 20:
+			gt'kazinosvid','3'
+		end
+	end
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	'<center><img src="images/img/kazinosvid/0.jpg"></center>'
+	'While you are playing you guys hooked two and suggested to play two by two they have in the room.'
+	'<<$telsob>> She said that she does not mind, and looked at you.'
+
+	act 'Takeout':gt'kazinosvid','3'
+	act 'Agree':
+		cla
+		*clr
+
+		pikrand = RAND(14,15)
+		'<center><img src="images/img/kazinosvid/<<picrand>>.jpg"></center>'
+
+		randkazinv = RAND(0,1)
+		randkazinvsum = RAND(100,10000)
+		if randkazinv = 1:
+			money += randkazinvsum
+			'You win and your share <<randkazinvsum>> RUB. You and <<$telsob>> ready to leave, but the guys started to beg you to stay "Come on girls, where we can sit in a hurry, drink, We take a closer look. Well stay, reassurance losers" said one unbuttoned his pants and pulled out a member, clearly implying any consolation, he is waiting for.'
+
+			telsobnastr = RAND(0,10)
+			if telsobnastr < 4:
+				'"No, it`s time, reassurance themselves." He said <<$telsob>> and taking you by the hand brought back to the gym'
+
+				act 'Finish':gt'kazinosvid','3'
+			elseif telsobnastr > 3:
+				'"I am not opposed to console the losers" He said <<$telsob>> lasciviously smiling and looking at a guy who has his fly open from sticking member.'
+
+				act 'Pick up <<$telsob>> and go':gt'kazinosvid','3'
+				act 'To console the losers':
+					kazsexdva = 1
+					guy += 2
+					gang += 1
+					xgt'sexdvanadva','var'
+				end
+			end
+		elseif randkazinv = 0:
+			'You lose, and your share of loss <<randkazinvsum>> RUB.'
+
+			if money < randkazinvsum:
+				'You do not have the money to pay and <<$telsob>> also that no money left to pay, no options have to open your legs.'
+
+				act 'Pay in kind':
+					kazsexdva = 1
+					guy += 2
+					gang += 1
+					xgt'sexdvanadva','var'
+				end
+			elseif money >= randkazinvsum:
+				'You have enough money to pay and <<$telsob>> too short of money that would have to pay, but the guys clearly hinted that the pay is not necessarily money, They gladly accept another form of payment.'
+
+				if telsobnastr < 4:
+					money -= randkazinvsum
+
+					'"No, it`s time, here`s your money." He said <<$telsob>> and taking you by the hand brought back to the gym'
+
+					act 'Finish':gt'kazinosvid','3'
+				elseif telsobnastr > 3:
+					'"I do not mind to use an alternative form of payment" He said <<$telsob>> smiling lasciviously.'
+
+					act 'Give money, pick up <<$telsob>> and go':
+						money -= randkazinvsum
+						gt'kazinosvid','3'
+					end
+					act 'Take advantage of an alternative form of payment':
+						kazsexdva = 1
+						guy += 2
+						gang += 1
+						xgt'sexdvanadva','var'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	'<center><img src="images/img/kazinosvid/0.jpg"></center>'
+	'While you play you sat down and asked the guy to play with him in his room.'
+	'<<$telsob>> She said that she does not mind, and looked at you.'
+
+	act 'Takeout':gt'kazinosvid','3'
+	act 'Agree':
+		cla
+		*clr
+		'<center><img src="images/img/kazinosvid/3.jpg"></center>'
+		'Arriving at the hotel you are located in the bed and began to play, a few minutes later a guy offered to play on the strip. <<$telsob>> She giggled "And you then do not be ashamed, and that in fact is not never won", man grinned "I have nothing to be ashamed."'
+
+		act 'Takeout, pick up <<$telsob>> and go':gt'kazinosvid','3'
+		act 'Agree':
+			cla
+			*clr
+			'<center><img src="images/img/kazinosvid/4.jpg"></center>'
+			'After a few minutes and you <<$telsob>> already removed her panties. "It is not fair, You especially first succumbed, so we agreed to" He said <<$telsob>>, defiantly pouting.'
+			'"Good girls last game, the two of you against me, Cards can even change, I do say that the win, lose to entertain the full." the guy said.'
+			'"Play" immediately blurted <<$telsob>>'
+
+			act 'Play':
+				cla
+				*clr
+				'<center><img src="images/img/kazinosvid/5.jpg"></center>'
+				'A minute later he was standing with his pants down "Well girls, card debt - holy, swoop" he said, pointing to his dildo'
+
+				act 'Start':
+					guy += 1
+					pikrand = 23
+					kazsexdva = 1
+					gt'podrsex','var'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '3':
+	cla
+	horny = 0
+	minut += 90
+	gs'stat'
+
+	'Soon <<$telsob>> She said that she needed to flee and left'
+
+	act 'Escape':gt'nord'
+end
+--- kazinosvid ---------------------------------
+

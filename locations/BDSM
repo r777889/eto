@@ -1,0 +1,135 @@
+# BDSM
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+cla
+clr
+*clr
+gs'stat'
+
+'You`ve come to the set where everything was ready for filming porn.'
+
+act 'Post participation in shootings':
+	cla
+	*clr
+
+	if hcol = 0:'<center><img src="images/studia/Brunette_2.jpg"></center>'
+	if hcol = 1:'<center><img src="images/studia/Brown_2.jpg"></center>'
+	if hcol = 2:'<center><img src="images/studia/Redhead_2.jpg"></center>'
+	if hcol = 3:'<center><img src="images/studia/Blonde_2.jpg"></center>'
+
+	'You began to shoot a scene with two actors'
+
+	act 'Blow job scene':
+		cla
+		*clr
+		guy += 2
+		bj += 2
+		gang += 1
+
+		if hcol = 0:'<center><img src="images/studia/Brunette_3.jpg"></center>'
+		if hcol = 1:'<center><img src="images/studia/Brown_3.jpg"></center>'
+		if hcol = 2:'<center><img src="images/studia/Redhead_3.jpg"></center>'
+		if hcol = 3:'<center><img src="images/studia/Blonde_3.jpg"></center>'
+
+		'You wrapped around his lips and took a member of the palm of the second member of the actor, and began to work energetically for the camera, alternately sucking members and trying to pull her mouth at once both members.'
+
+		act 'Get cancer':
+			cla
+			*clr
+			anal += 1
+			anus += 1
+
+			if hcol = 0:'<center><img src="images/studia/Brunette_4.jpg"></center>'
+			if hcol = 1:'<center><img src="images/studia/Brown_4.jpg"></center>'
+			if hcol = 2:'<center><img src="images/studia/Redhead_4.jpg"></center>'
+			if hcol = 3:'<center><img src="images/studia/Blonde_4.jpg"></center>'
+
+			'One of the actors made you cancer and began to roughly shove your hard cock in her ass, after he became a member of in you, he began furiously fuck you in the ass, and you continue to suck the second...'
+
+			act 'Take the top...':
+				cla
+				*clr
+
+				if hcol = 0:'<center><img src="images/studia/Brunette_5.jpg"></center>'
+				if hcol = 1:'<center><img src="images/studia/Brown_5.jpg"></center>'
+				if hcol = 2:'<center><img src="images/studia/Redhead_5.jpg"></center>'
+				if hcol = 3:'<center><img src="images/studia/Blonde_5.jpg"></center>'
+
+				'You famously sat on one dick ass and proceeded to suck the other...'
+
+				act 'Continue movements':
+					cla
+					*clr
+
+					if hcol = 0:'<center><img src="images/studia/Brunette_6.jpg"></center>'
+					if hcol = 1:'<center><img src="images/studia/Brown_6.jpg"></center>'
+					if hcol = 2:'<center><img src="images/studia/Redhead_6.jpg"></center>'
+					if hcol = 3:'<center><img src="images/studia/Blonde_6.jpg"></center>'
+
+					'The peasants were swapped and continued to fuck you'
+
+					act 'Get ready for double penetration':
+						cla
+						*clr
+						sex += 1
+						vagina += 1
+
+						if hcol = 0:'<center><img src="images/studia/Brunette_7.jpg"></center>'
+						if hcol = 1:'<center><img src="images/studia/Brown_7.jpg"></center>'
+						if hcol = 2:'<center><img src="images/studia/Redhead_7.jpg"></center>'
+						if hcol = 3:'<center><img src="images/studia/Blonde_7.jpg"></center>'
+
+						'You got pussy on one member, and I felt like part of the second term you itchy and broken-ass'
+
+						act 'Enjoy':
+							cla
+							*clr
+
+							if hcol = 0:'<center><img src="images/studia/Brunette_8.jpg"></center>'
+							if hcol = 1:'<center><img src="images/studia/Brown_8.jpg"></center>'
+							if hcol = 2:'<center><img src="images/studia/Redhead_8.jpg"></center>'
+							if hcol = 3:'<center><img src="images/studia/Blonde_8.jpg"></center>'
+
+							'Outstretched legs, I enjoy acting in two bow, members of hammering your body as pistons, You moan and pushes the rolls hands, it was convenient to the operator to take close-up.'
+
+							act 'It`s time to finish...':
+								cla
+								*clr
+								facial += 1
+								swallow += 1
+
+								if hcol = 0:'<center><img src="images/studia/Brunette_9.jpg"></center>'
+								if hcol = 1:'<center><img src="images/studia/Brown_9.jpg"></center>'
+								if hcol = 2:'<center><img src="images/studia/Redhead_9.jpg"></center>'
+								if hcol = 3:'<center><img src="images/studia/Blonde_9.jpg"></center>'
+
+								'The guys took out his thick cock out of you and you are willing to vsali in front of them on their knees and opened his mouth lasciviously awaiting sperm, the guys did not take long and soon the hot jet of sperm began to whip your face and run down his chin on his chest.'
+
+								act 'Get royalty':
+									cla
+									clr
+									*clr
+									minut = minut+480
+									film = film+1
+									BDSMfilm = BDSMfilm+1
+									money = money+vnesh*500
+									actr = 0
+									gs'stat'
+
+									'<center><img src="images/studia/dvd-disс.jpg"></center>'
+									'You spent 9 hours of shooting the film'
+									'and received <<vnesh*500>> rubles in cash'
+
+									act 'Leaving the studio':gt'down'
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- BDSM ---------------------------------
+

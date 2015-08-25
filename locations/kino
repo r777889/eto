@@ -1,0 +1,96 @@
+# kino
+gs'stat'
+
+'<center><b>Theater</b></center>'
+'<center><img src="images/img/centr/kino.jpg"></center>'
+'Small Theater, The ticket price 300 RUB.'
+
+act 'Escape':gt'torgcentr'
+
+if hour >= 8 and hour <= 20:
+	if money >= 300:
+		act 'Watch movies':
+			cls
+			money -= 300
+			minut += 60
+			manna += 300
+			gs'stat'
+
+			kinorand = RAND(0,9)
+			if kinorand = 9:
+				'The hall is empty, just next to you sits a guy.'
+
+				act 'Watch the movie':minut += 60 & gt'kino'
+				act 'Seduce':
+					cla
+					*clr
+					'<center><img src="images/img/centr/kino1.jpg"></center>'
+
+					if vnesh < 15:
+						'You bare chest demonstrate her boyfriend, but he pays no attention to you'
+
+						act 'Escape':gt'kino'
+					elseif vnesh >= 15:
+						'You bare chest demonstrate her boyfriend, he is clearly interested in and looking at you waiting for continuation'
+
+						act 'Cooney':
+							cla
+							*clr
+							guy += 1
+							kuni += 1
+							horny += 10
+
+							'<center><img src="images/img/centr/kino2.jpg"></center>'
+							'You put your feet up and you ask him to lick, man quickly dropped to his knees and began to lick you.'
+
+							act 'Escape':DOM += 1 & gt'kino'
+							act 'Blow job':gt'kino','sex'
+						end
+
+						act 'Blow job':gt'kino','sex'
+					end
+				end
+
+				exit
+			end
+
+			minut += 60
+			gs'stat'
+
+			'You watched the film'
+
+			act 'Escape':gt'kino'
+		end
+	end
+else
+	'The cinema is closed.'
+end
+
+if $ARGS[0] = 'sex':
+	cla
+	*clr
+	bj += 1
+
+	'<center><img src="images/img/centr/kino3.jpg"></center>'
+	'Are you nervous around his penis with his lips and began to suck his hand while playing with his eggs. Soon you will feel that he is about to finish.'
+
+	act 'Suck':
+		cla
+		'You continue to suck the guy is dead and your mouth filling it with warm viscous liquid.'
+
+		act 'Escape':cumlip += 1 & gt'kino'
+	end
+	act 'Give':
+		cla
+		*clr
+		sex += 1
+		horny += 50
+
+		'<center><img src="images/img/centr/kino4.jpg"></center>'
+		'You stand up knees on a chair, Turning his back to the guy and swaying invitingly ass, He did not wait and quickly came to you in the vagina, after a few seconds he groaned and finished in you, leaving you unsatisfied.'
+
+		act 'Escape':cumpussy += 1 & gt'kino'
+	end
+end
+--- kino ---------------------------------
+

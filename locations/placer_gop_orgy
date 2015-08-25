@@ -1,0 +1,52 @@
+# placer_gop_orgy
+alko += 5
+gs'stat'
+
+'You and <<$ev_name>> They came in what is clearly semi-abandoned apartment where everywhere was rubbish and dirt. Men began to pour vodka and actively fluster you with girlfriend. Soon, you guys started to undress and put on his back with his girlfriend.'
+
+gang += 1
+$boy = 'Gopnik'
+ciklkm = (kol_man/2)+1
+guy += ciklkm
+if goporgyeQW = 0:goporgyeQW = 1
+
+if Frend_num = 14:
+	KatjaLust += 5
+	KatjaSlut += 5
+	KatjaHorny = 0
+	KatjaSex += kol_man
+	KatjaGuy += kol_man
+	KatjaOhrenet = 3
+end
+
+act 'Further':
+	cls
+	gs'stat'
+	rand1=rand(0,100)
+	if rand1<10:'<center><img src="images/qwest/alter/placer/gopgang2.jpg"></center>'
+	if rand1>=10:'<center><img src="images/nigma/gor/orgy1,'+rand(0,4)+'.gif"></center>'
+	'You girlfriend put next to each other and began to fuck you.'
+
+	:markgopgang
+	ciklkm -= 1
+	minut += 15
+	dick = RAND(12,20)
+
+	tiprand = RAND(0,2)
+	if tiprand < 2:
+		dynamic $sexstart2
+		dynamic $sexcum
+	elseif tiprand = 2:
+		dynamic $analsexrude
+	end
+
+	if ciklkm > 0:'Then the space between your legs took the next guy.'
+	gs'stat'
+	if ciklkm > 0:jump'markgopgang'
+
+	'The guys finally emptied their sperm reserves and continued to thump you interested in stopping.'
+
+	act 'Escape':gt'placer_end'
+end
+--- placer_gop_orgy ---------------------------------
+

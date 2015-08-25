@@ -1,0 +1,29 @@
+# danceGev
+if lesbian > 0:
+	horny += 10
+elseif lesbian = 0:
+	manna += 10
+	wipo += 5
+end
+
+danceevtimes += 1
+gs'stat'
+
+if danceevtimes < 5:dancegevtipe = RAND(0,2)
+if danceevtimes >= 5:dancegevtipe = RAND(0,3)
+
+'<center><img src="images/qwest/alter/ev2/ev<<dancegevtipe>>.jpg"></center>'
+
+if dancegevtipe = 0:
+	'Veronichka Mokhova doing stretching and finally sits on the twine.'
+elseif dancegevtipe = 1:
+	'Veronichka Mokhova doing a handstand.'
+elseif dancegevtipe = 2:
+	'Veronichka Mokhova kneaded'
+elseif dancegevtipe = 3:
+	'Veronichka Mokhova doing the splits while standing on hands, thus it without panties.'
+end
+
+act 'Escape':gt'gdksport'
+--- danceGev ---------------------------------
+

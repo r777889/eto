@@ -1,0 +1,520 @@
+# kompMFCtwo
+if webpopular >= 15 and anus >= 15 and clientask = 89:
+	cls
+	gs 'stat'
+	'One of the visitors asks you to show him your ass...'
+	act 'Show':
+		cls
+		webpopular += 1
+		minut += 2
+		if vnesh > 25:
+			tokens += RAND(5,15)
+		else
+			tokens += RAND(5,10)
+		end
+		if webpopular < 15:
+			tokens += RAND(5,10)
+		elseif webpopular >= 15 and webpopular < 35:
+			tokens += RAND(10,15)
+		elseif webpopular >= 35 and webpopular < 75:
+			tokens += RAND(15,20)
+		elseif webpopular >= 75:
+			tokens += RAND(20,30)
+		end
+		gs 'stat'
+		if anus < 25 and backmfc = 0:
+			'<center><img src="images/camwhore/camwhore54.jpg"></center>'
+		elseif anus >= 25 and vagina >= 25 and backmfc = 0:
+			'<center><img src="images/camwhore/camwhore56.jpg"></center>'
+		elseif anus >= 25 and backmfc = 0:
+			'<center><img src="images/camwhore/camwhore55.jpg"></center>'
+		elseif backmfc = 1:
+			'<center><img src="images/camwhore/camwhore57.jpg"></center>' 
+		end
+		if analplugIN = 1:
+			'You pull the plug out of the anal ass and turns his back to the camera.'
+			'A bit out of it and booty buttocks porazdvigav, you put the cork back.'
+		else
+			'You turn her ass to the camera and give it to consider your anus, and then returns to its previous position.'
+		end
+		act'Further':gt'Komp','waitclients'	   
+	end
+	act 'Ignore':
+		cls
+		webpopular -= 1
+		gt'Komp','waitclients'
+	end		
+end
+
+if webpopular < 50 and clientask = 88:
+	cls
+	gs 'stat'
+	'One of the visitors asks you to stick panties into her mouth...'
+	act 'Do':
+		cls
+		webpopular += 1
+		sub += 1
+		minut += 2
+		horny -= RAND(5,10)
+		if vnesh > 25:
+			tokens += RAND(0,5)
+		else
+			tokens += RAND(5,10)
+		end
+		if webpopular < 25:
+			tokens += RAND(5,10)
+		else
+			tokens += RAND(10,15)
+		end
+		gs 'stat'
+		if backmfc = 1:
+			backmfc = 0
+			'<center><img src="images/camwhore/camwhore58.jpg"></center>'
+			'You shoot shorts and a short while dutifully puts them in his mouth...'
+		else
+			'<center><img src="images/camwhore/camwhore58.jpg"></center>'  
+			'You find your pants eyes briefly and humbly puts them in his mouth...'
+		end
+		act'Further':gt'Komp','waitclients'		 
+	end
+	act 'Ignore':
+		cls
+		webpopular -= 1
+		gt'Komp','waitclients'
+	end		
+end
+
+if webpopular >= 50 and vagina >= 35 and clientask = 87:
+	cls
+	gs 'stat'
+	'One of the visitors asks you to shove any-the foreign objects in the vagina itself...'
+	act 'Do':
+		cls
+		webpopular += 1
+		sub += 2
+		minut += 2
+		horny += RAND(5,10)
+		if vnesh > 25:
+			tokens += RAND(50,100)
+		else
+			tokens += RAND(0,50)
+		end
+		if webpopular < 75:
+			tokens += RAND(50,100)
+		else
+			tokens += RAND(100,200)
+		end
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore59.jpg"></center>'
+		'You ask him to wait a bit and quickly nosites housework, looking for that-something suitable, until finally find the kitchen which-the little bottle and the TV remote.'
+		'Returning, you turn her ass to the camera and shoves a first bottle, and then control...'
+		'In the chat applause and encouragement, thanks to which you have a minute twirl her hips, and then still pull itself out of foreign objects.'
+		act'Further':gt'Komp','waitclients'	   
+	end
+	act 'Ignore':
+		cls
+		gt'Komp','waitclients'
+	end		
+end
+   
+if webpopular >= 35 and vagina >= 25 and alko >= 8 and clientask = 86:
+	cls
+	gs 'stat'
+	'One of the visitors, seeing, you pretty drunk, asks Chat, for how much you`re willing to shove a bottle of his vagina...'
+	'From that you hop-Something hit in the head and you have decided to do it just like that, naspoledok throwing stranger, that it is only today and only for him.'
+	act 'Do':
+		cls
+		vagina += 1
+		webpopular += 2
+		sub += 1
+		minut += 2
+		horny -= RAND(10,20)
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore60.jpg"></center>'
+		'You pull up to the kitchen and opened the refrigerator, We took out a cold bottle of beer, then returned to the room and began to push it in himself.'
+		'Bottle, of course, It was cold, but drunken and reckless, so half a minute, and you did it with a triumphant yelp drunk climb higher pelvis, that he was in the camera. In that chat-then blossomed from multiple messages and cries, but alcohol is not to consider you gave, It proved too shallow for drunken'
+		'One minute you tinker with the bottle in the vagina, then, lastly, I pulled her off...'
+		act'Further':gt'Komp','waitclients'
+	end
+end
+
+if webpopular >= 50 and vagina > 0 and anus > 0 and alko >= 8 and sub > 50 and clientask = 85:
+	cls
+	gs 'stat'
+	'One of the regular visitors, seeing, you pretty drunk, offers do-something unusual...'
+	if cumpussy > 0:
+		act 'Do':
+			cls
+			minut += 2
+			dom += 1
+			if vnesh > 25:
+				tokens += RAND(75,150)
+			else
+				tokens += RAND(50,100)
+			end
+			if webpopular < 75:
+				tokens += RAND(75,150)
+			else
+				tokens += RAND(50,100)
+			end
+			gs 'stat'
+			'<center><img src="images/camwhore/camwhore73.jpg"></center>'
+			'Are you-mumbled something under his breath, and then substitute what crotch under the camera and fingers stretch the vagina, from which immediately begins to trickle male sperm...'
+			'You immediately awarded numerous comments of various contents, a special surprise also welcome tokens.'
+			act'Further':gt'Komp','waitclients'
+		end
+	else
+		act 'Play with panties':
+			cls
+			webpopular += 2
+			sub += 2
+			minut += 5
+			horny -= RAND(10,20)
+			if vnesh > 25:
+				tokens += RAND(75,150)
+			else
+				tokens += RAND(50,100)
+			end
+			if webpopular < 75:
+				tokens += RAND(75,150)
+			else
+				tokens += RAND(50,100)
+			end
+			gs'stat'
+			if anus > vagina:
+				'<center><img src="images/camwhore/camwhore61.jpg"></center>'
+				if backmfc = 1:
+					agape = 1
+					backmfc = 0
+					'You drunkenly pulls off her panties and her back turned to the camera, You begin to stuff them up your ass...'
+				else
+					'You, swaying drunkenly, looking for her panties, and when it finds, then with a triumphant cry flops with them on the bed, then, Turning his back to the camera, You begin to stuff them up your ass...'
+				end 
+			else
+				if backmfc = 1:
+					backmfc = 0
+					vgape = 1
+					'You drunkenly pulls off her panties and her back turned to the camera, You begin to push them into the vagina itself...'
+				else
+					'You, swaying drunkenly, looking for her panties, and when it finds, then with a triumphant cry flops with them on the bed, then, Turning his back to the camera, You begin to push them into the vagina itself...'
+				end
+			end
+			act'Further':gt'Komp','waitclients'
+		end
+		if tits >= 1:
+			act 'Play with the breast':
+				cls
+				webpopular += 2
+				if alko >= 10:
+					nippain = 2
+				else
+					nippain = 1
+				end
+				sub += 2
+				minut += 10
+				horny -= RAND(10,20)
+				if vnesh > 25:
+					tokens += RAND(75,150)
+				else
+					tokens += RAND(50,100)
+				end
+				if webpopular < 75:
+					tokens += RAND(75,150)
+				else
+					tokens += RAND(50,100)
+				end
+				gs'stat'
+				if topmfc = 1:
+					topmfc = 0
+				end
+				if alko >= 10:
+					'<center><img src="images/camwhore/camwhore63.jpg"></center>'
+					'You are in a drunken stupor find any-the ropes and under ozhilennye comments start chatting to link them her breasts...'
+					'You are so drunk, that senses dulled, but because you have tried on conscience! It was not until a couple of minutes, I start chest hurt badly before you finally realized, you all-still went too far, but because the laughter in the chat you will quickly unleash tortured chest...'				
+				else
+					if tits = 2:
+						if pirsF = 1:
+							'<center><img src="images/camwhore/camwhore63.jpg"></center>'
+						else
+							'<center><img src="images/camwhore/camwhore63.jpg"></center>'
+						end
+					elseif tits = 3:
+						'<center><img src="images/camwhore/camwhore65.jpg"></center>'
+					elseif tits = 4:
+						'<center><img src="images/camwhore/camwhore66.jpg"></center>'
+					elseif tits = 5:
+						if pirsF = 1:
+							'<center><img src="images/camwhore/camwhore68.jpg"></center>'
+						else
+							'<center><img src="images/camwhore/camwhore67.jpg"></center>'
+						end
+					elseif tits >= 6:
+						'<center><img src="images/camwhore/camwhore69.jpg"></center>'
+					end
+					'You are in a drunken stupor find any-the ropes and under ozhilennye comments start chatting to link them her breasts...'
+					'As soon as you drag it from the base, as it fills with blood and begins to ache, but because five you still throw this occupation.'
+				end
+				act'Further':gt'Komp','waitclients'
+			end
+		else			
+			act 'Play with pussy':
+				cls
+				webpopular += 2
+				sub += 2
+				minut += 10
+				horny -= RAND(10,20)
+				if vnesh > 25:
+					tokens += RAND(75,150)
+				else
+					tokens += RAND(50,100)
+				end
+				if webpopular < 75:
+					tokens += RAND(75,150)
+				else
+					tokens += RAND(50,100)
+				end
+				gs'stat'
+				if backmfc = 1:
+					backmfc = 0
+				end
+				if vagina < 15 and anus < 15:
+					vgape = 3
+					'<center><img src="images/camwhore/camwhore70.jpg"></center>'
+					'In a drunken stupor you find what-the rope, followed by acute pain to tie it on your clitoris and the camera under the astonished comments begin with the power to pull over...'
+					'You hurt, and even a bit nice, but alcohol and approving posts in the chat give you courage, so you keep a couple-three minutes, until finally you do not get too hurt...' 
+				elseif vagina >= 15 and anus < 15:
+					vgape = 2
+					vagina += 1
+					'<center><img src="images/camwhore/camwhore71.jpg"></center>'
+					'A few minutes sway drunkenly through the apartment in search of ideas, Finally, you do not come up with anything better, how to take the shoe to the camera and fuck it yourself...'
+					'But you have it, to the great disappointment of users, does not work - it is dirty and painful scratching soles, so five minutes later you still stop this useless...' 
+				elseif vagina >= 15 and anus >= 15
+					vagina += 1
+					anus += 1
+					vgape = 2
+					agape = 2
+					'<center><img src="images/camwhore/camwhore72.jpg"></center>'
+					'You immediately receive a great idea and you stumble rushing to the kitchen, and return with her two huge cucumbers.'
+					'What-the drunk muttered in camera, you turn it backwards, and start stuffing pickles into both their holes...'
+					'As soon as they find themselves in, you immediately begin to furiously fuck yourself, but they are dirty and painful pimples scratch the skin, so for a few minutes with the power of two pozagonyav unwashed vegetables, you finally stop...'
+				end
+				act'Further':gt'Komp','waitclients'
+			end
+		end
+	end
+end   
+
+if backmfc = 0 and webpopular >= 25 and vagina >= 30 and anus >= 30 and alko >= 8 and clientask = 84:
+	cls
+	gs 'stat'
+	if vagina >= anus:
+		'One of the regular customers ask you to fuck her bottle in pussy...'
+	else
+		'One of the regular customers ask you to fuck her in the ass bottle...'
+	end
+	act 'Run':
+		cls
+		webpopular += 2
+		sub += 2
+		minut += 10
+		horny -= RAND(10,20)
+		if vagina >= anus:
+			vagina += 1
+			vgape = 2
+		else
+			anus += 1
+			agape = 2
+		end
+		if vnesh > 25:
+			tokens += RAND(100,150)
+		else
+			tokens += RAND(50,75)
+		end
+		if webpopular < 15:
+			tokens += RAND(25,50)
+		elseif webpopular >= 15 and webpopular < 35:
+			tokens += RAND(50,75)
+		elseif webpopular >= 35 and webpopular < 75:
+			tokens += RAND(75,150)
+		elseif webpopular >= 75:
+			tokens += RAND(100,300)
+		end
+		gs 'stat'
+		if vagina >= anus:
+			'<center><img src="images/camwhore/camwhore75.jpg"></center>'
+			'You answered yes mychite, that, pier, yes, do, then go look for a bottle...'
+			'And finds it on the kitchen table - two-liter bottle of mineral water. Only after returning to the room, you get the idea, it is too big, but alcohol gave you courage, and therefore the next five minutes, you moan and squirm, shoving her a. Then you get up on wobbly legs on the bed, lean hands on the wall, lest he fall, and try not to let the bottle slip out of your vagina. But that is too heavy, and after a few minutes under a storm of comments and smiles you do drop it...'
+		else
+			'<center><img src="images/camwhore/camwhore76.jpg"></center>'
+			'You answered yes mychite, that, pier, yes, do, then go look for a bottle...'
+			'And finds it in the hallway - large two-liter bottle-beer, that my stepfather did not have time to drink. Only after returning to the room, you get the idea, it is too big, but alcohol gave you courage, and therefore the next five minutes, you moan and squirm, shoving it in your ass. Then you get up on wobbly legs, lean hands in bed and try not to let the bottle slip out of your backside. It you manage quite well, because beer there remains very little-slightly, but because it is not very heavy. But soon your anus by a load begins in earnest this match, but because you tuzhites and under a lot of emoticons in the chat loose their gut from the huge foreign object...'
+		end
+		act'Further':gt'Komp','waitclients'
+	end
+end
+
+if backmfc = 0 and vagina > 20 and clientask = 83:
+	'One of the visitors asks you to fuck yourself, but with imagination..'
+	act 'Do':
+		cls
+		vagina += 1
+		webpopular += 1
+		minut += 5
+		vgape += 2
+		horny = RAND(10,20)
+		if vnesh > 25:
+			tokens += RAND(50,150)
+		else
+			tokens += RAND(25,75)
+		end
+		if webpopular < 15:
+			tokens += RAND(25,50)
+		elseif webpopular >= 15 and webpopular < 35:
+			tokens += RAND(50,75)
+		elseif webpopular >= 35 and webpopular < 75:
+			tokens += RAND(75,150)
+		elseif webpopular >= 75:
+			tokens += RAND(150,250)
+		end
+		gs 'stat'
+		'You have quickly reacted and spat on his fingers, They pat themselves on their vagina, after which they began to sit down on a wooden round knob bed...'
+		if horny >= 95:
+			orgasm += 1
+			horny = 0
+			manna = mannamax
+			'<center><img src="images/camwhore/camwhore78.jpg"></center>'
+			'You hurt a little, but much stronger excitement, Ride so you were on stilts, until finally in the surging orgasm you have not podgibayutsya legs, from what you plunk down all the fluff on the knob of the vagina, the tip of which the patient bites you in the womb... But the goal is reached - you, although hang on a wooden Coke, but it is satisfied - reach orgasm.'
+		else
+			'<center><img src="images/camwhore/camwhore77.jpg"></center>'
+			'He stretches Vasco nice pussy, but this is not enough, to reach orgasm. You have some time riding a wooden peg, then peel off his, feeling, as the vagina starts to hurt...'
+		end		
+		act'Further':gt'Komp','waitclients'
+	end
+	act 'Ignore':
+		cls
+		webpopular -= 1
+		gt'Komp','waitclients'
+	end
+end
+
+if webpopular > 25 and backmfc = 0 and sub > 25 and vagina > 10 and prezik > 0 and clientask = 82:
+	cls
+	gs 'stat'
+	'One of the regular customers asking you to shove it-is currently in the urethra...'
+	act 'Do':
+		cls
+		webpopular += 2
+		minut += 10
+		vgape = 3
+		if vnesh > 25:
+			tokens += RAND(100,150)
+		else
+			tokens += RAND(50,100)
+		end
+		if webpopular < 15:
+			tokens += RAND(50,100)
+		elseif webpopular >= 15 and webpopular < 35:
+			tokens += RAND(100,150)
+		elseif webpopular >= 35 and webpopular < 75:
+			tokens += RAND(150,200)
+		elseif webpopular >= 75:
+			tokens += RAND(200,300)
+		end
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore81.jpg"></center>'
+		'You ask to wait a bit, then quickly run to the bathroom and took out his toothbrush, You go back and are looking for a condom, that you, as you remember, sort of, it should be...'
+		'A minute later you find it quickly and printing, dress on the brush, which then begin to push themselves into the urethra...'
+		'The pain was stronger, What were you thinking, but you still obediently endure and continue to slowly push her a toothbrush to the delight of the audience.'
+		'After a couple of minutes you, despite the savage pain, even trying to simulate sexual intercourse, fucking herself into the urethra, but you do not have a long time - you will soon stop.'
+		act'Further':gt'Komp','waitclients'	   
+	end
+	act 'Ignore':
+		cls
+		webpopular -= 1
+		gt'Komp','waitclients'
+	end		
+end
+
+if backmfc = 0 and webpopular >= 50 and anus > 25 and clientask = 81:
+	cls
+	gs 'stat'
+	'One of the regular customers asking you to stretch his fingers her ass, so that he could look inside...'
+	act 'Do':
+		cls
+		webpopular += 2
+		minut += 5
+		anus += 1
+		agape = 2
+		if vnesh > 25:
+			tokens += RAND(100,150)
+		else
+			tokens += RAND(50,100)
+		end
+		if webpopular < 15:
+			tokens += RAND(50,100)
+		elseif webpopular >= 15 and webpopular < 35:
+			tokens += RAND(100,150)
+		elseif webpopular >= 35 and webpopular < 75:
+			tokens += RAND(150,200)
+		elseif webpopular >= 75:
+			tokens += RAND(200,300)
+		end
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore82,'+rand(0,9)+'.jpg"></center>'
+		'You dutifully turns his back to the computer and putting his fingers his anus, rasstyagivat start for him the ass...'
+		'Anus begins to ache a little, but you faithfully practice their tokens, rasstopyrivat for continuing generous spectator his ass.'
+		'Standing for a few minutes in this position and feeling, It walks like a cool breeze in your rectum, you finally stop, feeling absolutely unbearable pain in the anus, but it was worth it - He appeared satisfied with the customer, and the tokens you have received for this well.'
+		act'Further':gt'Komp','waitclients'	   
+	end
+	act 'Ignore':
+		cls
+		webpopular -= 1
+		gt'Komp','waitclients'
+	end		
+end
+
+if backmfc = 0 and webpopular >= 50 and anus > 10 and vagina > 10 and sub > 50 and alko >= 6 and clientask = 80:
+	cls
+	gs 'stat'
+	'One patient from regular customers offers a huge pile of tokens for, that you hook yourself stuck in the vagina and punctures septum, poked it out of the anus...'
+	act 'Do':
+		cls
+		webpopular += 5
+		minut += 15
+		agape = 3
+		vgape = 3
+		if vnesh > 25:
+			tokens += RAND(500,1000)
+		else
+			tokens += RAND(250,500)
+		end
+		if webpopular < 15:
+			tokens += RAND(250,500)
+		elseif webpopular >= 15 and webpopular < 35:
+			tokens += RAND(250,750)
+		elseif webpopular >= 35 and webpopular < 75:
+			tokens += RAND(500,750)
+		elseif webpopular >= 75:
+			tokens += RAND(500,100)
+		end
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore83.jpg"></center>'
+		'You scared in anticipation of pain, which promises such extreme, but the thirst for more tokens, so you agree and digging on the balcony, You will soon find the right...'
+		'Standing on all fours, you gently poking the tip of their pussy, feeling, it begins to hurt abut the thin wall between the vagina and rectum.'
+		'Alcohol dulls the pain a little bit of blood, but not so, how would you like to, so you, painfully biting her lip, slowly continue to press...'
+		'Tears stream from my eyes splash, when you finally pierces the thin skin, but that suffering does not end, and you remember, that for, to receive tokens, you also need to remove the hook from the ass.'
+		'Therefore, silently screaming and whining to his hand, you slowly and bending the hook sotorozhno, until finally feel, it rests on the inside ring anus.'
+		'You tuzhites struggling and in a moment you all-do manage to do it - bloody piece of metal comes out of your ass.'
+		'Acute pain is dull and aching replaced, but when you start to pull the thing back, everything changed - it was painful as well, as then, when you stuffed it in yourself.'
+		'A few minutes later you finally pull out of his bruised holes hellish hook and crying, completely forgetting crowd of screaming spectators, You promise yourself never to repeat such...'
+		act'Further':gt'Komp','waitclients'	   
+	end
+	act 'Ignore':
+		cls
+		webpopular -= 1
+		gt'Komp','waitclients'
+	end		
+end
+--- kompMFCtwo ---------------------------------
+
+

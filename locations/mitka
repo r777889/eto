@@ -1,0 +1,71 @@
+# mitka
+gs'stat'
+
+'<center><b><font color = maroon>Mitya kingpin</font></b></center>'
+'<center><img src="images/qwest/alter/npc/mitka.jpg"></center>'
+'Swain barely older than you, You know him from childhood, and being together as children swam in the river.'
+
+if mitkaday = daystart:
+	'Well cho Svetuha, Come at eight, buhnem brew, popizdim for life.'
+elseif mitkaday ! daystart:
+	mitkaday = daystart
+
+	'Hello Svetuha. How zhituha?'
+
+	act 'Normally':
+		cls
+		gs'stat'
+
+		'<center><b><font color = maroon>Mitya kingpin</font></b></center>'
+		'<center><img src="images/qwest/alter/npc/mitka.jpg"></center>'
+		'You said that you are all well and smiled Mitka suggested "Well cho Svetuha, Come at eight, buhnem brew, popizdim for life."'
+
+		if mitkasextimes > 0:
+			'Mitya scratched eggs and added with a grin "Svetuh, Now go poebemsya, and the riser zaebis."'
+
+			act 'Come':
+				cls
+				minut += 15
+				if mitkasex = 0:mitkasex = 1 & guy += 1
+				$boy = 'Mitya'
+				silavag = 0
+				dick = 18
+				pose = 0
+				mitkasextimes += 1
+				gs'stat'
+				mrapic=rand(0,5)
+				'<<mrapic>>'
+				'<center><img src="images/lur/gadukino/mitka<<mrapic>>.gif"></center>'
+				'Mitya took you to his house and led to the veranda, There he laid you on the couch and began unceremoniously undressed.'
+
+				dynamic $sexstart
+				dynamic $sexstart2
+				dynamic $sexcum
+
+				'Mityai, I lay down on his side and lit "Fucking!"'
+
+				act 'Escape':gt'Gaddvor'
+			end
+			
+			 if dom>0:
+			     act'I do not want':
+			     cls
+			     dom-=1
+			     horny+=5
+			     gs'stat'
+                 '<center><b><font color = maroon>Mitya kingpin</font></b></center>'
+                 '<center><img src="images/qwest/alter/npc/mitka.jpg"></center>'
+                 'You shook your head "I do not want." Mitya smiled and put his hand on your hip "Come Svetuha, What do you Parish, the matter is young."'
+                 act 'Escape':gt'Gaddvor'
+                 end
+			 end
+		 exit
+		end
+
+		act 'Escape':gt'Gaddvor'
+	end
+end
+
+act 'Escape':gt'Gaddvor'
+--- mitka ---------------------------------
+

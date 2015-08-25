@@ -1,0 +1,1406 @@
+# shop
+if $ARGS[0] = 'start':
+	$icecreem = {
+		if hour >= 8 and hour <= 20:
+			cls
+			minut += 3
+
+			'Ice cream for offer 50 rubles.'
+
+			act 'Exit Department':gt'shop','start'
+
+			if money >= 50:
+				act 'Buy ice cream':
+					cls
+					money -= 50
+					salo += 1
+					fat += 50
+					manna += 500
+					water = 20
+					energy = 20
+					perkice += 1
+					gs'stat'
+					!icecreem
+
+					'<center><img src="images/pic/icecreem.jpg"></center>'
+					'You bought ice cream and ate it without leaving far.'
+
+					act 'Exit Department':gt'shop','start'
+				end
+			end
+		else
+			'The counter closed with ice cream'
+		end
+	}
+
+	$sofood = {
+		if hour >= 8 and hour <= 20:
+			minut += 3
+			gt'shop','food'
+		else
+			'The department is closed'
+		end
+	}
+
+	$socosm = {
+		if hour >= 8 and hour <= 20:
+			minut += 3
+			gt'shop','cosm'
+		else
+			'The department is closed'
+		end
+	}
+
+	$sohos = {
+		if hour >= 8 and hour <= 20:
+			minut += 3
+			gt'shop','hos'
+		else
+			'The department is closed'
+		end
+	}
+
+	$soclo = {
+		if hour >= 8 and hour <= 20:
+			minut += 3
+			gt'shop','clo'
+		else
+			'The department is closed'
+		end
+	}
+
+	$soteh = {
+		if hour >= 8 and hour <= 20:
+			minut += 3
+			gt'shop','teh'
+		else
+			'The department is closed'
+		end
+	}
+
+	$sobank = {
+		if hour >= 8 and hour <= 20:
+			if karta > 0:
+				act 'Withdraw money':
+					cla
+					minut = minut + 5
+
+					kartaOUT = input ("How much money you want to withdraw?")
+					if kartaOUT <= 0 or kartaOUT > karta:
+						'Incorrect operation.'
+					else
+						karta = karta - kartaOUT
+						money = money + kartaOUT
+
+						'You removed from the account <<kartaOUT>> rubles, Now your account <<karta>> rubles.'
+					end
+
+					act 'Move away':gt'shop','start'
+				end
+			else
+				'You do not have a bank card'
+			end
+		else
+			'ATM disabled'
+		end
+	}
+
+	cla
+	*clr
+	minut = minut + 1
+	clr
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Supermarket</font></b></center>'
+	'<center><img src="images/pic/shop.jpg"></center>'
+	'In the lobby stands <a href="exec: dynamic $sobank ">ATM</a>, from which you can withdraw money unless you have it in the bank.'
+	'The largest takes place in a supermarket <a href="exec: dynamic $sofood ">grocery department</a>, but the store has more departments <a href="exec: dynamic $socosm ">Cosmetics</a>, <a href="exec: dynamic $sohos ">economic</a>, <a href="exec: dynamic $soclo ">clothing</a>, and the Department of <a href="exec: dynamic $soteh ">household appliances</a>. Not far from the entrance stands <a href="exec: dynamic $icecreem ">counter with ice cream</a>'
+
+	if $loc = 'gorodok':
+		if week < 6:
+			if hour >= 8 and hour < 16:
+				'Your sister <a href="exec:SiSonWork = 1 & GT ''sister''">Anya</a> He is sitting at the cash register.'
+			end
+		end
+	end
+
+	if $loc = 'street':
+		evrand = RAND(1,100)
+		if evrand >= 95 and dimaQW = 0:
+			'In the lobby of the store you appreciatively watching what that man.'
+
+			act 'See it':gt'event','dima'
+		elseif evrand >= 95 and dimaQW = 1:
+			'In the lobby of the store you notice Dima and you fear shackles, you can not move.'
+
+			act 'See it':gt'event','scoreslut1'
+		elseif evrand >= 95 and dimaQW = 2:
+			'You met the same Dima who entertained with boyfriend fucking you. Dima cocky grin came to you and said hello.'
+
+			act 'Greet':
+				cla
+				'Come to me, my wife was not at home said Dima.'
+
+				act 'No':gt'shop','start'
+				act 'Come':
+					cla
+					*clr
+
+					gostrand = RAND(1,2)
+					if gostrand = 1:
+						cla
+						sex = sex + 1
+						oral = oral + 1
+						throat = throat + 1
+						cumlip = cumlip + 1
+						swallow = swallow+1
+						horny = 0
+
+						'Dima took you to his home, and there ordered you to kneel. You knelt, and he calling you bitch and began to fuck huesoska you in the mouth.'
+						'<center><img src="images/pics/gostDT2.jpg"></center>'
+						'Dima finally finished your mouth, you obediently swallowed and licked the remnants of sperm from his big cock.'
+
+						act 'Going home':gt'street'
+					elseif gostrand = 2:
+						cla
+						sex = sex + 1
+						anal = anal + 1
+						cumass = cumass + 1
+						spank = spank+1
+						boom = 5
+						horny = 0
+
+						'Dima brought you to his home and straight into the hallway you started kissing and undressing. After he made you he took you to the bathroom. There he sat you in the bathroom and unscrewing the showerhead put a water hose in your ass. Quickly the feeling of fullness and Dima put you on the toilet. After an enema, he made you cancer and put you in the ass his big dick.'
+						'<center><img src="images/pics/gostAnal2.jpg"></center>'
+						'Dima long you fucked in the ass and beat palms, you first it was painful, but gradually you enter into the taste and began to catch the buzz, Finally your ass filled with hot liquid and moan Dima grabbed your buttocks.'
+
+						act 'Going home':gt'street'
+					end
+				end
+			end
+		end
+	end
+
+	if hour >= 8 and hour <= 20:
+		'The crowd of shoppers shop.'
+
+		if TorgPredZ > 0:
+			if $loc = 'street':
+				if StreetShopTPday ! day:
+					act 'Set products':
+						cls
+						mtprand = RAND(40,130)
+						minut += mtprand
+						TorgPredZ -= 1
+						TorgPredZV += 1
+						StreetShopTPday = day
+						gs'stat'
+
+						'<center><img src="images/pic/shop.jpg"></center>'
+						'You arranged the products for a long time and when I finally managed, then we went to the cashier and you stayed there a check.'
+
+						act 'Logout':gt'shop','start'
+					end
+				end
+			elseif $loc = 'Nord':
+				if nordShopTPday ! day:
+					act 'Set products':
+						cls
+						mtprand = RAND(40,130)
+						minut += mtprand
+						TorgPredZ -= 1
+						TorgPredZV += 1
+						nordShopTPday = day
+						gs'stat'
+
+						'<center><img src="images/pic/shop.jpg"></center>'
+						'You arranged the products for a long time and when I finally managed, then we went to the cashier and you stayed there a check.'
+
+						act 'Logout':gt'shop','start'
+					end
+				end
+			elseif $loc = 'down':
+				if downShopTPday ! day:
+					act 'Set products':
+						cls
+						mtprand = RAND(40,130)
+						minut += mtprand
+						TorgPredZ -= 1
+						TorgPredZV += 1
+						downShopTPday = day
+						gs'stat'
+
+						'<center><img src="images/pic/shop.jpg"></center>'
+						'You arranged the products for a long time and when I finally managed, then we went to the cashier and you stayed there a check.'
+
+						act 'Logout':gt'shop','start'
+					end
+				end
+			end
+		end
+	else
+		'The shop is closed.'
+	end
+
+	act 'Exit Store':gt $loc
+end
+
+if $ARGS[0] = 'food':
+	$buyfood = {
+		if hour >= 8 and hour <= 20:
+			if money >= 50:
+				cla
+				*clr
+				minut = minut + 15
+
+				portion = input ("How many servings you want to buy?")
+				if portion <= 0:portion = 1
+				if portion*50 > money:
+					'You do not have enough money.'
+				elseif portion*50 <= money:
+					eda = eda + portion
+					money = money - portion*50
+
+					'<center><img src="images/pic/kassa.jpg"></center>'
+					'You bought food and paid the money in cash.'
+				end
+
+				act 'Move away from the counter':gt'shop','food'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buyfood2 = {
+		if hour >= 8 and hour <= 20:
+			if money >= 250:
+				cla
+				*clr
+				minut = minut + 15
+
+				portion = input ("How many servings you want to buy?")
+				if portion <= 0:portion = 1
+				if portion*250 > money:
+					'You do not have enough money.'
+				elseif portion*250 <= money:
+					edaD = edaD + portion
+					money = money - portion*250
+					'<center><img src="images/pic/kassa.jpg"></center>'
+					'You bought food and paid the money in cash.'
+				end
+
+				act 'Move away from the counter':gt'shop','food'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	cla
+	clr
+	*clr
+	minut = minut + 1
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Grocery department</font></b></center>'
+	'<center><img src="images/pic/shop1.jpg"></center>'
+	'<a href="exec: dynamic $buyfood ">One serving food - 50 RUB</a>'
+	'<a href="exec: dynamic $buyfood2 ">One serving of dietary food - 250 RUB</a>'
+
+	act 'Exit Department':gt'shop','start'
+
+	if money >= 300:
+		act 'Buy tea biscuits (300 r)':
+			cls
+			money -= 300
+			pranik += 10
+
+			'You bought a bag of cookies that will last you ten times.'
+
+			act 'Exit Department':gt'shop','food'
+		end
+	end
+
+	if bag > 0:
+		if money >= 50 and bottle = 0:
+			act 'Buy a bottle of water (50 r)':
+				cls
+				money -= 50
+				bottle = 1
+
+				'You bought a bottle of water and put it in her purse.'
+
+				act 'Exit Department':gt'shop','food'
+			end
+		end
+
+		if money >= 100 and buterbrod = 0:
+			act 'Buy a sandwich (100 r)':
+				cls
+				money -= 100
+				buterbrod = 1
+
+				'You bought a sandwich and put it in her purse.'
+
+				act 'Exit Department':gt'shop','food'
+			end
+		end
+
+		if money >= 500 and wine = 0:
+			act 'Buy a bottle of wine (500 r)':
+				cls
+				money -= 500
+				wine = 1
+
+				'You bought a bottle of wine and put it in her purse.'
+
+				act 'Exit Department':gt'shop','food'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'cosm':
+	$buykosm = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*1000 > money:'You do not have enough money.'
+			if portion*1000 <= money:
+				kosmetica += portion*50
+				money = money - portion*1000
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and bought cosmetics.'
+			end
+
+			act 'Move away from the counter':gt'shop','cosm'
+		else
+			'The department is closed'
+		end
+	}
+
+	$buystanok = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*500 > money:'You do not have enough money.'
+			if portion*500 <= money:
+				stanok += portion*10
+				money = money - portion*500
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and bought razor.'
+			end
+
+			act 'Move away from the counter':gt'shop','cosm'
+		else
+			'The department is closed'
+		end
+	}
+
+	$buykrem = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*500 > money:'You do not have enough money.'
+			if portion*500 <= money:
+				krem += portion*20
+				money = money - portion*500
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and buy sunblock.'
+			end
+
+			act 'Move away from the counter':gt'shop','cosm'
+		else
+			'The department is closed'
+		end
+	}
+
+	$buytampon = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*200 > money:'You do not have enough money.'
+			if portion*200 <= money:
+				tampon += portion*20
+				money = money - portion*200
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and buy tampons.'
+			end
+
+			act 'Move away from the counter':gt'shop','cosm'
+		else
+			'The department is closed'
+		end
+	}
+
+	$buyshampoo = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*500 > money:'You do not have enough money.'
+			if portion*500 <= money:
+				shampoo += portion*30
+				money = money - portion*500
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and bought shampoo.'
+			end
+
+			act 'Move away from the counter':gt'shop','cosm'
+		else
+			'The department is closed'
+		end
+	}
+
+	cla
+	clr
+	*clr
+	minut = minut + 1
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Department of cosmetics</font></b></center>'
+	'<center><img src="images/pic/shop2.jpg"></center>'
+	'<a href="exec: dynamic $buykosm ">Cosmetics - 1000RUB</a>'
+	'<a href="exec: dynamic $buystanok ">Razor - 500 RUB</a>'
+	'<a href="exec: dynamic $buykrem ">Sun cream - 500 RUB</a>'
+	'<a href="exec: dynamic $buytampon ">Tampons - 200 RUB</a>'
+	'<a href="exec: dynamic $buyshampoo ">Shampoo - 500 RUB</a>'
+	'Handbag - 5 th.RUB'
+	'Napkins 100 RUB'
+	'Beautician 1000 RUB'
+	'Comb 150 RUB'
+
+	act 'Exit Department':gt'shop','start'
+
+	if bag > 0:
+		if money >= 100:
+			act 'Buy wipes (100 RUB)':
+				cls
+				money -= 100
+				salfetka += 10
+
+				'You bought wipes and put them in her purse.'
+
+				act 'Exit Department':gt'shop','cosm'
+			end
+		end
+
+		if money >= 1000:
+			act 'Buy a portable makeup (1000 RUB)':
+				cls
+				money -= 1000
+				kosmetitka += 10
+
+				'You bought a portable makeup bag and put it in her purse.'
+
+				act 'Exit Department':gt'shop','cosm'
+			end
+		end
+
+		if money >= 150 and greben = 0:
+			act 'Buy a hairbrush (150 RUB)':
+				cls
+				money -= 150
+				greben = 1
+
+				'You bought a comb and put it in her purse.'
+
+				act 'Exit Department':gt'shop','cosm'
+			end
+		end
+	elseif bag = 0:
+		if money >= 5000:
+			act 'Buy a handbag (5000 RUB)':
+				cls
+				money -= 5000
+				bag = 1
+
+				'You bought a handbag.'
+
+				act 'Exit Department':gt'shop','cosm'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'hos':
+	$buyfairy = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*100 > money:'You do not have enough money.'
+			if portion*100 <= money:
+				fairy += portion*20
+				money = money - portion*100
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and bought dishwashing detergent.'
+			end
+
+			act 'Move away from the counter':gt'shop','hos'
+		else
+			'The department is closed'
+		end
+	}
+
+	$buyporoshok = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*250 > money:'You do not have enough money.'
+			if portion*250 <= money:
+				poroshok += portion*30
+				money = money - portion*250
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and bought washing powder.'
+			end
+
+			act 'Move away from the counter':gt'shop','hos'
+		else
+			'The department is closed'
+		end
+	}
+
+	$buycltarelka = {
+		if hour >= 8 and hour <= 20:
+			cla
+			*clr
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*300 > money:'You do not have enough money.'
+			if portion*300 <= money:
+				cltarelka += portion*5
+				money = money - portion*300
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid in cash and bought a set of 5five plates.'
+			end
+
+			act 'Move away from the counter':gt'shop','hos'
+		else
+			'The department is closed'
+		end
+	}
+
+	cla
+	clr
+	*clr
+	minut = minut + 1
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Household Division</font></b></center>'
+	'<center><img src="images/pic/shop3.jpg"></center>'
+	'<a href="exec: dynamic $buyfairy ">Dishwashing liquid - 100 rubles</a>'
+	'<a href="exec: dynamic $buyporoshok ">Washing powder - 250 rubles</a>'
+	'<a href="exec: dynamic $buycltarelka ">A set of 5five plates - 300 rubles</a>'
+
+	act 'Exit Department':gt'shop','start'
+	
+	 if poSkill>=40:
+	 'On the counter you can see that the fabric is suitable for teaching sewing. Bolt which is enough for one lesson stands 300 rubles.'
+	 if tkan<=0:'Now you do not have tissue'
+	 if tkan>0:'Now you have enough tissue to <<tkan>> lessons'
+	     if money>=300:
+	         act'Buy cloth':
+	         cls
+	         portion = input ("How much do you want to buy?")
+			 if portion <= 0:portion = 1
+			 if portion*300 > money:'You do not have enough money.'
+				 if portion*300 <= money:
+					tkan += portion
+					money = money - portion*300
+					'<center><img src="images/pic/kassa.jpg"></center>'
+					'You paid the cashier and bought cloth.'
+				 end
+			 	
+			 gs'stat'	
+			 act 'Move away from the counter':gt'shop','hos'	
+end
+	     end
+
+	 end
+end
+
+if $ARGS[0] = 'clo':
+	cla
+	*clr
+	minut = minut + 5
+	clr
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>The department of women`s clothing</font></b></center>'
+	'<center><img src="images/pic/shop4.jpg"></center>'
+	'Lingerie - 300 RUB'
+	'All Women`s Clothing 2500 RUB'
+
+	act 'Exit Department':gt'shop','start'
+
+	if money >= 300:
+		act 'Buy underwear 300 RUB':
+			cla
+			*clr
+			'<center><img src="images/ode/string1.jpg" ></center>'
+			'Unpretentious, but comfortable panties and the main - dimensionless. Costs 300 RUB.'
+
+			portion = input ("How much do you want to buy?")
+			if portion <= 0:portion = 1
+			if portion*300 > money:'You do not have enough money.'
+			if portion*300 <= money:
+				clrbelo += portion
+				money = money - portion*300
+				cla
+				*clr
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the cashier and bought underwear.'
+			end
+
+			act 'Move away from the counter':gt'shop','clo'
+		end
+	end
+	
+	if money >= 500 and konki!1:
+		act 'Buy skates 500r.':
+			cla
+			*clr
+			money = money - 500
+			konki = 1
+
+			'<center><img src="images/nigma/gor/lake/katok/konki_shop.jpg"></center>'
+			'You paid the cashier and bought skates.'
+
+			act 'Move away from the counter':gt'shop','clo'
+		end
+	end
+
+	if money >= 2000:
+		act 'Buy a set of underwear "Nedeljko" 2000 RUB':
+			cla
+			*clr
+			money = money - 2000
+			clrbelo += 7
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You paid the cashier and bought underwear.'
+
+			act 'Move away from the counter':gt'shop','clo'
+		end
+	end
+
+	if palto < 2:
+		'The store sells winter coat. 10000 RUB'
+
+		if money >= 10000:
+			act 'Buy a winter coat':
+				cla
+				money -= 10000
+				palto = 2
+				$palto = 'winter coat'
+
+				'You bought a coat.'
+
+				act 'Logout':gt'shop','clo'
+			end
+		end
+	end
+
+	if money >= 1000 and bikini < 1:
+		act 'Buy swimsuit 1000 RUB':
+			cla
+			*clr
+			money = money - 1000
+			bikini = 1
+
+			'<center><img src="images/pic/kassa.jpg"></center>'
+			'You paid in cash and bought a swimsuit.'
+
+			act 'Move away from the counter':gt'shop','clo'
+		end
+	end
+
+	if money >= 2500:
+		if profi[1] = 0:
+			act 'Inspect office clothes number1':
+				cla
+				*clr
+				'<center><img src="images/ode/profi1.jpg"></center>'
+				'Office clothing.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					profi[1] = 1
+					profiH[1] = 60
+					profiB[1] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if profi[2] = 0:
+			act 'Inspect office clothes number2':
+				cla
+				*clr
+				'<center><img src="images/ode/profi2.jpg"></center>'
+				'Office clothing.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					profi[2] = 1
+					profiH[2] = 60
+					profiB[2] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if sarafan[1] = 0:
+			act 'Inspect colorful sundress':
+				cla
+				*clr
+				'<center><img src="images/ode/sarafan1.jpg"></center>'
+				'Simple sundress, its main advantage is its dimensionless.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					sarafan[1] = 1
+					sarafanH[1] = 60
+					gt'shop','clo'
+				end
+			end
+		end
+		if sarafan[2] = 0:
+			act 'Inspect light sundress':
+				cla
+				*clr
+				'<center><img src="images/ode/sarafan2.jpg"></center>'
+				'Simple sundress, its main advantage is its dimensionless.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					sarafan[2] = 1
+					sarafanH[2] = 60
+					gt'shop','clo'
+				end
+			end
+		end
+		if short[1] = 0:
+			act 'Inspect Black shorts with a purple T-shirt':
+				cla
+				*clr
+				'<center><img src="images/ode/short1.jpg"></center>'
+				'Black shorts with a purple T-shirt.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					short[1] = 1
+					shortH[1] = 60
+					shortB[1] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if short[2] = 0:
+			act 'Inspect Black shorts with a striped T-shirt':
+				cla
+				*clr
+				'<center><img src="images/ode/short2.jpg"></center>'
+				'Black shorts with a striped T-shirt.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					short[2] = 1
+					shortH[2] = 60
+					shortB[2] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if short[3] = 0:
+			act 'Inspect Black shorts with a black T-shirt':
+				cla
+				*clr
+				'<center><img src="images/ode/short3.jpg"></center>'
+				'Black shorts with a black T-shirt.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					short[3] = 1
+					shortH[3] = 60
+					shortB[3] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if short[4] = 0:
+			act 'Inspect pink shorts with a pink T-shirt':
+				cla
+				*clr
+				'<center><img src="images/ode/short4.jpg"></center>'
+				'pink shorts with a pink T-shirt.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					short[4] = 1
+					shortH[4] = 60
+					shortB[4] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if short[5] = 0:
+			act 'Inspect white shorts with a white bodice':
+				cla
+				*clr
+				'<center><img src="images/ode/short5.jpg"></center>'
+				'white shorts with a white bodice.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					short[5] = 1
+					shortH[5] = 60
+					shortB[5] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if skirt[1] = 0:
+			act 'Inspect the white skirt with a colorful blouse':
+				cla
+				*clr
+				'<center><img src="images/ode/skirt1.jpg"></center>'
+				'White skirt with a colorful blouse.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					skirt[1] = 1
+					skirtH[1] = 60
+					skirtB[1] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if skirt[2] = 0:
+			act 'Inspect the black skirt with a red jacket':
+				cla
+				*clr
+				'<center><img src="images/ode/skirt2.jpg"></center>'
+				'Black skirt with a red jacket.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					skirt[2] = 1
+					skirtH[2] = 60
+					skirtB[2] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if skirt[3] = 0:
+			act 'Inspect the white skirt with a striped T-shirt':
+				cla
+				*clr
+				'<center><img src="images/ode/skirt3.jpg"></center>'
+				'The white skirt with a striped T-shirt.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					skirt[3] = 1
+					skirtH[3] = 60
+					skirtB[3] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if skirt[4] = 0:
+			act 'Inspect the black skirt under the skin, with red blouse':
+				cla
+				*clr
+				'<center><img src="images/ode/skirt4.jpg"></center>'
+				'Black skirt under the skin, with red blouse.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					skirt[4] = 1
+					skirtH[4] = 60
+					skirtB[4] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if skirt[5] = 0:
+			act 'Inspect the black skirt, with a white blouse':
+				cla
+				*clr
+				'<center><img src="images/ode/skirt5.jpg"></center>'
+				'Black skirt, with a white blouse.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					skirt[5] = 1
+					skirtH[5] = 60
+					skirtB[5] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if pants[1] = 0:
+			act 'Inspect pants, with a blouse. Number1':
+				cla
+				*clr
+				'<center><img src="images/ode/pants1.jpg"></center>'
+				'Pants, with a blouse.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					pants[1] = 1
+					pantsH[1] = 60
+					pantsB[1] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if pants[2] = 0:
+			act 'Inspect pants, with a blouse. Number2':
+				cla
+				*clr
+				'<center><img src="images/ode/pants2.jpg"></center>'
+				'Pants, with a blouse.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					pants[2] = 1
+					pantsH[2] = 60
+					pantsB[2] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if pants[3] = 0:
+			act 'Inspect pants, with a blouse. Number3':
+				cla
+				*clr
+				'<center><img src="images/ode/pants3.jpg"></center>'
+				'Pants, with a blouse.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					pants[3] = 1
+					pantsH[3] = 60
+					pantsB[3] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if pants[4] = 0:
+			act 'Inspect pants, with a blouse. Number4':
+				cla
+				*clr
+				'<center><img src="images/ode/pants4.jpg"></center>'
+				'Pants, with a blouse.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					pants[4] = 1
+					pantsH[4] = 60
+					pantsB[4] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+		if pants[5] = 0:
+			act 'Inspect leggings, a T-shirt':
+				cla
+				*clr
+				'<center><img src="images/ode/pants5.jpg"></center>'
+				'Leggings with jersey.'
+				'Costs 2500 RUB.'
+
+				act 'Escape':gt'shop','clo'
+				act 'Buy':
+					cla
+					money = money - 2500
+					pants[5] = 1
+					pantsH[5] = 60
+					pantsB[5] = bedra
+					gt'shop','clo'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'teh':
+	$buytv = {
+		if hour >= 8 and hour <= 20:
+			if money >= 5000 and TV < 1:
+				cla
+				*clr
+				money = money - 5000
+				TV = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought TV'
+
+				act 'Escape':gt'shop','teh'
+			elseif TV > 0:
+				'Do you already have a TV'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buytv2 = {
+		if hour >= 8 and hour <= 20:
+			if money >= 35000 and TV < 2:
+				cla
+				*clr
+				money = money - 35000
+				TV = 2
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought TV'
+
+				act 'Escape':gt'shop','teh'
+			elseif TV > 1:
+				'Do you already have a TV'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buykomp = {
+		if hour >= 8 and hour <= 20:
+			if money >= 25000 and komp = 0:
+				cla
+				*clr
+				money = money - 25000
+				komp = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought a computer'
+
+				act 'Escape':gt'shop','teh'
+			elseif komp > 0:
+				'Do you already have a computer'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buycd = {
+		if hour >= 8 and hour <= 20:
+			if money >= 500 and komp > 0 and GameCD = 0:
+				cla
+				*clr
+				money = money - 500
+				GameCD = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought the game'
+
+				act 'Escape':gt'shop','teh'
+			elseif komp = 0:
+				'You do not have a computer'
+			elseif GameCD > 0:
+				'You already have this game'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buycd2 = {
+		if hour >= 8 and hour <= 20:
+			if money >= 500 and komp>0 and GameCD2 = 0:
+				cla
+				*clr
+				money = money - 500
+				GameCD2 = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought the game'
+
+				act 'Escape':gt'shop','teh'
+			elseif komp = 0:
+				'You do not have a computer'
+			elseif GameCD2 > 0:
+				'You already have this game'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buycd3 = {
+		if hour >= 8 and hour <= 20:
+			if money >= 500 and komp>0 and GameCD3 = 0:
+				cla
+				*clr
+				money = money - 500
+				GameCD3 = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought the game'
+
+				act 'Escape':gt'shop','teh'
+			elseif komp = 0:
+				'You do not have a computer'
+			elseif GameCD3 > 0:
+				'You already have this game'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buyposudmoi = {
+		if hour >= 8 and hour <= 20:
+			if money >= 50000 and posudomashina = 0:
+				cla
+				*clr
+				money = money - 50000
+				posudomashina = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and buy dishwasher'
+
+				act 'Escape':gt'shop','teh'
+			elseif posudomashina > 0:
+				'You already have a dishwasher'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buystiralka = {
+		if hour >= 8 and hour <= 20:
+			if money >= 50000 and stiralka = 0:
+				cla
+				*clr
+				money = money - 50000
+				stiralka = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought a washing machine'
+
+				act 'Escape':gt'shop','teh'
+			elseif stiralka > 0:
+				'Do you have a washing machine'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buyzenit = {
+		if hour >= 8 and hour <= 20:
+			if money >= 10000 and zenit = 0:
+				cla
+				*clr
+				money = money - 10000
+				zenit = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought a camera'
+
+				act 'Escape':gt'shop','teh'
+			elseif zenit > 0:
+				'Do you already have a camera'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+
+	$buyminifoto = {
+		if hour >= 8 and hour <= 20:
+			if money >= 40000 and minifoto = 0:
+				cla
+				*clr
+				money = money - 40000
+				minifoto = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought a mini camera'
+
+				act 'Escape':gt'shop','teh'
+			elseif minifoto > 0:
+				'You already have a mini camera'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+	
+	$buywebcamera = {
+		if hour >= 8 and hour <= 20:
+			if money >= 10000 and webcamera = 0:
+				cla
+				*clr
+				money = money - 10000
+				webcamera = 1
+
+				'<center><img src="images/pic/kassa.jpg"></center>'
+				'You paid the money to the cashier and bought a web camera'
+
+				act 'Escape':gt'shop','teh'
+			elseif webcamera > 0:
+				'Do you have a webcam'
+			else
+				'You do not have enough money'
+			end
+		else
+			'The department is closed'
+		end
+	}
+	cla
+	*clr
+	minut = minut + 1
+	clr
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Department of home appliances</font></b></center>'
+	'<center><img src="images/pic/shop5.jpg"></center>'
+
+	if TV = 0:'<a href="exec: dynamic $buytv ">Not a big TV with a kinescope can buy 5000 RUB</a>'
+	if TV ! 2:'<a href="exec: dynamic $buytv2 ">Large plasma TV can be bought for 35000 RUB</a>'
+	if komp = 0:'<a href="exec: dynamic $buykomp ">Laptop stands 25000 RUB</a>'
+	!'<a href="exec: dynamic $buycd ">Computer game Disopl 500 RUB</a>'
+	if GameCD2 = 0:'<a href="exec: dynamic $buycd2 ">Computer game Sunset Dead 500 RUB</a>'
+	!'<a href="exec: dynamic $buycd3 ">Computer game Albida 500 RUB</a>'
+	if posudomashina = 0:'<a href="exec: dynamic $buyposudmoi ">The dishwasher can buy 50000 RUB</a>'
+	if stiralka = 0:'<a href="exec: dynamic $buystiralka ">The washing machine can be purchased for 50000 RUB</a>'
+	if zenit = 0:'<a href="exec: dynamic $buyzenit ">The camera can be purchased for 10000 RUB</a>'
+	if minifoto = 0:'<a href="exec: dynamic $buyminifoto ">Mini camera disguised as a cigarette pack can be purchased for 40000 RUB</a>'
+	if vasya_shulgin>=30 and webcamera = 0:'<a href="exec: dynamic $buywebcamera ">Webcams can buy 10000 RUB</a>'
+	
+	act 'Exit Department':gt'shop','start'
+end
+--- shop ---------------------------------
+

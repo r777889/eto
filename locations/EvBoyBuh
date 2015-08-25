@@ -1,0 +1,801 @@
+# EvBoyBuh
+$din_gorodok_boy_bj = {
+	act 'To squat':
+		cls
+		minut += 5
+		horny += 10
+		bj += 1
+		if boynumBlock = 0:guy += 1
+		if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+		sub += 1
+		gs'tboyopr'
+		bmBJ[Tboynum] += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/boybj.jpg"></center>'
+		'You sit down in front of a guy and began to masturbate his penis.'
+
+		act 'Suck':
+			cls
+			minut += 5
+			horny += 10
+
+			if GorSlut < 2:
+				resultrand = RAND(0,100)
+				if resultrand >= 80:
+					GorSlut = 2
+					bmGossip[Tboynum] = 2
+				end
+			end
+
+			gs'stat'
+
+			if rand1<5:'<center><img src="images/qwest/alter/Ev/boybj2.jpg"></center>'
+			if rand1>=5 and rand1<50:'<center><img src="images/nigma/gor/publ0,'+rand(0,5)+'.gif"></center>'
+			if rand1>=50:'<center><img src="images/nigma/gor/publ0,'+rand(0,14)+'.jpg"></center>'
+
+			dynamic $dinrandbj
+
+			act 'Suck on':
+				cls
+				minut += 5
+				horny += 10
+				cumface += 1
+				cumlip += 1
+				cumfrot += 1
+				gs'stat'
+
+				if rand1<5:'<center><img src="images/qwest/alter/Ev/boybj3.jpg"></center>'
+				if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publс0,0.jpg"></center>'
+				if rand1>=30:'<center><img src="images/nigma/gor/publс0,0.gif"></center>'
+
+				dynamic $dinrandswallow
+
+				act 'Escape':gt'gdkin'
+			end
+		end
+		act 'Bend':
+			cls
+			minut += 5
+			horny += 10
+			if boynumBlock = 0:boy += 1
+			bmSEX[Tboynum] += 1
+			$boy = $bname3
+			pose = 1
+
+			if GorSlut = 0:
+				resultrand = RAND(0,100)
+				if resultrand >= 80:
+					GorSlut = 1
+					bmGossip[Tboynum] = 1
+				end
+			end
+
+			gs'stat'
+
+			if rand1<5:'<center><img src="images/qwest/alter/Ev/boysex.jpg"></center>'
+			if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,'+rand(0,2)+'.gif"></center>'
+			if rand1>=30:'<center><img src="images/nigma/gor/publ1,'+rand(0,6)+'.jpg"></center>'
+			'You bent down and framed mooning guy.'
+
+			dynamic $sexstart
+			dynamic $sexstart2
+			dynamic $sexcum
+
+			act 'Escape':gt'gdkin'
+		end
+	end
+}
+
+$d_gorodok_boy_hj = {
+	if dom > 0:
+		act 'Jerk guy':
+			cls
+			minut += 5
+			sub += 1
+			gs'tboyopr'
+			bmHJ[Tboynum] += 1
+			gs'stat'
+
+			evhjrand = RAND(0,1)
+			if evhjrand = 0:
+				if boynumBlock = 0:guy += 1
+				if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+				hj += 1
+
+				if rand1<5:'<center><img src="images/qwest/alter/Ev/hj.jpg"></center>'
+				if rand1>=5:'<center><img src="images/nigma/gor/хс0,'+rand(0,1)+'.gif"></center>'
+				'You got it hard and hot cock out of his pants and took his hand. You started kissing Man, while masturbate his penis. Finally the guy strangled groan and you have seen how the member departs from his sperm.'
+
+				act 'Escape':gt'gdkin'
+			elseif evhjrand = 1:
+				if rand1<5:'<center><img src="images/qwest/alter/Ev/hj.jpg"></center>'
+				if rand1>=5:'<center><img src="images/nigma/gor/х0,'+rand(0,5)+'.gif"></center>'
+				'You got it hard and hot cock out of his pants and took his hand. You started kissing Man, while masturbate his penis. The guy pushes you on the shoulders forcing squat.'
+
+				dynamic $din_gorodok_boy_bj
+			end
+		end
+	end
+}
+
+music_on = 0
+minut += 5
+gs'stat'
+rand1=rand(0,100)
+'<center><img src="images/etogame/dk_night.jpg"></center>'
+'You went out with a guy from the club he led you for your club.'
+
+if GorSlut = 0:
+	'The guy took out a pack of beer poltorashku, chips and a couple of cups. You have found a place in the bush and sat on a fallen tree.'
+	act'Abandon beer':
+		cla
+		*clr
+		'<center><img src="images/etogame/dk_night.jpg"></center>'
+		if alko<3:'"You: - Sorry, I do not want to drink.'
+		if alko>=3:'"You: - No. *hic* I have *hic* enough.'
+		'Guy: - Well, no problem, You can just talk.'
+			act'Chat':
+			cla
+			*clr
+			minut+=10
+			'<center><img src="images/etogame/dk_night.jpg"></center>'
+			'Do you talk to the guy near the House of Culture. <<$bname>> said "You`re a cool girl. Maybe we`ll meet again?"'
+			randvnesh = RAND(10,30)
+
+				deystrand = RAND(0,2)
+				if deystrand = 0 and vnesh >= randvnesh:
+					'<<$bname>> said "You`re a cool girl. Maybe we`ll meet again?"'
+
+					act 'Deny it and go':gt'gdkin'
+					act 'Tell him your phone':
+						cls
+						manna += 10
+						numboyFrend += 1
+						$nameBoyfrend[numboyFrend] = $bname
+						$nameBoyfrendFull[numboyFrend] = $bnamefull
+						dickBoyFrend[numboyFrend] = dick
+						silavagBoyFrend[numboyFrend] = siladick
+						otnBoyFrend[numboyFrend] = 50
+						minut += 30
+						bmFrend[Tboynum] = 1
+						gs'stat'
+
+						'You told the guy my phone and he wrote it down.'
+
+						act 'Escape':gt'gdkin'
+					end
+				elseif deystrand > 0 or vnesh < randvnesh:
+					'<<$bname>> He is coming to get you closer, and starts to kiss you.'
+
+					act 'Escape':gt'gdkin'
+
+					dynamic $din_gorodok_boy_pristal
+				end
+			end
+			act 'Escape':gt'gdkin'
+	end
+	act 'Drink beer':
+		cls
+		alko += 1
+		manna += 30
+		fat += 5
+		energy += 20
+		minut += 10
+		gs'stat'
+
+		'You have fun talking with the guy sipping a beer from glasses and seizing chips. The guy was funny and told funny stories.'
+
+		if alko >= 3:
+			horny += 20
+
+			'<<$bname>> I hug you and kiss. You captured the excitement of a kiss. You feel his hands on my chest.'
+
+			if horny < 75:
+				act 'Whisper "Do not"':
+					cls
+					minut += 5
+					gs'stat'
+
+					if DPtipe = 2:
+						'<center><img src="images/qwest/alter/Ev/grab.jpg"></center>'
+						'The guy was drunk and did not pay attention to you.'
+
+						dynamic $din_gorodok_boy_bj
+
+						act 'To be silent':
+							cls
+							minut += 5
+							horny += 10
+							if boynumBlock = 0:boy += 1
+							gs'tboyopr'
+							bmSEX[Tboynum] += 1
+							$boy = $bname3
+
+							if GorSlut = 0:
+								resultrand = RAND(0,100)
+								if resultrand >= 80:
+									GorSlut = 1
+									bmGossip[Tboynum] = 1
+								end
+							end
+
+							gs'stat'
+
+							if rand1<5:'<center><img src="images/qwest/alter/Ev/boysex.jpg"></center>'
+							if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,'+rand(0,2)+'.gif"></center>'
+							if rand1>=30:'<center><img src="images/nigma/gor/publ1,'+rand(0,6)+'.jpg"></center>'
+							'The guy knocked you to the ground and began to undress.'
+
+							dynamic $sexstart
+							dynamic $sexstart2
+							dynamic $sexcum
+
+							act 'Escape':gt'gdkin'
+						end
+					else
+						horny += 10
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/Ev/tits.jpg"></center>'
+						'Man head slightly weakens, but still lets you.'
+
+						if horny < 75:
+							act 'Escape':gt'gdkin'
+						end
+
+						'You are standing in an embrace with a guy and he gently pulls your chest and begins to lick and suck her nipples.'
+
+						dynamic $din_gorodok_boy_bj
+					end
+
+					dynamic $d_gorodok_boy_hj
+				end
+			end
+
+			act 'To be silent':
+				cls
+				minut += 5
+				horny += 10
+				if boynumBlock = 0:guy += 1
+				if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+				bmSEX[Tboynum] += 1
+				$boy = $bname3
+
+				if GorSlut = 0:
+					resultrand = RAND(0,100)
+					if resultrand >= 80:
+						GorSlut = 1
+						bmGossip[Tboynum] = 1
+					end
+				end
+
+				gs'stat'
+
+				if rand1<5:'<center><img src="images/qwest/alter/Ev/boysex.jpg"></center>'
+				if rand1>=5 and rand1<30:'<center><img src="images/nigma/gor/publ1,'+rand(0,2)+'.gif"></center>'
+				if rand1>=30:'<center><img src="images/nigma/gor/publ1,'+rand(0,6)+'.jpg"></center>'
+				'The guy knocked you to the ground and began to undress.'
+
+				dynamic $sexstart
+				dynamic $sexstart2
+				dynamic $sexcum
+
+				act 'Escape':gt'gdkin'
+			end
+		elseif alko < 3:
+			if DPtipe = 1:
+				randvnesh = RAND(10,30)
+
+				deystrand = RAND(0,1)
+				if deystrand = 0 and vnesh >= randvnesh:
+					'<<$bname>> said "You`re a cool girl. Maybe we`ll meet again?"'
+
+					act 'Deny it and go':gt'gdkin'
+					act 'Tell him your phone':
+						cls
+						manna += 10
+						numboyFrend += 1
+						$nameBoyfrend[numboyFrend] = $bname
+						$nameBoyfrendFull[numboyFrend] = $bnamefull
+						dickBoyFrend[numboyFrend] = dick
+						silavagBoyFrend[numboyFrend] = siladick
+						otnBoyFrend[numboyFrend] = 50
+						minut += 30
+						bmFrend[Tboynum] = 1
+						gs'stat'
+
+						'You told the guy my phone and he wrote it down.'
+
+						act 'Escape':gt'gdkin'
+					end
+				elseif deystrand = 1 or vnesh < randvnesh:
+					'<<$bname>> He is coming to get you closer, and starts to kiss you.'
+
+					if horny <= 25:act 'Escape':gt'gdkin'
+
+					dynamic $din_gorodok_boy_pristal
+				end
+			elseif DPtipe = 2:
+				horny += 5
+				gs'stat'
+
+				'<<$bname>> He is coming to get you closer, and starts to kiss you.'
+
+				if horny <= 25:act 'Escape':gt'gdkin'
+
+				act 'Kiss':
+					cls
+					horny += 5
+					minut += 3
+					bmKISS[Tboynum] += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+					'<<$bname>> passionately kissing your <<$liptalk3>> and you reciprocate the kiss. You feel like your hands Man trying to pull your chest.'
+
+					if horny <= 50:act 'Escape':gt'gdkin'
+
+					act 'Letting him':
+						cls
+						horny += 10
+						minut += 3
+						bmTITS[Tboynum] += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/Ev/tits.jpg"></center>'
+						'<<$bname>> pulls your chest <<tits>> size outside and begins to knead your breasts and kiss them. The guy takes your hand and puts it in the groin, you feel that there is a hard cock.'
+
+						if horny <= 75:act 'Escape':gt'gdkin'
+						if horny <= 90:
+							act 'Resist':
+								cls
+								horny += 10
+								minut += 3
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/Ev/petting.jpg"></center>'
+								'You removed his hand from his pants and the guy stuck his hand in your pants, You felt his fingers caress your wet pussy.'
+
+								if horny <= 90:act 'Remove his hands and walk away':gt'gdkin'
+								if horny > 90:
+									cla
+									horny = 0
+									orgasm += 1
+									gs'stat'
+
+									'Suddenly, you feel like in the abdomen increases the pleasant warmth and you hit an orgasm. You bit her lip that would not have to shout from the sensations.'
+
+									act 'Moan':
+										cls
+										horny += 5
+										minut += 3
+										gs'stat'
+
+										'<center><img src="images/qwest/alter/Ev/cock3.jpg"></center>'
+										'You moan with pleasure and your legs buckled, you sat down in front of a guy. When you see his eyes brightened front of your face member.'
+
+										if sub > 10:
+											act 'Suck':
+												cls
+												minut += 5
+												horny += 10
+												bj += 1
+												if boynumBlock = 0:guy += 1
+												if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+												bmBJ[Tboynum] += 1
+												sub += 1
+												gs'stat'
+
+												if rand1<5:'<center><img src="images/qwest/alter/Ev/boybj2.jpg"></center>'
+												if rand1>=5:'<center><img src="images/nigma/gor/publ0,'+rand(0,8)+'.jpg"></center>'
+												'You yourself without realizing suddenly kissed the head of the penis and understand what you are doing only, when the solid member has filled your mouth and you diligently his aspirated.'
+
+												act 'Further':
+													cls
+													minut += 5
+													horny += 10
+													cumlip += 1
+													cumface += 1
+													cumfrot += 1
+
+													if GorSlut < 2:
+														resultrand = RAND(0,100)
+														if resultrand >= 80:
+															GorSlut = 2
+															bmGossip[Tboynum] = 2
+														end
+													end
+
+													gs'stat'
+
+													'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+													
+													'Suddenly it hits you in the mouth warm jet of sperm, you almost choked but continued to suck. Seed running down your lips on cock and dripping on your clothes, finally I became a member of the fall off in your mouth and the guy took it out, and I put it in his pants.'
+
+													act 'See the Man':
+														cls
+														minut += 1
+														gs'stat'
+
+														if rand1<20:'<center><img src="images/qwest/alter/Ev/cocksuck3.jpg"></center>'
+														if rand1>=20 and rand1<60:'<center><img src="images/nigma/gor/publс0,0.jpg"></center>'
+														if rand1>=60:'<center><img src="images/nigma/gor/publс0,0.gif"></center>'
+														'<<$bname>> still holding your head and you with a mouthful of sperm looked up, his face. Man bliss and pretty looks at you. "Fucking suck!"'
+
+														act 'Get up and go':gt'gdkin'
+													end
+												end
+											end
+										elseif sub >= 10 or dom <= 10:
+											act 'Sit':
+												cls
+												minut += 5
+												if boynumBlock = 0:guy += 1
+												if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+												facial += 1
+												sub += 1
+												cumface += 1
+												cumfrot += 1
+												gs'stat'
+
+												if rand1<30:'<center><img src="images/qwest/alter/Ev/facial.jpg"></center>'
+												if rand1>=30:'<center><img src="images/nigma/gor/publф0,'+rand(0,3)+'.jpg"></center>'
+												'You both were fascinated to sit on the ground and the guy started to masturbate in front of a member of your face. Everything happened very quickly, you do not have time to understand anything, and suddenly your face, Member of the hot liquid jet flies and lands on the nose. You flinch and zazhmurivaete eyes, feeling as new streams of sperm fall on your face.'
+
+												act 'Escape':gt'gdkin'
+											end
+										elseif dom > 10:
+											act 'Jerk guy':
+												cls
+												minut += 5
+												if boynumBlock = 0:guy += 1
+												if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+												bmHJ[Tboynum] += 1
+												hj += 1
+												dom = 0
+												gs'stat'
+
+												if rand1<5:'<center><img src="images/qwest/alter/Ev/hj.jpg"></center>'
+												if rand1>=5:'<center><img src="images/nigma/gor/хс0,'+rand(0,1)+'.gif"></center>'
+												'You had the courage to stand up and took it hard and hot cock in his hand. You started kissing Man, while masturbate his penis. Finally the guy strangled groan and you have seen how the member departs from his sperm.'
+
+												act 'Escape':gt'gdkin'
+											end
+										end
+									end
+								end
+							end
+						end
+
+						act 'Fondle his penis through his pants':
+							cls
+							horny += 5
+							minut += 3
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/Ev/cock.jpg"></center>'
+							'You started stroking his fly guy, feeling the hardness of a member.'
+
+							if horny <= 90:act 'Escape':gt'gdkin'
+
+							act 'Going to the guy in pants':
+								cls
+								horny += 10
+								minut += 3
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/Ev/cock2.jpg"></center>'
+								'You put his hand to a guy in his pants and felt his fingers, and his hard hot cock.'
+
+								if horny <= 90:act 'Escape':gt'gdkin'
+
+								dynamic $d_gorodok_boy_hj
+								dynamic $din_gorodok_boy_bj
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+$din_gorodok_boy_otkaz = {
+	if dom >= GorSlut:
+		act 'Escape':
+			cls
+			dom -= GorSlut
+			minut += 5
+			gs'stat'
+
+			'You refused the guy and went back to the club.'
+
+			act 'Escape':gt'gdkin'
+		end
+	end
+}
+
+$din_gorodok_boy_pristal = {
+	act 'Kiss':
+		cls
+		horny += 5
+		minut += 3
+		gs'tboyopr'
+		bmKISS[Tboynum] += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+		'<<$bname>> passionately kissing your <<$liptalk3>> and you reciprocate the kiss. You feel like your hands Man trying to pull your chest.'
+
+		if horny <= 50:act 'Escape':gt'gdkin'
+
+		act 'Letting him':
+			cls
+			horny += 10
+			minut += 3
+			bmTITS[Tboynum] += 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/Ev/tits.jpg"></center>'
+			'<<$bname>> pulls your chest <<tits>> size outside and begins to knead your breasts and kiss them. The guy takes your hand and puts it in the groin, you feel that there is a hard cock.'
+
+			if horny <= 75:act 'Escape':gt'gdkin'
+			if horny <= 90:
+				act 'Resist':
+					cls
+					horny += 10
+					minut += 3
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/petting.jpg"></center>'
+					'You removed his hand from his pants and the guy stuck his hand in your pants, You felt his fingers caress your wet pussy.'
+
+					if horny <= 90:act 'Remove his hands and walk away':gt'gdkin'
+					if horny > 90:
+						cla
+						horny = 0
+						orgasm += 1
+						gs'stat'
+
+						'Suddenly, you feel like in the abdomen increases the pleasant warmth and you hit an orgasm. You bit her lip that would not have to shout from the sensations.'
+
+						act 'Moan':
+							cls
+							horny += 5
+							minut += 3
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/Ev/cock3.jpg"></center>'
+							'You moan with pleasure and your legs buckled, you sat down in front of a guy. When you see his eyes brightened front of your face member.'
+
+							if sub > 0:
+								act 'Suck':
+									cls
+									minut += 5
+									horny += 10
+									bj += 1
+									if boynumBlock = 0:guy += 1
+									if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+									bmBJ[Tboynum] += 1
+									sub += 1
+									gs'stat'
+
+									if rand1<5:'<center><img src="images/qwest/alter/Ev/boybj2.jpg"></center>'
+									if rand1>=5:'<center><img src="images/nigma/gor/publ0,'+rand(0,8)+'.jpg"></center>'
+									'You yourself without realizing suddenly kissed the head of the penis and understand what you are doing only, when the solid member has filled your mouth and you diligently his aspirated.'
+
+									act 'Further':
+										cls
+										minut += 5
+										horny += 10
+										cumlip += 1
+										cumface += 1
+										cumfrot += 1
+
+										if GorSlut < 2:
+											resultrand = RAND(0,100)
+											if resultrand >= 80:
+												GorSlut = 2
+												bmGossip[Tboynum] = 2
+											end
+										end
+
+										gs'stat'
+
+										'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+										'Suddenly it hits you in the mouth warm jet of sperm, you almost choked but continued to suck. Seed running down your lips on cock and dripping on your clothes, finally I became a member of the fall off in your mouth and the guy took it out, and I put it in his pants.'
+
+										act 'See the Man':
+											cls
+											minut += 1
+											gs'stat'
+
+											if rand1<20:'<center><img src="images/qwest/alter/Ev/cocksuck3.jpg"></center>'
+											if rand1>=20 and rand1<60:'<center><img src="images/nigma/gor/publс0,0.jpg"></center>'
+											if rand1>=60:'<center><img src="images/nigma/gor/publс0,0.gif"></center>'
+											'<<$bname>> still holding your head and you with a mouthful of sperm looked up, his face. Man bliss and pretty looks at you. "Fucking suck!"'
+
+											act 'Get up and go':gt'gdkin'
+										end
+									end
+								end
+							elseif sub = 0 and dom = 0:
+								act 'Sit':
+									cls
+									minut += 5
+									if boynumBlock = 0:guy += 1
+									if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+									facial += 1
+									sub += 1
+									cumface += 1
+									cumfrot += 1
+									gs'stat'
+
+									if rand1<30:'<center><img src="images/qwest/alter/Ev/facial.jpg"></center>'
+									if rand1>=30:'<center><img src="images/nigma/gor/publф0,'+rand(0,3)+'.jpg"></center>'
+									'You both were fascinated to sit on the ground and the guy started to masturbate in front of a member of your face. Everything happened very quickly, you do not have time to understand anything, and suddenly your face, Member of the hot liquid jet flies and lands on the nose. You flinch and zazhmurivaete eyes, feeling as new streams of sperm fall on your face.'
+
+									act 'Escape':gt'gdkin'
+								end
+							end
+
+							dynamic $d_gorodok_boy_hj
+						end
+					end
+				end
+			end
+
+			act 'Fondle his penis through his pants':
+				cls
+				horny += 5
+				minut += 3
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/Ev/cock.jpg"></center>'
+				'You started stroking his fly guy, feeling the hardness of a member.'
+
+				if horny <= 90:act 'Escape':gt'gdkin'
+
+				act 'Going to the guy in pants':
+					cls
+					horny += 10
+					minut += 3
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/cock2.jpg"></center>'
+					'You put his hand to a guy in his pants and felt his fingers, and his hard hot cock.'
+
+					if horny <= 90:act 'Escape':gt'gdkin'
+
+					dynamic $d_gorodok_boy_hj
+					dynamic $din_gorodok_boy_bj
+				end
+			end
+		end
+	end
+}
+
+if GorSlut = 1 or GorSlut = 2:
+	gsboyrand = RAND(0,10)
+	if gsboyrand = 0:
+		if GorSlut = 1:
+			'<<$bname>> said, "I heard Svetsik, you give all." The guy took out a member of his pants.'
+
+			dynamic $din_gorodok_boy_bj
+			dynamic $din_gorodok_boy_otkaz
+		elseif GorSlut = 2:
+			'<<$bname>> said, "I heard Svetsik, that you take in your mouth." The guy took out a member of his pants.'
+
+			dynamic $din_gorodok_boy_bj
+			dynamic $din_gorodok_boy_otkaz
+		end
+	elseif gsboyrand > 0:
+		alko += 1
+		minut += 15
+		gs'stat'
+
+		'<<$bname>> I took a beer and you started to drink with him. When the beer was over a guy came up to you and hug you.'
+
+		dynamic $din_gorodok_boy_otkaz
+		dynamic $din_gorodok_boy_pristal
+
+		exit
+	end
+elseif GorSlut = 3 or GorSlut = 4:
+	'<<$bname>> said, "You Svetsik <<$gnikname>>. I want to have fun." The guy took out a member of his pants.'
+
+	dynamic $din_gorodok_boy_bj
+	dynamic $din_gorodok_boy_otkaz
+elseif GorSlut = 5:
+	'<<$bname>> said, "You Svetsik <<$gnikname>>. I want to have fun." Then the guy pulled out a member of his pants.'
+
+	dynamic $din_gorodok_boy_bj
+	dynamic $din_gorodok_boy_otkaz
+elseif GorSlut = 6:
+	gs'tboyopr'
+
+	'<<$bname>> said, "You Svetsik <<$gnikname>>. I want a blowjob. Here`s 50 rubles" Then the guy pulled out a member of his pants.'
+
+	act 'To squat':
+		cls
+		minut += 5
+		horny += 10
+		bj += 1
+		if boynumBlock = 0:guy += 1
+		if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+		bmHJ[Tboynum] += 1
+		sub += 1
+		money += 50
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/boybj.jpg"></center>'
+		'You sit down in front of a guy and began to masturbate his penis.'
+
+		act 'Suck':
+			cls
+			minut += 5
+			horny += 10
+			bmBJ[Tboynum] += 1
+			gs'stat'
+
+			if rand1<5:'<center><img src="images/qwest/alter/Ev/boybj2.jpg"></center>'
+			if rand1>=5 and rand1<50:'<center><img src="images/nigma/gor/publ0,'+rand(0,5)+'.gif"></center>'
+			if rand1>=50:'<center><img src="images/nigma/gor/publ0,'+rand(0,8)+'.jpg"></center>'
+
+			dynamic $dinrandbj
+
+			act 'Further':
+				cls
+				minut += 5
+				horny += 10
+				cumface += 1
+				cumlip += 1
+				gs'stat'
+
+				'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+
+				dynamic $dinrandswallow
+
+				act 'Escape':gt'gdkin'
+			end
+		end
+	end
+	act 'Escape':gt'gdkin'
+end
+
+if GorSlut >= 1:
+	if dom >= 5:
+		act 'Swear Man':
+			cls
+			sub += 5
+			minut += 3
+			GorSlut -= 1
+			gs'stat'
+
+			'You refused kid "You do oherel? His wife will make such offers. Freak." The boy was confused "Well, the boys say..." You killed him "It is said in Moscow chickens milk, but just being milked, do not speak, you no ears to hang, moron!"'
+
+			act 'Escape':gt'gdkin'
+		end
+	end
+	if GorSlut < 6:
+		if dom > 0:
+			act 'And you`ve got the money that is?':
+				cls
+				sub += 1
+				minut += 3
+				GorSlut = 6
+				money += 300
+				gs'stat'
+
+				'You said the kid "And you`ve got the money that is?" The kid pulled out of his pocket 300 rubles. You took the money and put them yourself.'
+
+				dynamic $din_gorodok_boy_bj
+			end
+		end
+	end
+end
+
+!dynamic $dinrandswallow
+--- EvBoyBuh ---------------------------------
+

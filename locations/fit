@@ -1,0 +1,505 @@
+# fit
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Fitness Center</font></b></center>'
+	'<center><img src="images/pic/fit.jpg"></center>'
+	'Subscribe to 30 Occupation is 3000 rubles'
+	'Be sure to come to class in sportswear.'
+	if abonement > 0:'Subscription is valid for <<abonement>> training'
+
+	act 'Logout':
+		cla
+		minut = minut + 5
+		gt'down'
+	end
+
+	if money >= 3000:
+		act 'Buy Subscription (3 th.RUB)':
+			cla
+			money = money - 3000
+			abonement = abonement + 30
+
+			'You bought a subscription for 30 training'
+
+			act 'Move away from the cashier':gt'fit','start'
+		end
+	end
+
+	if abonement > 0 and fitday ! day:
+		act 'Going into the locker room':
+			cla
+			frost = 0
+			abonement = abonement - 1
+			fitday = day
+			razdtumbler = 1
+			gt'fit','razd'
+		end
+	end
+end
+
+if $ARGS[0] = 'razd':
+	clr
+	minut = minut + 5
+	gs'stat'
+	
+	if nude = 1:
+		msg'<b><font color = red>You need to get dressed.</font></b>'
+		gt 'loker','start'
+	end
+	
+	'<center><b><font color = maroon>Locker room</font></b></center>'
+	'<center><img src="images/pic/razd.jpg"></center>'
+	'Advertisement'
+	'Recruit girls section running, winners of the competition receive cash prizes.'
+	'Caution, visit the sports section is permitted only with tracksuits.'
+
+	if razdrand = 0 and tanznak = 0 and tanday ! day:
+		tanday = day
+
+		'In the locker room you notice <a href="exec:gt''fitgirl''">pretty girl</a>.'
+	elseif tanznak = 2:
+		cls
+		tanznak = 3
+		tanga = 0
+		nude = 1
+		tanya += 5
+
+		'<center><img src="images/img/centr/razd4.jpg"></center>'
+		'"You though the name, manyachka, and that an honest girl raped and did not even had the" she asked breathless.'
+		'"I Light, and I will not rape you yourself did not mind" you are trying to answer his eyes to find her panties.'
+		'"Looking for this?" asked the girl twirling on his finger your panties "I`m Tanya, and yet you have seduced me, my girls did not exist before, and as it turned out very good reason, I live near here with my parents, if you want to come to visit."'
+		'"Well something like the race, panties is true" Say you`re holding out his hand.'
+		'"Not-and do not return, there must at me-then stay on the memory of the first girl." With these words, Tanja slipped your panties in his pocket and left.'
+
+		act 'Further':gt'fit','razd'
+
+		exit
+	end
+
+	if begsec = 0:act 'Join the section running':gt'fit','1'
+	if begsec > 0 and razdtumbler = 1 and sport > 0:act 'Go to section':gt'beg','start'
+	if begsec > 0 and razdtumbler = 1 and sport > 0 and beg >= 20 and week = 6:act '<b>Competitions on the run</b>':gt'beg1','start'
+
+	act 'Take a shower 15 min':
+		cla
+		*clr
+		minut = minut + 15
+		sweat = -3
+		horny = horny + 1
+		hapri = 0
+		mop = 1
+
+		dynamic $showerdin
+
+		'<center><img src="images/pics/dush.jpg"></center>'
+		'You got into the bathroom and turned on the shower. Lathered body and washed off in the shower.'
+
+		act 'Get out of the shower':gt'fit','razd'
+	end
+	act 'Mirror':
+		cla
+		fitMir = 1
+		gt'mirror','start'
+	end
+	act 'Cabinet':
+		cla
+		fitLoker = 1
+		gt'loker','start'
+	end
+
+	if razdtumbler = 1 and sport > 0:
+		act 'Go to the gym':
+			cla
+			gt'fit','raz'
+		end
+		act 'Go to the dance studio':
+			cla
+			gt'danceclass'
+		end
+	elseif razdtumbler = 0 or sport = 0:
+		act 'Exit the locker room':
+			cla
+			gt'fit','start'
+		end
+	end
+end
+
+if $ARGS[0] = 'raz':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	razdtumbler = 0
+	sportzalrand = RAND(0,20)
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Fitness Center</font></b></center>'
+	'<center><img src="images/pic/fit.jpg"></center>'
+	'The fitness center offers a variety of different programs for the physical development of the body.'
+
+	if hour >= 10 and hour < 12 and week=7 and centr=1: 'In the hall you see <a href="exec:GT ''VolleyTrenCentr''">Mikhail Nikolayevich</a> talking to a strange man.'
+	if hour >= 10 and hour < 12 and week=7 and centr=2: 'In the hall you see <a href="exec:GT ''VolleyTrenCentr''">Chinese Guang'
+
+	act 'Aerobics (Eviction fat)':
+		cla
+		*clr
+		minut = minut + 120
+		fat = fat - 10
+		reakt = reakt + RAND(1,3)
+		manna = manna - 5
+		sweat = sweat + 3
+
+		if sportzalrand = 0:gt'zal','0'
+		if sportzalrand = 1:gt'zal','1'
+		if sportzalrand = 2:gt'zal','2'
+		if sportzalrand = 3:gt'zal','3'
+
+		'<center><img src="images/pic/fit1.jpg"></center>'
+		'You are very energetic exercises to music for the eviction of fat.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Trenazherka (the strength)':
+		cla
+		*clr
+		minut = minut + 120
+		stren = stren + RAND(1,3)
+		fat = fat - 1
+		manna = manna - 5
+		sweat = sweat + 3
+
+		if sportzalrand = 0:gt'zal','0'
+		if sportzalrand = 1:gt'zal','1'
+		if sportzalrand = 2:gt'zal','2'
+		if sportzalrand = 3:gt'zal','3'
+
+		'<center><img src="images/pic/fit2.jpg"></center>'
+		'Did you do with the iron for strength development.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Trenazherka (Endurance)':
+		cla
+		*clr
+		minut = minut + 120
+		vital = vital + RAND(1,3)
+		manna = manna - 5
+		fat = fat - 2
+		sweat = sweat + 3
+
+		if sportzalrand = 0:gt'zal','0'
+		if sportzalrand = 1:gt'zal','1'
+		if sportzalrand = 2:gt'zal','2'
+		if sportzalrand = 3:gt'zal','3'
+
+		'<center><img src="images/pic/fit3.jpg"></center>'
+		'You use the machine for the development of endurance.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Tennis working out protection (Skill)':
+		cla
+		*clr
+		minut = minut + 120
+		agil = agil + RAND(1,3)
+		fat = fat - 5
+		manna = manna - 5
+		sweat = sweat + 3
+		TenisDef = TenisDef + 1
+
+		if sportzalrand = 0:gt'zal','0'
+		if sportzalrand = 1:gt'zal','1'
+		if sportzalrand = 2:gt'zal','2'
+		if sportzalrand = 3:gt'zal','3'
+
+		'<center><img src="images/pic/fit4.jpg"></center>'
+		'You play tennis practicing defensive actions.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Tennis working out attacks (speed)':
+		cla
+		*clr
+		minut = minut + 120
+		speed = speed + RAND(1,3)
+		manna = manna - 5
+		fat = fat - 5
+		sweat = sweat + 3
+		TenisAt = TenisAt + 1
+
+		if sportzalrand = 0:gt'zal','0'
+		if sportzalrand = 1:gt'zal','1'
+		if sportzalrand = 2:gt'zal','2'
+		if sportzalrand = 3:gt'zal','3'
+
+		'<center><img src="images/pic/fit4.jpg"></center>'
+		'You play tennis practicing attacking actions.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Section kickboxing':gt'fit','kik'
+end
+
+if $ARGS[0] = 'kik':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+	gs'razrKik'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Section kickboxing</font></b></center>'
+	'<center><img src="images/pic/kik.jpg"></center>'
+	''
+
+	act 'Testing jabs on pear':
+		cla
+		*clr
+		minut = minut + 120
+		speed = speed + RAND(1,3)
+		manna = manna - 5
+		fat = fat - 4
+		sweat = sweat + 3
+		Jab = Jab + RAND(1,3)
+
+		'<center><img src="images/pic/kik1.jpg"></center>'
+		'You practiced on pear jab, long, straight punches to step forward. These strikes are not so powerful as power, but they will.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Testing of power punches on pear':
+		cla
+		*clr
+		minut = minut + 120
+		stren = stren + RAND(1,3)
+		manna = manna - 5
+		fat = fat - 4
+		sweat = sweat + 3
+		Punch = Punch + RAND(1,3)
+
+		'<center><img src="images/pic/kik1.jpg"></center>'
+		'You practiced on pear powerful force capable of hitting an opponent to shake. These powerful punches, but it is hard to get.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Driving range feet':
+		cla
+		*clr
+		minut = minut + 120
+		stren = stren + RAND(1,3)
+		manna = manna - 5
+		fat = fat - 4
+		sweat = sweat + 3
+		Kik = Kik + RAND(1,3)
+
+		'<center><img src="images/pic/kik1.jpg"></center>'
+		'You practiced on pear powerful kicks able to cut down the opponent. These powerful punches, but it is very difficult to get.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Testing of protection':
+		cla
+		*clr
+		minut = minut + 120
+		agil = agil + RAND(1,3)
+		manna = manna - 5
+		fat = fat - 4
+		sweat = sweat + 3
+		KikDef = KikDef + RAND(1,3)
+
+		'<center><img src="images/pic/kik1.jpg"></center>'
+		'You practiced defensive movement.'
+
+		act 'Escape':gt'fit','razd'
+	end
+	act 'Sparring (training fight in the ring)':
+		cla
+		*clr
+		round = 0
+
+		'You need to choose your opponent for sparring'
+
+		act 'Rival':
+			minut = minut + 120
+			manna = manna - 5
+			fat = fat - 4
+			sweat = sweat + 3
+			strenV = RAND(10,20)
+			speedV = RAND(10,20)
+			agilV = RAND(10,20)
+			reactV = RAND(10,20)
+			vitalV = RAND(10,20)
+			intelV = 10
+			willV = 10
+			!Skills
+			JabV = RAND(5,20)
+			PunchV = RAND(5,20)
+			KikV = RAND(5,20)
+			KikDefV = RAND(5,20)
+			!Parameters
+			healthV = vitalV*10 + strenV*5
+			$nameV = 'Sparring partner'
+			formula = 3
+			sparing = 1
+			gt'kikbox','start'
+		end
+	end
+
+	if week >= 5:
+		'You can spend amateur fight.'
+
+		act 'Amateur fight':
+			round = 0
+			minut = minut + 120
+			manna = manna - 5
+			fat = fat - 4
+			sweat = sweat + 3
+
+			razrand = RAND(0,1)
+			if razradKik + razrand = 0:
+				strenV = RAND(10,20)
+				speedV = RAND(10,20)
+				agilV = RAND(10,20)
+				reactV = RAND(10,20)
+				vitalV = RAND(10,20)
+				intelV = 10
+				willV = 10
+				!Skills
+				JabV = RAND(10,30)
+				PunchV = RAND(10,30)
+				KikV = RAND(10,30)
+				KikDefV = RAND(10,30)
+				!Parameters
+				healthV = vitalV*10 + strenV*5
+				$nameV = 'Rival without discharge'
+				formula = 3
+				amature = 1
+			elseif razradKik + razrand = 1:
+				strenV = RAND(15,25)
+				speedV = RAND(15,25)
+				agilV = RAND(15,25)
+				reactV = RAND(15,25)
+				vitalV = RAND(15,25)
+				intelV = 10
+				willV = 10
+				!Skills
+				JabV = RAND(15,35)
+				PunchV = RAND(15,35)
+				KikV = RAND(15,35)
+				KikDefV = RAND(15,35)
+				!Parameters
+				healthV = vitalV*10 + strenV*5
+				$nameV = 'Rival third discharge'
+				formula = 3
+				amature = 1
+			elseif razradKik + razrand = 2:
+				strenV = RAND(20,30)
+				speedV = RAND(20,30)
+				agilV = RAND(20,30)
+				reactV = RAND(20,30)
+				vitalV = RAND(20,30)
+				intelV = 10
+				willV = 10
+				!Skills
+				JabV = RAND(30,50)
+				PunchV = RAND(30,50)
+				KikV = RAND(30,50)
+				KikDefV = RAND(30,50)
+				!Parameters
+				healthV = vitalV*10 + strenV*5
+				$nameV = 'Rival second discharge'
+				formula = 3
+				amature = 1
+			elseif razradKik + razrand = 3:
+				strenV = RAND(30,40)
+				speedV = RAND(30,40)
+				agilV = RAND(30,40)
+				reactV = RAND(30,40)
+				vitalV = RAND(30,40)
+				intelV = 10
+				willV = 10
+				!Skills
+				JabV = RAND(40,60)
+				PunchV = RAND(40,60)
+				KikV = RAND(40,60)
+				KikDefV = RAND(40,60)
+				!Parameters
+				healthV = vitalV*10 + strenV*5
+				$nameV = 'Rival with first rank'
+				formula = 3
+				amature = 1
+			elseif razradKik + razrand = 4:
+				strenV = RAND(40,60)
+				speedV = RAND(40,60)
+				agilV = RAND(40,60)
+				reactV = RAND(40,60)
+				vitalV = RAND(40,60)
+				intelV = 10
+				willV = 10
+				!Skills
+				JabV = RAND(60,80)
+				PunchV = RAND(60,80)
+				KikV = RAND(60,80)
+				KikDefV = RAND(60,80)
+				!Parameters
+				healthV = vitalV*10 + strenV*5
+				$nameV = 'Rival CCM'
+				formula = 3
+				amature = 1
+			elseif razradKik + razrand >= 5:
+				strenV = RAND(60,100)
+				speedV = RAND(60,100)
+				agilV = RAND(60,100)
+				reactV = RAND(60,100)
+				vitalV = RAND(60,100)
+				intelV = 10
+				willV = 10
+				!Skills
+				JabV = RAND(80,110)
+				PunchV = RAND(80,110)
+				KikV = RAND(80,110)
+				KikDefV = RAND(80,110)
+				!Parameters
+				healthV = vitalV*10 + strenV*5
+				$nameV = 'Rival MS'
+				formula = 3
+				amature = 1
+			end
+
+			gt'kikbox','start'
+		end
+	end
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	minut = minut + 5
+	begsec = 1
+
+	'You signed up for the run section'
+
+	act 'Escape':gt'fit','razd'
+end
+--- fit ---------------------------------
+

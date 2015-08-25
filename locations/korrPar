@@ -1,0 +1,238 @@
+# korrPar
+music_on = 0
+
+if hour ! 18 and blockBedrPar = 1:blockBedrPar = 0
+
+if blockBedrPar = 0 and sisboyday + 1 = daystart and hour = 18 and (sisboyQW = 3 or sisboyQW = 5 or sisboyQW = 7 or (sisboyQW = 9 and sisboytrioQW ! 1)):
+	act 'Go to your room':
+		gt'sisterQW','sisboyQW_bedroom'
+	end
+elseif blockBedrPar = 0 and sisboyday + 1 = daystart and hour = 18 and sisboytrioQW = 1:
+	act 'Go to your room':
+		gt'sisterQW','sisboytrioQW_bedroom'
+	end
+elseif blockBedrPar = 0:
+	act 'Go to your room':
+		gt'bedrPar'
+	end
+end
+
+act 'Go into the room of parents':
+	gt'bedrPar2'
+end
+
+act 'Going to the gym':
+	gt'sitrPar'
+end
+
+act 'Going to the bathroom':
+	gt'vanrPar'
+end
+
+act 'Go to the kitchen':
+	gt'kuhrPar'
+end
+
+act '<font color = maroon>The entrance</font>':
+	 if nude = 0:
+	     gt'pod_ezd','etaj_2'
+		 !cls
+	     !'<center><b><font color = maroon>Access</font></b></center>'
+	     !'<center><img src="images/etogame/podezd2.jpg"></center>'
+	     !'A dirty or poorly maintained staircase, the same as any other in your town'
+	     !act 'Apartment neighbor':
+	     !    if father_go=1 and hour>=20 and hour<21 or hour>=21 or hour<=17:
+	     !        cla
+	     !        minuut+=1
+	     !        'You call at the door, but nobody opens'
+	     !        act 'The apartment':gt'korrPar'
+	     !        act '<font color = maroon><b>Go to the street</b></font>': gt'gorodok'
+	     !    end
+         !    if hour>17 and hour<20:gt'sosedMisha'
+         !end
+	     !act 'The apartment':gt'korrPar'
+	     !act '<font color = maroon><b>Go to the street</b></font>': gt'gorodok'
+	else
+		msg'<b><font color = red>You need to get dressed.</font></b>'
+		gt $curloc
+	end
+end
+
+act '<font color = maroon><b>Go to the street</b></font>':
+	if nude = 0:
+		gt'gorodok'
+	else
+		msg'<b><font color = red>You need to get dressed.</font></b>'
+		gt $curloc
+	end
+end
+
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+popolaini = 0
+saunaYouRoom = 0
+boycherdaksex = 0
+frost = 0
+minut = minut + 1
+bonusZ = 0
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Corridor</font></b></center>'
+'<center><img src="images/qwest/alter/korrPar.jpg"></center>'
+'On the wall near the front door hanging <a href="exec:GT ''mirror'',''start''">mirror</a>.'
+if palto > 0:'Hanging on a hook <<$palto>>'
+
+gs'family'
+
+if hour >= 16 and hour <= 20 and indorf = 0:
+	if artomvbrosvid = 1 and artomhakday ! daystart and mothervideotalk = 0 or BrotherNo = 1 and BrotherNoDay ! day:
+		cls
+		BJvideoPublic = 1
+		BrotherNo = 0
+		BrotherNoDay = day
+		manna = 0
+		gs'stat'
+
+		'<center><b><font color = maroon>Mom</font></b></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
+		'Mom backed side arms "I then planted a video with you...I...you never smacked...yes see vain... Do you realize that maybe this video has not only me? What of you will now say...but what about you...of our entire family... Probably need to teach you a lesson. Volodya!"'
+
+		if momslut < 2:
+			act 'Begging to do nothing':
+				cls
+				mothervideotalk = 2
+				minut += 5
+				sub += 5
+				gs'stat'
+
+				'<center><b><font color = maroon>Mom</font></b></center>'
+				'<center><img src="images/qwest/alter/mother.jpg"></center>'
+				'You burst into tears:"Mammy! Forgive! It will never happen again! I made a fool that I never, never..." You weep and kneel. The mother looks at you and shakes his head out.'
+
+				act 'Move away':gt $curloc
+			end
+			act 'To be silent':
+				cls
+				mothervideotalk = 3
+				minut += 5
+				dom += 5
+				spank += 1
+				spanked = 3
+				spankedtime = totminut
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/artom/spank.jpg"></center>'
+				'You stand staring at the floor. And what can I say?'
+				'Mother takes you by the hand and leads into the room: "Take off your pants and bend over!" You shake my head. "Volodya - keep it!" Stepfather grabs you and holds. Mother pulls your underwear takes the belt and starts to smack you. Gritting her teeth, you stand a flogging without a word. Looking up you see how through an open door behind it to watch your brother and sister.'
+
+				act 'Move away':gt $curloc
+			end
+		elseif momslut >= 2:
+			act 'Threaten':
+				cls
+				mothervideotalk = 1
+				minut += 5
+				gs'stat'
+
+				'<center><b><font color = maroon>Mom</font></b></center>'
+				'<center><img src="images/qwest/alter/mother.jpg"></center>'
+				'"Come on -come on - call the father! I`ll tell you what his daughter! And someone went!"'
+				'The mother looks at you and spit on the floor leaves.'
+
+				act 'Move away':gt $curloc
+			end
+		end
+
+		exit
+	end
+
+	if schoolprogul > 2 and SchoolAtestat = 0:
+		cls
+		gs'stat'
+
+		'<center><b><font color = maroon>Mom</font></b></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
+
+		if schoolPredupr = 2:
+			schoolPredupr = 3
+			SchoolBlock = 1
+			ParHomeBlock = 1
+			schoolprogul = 0
+
+			'In the hallway, you are met by the mother, her eyes thunder. "Doprygat? You kicked out of school. All, Live as you like, I am no longer his mother!" Mother gathered your belongings in a bag, You shoved the bag in his hands and threw the scruff of the apartment.'
+
+			act 'Escape':gt'gorodok'
+
+			exit
+		elseif schoolPredupr = 1:
+			schoolPredupr = 2
+			schoolprogul = 0
+			Suspeh -= 40
+
+			'In the hallway, you are met by the mother, her eyes thunder. "They called from school. You again truancy. You would already be excluded from school, I was literally on his knees begging the director not to exclude you and give you one last chance to reform. More because of you I will not be humiliated, and remember. Next time you fly out of school! And if you will take off from school, I`ll personally will kick home, If you do not understand a normal relationship, then piss, one does not keep you here!" Mother angrily left the room.'
+		elseif schoolPredupr = 0:
+			schoolPredupr = 1
+			mother = 0
+			schoolprogul = 0
+			Suspeh -= 20
+
+			'In the hallway, you are met by the mother, her eyes thunder. "They called from school. You continuous absenteeism. For the first time you have forgiven, but next you exactly kicked. What are you doing, balbeska?" Mother angrily left the room.'
+		end
+
+		act 'Move away':gt $curloc
+
+		exit
+	end
+end
+
+if hour >= 15 and hour < 20:
+	if Gcall = 0:
+		numnpcboy = 0
+		:markboyfrendcall
+		numnpcboy += 1
+
+		if otnBoyFrend[numnpcboy] >= 20 and boyinday[numnpcboy] ! day:
+			Gcall = 1
+			jump'markboyfrendcall2'
+		end
+
+		if numboyFrend > numnpcboy:jump'markboyfrendcall'
+	end
+else
+	if Gcall > 0:Gcall = 0
+end
+
+:markboyfrendcall2
+if Gcall > 0:'In the hallway rings <a href="exec:GT ''gtelefon''">phone</a>.'
+if motherWorry = 1 and indorf = 0:
+	gt'mother'
+elseif motherWorry = 1 and indorf > 0:
+	motherWorry = 0
+end
+
+if notathomesleep > 7 and hour >= 16 and  hour < 21 and mother_go = 0:
+	notathomesleep = 0
+	cls
+	if mother < 40:
+		'<center><b><font color = maroon>Mom</font></b></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
+		'In the corridor you come across a mother: - Watch, who was. Permanently?'
+		act '<B>Move away</B>':gt 'korrPar'
+	end
+	if mother >= 40:
+		'<center><b><font color = maroon>Mom</font></b></center>'
+		'<center><img src="images/qwest/alter/mother.jpg"></center>'
+		'In the corridor you come across a mother: - What a surprise! My docha arrived, I missed.'
+		act '<B>Move away</B>':gt 'korrPar'
+	end
+end
+--- korrPar ---------------------------------
+

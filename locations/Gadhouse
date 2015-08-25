@@ -1,0 +1,114 @@
+# Gadhouse
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+$metka = $ARGS[0]
+$loc = $CURLOC
+frost = 0
+
+$grandma = {
+	cls
+	minut += 2
+	gs 'stat'
+	'<center><img src="images/qwest/gadukino/grandma.jpg"></center>'
+	'She had very little old and almost did not go, so most of the time sitting on the bed or somewhere else-a house.'
+
+	act 'Escape':gt 'Gadhouse'
+}
+
+$grandpa = {
+	cls
+	minut += 2
+	gs 'stat'
+	'<center><img src="images/qwest/gadukino/grandpa.jpg"></center>'
+	'My grandfather was very old and barely moves his feet, leaving home only to relieve himself.'
+
+	act 'Escape':gt 'Gadhouse'
+}
+
+'<center><H4>Cottage</H4></center>'
+'<center><img src="images/qwest/gadukino/izba.jpg"></center>'
+'Simple rustic chalet. The small room is <a href="exec:GT ''loker'',''start''">cupboard</a> and <a href="exec:GT ''bedPar''">bed</a> where you can sleep. In a large room is <a href="exec:GT ''tvPar''">TV</a>. Next to the TV is ancient <a href="exec:GT ''mirror'',''start''">trellis</a>'
+if hour >= 6 and hour < 22:
+	'On your bed sits <a href="exec: dynamic $grandma ">grandmother</a>.'
+	'In the room, leaning on a cane, slowly walk your <a href="exec: dynamic $grandpa ">granddad</a>.'
+end
+
+clr
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+act 'Exit the courtyard':
+	if nude = 0:
+		minut += 5 & gt'Gaddvor'
+	else
+		msg'<b><font color = red>You need to get dressed.</font></b>'
+		gt $curloc
+	end
+end
+
+act 'There are':
+	cla
+	*clr
+	frost = 0
+	minut = minut + 30
+	health = health + 10
+	manna = manna + 20
+	wipo += 5
+	salo += 1
+	gs'stat'
+
+	'<center><img src="images/pics/food.jpg"></center>'
+
+	if energy >= 30:
+		fat = fat + 5
+
+		'You can no longer have.'
+	elseif energy >= 20 and energy < 30:
+		fat = fat + 3
+		energy = energy + 10
+
+		'You pushed through the power of a meal.'
+	elseif energy < 20:
+		energy = energy +20
+		!fat = fat + 1
+
+		'You gladly eaten cooked meal.'
+	end
+
+	if water >= 20:
+		'Tea in you no longer climbs.'
+	elseif water < 20:
+		water = water +20
+
+		'You will be happy to drink a cup of tea.'
+	end
+
+	gs'stat'
+
+	act 'Get up from the table':gt $locM, $metkaM
+end
+
+dynamic $d_read_book
+
+if indorf = 1:
+	'In the rest room parents.'
+
+	if week = 7:
+		if hour >= 20:
+			gt'farmhomeride'
+		end
+	end
+end
+
+if monthbabkapay ! month:
+	monthbabkapay = month
+	money += 2000
+	gs'stat'
+
+	'Grandma gives you two thousand.'
+end
+--- Gadhouse ---------------------------------
+

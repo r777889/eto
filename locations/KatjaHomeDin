@@ -1,0 +1,231 @@
+# KatjaHomeDin
+$katja_shower_kiss_home = {
+	cls
+	horny += 10
+	KatjaLust += 10
+	KatjaSlut += 1
+	KatjaHorny += 10
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/katja/showerkiss.jpg"></center>'
+	'Kate gently embrace you with one hand and kissed him on the lips, you feel her soft palm lay your bare crotch and her thin finger feeling for your clitoris began to caress him.'
+
+	if KatjaSlut >= 10:
+		'Kate gently, but persistently puts you on the edge of the tub.'
+	elseif KatjaSlut < 10:
+		'Kate gently caresses your clitoris with your fingers and her lips begin to kiss your neck, wading ever lower.'
+	end
+
+	act 'Sit on the edge of the tub':
+		cls
+		minut += 5
+		horny += 10
+		KatjaHorny -= 10
+		KatjaLust += 1
+		KatjaSlut += 1
+		if npcSex[14] = 0:npcSex[14] = 1 & girl += 1 & KatjaSlut += 5 & KatjaLust += 5
+		lesbian += 1
+		orgasm += 1
+		horny = 0
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/katja/showersex.jpg"></center>'
+		'You sat on the edge of the tub and spread her legs open wet pussy. Kate knelt down in front of you and gently licked your swollen red petals. Her tongue began to caress your pussy briskly do not forget about the clitoris. Soon bliss enveloped your entire body. Did you notice the hand of Katie slipped between her legs and began to move there. Suddenly you covered powerful orgasm from which you almost lose consciousness, your whole body bends in convulsions and hot waves of bliss you cover.'
+
+		act 'Exit out of the shower':gt $curloc
+	end
+	act 'Remove her hands':
+		cls
+		dom += 1
+		minut += 5
+		horny += 10
+		KatjaDom -= 1
+		KatjaHorny -= 10
+		KatjaLust += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+		'You removed her hands and smiled cheerfully Katya. You domylis, Kate looked away, embarrassed and left the bathroom.'
+
+		act 'Exit out of the shower':gt $curloc
+	end
+}
+
+$d_katjaSextalk = {
+	'Reddened Kate looks at you thoughtfully.'
+
+	kattalkrand = RAND(0,3)
+	if kattalkrand = 0:
+		if KatjaKnowBJ > 0:
+			'- Sveta, Tell, you suck dick.'
+		elseif KatjaKnowBJ = 0:
+			'- Sveta, and you took in the mouth guys?'
+		end
+
+		if bj > 0:
+			act 'Tell how you were doing blowjob':
+				cls
+				KatjaLust += 5
+				KatjaHorny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+				'You told Kate how you suck cock and that it felt. Kate blushed and bit her lip.'
+
+				act 'Further':minut += 15 & gt'KatjaHomeTalk'
+			end
+		end
+	elseif kattalkrand = 1:
+		if KatjaKnowSex > 0:
+			'- Sveta, Tell, fuck you.'
+		elseif KatjaKnowSex = 0:
+			'- Sveta, and you have fucked guys?'
+		end
+
+		if sex > 0:
+			act 'Share how you have sex':
+				cls
+				KatjaLust += 5
+				KatjaHorny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+				'Did you tell Kate you were having sex and that it felt. Kate blushed and bit her lip.'
+
+				act 'Further':minut += 15 & gt'KatjaHomeTalk'
+			end
+		end
+	elseif kattalkrand = 2:
+		if KatjaKnowAnal > 0:
+			'- Sveta, Tell, you took in the ass.'
+		elseif KatjaKnowAnal = 0:
+			'- Sveta, and you guys gave in the ass?'
+		end
+
+		if anal > 0:
+			act 'Tell you gave in the ass':
+				cls
+				KatjaLust += 5
+				KatjaHorny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+				'Did you tell Kate you gave in the ass and that it felt. Kate blushed and bit her lip.'
+
+				act 'Further':minut += 15 & gt'KatjaHomeTalk'
+			end
+		end
+	elseif kattalkrand = 3:
+		if KatjaKnowMastr > 0:
+			'- Sveta, Tell, you masturbate.'
+		elseif KatjaKnowMastr = 0:
+			'- Sveta, and you masturbate?'
+		end
+
+		if mastr > 0:
+			act 'Tell how you masturbated':
+				cls
+				KatjaLust += 5
+				KatjaHorny += 10
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+				'Did you tell Kate you masturbated in the bathroom. Kate blushed and bit her lip.'
+
+				if KatjaMastr = 0:
+					act 'Further':minut += 15 & gt'KatjaHomeTalk'
+				elseif KatjaMastr > 0:
+					act 'Further':
+						cls
+						KatjaLust += 5
+						KatjaHorny += 10
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/katja/mastr.jpg"></center>'
+						'Katya told, she also masturbates, right there in the room fondling herself between the legs.'
+
+						act 'Further':minut += 15 & gt'KatjaHomeTalk'
+					end
+				end
+			end
+
+			if SelfFisting > 0:
+				act 'Tell yourself you stuck a fist in the ass':
+					cls
+					KatjaLust += 10
+					KatjaHorny += 20
+					if SelfFistingKnow = 0:SelfFistingKnow = 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+					'Did you tell Kate you masturbated his ass, and even managed to stretch it so, that you can put in the fist. Kate blushed and bit her lip.'
+
+					act 'Further':minut += 15 & gt'KatjaHomeTalk'
+				end
+			end
+		end
+	end
+
+	act 'Refused to talk on such topics':
+		cls
+		dom += 1
+		KatjaDom -= 1
+		gs'stat'
+
+		'You refused to talk with Katya on such topics. Kate was confused and looked down "Sorry, Sveta, I did not want to hurt you."'
+
+		act 'Further':minut += 15 & gt'KatjaHomeTalk'
+	end
+}
+
+$d_katjahornykiss = {
+	'Kate brought his face to your, so, you could feel her hot breath on your skin.'
+
+	act 'Brought his face close to hers':
+		cls
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+		'You, too, brought his face, to face Katie.'
+
+		if KatjaHorny < 50:
+			katjarand = RAND(0,50)
+			if katjarand <= KatjaHorny+dom:
+				dynamic $din_katja_kiss
+			else
+				KatjaHorny += 5
+
+				'Kate giggled and pushed his face away from your.'
+
+				act 'Further':minut += 15 & gt'KatjaHomeTalk'
+
+				if dom > 0:
+					act 'Grab the face Katie':
+						cls
+						dom -= 1
+						KatjaDom -= 5
+						KatjaHorny -= 10
+						KatjaLust += 1
+						gs'stat'
+
+						'You wrapped around the face of Katie with their hands and brought his lips to hers.'
+
+						if dom < KatjaDom:
+							'Katya firmly took your hands and removed them from themselves, allowing you to understand, that it does not intend to kiss.'
+
+							act 'Further':minut += 15 & gt'KatjaHomeTalk'
+						else
+							'Kate stopped looking you in the eye.'
+
+							dynamic $din_katja_kiss
+						end
+					end
+				end
+			end
+		elseif KatjaHorny >= 50:
+			dynamic $din_katja_kiss
+		end
+	end
+}
+--- KatjaHomeDin ---------------------------------
+

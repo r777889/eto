@@ -1,0 +1,231 @@
+# din2
+$din_street_cum = {
+	if cumfrot > 0 or cumface > 0:
+		if hour >= 7 and hour <= 21:
+			manna -= 5
+			if face_write > 0:
+			manna -= 5
+			'Passers puzzled turn around staring at you - one with surprise, and others with contempt. Someone smiles and shows a finger. Some of the pictures on your phone, absolutely not hiding and giggling at you. You clearly noticeable semen and bargain painted face.'
+			else
+			'Passers puzzled turn around staring at you. Some of the pictures on your phone, absolutely not hiding and giggling at you. Obviously you noticeable sperm.'
+			end
+		end
+	elseif cumfrot < 0 and cumface < 0 and face_write > 0:
+	manna -= 5
+	'Surrounding look at you with surprise, grin or a slight contempt. Someone just point the finger and laughs. Someone photographed phone. Hair obviously can not hide "art" on your face.'
+	
+	end
+}
+
+$d_read_book = {
+	act 'Read a book':
+		cls
+		gs'stat'
+		'<center><img src="images/pics/book.jpg"></center>'
+
+		if f_book <= 0 and fantasybook <= 0 and w_book = 0 and womanbook = 0:
+			'You scratch your head looking at the already read the book "Eh, even read nothing, walk or something on the market for a new book?"'
+		end
+
+		if f_book > 0:
+			if fantasybook <= 0:fantasybook = 5 & f_book -= 1
+			'You still <<f_book>> do not read fantasy novel.'
+		end
+
+		if fantasybook > 0:
+			act 'Read the book of fantasy 1 h. Do not read more <<fantasybook*100>> pages':
+				cls
+				fantasybook -= 1
+				if fantasybook = 0:totalbook += 1
+				minut += 60
+
+				if nerdism > 0:
+					lastread = totminut
+					lastreadday = daystart
+					nerdism += 1
+					blizoruk += 1
+				end
+
+				gs'stat'
+				'<center><img src="images/pics/book.jpg"></center>'
+
+				if nerdism > 0:
+					manna += 100
+					if stren > 1:stren -= 1
+					if vital > 5:vital -= 1
+					'Within an hour you will enthusiastically read the book entirely live in what is happening.'
+				else
+					manna += 10
+					'Within an hour you read the book.'
+				end
+
+				act 'Close this book':gt $loc
+			end
+		end
+
+		if w_book > 0:
+			if womanbook <= 0:womanbook = 5 & w_book -= 1
+			'You still <<w_book>> do not read women`s novels.'
+		end
+
+		if womanbook > 0:
+			act 'Read Women`s Novel 1 h. Do not read more <<womanbook*100>> pages':
+				cls
+				womanbook -= 1
+				if womanbook = 0:totalbook += 1
+				minut += 60
+
+				if nerdism > 0:
+					lastread = totminut
+					lastreadday = daystart
+					nerdism += 1
+					blizoruk += 1
+				end
+
+				gs'stat'
+				'<center><img src="images/pics/w_book.gif"></center>'
+
+				if nerdism > 0:
+					manna += 100
+					horny += 10
+					if stren > 1:stren -= 1
+					if vital > 5:vital -= 1
+					'Within an hour you will enthusiastically read the book entirely live in what is happening.'
+				else
+					manna += 10
+					horny += 3
+					'Within an hour you read the book.'
+				end
+
+				act 'Close this book':gt $loc
+			end
+		end
+
+		act 'Close this book':gt $loc
+	end
+}
+
+$d_slut_horny = {
+	you_slut += 1
+	if you_slut < 10:
+	elseif you_slut >= 10 and you_slut < 20:
+		horny += 1
+	elseif you_slut >= 20 and you_slut < 30:
+		horny += 2
+	elseif you_slut >= 30 and you_slut < 40:
+		horny += 3
+	elseif you_slut >= 40 and you_slut < 50:
+		horny += 4
+	elseif you_slut >= 50 and you_slut < 60:
+		horny += 5
+	elseif you_slut >= 60 and you_slut < 70:
+		horny += 6
+	elseif you_slut >= 70 and you_slut < 80:
+		horny += 7
+	elseif you_slut >= 80 and you_slut < 90:
+		horny += 8
+	elseif you_slut >= 90 and you_slut < 100:
+		horny += 9
+	elseif you_slut >= 100:
+		horny += 10
+	end
+}
+
+$snkayf = {
+    snkz = RAND(1,6)
+	    if tanga = 1:tanga = 0
+        if snkz = 1:
+            gt'gdk' & hour += 2
+        end
+        
+        if snkz = 2:
+            gt'gskver' & hour += 2
+        end
+        
+        if snkz = 3:
+            gt'bedrPar' & hour += 2
+        end
+
+        if snkz = 4:
+            gt'gopskver' & hour += 2
+        end
+        
+        if snkz = 5:
+            dynamic $din_vokzalg_toilet & hour += 2
+        end
+        
+        if snkz = 6:
+            nude = 1		
+            gt'Glake' & hour += 2
+        end
+    
+
+}
+
+$narkozakladka = {
+        cls
+        '<center><b>Shooting galleries</b></center>'
+        '<center><img src="images/pic/narkopriton.jpg"></center>'
+        'You decide to ask, and whether their point of Ozersk. To which the man replied, that is not the point, but it can organize your tab and you will be left in place Bookmark money.'
+        'Price rise, taking into account the complexities twice and will link two pieces equals.'
+        'And then he looked menacingly at you and said,, you if you cheat death.'
+        act 'Agree':
+            cls
+            snarkozak = 1
+            '<center><b>Shooting galleries</b></center>'
+            '<center><img src="images/pic/narkopriton.jpg"></center>'
+            'You scared nodded, they agree.'
+            'Guy added, that bookmarks will be on the train/train station from the platform. '
+            act 'Escape':gt'narkopriton'
+        end
+}
+
+$snarkozaka = {
+    cls
+    minut += 20 
+	money -= 2000
+    StrongNarkota += 25
+    SNarkTimes += 1
+	narkozakday=day
+	gs'stat'
+    gs'time'
+    '<center><H4>Peron town</H4></center>'
+    '<center><img src="images/pic/vokzalperG.jpg"></center>'
+	'Vynashli zkladku and without thinking twice shirnulis.'
+	
+	
+    act 'Escape':dynamic $snkayf
+
+}
+
+$snkayf1 = {
+    snkz = RAND(1,6)
+	    if tanga = 1:tanga = 0
+        if snkz = 1:
+            gt'park','start' & hour += 2
+        end
+        
+        if snkz = 2:
+            gt'lug' & hour += 2
+        end
+        
+        if snkz = 3:
+            gt'nord' & hour += 2
+        end
+
+        if snkz = 4:
+            gt'street' & hour += 2
+        end
+        
+        if snkz = 5:
+            gt'dachi' & hour += 2
+        end
+        
+        if snkz = 6:
+            gt'lake','start' & hour += 2
+        end
+
+}
+
+--- din2 ---------------------------------
+

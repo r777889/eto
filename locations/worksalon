@@ -1,0 +1,408 @@
+# worksalon
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+
+	gs'stat'
+
+	'<center><b><font color = maroon>Beauty salon</font></b></center>'
+	'<center><img src="images/img/centr/salon.jpg"></center>'
+	'Inside are hard at work.'
+
+	salonjobrand = RAND(0,10)
+	if salonjobrand = 2 and vnesh > 20 and alla = 0:
+		gt'worksalon','2'
+	elseif salonjobrand = 3 and salonslut = 1:
+		cla
+		'It suits you administrator "Well slut went into the back room, billeting crustaceans"'
+
+		if DOM >= 10:
+			act 'I get out utyrok':salonslut = 0 & gt'worksalon','start'
+			act 'Go with him':gt'worksalon','3'
+		elseif DOM < 10:
+			act 'Go with him':gt'worksalon','3'
+		end
+	end
+
+	act 'Massage':
+		minut += 120
+		if salonjobrand = 0:gt'worksalon','0'
+		if salonjobrand = 1:gt'worksalon','1'
+
+		'You have a massage client.'
+
+		gt'worksalon','start'
+	end
+	act 'Have a bite':
+		minut = minut + 30
+		health = health + 10
+		manna = manna + 5
+		willpower = willpower + 5
+
+		if energy >= 30:
+			fat = fat + 5
+
+			'You can no longer have.'
+		elseif energy >= 20 and energy < 30:
+			fat = fat + 3
+			energy = energy + 10
+
+			'You pushed through the power of a meal.'
+		elseif energy < 20:
+			energy = energy +20
+			fat = fat + 1
+
+			'You will be happy to eat food.'
+		end
+
+		if water >= 20:
+			'Tea in you no longer climbs.'
+		elseif water < 20:
+			water = water +20
+
+			'You will be happy to drink a cup of tea.'
+		end
+
+		gs'stat'
+	end
+
+	if masha > 0:
+		act 'Chatted with Masha':
+			cla
+			minut += 30
+			masha += 1
+
+			'You chatted with Masha.'
+
+			act 'Move away':gt'worksalon','start'
+		end
+
+		if masharab = 1:
+			act 'Masha order a massage':
+				cla
+				*clr
+				DOM += 1
+				minut += 30
+				manna += 10
+				horny += 10
+				willpower += 10
+
+				'<center><img src="images/img/masha/s7.jpg"></center>'
+				'You come to Masha and commanding tone saying that-she walked up to you, entered the booth, you undress and lie down on the table, "Well, what are you waiting let`s work, bitch is not hasty" You are in command. Masha immediately jumps up to you and starts massaging.'
+
+				act 'Order the massage body':
+					cla
+					*clr
+					minut += 30
+					manna += 10
+					horny += 10
+					willpower += 10
+
+					picrand = RAND(8,9)
+					'<center><img src="images/img/masha/s<<picrand>>.jpg"></center>'
+					if picrand = 8:
+						'Mary takes off her clothes and deftly leaping onto the table slide on naginaet you massaging her breasts you.'
+					elseif picrand = 9:
+						'Mary takes off her clothes and leaping nimbly on the table to sit down on you from above you begins to massage her buttocks.'
+					end
+
+					act 'Order licking pussy':
+						cla
+						*clr
+						DOM += 1
+						lesbian += 1
+						orgasm += 1
+						horny = 0
+
+						'<center><img src="images/img/masha/s10.jpg"></center>'
+						'You push the legs, and order her to lick your pussy. Masha immediately runs up to you and crouches with a joyful smile to your pussy, her nimble tongue to quickly bring you to orgasm. When Masha licked the last drop from your pussy, She steps aside his head bowed.'
+
+						act 'Finish':gt'worksalon','start'
+					end
+					act 'Ordered to lick ass':
+						cla
+						*clr
+						DOM += 1
+						lesbian += 1
+						orgasm += 1
+						horny = 0
+
+						'<center><img src="images/img/masha/s11.jpg"></center>'
+						'You get up with cancer on the table, and order her to lick your ass. Masha immediately runs up to you and crouches with a joyful smile to your anus, her nimble tongue that would deprive him of the snaps in when you start to moan with pleasure, she bites your tongue into the anus and begins literally to fuck his tongue trying to plunge it as deeply as possible, after a couple of minutes you end, Masha begins to beg you to allow her to lick your hips, She received permission then quickly licks them with a jet of your juice and finishing moves towards his head bowed.'
+
+						act 'Finish':gt'worksalon','start'
+					end
+					act 'Finish':gt'worksalon','start'
+				end
+				act 'Order licking pussy':
+					cla
+					*clr
+					DOM += 1
+					lesbian += 1
+					orgasm += 1
+					horny = 0
+
+					'<center><img src="images/img/masha/s10.jpg"></center>'
+					'You push the legs, and order her to lick your pussy. Masha immediately runs up to you and crouches with a joyful smile to your pussy, her nimble tongue to quickly bring you to orgasm. When Masha licked the last drop from your pussy, She steps aside his head bowed.'
+
+					act 'Finish':gt'worksalon','start'
+				end
+				act 'Ordered to lick ass':
+					cla
+					*clr
+					DOM += 1
+					lesbian += 1
+					orgasm += 1
+					horny = 0
+
+					'<center><img src="images/img/masha/s11.jpg"></center>'
+					'You get up with cancer on the table, and order her to lick your ass. Masha immediately runs up to you and crouches with a joyful smile to your anus, her nimble tongue that would deprive him of the snaps in when you start to moan with pleasure, she bites your tongue into the anus and begins literally to fuck his tongue trying to plunge it as deeply as possible, after a couple of minutes you end, Masha begins to beg you to allow her to lick your hips, She received permission then quickly licks them with a jet of your juice and finishing moves towards his head bowed.'
+
+					act 'Finish':gt'worksalon','start'
+				end
+
+				act 'Finish':gt'worksalon','start'
+			end
+		elseif masha > 5 and masharab = 0:
+			act 'Ask Masha massages':
+				cla
+				'You come to Masha and ask her "Masha, I`m so tired I can do a little massage, please"'
+				'"Yes of course, whatever you want" she says'
+				'"I, is not realized it was sarcasm?" You ask, you do not understand why Maria talks to you as if you are a client.'
+				'"Forgive me if I do not say so, Please go through the booth, I`ll do what you want" she says, relegating his eyes and bowed his head as a naughty child'
+
+				act 'Well nafig this sick':gt'worksalon','start'
+				act 'Going into the booth':
+					cla
+					*clr
+					masharab = 1
+					minut += 30
+					manna += 10
+					horny += 10
+					willpower += 10
+
+					'<center><img src="images/img/masha/s1.jpg"></center>'
+					'You undress and lie down on the table, Masha begins to make you a massage, her delicate hands glide over your body, you feel like your whole body relaxes, you get very good. A few minutes later Masha begins to speak "Excuse me please, I`m sorry for disturbing, let me help you roll over on your back.", you understand that she wants-Would you turn over on your back, but for some reason she says still bowing his head so that her chin almost touching the breast.'
+
+					act 'Turn':
+						cla
+						*clr
+						manna += 10
+						horny += 10
+						willpower += 10
+
+						'<center><img src="images/img/masha/s2.jpg"></center>'
+						'You silently turned over and closed his eyes, continue to enjoy, after a couple of minutes you feel like you Masha strongly compresses the chest and begins to lick her nipples. You open your eyes, Mary noticed it immediately lets your breasts and fell to the floor on his knees, begins to ask forgiveness for what fascinated and could not resist, slowly backing away. That you begin to realize that she just likes to obey, so she sat and leads, I am seeing you in her mistress, after the conditions of your acquaintance is not surprising.'
+
+						act 'Talk to her':
+							cla
+							*clr
+							'<center><img src="images/img/masha/s5.jpg"></center>'
+							'"Masha, I realized you love to obey, but do not always do it, in humans it looks pretty weird." you started.'
+							'"I`m sorry I will not" Masha said almost crying.'
+							'"I`m not saying that you do not do this simply let`s agree when I want you to be a slave, I`ll start command, and while I`m not a team we are friends. For these games you need a different location, imagine what will happen if we`re caught" You tried to calm her.'
+							'"Can I, I work at night sex-Shope, and the owner handed me a room there in the basement, I live there." happy Masha'
+							'"Well, that`s good, okay until we went to did not have enough" you are finished'
+
+							act 'Escape':gt'worksalon','start'
+						end
+						act 'Order licking pussy':
+							cla
+							*clr
+							DOM += 1
+							lesbian += 1
+							orgasm += 1
+							horny = 0
+
+							'<center><img src="images/img/masha/s6.jpg"></center>'
+							'You shower yourself legs behind your head, and tell her to lick your pussy. Masha immediately runs up to you and crouches with a joyful smile to your pussy, her nimble tongue to quickly bring you to orgasm. When Masha licked the last drop from your pussy, She steps aside his head bowed.'
+
+							act 'Talk to her':
+								cla
+								*clr
+								'<center><img src="images/img/masha/s5.jpg"></center>'
+								'"Masha, I realized you love to obey, but do not always do it, in humans it looks pretty weird." you started.'
+								'"I`m sorry I will not" Masha said almost crying.'
+								'"I`m not saying that you do not do this simply let`s agree when I want you to be a slave, I`ll start command, and while I`m not a team we are friends. For these games you need a different location, imagine what will happen if we`re caught" You tried to calm her.'
+								'"Can I, I work at night sex-Shope, and the owner handed me a room there in the basement, I live there." happy Masha'
+								'"Well, that`s good, okay until we went to did not have enough" you are finished'
+
+								act 'Escape':gt'worksalon','start'
+							end
+						end
+					end
+					act 'Ask why she says':
+						cla
+						'"Why are you talking to me?" you ask.'
+						'Masha little retreats and begins to babble "Excuse me please, I say horrible, tell me how to talk, I immediately corrected"'
+						'"Yes, stop talking like you..." you pick off the floor speech, "Well, of course, she talks like a slave" it dawned on you for when you first met her then forced to fuck with administrators and she dutifully did everything that you told her.'
+
+						act 'Talk to her':
+							cla
+							'<center><img src="images/img/masha/s5.jpg"></center>'
+							'"Masha, I realized you love to obey, but do not always do it, in humans it looks pretty weird." you started.'
+							'"I`m sorry I will not" Masha said almost crying.'
+							'"I`m not saying that you do not do this simply let`s agree when I want you to be a slave, I`ll start command, and while I`m not a team we are friends. For these games you need a different location, imagine what will happen if we`re caught" You tried to calm her.'
+							'"Can I, I work at night sex-Shope, and the owner handed me a room there in the basement, I live there." happy Masha'
+							'"Well, that`s good, okay until we went to did not have enough" you are finished'
+
+							act 'Escape':gt'worksalon','start'
+						end
+						act 'Order licking pussy':
+							cla
+							*clr
+							DOM += 1
+							lesbian += 1
+							orgasm += 1
+							horny = 0
+
+							'<center><img src="images/img/masha/s3.jpg"></center>'
+							'You get up with cancer on the table, and order her to lick your pussy. Masha immediately runs up to you and crouches with a joyful smile to your pussy, her nimble tongue to quickly bring you to orgasm. When Masha licked the last drop from your pussy, She steps aside his head bowed.'
+
+							act 'Talk to her':
+								cla
+								*clr
+								'<center><img src="images/img/masha/s5.jpg"></center>'
+								'"Masha, I realized you love to obey, but do not always do it, in humans it looks pretty weird." you started.'
+								'"I`m sorry I will not" Masha said almost crying.'
+								'"I`m not saying that you do not do this simply let`s agree when I want you to be a slave, I`ll start command, and while I`m not a team we are friends. For these games you need a different location, imagine what will happen if we`re caught" You tried to calm her.'
+								'"Can I, I work at night sex-Shope, and the owner handed me a room there in the basement, I live there." happy Masha'
+								'"Well, that`s good, okay until we went to did not have enough" you are finished'
+
+								act 'Escape':gt'worksalon','start'
+							end
+						end
+						act 'Ordered to lick ass':
+							cla
+							*clr
+							DOM += 1
+							lesbian += 1
+							orgasm += 1
+							horny = 0
+
+							'<center><img src="images/img/masha/s4.jpg"></center>'
+							'You get up with cancer on the table, and order her to lick your ass. Masha immediately runs up to you and crouches with a joyful smile to your anus, her nimble tongue that would deprive him of the snaps in when you start to moan with pleasure, she bites your tongue into the anus and begins literally to fuck his tongue trying to plunge it as deeply as possible, after a couple of minutes you end, Masha begins to beg you to allow her to lick your hips, She received permission then quickly licks them with a jet of your juice and finishing moves towards his head bowed.'
+
+							act 'Talk to her':
+								cla
+								*clr
+								'<center><img src="images/img/masha/s5.jpg"></center>'
+								'"Masha, I realized you love to obey, but do not always do it, in humans it looks pretty weird." you started.'
+								'"I`m sorry I will not" Masha said almost crying.'
+								'"I`m not saying that you do not do this simply let`s agree when I want you to be a slave, I`ll start command, and while I`m not a team we are friends. For these games you need a different location, imagine what will happen if we`re caught" You tried to calm her.'
+								'"Can I, I work at night sex-Shope, and the owner handed me a room there in the basement, I live there." happy Masha'
+								'"Well, that`s good, okay until we went to did not have enough" you are finished'
+
+								act 'Escape':gt'worksalon','start'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	if hour >= 19:
+		cls
+		'<center><b><font color = maroon>Salon</font></b></center>'
+		'<center><img src="images/img/centr/salon.jpg"></center>'
+		'Your shift ended.'
+
+		act 'Going home':gt'down'
+	end
+end
+
+if $ARGS[0] = '0':
+	cla
+	*clr
+
+	salonpicrand = RAND(0,4)
+	picrand = salonpicrand+30
+	'<center><img src="images/img/centr/wmass<<salonpicrand>>.jpg"></center>'
+	'During the massage the guy turns on his back and sticking out from under the towels large standing member. He looks at you in anticipation of your actions'
+
+	act 'Finish the massage':gt'worksalon','start'
+	act 'Take in the mouth':guy += 1 & gt'sex','minet'
+end
+
+if $ARGS[0] = '1':
+	'While you are doing massage, Is the client asks erotic massage breast two girls, at extra charge 1000RUB. every.'
+
+	act 'Takeout':gt'worksalon','start'
+	act 'Go for the second girl':
+		cla
+		*clr
+		money += 1000
+
+		'<center><img src="images/img/centr/wmass5.jpg"></center>'
+		'You gave one of the girls undressed and began to crawl together by a man stroking him with their breasts. You got to the bottom part, so your chest is constantly rubbed against his erection. And you do not notice how his penis positioned between her breasts and not just massaged his chest, and almost jerked off his cock-feeding. Looking up, you see that the man already hard sucking girls breasts, and she contentedly stroking his chest.'
+
+		act 'Stop stroking and calmly finish massage':
+			cla
+			'You stopped to caress his dildo, quietly massaged a little more of his thighs and stomach, We got up and left the room, leaving him alone with the girl'
+
+			act 'Logout':gt'worksalon','start'
+		end
+		act 'Take in the mouth':
+			girl += 1
+			guy += 1
+			lesbian += 1
+			picrand = 14
+			gt'podrsex','var'
+		end
+	end
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	'<center><img src="images/img/centr/ira1.jpg"></center>'
+	'You send client the wash head, you attach it to a separate booth and sits in the chair, you should turn the girl draws you to himself, and as you do not come to their senses begins to fondle your breasts'
+
+	act 'To push and go':gt'worksalon','start'
+	act 'Allow it':
+		cla
+		*clr
+		girl += 1
+		lesbian += 1
+		telalla = 1
+		alla += 1
+		orgasm += 3
+
+		'<center><img src="images/img/centr/ira2.jpg"></center>'
+		'Realizing that you do not mind a girl seats you in the chair, and she goes down on all fours and begins to wield the language so deftly that in ten minutes you end three, but she continues to eagerly lick your pussy trying to drink all the juice out of your womb.'
+		'When she finishes it gives you his card number and the name of Allah, and going away.'
+
+		act 'Let go':gt'worksalon','start'
+		act 'Thank':
+			cla
+			*clr
+			'<center><img src="images/img/centr/ira3.jpg"></center>'
+			'Woman you stop it and sits in the chair, and you`re working diligently on his knees trying to repeat the language for her all that she did to you, and a few minutes later you do it, she flinches and you feel like a warm liquid fills your mouth. Do you want to continue when suddenly hear in his voice behind Administrator, overtake you. She jumps up and runs away, and you stay on the floor naked, lick the remnants of its juice from his lips.'
+			'"Well, as it`s called" asks the administrator'
+			'"The desire of the client is my command" you answer'
+			'"You do ohrenela, girls fucking straight to work, as well come with me into the back room, so do not understand, understand by a pussy."'
+
+			if DOM >= 10:
+				act 'I get out utyrok, with whom I want in order and fuck':gt'worksalon','start'
+				act 'Go with him':salonslut = 1 & gt'worksalon','3'
+			elseif DOM < 10:
+				act 'Go with him':salonslut = 1 & gt'worksalon','3'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '3':
+	minut += 15
+	SUB += 1
+	guy += 1
+	sex += 1
+	cumass += 1
+
+	'<center><img src="images/img/centr/raks.jpg"></center>'
+	'The administrator gets you into the back room and putting cancer on the couch. Fuck your vagina it ends you on your ass and go.'
+
+	act 'Escape':gt'worksalon','start'
+end
+--- worksalon ---------------------------------
+

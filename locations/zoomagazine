@@ -1,0 +1,85 @@
+# zoomagazine
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Pet-shop "Pet"</font></b></center>'
+	'<center><img src="images/zoo/dsc0544.jpg" width = 650 height = 450 ></center>'
+	''
+	'Dog 3000'
+	'Rabbit 2000'
+	'Parrot 3000'
+
+	if money >= 3000 and sobaka = 0:
+		act 'Buy a dog 3000 RUB':
+			cla
+			*clr
+			'<center><img src="images/zoo/dsc0544.jpg" width = 650 height = 450 ></center>'
+
+			act 'Hello, I would like to buy a dog':
+				cla
+				*clr
+				'<center><img src="images/zoo/dsc0544.jpg" width = 650 height = 450 ></center>'
+				'<center><b>Sorry, but we were only male dog.</center></b>'
+
+				act 'Buy a dog':
+					cla
+					*clr
+					minut = minut + 10
+					sobaka = sobaka + 1
+					money = money - 3000
+
+					'<center><img src="images/zoo/dog628.jpg" width = 600 height = 500 ></center>'
+					'<center><b>You bought a dog-Dalmatians.</center></b>'
+					$namesob = input ("I will call the dog...")
+
+					act 'Move away from the counter':gt'zoomagazine','start'
+				end
+				act 'Escape':gt'zoomagazine','start'
+			end
+		end
+	end
+
+	if money >= 2000 and krolik = 0:
+		act 'Buy Rabbit 2000 RUB':
+			cla
+			*clr
+			minut = minut + 10
+			krolik = krolik + 1
+			money = money - 2000
+
+			'<center><img src="images/zoo/x_2b1d398b.jpg"></center>'
+			'<center><b>You bought a rabbit.</center></b>'
+			$namekrol = input ("I call rabbit...")
+
+			act 'Move away from the counter':gt'zoomagazine','start'
+		end
+	end
+
+	if money >= 3000 and popugai = 0:
+		act 'Buy parrot 3000 RUB':
+			cla
+			*clr
+			minut = minut + 10
+			popugai = popugai + 1
+			money = money - 3000
+
+			'<center><img src="images/zoo/131998525345003210.jpg"></center>'
+			'<center><b>You bought a parrot.</center></b>'
+			$namepopu = input ("I will name a parrot...")
+
+			act 'Move away from the counter':gt'zoomagazine','start'
+		end
+	end
+
+	act 'Escape':gt'torgcentr'
+end
+--- zoomagazine ---------------------------------
+

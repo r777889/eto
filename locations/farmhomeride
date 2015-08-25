@@ -1,0 +1,30 @@
+# farmhomeride
+onceridePerDay=daystart
+indorf = 0
+if month = 6 or month = 7 or month = 8:
+'Mom asks you "Well, Sveta, come with us and stay in the village until?"'
+     act'To go home with their parents':
+     cls
+     hour = 20
+	 minut = 0
+	 gs'stat'
+	 minut += 60
+	 gs'stat'
+	 'You got into the Volga River with his family and an hour reached the town.'
+	 act 'Going home':gt'korrPar'
+     end
+     
+     act'MOD Village':gt'Gadhouse'
+else
+hour = 20
+minut = 0
+gs'stat'
+minut += 60
+gs'stat'
+
+'You got into the Volga River with his family and an hour reached the town.'
+
+act 'Going home':gt'korrPar'
+end
+--- farmhomeride ---------------------------------
+

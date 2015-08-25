@@ -1,0 +1,261 @@
+# love
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	if harakBoyA = 0:gt'love','0'
+	if harakBoyA = 1:gt'love','1'
+	if harakBoyA = 2:gt'love','2'
+end
+
+if $ARGS[0] = '0':
+	cla
+	*clr
+	love = 1
+
+	'You started talking about cohabitation. For what <<$boyA>> I told you, that it is in principle, would not mind, but first he wants to introduce you to my parents.'
+	'He warns you, Mom is very demanding and strict, <<$boyA>> speaks, he loves his mother and does not want to upset her. So you have to look chic, only the dress from the boutique, groomed and curled hair, cosmetics in moderation.'
+	'At the next meeting, Once you`re ready to fully <<$boyA>> will take you to your parents.'
+
+	act 'Invite to himself':
+		cla
+		gt'sexm','room'
+	end
+end
+
+if $ARGS[0] = 'mother':
+	cla
+	*clr
+	minut = minut + 60
+
+	'<<$boyA>> You drove to the house of his parents. You got out of the car, We took the elevator up, after the bell on the door you opened, it was evident, that you were waiting for. You entered the apartment, you greeted the elderly, gray little man, dressed in pants and a shirt, as long as you wore slippers in the hallway passed an elderly woman, Thin, fastidiously pursed lips, she invited you to the table.'
+	'You went into the room, <<$boyA>> you pulled chair and you sat down at the table already laid. Instead you sat your boyfriend`s mother. She began to consider you with disgust in his eyes, like sitting in front of her vile insect, not a girl her son. Nous, darling, and what do you do for a living?'
+
+	if (work = 1 or cheatWork = 1) and workKafe = 1:'You answered, that you are a waitress in a cafe.'
+	if student > 0 and diplom = 0:'I study at university.'
+	if diplom = 1:'He graduated from the University Graduate.'
+	if work = 0 and cheatWork = 0 and workKafe ! 1:'I`m unemployed.'
+
+	if modelfoto > 0:
+		bfA = 0
+
+		'In disgust she smiled and said, "What are you not telling us how to shoot for Internet sites?" After these words she laid on the table your nude photos. "Son, Mom cares about you, This girl does not deserve you."'
+		'<<$boyA>> She blushed and said, "Svetlana, I love you so, and you, you, just a cheap whore! Go away."'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if kavslut > 0:
+		bfA = 0
+
+		'In disgust she smiled and said, "Son, yes on this whore all the Armenians in the market know. And discuss only, Light waitress and her tear into all the cracks, she does not deserve!"'
+		'<<$boyA>> She blushed and said, "Svetlana, I love you so, and you, you, just a cheap whore! Go away."'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if frot > 3:
+		bfA = 0
+
+		'In disgust she smiled and said, "Son, this slut all perverts in the subway know and draw lots, Who`s next to her ass settle down. She does not deserve you!"'
+		'<<$boyA>> She blushed and said, "Svetlana, I love you so, and you, you, just a cheap whore! Go away."'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	if gloryhole > 30:
+		bfA = 0
+
+		'In disgust she smiled and said, "Son, Your Svetulya sucking member earns in a sex shop, You want a wife Statement? She does not deserve you!"'
+		'<<$boyA>> She blushed and said, "Svetlana, I love you so, and you, you, just a cheap whore! Go away."'
+
+		act 'Escape':dynamic $brodilr
+
+		exit
+	end
+
+	love = 2
+
+	'To which she tearful eyes looked at his son and said, "Very cute, Well Well son, it`s your choice, who I am, that would interfere in your life, I just gave birth to you, suckled and raised, Now of course you already have the right to forget about my mom and let, only she loves you and wishes you the best. If you need it, please, I do not forbid."'
+	'<<$boyA>> I looked down "Mom, what are you, I love you, Light but also dear to me."'
+	'Mother jumped flashing eyes "Son, You met her recently, you all know about it?"'
+	'<<$boyA>> for a long time to persuade her mother and justifies, Finally she let you out of their predatory claws and you`re going to leave.'
+
+	act 'Escape':dynamic $brodilr
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	love = 1
+
+	'You started talking about cohabitation. For what <<$boyA>> I told you, that it is in principle, would not mind, but first he wants to introduce you to their friends.'
+	'He says that you have to look chic, only the dress from the boutique, groomed and curled hair, cosmetics in moderation, that-I would envy his friends are dead.'
+	'At the next meeting, Once you`re ready to fully <<$boyA>> will take you to your friends.'
+
+	act 'Invite to himself':
+		cla
+		gt'sexm','room'
+	end
+end
+
+if $ARGS[0] = 'frends':
+	cla
+	*clr
+	'<center><img src="images/img/hasb/z0.jpg"></center>'
+
+	if proverka1 = 0 and proverka2 = 0 and proverka3 = 0 and proverka4 = 0 and proverka5 = 0:
+		minut += 180
+
+		'<<$boyA>> I drove you to your friends. The apartment had two guys, <<$boyA>> I introduced you as his bride, You sat down at a table set. You talked a couple of hours of fun, when it was all eaten and drunk almost all <<$boyA>> I invited you to dance, You gladly agreed. <<$boyA>> She was already fairly drunk and had bad at dancing, but good to get you to touch, his hands crushed your buttocks, Soon he launched them under the dress and went to stroke your ass. Her dress rode up and your panties appeared on public display, the guys were sitting on the couch staring at the your buttocks. As a result, one of the guys got up from the couch and walked swaying to you "Classroom at your ass chicks, Let check out" he said, and slapped on the buttocks as you, you already jumped. <<$boyA>> You let go and went to him "You do ohrenel, This is my girl, you can watch, can not touch."'
+	end
+
+	if modelfoto > 0 and proverka1 = 0:
+		'"Yes, calm down, She removed Golo, I do not believe there is an Internet climbed into her fully nude pictures." the guy said.'
+		'"It`s true?" I asked <<$boyA>> I am turning to you.'
+		'"Yes, I was shot nude, and that this is where I do not fuck with three, just show your beautiful body." you said'
+
+		if intel <= 30:
+			guy += 2
+			picrand = 39
+			bfA = 0
+
+			'"Yes, I do not care, what are you showed, just filmed naked means whore" With these words, he threw you on the sofa. You tried to get up to go, but <<$boyA>> I stopped you "Where I have whore, so much time and powdered brains I decided that we can just dump. Well guys let this whore around." he said, and sat down on the sofa unbuttoned his pants "Suck" he shouted and pulled your head to the perineum. Having decided that it is better not to argue with three drunken men you took out his penis from his pants and sent it into his mouth. The others joined in, One sat on the couch next to <<$boyA>> and he pulled out a member, you grasped his hand and began to suck the two alternately, the second at the time you took off the clothes and knelt launched a language you pussy. The guy sitting on the couch and began wildly hiccup <<$boyA>> I shouted at him "Get out, and that still messed it, broke off all the buzz", the guy got up from the couch and immediately closed her mouth rushed to the toilet.'
+
+			act 'Further':xgt'sexdvoe','var'
+		elseif intel > 30:
+			proverka1 = 1
+
+			'You have a few minutes to crucify that you have not committed anything wrong and that his friends just jealous. As a result, you have managed to convince him <<$boyA>> I agree with you.'
+
+			act 'Further':gt'love','frends'
+		end
+
+		exit
+	end
+
+	if kavslut > 0 and proverka2 = 0:
+		cla
+		'"Yes, you wait, this whore all Armenians know, Come in any ask about the waitress Svetku, do you hole it will describe in detail" the guy said'
+		'"It`s true?" I asked <<$boyA>> I am turning to you. Do not think of anything better you blow into mourning.'
+		'"Yes, these freaks I was raped several times"'
+
+		if intel <= 50:
+			guy += 2
+			picrand = 39
+			bfA = 0
+
+			'"Yes, I do not care, someone who just raped several times then you liked it, and you yourself went to them damn" With these words, he threw you on the sofa. You tried to get up to go, but <<$boyA>> I stopped you "Where I have whore, so much time and powdered brains I decided that we can just dump. Well guys let this whore around." he said, and sat down on the sofa unbuttoned his pants "Suck" he shouted and pulled your head to the perineum. Having decided that it is better not to argue with three drunken men you took out his penis from his pants and sent it into his mouth. The others joined in, One sat on the couch next to <<$boyA>> and he pulled out a member, you grasped his hand and began to suck the two alternately, the second at the time you took off the clothes and knelt launched a language you pussy. The guy sitting on the couch and began wildly hiccup <<$boyA>> I shouted at him "Get out, and that still messed it, broke off all the buzz", the guy got up from the couch and immediately closed her mouth rushed to the toilet.'
+
+			act 'Further':gt'sexdvoe','var'
+		elseif intel > 50:
+			proverka2 = 1
+
+			'You have a few minutes to crucify about what you are poor and miserable, and how these Caucasians have brutally raped. As a result, you have managed to convince him <<$boyA>> I hugged you and said that no one else will not allow you to hurt.'
+
+			act 'Further':gt'love','frends'
+		end
+
+		exit
+	end
+
+	if frot > 3 and proverka3 = 0:
+		cla
+		'"Yes, you wait, this whore in the subway all the perverts want to know, himself in the subway you can go down and fuck her in the car right in front of everyone" the guy said'
+		'"It`s true?" I asked <<$boyA>> I am turning to you.'
+		'"What do you mean how could you think such a thing about me, if there is some damn ride in the car so it is something that I" you cried and went to him.'
+
+		if intel <= 40:
+			guy += 2
+			picrand = 39
+			bfA = 0
+
+			'"Mouth shut your whore, I believe your friends, if you say it was you mean it was you" With these words, he threw you on the sofa. You tried to get up to go, but <<$boyA>> I stopped you "Where I have whore, so much time and powdered brains I decided that we can just dump. Well guys let this whore around." he said, and sat down on the sofa unbuttoned his pants "Suck" he shouted and pulled your head to the perineum. Having decided that it is better not to argue with three drunken men you took out his penis from his pants and sent it into his mouth. The others joined in, One sat on the couch next to <<$boyA>> and he pulled out a member, you grasped his hand and began to suck the two alternately, the second at the time you took off the clothes and knelt launched a language you pussy. The guy sitting on the couch and began wildly hiccup <<$boyA>> I shouted at him "Get out, and that still messed it, broke off all the buzz", the guy got up from the couch and immediately closed her mouth rushed to the toilet.'
+
+			act 'Further':gt'sexdvoe','var'
+		elseif intel > 40:
+			proverka3 = 1
+
+			'Deciding that the best defense, attack, you have a few minutes yelling at him. As a result, you have managed to convince him <<$boyA>> It begins to soothe you by saying that he does not blame you, but simply asked.'
+
+			act 'Further':gt'love','frends'
+		end
+
+		exit
+	end
+
+	if gloryhole > 30 and proverka4 = 0:
+		cla
+		'"Yes, you wait, This slut in a sex shop through the hole sucks." the guy said'
+		'"It`s true?" I asked <<$boyA>> I am turning to you.'
+		'"What do you mean how could you think such a thing about me, if there is some sort of a whore in the mouth because it takes something that I" you cried and went to him. "And you`re a freak with what it decided, I have you sucked that you have something to compare?" You have started to attack Man.'
+
+		if intel <= 60:
+			guy += 2
+			picrand = 39
+			bfA = 0
+
+			'"Mouth shut your whore, I believe your friends, if you say it was you mean it was you" With these words, he threw you on the sofa. You tried to get up to go, but <<$boyA>> I stopped you "Where I have whore, so much time and powdered brains I decided that we can just dump. Well guys let this whore around." he said, and sat down on the sofa unbuttoned his pants "Suck" he shouted and pulled your head to the perineum. Having decided that it is better not to argue with three drunken men you took out his penis from his pants and sent it into his mouth. The others joined in, One sat on the couch next to <<$boyA>> and he pulled out a member, you grasped his hand and began to suck the two alternately, the second at the time you took off the clothes and knelt launched a language you pussy. The guy sitting on the couch and began wildly hiccup <<$boyA>> I shouted at him "Get out, and that still messed it, broke off all the buzz", the guy got up from the couch and immediately closed her mouth rushed to the toilet.'
+
+			act 'Further':gt'sexdvoe','var'
+		elseif intel > 60:
+			proverka4 = 1
+
+			'Deciding that the best defense, attack, you have a few minutes yelling at him. As a result, you have managed to convince him <<$boyA>> It begins to soothe you by saying that he does not blame you, but simply asked.'
+
+			act 'Further':gt'love','frends'
+		end
+
+		exit
+
+	end
+
+	if film > 2 and proverka5 = 0:
+		cla
+		'"Yes, you wait, This slut in porn filmed." the guy said'
+		'"It`s true?" I asked <<$boyA>> I am turning to you.'
+		'"Yes, but it was long before you, this is a mistake of youth and a couple of times, I had a very hard time, but I do not do it for a long time" you started trying to squeeze out a tear.'
+
+		if intel <= 70 and izvrat = 0:
+			guy += 2
+			picrand = 39
+			bfA = 0
+
+			'"Mouth shut your whore, starred in porn means whore" With these words, he threw you on the sofa. You tried to get up to go, but <<$boyA>> I stopped you "Where I have whore, so much time and powdered brains I decided that we can just dump. Well guys let this whore around." he said, and sat down on the sofa unbuttoned his pants "Suck" he shouted and pulled your head to the perineum. Having decided that it is better not to argue with three drunken men you took out his penis from his pants and sent it into his mouth. The others joined in, One sat on the couch next to <<$boyA>> and he pulled out a member, you grasped his hand and began to suck the two alternately, the second at the time you took off the clothes and knelt launched a language you pussy. The guy sitting on the couch and began wildly hiccup <<$boyA>> I shouted at him "Get out, and that still messed it, broke off all the buzz", the guy got up from the couch and immediately closed her mouth rushed to the toilet.'
+
+			act 'Further':gt'sexdvoe','var'
+		elseif intel > 70 or izvrat = 1:
+			proverka5 = 1
+
+			'You have a few minutes to crucify that you love him and that everything that came before it, It was a mistake. As a result, you have managed to convince him <<$boyA>> hugs you and whispers in your ear "A couple of tricks you probably remember, then show it."'
+
+			act 'Further':gt'love','frends'
+		end
+
+		exit
+	end
+
+	love = 2
+
+	'"Okay, Svetik go from here, it is time to" said <<$boyA>> and you`re headed for the exit.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	'(No further action.)'
+
+	act 'Invite to himself':
+		cla
+		gt'sexm','room'
+	end
+end
+--- love ---------------------------------
+

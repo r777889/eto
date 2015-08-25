@@ -1,0 +1,13 @@
+# allea
+gs'stat'
+gs'time'
+'<center><img src="images/pic/allea.jpg" ></center>'
+
+act 'Going back':
+    set minut +=15
+    gt'parks'
+end
+'Wander through <a href="exec:GT ''luzhayka'',''start''">park</a> .'
+
+--- allea ---------------------------------
+

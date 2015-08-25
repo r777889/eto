@@ -1,0 +1,215 @@
+# WorkHosp
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+
+	gs'stat'
+
+	'<center><b><font color = maroon>Clinic</font></b></center>'
+	'<center><img src="images/img/spaln/hospital.jpg"></center>'
+	'In the clinic are hard at work, Patients sit in queues, doctors are receiving, nurses rush from office to office.'
+
+	jobhosprand = RAND(0,9)
+	act 'To work in a procedural':
+		cla
+		minut += 60
+		if jobhosprand = 0:gt'WorkHosp','2'
+
+		'You worked in the procedural.'
+
+		act 'Move away':gt'WorkHosp','start'
+	end
+	act 'Helps doctors at the reception':
+		cla
+		minut += 60
+		if jobhosprand = 0:gt'WorkHosp','3'
+
+		'You have helped the doctor at the reception.'
+
+		act 'Move away':gt'WorkHosp','start'
+	end
+	act 'Relax in nursing':
+		cla
+		minut += 30
+
+		'You relax.'
+
+		act 'Masturbate 15 min':
+			minut += 15
+
+			mastrrand = RAND(0,2)
+			if mastrrand = 0:
+				gt'WorkHosp','1'
+			else
+				cla
+				*clr
+				mastr += 1
+				horny = 0
+				orgasm += 1
+
+				picrand = 11
+				'<center><img src="images/img/mastr/mastr<<picrand>>.jpg"></center>'
+				'You matrubiruete.'
+				'Gradually a pleasant warmth and pulsations grow in the lower abdomen, then the feeling descend upon you and cover your whole body warm wave of orgasm'
+			end
+
+			act 'Logout':gt'WorkHosp','start'
+		end
+
+		act 'Move away':gt'WorkHosp','start'
+	end
+	act 'There is a cafeteria':
+		minut = minut + 30
+		health = health + 10
+		manna = manna + 5
+		willpower = willpower + 5
+
+		if energy >= 30:
+			fat = fat + 5
+
+			'You can no longer have.'
+		elseif energy >= 20 and energy < 30:
+			fat = fat + 3
+			energy = energy + 10
+
+			'You pushed through the power of a meal.'
+		elseif energy < 20:
+			energy = energy +20
+			fat = fat + 1
+
+			'You will be happy to eat food.'
+		end
+
+		if water >= 20:
+			'Tea in you no longer climbs.'
+		elseif water < 20:
+			water = water +20
+
+			'You will be happy to drink a cup of tea.'
+		end
+	end
+	act 'Chatting with Katya':
+		cla
+		minut += 30
+		kat += 1
+
+		if kat > 60 and military = 0:gt'WorkHosp','milit'
+
+		'You chatted with Kate.'
+
+		if kat > 50:
+			act 'Suggest to retire':gt'WorkHosp','0'
+		end
+
+		act 'Move away':gt'WorkHosp','start'
+	end
+
+	if hour >= 16:
+		cls
+		'<center><b><font color = maroon>Clinic</font></b></center>'
+		'<center><img src="images/img/spaln/hospital.jpg"></center>'
+		'Your shift ended.'
+
+		act 'Going home':gt'street'
+	end
+end
+
+if $ARGS[0] = 'milit':
+	cla
+	military = 1
+
+	'"Listen, I then offered to earn weekend, but I have plans. In general, the case is close to the city often hold war games, Well, according to the rules that need to be attended by doctors there. Do not be afraid you will be there with you doctor, so you have to do the maximum that it patches stick. In short, if you will decide on Saturday the bus at the clinic, He waits with 6 to 9 hours. Yes, I almost forgot to pay for two days 5 thousands."'
+
+	act 'Move away':gt'WorkHosp','start'
+end
+
+if $ARGS[0] = '0':
+	cla
+	*clr
+
+	katprorand = RAND(0,2)
+	if katprorand = 0:
+		girl += 1
+		lesbian += 1
+		picrand = 11
+		xgt'lezbsex','var'
+	elseif katprorand = 1:
+		'<center><img src="images/img/spaln/hospsex7.jpg"></center>'
+		'Only you and Kate began to fondle each other as to the treatment the patient is entered. You recoiled from it trying to pretend that nothing happened, Kate, on the contrary did not hesitate and was lying on the couch with her legs spread wide, proudly showing off her wet pussy on your language, and invitingly I looked at the guy, look inviting him to join.'
+
+		act 'Logout':gt'WorkHosp','start'
+		act 'Have fun':
+			girl += 1
+			guy += 1
+			lesbian += 1
+			picrand = 12
+			gt'podrsex','var'
+		end
+	elseif katprorand = 2:
+		'<center><img src="images/img/spaln/hospsex8.jpg"></center>'
+		'When your game has been in full swing in the procedural included two doctors, But you were already so excited that not paying any attention to them continued, and when men began to caress you, You only pushed the wider legs supple, inviting them into your vagina.'
+
+		act 'Have a good time':
+			gang += 1
+			picrand = 11
+			xgt'sexdvanadva','var'
+		end
+	end
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+
+	mastrrand = RAND(0,1)
+	if mastrrand = 0:
+		'<center><img src="images/img/spaln/hospsex9.jpg"></center>'
+		'While you abandon masturbate, trying to bring herself to orgasm, the doctor enters the room, you are so passionate about a notice that it is only when his arm begins to attract your head to the standing member.'
+
+		if horny < 50:act 'Break and run':gt'WorkHosp','start'
+
+		act 'Have fun':
+			guy += 1
+			picrand = 12
+			gt'sex','minet'
+		end
+	elseif mastrrand = 1:
+		picrand = RAND(12,13)
+
+		'<center><img src="images/img/spaln/hospsex10.jpg"></center>'
+		'While you abandon masturbate, trying to bring herself to orgasm, the room included two doctors, you are so passionate that they only notice when they stand in front of you with the members shaved and masturbate.'
+
+		if horny < 50:act 'Escape':gt'WorkHosp','start'
+
+		act 'Have fun':guy += 2 & xgt'sexdvoe','var'
+	end
+end
+
+if $ARGS[0] = '2':
+	cla
+	*clr
+	picrand = RAND(13,15)
+
+	'<center><img src="images/img/spaln/hospsex11.jpg"></center>'
+	'To you and the patient comes to the threshold of taking his pants showing his flaccid penis and asks you to help him because you see he is not worth. Mind you understand, it`s all just a silly gimmick that would fuck you, but still you feel sorry for him. What if he really is, and you will be able to pick it up, What if he just unlucky with girls and if not lucky today,, He jumps out of the window.'
+
+	act 'Oust him':gt'WorkHosp','start'
+	act 'Pick up':guy += 1 & gt'sex','minet'
+end
+
+if $ARGS[0] = '3':
+	cla
+	*clr
+	'<center><img src="images/img/spaln/hospsex12.jpg"></center>'
+	'It comes to you pretty patient, while the doctor is trying to explore it, she kept touching his pants near term, doctor glances at you with a question in his eyes.'
+
+	act 'Make her a comment':gt'WorkHosp','start'
+	act 'Have fun':
+		guy += 1
+		girl += 1
+		lesbian += 1
+		picrand = 13
+		gt'podrsex','var'
+	end
+end
+--- WorkHosp ---------------------------------
+

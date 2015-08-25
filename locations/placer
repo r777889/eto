@@ -1,0 +1,45 @@
+# placer
+!$ev_name = 'Fedor'
+!$ev_name_a = 'Fedor'
+!$ev_name_om = 'Fedor'
+!dick = 17
+!silavag = 0
+!gnpcSex[numnpc] - sex
+!grupNPC[numnpc] - relationship
+
+!the NPC is theoretically able to meet
+mass_ver_zn = 0
+!or not want to meet NPC
+ver_zn = 0
+!the number of men
+kol_man = 0
+!text greetings
+$text_znak = ''
+!the possibility of knowledge turnip years
+know_status = 0
+!identified a reputation or not
+know_gor_slut = 0
+!reset text
+$kol_man_text_no = ''
+
+plact = 0
+gs'stat'
+$textEvent = ''
+
+if place = 0:
+	!street
+	if litltown = 1:$numplace = 'gorodok'
+elseif place = 1:
+	!square
+	$numplace = 'gskver'
+elseif place = 2:
+	!movie
+elseif place = 3:
+	!home to the guy. The pretext Vidic
+elseif place = 4:
+	!disco in the town
+end
+
+gt'placer_<<$numplace>>'
+--- placer ---------------------------------
+

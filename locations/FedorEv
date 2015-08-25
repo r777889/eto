@@ -1,0 +1,93 @@
+# FedorEv
+numnpc = 5
+gs'stat'
+
+'<center><b><font color = maroon><<$npcName[numnpc]>> <<$npcSurName[numnpc]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/<<numnpc>>.jpg"></center>'
+
+if GorSlut = 0:
+	if kotovLoveQW > 0 and week < 5 and kotovVSkozlov = 0:
+		kotovVSkozlov = 1
+
+		'To you I came up with Fyodor Kotov Vitek "Hey, patsanchik, you do not beguiled? Sveta my heifer!" Theodore turned to Vitka "It seems you are beguiled. Light me now meets, so go where he was going." Vitek courage put his hand to his ear "Where you`ve just sent, and?" Fedor said quietly "You heard me perfectly." In the eyes of Victor prolyhnula rage and you notice how white-knuckled on the fingers of his clenched fists "You Th so swift? To my heifer basement, I derzish, I did ask for it, and I." Fedor came close to Vitka and also clenched his fists. "Get off Sveta, Kotov."'
+
+		act 'Vitek, I`ll throw':
+			cls
+			minut += 5
+			kotovLoveQW = -1
+			gs'stat'
+
+			'You said, What strikes Kotova. Vitek noticeably angry, forced a "You went on dick, bitch!" And left.'
+
+			act 'Further':gt $curloc
+		end
+		act 'See what will happen':
+			cls
+			minut += 5
+			gs'stat'
+
+			'Vitek suddenly slammed his fist Fedor, from which it bounced back and fell on the asphalt. Vitek quickly jumped to lying Theodore and grabbed his breast with his left hand, immediately powerfully punched his right hand on the head of Fedor. Fyodor cringed covering her face and tried to kick Kotova. Witek jumped with all his strength and gave a kick to the ribs lying on the ground Fedor. Theodore groaned and clutched his ribs tried to stand on his feet, but then he got another powerful kick in the head from Vic, and he fell on his back. Have you noticed, that came out of the corner of Auburn and Shulga, groomsman Kotova "Hey Cat, what`s going on here? Goat that, impertinent thought up?" Kotov again kicked in the ribs insensitive Fedor, and he told his friends. "Yes, absolutely, our goat ohuel, my girl decided to knock out the wedges, I sent me. In short bykuet in full, here I am and it pressanul." Ginger came to lying on the ground and sat on Fedor squatted Fedor grabbed by the hair and lifted his head. "Hey goatskins, let ochuhivaysya, Bazaar has." Theodore groaned and opened his eyes, his face was smashed and bleeding. Ryzhyi blew smoke in his face Fede "Well Th, deer, You agree that was wrong?" Fyodor groaned "Light my girlfriend." Shulga ugly, cackled like a hyena "You see, goat continues bychit." Cats snapped Fedor "You do a little something? I`ll Piedra general now omit the floor, if you do not shut their mouth!" Ginger said quietly "Relax Cat. I think the goat realized the depth of his delusion. Well? Realized? Or do you want to aggravate?"'
+
+			act 'See what will happen':
+				cls
+				strelaDay = day
+				strelaQW = 1
+				gs'stat'
+
+				'Fyodor started to rise to his feet and moaned through the broken ruining "Fuck you, gopota fucking." Shulga jumped to Fede and banged his fist on the face, Fyodor staggered but managed to get to his feet, but he was right there on the edge of his hand struck the neck Auburn. Legs Fedor buckled and he fell on all fours. Shulga giggled "Watch, pidarok already stood in a pose! Gradually begins to realize." By groaning Fyodor Kotov came and grabbed him by the scruff of the neck to his feet "Well, Do you have something else to say?" Fyodor tried to hit Kotova, but he easily parried Fyodor hand and hit his forehead to the nose Fedor. Fedor went limp and kept it from falling only Kotov "Well, well, you just thought up fall? We`re just talking here, is not it?" By Fyodor jumped back Shulga and a run kicked him in the kidneys, from what Theodore groaned and began to twitch in the hands Kotova. Kotov angrily remarked "What hurts, something? So we started to talk." Suddenly Fyodor Kotov easily lifted off the ground and threw it on the asphalt. Fedor fell with a thud and lay still on the ground. Shulga mocking sat around a broken face Fedor and spat in his face "Ha, ha, let petushnem bychara!" Kotov puzzled looked at Shulga "You do Ramsey beguiled, pimple, what would I have got this shit?" Shulga immediately retorted "Well then obossym kid, I just want to pee." Auburn notice "Boys, it is not necessary to arrange chaos. Such questions people need to decide." Shulga started to bristle "And I that? Not people?" Red grinned "You syavka, people are thieves, not you. We can ask the White, Because of this goat. He decides, how to punish him for his impudence. Zabem boom and could decide, what to do." Kotov nod "Normally, will proceed." Fyodor lying on the pavement groaned and clutched his head. Auburn walked up to him and said, "Slysh, kid. Tomorrow arrow hammered. They will understand, how to punish you, and mind you, if you do not come, it will be worse." Shulga happily jumped to lying Fedor "Let`s not kid come, without you decide, cheek, or will you take the ass podmahivat." Kotov grimaced in disgust and said, "Come on guys drink beer. Enough already with the by shit messing. Sveta, in short, we in the park, if anything." Kotov and went towards the Red Square, Shulga again kicked Fedor lying and disgusting giggling followed the boys.'
+
+				act 'Escape':gt'gorodok'
+			end
+		end
+
+		exit
+	end
+
+	'Fedor is coming to you and gently hugs the waist.'
+
+	act 'Kiss':
+		cls
+		horny += 5
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+		'You kissed passionately with Fedor.'
+
+		$ev_name = 'Fedor'
+		$ev_name_a = 'Fedor'
+		$ev_name_om = 'Fedor'
+		dick = 17
+		silavag = 0
+
+		if gnpcSex[numnpc] = 0:
+			!sex was not
+			placerand = RAND(0,2)
+			if placerand = 0:place = 1 & $textEvent = ' "Come, We take a walk on the square?"'
+			if placerand = 1:place = 2 & $textEvent = ' "Let`s go to the cinema?"'
+			if placerand = 2:place = 3 & $textEvent = ' "Come to me, Vidic look."'
+		end
+
+		if gnpcSex[numnpc] > 0:
+			!sex was
+			$textEvent = ' ""'
+		end
+
+		'You kissed passionately with Fedor. Finally stopping kiss <<$ev_name>> said'+$textEvent
+
+		act 'Sorry, but I have to go':gt'gorodok'
+		act 'To go with Fedor':
+			cls
+			gs'stat'
+			Frend_num = 1
+			gt'placer'
+		end
+	end
+elseif GorSlut > 0:
+	fedorKozlovQW = -1
+
+	'Fedor looks very angry "Sveta, I treat you with all my heart, and you is an ordinary slut. All, between us nothing else and can not be!" Theodore turned and walked.'
+
+	act 'Escape':gt'gorodok'
+end
+--- FedorEv ---------------------------------
+

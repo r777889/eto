@@ -1,0 +1,55 @@
+# Vnlake2
+'<center><img src="images/img/Lake/Vnlake2/vnlake1.jpg"></center>'
+'Tan you slumbered, and you dream about as a caress your breasts, like who-then licking your pussy, you open your eyes and realize that this is not a dream, next to you, two men one caresses your breasts, the second is already fixed his lips between your legs.'
+act 'Push them':gt'Nudelake'
+act 'Touch a member':
+	cla
+	*clr
+	guy += 2
+	bj += 1
+
+	'<center><img src="images/img/Lake/Vnlake2/vnlake2.jpg"></center>'
+	'You Spit member of one of them kneels, Men rise and stand beside you, their members sent to you, you take them in hand and start sucking alternately.'
+
+	act 'Stand on all fours':
+		cla
+		*clr
+		sex += 1
+
+		'<center><img src="images/img/Lake/Vnlake2/vnlake3.jpg"></center>'
+		'Plenty sucked you get up on all fours, one of the men in front of you lies a member-to-face, second knelt behind, and entered into your vagina.'
+
+		act 'Change position':
+			cla
+			*clr
+			anal += 1
+			orgasm += 3
+
+			'<center><img src="images/img/Lake/Vnlake2/vnlake4.jpg"></center>'
+			'Sitting on a dildo, You pushed her hands buttocks inviting you to enter the second butt, which he did. They fuck you in two trunk, and you moan and finishing. You left off so many times that lost count, and men are kept, Finally one pulled out a member of your ass, you have decided that it is now to finish but it was not there.'
+			'"Sit ass" said the man from the bottom'
+
+			act 'Seats':
+				cla
+				*clr
+				cumass += 1
+
+				'<center><img src="images/img/Lake/Vnlake2/vnlake5.jpg"></center>'
+				'You weighed a member, He turned his back and planted his ass on his dildo, the second went to your face and put his penis in your mouth. Soon you will feel that your ass flooded with sperm, and a member in your mouth is about to finish.'
+
+				act 'Remove from the mouth':
+					cla
+					*clr
+					cumface += 1
+
+					'<center><img src="images/img/Lake/Vnlake2/vnlake6.jpg"></center>'
+					'You spat out a member of his mouth and the man is dead on your face.'
+
+					act 'Stay at the beach':gt'Nudelake'
+				end
+			end
+		end
+	end
+end
+--- Vnlake2 ---------------------------------
+

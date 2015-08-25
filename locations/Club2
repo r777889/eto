@@ -1,0 +1,147 @@
+# Club2
+if $ARGS[0] = 'toilet1':
+	cla
+	*clr
+	gs'stat'
+
+	'<center><img src="images/pics/glory.jpg"></center>'
+	'You went into the booth and closed the door. The walls are covered with obscene graffiti and wall lockers carved strange round holes. Sitting on the toilet, you hear a noise in the next stall. Through a hole in the wall you looked someone`s eyes.'
+	'The hole in the wall pushed thick cock. Randy`s voice said,:"here`s a tasty candy, Babe".'
+	'This is so unexpected, you do not believe in the reality of what is going to touch a finger to the member. It is hard and hot.'
+
+	act 'Escape':gt'club','inside'
+	act 'Take a closer look':
+		cla
+		*clr
+		vaf = vaf+1
+		if TQuest = 1:TQuest = 2
+		guy = guy + 1
+		bj += 1
+		horny = horny + 5
+		throat = throat + 1
+
+		'<center><img src="images/pics/glory1.jpg"></center>'
+		'You lean to the member, he is so big, warm and solid, You licked it, then again and again.'
+
+		act 'Reaching lips':
+			cla
+			*clr
+			'<center><img src="images/pics/glory2.jpg"></center>'
+			'You are a member of the Bow lips and begin to suck it, I am trying to take it as far as possible.'
+			'Suddenly, in your mouth and poured the hot liquid tart.'
+
+			act 'Swallow':
+				cla
+				*clr
+				vaf = vaf+2
+				swallow = swallow+1
+				cumlip = cumlip + 1
+				money = money + 2000
+
+				'<center><img src="images/pics/glory3.jpg"></center>'
+				'You dial a mouthful of sperm, and then swallow it, semen is not tasty, sticky and sharp taste.'
+				'A man`s voice tells you - fine grit, money, you deserve, Member of the hole and disappears into the hole pokes two thousandths bills.'
+
+				act 'Escape':gt'club','inside'
+			end
+			act 'Spit out':
+				cla
+				cumface = cumface + 1
+				money = money + 1000
+
+				'<center><img src="images/pics/glory3.jpg"></center>'
+				'You dial a mouthful of sperm, semen is not tasty, sticky and sharp, You spits it on the floor.'
+				'A man`s voice tells you - fine grit, money, you deserve, Member of the hole and disappears into the hole pokes thousandth bill.'
+
+				act 'Escape':gt'club','inside'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'toilet':
+	cla
+	clr
+	*clr
+	horny = horny + 20
+	gs'stat'
+
+	'You pee sitting on the toilet and began to wipe the vagina toilet paper. Apparently you pressed too hard because you captured the excitement of touching between the legs.'
+
+	act 'Escape':gt'street'
+	act 'Caresses herself':
+		cla
+		TQuest = 1
+		horny = 0
+		mastr = mastr+1
+		orgasm += 1
+		money = money + 1000
+		gs'stat'
+
+		'<center><img src="images/pics/tomas.jpg"></center>'
+		'You caress his fingers swollen pussy, until you do not have an orgasm covers.'
+		'After orgasm, you calm down, but hear from the next stall Pant, looking at the wall you see that someone is peeping into the hole in the wall located.'
+		'The man behind the wall and realized that found giggled, great show. The eye of the hole in the wall was gone and he squeezed thousandth bill.'
+
+		act 'Escape':gt'club','inside'
+	end
+end
+
+if $ARGS[0] = 'toilet2':
+	cla
+	*clr
+	'You sit down in the booth and hear how to follow you to the bathroom comes someone, I slammed the door adjacent cubicles. Before you realized that the two of them.'
+	'The voice from the next stall said to you - Do not be afraid baby, we will not offend, on the contrary, We give you a couple of tasty candy, with cream filling.'
+
+	act 'Escape':gt'club','inside'
+	act 'Wait':
+		cla
+		slutiness = slutiness + 10
+		'<center><img src="images/pics/glory4.jpg"></center>'
+		'On both sides of your booth through the holes in the walls climbed members. A voice from behind the wall said,, come on, Babe, come here, we`ll feed.'
+		'You have both terms in their hands and began to fondle, He leaned to one of the members and took it into his mouth.'
+
+		wait 3000
+		cla
+		*clr
+		'<center><img src="images/pics/glory5.jpg"></center>'
+		'You enthusiastically aspirated two terms in succession.'
+
+		wait 3000
+		cla
+		*clr
+		'<center><img src="images/pics/glory6.jpg"></center>'
+		'Finally one of the men ends up in your mouth.'
+		'You lick and finish the job for the second term.'
+
+		wait 3000
+		cla
+		*clr
+		'<center><img src="images/pics/glory7.jpg"></center>'
+		'The second man also pulls your mouth.'
+		'You nakonchal mouthful you wipe a hand face, but semen smeared all your face.'
+
+		horand = RAND(1,100)
+		if horand > horny:horny = horny + 10 & 'You were not satisfied'
+		if horand <= horny:horny = 0 & 'You covered the orgasm'
+
+		wait 3000
+		money = money + 3000
+		'Pleased voice from behind said wall - You`re a good nipple, I think you`ve earned a reward.'
+		'Three thousand ruble banknotes pokes through a hole in the wall.'
+
+		wait 1000
+		TQuest = 3
+		if pornstudio = 0:pornstudio = 2
+		guy = guy + 2
+		bj += 2
+		swallow = swallow+2
+		cumlip = cumlip + 2
+		deep = deep + 2
+		'A male voice says - it works for you. Even take a business card, come if you want to have fun and make money.'
+
+		act 'Escape':gt'club','inside'
+	end
+end
+--- Club2 ---------------------------------
+

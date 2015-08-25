@@ -1,0 +1,455 @@
+# piratbreak
+cls
+minut += 2
+horny += RAND(5,10)
+gs'stat'
+
+'<center><img src="images/qwest/gadukino/piratbreak.jpg"></center>'
+
+act 'I sent him a member of their pussy':
+	if vgape > 1:
+		cls
+		'<center><img src="images/qwest/gadukino/predoggy.jpg"></center>'
+		'You have a sore pussy, there is no need to aggravate it and so unenviable position.'
+		act 'Finish':gt 'Gadsarai'
+	else
+		cls
+		minut += 2
+		piratHorny = 0
+		manna = manna/2
+		gs'stat'
+		
+		'<center><img src="images/qwest/gadukino/piratvag.jpg"></center>'
+		'You are missing a hand between her legs and groping hand, find a hot dog member, then sends it to itself in the vagina. Pirate immediately the first jerk gets you in the hole and begins furiously and incessantly pounding his furry back to you by the crotch, Old as deeply as possible to shove you knot...'
+		
+		act 'Allow':
+			cls
+			minut += 2
+			manna = manna/2
+			sub += 1
+			gs'stat'
+			
+			'<center><img src="images/qwest/gadukino/piratvagknot.jpg"></center>'
+			'You rest against the floor and arms protrude away the ass, trying to relax the muscles better. Pirate wildly flails his cock in your gut and fidgeting on the back, scratching its claws, until he finally pushes his hot flesh resilient to the most eggs. You will immediately feel, it begins to swell as the node, rasstyagivaya wall of your vagina, and focus on these sensations...'
+			piratboggle = RAND(0,5)
+			if piratboggle <= 3:
+				if vagina < 10:
+					minut += 20
+					vagina += 4
+					vgape = 3
+					horny = 0
+					cumpussy = 1
+					gs'stat'
+					'Knot all continues and continues to grow in size, until you finally start to moan dull aching pain in the vagina. But do you have anything you can not, so the next twenty minutes of painful groans and mychite in conjunction with pirates...'
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 10 and vagina < 25:
+					minut += 20
+					vagina += 3
+					vgape = 2
+					horny -= RAND(15,30)
+					cumpussy = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/piratvagcum.jpg"></center>'
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. Your excitement is so great, that you start to finish even though mild aching pain in the vagina...'
+					else
+						'Knot all continues and continues to grow in size, until you finally start to moan with pain in the vagina. But do you have anything you can not, so the next twenty minutes meekly suffer unpleasant tensile stinging in the vagina...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 25 and vagina < 35:
+					minut += 20
+					vagina += 2
+					horny += RAND(25,50)
+					cumpussy = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/piratvagcum.jpg"></center>'
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. Your excitement is so great, that you start to finish without stopping and rapidly pulsation canine member of your vagina...'
+					else
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. The next twenty minutes you with a slight discomfort, but at the same time you feel the excitement, he stretches the walls of your vagina...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 35:
+					minut += 20
+					vagina += 1
+					horny += RAND(50,100)
+					cumpussy = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/piratvagcum.jpg"></center>'
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. Your excitement is so great, that you start to finish without stopping and rapidly pulsation canine member of your vagina...'
+					else
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. You animal lust and pleasure feel, it nice stretch of your vaginal wall and the next twenty minutes of writhing and mychite, feeling in her pussy hot dog assembly...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				end		
+			else
+				if vagina < 10:
+					minut += 20
+					vagina += 4
+					vgape = 3
+					horny = 0
+					cumpussy = 1
+					gs'stat'
+					'Knot all continues and continues to grow in size, until you finally start to moan dull aching pain in the vagina. But do you have anything you can not, so the next twenty minutes of painful groans and mychite in conjunction with pirates...'
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 10 and vagina < 25:
+					minut += 20
+					vagina += 3
+					vgape = 1
+					horny += RAND(25,50)
+					cumpussy = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/piratvagcum.jpg"></center>'
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. Your excitement is so great, that you start to finish even though mild aching pain in the vagina...'
+					else
+						'Knot all continues and continues to grow in size, until you finally start to moan with pain in the vagina. But do you have anything you can not, so the next twenty minutes meekly suffer unpleasant tensile stinging in the vagina...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 25:
+					minut += 5
+					vagina += 2
+					horny += RAND(50,100)
+					gs'stat'
+					
+					'<center><img src="images/qwest/gadukino/piratbreak.jpg"></center>'
+					'Pirate begins to vigorously fuck your workplace vagina, but as soon as you manage to start to enjoy it, his cock with the unit comes out of your holes stretched sloshing...'
+					act 'Try again':gt 'piratbreak'
+				end	
+			end
+		end
+		act 'Prevent':
+			cls
+			minut += 2
+			manna = manna/2
+			gs'stat'
+			
+			'<center><img src="images/qwest/gadukino/piratvag.jpg"></center>'
+			'Pirate so much hollowed into your vagina, that you have to stretch your hands on the floor, not to fall, but you only squeeze tighter vaginal muscles, and he can not push into your vagina a growing knot.'
+			piratboggle = RAND(0,5)
+			if piratboggle <= 2:
+				if vagina < 15:
+					minut += 10
+					vagina += 1
+					vgape = 1
+					horny -= RAND(10,20)
+					cumpussy = 1
+					gs'stat'
+					'You shudder at the powerful thrusts wild, feeling, both in your pussy wildly moving hot cock excited animal. Ten minutes later it all ends and the dog begins to erupt in your aching cunt...'
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 15 and vagina < 25:
+					minut += 10
+					vagina += 1
+					horny += RAND(15,30)
+					cumpussy = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/piratvagcum1.jpg"></center>'
+						'Pirate starts wildly flailing your ass his pelvis and fluffy animals from these movements you voluptuously mychite and moan until, until you are overtaken by a powerful orgasm. You, She rolled her eyes and shuddering in the throes posleorgazmennye, wait for, until the dog begins to cum in your pussy juices expiring, and his dick does not slip out of your wet womb...'
+					else
+						'You shudder at the powerful thrusts wild, feeling, both in your pussy wildly moving hot cock excited animal. But, Nonetheless, You control everything perfectly and does not give the dog to get you into the hub. Ten minutes later it all ends and the dog begins to erupt you crack...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 25 and vagina < 35:
+					minut += 20
+					horny += RAND(30,50)
+					cumpussy = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/piratvagcum1.jpg"></center>'
+						'Pirate starts wildly flailing your ass his pelvis and fluffy animals from these movements you voluptuously mychite and moan until, until you are overtaken by a powerful orgasm. You, She rolled her eyes and shuddering in the throes posleorgazmennye, wait for, until the dog begins to cum in your pussy juices expiring broken-down and his penis does not slip out of your wet sloshing hole...'
+					else
+						'You shudder at the powerful thrusts wild, feeling, both in your pussy squelching hot cock wildly excited animal. But, Nonetheless, You control everything perfectly and does not give the dog to get you into the hub. Ten minutes later it all ends and the dog begins to erupt you stretched working crack...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				elseif vagina >= 35:
+					minut += 20
+					horny += RAND(15,30)
+					cumpussy = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/piratvagcum1.jpg"></center>'
+						'Pirate starts wildly flailing your ass his pelvis and fluffy animals from these movements you voluptuously mychite and moan until, until you are overtaken by a powerful orgasm. You, She rolled her eyes and shuddering in the throes posleorgazmennye, wait for, until the dog begins to cum in your broken-down juices expiring ajar hole, from which immediately begins to flow abundantly muddy dog ​​sperm...'
+					else
+						'You shudder at the powerful thrusts wild, feeling weak, both in your bottomless hole wildly, but insensitive moves hot cock excited animal... You are trying to focus on these sensations, but your vagina is too wide, to achieve orgasm from the penis of this size...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				end	
+			else
+				cls
+				if vagina < 15:
+					minut += 10
+					vagina += 1
+					if vgape <3:vgape += 1
+					horny -= RAND(10,20)
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/piratbreak.jpg"></center>'
+					'You shudder at the powerful thrusts wild, feeling pain, both in your pussy wildly noyushey moves hot cock excited animal. Pirate so much hollowed languishing in your pussy, that his penis pops out of it...'
+				elseif vagina >= 15 and vagina < 25:
+					minut += 10
+					vagina += 1
+					horny += RAND(15,30)
+					cumpussy = 1
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/piratbreak.jpg"></center>'
+					'You shudder at the powerful thrusts wild, with delight feeling, both in your pussy sloshing wildly moving hot cock excited animal. Pirate so much hollowed into your pussy squishing, that his penis pops out of it...'
+				elseif vagina >= 25 and vagina < 35:
+					minut += 20
+					horny += RAND(30,50)
+					cumpussy = 1
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/piratbreak.jpg"></center>'
+					'You shudder at the powerful thrusts wild, with animal lust feeling, both in your pussy sloshing wildly moving hot cock excited animal. Pirate so much hollowed out loud squish into your pussy and chvakayuschuyu, that his penis pops out of it...'
+				elseif vagina >= 35:
+					minut += 20
+					horny += RAND(15,30)
+					cumpussy = 1
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/piratbreak.jpg"></center>'
+					'You shudder at the powerful thrusts wild, from-for stretching of the vaginal feeling weak, how it moves wildly hot cock excited animal, but your pussy is so stretched and razdolbany, his cock just falls out of her...'
+				end
+				act 'Try again':gt 'piratbreak'
+			end
+		end
+	end
+end
+act 'I sent him a member of his ass':
+	if agape > 1:
+		cls
+		'<center><img src="images/qwest/gadukino/predoggy.jpg"></center>'
+		'You have a sore ass, there is no need to aggravate it and so unenviable position.'
+		act 'Finish':gt 'Gadsarai'
+	else
+		cls
+		minut += 5
+		piratHorny = 0
+		manna = manna/2
+		sub += 1
+		gs'stat'
+		
+		'<center><img src="images/qwest/gadukino/piratanal.jpg"></center>'
+		'You are missing a hand between her legs and groping hand, find a hot dog member, then sends it in his anus. Grease, little tickling, abundantly poured out on your anus and runs down the perineum. Its so much, that no lubricant is not necessary, therefore, without losing no time in vain, nor as precious liquid, you enter a dog`s dick up your ass. Pirate immediately begins to pull his hips wildly, Old as deeply as possible to stick to your gut his farm...'
+		act 'Allow':
+			cls
+			minut += 2
+			manna = manna/2
+			sub += 1
+			gs'stat'
+			
+			'<center><img src="images/qwest/gadukino/analknot.jpg"></center>'
+			'You rest against the floor and arms protrude away the ass, trying to better relax the anus. Pirate wildly flails his cock in your gut and fidgeting on the back, scratching its claws, until he finally pushes his hot flesh resilient to the most eggs. You will immediately feel, it begins to swell as the node, rasstyagivaya wall of your anus, and focus on these sensations...'
+			piratboggle = RAND(0,5)
+			if piratboggle <= 4:
+				if anus < 15:
+					minut += 20
+					anus += 4
+					agape = 3
+					horny = 0
+					cumanus = 1
+					gs'stat'
+					'Knot all continues and continues to grow in size, until you finally start to moan with acute pain in the anus mad. But do you have anything you can not, so the next twenty minutes muchites and writhed in conjunction with pirates...'
+					act 'Escape':gt 'Gadsarai'
+				elseif anus >= 15 and anus < 25:
+					minut += 20
+					anus += 3
+					agape = 2
+					horny -= RAND(15,30)
+					cumanus = 1
+					gs'stat'
+					'Knot all continues and continues to grow in size, until you finally start to moan dull aching pain in the anus. But do you have anything you can not, so the next twenty minutes meekly suffer acute pain in the anus...'
+					act 'Escape':gt 'Gadsarai'
+				elseif anus >= 25 and anus < 35:
+					minut += 20
+					anus += 2
+					agape = 1
+					horny += RAND(15,30)
+					cumanus = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/analcum.jpg"></center>'
+						'But as soon as he begins to deflate, how do you run a hand between her legs and begin furiously nadrachivat her pussy. Once the unit comes out of your ass, you immediately powerfully ends...'
+					else
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. The next twenty minutes you are with a slight discomfort, but at the same time you feel the excitement, he stretches the walls of your anus...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				elseif anus >= 35:
+					minut += 20
+					anus += 1
+					horny += RAND(50,100)
+					cumanus = 1
+					gs'stat'
+					if horny >= 100:
+						cls
+						orgasm += 1
+						horny = 0
+						manna = mannamax
+						gs'stat'
+						'<center><img src="images/qwest/gadukino/analcum.jpg"></center>'
+						'But as soon as he begins to deflate, how do you run a hand between her legs and begin furiously nadrachivat her pussy. Once the unit comes out of your ass, you immediately powerfully ends...'
+					else
+						'Knot all continues and continues to grow in size, until it finally reaches its maximum size. You animal lust and pleasure feel, it nice stretches your anal wall and the next twenty minutes of writhing and mychite, feeling in her ass hot dog member...'
+					end
+					act 'Escape':gt 'Gadsarai'
+				end		
+			else
+				cls
+				if anus < 15:
+					minut += 20
+					anus += 5
+					agape = 3
+					horny = 0
+					cumanus = 1
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/analpain.jpg"></center>'
+					'Knot all continues and continues to grow in size, until you finally start to moan with acute pain in the anus mad. Suddenly Pirate, acock, like that-it smelled, and a couple of times loudly gavknuv, jumps on your back on the ground and force begins to pull you over. You shout from the strong, Tearing pain in the anus, and a couple of minutes trying to calm down the Pirate, until he finally settles down. All subsequent time you sobbing in pain, waiting, When it deflates your knot and uncorked long-suffering ass...'
+					act 'Escape':gt 'Gadsarai'
+				elseif anus >= 15 and anus < 25:
+					minut += 20
+					anus += 5
+					agape = 3
+					horny = 0
+					cumanus = 1
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/analpain.jpg"></center>'
+					'Knot all continues and continues to grow in size, until you finally start to moan dull aching pain in the anus. Suddenly Pirate, acock, like that-it smelled, and a couple of times loudly gavknuv, jumps on your back on the ground and force begins to pull you over. You shout from acute pain in the anus, and a couple of minutes trying to calm down the Pirate, until he finally settles down. All subsequent time you sobbing in pain, waiting, When it deflates your knot and uncorked long-suffering ass...'
+					act 'Escape':gt 'Gadsarai'
+				elseif anus >= 25 and anus < 35:
+					minut += 20
+					anus += 4
+					agape = 2
+					horny -= RAND(40,60)
+					cumanus = 1
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/analpain.jpg"></center>'
+					'Knot all continues and continues to grow in size, until it finally reaches its maximum size. Suddenly Pirate, acock, like that-it smelled, and a couple of times loudly gavknuv, jumps on your back on the ground and force begins to pull you over. You shout from the dull pain in the anus, and a couple of minutes trying to calm down the Pirate, until he finally settles down. All subsequent time you mychite pain, waiting, It deflates when the node and uncork your ass...'
+					act 'Escape':gt 'Gadsarai'
+				elseif anus >= 35:
+					minut += 5
+					anus += 3
+					agape = 1
+					horny += RAND(15,30)
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/analpain.jpg"></center>'
+					'Knot all continues and continues to grow in size, until it finally reaches its maximum size. Suddenly Pirate, acock, like that-it smelled, and a couple of times loudly gavknuv, jumps on your back on the ground and force begins to pull you over. You cried out in surprise and a member with a decent portion of the lubricant and sperm bullet suddenly comes out of your ass,...'
+					act 'Escape':gt 'Gadsarai'
+				end
+			end
+		end
+		act 'Prevent':
+			cls
+			minut += 2
+			manna = manna/2
+			sub += 1
+			gs'stat'
+			
+			'<center><img src="images/qwest/gadukino/piratanal.jpg"></center>'
+			'You rest against the floor with one hand, and the other member taking the dog at the base. Pirate wildly flails his farm in your gut and fidgeting on the back, scratching its claws, but your hand prevents him push your butt your unit.'
+			
+			if anus < 15:
+				minut += 10
+				anus += 1
+				agape = 2
+				horny -= RAND(15,30)
+				cumanus = 1
+				gs'stat'
+				'You shudder at the powerful thrusts wild, feeling, in your ass moves hot cock wildly excited animal, and the arm of aching anus dripping warm viscous liquid.'
+				act 'Escape':gt 'Gadsarai'
+			elseif anus >= 15 and anus < 25:
+				minut += 20
+				anus += 1
+				horny += RAND(15,30)
+				cumanus = 1
+				gs'stat'
+				if horny >= 100:
+					cls
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/analcum2.jpg"></center>'
+					'Soon Pirate starts to cum in your ass and you, still holding in one hand his cock in her ass, other shoves two fingers into the vagina yourself and violently nadrachivaya, a couple of minutes in a powerful orgasm shuddered.'
+				else
+					'You shudder at the powerful thrusts wild, feeling, in your ass moves hot cock wildly excited animal, and hand out now and then involuntarily contracting anus dripping warm viscous liquid.'
+				end
+				act 'Escape':gt 'Gadsarai'
+			elseif anus >= 25 and anus < 35:
+				minut += 20
+				horny += RAND(30,50)
+				cumanus = 1
+				gs'stat'
+				if horny >= 100:
+					cls
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/analcum2.jpg"></center>'
+					'Soon Pirate starts to cum in your ass and you, still holding in one hand his cock in her ass, other shoves two fingers into the vagina yourself and violently nadrachivaya, a couple of minutes in a powerful orgasm shuddered.'
+				else
+					'You shudder at the powerful thrusts wild, feeling, in your ass moves hot cock wildly excited animal, and hand out stretched anus dripping warm viscous liquid.'
+				end
+				act 'Escape':gt 'Gadsarai'
+			elseif anus >= 35:
+				minut += 20
+				horny += RAND(50,100)
+				cumanus = 1
+				gs'stat'
+				if horny >= 100:
+					cls
+					orgasm += 1
+					horny = 0
+					manna = mannamax
+					gs'stat'
+					'<center><img src="images/qwest/gadukino/analcum2.jpg"></center>'
+					'Soon Pirate starts to cum in your ass and you, still holding in one hand his cock in her ass, other shoves two fingers into the vagina yourself and violently nadrachivaya, a couple of minutes in a powerful orgasm shuddered.'
+				else
+					'You shudder at the powerful thrusts wild, feeling, in your ass moves hot cock wildly excited animal, and the arm of gouging anus dripping warm viscous liquid.'
+				end
+				act 'Escape':gt 'Gadsarai'
+			end							
+		end
+	end
+end
+--- piratbreak ---------------------------------
+

@@ -1,0 +1,27 @@
+# izdevat
+if grupTipe[numnpc] = -1 and GorSlut < 2:
+	act 'Mock':
+		cls
+		grupNPC[numnpc] -= 5
+		dom += 1
+		gs'stat'
+
+		'You mocked the school outcast feeling of a strength and support of classmates.'
+
+		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
+	end
+elseif grupTipe[numnpc] = -1 and GorSlut >= 2:
+	act 'Mock':
+		cls
+		sub += 1
+		gs'stat'
+
+		'You started to scoff, but <<$npcName[numnpc]>> you said. "Mouth shut huesoska, Concha stinks." Everyone started to laugh at you. Are you confused and not knowing what to say, that they began to mumble.'
+
+		if $loc ! 'gdkin':dynamic $din_sekondparturok
+		if $loc = 'gdkin':act 'Move away':gt $loc, $metka
+	end
+end
+--- izdevat ---------------------------------
+

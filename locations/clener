@@ -1,0 +1,430 @@
+# clener
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	minut = minut + 5
+	clr
+	gs'stat'
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Office building</font></b></center>'
+	'<center><img src="images/pic/clener.jpg"></center>'
+	'On the walls plastered with different ads including striking ads - Wanted cleaners.'
+	'Above one of the doors a sign saying, Jacob Solomonovich Schneerson, tailor, while working with 7 to 15'
+
+	if svQW >= 1:
+		if hour >= 8 and hour <= 16 and week < 6:
+			'Door <a href="exec:GT ''torgpred''">trade mission</a> open.'
+		else
+			'The door is closed and the trade mission on the wall schedule. C 8 to 16, Weekend Saturday, Sunday.'
+		end
+	end
+
+	if jouryQWNo = 1 and hour = 17:
+		'Along the corridor is Yuri, the same office worker who offered to you for a walk, but you refused. He stares at you and comes to you.'
+
+		act 'Talk to Yuri':
+			cla
+			minut += 15
+			gs'stat'
+
+			'Yuri came to you and said, "Sveta. Let`s go, popem coffee."'
+
+			act 'No':jouryQWNo = 1 & gt'clener','start'
+			act 'To drink coffee':
+				cls
+				minut += 30
+				gs'stat'
+
+				'You went to the cafe, where Yuri ordered coffee. You sat down at a table and began to drink. Yuri painfully understands, something to say. He did not have even the shadow of a sense of humor and very constrained. Apparently he likes you, but he does not know, what to do. When the coffee was dopit Yuri suggested to go to it.'
+
+				act 'No':jouryQWNo = 1 & gt'clener','start'
+				dynamic $youriqwest
+			end
+		end
+	end
+
+	if borodachQW > 0 and borodachSex = 0 and hour >= 19:'Seeing you guard Sasha nodded to you.'
+	if borodachQW > 0 and borodachSex > 0 and hour >= 19:'Seeing you guard Sasha smiled and said, "Hello Svetsik!"'
+
+	if borodachQW > 0 and hour >= 19:
+		act 'Come to Sasha':
+			cls
+			minut += 5
+			gs'stat'
+
+			if borodachSexDay = day:'You came to the guard and said hello. I chatted with him, Sasha was going on tour and you departed without becoming disturb him.'
+			if borodachSexDay ! day:
+				'You came to the guard Sasha and said hello. He winked at you, I then hid the bubble, how to look at the cult of mass leisure?'
+
+				act 'Come':
+					cla
+					minut += 5
+					gs'stat'
+
+					'Sasha took you into his cubicle and pulled out from under the table a bottle of vodka, He reached into a drawer and pulled out, a piece of liver sausage and cheese friendship. He took out a couple of glasses of vodka and poured back.'
+
+					act 'Drink':
+						cla
+						'You drank the vodka to give burnt rubber and booze. Breath you PEYRELEAU of this shit and you probably caught cheese friendship zanyuhivat. Sasha routinely slapped the glass and did not flinch. "Eh, well I went."'
+						'While you are leaning to the table and ate zanyuhivali, you feel like a hand guard light touch pats you on the ass.'
+
+						act 'Smile':
+							cla
+							minut += 15
+							horny += 10
+							gs'stat'
+
+							'You Sasha smiled and poured more vodka, without taking your hands caress you from your priests.'
+
+							if horny < 50:dynamic $borodachNo2
+							dynamic $borodachDrink
+						end
+						act 'Put his hand on his pants':
+							cls
+							minut += 15
+							horny += 10
+							borodachTimes += 1
+							gs'stat'
+
+							picrand = RAND(0,2)
+							if picrand = 0:'<center><img src="images/qwest/ohrannik/hj.jpg"></center>'
+							if picrand = 1:'<center><img src="images/qwest/ohrannik/hj1.jpg"></center>'
+							if picrand = 2:'<center><img src="images/qwest/ohrannik/hj2.jpg"></center>'
+
+							'You put it on his pants and felt his hand like he is a member. Your delicate fingers slid over her undoing zippers. You unzipped and pulled his penis out of his pants. Sasha relaxed on the couch waiting for you embark on.'
+
+							dynamic $ohrhj
+							dynamic $ohrbj
+						end
+					end
+				end
+			end
+			act 'Escape':gt'clener','start'
+		end
+	end
+
+	if clenerT >= 3 and borodachQW = 0 and hour >= 19:
+		'On a chair in front of a security guard sitting crossword and painfully remembers something. Seeing you, he asks,. "Bad ending business, the second letter, and."'
+
+		act 'Reply guard':
+			cls
+			borodachQW = 1
+
+			'(You) - Fiasco'
+			'(Security guard) - Exactly, then I think PIZDETS can not be the answer.'
+
+			act 'Escape':gt'clener','start'
+			act 'Burst out laughing':
+				cla
+				borodachQW = 2
+
+				'You laughed at the guard, He smiled and put aside the crossword. "I`ll here more than once seen. A cleaner work?"'
+				'You nod, "yes, I earn, then the money paid, that the work is not called."'
+				'(Security guard) - My name is Sasha way, and you?'
+				'(You) - My World.'
+				'(Sasha) - Very nice. I`ve got a bottle there zakus, the composition of the company?'
+
+				act 'Sorry, I have to go':gt'clener','start'
+				act 'Why no':
+					cla
+					minut += 5
+					gs'stat'
+
+					'Sasha took you into his cubicle and pulled out from under the table a bottle of vodka, He reached into a drawer and pulled out, a piece of liver sausage and cheese friendship. He took out a couple of glasses of vodka and poured back.'
+
+					act 'Drink':
+						cla
+						'You drank the vodka to give burnt rubber and booze. Breath you PEYRELEAU of this shit and you probably caught cheese friendship zanyuhivat. Sasha routinely slapped the glass and did not flinch. "Eh, well I went."'
+						'While you are leaning to the table and ate zanyuhivali, you feel like a hand guard accidentally, light touch pats you on the ass.'
+
+						act 'Hey! What are you conceived?':
+							cla
+							minut += 15
+							horny += 10
+							gs'stat'
+
+							'(You) - Hey! What are you conceived?'
+							'"Come on, I accidentally." Sasha began to mutter pouring more vodka. "Let`s have a drink."'
+
+							if horny < 50:dynamic $borodachNo
+							dynamic $borodachDrink
+						end
+						act 'To pretend not to notice':
+							cla
+							minut += 15
+							horny += 15+SUB
+							gs'stat'
+
+							'You ate, trying not to pay attention to accidentally touch. Sasha poured more vodka and with words "Between the first and second, pereryvchik not great" He knocked over a glass.'
+
+							if horny < 50:dynamic $borodachNo
+							dynamic $borodachDrink
+						end
+					end
+				end
+			end
+		end
+	end
+
+	if hour >= 7 and hour <= 15:
+		act 'Go to the tailor':
+			cla
+			*clr
+			'An elderly Jew makes the pattern at the table, He bit down glasses and looking at you on top of points.'
+
+			if portnoyQW > 0:
+				'Aaa, Sveta, pass, came back to take in clothes?'
+
+				if money >= 500:
+					act 'Wear clothes take in (500 RUB)':
+						cla
+						*clr
+						minut += 15
+						money -= 500
+						gs'portnoi'
+
+						'You stripped of clothing and filed shirmochka Jacob Solomonovich, He fifteen minutes ushil your clothes and returned to you.'
+
+						act 'Logout':gt'clener','start'
+					end
+					act 'Take in other clothing':gt'portnoi1','start'
+					act 'Take in all the clothes':gt'portnoi2'
+				end
+			elseif portnoyQW = 0:
+				'Zdgastvuyte bagyshnya. I Yakov Solomonovich, for you pgosto Yasha, What is your name?'
+
+				act 'Sveta':
+					cla
+					portnoyQW = 1
+
+					'(You) - CBoard.'
+					'(Yasha) - What pgekgasnoe name. Sveta, pgohodite, sit on this chair here. The Stag evgey can do for you?'
+
+					act 'You can take in the clothes of the figure?':
+						cla
+						*clr
+						minut += 15
+						gs'stat'
+
+						'(You) - You can take in the clothes of the figure?'
+						'(Yasha) - Of course I can! Otherwise, what I was pogtnoy? Here posmotgim that you dressed.'
+						'Jacob Solomonovich smartly you jumped up and took off the meter with flexible neck began obmeryat your chest, waist and hips.'
+						'Well, I take in this product, you will be 500 rubles.'
+
+						if money >= 500:
+							act 'Take in (500 RUB)':
+								cla
+								*clr
+								minut += 15
+								money -= 500
+								gs'portnoi'
+
+								'You stripped of clothing and filed shirmochka Jacob Solomonovich, He fifteen minutes ushil your clothes and returned to you.'
+
+								act 'Logout':gt'clener','start'
+							end
+						end
+						act 'Logout':gt'clener','start'
+					end
+				end
+			end
+
+			act 'Logout':gt'clener','start'
+		end
+	end
+
+	if clener >= 10 and clenerT = 0:
+		act 'Ask whether there is still work':
+			cla
+			'You asked Boris Ivanovich, whether there is still work. He said, that requires a cleaner for cleaning the toilet, you can work almost every day. Cleaning toilets 1 h, 100 rubles immediately at hand.'
+
+			act 'Refuse and leave':gt'street'
+			act 'Agree to work':
+				cla
+				clenerT = 1
+
+				'You agreed to work.'
+
+				act 'Logout':gt'clener','start'
+			end
+		end
+	end
+
+	if clener = 1:
+		act 'Talk about the work':
+			cla
+			'You went to the office on which was written ads. You met a burly man in a jacket. He explained to you, you can work almost every day. Office Cleaning 1 h, 100 rubles immediately at hand.'
+
+			act 'Refuse and leave':gt'street'
+			act 'Agree to work':
+				cla
+				clener = 2
+
+				'You agreed to work.'
+
+				act 'Logout':gt'clener','start'
+			end
+		end
+	end
+
+	if clener > 1 and clenday ! day:
+		act 'Wash the floor in the office (1 h)':
+			cla
+			*clr
+			clenday = day
+			minut = minut + 60
+			clener = clener + 1
+			manna = manna - 15
+			money = money + 100
+			sweat = sweat + 2
+
+			'<center><img src="images/pic/clener1.jpg"></center>'
+
+			if clener < 5:
+				if hour >= 9 and hour <= 16:'You get water in a bucket and went to the office with a rag mop capturing. Sotrudnikiki office stepped aside and gave you clean the floor.'
+			elseif clener >= 5 and clener < 10:
+				if hour >= 9 and hour <= 16:
+					jouryQW += 1
+
+					'You get water in a bucket and went to the office with a rag mop capturing. Sotrudnikiki office stepped aside and gave you clean the floor. One of the employees, a man with blond hair and a red face looked at you trying to hide the view, but you feel its searing look at yourself.'
+				end
+			elseif clener >= 10:
+				if hour >= 9 and hour <= 16 and jouryQW < 7:
+					jouryQW += 1
+
+					'You get water in a bucket and went to the office with a rag mop capturing. Sotrudnikiki office stepped aside and gave you clean the floor. One of the employees, a man with blond hair and a red face looked at you trying to hide the view, but you feel its searing look at yourself.'
+				elseif jouryQW = 7 and hour >= 9 and hour <= 16:
+					cls
+					gs'stat'
+					jouryQW += 1
+
+					'<center><img src="images/pic/clener1.jpg"></center>'
+					'You get water in a bucket and went to the office with a rag mop capturing. All the staff went out of the office, except for red-blond. He came to you and told you visibly nervous quiet "Hello. My name is Yuri. I really liked you. You can go to somewhere after work?"'
+
+					act 'No':
+						cla
+						jouryQWNo = 1
+
+						'After the work you have come to the commandant of the building Boris Ivanovich. He gave you 100 rubles for the job.'
+
+						act 'Logout':gt'clener','start'
+					end
+					act 'Yes':
+						cla
+						minut += 15
+						gs'stat'
+
+						'Yuri said he was going to finish the job and meet you at the entrance to the building.'
+						'After the work you have come to the commandant of the building Boris Ivanovich. He gave you 100 rubles for the job.'
+						'Code you come out of the Commandant, at the entrance of the building you have been waiting for Yuri. He is quite excited and think, as if he had swallowed a crowbar. Not knowing what to say, he blurted out, "Maybe go to my, movie look, drink champagne, talk."'
+
+						act 'No':jouryQWNo = 1 & gt'clener','start'
+						dynamic $youriqwest
+					end
+					exit
+				end
+
+				if jouryQW > 7 and hour >= 9 and hour <= 16 and jourySex = 0:'You get water in a bucket and went to the office with a rag mop capturing. Sotrudnikiki office stepped aside and gave you clean the floor. Yuri looked at you groping look at your figure.'
+				if jouryQW > 7 and hour >= 9 and hour <= 16 and jourySex > 0:'You get water in a bucket and went to the office with a rag mop capturing. Sotrudnikiki office stepped aside and gave you clean the floor. Yuri pretending, You did not notice that went out of the office.'
+			end
+
+			if hour < 9 or hour > 16:'In the office, no one, you quietly washed the floor and wiped the floor in the office.'
+			'After the work you have come to the commandant of the building Boris Ivanovich. He gave you 100 rubles for the job.'
+
+			act 'Logout':gt'clener','start'
+		end
+	end
+
+	if clenerT >= 1 and clendayT ! day:
+		act 'Clean toilets (1 h)':
+			cla
+			*clr
+			clendayT = day
+			minut = minut + 60
+			clenerT = clenerT + 1
+			manna = manna - 25
+			money = money + 100
+			sweat = sweat + 3
+
+			'<center><img src="images/pic/clener2.jpg"></center>'
+
+			if jouryQW > 7 and hour >= 9 and hour <= 16 and jourySex > 0 and jouryResult = 0:
+				'You went into the booth and began to scrub the toilet bowl. The toilet door slammed and someone entered, you looked out of the booth and saw George. He, too, I saw you and came up to you. "Light, Do not come to me in the office, Well, you know, the staff does not understand, I meet with cleaner."'
+
+				act 'You embarrassed me?':
+					cla
+					'You come off the toilet and looked into the eyes of Yuri asked "You embarrassed me?" Yuri hesitated, "Well, not that that would have embarrassed, but you must understand, I am a manager, you cleaner. We should not be seen together. But I want you to continue on. You know where I live, call in to me after 4x pm."'
+
+					act 'Fok you':
+						cla
+						dom += 1
+						jouryResult = 1
+
+						'Such behavior offended you George and you do not think twice sent his. He turned and walked out of the closet.'
+						'You wash the floor in the bathroom and kicked all the toilets and urinals to shine. Then you were given 100 rubles for the job.'
+
+						act 'Logout':gt'clener','start'
+					end
+					act 'Okay':
+						cla
+						sub += 1
+						jouryResult = 10
+
+						'Jury sees in you only a hole for its members. But you accepted it and agreed to go to his home. Yuri nodded in satisfaction and stepped out of the closet.'
+						'You wash the floor in the bathroom and kicked all the toilets and urinals to shine. Then you were given 100 rubles for the job.'
+
+						act 'Logout':gt'clener','start'
+					end
+				end
+
+				exit
+			end
+
+			if StasikValera > 0 and svQW = 0:
+				'You nadraivat toilet to shine and at that moment heard in the toilet someone came, turning you saw a man. Suddenly you recognize him, it is Stas, with him and his friend Valery you meet on the beach. Stas also probably recognize you, and came up to you "Hello Svetsik! You is cleaner work?"'
+
+				act 'I earn, We need money':
+					cls
+					gs'stat'
+
+					'<center><img src="images/pic/clener2.jpg"></center>'
+					'You shrugged. "I earn. I need money." Stas smiled "Well, for an attractive girl I can find a decent part time. I just need to merchandisers."'
+
+					act 'You can read more?':
+						cls
+						svQW = 1
+						gs'stat'
+
+						'<center><img src="images/pic/clener2.jpg"></center>'
+						'You asked Stas Details. Stas said to you "Everything is very simple. In the northern, central and sleeping areas are supermarkets. You will come to our office, taking the job to job, then go into all these supermarkets and arrange it according to the instructions of our products. At the box office take a check confirms, you were on the job. Then you are in our office and we will pay you a fee. 500 rubles. The work you will have a few hours. Labour I`m not asking. Well, since?"'
+
+						act 'Not interested':gt'clener','start'
+						act 'I agree':
+							cls
+							svQW = 2
+							gs'stat'
+
+							'<center><img src="images/pic/clener2.jpg"></center>'
+							'You agreed and Stas nodded in satisfaction, then he came out of the closet.'
+
+							act 'Escape':gt'clener','start'
+						end
+					end
+				end
+
+				exit
+			end
+
+			'You wash the floor in the bathroom and kicked all the toilets and urinals to shine. Then you were given 100 rubles for the job.'
+
+			act 'Logout':gt'clener','start'
+		end
+	end
+
+	act 'Logout':gt'street'
+end
+--- clener ---------------------------------
+

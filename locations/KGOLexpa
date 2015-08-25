@@ -1,0 +1,164 @@
+# KGOLexpa
+KGOLneedExpNextLvl = (KGOLlvl*10)*KGOLlvl
+KGOLneedExp = KGOLneedExpNextLvl-KGOLexp
+if KGOLneedExp <= 0 and KGOLlvl > KGOLlvlr:KGOLlvlr = KGOLlvl & KGOLpoint += 10 & KGOLspellpoint += 1 & KGOLlvl += 1 & KGOLexp = 0
+
+$KGOLatk = {
+	KGOLzasV = RAND(KGOLspeedV/4,KGOLspeedV)
+	KGOLataka = RAND(KGOLspeed/2,KGOLspeed*2)
+
+	if KGOLataka >= KGOLzasV:
+		if KGOLataka >= KGOLzasV*2:
+			KGHPnpow = RAND(KGOLpower/2,KGOLpower)
+			KGHPV -= KGHPnpow
+
+			'<font color = green>CRETE <<KGHPnpow>></font>'
+		else
+			KGHPnpow = RAND(KGOLpower/10,KGOLpower/4)
+			KGHPntpow = KGHPnpow-KGOLbronaV
+			if KGHPntpow <= 0:KGHPntpow = 1
+			KGHPV -= KGHPnpow
+
+			'<font color = blue>Hit <<KGHPnpow>></font>'
+		end
+	else
+		'<font color = red><<$KGname>> I dodged your attack</font>'
+	end
+}
+
+$KGOLatkPoison = {
+	KGOLzasV = RAND(KGOLspeedV/4,KGOLspeedV)
+	KGOLataka = RAND(KGOLspeed/2,KGOLspeed*2)
+
+	if KGOLataka >= KGOLzasV:
+		poison += KGOLspell4+1
+		if KGOLataka >= KGOLzasV*2:
+			KGHPnpow = RAND(KGOLpower/2,KGOLpower)
+			KGHPV -= KGHPnpow
+
+			'<font color = green>CRETE <<KGHPnpow>></font>'
+		else
+			KGHPnpow = RAND(KGOLpower/10,KGOLpower/4)
+			KGHPntpow = KGHPnpow-KGOLbronaV
+			if KGHPntpow <= 0:KGHPntpow = 1
+			KGHPV -= KGHPnpow
+
+			'<font color = blue>Hit <<KGHPnpow>></font>'
+		end
+	else
+		'<font color = red><<$KGname>> I dodged your attack</font>'
+	end
+}
+
+$KGOLatkFB = {
+	KGHPV -= KGOLpower
+
+	'<font color = green>Fireball inflicts damage <<KGOLpower>> Power</font>'
+}
+
+$KGOLatkV = {
+	KGOLzas = RAND(KGOLspeed/4,KGOLspeed)
+	KGOLatakaV = RAND(KGOLspeedV/2,KGOLspeedV*2)
+
+	if KGOLatakaV >= KGOLzas:
+		if KGOLatakaV >= KGOLzas*2:
+			KGHPnpow = RAND(KGOLpowerV/2,KGOLpowerV)
+			KGHP -= KGHPnpow
+
+			'<font color = red>CRETE <<KGHPnpow>></font>'
+		else
+			KGHPnpow = RAND(KGOLpowerV/10,KGOLpowerV/4)
+			KGHPntpow = KGHPnpow-KGOLbrona
+			if KGHPntpow <= 0:KGHPntpow = 1
+			KGHP -= KGHPnpow
+
+			'<font color = brown>Hit <<KGHPnpow>></font>'
+		end
+	else
+		'<font color = green>You dodged attacks</font>'
+	end
+}
+
+$KGOLrise = {
+	cls
+	'<center><b>Screen improve</b></center>'
+	'Power <<KGOLstren>>, speed and evasion <<KGOLspeed>>, endurance <<KGOLvital>>, intelligence <<KGOLintel>>'
+	'Available glasses enhance the skills <<KGOLpoint>>'
+
+	if KGOLpoint > 0:
+		act 'Power':
+			KGOLstren += 1
+			KGOLpoint -= 1
+			dynamic $KGOLrise
+		end
+		act 'Speed/Evasion':
+			KGOLspeed += 1
+			KGOLpoint -= 1
+			dynamic $KGOLrise
+		end
+		act 'Endurance':
+			KGOLvital += 1
+			KGOLpoint -= 1
+			dynamic $KGOLrise
+		end
+		act 'Intelligence':
+			KGOLintel += 1
+			KGOLpoint -= 1
+			dynamic $KGOLrise
+		end
+	end
+
+	act 'Exit Screen improve':gt'KGOLgame'
+}
+
+$KGOLrise2 = {
+	cls
+	'<center><b>Screen skills</b></center>'
+	'Available glasses improve skills <<KGOLspellpoint/4>>'
+	''
+
+	if KGOLspellpoint >= 4:
+		if KGOLklass = 1:
+			!warrior
+			'Slam, skill = <<KGOLspell>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Multiple punch, skill = <<KGOLspell2>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell2 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Increased armor, skill = <<KGOLspell3>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell3 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+		elseif KGOLklass = 2:
+			!thief
+			'A sneaky punch, skill = <<KGOLspell4>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell4 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Poisoned Blade, skill = <<KGOLspell5>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell5 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Invisibility, skill = <<KGOLspell6>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell6 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+		elseif KGOLklass = 3:
+			!magician
+			'Fireball, skill = <<KGOLspell7>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell7 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Dropping, skill = <<KGOLspell8>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell8 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Circle of Fire, skill = <<KGOLspell9>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell9 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+		elseif KGOLklass = 4:
+			!priest
+			'Beat Magic, skill = <<KGOLspell10>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell10 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Treatment, skill = <<KGOLspell11>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell11 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Obkast, skill = <<KGOLspell12>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell12 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+		elseif KGOLklass = 5:
+			!archer
+			'Powerful shot, skill = <<KGOLspell13>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell13 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Triple Shot, skill = <<KGOLspell14>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell14 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Mana Regen, skill = <<KGOLspell15>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell15 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+		else
+			!barbarian
+			'Thunder strike, skill = <<KGOLspell16>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell16 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Camp, skill = <<KGOLspell17>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell17 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+			'Recovery, skill = <<KGOLspell18>>. <a href="exec:KGOLspellpoint -= 4 & KGOLspell18 += 1 & dynamic $KGOLrise2 ">Attach point in skill</a>'
+		end
+	end
+
+	act 'Exit the screen skills':gt'KGOLgame'
+}
+
+$KGOLatkKGOLspell2 = {
+	:multiloop
+	KGLOloop -= 1
+	dynamic $KGOLatk
+	if KGLOloop > 0:jump'multiloop'
+}
+--- KGOLexpa ---------------------------------
+

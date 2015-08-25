@@ -1,0 +1,195 @@
+# bedrPar
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+minut = minut + 1
+gs'stat'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Your bedroom</font></b></center>'
+'<center><img src="images/qwest/alter/<<$loc>>.jpg"></center>'
+'A small room in which barely squeezed <a href="exec:GT ''loker'',''start''">cupboard</a>, your <a href="exec:GT ''bedPar''">bed</a>, <a href="exec:GT ''stolPar''">desk</a> Bed and sister.'
+if komp = 1:'On the table is yours <a href="exec:gorodokKomp = 1 & GT ''Komp'',''start''">notebook</a>.'
+gorodokKomp = 0
+
+if sisboyQW > 10:sisboyQW = 10
+
+gs'dinsister'
+
+!if StrongNarkota > 20 and narkossister = 1 and narkosstrah >= 3 and narkosis_count = 1:
+!    $narkosisterstrahend = {
+	    cls
+	    cla
+	    gs'stat'
+	    willpower -= 50
+	    manna - = 50
+	    '<center><img src="images/qwest/alter/sister.jpg"></center>'
+	    'To your sister I went and said, - Light avoiding me why, what happened, STORIES?'
+	    'And you tell sister, what did you learn about that, where to buy drugs, and you wanted to try terribly, and then I was afraid, that tell the mother, that is randomly and just once and will no longer.'
+        'Sister strictly looked at you and said, - Fool you Svetulya, I`m not a mother kazhu, but the first and last time, it was not worth it at all to do. If you continue, then your zhiz will not be worth a damn.'
+	    'Swear, that more drugs or-or'
+	    act 'Poquelinctsya':gt $loc, $metka & narkosstrah = 0 & narkossista = 1 & narkosis_count = 0
+	    exit
+    end
+
+    }
+!end
+
+act 'Exit the room':
+	gt'korrPar'
+end
+if sisboyparty_day + 1 = daystart and sisboyparty = -1 and hour = 22:
+	gs'family'
+else
+	gs'family'
+	
+	act 'Exit the room':
+		gt'korrPar'
+	end
+
+	if rexCarCount >= 9 and sisterHere = 1 and hour < 3 and rexSmsDay ! daystart and smsForRex < 13:
+		act 'Take the phone sisters':gt'reks','sms'
+	end
+
+	if student > 0 and kursovik < 100:
+		act 'Write kursovik 1 h':
+			cla
+			*clr
+			minut = minut + 60
+			kursovik = kursovik + RAND(intel/20,intel/10)
+			if kursovik > 100:kursovik = 100
+			manna = manna - 10
+
+			'<center><img src="images/pic/study.jpg"></center>'
+			'You sat on the course work and prepare it on <<kursovik>> percent.'
+
+			act 'Logout':gt $curloc
+		end
+	end
+
+	if horny >= 50 and sisterHere = 0:
+		act 'Masturbate':
+			gt'selfplay'
+		end
+	end
+
+	if pornMagazine > 0:
+		'Under the mattress you have is hidden pornozhurnal.'
+	end
+
+	if sisterHere = 0 and pornMagazine > 0:
+		dynamic $d_read_porn
+	end
+
+	dynamic $d_read_book
+
+	if tovarL > 0:'You kept <<tovarL>> units of small goods. The maximum you can keep in your room 30 units sold.'
+
+	if card > 0:
+		act 'Take a deck of cards':
+			gt'card'
+		end
+	end
+
+	if dur > 0:
+		'You have hidden <<dur>> doses pale lady'
+	end
+
+	if dur > 0 and narkday ! day:
+		act 'Nyuhnut pale lady 5 min':
+			cla
+			*clr
+			minut = minut + 5
+			narkday = day
+			health = vital*10 + stren*5
+			willpower = intel*5 + will*5
+			manna = (intel*magik) + magik*100 + vital*10 + rikudo
+			horny = 100
+			nark = nark + 10
+			dur = dur - 1
+
+			'<center><img src="images/pic/dur.jpg"></center>'
+			'You otsypali dose of powder and its nyuhnuli, then you feel just fine.'
+
+			act 'Logout':gt $curloc
+		end
+	end
+end
+
+if obruch > 0 and obruchday ! day:
+	$sitrobr = '<a href="exec: dynamic $sitrobrd ">twist wrap</a>'
+else
+	$sitrobr = ''
+end
+
+if bookYog > 0 and bookYogday ! day:
+	$sitryog = '<a href="exec: dynamic $sitryogd ">Meditation</a>'
+else
+	$sitryog = ''
+end
+
+if skak > 0 and skakday ! day:
+	$sitrskak = '<a href="exec: dynamic $sitrskakd ">jumping rope</a>'
+else
+	$sitrskak = ''
+end
+
+if pressday ! day:
+	$sitrpress = '<a href="exec: dynamic $sitrpressd ">abdominal exercises</a>'
+else
+	$sitrpress = ''
+end
+
+if pushday ! day:
+	$sitrpush = '<a href="exec: dynamic $sitrpushd ">such as push-ups</a>'
+else
+	$sitrpush = ''
+end
+$sportsitr = '<<$sitrpush>> <<$sitrpress>> <<$sitrskak>> <<$sitryog>> <<$sitrobr>>'
+'The room is not so much space, but enough for a variety of sport activities such as <<$sportsitr>>'
+
+if gobelen>0:'Ready Tapestry <<gobelen>> Pieces'
+if poSkill>=50 and tkan>0:'Your cloth will suffice for <<tkan>> lessons'
+if poSkill>=50 and tkan<=0:'You do not have fabric'
+if poSkill>=200:
+     if newgobelen=0 and tkan>0:
+         act'Start a new tapestry':
+         cls
+         tkan-=1
+         newgobelen=1
+         minut+=15
+         gs'stat'
+         'You are within 15 minutes prepared tissue on which pattern will embroider and broadly marked out the outlines of a pattern.'
+         act'Set aside':gt $curloc
+         end
+     end
+     if newgobelen>=1:
+     'Tapestry is ready for <<newgobelen/10>> percent'
+         act'Embroidering a tapestry for an hour':
+         cls
+         minut+=60
+         poSkill+=rand(0,1000)
+         gobramax=poSkill/100
+         gobramin=poSkill/200
+         newgobelen+=rand(gobramin,gobramax)
+         gs'stat'
+         if newgobelen<1000:'You are within an hour embroidered tapestry and now he is ready to <<newgobelen/10>> percent'
+			 if newgobelen>=1000:
+			 newgobelen=0
+			 gobelen+=1
+			 'You managed to fully embroidered tapestry.'
+			 end
+         act'Set aside':gt $curloc
+         end
+     end
+end
+
+--- bedrPar ---------------------------------
+

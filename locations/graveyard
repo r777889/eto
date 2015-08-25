@@ -1,0 +1,32 @@
+# graveyard
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+clr
+gs'stat'
+gs'time'
+
+'<center><H4>Cemetery</H4></center>'
+'<center><img src="images/pic/graveyard.jpg"></center>'
+'Very quiet place surrounded by peace wound philosophical thoughts about the impermanence of life.'
+'At the far end of the cemetery you can see the dilapidated building, which used to be whether the crypt, whether chapel.'
+
+act 'Exit the highway':minut += 15 & nroad = 3 & gt'road'
+
+act 'Go to the crypt':
+	cls
+	minut += 15
+	gs'stat'
+	gs'time'
+    '<center><H4>Cemetery suburb</H4></center>'
+	'<center><img src="images/pic/graveyard2.jpg"></center>'
+	'The windows are covered with dust protective lattice window, everything was overgrown with bushes.'
+	'Strange place, near any village, and suddenly - cemetery. Oglyadevnis on the sides you noticed, that the farther into the interior of the cemetery - the less Magil monuments and names, and on a barely noticeable mounds something-where visible rotten stick with tablets. On one of them you could hardly have distinguished number and date of death, and it is even more nauseated you.'
+    'And then on the outskirts of the cemetery between the trees you see, that, of overgrown bushes and trees cemetery, seen strange construction.'
+    
+        act 'Go to buildings':minut += 15 & gt'graveyard1','start'
+
+	act 'Exit the highway':minut += 15 & gt $curloc
+end
+--- graveyard ---------------------------------
+

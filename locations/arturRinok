@@ -1,0 +1,138 @@
+# arturRinok
+if $ARGS[0] = 'start':
+	if arturKnow = 0:
+		cls
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+		'He caucasian amiably smiled and handed you a tangerine.'
+
+		act 'Take a tangerine':
+			cls
+			minut += 2
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+			'You took a tangerine from the hands of Caucasians, He smiled at you and said, "You`re so beautiful devushka. Wai. Sponges persik. Come to eat barbecue, this`ll give chacha!"'
+
+			act 'Refuse':
+				cls
+				minut += 2
+				if bag = 0:$arturgift = 'handbag'
+				if bag > 0:$arturgift = 'cosmetics'
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+				'You started to refuse and backs away from loving Caucasian. He, meanwhile, was not appeased "Wai, zachem offend? Nothing bad will not Tiebei, I swear by my mother! Hochish, I`ll give tebe <<$arturgift>>"'
+
+				act 'Escape':gt'Grinok'
+				act 'Interest':
+					cls
+					minut += 2
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+					'Are you interested in this property unfamiliar Caucasian. He is immediately noticed and leaving the tray to the other Caucasian immediately came up to you and took you by the arm "Ne afraid devochka, Uncle Arturik ne bites."'
+
+					act 'Escape':gt'Grinok'
+					act 'Go to Arthur':gt'arturHome'
+				end
+			end
+		end
+	elseif arturKnow = 1:
+		if arturday ! day:
+			gt'arturQW','arturQW_1'
+		elseif arturday = day:
+			cls
+			minut += 5
+			gs'stat'
+
+			if arturblowday ! day:
+				'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+				'Arthur smiled kindly and handed you a tangerine. "Wai, work to do, I`m sorry. Unless Quick."'
+
+				act 'Go to Arthur':gt'arturkiosk'
+			elseif arturblowday = day:
+				'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+				'Arthur smiled kindly to you. "Wai, work to do, I`m sorry."'
+
+				act 'Escape':gt'Grinok'
+			end
+		end
+	end
+
+	act 'Escape':gt'Grinok'
+end
+
+if $ARGS[0] = 'work_1':
+	cls
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+	'-Maladets Svetsik, time has come, Getting Started Daraga, evening with you burst into tears'
+
+	act 'Trade':
+		cls
+		hour = 18
+		arturDaysWorked1 += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/arturQW/arturQW_3.jpg"></center>'
+		'You worked until the evening at the counter, selling fresh fruit and not very, quarreled with customers and very tired.'
+
+		if arturDaysWorked1 >= 10:
+			gt'arturQW','arturQW_2'
+		else
+			act 'Go to Arthur':
+				cls
+				minut += 5
+				money += 5000
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/arturQW/arturQW_4.jpg"></center>'
+				'-Sveta, atlichna parabotala, Here you go deservedly earned piles, Arthur holds out to you 5000 rubles.'
+				'-I like you very much for helping, Thank you very much Arturchik, look at him grateful eyes and take the money.'
+				'-Well, you znaesh, INTO Tiebei I cry not only for the eyes krasivae, but also elastic ass, and compresses your hard rolls.'
+
+				act 'Escape':gt'Grinok'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'work_2':
+	cls
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+	if arturDaysWorked2 = 0:'-That`s my new super sexy secretary came.'
+	'Quickly Started, we`ve got the usual paperwork complete ass.'
+
+	act 'Work':
+		cls
+		hour = 17
+		arturDaysWorked2 += 1
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/arturQW/arturQW_6.jpg"></center>'
+		'You hour working at a computer, checked checked buying and selling, calculated daily expenses and income.'
+
+		act 'Go to Arthur':
+			cls
+			minut += 5
+			money += 10000
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/arturQW/arturQW_7.jpg"></center>'
+			'-Fantastic Sveta worked, Now I for papers can be calm.'
+			'-Yes, you got a mess, I still have to deal with it all and razbyratsya.'
+			'-Oh well, uspakoysya baby, I have time to figure it out all spakoyno.'
+			'And now let`s go eat barbecue, chacha drink, grabbing you by the ass and strongly squeezing rolls, Arthur suggested.'
+
+			act 'Go to Arthur':gt'arturHome'
+			act 'Escape':gt'Grinok'
+		end
+	end
+end
+--- arturRinok ---------------------------------
+

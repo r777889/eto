@@ -1,0 +1,39 @@
+# authors1
+clr
+minut = minut + 10
+gs'stat'
+
+'<center><img src="images/casino/avt.jpg"></center>'
+'Rules of the game are very simple: toss a coin 10 rubles and pull lever. Jackpot 100 thousand.'
+
+act 'Pull the lever':
+	if money >= 10:
+		clr
+		money = money-10
+
+		x_10 = RAND(1,1000)
+		if x_10 = 1000:
+			money = money+100000
+			msg 'You won the jackpot! Congratulations!'
+		elseif x_10 < 1000 and x_10 >= 850:
+			money = money+20
+			msg 'Congratulations, you have won 20 rubles'
+		elseif x_10 >= 500 and x_10 < 850:
+			money = money+10
+			msg 'Congratulations, you have won 10 rubles'
+		elseif x_10 < 500:
+			minut = minut+10
+			msg 'Alas, you lose, try again'
+		end
+
+		gt'authors1'
+	else
+		msg 'And how are you going to play without money? Come back when you find the necessary amount'
+		gt'authors1'
+	end
+end
+act 'Back in the room':
+	gt'igravt'
+end
+--- authors1 ---------------------------------
+

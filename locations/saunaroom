@@ -1,0 +1,67 @@
+# saunaroom
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+$metkaBroom = $ARGS[0]
+$locBroom = $CURLOC
+
+$metkaM = $ARGS[0]
+$locM = $CURLOC
+
+saunaYouRoom = 1
+
+'<center><b><font color = maroon>Room</font></b></center>'
+'<center><img src="images/pic/saunaroom.jpg"></center>'
+'The room barely cleaned <a href="exec:sec += 30 & GT ''saunabed''">bed</a> and <a href="exec:GT ''loker'',''start''">cupboard</a>.'
+'On the wall hangs <a href="exec:GT ''mirror'',''start''">mirror</a>'
+
+if money > 0 and workDolg > 0:workDolg -= money & money = 0
+if workDolg > 0:'Your duty is <<workDolg>> rubles'
+
+act 'Exit to the sauna':gt'saunawork'
+
+if workDolg > 0:
+	act 'There is a duty(5 min)':
+		cla
+		*clr
+		minut += 5
+		workDolg += 50
+		health = health + 30
+		manna = manna + 100
+		energy = 20
+		water = 20
+		fat += 50
+		salo += 1
+		frost = 0
+		gs'stat'
+
+		'<center><img src="images/pics/food.jpg"></center>'
+		'You drank tea with cookies, sweet and very bad for the figure, but it is so nice.'
+
+		act 'Get up from the table':gt $curloc
+	end
+	act 'Borrow cosmetics':
+		workDolg += 1000
+		kosmetica = kosmetica + 25
+		gt $curloc
+	end
+end
+
+if water < 20:
+	act 'Drink':
+		cla
+		minut = minut + 5
+
+		if water >= 20:
+			'Water you no longer climbs.'
+		elseif water < 20:
+			water = water +20
+
+			'You will be happy to drink a glass of water.'
+		end
+
+		act 'Get up from the table':gt $curloc
+	end
+end
+--- saunaroom ---------------------------------
+

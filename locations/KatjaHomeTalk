@@ -1,0 +1,196 @@
+# KatjaHomeTalk
+gs'KatjaHomeDin'
+gs'stat'
+
+'<center><b><font color = maroon><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
+'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+
+if sweat > 0:
+	'Kate wrinkled her nose "Sveta, you`re all sweaty, go to the shower?"'
+
+	act 'Walk in shower':
+		cls
+		minut += 15
+		gs'stat'
+
+		if KatjaHorny >= 50:
+			'Kate take you to the showers. She blushed and said, "I, too, that the sweat, Come join Pomo."'
+
+			act 'Wash one':
+				cls
+				dynamic $showerdin
+				minut += 15
+				horny = horny + 1
+				hapri = 1
+				mop = 1
+				sweat = -3
+				if frost > 0:frost = 0
+				gs'stat'
+
+				'<center><img src="images/pics/dush.jpg"></center>'
+				'You kicked out of the shower and Kate closed the door. You got into the shower and began to lather his body sponge. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
+
+				act 'Exit out of the shower':gt $curloc
+			end
+			act 'Wash together':
+				cls
+				dynamic $showerdin
+				minut += 15
+				horny = horny + 1
+				hapri = 1
+				mop = 1
+				sweat = -3
+				if frost > 0:frost = 0
+				horny += 10
+				KatjaHorny += 10
+				KatjaLust += 1
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/katja/shower.jpg"></center>'
+				'You undressed and together with Kate climbed into the shower.'
+
+				if lobok <= 0:
+					'Katie`s eyes slid over your body a little lingering on your breasts and pussy. Kate took a shower in his hands and began to pour you.'
+
+					act 'Further':
+						cls
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/katja/shower2.jpg"></center>'
+						'Kate gently shampooed your gel and rinse with warm shower jets.'
+
+						if KatjaLust >= 10 and KatjaHorny >= 90:
+							'Kate washed the soap from your pussy and her breasts with gentle stroking his little palms. Her cheeks were flushed and her eyes glistened.'
+
+							dynamic $katja_shower_kiss_home
+						else
+							'Finally Kate finished you wash and pomylas itself.'
+
+							act 'Exit out of the shower':gt $curloc
+						end
+					end
+				elseif lobok > 0:
+					'Katie`s eyes slid over your body a little lingering on her breasts and pubic hair. Kate smiled "Svetulya, you got such vegetation, it is no longer fashionable, I`ll let your hair sbreyu."'
+
+					act 'Shaving the hair between her legs':
+						cls
+						minut += 5
+						lobok = -3
+						KatjaHorny += 10
+						KatjaLust += 1
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/katja/lobok.jpg"></center>'
+						'Kate sat in the bathroom and you lathered your crotch passing lathered his stomach and chest. She took a razor and began to gently shave your hairs between her legs.'
+
+						if KatjaLust >= 10 and KatjaHorny >= 90:
+							'Kate washed the soap from your pussy and her breasts with gentle stroking his little palms. Her cheeks were flushed and her eyes glistened.'
+
+							dynamic $katja_shower_kiss_home
+						else
+							'Finally Katya all shaved your hair between her legs and began to wash off the soap with you.'
+
+							act 'Exit out of the shower':gt $curloc
+						end
+					end
+				end
+			end
+		elseif KatjaHorny < 50:
+			dynamic $showerdin
+			minut += 15
+			horny = horny + 1
+			hapri = 1
+			mop = 1
+			sweat = -3
+			if frost > 0:frost = 0
+			gs'stat'
+
+			'<center><img src="images/pics/dush.jpg"></center>'
+			'Kate showed you where the toiletries and came out of the shower. You got into the shower and began to lather his body sponge. After washed soap and washed her hair with shampoo. Rinse the shampoo you become completely clean.'
+
+			act 'Exit out of the shower':gt $curloc
+		end
+	end
+else
+	!not sweaty
+	if hour < 20:
+		if npcSex[14] = 1 and dom>=KatjaDom:
+			act 'Suggest a walk in the park':
+				dom-=1
+				minut += 15
+				KatjaHorny += 5
+				$ev_name = 'Katya'
+				$ev_name_a = 'Katya'
+				$ev_name_om = 'Katya'
+				dick = 0
+				place = 1
+				Frend_num = 14
+				p_lust = KatjaLust
+				p_slut = KatjaSlut
+				p_dom = KatjaDom
+				p_horny = KatjaHorny
+				p_alko = 0
+				gt'placer'
+			end
+		end
+		act 'Chatting with Katya':
+			cls
+			KatjaHorny += 1
+			!KatjaLust += 1
+			!if npcSex[14] = 1:
+			minut += 15
+			gs'stat'
+
+			'<center><b><font color = maroon><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
+			'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+
+			if katjaPreg = 0 or knowKatjaPreg >= 1:
+				if KatjaHorny < 50:'Katya talks about the lessons, cosmetics, latest fashion trends in clothing and other very important things.'
+				if KatjaHorny >= 50:
+					dynamic $d_katjaSextalk
+					exit
+				end
+			elseif katjaPreg > 0 and knowKatjaPreg = 0:
+				if knowKatjaPreg = 0:
+					'Kate biting her lip without looking you in the eye, Finally typed determination and says "Sveta, I am pregnant."'
+
+					act 'From?':
+						cls
+						minut += 5
+						knowKatjaPreg = 1
+						gs'stat'
+
+						'You asked dumbfounded "From." Kate wrinkled her nose, "From Santa Claus! Yes by Voinov, I was with him at the Christmas party school slept. And flew. Jesus, now do?"'
+
+						act 'I have no idea':gt $curloc
+					end
+				else
+					''
+				end
+			end
+
+			act 'Further':gt $curloc
+		end
+
+		if KatjaLust > 10:
+			katkisrand = RAND(0,5)
+			if katkisrand = 0:
+				cls
+				gs'stat'
+
+				'<center><b><font color = maroon><<$npcName[14]>> <<$npcSurName[14]>></font></b></center>'
+				'<center><img src="images/qwest/alter/npc/14.jpg"></center>'
+
+				dynamic $d_katjahornykiss
+			end
+		end
+	elseif hour >= 20:
+		'Katya says, he wants to go to the disco.'
+
+		if money >= 25:act 'To go to a disco':money -= 25 & minut += 15 & gt'gdkin'
+	end
+end
+
+act 'Say goodbye and go home':gt'gorodok'
+--- KatjaHomeTalk ---------------------------------
+

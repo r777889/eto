@@ -1,0 +1,123 @@
+# nogorslut
+if GorSlut <= 0:
+	bonusotnG = vnesh/2
+	if bonusotnG <= 0:bonusotnG = 1
+	grupNPC[numnpc] += bonusotnG
+	talkmarkeronce = 0
+
+	if grupNPC[numnpc] < 20 and talkmarkeronce = 0:
+		talkmarkeronce = 1
+
+		'You are chatting about any nonsense and <<$npcName[numnpc]>> listening to you on the floor of the ear.'
+	elseif grupNPC[numnpc] < 80 and grupNPC[numnpc] >= 20 and talkmarkeronce = 0:
+		talkmarkeronce = 2
+
+		'You are chatting about any nonsense and <<$npcName[numnpc]>> you willingly assents.'
+	elseif grupNPC[numnpc] >= 80 and talkmarkeronce = 0:
+		talkmarkeronce = 3
+
+		'You are chatting about any nonsense and <<$npcName[numnpc]>> with a smile, talking to you, also telling all sorts of stories.'
+
+		if numnpc = 1:
+			Mud = totminut+60
+			!cool Dima Nosov
+
+			if DimaRudeQW > 0 and DimaRudeBlock = 0:
+				'Dima looks at you gaze detached "After high school, go to my. I`ll wait for you at the entrance."'
+			end
+		elseif numnpc = 2:
+			!bot Artem Chebotarev
+			''
+		elseif numnpc = 3:
+			Mud = totminut+60
+			!sportik Ivan Prokhorov
+			if IvanShowerQW = 1:
+				IvanShowerQW = 2
+
+				'Ivan smiles "Light, I`m sorry for what happened in the shower. Just thought I`d fooled around, nothing."'
+			elseif IvanShowerQW = 10:
+				IvanShowerQW = 11
+				manna = 0
+				Mud = 0
+
+				'Ivan thinks "Light, I would like to speak to an account of what happened in the shower. You`re a cool girl, and everything was great, but I`m not ready for relationships, I now need to vigorously engage in sports, that would get to the championship of Russia. I can not be distracted by girls, even such attractive like you. Therefore, let`s just forget about what happened and be friends."'
+			end
+		elseif numnpc = 4:
+			!Igor Kruglov
+			''
+		elseif numnpc = 5:
+			!Fedor goats
+			''
+		elseif numnpc = 6:
+			!Peter Klyuyev
+			''
+		elseif numnpc = 7:
+			!Leszek Tsarev
+			''
+		elseif numnpc = 8:
+			!Svyatoslav soldiers
+			''
+		elseif numnpc = 9:
+			!Vitek Cats
+			''
+		elseif numnpc = 10:
+			!Gopnik Dan Ryzhov
+			''
+		elseif numnpc = 11:
+			!Gopnik Bob Shulgin
+			''
+		elseif numnpc = 12:
+			!Julia Milov
+			''
+		elseif numnpc = 13:
+			!Lariska Gruzdev
+			''
+		elseif numnpc = 14:
+			!Katya Meynold
+			''
+			if KatjaOTN > 0:KatjaHorny += 10 & 'Katya blushes slightly and depart from your eyes.'
+		elseif numnpc = 15:
+			!Vic Meynold
+			''
+		elseif numnpc = 16:
+			!Natasha Belova
+			''
+		elseif numnpc = 17:
+			!Inna Devyatova
+			''
+		elseif numnpc = 18:
+			!Christine Zvereva
+			if kristinaSex = 0 and swinbeggor = 0 and kristinaSex = 0:
+				''
+			elseif kristinaSex = 0 and swinbeggor > 0 and kristinaSex = 0:
+				grupNPC[numnpc] = 20
+				'Christine hate looking at you. "You bitch already tired under my feet dangle!"'
+			elseif kristinaSex > 0:
+				''
+			end
+		elseif numnpc = 19:
+			!Length Starov
+			''
+		elseif numnpc = 20:
+			!Elena Kotova
+			''
+		elseif numnpc = 21:
+			!Lera Tsar
+			''
+		elseif numnpc = 22:
+			!Bella Artamonov
+			''
+		elseif numnpc = 23:
+			!Albina Barlovskaya
+			''
+		elseif numnpc = 24:
+			!Pauline sebagotulina
+			''
+		elseif numnpc = 25:
+			!Sonia Ivanko
+			''
+		end
+	end
+end
+--- nogorslut ---------------------------------
+

@@ -1,0 +1,253 @@
+# family
+if day ! m_day:
+	m_day = day
+	father_go = RAND(0,1)
+	mother_go = RAND(0,1)
+end
+
+indorf = 0
+
+if indorf_month ! month:
+	!once a month
+	indorf_month = month
+	dostupindorf = 1
+end
+
+if week = 1 and dostupindorf = 1:
+	dostupindorf = 0
+end
+
+if week = 6 and hour >= 12 and dostupindorf = 1:
+	!go to the village
+	indorf = 1
+	father_go = 0
+	mother_go = 0
+end
+
+if week = 7 and hour < 20 and dostupindorf = 1:
+	!go to the village
+	indorf = 1
+	father_go = 0
+	mother_go = 0
+end
+
+if indorf = 1 and sister_opr_indorf = 0:
+	sister_opr_indorf = 1
+	sister_indorf = RAND(0,1)
+end
+
+if indorf = 0:
+	sister_opr_indorf = 0
+	sister_indorf = 0
+end
+if sisboyparty_day + 1 = daystart:sister_indorf = 0
+if sister_indorf = 1:sisterHere = 0
+''
+
+if StoryLine > 0:
+	if sisboypartyQW >= 2 and sisboyparty ! 0 and sisboyparty_day + 1 < daystart and randsbPartyDay <= daystart and week >= 4:
+		if week = 4:randParty = rand(5,7) & randsbPartyDay = daystart + 4
+		if week = 4 and randParty = 5:sisboyparty_day = daystart
+		if week = 4 and randParty = 6:sisboyparty_day = daystart + 1
+		if week = 4 and randParty = 7:sisboyparty_day = daystart + 2
+		
+		if week = 5:randParty = rand(6,7) & randsbPartyDay = daystart + 3
+		if week = 5 and randParty = 6:sisboyparty_day = daystart
+		if week = 5 and randParty = 7:sisboyparty_day = daystart + 1
+		if week = 6:randParty = 7 & randsbPartyDay = daystart + 2 & sisboyparty_day = daystart
+	end
+	if sisboyparty_day + 1 = daystart and sisboyparty = 2 and hour > 18 and sisboypartyQW = 1:
+		cls
+		minut += 5
+		sisboyparty = -1
+		gs'stat'
+		'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_7.jpg"></center>'
+		'You have forgotten to come to a party in honor of the birthday Rex.
+- Oh well, I hope they are not offended me greatly...'
+		act 'Move away':gt $loc,$metka
+		exit
+	end
+	if sisboyparty_day + 1 = daystart and (sisboyparty = 2 or sisboyparty = 1) and hour > 18 and hour < 22 and sisboypartyQW > 1:
+		if sisboyparty = 1:sisboyparty = -1
+		if sisboyparty = 2:
+			cls
+			minut += 5
+			sisboyparty = -1
+			gs'stat'
+			'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_7.jpg"></center>'
+			'You just forgot to come to the party.
+- Oh well, I hope they are not offended me greatly...'
+			act 'Move away':gt $loc,$metka
+			exit
+		end
+	end
+
+	if sister_indorf = 0:
+		if $loc = 'bedrPar':
+			sisterHere = 0
+
+			if hour < 7:
+				sisterHere = 1
+				'Your sister <a href="exec:GT ''sistersleep''">Anya</a> asleep in bed.'
+			end
+			if week < 6:
+				if hour = 7:
+					sisterHere = 2
+					sisterdialog = 2
+					'Your sister <a href="exec:GT ''sister''">Anya</a> He is going to work.'
+				end
+			end
+			if week >= 6:
+				if hour >= 7 and hour < 10:
+					sisterHere = 1
+					'Your sister <a href="exec:GT ''sistersleep''">Anya</a> asleep in bed.'
+				end
+				if hour = 10:
+					sisterHere = 2
+					sisterdialog = 3
+					'Your sister <a href="exec:GT ''sister''">Anya</a> going for a walk.'
+				end
+			end
+			if hour >= 18 and sisboyparty_day + 1 ! daystart:
+				sisterHere = 2
+				sisterdialog = 0
+				'Your sister <a href="exec:GT ''sister''">Anya</a> He is sitting on the bed and reading a book.'
+			elseif sisboyparty_day + 1 = daystart and sisboyparty = -1 and hour = 22:
+				cls
+				minut += 5
+				gs'stat'
+				'<center><img src="images/qwest/alter/sisterQW/Party/sisboyQWParty_6_' + rand(1,7) + '.jpg"></center>'
+				'Drunk, disheveled Anne bursts into the room.
+You notice that her hair, All clothes are smeared with sticky sperm.
+In this form,, it falls on the bed and falls asleep instantly.'
+				sisboyparty = 1
+				act 'Move away':gt 'bedrPar'
+				exit
+			elseif sisboyparty_day + 1 = daystart and hour >= 22:
+				sisterHere = 1
+				if sisboypartyQW = 1:sisboypartyQW = 2
+				if sisboyparty = -1:sisboyparty = 1
+				'Your sister Anna drunk asleep in bed.'
+			end
+		end
+	end
+
+	if indorf = 0:
+		if $loc = 'bedrPar2':
+			if hour < 6 or hour >= 21:
+				'On the bed sleeping mother and stepfather.'
+
+				if hour = 21:
+					parsexrand = RAND(0,5)
+				end
+			end
+
+			if week < 6:
+			end
+			if week >= 6:
+			end
+		end
+
+		if $loc = 'sitrPar':
+			if hour < 7 or hour >= 21:
+				'Sleeping on the couch your younger brother <a href="exec:GT ''brother''">Kolka</a>.'
+			end
+
+			if week < 6:
+				if father_go = 0:
+					if hour >= 16 and hour < 21:
+						'Sitting on the couch <a href="exec:GT ''father''">stepfather</a> watching TV.'
+					end
+				end
+
+				if hour >= 18 and hour < 20:
+					'At the table sits your younger brother <a href="exec:GT ''brother''">Kolka</a> and teaches lessons.'
+				end
+
+				if hour = 20:
+					'Sitting on the couch your younger brother <a href="exec:GT ''brother''">Kolka</a> watching TV.'
+				end
+			end
+
+			if week >= 6:
+				if father_go = 0:
+					if hour >= 7 and hour < 21:
+						'Sitting on the couch <a href="exec:GT ''father''">stepfather</a> watching TV.'
+					end
+				elseif father_go = 1:
+					if hour >= 7 and hour < 16:
+						'Sitting on the couch <a href="exec:GT ''father''">stepfather</a> watching TV.'
+					end
+				end
+
+				if hour >= 18 and hour <= 20:
+					'Sitting on the couch your younger brother <a href="exec:GT ''brother''">Kolka</a> watching TV.'
+				end
+			end
+		end
+
+		if $loc = 'kuhrPar':
+			if week < 6:
+				if mother_go = 0:
+					if hour >= 16 and hour < 21:
+						'Near the plate is <a href="exec:GT ''mother''">mom</a> and that it is preparing.'
+					end
+				elseif mother_go = 1:
+					if hour >= 17 and hour < 21:
+						'Near the plate is <a href="exec:GT ''mother''">mom</a> and that it is preparing.'
+					end
+				end
+			end
+
+			if week >= 6:
+				if mother_go = 0:
+					if hour >= 7 and hour < 21:
+						'Near the plate is <a href="exec:GT ''mother''">mom</a> and that it is preparing.'
+					end
+				elseif mother_go = 1:
+					if hour >= 7 and hour < 16:
+						'Near the plate is <a href="exec:GT ''mother''">mom</a> and that it is preparing.'
+					end
+
+					if hour >= 17 and hour < 21:
+						'Near the plate is <a href="exec:GT ''mother''">mom</a> and that it is preparing.'
+					end
+				end
+			end
+		end
+
+		if $loc = 'korrPar':
+			if week < 6:
+			end
+			if week >= 6:
+			end
+		end
+
+		if $loc = 'vokzalG':
+			if week < 6:
+			end
+			if week >= 6:
+			end
+		end
+
+		if $loc = 'gdk':
+			if week < 6:
+				if hour >= 16 and hour < 18:
+					'Your sister <a href="exec:SiSgdk = 1 & GT ''sister''">Anya</a> He is sitting in the company of boys and girls and drinking beer.'
+				end
+			elseif week >= 6:
+				if hour >= 11 and hour < 18:
+					'Your sister <a href="exec:SiSgdk = 1 & GT ''sister''">Anya</a> He is sitting in the company of boys and girls and drinking beer.'
+				end
+			end
+		end
+
+		if $loc = 'gschool':
+			if (week < 6 and hour >= 15 and hour <= 17) or ((week >= 6 or kanikuli > 0) and hour >= 7 and hour <= 17):
+				'On the football field near the school your <a href="exec:GT ''brother''">brother</a> chasing soccer.'
+			end
+		end
+	end
+end
+--- family ---------------------------------
+

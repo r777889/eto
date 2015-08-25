@@ -1,0 +1,143 @@
+# parksvid
+minut += 60
+manna += 10
+gs'stat'
+
+'<center><b>Park</b></center>'
+'<center><img src="images/img/parksvid/0.jpg"></center>'
+'You and <<$telsob>> We met near the park'
+
+act 'To go for a walk':
+	if $telsob = 'Alla':
+		alla += 1
+
+		if alla >= 20:
+			parksvidrand = RAND(0,5)
+			if parksvidrand > 0 and parksvidrand < 3:
+				gt'parksvid','1'
+			elseif parksvidrand >= 3:
+				gt'parksvid','3'
+			end
+		elseif alla < 20:
+			gt'parksvid','3'
+		end
+	end
+	if $telsob = 'Masha':
+		masha += 1
+
+		if masha >= 20:
+			parksvidrand = RAND(0,10)
+			if parksvidrand > 0 and parksvidrand < 3:
+				gt'parksvid','1'
+			elseif parksvidrand >= 3:
+				gt'parksvid','3'
+			end
+		elseif masha < 20:
+			gt'parksvid','3'
+		end
+	end
+	if $telsob = 'Katya':
+		kat += 1
+
+		if kat >= 20:
+			parksvidrand = RAND(0,10)
+			if parksvidrand > 0 and parksvidrand < 3:
+				gt'parksvid','1'
+			elseif parksvidrand >= 3:
+				gt'parksvid','3'
+			end
+		elseif kat < 20:
+			gt'parksvid','3'
+		end
+	end
+end
+
+if $ARGS[0] = '1':
+	cla
+	*clr
+	'<center><img src="images/img/parksvid/1.jpg"></center>'
+	'When you walked through the park we noticed a man in a skirt. <<$telsob>> interested in what he does and still in a skirt'
+
+	act 'Go further':gt'parksvid','3'
+	act 'See what he`s doing':
+		cla
+		*clr
+		'<center><img src="images/img/parksvid/2.jpg"></center>'
+		'Coming closer, you notice that in the hands of men that-something round, It seems that he is engaged in the shot put.'
+		'"Girls you have moved a little bit and then you`ll get, sorry to be such beauties" he said, noticing your interest in his studies.'
+		'"That`s interesting, and they really do not have anything under her skirt" I asked <<$telsob>>.'
+		'"And I know where, Come and ask"'
+		'"Not, one will not go, We went together to ask" He said <<$telsob>>, making plaintive eyes.'
+
+		act 'Renounce and go for a walk on':gt'parksvid','3'
+		act 'Go with it':
+			cla
+			*clr
+			'<center><img src="images/img/parksvid/3.jpg"></center>'
+			'You two come to the guy, and <<$telsob>> begins to push you to the side, whispering in his ear "Well ask."'
+			'"Is it true that under the kilt did not put." you ask'
+			'"You want to know, Look and check." smiling guy said.'
+			'"Well, let`s see the Light." asked <<$telsob>>'
+			'"Here, take and look" Answer You'
+			'"Well look" He said <<$telsob>> defiantly pouting and sitting down on his haunches.'
+			'When she began to lift the kilt, man quickly slipped it on his head.'
+			'"Wow" Her voice came out of kilt, and died, after a few seconds you sick of it "Well, you lost in contemplation there?" and then ask you for the blessed face guy and head movements under the kilt you understand, that <<$telsob>> It does not consider the presence of underwear.'
+			'In a few minutes <<$telsob>> I got out from under the quilt wiping lip.'
+			'"The girls went to me and take a closer look." He suggested that guy is still standing with a beatific smile'
+
+			act 'Renounce and go for a walk on':gt'parksvid','3'
+			act 'Go to guy':
+				cla
+				*clr
+				orgasm += 1
+				lesbian += 1
+				minut += 30
+
+				'<center><img src="images/img/parksvid/4.jpg"></center>'
+				'When you come to a guy home, the guy at the door lifted kilt, I demonstrate his standing dildo, and stated "Well we continue acquaintance".'
+				'Emboldened <<$telsob>> immediately he dropped to his knees and clasped his lips began to suck dick. You crouched behind and pushing her panties began to fondle her pussy tongue.'
+
+				act 'Further':
+					cla
+					*clr
+					'<center><img src="images/img/parksvid/5.jpg"></center>'
+					'He picked it up and putting cancer on the bed, walked into her vagina, you`re not thinking long lay on the bed putting her pussy right in front of her face. A moment later you dug her tongue in pussy. After a couple of minutes you left off.'
+
+					act 'Further':
+						cla
+						*clr
+						'<center><img src="images/img/parksvid/6.jpg"></center>'
+						'Only you ochuhalsya orgasm, the guy took her by the shoulders and pulling back and knocked on his back by inserting cock in her mouth finished.'
+						'Few come to himself, you dressed and went back to the park'
+
+						act 'Escape':gt'parksvid','3'
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '2':
+	cla
+	horny = 0
+	minut += 90
+	gs'stat'
+
+	'When you`re finished, <<$telsob>> She said that she needed to flee and left'
+
+	act 'Escape':gt'park','start'
+end
+
+if $ARGS[0] = '3':
+	cla
+	horny = 0
+	minut += 90
+	gs'stat'
+
+	'When you`re finished, <<$telsob>> She said that she needed to flee and left'
+
+	act 'Escape':gt'park','start'
+end
+--- parksvid ---------------------------------
+

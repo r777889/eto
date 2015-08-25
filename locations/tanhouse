@@ -1,0 +1,91 @@
+# tanhouse
+$sexloc = $CURLOC
+
+gs'stat'
+
+'<center><b>Apartment Thani</b></center>'
+'<center><img src="images/img/centr/house.jpg"></center>'
+'Tania opens you quickly navigate to your room.'
+
+if tanpred = 0:
+	if tanya <= 50:
+		tanday = day
+		tanya += 3
+
+		'Not giving you to say a word, she pushes you on the bed and tears clothes'
+
+		act 'Sex':xgt'lezbsex','var'
+	elseif tanya > 50 and vnesh <= 20:
+		tanday = day
+		tanya += 3
+
+		'Not giving you to say a word, she pushes you on the bed and tears clothes'
+
+		act 'Sex':xgt'lezbsex','var'
+	elseif tanya > 50 and vnesh > 20:
+		'"Sveta, I have a great idea, mom just fired governess, let me offer my stepfather take you, he pays well 25000 per month, and the business is in the morning to cook breakfast, evening dinner well and clean up a bit, and you will live right here with us." Tanya protaratorila.'
+		'"And where did you get, that I will take your stepfather, I had in this area is not working" you ask.'
+		'"Believe, if I take." Tanya smiled lasciviously'
+
+		act 'Takeout':
+			cla
+			tanya = 0
+
+			'"I offer a second time will not, you do not want to be with me to piss off" Tanya furious pushes you out of the apartment.'
+
+			act 'Escape':gt'down'
+		end
+		act 'Agree':
+			if work = 1:
+				cla
+				tanya += 5
+				tanpred = 1
+
+				'"Good, Only I first need to quit"'
+				'"So what are you waiting, already run" joyfully cried Tanya'
+
+				act 'Escape':gt'down'
+			elseif (work = 0 and tanwork = 0 and cheatWork = 0) or (tanwork = 0 and cheatWork = 1):
+				cla
+				tanya += 5
+				tanwork = 1
+				work = 1
+
+				'"Good, I agree."'
+				'"Cheers go and tell my stepfather" joyfully cried Tanya'
+
+				act 'Escape':gt'tanhouse','sex'
+			end
+		end
+	end
+elseif tanpred = 1:
+	'"Well I quit?"'
+
+	if (work = 0 and tanwork = 0 and cheatWork = 0) or (tanwork = 0 and cheatWork = 1):
+		tanwork = 1
+		work = 1
+
+		'"Yes, I quit"'
+		'"Cheers go and tell my stepfather" joyfully cried Tanya'
+
+		act 'Escape':gt'tanhouse','sex'
+	elseif work = 1:
+		'"Not yet"'
+		'"So what are you waiting, already run"'
+
+		act 'Escape':gt'down'
+	end
+end
+
+if $ARGS[0] = 'sex':
+	cla
+	*clr
+	'<center><img src="images/img/centr/tananal.jpg"></center>'
+	'Walking down the hallway, you can hear the groans of one room, slightly opening the door you can see Tanya standing at the wall parted buttocks with his hands, while her stepfather fucked in the ass. So here`s how it achieves that by his stepfather wants.'
+
+	act 'Escape':gt'down'
+end
+
+act 'Escape':gt'down'
+--- tanhouse ---------------------------------
+

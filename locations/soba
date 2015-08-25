@@ -1,0 +1,816 @@
+# soba
+if $ARGS[0] = 'start':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><img src="images/zoo/13584132341215798.jpg"></center>'
+
+	if zoo >= 3 and zoodogonceday ! day:zoodogonceday = day & gt'soba','hardcoredog'
+	if horny >= 50 and vagina > 0 and husband = 0:act 'Play with <<$namesob>>ohm':gt'soba','gamedog'
+	if husband > 0 and week < 6 and hour < 17 and hour > 7:act 'Play with <<$namesob>>ohm':gt'soba','gamedog'
+
+	act 'Even walk <<$namesob>>':
+		cls
+		minut = minut + 30
+		gs'stat'
+
+		'<center><img src="images/zoo/129474279555.jpg"></center>'
+		'<center><b>You grazed his <<$namesob>>and</center></b>'
+
+        act 'Home':dynamic $brodila
+		if horny >= 70 and zoo > 0 and streetdogday ! day:act 'Coitus':dynamic $polactdog
+	end
+	act 'Escape':dynamic $brodila
+	act 'Lay on euthanasia':
+		sobaka = 0
+		zoo = 0
+		minut += 60
+		dynamic $brodila
+	end
+end
+
+if $ARGS[0] = 'gamedog':
+	cla
+	*clr
+	horny += 30
+	gs'stat'
+
+	'<center><img src="images/zoo/1.jpg"></center>'
+	'I called <<$namesob>>and to his bed, that would play with him. I kissed him,I played with legs, He stroked his neck and stomach. Suddenly, my pussy starts to itch. I can not understand why, but I strongly wanted sex. Suddenly I saw a member of his stallion. I came up with the idea of ​​a completely obezbashennym. I wanted to play this member.'
+
+	act 'Escape':dom += 5 & dynamic $brodila
+	act 'Post a lick':
+		cla
+		*clr
+		'<center><img src="images/zoo/2.jpg"></center>'
+		'I leaned back against the wall, and spread her legs. I handed her dog helped find my hole. My stallion understood everything,and I began to lick my pussy with his tongue. It was a strange and pleasant. His tongue licked all at once. It was very unusual. I decided to change position.'
+
+		act 'Change position':
+			cla
+			*clr
+			horny = horny + 10
+			minut = minut + 10
+			os = os + 10
+
+			'<center><img src="images/zoo/4.jpg"></center>'
+			'He licks my pussy with his tongue with a rough surface. For completeness of sensations, I Spreading thin fingers his lips sex.'
+
+			act 'More actions':gt'soba','gamedog'
+		end
+	end
+	act 'Take in the mouth':
+		cla
+		*clr
+		os = os + 10
+		horny = horny + 10
+		minut = minut + 10
+
+		'<center><img src="images/zoo/3.jpg"></center>'
+		'I have driven a dog on the floor, and she turned her backside to him. With one hand I took the eggs. Then I closed my eyes, and touched the tongue member. From an unusual member of the dog lick, I realized that it`s not so scary. I suck dick to the swelling and the appearance of venous grid. When it reaches the desired size, I substituted him her pussy.'
+
+		act 'More actions':gt'soba','gamedog'
+	end
+
+	if os > 20:
+		act 'Insert dick in pussy':
+			cla
+			*clr
+			horny = horny + 30
+			minut = minut + 10
+			gs'stat'
+
+			'<center><img src="images/zoo/5.jpg"></center>'
+			'Having reached the desired size, excited authorities send my wet cunt. Vaginal sex with a pet is a very unusual way. Dog fuck me with powerful spurts. He is deeply placed in my crotch. And here is the animal brought me to orgasm. I shuddered, and holding their feet and Member, that was inside of me, I cried. <<$namesob>>, from such poked him and he began to tremble. It became clear what will happen next. I should very quickly substitute person,that would not miss the chance to get this white liquid of my pet.'
+
+			act 'Substitute person':
+				cla
+				*clr
+				orgasm = orgasm + 1
+				horny = 0
+				minut = minut + 5
+				zoo = zoo + 1
+				swallow = swallow + 1
+				cumface = cumface + 1
+				vagina = vagina + 1
+				throat = throat + 1
+				os = 0
+				gs'stat'
+
+				'<center><img src="images/zoo/9.jpg"></center>'
+				'My sex with a dog completes a powerful ejaculation, which fired and smear my face, a few drops even fell into her mouth. The taste of natural juices - Sperm, I liked.'
+
+				if REXQW = 1:act 'Call Sonia':gt'soba','dzoof1'
+				act 'Release <<$namesob>> and stand':dynamic $brodila
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'hardcoredog':
+	cla
+	*clr
+	'<center><img src="images/zoo/zoof.jpg"></center>'
+	'You came to the <<$namesob>> doggie was in a playful mood, he began to wag his tail and poke your nose between your legs.'
+
+	act 'Kiss <<$namesob>>':
+		cla
+		*clr
+		'<center><img src="images/zoo/zoof1.jpg"></center>'
+		'You framed her face to face <<$namesob>>, and stuck out tongue'
+
+		act 'Go to <<$namesob>> the bedroom':
+			cla
+			*clr
+			horny = horny + 10
+			minut = minut + 5
+			gs'stat'
+
+			'<center><img src="images/zoo/spa.jpg"></center>'
+			'You undress to go to bed and to substitute their vagina <<$namesob>>,He begins to lick her carefully lick your pussy'
+			'You get wet'
+
+			act 'Jerk off dick dog':
+				cla
+				*clr
+				horny = horny + 10
+				minut = minut + 5
+				gs'stat'
+
+				'<center><img src="images/zoo/sog.jpg"></center>'
+				'You nadrachivat member <<$namesob>>'
+				'Since you are starting to pour juice'
+
+				act 'Take in the mouth <<$namesob>>':
+					cla
+					*clr
+					horny = horny + 10
+					minut = minut + 5
+					gs'stat'
+
+					'<center><img src="images/zoo/spa1.jpg"></center>'
+					'You lick member <<$namesob>> choking on saliva'
+					'You start to go crazy with excitement'
+
+					act 'Stand in front of cancer <<$namesob>>':
+						cla
+						*clr
+						horny = horny + 10
+						minut = minut + 5
+						gs'stat'
+
+						'<center><img src="images/zoo/spa2.jpg"></center>'
+						'Kobelek jumps on you and starts to rub a member of your vagina'
+						'Or anything you clueless of sexual desire'
+
+						act 'Lie on your back and help him enter <<$namesob>>':
+							cla
+							*clr
+							minut = minut + 5
+							gs'stat'
+
+							'<center><img src="images/zoo/spa3.jpg"></center>'
+							'You lie on your back and pushes the legs stuck his dick in his expiring hole'
+
+							act 'Hug legs <<$namesob>>':
+								cla
+								*clr
+								minut = minut + 5
+								gs'stat'
+
+								'<center><img src="images/zoo/spa4.jpg"></center>'
+								'You cuddle up to her feet and dog fuck with him'
+								'You covered an orgasm but you can not stop here'
+
+								act 'Overwhelm <<$namesob>> on his back and jump on his cock':
+									cla
+									*clr
+									minut = minut + 5
+									gs'stat'
+
+									'<center><img src="images/zoo/spa5.jpg"></center>'
+									'You jump on the penis male'
+									'You`re just mad sex'
+
+									act 'Stand in front of crustaceans Doggie':
+										cla
+										*clr
+										minut = minut + 5
+										gs'stat'
+
+										'<center><img src="images/zoo/spa6.jpg"></center>'
+										'You jumped from the penis and bent cancer'
+										'<<$namesob>> naprygnul you and threw you a member of your broken-down pussy.'
+										'You pochuvstvovli that he is ready to be discharged'
+
+										act 'To merge with the dog in orgasm':
+											cla
+											*clr
+											zoo = zoo + 1
+											swallow = swallow + 1
+											vagina = vagina + 1
+											throat = throat + 1
+											orgasm = orgasm + 1
+											minut = minut + 5
+											horny = 0
+											cumpussy = cumpussy + 1
+											gs'stat'
+
+											'<center><img src="images/zoo/spa7.jpg "></center>'
+											'You clung to the dog and it is discharged into you'
+											'Member <<$namesob>> vashoy grappled with the vagina in a strong castle'
+
+											act 'Off to bed':dynamic $brodila
+											if REXQW = 1:act 'Call Sonia':gt'soba','dzoof1'
+										end
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+		act 'Go to <<$namesob>> in room':
+			cla
+			*clr
+			'<center><img src="images/zoo/zoof3.jpg"></center>'
+			'You went into the room and sat undressed on the sofa, <<$namesob>> very excited and started to jump on you'
+
+			act 'Try push <<$namesob>>':
+				cla
+				*clr
+				'<center><img src="images/zoo/zoof4.jpg"></center>'
+				'You tried to throw off the dog, But <<$namesob>> not paying attention to your efforts'
+
+				act 'Continue to resist <<$namesob>>':
+					cla
+					*clr
+					'<center><img src="images/zoo/zoof5.jpg"></center>'
+					'Your fighting <<$namesob>> I failed,'
+					'<center><img src="images/zoo/zoof6.jpg"></center>'
+					'<<$namesob>> I piled on the couch and you went into your pussy'
+
+					act 'Hug legs and fuck <<$namesob>>':
+						cla
+						*clr
+						gs'stat'
+
+						'<center><img src="images/zoo/zoof7.jpg"></center>'
+						'You give passion with her little dog'
+						'You covered the orgasm'
+
+						act 'Take charge of the sperm in the mouth':gt'soba','cumshot1'
+						act 'Let ends in pussy':gt'soba','cumshot2'
+					end
+				end
+			end
+			act 'Substitute the ass <<$namesob>>':
+				cla
+				*clr
+				gs'stat'
+
+				'<center><img src="images/zoo/zoof10.jpg"></center>'
+				'You turn your back and stand up cancer'
+				'<center><img src="images/zoo/zoof9.jpg"></center>'
+				'take a member <<$namesob>> and sent to a hole <<$namesob>> finished off with full force you'
+
+				act 'Take charge of the sperm in the mouth':gt'soba','cumshot1'
+				act 'Let ends in pussy':gt'soba','cumshot2'
+			end
+		end
+		act 'Escape':dynamic $brodila
+	end
+	act 'Even walk <<$namesob>>':
+		cla
+		*clr
+		minut = minut + 10
+		minut = minut + 10
+		gs'stat'
+
+		'<center><img src="images/zoo/2bc0b6557a7c86b52e8f02a4bdb587dc_1878859489_129474279555_800px.jpg"></center>'
+		'<center><b>You grazed his <<$namesob>> and see that he was very excited</center></b>'
+
+		act 'To home':dynamic $brodilr
+		act 'Go to a private place':
+			cla
+			*clr
+			'<center><img src="images/zoo/yl1.jpg"></center>'
+			'You allot <<$namesob>> in the woods behind the house, He picks up his dick and start nadrachivat'
+
+			act 'Remove yourself from the sheets and bend':
+				cla
+				*clr
+				horny = horny + 10
+				minut = minut + 5
+				gs'stat'
+
+				'<center><img src="images/zoo/yl2.jpg"></center>'
+				'You bend down to <<$namesob>>, He begins to lick your pussy'
+				'Do you feel that between the legs start to get wet'
+
+				act 'Suck dick in <<$namesob>>':
+					cla
+					*clr
+					horny = horny + 10
+					minut = minut + 10
+					gs'stat'
+
+					'<center><img src="images/zoo/yl3.jpg"></center>'
+					'You greedily suck dick <<$namesob>>'
+					'It is still very exciting and you want sex'
+
+					act 'Shove dick in pussy':gt'soba','zoof14'
+					act 'Stand in front of cancer <<$namesob>>':gt'soba','zoof15'
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'cumshot2':
+	cla
+	*clr
+	zoo = zoo + 1
+	swallow = swallow + 1
+	vagina = vagina + 1
+	throat = throat + 1
+	cumlip = cumlip + 1
+	orgasm = orgasm + 1
+	horny = 0
+	minut = minut + 25
+	gs'stat'
+
+	'<center><img src="images/zoo/zoof8.jpg"></center>'
+	'<<$namesob>> discharges into your vagina, you merge with the dog in passion'
+	'You covered the orgasm'
+
+	if REXQW = 1:act 'Call Sonia':gt'soba','dzoof1'
+	act 'Escape':dynamic $brodila
+end
+
+if $ARGS[0] = 'cumshot1':
+	cla
+	*clr
+	zoo = zoo + 1
+	swallow = swallow + 1
+	vagina = vagina + 1
+	throat = throat + 1
+	cumpussy = cumpussy + 1
+	orgasm = orgasm + 1
+	horny = 0
+	minut = minut +25
+	gs'stat'
+
+	'<center><img src="images/zoo/zoof11.jpg"></center>'
+	'<<$namesob>> discharged in her mouth'
+	'You covered the orgasm'
+
+	if REXQW = 1:act 'Call Sonia':gt'soba','dzoof1'
+	act 'Escape':dynamic $brodila
+end
+
+if $ARGS[0] = 'zoof14':
+	cla
+	*clr
+	orgasm = orgasm + 1
+	horny = 0
+	minut = minut + 5
+	zoo = zoo + 1
+	swallow = swallow + 1
+	vagina = vagina + 1
+	throat = throat + 1
+	cumpussy = cumpussy + 1
+	gs'stat'
+
+	'<center><img src="images/zoo/yl4.jpg"></center>'
+	'You take a member <<$namesob>> and you start to fuck it yourself'
+	'Dog discharged in you, You shudder in orgasm'
+
+	if REXQW = 0:act 'Look around':gt'soba','zoof16'
+	act 'Going home':dynamic $brodila
+end
+
+if $ARGS[0] = 'zoof15':
+	cla
+	*clr
+	orgasm = orgasm + 1
+	horny = 0
+	minut = minut + 5
+	zoo = zoo + 1
+	swallow = swallow + 1
+	vagina = vagina + 1
+	throat = throat + 1
+	cumpussy = cumpussy + 1
+	gs'stat'
+
+	'<center><img src="images/zoo/yl5.jpg"></center>'
+	'You turn back to the <<$namesob>> he jumps on you and starts fucking'
+	'Dog discharged in you, You shudder in orgasm'
+
+	if REXQW = 0:act 'Look around':gt'soba','zoof16'
+	act 'Going home':dynamic $brodila
+end
+
+if $ARGS[0] = 'zoof16':
+	cla
+	*clr
+	'<center><img src="images/zoo/yl6.jpg"></center>'
+	'You notice in the bushes with his pants down Woman'
+
+	act 'Talk':
+		cla
+		*clr
+		minut = minut + 5
+		REXQW = 1
+		gs'stat'
+
+		'<center><img src="images/zoo/yl6.jpg"></center>'
+		'You come to it, I am thinking how to start a conversation'
+		'"I see you keen Doggie?" - she suddenly starts talking'
+		'YES! - joyfully exclaimed you'
+		'"Come talk to me about your passion" - she said, you threw a business card and left'
+
+		act 'Going home':dynamic $brodila
+	end
+end
+
+if $ARGS[0] = 'zoof27':
+	cla
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><img src="images/zoo/kuh2.jpg "></center>'
+	'You are invited <<$namesob>>'
+	'He ran to the kitchen wagging tail'
+
+	act 'Undress and give the dog lick':
+		cla
+		*clr
+		zoo = zoo + 1
+		minut = minut + 10
+		swallow = swallow + 1
+		throat = throat + 1
+		orgasm = orgasm + 1
+		gs'stat'
+
+		'<center><img src="images/zoo/kuh1.jpg"></center>'
+		'You shoot yourself with things and substitute pussy Kobelkov, He thoroughly licks her'
+		'You covered the orgasm'
+
+		if REXQW = 1:act 'Call Sonia':gt'soba','dzoof1'
+		act 'Get dressed and get out':dynamic $brodila
+	end
+	act 'Undress and stand in front of the dog cancer':
+		cla
+		*clr
+		zoo = zoo + 1
+		minut = minut + 10
+		swallow = swallow + 1
+		vagina = vagina + 1
+		throat = throat + 1
+		orgasm = orgasm + 1
+		gs'stat'
+
+		'<center><img src="images/zoo/kuh.jpg"></center>'
+		'You get up cancer dog jumps on you and starts fucking'
+		'You covered the orgasm'
+
+		if REXQW = 1:act 'Call Sonia':gt'soba','dzoof1'
+		act 'Get dressed and get out':dynamic $brodila
+	end
+end
+
+if $ARGS[0] = 'zoof30':
+	cla
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><img src="images/zoo/kuh2.jpg "></center>'
+	'You undressed and called <<$namesob>>'
+	'He ran into the hall delighted as a child'
+
+	act 'Lie down on the couch and spread her legs':
+		cla
+		*clr
+		horny = horny + 10
+		minut = minut + 10
+		gs'stat'
+
+		'<center><img src="images/zoo/zal1.jpg"></center>'
+		'I kobelek run up to you and started to lick between your legs'
+		'You captured the excitement'
+
+		act 'Lie on the floor and spread her legs':
+			cla
+			*clr
+			horny = horny + 10
+			minut = minut + 10
+			gs'stat'
+
+			'<center><img src="images/zoo/zal4.jpg"></center>'
+			'The dog stood over you and started rubbing member'
+			'Between the legs become wet'
+
+			act 'Stand up to cancer and dog':gt'soba','doganalstile'
+			act 'Embrace your feet and take a member':gt'soba','dogpussystile'
+		end
+	end
+	act 'Curved cancer and substitute pussy':
+		cla
+		*clr
+		horny = horny + 10
+		minut = minut + 10
+		gs'stat'
+
+		'<center><img src="images/zoo/zal.jpg"></center>'
+		'I kobelek run up to you and started to lick between your legs'
+		'You captured the excitement'
+
+		act 'Lie on the floor and spread her legs':
+			cla
+			*clr
+			horny = horny + 10
+			minut = minut + 10
+			gs'stat'
+
+			'<center><img src="images/zoo/zal4.jpg"></center>'
+			'The dog stood over you and started rubbing member'
+			'Between the legs become wet'
+
+			act 'Stand up to cancer and dog':gt'soba','doganalstile'
+			act 'Embrace your feet and take a member':gt'soba','dogpussystile'
+		end
+	end
+end
+
+if $ARGS[0] = 'doganalstile':
+	cla
+	*clr
+	zoo = zoo + 1
+	minut = minut + 10
+	swallow = swallow + 1
+	vagina = vagina + 1
+	throat = throat + 1
+	orgasm = orgasm + 1
+	gs'stat'
+
+	'<center><img src="images/zoo/zal3.jpg"></center>'
+	'You get up cancer dog jumps on you and starts fucking'
+	'You covered the orgasm'
+
+	if REXQW = 1:act 'Call Sonia':gt'soba','dzoof1'
+	act 'Get dressed and get out':dynamic $brodila
+end
+
+if $ARGS[0] = 'dogpussystile':
+	cla
+	*clr
+	zoo = zoo + 1
+	minut = minut + 10
+	swallow = swallow + 1
+	vagina = vagina + 1
+	throat = throat + 1
+	orgasm = orgasm + 1
+	gs'stat'
+
+	'<center><img src="images/zoo/zal2.jpg"></center>'
+	'You clasps his feet, Member easily finds its way into your pussy'
+	'You covered the orgasm'
+
+	if REXQW = 1:act 'Call Sonia':xgt'soba','dzoof1'
+	act 'Get dressed and get out':dynamic $brodila
+end
+
+if $ARGS[0] = 'dzoof1':
+	cla
+	*clr
+	'Your boy is no longer, what a pity. But you know, what to do'
+
+	act 'Call Sonia':
+		cla
+		'Hi, this is Light - you say'
+		'What Light? A! the girl who loves dogs - asks Sonia'
+		'Yes, exactly - without a shadow of doubt from your lips to pronounce'
+		'I`ll meet you in the park, in the forest belt. Through 20 minutes - Sonya said before hanging up'
+
+		act 'Running in the park':
+			cla
+			*clr
+			gs'stat'
+
+			'<center><img src="images/zoo/dzoof1.jpg"></center>'
+			'You have been seeing in forest sitting on a bench Sonia, between her legs wielding male language'
+
+			act 'Say hello to Sonia':
+				cla
+				*clr
+				gs'stat'
+
+				'<center><img src="images/zoo/dzoof1.jpg"></center>'
+				'Hello - you said'
+				'Hello - said Sonya: "Meet, This is my friend, his name is Rex"'
+
+				act 'Get introduced to Rex':
+					cla
+					*clr
+					horny = horny + 10
+					minut = minut + 3
+					gs'stat'
+
+					'<center><img src="images/zoo/dzoof2.jpg"></center>'
+					'You came to the dog and started playing with it'
+					'-Show him your pussy - said Sonya'
+
+					act 'Show pussy':
+						cla
+						*clr
+						horny = horny + 10
+						minut = minut + 3
+						gs'stat'
+
+						'<center><img src="images/zoo/dzoof2.jpg"></center>'
+						'You came to the dog'
+						'-Undress and play around with it, he likes naked - Sonia smiled'
+
+						act 'Play Rex':
+							cla
+							*clr
+							horny = horny + 10
+							minut = minut + 3
+							gs'stat'
+
+							'<center><img src="images/zoo/dzoof4.jpg"></center>'
+							'You undressed and began playing with the dog.'
+							'Your pussy moistened and his head flew erotic thoughts'
+							'Have you noticed that the dog was excited, too,'
+							'-I see you provoke it, Now refresh - said Sonya'
+							'- How? - you ask'
+							'- You what, petite?! Lips -said Sonya'
+
+							act 'Calm Rex':
+								cla
+								*clr
+								minut = minut + 5
+								dzoo = dzoo + 1
+								lip = lip + 1
+								gs'stat'
+
+								'<center><img src="images/zoo/dzoof3.jpg"></center>'
+								'You knelt and began to suck Rex, He quickly drain your mouth.'
+								'Sonia smiled and said,: "Oh, you bitch, I seduced my boy, Come to me will be punished"'
+
+								act 'Go to Sonia':
+									cla
+									*clr
+									minut = minut + 10
+									gs'stat'
+
+									'<center><img src="images/zoo/dzoof16.jpg"></center>'
+									'You came to the apartment of Sonia, she turned to you and said playfully'
+									'-What are you willing to punishment?'
+
+									act 'Punish me':
+										cla
+										*clr
+										minut = minut + 5
+										gs'stat'
+
+										'<center><img src="images/zoo/dzoof6.jpg"></center>'
+										'It`s my turn to have fun, if you know what I mean - said Sonya'
+
+										act 'Work tab':
+											cla
+											*clr
+											minut = minut + 5
+											horny = horny + 10
+											gs'stat'
+
+											'<center><img src="images/zoo/dzoof7.jpg"></center>'
+											'You sat down between the legs of Sony, and began to lick her, she began to get wet.'
+											'To you and Rex ran jealous pushed you from Sony.'
+											'Well, you`re a boy hurt?- said Sonya, and began playing with Rex'
+
+											act 'View Sonya Rex':
+												cla
+												*clr
+												minut = minut + 5
+												horny = horny + 10
+												gs'stat'
+
+												'<center><img src="images/zoo/dzoof8.jpg"></center>'
+												'You looked like Sonia flirts with Rex, head climbed bad thoughts you started excited.'
+												'Calm and caressed his - said Sonya.'
+
+												act 'Fondle Rex':
+													cla
+													*clr
+													minut = minut + 5
+													horny = horny + 10
+													gs'stat'
+
+													'<center><img src="images/zoo/dzoof9.jpg"></center>'
+													'You began to stroke and fondle Rex,suddenly I noticed that he was excited.'
+
+													act 'Take the hands of a member of the Rex':
+														cla
+														*clr
+														minut = minut + 3
+														horny = horny + 10
+														gs'stat'
+
+														'<center><img src="images/zoo/dzoof17.jpg"></center>'
+														'You picked up a member of the dog and began to caress him.'
+														'Seeing that Sonia took off her panties and sat down on the couch legs spread'
+
+														act 'Watch':
+															cla
+															*clr
+															minut = minut + 3
+															horny = horny + 10
+															gs'stat'
+
+															'<center><img src="images/zoo/dzoof10.jpg"></center>'
+															'Rex ran up to Sonya and began to lick her breasts.'
+
+															act 'Caresses herself':
+																cla
+																*clr
+																minut = minut + 2
+																horny = horny + 10
+																gs'stat'
+
+																'<center><img src="images/zoo/dzoof11.jpg"></center>'
+																'You took off her panties and began stroking her pussy.'
+																'It noted Rex wagging tail, he ran to you and buried between the legs'
+																'Sonya said with a smirk: "Well let`s see who wins", and I got cancer'
+
+																act 'Watch':
+																	cla
+																	*clr
+																	minut = minut + 3
+																	horny = horny + 10
+																	gs'stat'
+
+																	'<center><img src="images/zoo/dzoof13.jpg"></center>'
+																	'Rex ran from you jumped at Sonya and planted his penis in her.'
+																	'You, too, stood beside Sonya cancer and began to swing invitingly ass'
+																	'You want his slut?-said Sonya'
+
+																	act 'Yes I want to':
+																		cla
+																		*clr
+																		minut = minut + 3
+																		horny = horny + 10
+																		gs'stat'
+
+																		'<center><img src="images/zoo/Dzoof14.jpg"></center>'
+																		'Sonia took Rex and delivered to you, his cock entered you smartly.'
+																		'Lick me! - said Sonya'
+
+																		act 'Lick Sonia':
+																			cla
+																			*clr
+																			tzoo = tzoo + 1
+																			zoo = zoo + 1
+																			minut = minut + 20
+																			swallow = swallow + 1
+																			vagina = vagina + 1
+																			throat = throat + 1
+																			orgasm = orgasm + 1
+																			horny = 0
+																			gs'stat'
+
+																			'<center><img src="images/zoo/dzoof15.jpg"></center>'
+																			'You eagerly licked her vagina Sony and behind you pecked Rex.'
+																			'Rex finished in you, and then Sonya embraced orgasm'
+																			'Then she shoved you out of the apartment after throwing a few bills'
+
+																			act 'Escape':gt'park','start'
+																		end
+																	end
+																end
+															end
+														end
+													end
+												end
+											end
+										end
+									end
+								end
+							end
+						end
+					end
+					act 'Send Sonia':gt'park','start'
+				end
+			end
+			act 'Change Your Mind':gt'park','start'
+		end
+	end
+end
+--- soba ---------------------------------
+

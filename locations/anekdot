@@ -1,0 +1,407 @@
+# anekdot
+anrand = RAND(0,50)
+if anrand = 0:
+	$anek = '
+	- How do you feel about clowns?
+	- Just do not have to provoke me on anti-government statements!
+	'
+elseif anrand = 1:
+	$anek = '
+	Fastened driver, dropping out "Oka", may accidentally throw it through the thigh.
+	'
+elseif anrand = 2:
+	$anek = '
+	The two old men on a bench in a nursing home:
+	- A grandson asked me yesterday, what I was doing at the time of the sexual revolution.
+	- Well, what you tell him?
+	- He said, that I was almost immediately captured, and the rest of my life I spent washing dishes.
+	'
+elseif anrand = 3:
+	$anek = '
+	Odessa. According to Privoz fat lady goes, and a few steps behind her is woven with huge bags skinny husband. For a strap holding bags, hanging out in different directions, child. The man said sadly:
+	- Fima, still believe my experience: never marry!
+	The boy thinks for a long time, picking finger free hand in the nose, then it is reasonable to ask:
+	- Dad, and with whom I was going to share their bitter experience?
+	'
+elseif anrand = 4:
+	$anek = '
+	Police - GIVE
+	Head - TRIBUTE
+	Beggar - Kin
+	Doctor - Take out
+	Officer - SUN
+	Billion oligarch - QUY
+	Instead of a normal wage - Hui
+
+	We live in Russia, but for some-then "Chinese" literacy...
+	'
+elseif anrand = 5:
+	$anek = '
+	Unlike other cats My Fair differentiates day and night.
+	Throughout the night sleeping in the bedroom, and in the morning cheerfully runs to sleep in the hall.
+	'
+elseif anrand = 6:
+	$anek = '
+	Our Earth - is a place, where aliens show their children, like you can not live.
+	'
+elseif anrand = 7:
+	$anek = '
+	In the press-Conference:
+	- Anatoly Borisych, But you promised all along the Volga, in exchange for a voucher? Where can I get my part?
+	- Take a bucket, Go to Nizhny Novgorod, Go to the river...
+	'
+elseif anrand = 8:
+	$anek = '
+	Girls, If you had a choice: World Peace or neoblezayuschy manicure, what color nail polish would you choose?
+	'
+elseif anrand = 9:
+	$anek = '
+	We like: if dancing in the church - you accused, and you will be put, and if stolen more than a hundred million - you are only a witness...
+	'
+elseif anrand = 10:
+	$anek = '
+	According to the teachers` wages, our government consists of a vengeful Losers.
+	'
+elseif anrand = 11:
+	$anek = '
+	Last year I asked Santa Claus to become compatriot Gerard Depardieu. Who knew, the old man so perverted.
+	'
+elseif anrand = 12:
+	$anek = '
+	A guy goes to a meeting, late, nervous, can not find a place
+	park. He raises his face to the sky and said,:
+	- Lord, help me find a place to park. I then throw drink
+	I am going every Sunday to go to church!
+	Suddenly, miraculously appears free place. A man again
+	It refers to the sky:
+	- A, everything, do not. Found!
+	'
+elseif anrand = 13:
+	$anek = '
+	- Watson, and it is you smoke? Let me guess - tobacco "Queen Virginia"
+	cherries with leaves, anniversary issue of velvet packaging?
+	- Astoundingly, Holmes! How did you guess?
+	- Her-god, Watson! Well, not Mrs. Hudson is`ve stole from my room
+	the latest pack!
+	'
+elseif anrand = 14:
+	$anek = '
+	It turns out this morning a traffic cop on the road, head after yesterday`s split.
+	Viewing - jeep rushing. Well, he stopped him to raise funds
+	on sober. Viewing, and there is a bum sitting. Documents checked - truth,
+	homeless machine. Well cop asks him:
+	- You`re a bum. Where are you took a steep wheelbarrow?
+	- And I drunk the new Russian offered, if I make them laugh - My Jeep.
+	Well, I laughed at them.
+	- But as?
+	- Yes I am alone on the bald head of shit, he soon grew hair,
+	Here was a scream.
+	Cop shoots cap, there is a bald head. He says,:
+	- And you do not care because I can?
+	- Can.
+	Homeless shit cop on his bald head, a from the bushes hear laughter and screaming:
+	- Not, Well, finally, I told him yes, and even cottage for rent.
+	'
+elseif anrand = 15:
+	$anek = '
+	Glamorous Muscovite comes to visit the village to the grandmother.
+	- Babul, where you can go there at night?
+	- In the bucket.
+	'
+elseif anrand = 16:
+	$anek = '
+	Lesson "Fundamentals of Orthodox Culture". The teacher:
+	- And remember, children! Those, who will learn from the "4" and "5", go to heaven. A
+	those, who will learn from the "2" and "3", - Hell!
+	Little Johnny from the back of the desk:
+	- Marivanna, what, I can not live to finish school?
+	'
+elseif anrand = 17:
+	$anek = '
+	Slogan "Stifle corruption" It has been recognized as an extremist calling for the violent overthrow of the existing system.
+	'
+elseif anrand = 18:
+	$anek = '
+	Husband: What comes tёscha?
+	Wife: Numbers or dick?
+	'
+elseif anrand = 19:
+	$anek = '
+	English lesson. On the back of the desk sat a man - checking
+	from RONO. Young teacher writing on the chalkboard and English phrase
+	She asks the students to translate. The class is silent, and suddenly, with the penultimate
+	desks arm pulls Vovochka. The teacher hesitated, but do
+	there is nothing - caused.
+	Vovochka:
+	- That ass. Who would plant!
+	The teacher, blushing with shame:
+	- Vovochka, how can you!!!
+	Vovochka, turning to the man:
+	- You do not know English - there is nothing to suggest!
+	'
+elseif anrand = 20:
+	$anek = '
+	Husband wife:
+	- Let`s play pretend games.
+	- It`s like?
+	- Well, as if you were Little Red Riding Hood, I wolf.
+	- Class, come on!
+	- Well, then go, bake cakes...
+	'
+elseif anrand = 21:
+	$anek = '
+	That fact surprised Depardieu, when sober...
+	'
+elseif anrand = 22:
+	$anek = '
+	Ku Klux Klan headquarters:
+	- Tell, How to join your organization?
+	- It`s simple. Soak 6 Blacks and one cat.
+	- A cat for that?
+	- Congratulations, you`ve taken
+	'
+elseif anrand = 23:
+	$anek = '
+	There are three friends.
+	One wife for ten years - another lover - third betrothed (bride).
+	Well, the men discussed their, this and that - We decided to experiment:
+	wear black leather lingerie - sexy stockings with belt - high
+	heels - eye mask and so meet their favorite.
+
+	A week later, again found.
+
+	"Bride" says - He came home, I met him in stockings, in
+	mask in high heels - He attacked me said, I love
+	his life, and we had sex all night.
+
+	Mistress says - I came to his office - closed door -
+	He opened the cloak - and there`s leather underwear, mask, heels - he did not
+	said, but we 5 hours of nonstop sex.
+
+	Wife says shyly - my husband came home from work, I opened the door to
+	leather black lingerie, sexy stockings and mask - He looked and
+	I asked: "What`s for dinner, Batman?"
+	'
+elseif anrand = 24:
+	$anek = '
+	- Your bank will give loans on parole?
+	- No problem...
+	- And if I do not return?
+	- You will be ashamed to appear before God when.
+	- When it has to be...
+	- Here`s, if you do not return the fifth, Sixth appear.
+	'
+elseif anrand = 25:
+	$anek = '
+	Biology lesson. The teacher tells the children:
+	- Children! You know, that the stamens and pistils in flowers - This bodies
+	reproduction.
+	On the back of the desk Vovochka:
+	- Whore. I smelled them.
+	'
+elseif anrand = 26:
+	$anek = '
+	- And I have one last five minutes the server broke.
+	- He that, hacker??!
+	- He asshole!!
+	'
+elseif anrand = 27:
+	$anek = '
+	Flies aircraft. The pilot on the speakerphone:
+	- Ladies and gentlemen, Welcome to the captain.
+	Listen to the information on our flight. Our flight passes
+	on high 10 thousand meters at a speed 900 kph,
+	temperature behind...Shit...A-A-A-A!.. What`s that?.. OU, PIZDETS...
+	Inside deathly silence.
+	A minute later, again on the radio:
+	- I ask pardon of Dear passengers. Simply it is our
+	flight attendant knocked on my hot coffee. Did you
+	now my white pants front...
+	The guy in the front row:
+	- Your pants, it`s all garbage! You should have seen my pants back...
+	'
+elseif anrand = 28:
+	$anek = '
+	He escaped from a zoo elephant. Call the sheriff:
+	- Sir! In my garden there is a huge gray rat!!!!
+	She rips off the tail cabbage...
+	- And what it does?
+	- Sir! You will not believe!...
+	'
+elseif anrand = 29:
+	$anek = '
+	Marriage-bed - husband and wife:
+	Wife: - Expensive, and we will come to play role-playing games?
+	Husband: - Come on.
+	Wife: - You are a taxi driver, I Young, cute girl, Has reached that, but I have no money with him to pay the fare.
+	Husband: - Come on.
+	Wife: - Uncle taxi driver, I have no money to pay for travel, let me, please!
+	Husband: - Go...
+	'
+elseif anrand = 30:
+	$anek = '
+	I put baby pacifier-pacifier next to the stove, it melts and
+	He stuck to the table. He scored in Yandex: how to pull out the nipple?... I forgot, that
+	I sought...
+	'
+elseif anrand = 31:
+	$anek = '
+	When-Long ago the old Indian told his grandson one life truth.
+	- Inside every person is a struggle, very similar to the struggle between the two
+	Wolves. One wolf represents evil - envy, jealousy, regret,
+	selfishness, ambitions, lying... The other wolf is good - the world, love,
+	I hope, amiability, truth, goodness, faithfulness...
+	Little Indian, deeply touched by the words of his grandfather, into several
+	Moments of thought, and then asked:
+	- And what a wolf in the end wins?
+	The face of the old Indian touched a faint smile and he said,:
+	- Always wins the wolf, which you feed.
+	'
+elseif anrand = 32:
+	$anek = '
+	Interview with Russian businessman.
+	Correspondent:
+	- Tell, What do you think about the traffic police?
+	Businessman:
+	- Bandits uniquely. Do nothing, mess in the streets,
+	drivers robbed at every opportunity, washed-motherfuckers.
+	K.:
+	- Yes, impartial opinion, frankly. What do you think about
+	Russian customs officers?
+	B.:
+	- M-yes, I think, cops got excited about. Normal generally-then
+	children, polite, do not take too much.
+	'
+elseif anrand = 33:
+	$anek = '
+	- I do not know, what to do. Cockroaches tortured. Throughout shastayut - no rest.
+	- And you buy chalk for cockroaches.
+	- What, help?
+	- Of course. See - sit in a corner, draw...
+	'
+elseif anrand = 34:
+	$anek = '
+	- Hello! Rewrite me his apartment.
+	- What do you allow yourself!?
+	- Oh, sorry, not with started. Do you believe in God?
+	'
+elseif anrand = 35:
+	$anek = '
+	It feels, the old Russian proverb "fools law does not apply" and the concept of "privilege of parliament" how-something to do.
+	'
+elseif anrand = 36:
+	$anek = '
+	If money is measured in groups, I`ve got a pit.
+	'
+elseif anrand = 37:
+	$anek = '
+	Policeman stops the car.
+	Lowered the window, Driver ingratiating smile:
+	"I wish you health, Comrade Captain! Here you are right, data sheet,
+	power of attorney, strahovochka itself, all as, how to..."
+	With the rear seat child`s voice:
+	"Dad, and where goats?"
+	'
+elseif anrand = 38:
+	$anek = '
+	- Why are you so overwrought? What happened?
+	- She gave her husband on 23 February set of fishing lures.
+	- Well, all right. It you have 10 years every weekend fishing leaves. What is not so?
+	- He spit in his hands, He spits and asks: And what is it?
+	'
+elseif anrand = 39:
+	$anek = '
+	Mom asks young son:
+	- Vovochka, Who ate all the candy?
+	Son:
+	- Brownie.
+	Voice from-behind the stove:
+	- Do not bullshit me!
+	'
+elseif anrand = 40:
+	$anek = '
+	Pole coming to church for confession and the priest says:
+	- Ban priest, I have sinned.
+	- What is sin, my son?
+	- I cheated a Jew...
+	The priest, after a brief hesitation:
+	- It is not a sin, my son. It`s a miracle!
+	'
+elseif anrand = 41:
+	$anek = '
+	University. Session. Reading room. Crowded: how to prepare.
+	To one student comes another:
+	- Listen, and you`re holding the book upside down!
+	- You Th, Freud, something?
+	- And here Freud?
+	- This - book! What are her legs? You still say, I look down to it between the pages..!
+	'
+elseif anrand = 42:
+	$anek = '
+	- Please change the guarantor of the Constitution of guarantees...
+	- We can not help, the whole batch defective.
+	'
+elseif anrand = 43:
+	$anek = '
+	Jew, drive home in a taxi, He goes quietly out of the car and starts
+	fumbling in his pockets, and mutters under his breath:
+	- Hell, appears in the car dropped wallet...
+	Hearing this, taxi driver presses on the gas and unwound. Jew, looking after
+	taxi, sarcastically says:
+	- A Rabinovich does not lie, it really works...
+	'
+elseif anrand = 44:
+	$anek = '
+	Son of quarrels with their parents:
+	- I`m tired of being with you, always arrive on time! I want
+	romance, liberty, beer, girls! I`m leaving, and do not try me
+	hold!
+	Son goes strongly to the exit. At the door of his father catches.
+	- Dad, I said,: do not try to stop me!
+	- I do not stop, son. I`m with you!
+	'
+elseif anrand = 45:
+	$anek = '
+	Gathered girls on a bachelorette party. All night they told jokes,
+	funny stories, other sisters shared their dreams...
+	By the morning of the cabinet fell dead with shame Lieutenant Rzhevskij.
+	'
+elseif anrand = 46:
+	$anek = '
+	Turkmen President Saparmurat Niyazov in the great book "Rukhnama"
+	proudly says, that Turkmen invented the wheel, writing, smelting
+	metals. Nobody denies. Just the other nations at this time
+	let computers and flying to the moon.
+	'
+elseif anrand = 47:
+	$anek = '
+	- I hesitate to put your diagnosis...
+	Surely, Alcoholism is.
+	- Good, doctor. I will come, where
+	You`ll be sober.
+	'
+elseif anrand = 48:
+	$anek = '
+	I do not want to say, getting old, but all those sounds, I`ve-then he uttered during sex, Now I publish, just getting up from the couch...
+	'
+elseif anrand = 49:
+	$anek = '
+	Wife says husband:
+	- Let`s make love, like in the movies!
+	The husband agreed. Had it, I wanted, then on the face of it finished...
+	She wipes:
+	- Yeah, favorite! Other movies we`re looking!!!
+	'
+elseif anrand = 50:
+	$anek = '
+	It:
+	- Tell me, Why, if the guy had a lot of girls, it - macho, and if
+	the girl a lot of guys - damn it?
+	It:
+	- Understand, If a key opens a lot of locks - This drop dead
+	key! And if one lock all the keys fit - this, definitely,
+	horseradish Castle!
+	'
+end
+--- anekdot ---------------------------------
+

@@ -1,0 +1,42 @@
+# begin
+
+'<center><img src="images/begins.jpg"></center>'
+'That evening, I sat at the window at home and contemplate the city from a bird`s eye view.'
+'The sun slowly creeps away behind the horizon, and sunset rays illuminated the bizarre city, creating a unique atmosphere of unreality of my life and will drive me into a stupor.'
+'Maybe it was stupid, but that night I caught up, like a beast of prey, feeling, it`s all a dream and a complete lie
+, silly game of my mind with me.'
+'Past course, I often recall, but the evening was a special. I do not know why, but a sunset or a state of mind or both, both inspired by the terrible anguish and unreality. Indeed, in its 16 years, I could not think, that when-I`ll live in a big city, metropolis and, the question is where, in the United States.'
+'I went to school, I am playing with my friends and lived God knows where, where poverty in the order of things. It is transmitted as a relic, especially valuable thing from generation - to generation, and there is no escape...'
+'Since then, much has changed: principles, orders ... One has changed - people, and those dying, are born ...'
+'And here I am - United States of America, and I have every: apartment in a prestigious quarter of a multistory building, family (husband and children), money, prestigious job, not a bad car, but I increasingly began to visit the irresistible feeling, it is not at home - DREAM. MUM - Where I am?'
+'I thought a lot and drank the night.'
+'But in the morning writhing in the throes of a hangover, I decided to tell you all about yourself.'
+''
+
+act '<center><b>Play history</b></center>':
+	cla
+	music_on = 0
+	gt'alterStart'
+end
+
+act '<center><b>Play</b></center>':
+	cla
+	music_on = 0
+	SHOWSTAT 1
+	SHOWOBJS 1
+	addobj 'Player'
+	gt'roomPRE'
+end
+act '<center>Fast start</center>':
+	music_on = 0
+	gs'begin1'
+	gt'street'
+end
+act 'Version History':
+    cla
+    music_on = 0
+    gt'historia'
+end
+
+--- begin ---------------------------------
+

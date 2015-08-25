@@ -1,0 +1,333 @@
+# EvOtelMan
+$din_otel_man_end = {
+	act 'Brush up':
+		cls
+		minut += 15
+		gs'stat'
+
+		'You started to brush up. <<$bname>> He reached out and fell on the bed. "It was great Svetsik."'
+
+		if cumface > 0:cumface = 0 & 'You will find towels and wiped from the face of sperm.'
+		if cumanus > 0:'Have you tried to wipe the sperm with his priests, but you would not have wiped out of your anus still flowed sperm.'
+
+		act 'Escape':gt'vokzalG'
+	end
+}
+
+$din_otel_man_blow = {
+	act 'To squat':
+		cls
+		rand1=rand(0,100)
+		bj += 1
+		if boynumBlock = 0:guy += 1
+		if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+		sub += 1
+		minut += 10
+		bmBJ[Tboynum] += 1
+		gs'stat'
+		'<center><img src="images/qwest/alter/Ev/bj.jpg"></center>'
+		'You sit down in front of a man and took his penis hand. Slightly moving the skin on the penis head you licked. Your nimble tongue began to caress hot and hard cock men. <<$bname>> said "Svetik, I will soon be over."'
+		act 'Suck':
+			cls
+			cumlip += 1
+			minut += 10
+			gs'stat'
+			if rand1<6:'<center><img src="images/qwest/alter/Ev/bj.jpg"></center>'
+			if rand1>=5 and rand1<49:'<center><img src="images/nigma/gor/h0,'+rand(0,19)+'.jpg"></center>'
+			if rand1>=50:'<center><img src="images/nigma/gor/h0,'+rand(0,8)+'.gif"></center>'
+			'You wrapped around his lips a member and began to suck carefully clasping his solid trunk <<$liptalk2>>. <<$bname>> groans and you feel like your mouth strikes jet of sperm.'
+			act 'Sucking swallowing sperm':
+				cls
+				swallow += 1
+				water -= 10
+				minut += 10
+				gs'stat'
+				'<center><img src="images/nigma/gor/с0,'+rand(0,10)+'.gif"></center>'
+				'You have continued to suck dick and cums swallow sperm hits you in the mouth. Sperm was so much, you do not have time to swallow it all flows out of your mouth for a member. Lastly <<$bname>> ceases to finish and you pull your cock out smelling sperm mouth. In the mouth disgusting taste of Cum, obliznuvshis you know, your <<$liptalk3>> wet with sperm.'
+				dynamic $din_otel_man_end
+			end
+			act 'Remove from the mouth':
+				cls
+				cumface += 1
+				facial += 1
+				minut += 10
+				gs'stat'
+				if rand1<49:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+				if rand1=>50:'<center><img src="images/nigma/gor/ф0,'+rand(0,9)+'.jpg"></center>'
+				'You took out a member of his mouth and a jet of sperm immediately slapped you in the face. You squeezed her eyes shut for fear of, that the sperm gets into your eyes and feel as another jet of hot Cum landed on your face.'
+
+				dynamic $din_otel_man_end
+			end
+		end
+		act 'Substitute the ass':
+			cls
+			minut += 30
+			if prezik = 0:cumanus += 1
+			$boy = $bname
+			bmANAL[Tboynum] += 1
+			gs'stat'
+			if rand1<5:'<center><img src="images/nigma/gor/ш1,'+rand(0,11)+'.gif"></center>'
+			if rand1=>5 and rand1<30:'<center><img src="images/nigma/gor/h3,'+rand(0,2)+'.jpg"></center>'
+			if rand1>=30:'<center><img src="images/nigma/gor/h3,'+rand(0,13)+'.jpg"></center>'
+			dynamic $sexstart
+			dynamic $analsex
+			dynamic $din_otel_man_end
+		end
+		act 'Substitute pussy':
+			cls
+			minut += 30
+			!sex += 1
+			$boy = $bname
+			bmSEX[Tboynum] += 1
+			gs'stat'
+			if rand1<5:'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
+			if rand1>=5 and rand1<20:'<center><img src="images/nigma/gor/h1,'+rand(0,1)+'.jpg"></center>'
+			if rand1>=20:'<center><img src="images/nigma/gor/h1,'+rand(0,11)+'.gif"></center>'
+			!'<<$bname>> spread your legs and you have entered the.'
+			dynamic $sexstart
+			dynamic $sexstart2
+			dynamic $sexcum
+			dynamic $din_otel_man_end
+		end
+	end
+}
+
+$din_otel_man_beforesex = {
+	if horny < 75 and vagina = 0 and sex = 0 or dom > 0 and vagina = 0 and sex = 0:
+		act 'I`m still a girl`s virginity and the shore':
+			cls
+			minut += 5
+			gs'stat'
+			tiprandeom = RAND(0,2)
+			if tiprandeom < 2:
+				'You have admitted that you are a man and a girl like to remain chaste. The man smiled and said,, that sex can be practiced and left the girl. <<$bname>> He took out a member of his pants.'
+				dynamic $din_otel_man_blow
+				if dom > 0:
+					act 'Do not even hope':
+						cls
+						sub += 1
+						gs'stat'
+						'You laughed and denied the man. <<$bname>> scratching his head "Do you want I`ll give you Pjatihatki?"'
+						act 'Come on':
+							cls
+							money += 500
+							gs'stat'
+							'You held out a palm and a man gave you five hundred rubles.'
+							dynamic $din_otel_man_blow
+						end
+						act 'Escape':gt'vokzalG'
+					end
+				end
+			elseif tiprandeom = 2:
+				'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
+				'<<$bname>> interested "Truth? You`re a virgin? I`ll give you Pjatihatki, if you show me your pussy"'
+
+				if dom > 0:
+					act 'Do not even hope':
+						cls
+						sub += 1
+						gs'stat'
+
+						'You laughed and denied the man. <<$bname>> scratching his head "Well then, can pososesh? I`ll give you Pjatihatki."'
+
+						act 'Come on':
+							cls
+							money += 500
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
+							'You held out a palm and a man gave you five hundred rubles.'
+
+							dynamic $din_otel_man_blow
+						end
+						act 'Escape':gt'vokzalG'
+					end
+				end
+
+				act 'Show':
+					rand1=rand(0,100)
+					cls
+					sub += 1
+					money += 500
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/kiska.jpg"></center>'
+					'You undressed and showed her pussy man. He reviewed with interest you. "Awesome. Listen. I`ll give you five pieces, if you let me be your first boyfriend."'
+
+					act 'Agree':
+						cls
+						minut += 30
+						!sex += 1
+						$boy = $bname
+						bmSEX[Tboynum] += 1
+						money += 5000
+						gs'stat'
+
+						if rand1<5:'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
+						if rand1>=5 and rand1<20:'<center><img src="images/nigma/gor/h1,'+rand(0,1)+'.jpg"></center>'
+						if rand1>=20:'<center><img src="images/nigma/gor/h1,'+rand(0,11)+'.gif"></center>'
+						'You held out a palm and a man with trembling hands you counted five thousand. Thereafter <<$bname>> I threw you on the bed and spread your legs.'
+
+						dynamic $sexstart
+						dynamic $sexstart2
+						dynamic $sexcum
+						dynamic $din_otel_man_end
+					end
+
+					if dom > 0:
+						act 'No, I`m going to stay a virgin until marriage':
+							cls
+							sub += 1
+							gs'stat'
+
+							'You laughed and denied the man. <<$bname>> scratching his head "Well then, can pososesh? I`ll give you Pjatihatki."'
+
+							act 'Come on':
+								cls
+								money += 500
+								gs'stat'
+
+								'You held out a palm and a man gave you five hundred rubles.'
+
+								dynamic $din_otel_man_blow
+							end
+							act 'Escape':gt'vokzalG'
+						end
+					end
+
+					act 'Escape':gt'vokzalG'
+				end
+			end
+		end
+	end
+
+	if dom >= 5 and StoryLine > 0:
+		act 'Divorce on the loot':
+			rand1=rand(0,100)
+			cls
+			sub += 1
+			minut += 5
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
+			'Have you looked at the clock. "Well, we had a good time, but perhaps I will go. And then the nurse would scold, then do not give money to lunch." <<$bname>> you smiled "I`ll give you three pieces, this will be enough to you for lunch?"'
+
+			act 'Agreed to have sex for money':
+				cls
+				minut += 30
+				!sex += 1
+				guy += 1
+				$boy = $bname
+				bmSEX[Tboynum] += 1
+				money += 3000
+				gs'stat'
+
+				if rand1<5:'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
+				if rand1>=5 and rand1<20:'<center><img src="images/nigma/gor/h1,'+rand(0,1)+'.jpg"></center>'
+				if rand1>=20:'<center><img src="images/nigma/gor/h1,'+rand(0,11)+'.gif"></center>'
+				'You held out a palm and a man with trembling hands you counted three thousand. Thereafter <<$bname>> I threw you on the bed and spread your legs.'
+
+				dynamic $sexstart
+				dynamic $sexstart2
+				dynamic $sexcum
+				dynamic $din_otel_man_end
+			end
+			if dom > 0:
+				act 'Oral sex is the maximum':
+					cls
+					sub += 1
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
+					'You laughed and denied the men said that the blow is the maximum for which he can expect. <<$bname>> scratching his head "Yes No problem, I`ll give you Pjatihatki."'
+
+					act 'Come on':
+						cls
+						money += 500
+						gs'stat'
+
+						'You held out a palm and a man gave you five hundred rubles.'
+
+						dynamic $din_otel_man_blow
+					end
+					act 'Escape':gt'vokzalG'
+				end
+			end
+		end
+	end
+
+	act 'Further':
+		rand1=rand(0,100)
+		cls
+		minut += 30
+		!sex += 1
+		if boynumBlock = 0:guy += 1
+		if boynumBlock > 0 and bmTOTSEX[Tboynum] = 0:guy += 1
+		$boy = $bname
+		bmSEX[Tboynum] += 1
+		gs'stat'
+
+		if rand1<5:'<center><img src="images/qwest/alter/Ev/sex.jpg"></center>'
+		if rand1>=5 and rand1<20:'<center><img src="images/nigma/gor/h1,'+rand(0,1)+'.jpg"></center>'
+		if rand1>=20:'<center><img src="images/nigma/gor/h1,'+rand(0,11)+'.gif"></center>'
+		!'<<$bname>> spread your legs and you have entered the.'
+
+		dynamic $sexstart
+		dynamic $sexstart2
+		dynamic $sexcum
+		dynamic $din_otel_man_end
+	end
+
+	if dom > 0:
+		dynamic $din_otel_man_blow
+	end
+
+}
+
+music_on = 0
+minut += 15
+gs'tboyopr'
+gs'stat'
+
+if DPtipe = 1:
+	'The man approached the club standing near a taxi driver and exchange a few words with him turned to you. "Svetik go." You, along with the man got into a taxi and quickly drove to the hotel. The man took you to your room.'
+
+	act 'Walk in the Room':
+		cls
+		BeInOtel += 1
+		minut += 5
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/otel.jpg"></center>'
+		'The room was quite decent. The man went to the fridge and began to spread on the table. Bottle of whiskey misted, cervelat, the bank of red caviar, Fruit Plate. Put all on the table, the man you framed chair, which you sat. He sat down on a chair next to you, and poured whiskey into the glasses. "Well, let`s drink to the introduction Svetsik. I`m so happy, I have met such a beautiful and wonderful girl like you."'
+
+		act 'Drink':
+			cls
+			horny += 20
+			alko += 2
+			minut += 5
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+			'You drank with the man and he got up from the chair came up to you. His lips began to kiss your hand and began to pull your clothes.'
+
+			dynamic $din_otel_man_beforesex
+		end
+	end
+end
+if DPtipe = 2:
+	'The man approached the club standing near a taxi driver and exchange a few words with him turned to you. "Svetik go." You, along with the man got into a taxi and quickly drove to the hotel. The man took you to your room.'
+
+	act 'Walk in the Room':
+		cls
+		minut += 5
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/Ev/kiss.jpg"></center>'
+		'You enter the room and the man barely closed the door he stared at you with a kiss, and his hands began to fumble through your body trying to steal your clothes.'
+
+		dynamic $din_otel_man_beforesex
+	end
+end
+--- EvOtelMan ---------------------------------
+

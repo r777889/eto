@@ -1,0 +1,62 @@
+# dinmother
+$d_mother[1]={
+!scandal with my mother
+'You are trying to talk to my mom, but she refuses to talk to you.'
+	if mothersorryday!daystart:
+	act'Apologize':
+	cla
+	mothersorryday=daystart
+	mother+=(intel/10)+(vnesh/5)
+	gs'stat'
+	'You apologize to my mother and she, it seems, I forgive you.'
+	act '<B>Move away</B>':gt $loc, $metka
+	end
+	end
+}
+$d_mother[2]={
+!strained relations
+'You are trying to talk to my mom, but she talks to you dry.'
+	if mothersorryday!daystart:
+	act'Trying to smooth relations':
+	cla
+	mothersorryday=daystart
+	mother+=(intel/10)+(vnesh/5)
+	gs'stat'
+	'You suck up to my mother and she, it seems, you better start to apply.'
+	act '<B>Move away</B>':gt $loc, $metka
+	end
+	end
+}
+$d_mother[3]={
+!good relationship
+motherTalk = rand (1,9)
+	if motherTalk = 1:
+	'You chat with mom, it tells you how, in his youth and his friends making fun of the teachers in the school.'
+	end
+	if motherTalk = 2:
+	'You asked his mother about his real father. Mother pulled a face and said, disgruntled. "I have no idea where he is and what makes. We were at school together. He made me your sister Anka. Our parents have married us. Michael, your father, I made you and zabuhal. We divorced and I married Vovka. Kolka already born by Vova. But Vova brought you Anya like its native daughters. Soul in you looked for, and bathed you, and I went for a walk with you on a walk. And tales told you at night."'
+	end
+	if motherTalk = 3:
+	'You chat with mom, it tells you how, how to properly painted and care for the skin.'
+	end
+	if motherTalk = 4:
+	'You chat with mom, it tells you how, she likes to go to the village, the nature.'
+	end
+	if motherTalk = 5:
+	'You chat with mom, it tells you how, that the market to find a lot of cheap and useful things.'
+	end
+	if motherTalk = 6:
+	'You chat with mom, it tells you how, that previously worked as a salesgirl at the market, but-the small earnings and constant harassment of Caucasians had to retire.'
+	end
+	if motherTalk = 7:
+	'You chat with mom, it tells you how, both missed their youth.'
+	end
+	if motherTalk = 8:
+	'You chat with mom, it tells you how, she was angry with Anna, when she is not admitted to the Institute.'
+	end
+	if motherTalk = 9:
+	'You chat with mom, it tells you how, how important it is to get an education.'
+	end
+}
+--- dinmother ---------------------------------
+

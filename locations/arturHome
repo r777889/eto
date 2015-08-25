@@ -1,0 +1,38 @@
+# arturHome
+arturKnow = 1
+minut += 15
+gs'stat'
+
+'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+'Arthur took you to the parking lot where his black Priora. You got into the car and drove Arthur somewhere you "I lyuchshy by Del barbecue, ne what rubbish in cafe, real jam." After some time, the car stopped near a small house, and Arthur took you by the hand held in a house.'
+
+act 'Going into the house':
+	cls
+	minut += 60
+	alko += 6
+	$boy = 'Arthur'
+	silavag = 1
+	dick = 26
+	arturTimes += 1
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+	'Arthur generously set the table, you ate barbecue and drank grape chacha and quickly brew drunk. Arthur turned on the music and came up to you "Come to me devochka."'
+
+	act 'Further':gt'arturSex'
+
+	if condomtalkartur = 0 and arturSex > 0:
+		act 'Ask wear a condom':
+			cls
+			condomtalkartur = 1
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/artur/artur.jpg"></center>'
+			'You are asked to wear a condom Arthur, what Arthur protested "Wai, sex in a condom is like breathing through a mask. Nat!"'
+
+			act 'Further':gt'arturSex'
+		end
+	end
+end
+--- arturHome ---------------------------------
+

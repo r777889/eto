@@ -1,0 +1,933 @@
+# pf
+if $ARGS[0] = 'boss':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	film += 1
+	gs'stat'
+
+	if pfilm = 1:pfcash = 2000 & $filmtext = ' where you snimalilis how otdrachivali guy and he goes down on your boobs.'
+	if pfilm = 2:pfcash = 3000 & $filmtext = ' where you snimalilis both aspirated member guy and he goes down into your mouth and face.'
+	if pfilm = 3:pfcash = 5000 & $filmtext = ' where you snimalilis like a guy aspirated member, then he fucked you and you finished in the mouth.'
+	if pfilm = 4:pfcash = 6000 & $filmtext = ' where you snimalilis like a guy aspirated member, then he fucked you in the ass and pussy and lowered your mouth.'
+	if pfilm = 5:pfcash = 7000 & $filmtext = ' where you snimalilis like you in all holes hollows of two men.'
+	if pfilm = 6:pfcash = 9000 & $filmtext = ' where you snimalilis you like hammering in all holes two men, and even with double penetration.'
+	$pfilmhistory += ' '+'Your '+film+'First porn'+' It was filmed '+day+''+$mons+$filmtext
+
+	if pfilmNOPAY = 0:
+		money += pfcash
+
+		'Peter counted you <<pfcash>> rubles for shooting the film and wished good luck'
+	elseif pfilmNOPAY = 1:
+		pfilmNOPAY = 0
+
+		'You have fulfilled his sentence and the film removed for free.'
+	end
+
+	pfilm = 0
+	if film < 10:filmkoef = 2
+	if film >= 10 and film < 20:filmkoef = 5
+	if film >= 20:filmkoef = 10
+	pffilmday = daystart+(film+filmkoef)
+	pfilmday = 0
+
+	'I think we will have a job for you no earlier than <<pffilmday-daystart>> days.'
+
+	act 'Escape':gt'pornstudio','start'
+end
+
+if $ARGS[0] = 'doc':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'You went to the office where the doctor was waiting in a white coat. He quickly pulled on rubber gloves and told you shortly, Undress.'
+	'You took off his clothes and settled in high gynecological chair legs apart. The doctor came up to you and started inspection. After the inspection, he took the syringe and took you out of the vein blood test.'
+	'Now after half an hour will be ready analyzes, if you have anything that is, they will show.'
+
+	act 'Wait':gt'pf','lab'
+end
+
+if $ARGS[0] = 'lab':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	if venera > 0:
+		pfilmNO = 1
+		pfilmNoVenera = 1
+
+		'Your analysis showed a sexually transmitted disease. and the doctor said you called Peter. Peter looked at a piece of paper with analyzes.'
+		'Well, <<$pfname>>, I think your career is over. Adieu.'
+
+		act 'Escape':gt'pornstudio','start'
+	else
+		'Well, you are clean. Go to the dressing room'
+
+		act 'Go to the dressing room':gt'pf','grim'
+	end
+end
+
+if $ARGS[0] = 'grim':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	hapri = 1
+	mop = 4
+	gs'stat'
+
+	'In the dressing room waiting for you already skinny and withered like roach woman.'
+
+	if pfilm > 3:
+		'First for you to put a powerful enema.'
+	end
+
+	'You put in front of a mirror, combed and laid-up.'
+	!If a scene with anal, the enema.
+
+	act 'To go to the set':
+		if pfilm = 1:gt'pf','1'
+		if pfilm = 2:gt'pf','2'
+		if pfilm = 3:gt'pf','3'
+		if pfilm = 4:gt'pf','4'
+		if pfilm = 5:gt'pf','5'
+		if pfilm = 6:gt'pf','6'
+	end
+end
+
+if $ARGS[0] = '1':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	akrand = RAND(1,5)
+	if akrand = 1:$pakter = 'Alexey'
+	if akrand = 2:$pakter = 'Sergei'
+	if akrand = 3:$pakter = 'George'
+	if akrand = 4:$pakter = 'Ignat'
+	if akrand = 5:$pakter = 'Semen'
+
+	'On the site is already bustling assistants installing lighting, so, that there were no shadows.'
+	'On one side stands the actor <<$pakter>> and examining pornozhurnal Fingering member.'
+
+	act 'Removed':
+		cla
+		*clr
+		minut += 30
+		hj += 1
+		gs'stat'
+
+		if akrand = 1 and aksex1 = 0:aksex1 = 1 & guy += 1
+		if akrand = 2 and aksex2 = 0:aksex2 = 1 & guy += 1
+		if akrand = 3 and aksex3 = 0:aksex3 = 1 & guy += 1
+		if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
+		if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
+
+		'<center><img src="images/studia/hj.gif"></center>'
+		'<<$pakter>> I lay down on the bed and put his penis. You lay down beside him and took his penis in her hand. She smeared her breasts and a member of the actor, you started it nadrachivat eldu.'
+
+		act 'Fingering Breast':
+			cla
+			*clr
+			minut += 5
+
+			'<center><img src="images/studia/hjcumontits.gif"></center>'
+			'<<$pakter>> I began to finish your chest, and you continued to masturbate his penis squeezing his hot cum over.'
+
+			act 'Walk in shower':
+				cla
+				*clr
+				minut += 5
+				sweat = -3
+				horny = horny + 1
+				mop = 1
+				cumpussy = 0
+				cumbelly = 0
+				cumass = 0
+				cumanus = 0
+				cumlip = 0
+				cumface = 0
+
+				'<center><img src="images/pics/dush.jpg"></center>'
+				'You went into the shower and turned on the shower. Lathered body and washed off in the shower by removing all traces of semen from your body.'
+
+				act 'Go to Peter':gt'pf','boss'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '2':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	akrand = RAND(1,5)
+	if akrand = 1:$pakter = 'Alexey'
+	if akrand = 2:$pakter = 'Sergei'
+	if akrand = 3:$pakter = 'George'
+	if akrand = 4:$pakter = 'Ignat'
+	if akrand = 5:$pakter = 'Semen'
+
+	'On the site is already bustling assistants installing lighting, so, that there were no shadows.'
+	'On one side stands the actor <<$pakter>> and examining pornozhurnal Fingering member.'
+
+	act 'Removed':
+		cla
+		*clr
+		minut += 30
+		hj += 1
+		gs'stat'
+
+		if akrand = 1 and aksex1 = 0:aksex1 = 1 & guy += 1
+		if akrand = 2 and aksex2 = 0:aksex2 = 1 & guy += 1
+		if akrand = 3 and aksex3 = 0:aksex3 = 1 & guy += 1
+		if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
+		if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
+
+		'<center><img src="images/studia/hj.gif"></center>'
+		'<<$pakter>> I lay down on the bed and put his penis. You lay down beside him and took his penis in her hand. She smeared her breasts and a member of the actor, you started it nadrachivat eldu.'
+
+		act 'Take in the mouth':
+			cla
+			*clr
+			bj += 1
+			minut += 5
+
+			'<center><img src="images/studia/bj.gif"></center>'
+			'<<$pakter>> I sat down on the bed and you have settled down between his legs taking his cock in her mouth and began to suck the head.'
+
+			act 'Suck':
+				cla
+				*clr
+				minut += 5
+
+				'<center><img src="images/studia/deep.gif"></center>'
+				'<<$pakter>> I began to fuck you in the mouth hammering his cock down your throat every move.'
+				'Finally he took a member of you. It is time to remove the ejaculation.'
+
+				act 'Sit on your knees and open your mouth':
+					cla
+					*clr
+					minut += 5
+					cumlip += 1
+					facial += 1
+					gs'stat'
+
+					'<center><img src="images/studia/cum.gif"></center>'
+					'<<$pakter>> I finished your mouth, whipping hot jet of sperm you by language and once in the throat.'
+
+					act 'Clean mouth on his penis sperm':
+						cla
+						*clr
+						minut += 5
+						cumface += 1
+						swallow += 1
+						gs'stat'
+
+						'<center><img src="images/studia/bj2.gif"></center>'
+						'You began gently cleaned his cock from her sperm swallowing and devotedly looking into the eyes.'
+
+						act 'Walk in shower':
+							cla
+							*clr
+							minut += 5
+							sweat = -3
+							horny = horny + 1
+							mop = 1
+							cumpussy = 0
+							cumbelly = 0
+							cumass = 0
+							cumanus = 0
+							cumlip = 0
+							cumface = 0
+
+							'<center><img src="images/pics/dush.jpg"></center>'
+							'You went into the shower and turned on the shower. Lathered body and washed off in the shower by removing all traces of semen from your body.'
+
+							act 'Go to Peter':gt'pf','boss'
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '3':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	akrand = RAND(1,5)
+	if akrand = 1:$pakter = 'Alexey'
+	if akrand = 2:$pakter = 'Sergei'
+	if akrand = 3:$pakter = 'George'
+	if akrand = 4:$pakter = 'Ignat'
+	if akrand = 5:$pakter = 'Semen'
+
+	'On the site is already bustling assistants installing lighting, so, that there were no shadows.'
+	'On one side stands the actor <<$pakter>> and examining pornozhurnal Fingering member.'
+
+	act 'Removed':
+		cla
+		*clr
+		minut += 30
+		hj += 1
+		gs'stat'
+
+		if akrand = 1 and aksex1 = 0:aksex1 = 1 & guy += 1
+		if akrand = 2 and aksex2 = 0:aksex2 = 1 & guy += 1
+		if akrand = 3 and aksex3 = 0:aksex3 = 1 & guy += 1
+		if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
+		if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
+
+		'<center><img src="images/studia/hj.gif"></center>'
+		'<<$pakter>> I lay down on the bed and put his penis. You lay down beside him and took his penis in her hand. She smeared her breasts and a member of the actor, you started it nadrachivat eldu.'
+
+		act 'Take in the mouth':
+			cla
+			*clr
+			bj += 1
+			minut += 5
+
+			'<center><img src="images/studia/bj.gif"></center>'
+			'<<$pakter>> I sat down on the bed and you have settled down between his legs taking his cock in her mouth and began to suck the head.'
+
+			act 'Suck':
+				cla
+				*clr
+				minut += 5
+
+				'<center><img src="images/studia/deep.gif"></center>'
+				'<<$pakter>> I began to fuck you in the mouth hammering his cock down your throat every move.'
+
+				act 'Get cancer':
+					cla
+					*clr
+					sex += 1
+					vagina += 1
+					minut += 15
+
+					'<center><img src="images/studia/sex.gif"></center>'
+					'You got up on all fours and <<$pakter>> I drove you in the pussy your dick for the most eggs. He began to fuck you hard-, hitting all the body you on the behind and if his hands are not tenaciously hold your buttocks, then you`d have fallen, after the first strike.'
+
+					act 'Sit on your knees and open your mouth':
+						cla
+						*clr
+						minut += 5
+						cumlip += 1
+						facial += 1
+						gs'stat'
+
+						'<center><img src="images/studia/cum.gif"></center>'
+						'<<$pakter>> I finished your mouth, whipping hot jet of sperm you by language and once in the throat.'
+
+						act 'Clean mouth on his penis sperm':
+							cla
+							*clr
+							minut += 5
+							cumface += 1
+							swallow += 1
+							gs'stat'
+
+							'<center><img src="images/studia/bj2.gif"></center>'
+							'You began gently cleaned his cock from her sperm swallowing and devotedly looking into the eyes.'
+
+							act 'Walk in shower':
+								cla
+								*clr
+								minut += 5
+								sweat = -3
+								horny = horny + 1
+								mop = 1
+								cumpussy = 0
+								cumbelly = 0
+								cumass = 0
+								cumanus = 0
+								cumlip = 0
+								cumface = 0
+
+								'<center><img src="images/pics/dush.jpg"></center>'
+								'You went into the shower and turned on the shower. Lathered body and washed off in the shower by removing all traces of semen from your body.'
+
+								act 'Go to Peter':gt'pf','boss'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '4':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	gs'stat'
+
+	akrand = RAND(1,5)
+	if akrand = 1:$pakter = 'Alexey'
+	if akrand = 2:$pakter = 'Sergei'
+	if akrand = 3:$pakter = 'George'
+	if akrand = 4:$pakter = 'Ignat'
+	if akrand = 5:$pakter = 'Semen'
+
+	'On the site is already bustling assistants installing lighting, so, that there were no shadows.'
+	'On one side stands the actor <<$pakter>> and examining pornozhurnal Fingering member.'
+
+	act 'Removed':
+		cla
+		*clr
+		minut += 30
+		hj += 1
+		gs'stat'
+
+		if akrand = 1 and aksex1 = 0:aksex1 = 1 & guy += 1
+		if akrand = 2 and aksex2 = 0:aksex2 = 1 & guy += 1
+		if akrand = 3 and aksex3 = 0:aksex3 = 1 & guy += 1
+		if akrand = 4 and aksex4 = 0:aksex4 = 1 & guy += 1
+		if akrand = 5 and aksex5 = 0:aksex5 = 1 & guy += 1
+
+		'<center><img src="images/studia/hj.gif"></center>'
+		'<<$pakter>> I lay down on the bed and put his penis. You lay down beside him and took his penis in her hand. She smeared her breasts and a member of the actor, you started it nadrachivat eldu.'
+
+		act 'Take in the mouth':
+			cla
+			*clr
+			bj += 1
+			minut += 5
+
+			'<center><img src="images/studia/bj.gif"></center>'
+			'<<$pakter>> I sat down on the bed and you have settled down between his legs taking his cock in her mouth and began to suck the head.'
+
+			act 'Suck':
+				cla
+				*clr
+				minut += 5
+
+				'<center><img src="images/studia/deep.gif"></center>'
+				'<<$pakter>> I began to fuck you in the mouth hammering his cock down your throat every move.'
+
+				act 'Get cancer':
+					cla
+					*clr
+					sex += 1
+					vagina += 1
+					minut += 5
+
+					'<center><img src="images/studia/sex.gif"></center>'
+					'You got up on all fours and <<$pakter>> I drove you in the pussy your dick for the most eggs. He began to fuck you hard-, hitting all the body you on the behind and if his hands are not tenaciously hold your buttocks, then you`d have fallen, after the first strike.'
+					'Finally, the actor took out of your penis and you feel he stared you in the ass.'
+
+					act 'Relax anus':
+						cla
+						*clr
+						anal += 1
+						anus += 1
+						minut += 5
+
+						'<center><img src="images/studia/sex.gif"></center>'
+						'You have tried as best they could relax the anus that would painlessly allowed inside Member. <<$pakter>> gradually I came into your ass and began to peck your ass like a steam hammer.'
+
+						act 'Sit on your knees and open your mouth':
+							cla
+							*clr
+							minut += 5
+							cumlip += 1
+							facial += 1
+							gs'stat'
+
+							'<center><img src="images/studia/cum.gif"></center>'
+							'<<$pakter>> I finished your mouth, whipping hot jet of sperm you by language and once in the throat.'
+
+							act 'Clean mouth on his penis sperm':
+								cla
+								*clr
+								minut += 5
+								cumface += 1
+								swallow += 1
+								gs'stat'
+
+								'<center><img src="images/studia/bj2.gif"></center>'
+								'You began gently cleaned his cock from her sperm swallowing and devotedly looking into the eyes.'
+
+								act 'Walk in shower':
+									cla
+									*clr
+									minut += 5
+									sweat = -3
+									horny = horny + 1
+									mop = 1
+									cumpussy = 0
+									cumbelly = 0
+									cumass = 0
+									cumanus = 0
+									cumlip = 0
+									cumface = 0
+
+									'<center><img src="images/pics/dush.jpg"></center>'
+									'You went into the shower and turned on the shower. Lathered body and washed off in the shower by removing all traces of semen from your body.'
+
+									act 'Go to Peter':gt'pf','boss'
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '5':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	gang += 1
+	gs'stat'
+
+	akrand = RAND(1,5)
+	if akrand = 1:
+		$pakter = 'Alexey'
+		if aksex1 = 0:aksex1 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 2:
+		$pakter = 'Sergei'
+		if aksex2 = 0:aksex2 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 3:
+		$pakter = 'George'
+		if aksex3 = 0:aksex3 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 4:
+		$pakter = 'Ignat'
+		if aksex4 = 0:aksex4 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 5:
+		$pakter = 'Semen'
+		if aksex5 = 0:aksex5 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		end
+	end
+
+	'On the site is already bustling assistants installing lighting, so, that there were no shadows.'
+	'Actors <<$pakter>> and <<$pakter2>> Peppers to play dirty magazines, that would bring them into a state of alert.'
+
+	act 'Removed':
+		cla
+		*clr
+		minut += 10
+		bj += 2
+		gs'stat'
+
+		'<center><img src="images/studia/tbj.gif"></center>'
+		'Cast members got them and began to beat you in the face.'
+
+		act 'Suck':
+			cla
+			*clr
+			minut += 15
+			gs'stat'
+
+			'<center><img src="images/studia/tbj2.gif"></center>'
+			'You started to suck the two members of the old one is not deprived attention, caressed their language, lips and sucked.'
+
+			act 'Fuck':
+				cla
+				*clr
+				minut += 15
+				sex += 1
+				vagina += 1
+				gs'stat'
+
+				'<center><img src="images/studia/three.gif"></center>'
+				'You got up on all fours and <<$pakter>> You drove his cock in pussy, as long as you have aspirated <<$pakter22>>.'
+
+				act 'Anal':
+					cla
+					*clr
+					minut += 15
+					anal += 1
+					anus += 1
+					gs'stat'
+
+					'<center><img src="images/studia/threea.gif"></center>'
+					'<<$pakter>> You drove a screw in the ass, as long as you have aspirated <<$pakter22>>.'
+
+					act 'Cum on face':
+						cla
+						*clr
+						minut += 5
+						cumface += 1
+						facial += 1
+						gs'stat'
+
+						'<center><img src="images/studia/tcum.gif"></center>'
+						'<<$pakter22>> I finished your mouth, whipping hot jet of sperm you by language and once in the throat.'
+
+						act 'Walk in shower':
+							cla
+							*clr
+							minut += 5
+							sweat = -3
+							horny = horny + 1
+							mop = 1
+							cumpussy = 0
+							cumbelly = 0
+							cumass = 0
+							cumanus = 0
+							cumlip = 0
+							cumface = 0
+
+							'<center><img src="images/pics/dush.jpg"></center>'
+							'You went into the shower and turned on the shower. Lathered body and washed off in the shower by removing all traces of semen from your body.'
+
+							act 'Go to Peter':gt'pf','boss'
+						end
+					end
+				end
+			end
+		end
+	end
+end
+
+if $ARGS[0] = '6':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 30
+	gang += 1
+	gs'stat'
+
+	akrand = RAND(1,5)
+	if akrand = 1:
+		$pakter = 'Alexey'
+		if aksex1 = 0:aksex1 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 2:
+		$pakter = 'Sergei'
+		if aksex2 = 0:aksex2 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 3:
+		$pakter = 'George'
+		if aksex3 = 0:aksex3 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 4:
+		$pakter = 'Ignat'
+		if aksex4 = 0:aksex4 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Semen'
+			$pakter22 = 'Seed'
+			if aksex5 = 0:aksex5 = 1 & guy += 1
+		end
+	elseif akrand = 5:
+		$pakter = 'Semen'
+		if aksex5 = 0:aksex5 = 1 & guy += 1
+
+		akrand2 = RAND(1,4)
+		if akrand2 = 1:
+			$pakter2 = 'Alexey'
+			$pakter22 = 'Alexei'
+			if aksex1 = 0:aksex1 = 1 & guy += 1
+		elseif akrand2 = 2:
+			$pakter2 = 'Sergei'
+			$pakter22 = 'Sergei'
+			if aksex2 = 0:aksex2 = 1 & guy += 1
+		elseif akrand2 = 3:
+			$pakter2 = 'George'
+			$pakter22 = 'George'
+			if aksex3 = 0:aksex3 = 1 & guy += 1
+		elseif akrand2 = 4:
+			$pakter2 = 'Ignat'
+			$pakter22 = 'Ignat'
+			if aksex4 = 0:aksex4 = 1 & guy += 1
+		end
+	end
+
+	'On the site is already bustling assistants installing lighting, so, that there were no shadows.'
+	'Actors <<$pakter>> and <<$pakter2>> Peppers to play dirty magazines, that would bring them into a state of alert.'
+
+	act 'Removed':
+		cla
+		*clr
+		minut += 10
+		bj += 2
+		gs'stat'
+
+		'<center><img src="images/studia/tbj.gif"></center>'
+		'Cast members got them and began to beat you in the face.'
+
+		act 'Suck':
+			cla
+			*clr
+			minut += 15
+			gs'stat'
+
+			'<center><img src="images/studia/tbj2.gif"></center>'
+			'You started to suck the two members of the old one is not deprived attention, caressed their language, lips and sucked.'
+
+			act 'Fuck':
+				cla
+				*clr
+				minut += 15
+				sex += 1
+				vagina += 1
+				gs'stat'
+
+				'<center><img src="images/studia/three.gif"></center>'
+				'You got up on all fours and <<$pakter>> You drove his cock in pussy, as long as you have aspirated <<$pakter22>>.'
+
+				act 'Anal':
+					cla
+					*clr
+					minut += 15
+					anal += 1
+					anus += 1
+					gs'stat'
+
+					'<center><img src="images/studia/threea.gif"></center>'
+					'<<$pakter>> You drove a screw in the ass, as long as you have aspirated <<$pakter22>>.'
+
+					act 'Double penetration':
+						cla
+						*clr
+						minut += 15
+						anus += 1
+						vagina += 1
+						gs'stat'
+
+						'<center><img src="images/studia/three2.gif"></center>'
+						'<<$pakter>> You lay down and sat on his cock pussy, <<$pakter2>> I came back and you feel his cock penetrates your anus. Men began to peck you in two holes, hard dicks rubbing against each other through a thin stenochku in your body.'
+
+						act 'Cum on face':
+							cla
+							*clr
+							minut += 5
+							cumface += 1
+							facial += 1
+							gs'stat'
+
+							'<center><img src="images/studia/tcum.gif"></center>'
+							'<<$pakter22>> I finished your mouth, whipping hot jet of sperm you by language and once in the throat.'
+
+							act 'Walk in shower':
+								cla
+								*clr
+								minut += 5
+								sweat = -3
+								horny = horny + 1
+								mop = 1
+								cumpussy = 0
+								cumbelly = 0
+								cumass = 0
+								cumanus = 0
+								cumlip = 0
+								cumface = 0
+
+								'<center><img src="images/pics/dush.jpg"></center>'
+								'You went into the shower and turned on the shower. Lathered body and washed off in the shower by removing all traces of semen from your body.'
+
+								act 'Go to Peter':gt'pf','boss'
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+end
+--- pf ---------------------------------
+

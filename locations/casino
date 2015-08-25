@@ -1,0 +1,17 @@
+# casino
+minut += 10
+gs'stat'
+
+'<center><img src="images/casino/zdcasino.jpg"></center>'
+'<center>You stand in front of the door of a huge building casino.</center>'
+
+act 'Log in to the casino':
+	gt'hall'
+end
+act 'Back in the Northern region':
+	gt'nord'
+end
+
+!if tobiQW < 1000:tobiQW = 1000
+--- casino ---------------------------------
+

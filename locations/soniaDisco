@@ -1,0 +1,149 @@
+# soniaDisco
+$din_sonia_dance = {
+	act 'To approach Sonia':
+		cls
+		minut += 5
+		gs'stat'
+		'<center><img src="images/qwest/alter/sonia/1.jpg"></center>'
+		'You came to Sonia'
+		act 'Help':
+		    
+		    ' and he told her that she had fallen down strap.'
+		    act 'Further':dynamic $din_sonia_dance1
+		end
+        
+        act 'Obnozhit her chest':
+            cls
+            DOM = DOM + 5
+            horny += 5
+            '<center><img src="images/lmps/sonia1.jpg"></center>'
+		    ' and told her, that her cool breast and a must see all sakrovische. Sonia ponimayuchi not looked at you and said, - "What are you talking about?". And you pulled one hand from the shoulder strap of the second exposing her breasts.' 
+            act 'Further':dynamic $din_sonia_dance1
+		end
+    end
+}
+$din_sonia_dance1 = {
+
+	cls
+	minut += 5
+	gs'stat'
+	'<center><img src="images/qwest/alter/sonia/1.jpg"></center>'
+	'Sonia smiled drunkenly and began awkwardly correct. To you came Vitek cats and noticed "Cool tits." Sonia touched her nipple with a finger "Truth? Do you like" Kotov grinned "But what about the. You still cool and sponges, well probably suck." Sonya slammed fist Vitka "Ofigel something?" Vitek laughed "I`m talking about ice cream, What are you thinking?" Sonia embarrassed "You do not have ice cream!" Witek cleverly squinted "And if there is? Pososesh?" Sonia licked "With pleasure." Vitek took from his pocket and opened it ice cream. Sonia pulled her hands to ice cream, but Witek cleverly cleaned ice cream from Sony "Just out of my hands."'
+
+		act 'Watch':
+			cls
+			minut += 3
+			horny += 5
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/sonia/2.jpg"></center>'
+			'Sonia took her hands and opened her mouth. Vitek had ice cream on the lips and tongue, Sonia. Sonia started sucking ice cream as a member and slyly look at Vic. Vitek gently lowered down to the level of their ice cream pants and Sonia sat up slowly on his heels and continued to suck ice cream. Vitek noticeably excited and fly reared. Shulga and Auburn were watching with their mouths open. Finally forced Auburn "Let`s go to the street even buhnem."'
+
+			act 'Staying at the disco':
+				cls
+				minut += 5
+				dance += 1
+				soniaPS = 1
+				grupTipe[25] = -1
+				$npcText[25] = 'Sonia once inadvertently drunk and fucked her in the mouth around Witek Kotov buddies. After that, the girls shunned Sonia, and the boys thought she was a whore. Local gopota regularly drove to Sonia proposals have sex.'
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/sonia/7.jpg"></center>'
+				'You were in a disco and continued to dance. Shortly happy guys went to a disco, Kotov`s hand dragged Sonia, you looked carefully and gasped, her face was covered with sperm. The boys began to laugh and call Sonia whore, the girls turned away with contempt. Sonia pulled his hand out of his hands and ran with Victor discos.'
+
+				act 'Go to the disco':gt'gdkin'
+			end
+			act 'Go to the street':
+				cls
+				minut += 3
+				horny += 5
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/sonia/3.jpg"></center>'
+				'You went out with the company and went to the place where booze. Sonia was staggering and eats ice cream. "Vitek, Do you have another ice cream?" Vitek grinned "We find something. Sit down on his haunches and close your eyes." Sonia giggling squatted and closed her eyes. Vitek unbuttoned his pants and fell out of his pants his risen member. Sonia opened her eyes and drew back. She giggled, but I did not get up on his feet. Vitek said quietly "You can touch, it is far better ice cream."'
+
+				act 'Watch':
+					cls
+					minut += 3
+					horny += 5
+					gs'stat'
+
+					'<center><img src="images/qwest/alter/sonia/4.jpg"></center>'
+					'Sonia as if spellbound looking at a member of the front of his face and her hands went to the member, She jabbed a finger member and a member twitched, Sonia giggled and grabbed a member of his small hands. Her slender fingers began to stroke the skin on the penis. Vitek said choked "And now try to taste, You will like."'
+
+					act 'Watch':
+						cls
+						minut += 3
+						horny += 5
+						gs'stat'
+
+						'<center><img src="images/qwest/alter/sonia/5.jpg"></center>'
+						'Sonia brought his face to the penis and licked her head cautiously, then she opened her mouth and put it in his mouth prick. Sonia began to suck dick loud smacking. Other guys as teammates began to unbutton his pants and surround Sonia.'
+
+						act 'Watch':
+							cls
+							minut += 3
+							horny += 5
+							gs'stat'
+
+							'<center><img src="images/qwest/alter/sonia/6.jpg"></center>'
+							'Sonia surrounded the boys and she began to suck their members did not resist, and even with evident pleasure,. It took quite a bit of time and the guys in turn began to cum Sonia`s face, covering his sperm.'
+
+							act 'Watch':
+								cls
+								minut += 3
+								horny += 5
+								soniaPS = 1
+								grupTipe[25] = -1
+								$npcText[25] = 'Sonia once inadvertently drunk and fucked her in the mouth around Witek Kotov buddies. After that, the girls shunned Sonia, and the boys thought she was a whore. Local gopota regularly drove to Sonia proposals have sex.'
+								gs'stat'
+
+								'<center><img src="images/qwest/alter/sonia/7.jpg"></center>'
+								'Finally the guys finished and removed members of his pants. Ryzhov said "It is necessary to announce a kid vafleshe. And what about that whore zashkvaryatsya." Shulga giggled "Classroom huesoska." Sonia rose drunkenly to his feet and leaned against a tree. her face flowed sperm and you noticed, that the eyes of her tears flow. Sonia whispers "What have I done, fool."'
+
+								act 'Go to the disco':gt'gdkin'
+							end
+						end
+					end
+				end
+			end
+		end
+}
+
+gs'stat'
+
+'<center><img src="images/qwest/alter/sonia/0.jpg"></center>'
+'By Vitka Kotov joined his friends, Vasya have you notice package where you can see the bottle. Vitek says your mind and turns to you. "Hey Svetsik. We then decided to plunk, come with us."'
+
+act 'Go to thump':
+	cls
+	alko += 2
+	minut += 15
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/sonia/0.jpg"></center>'
+	'You and the company went out and took from Vasya package vodka, a piece of liver sausage, lemonade and a loaf of Pinocchio. Bob poured vodka into a plastic cup and gave. You drank vodka choking and washed down with lemonade. Sonya too drunk. After that, everyone started talking. Vasya again poured vodka into glasses. You decided to skip and Sonia drank vodka. After that, she became noticeably drunk and cheeky smile. "I want to dance. Come back."'
+
+	act 'Go back to the disco':
+		cls
+		minut += 15
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/sonia/1.jpg"></center>'
+		'You`re back together now to a disco and Sonya immediately ran to the dance floor. Sonya desperately dancing, that does not even notice, that she had fallen down her bra strap and seen her naked breasts.'
+
+		dynamic $din_sonia_dance
+	end
+end
+act 'Takeout':
+	cls
+	minut += 30
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/sonia/1.jpg"></center>'
+	'You refused and the company retired, after a while you see that Sonia returned with the guys at the disco, and Sonya was a drunk. Sonia goes to the dance floor and start dancing. Sonya desperately dancing, that does not even notice, that she had fallen down her bra strap and seen her naked breasts.'
+
+	dynamic $din_sonia_dance
+end
+--- soniaDisco ---------------------------------
+

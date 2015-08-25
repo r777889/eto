@@ -1,0 +1,536 @@
+# klofdomhouse1
+if $ARGS[0] = 'start':
+	cla
+	*clr
+	minut = minut + 5
+
+	act 'Call at the door':
+		cla
+
+		if klofQW = 2 and hour >= 16 and klofday ! day:
+			gt'klofdomhouse','ev1'
+		elseif klofQW > 2 and hour >= 16 and klofday ! day:
+			gt'klofdomhouse','start1'
+		else
+			'Nobody`s home'
+
+			act 'Go home':gt'street'
+		end
+	end
+	act 'Go home':gt'street'
+end
+
+if $ARGS[0] = 'ev1':
+	cla
+	*clr
+	klofday = day
+	minut = minut+5
+
+	'<center><img src="images/klof/klof.jpg"></center>'
+	'You rang the bell.'
+	'You do not open and you want to leave, but then the door opened.'
+	'-Hello- said Light'
+	'-And it`s you- said (smiling) guy- Come.'
+
+	act 'Go':gt'klofdomhouse','ev2'
+end
+
+if $ARGS[0] = 'ev2':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/klof/klof1.jpg"></center>'
+	'You looked around, the apartment was a pigsty ,Wall with peeled wallpaper, socks strewn everywhere.'
+	'-How-the pathetic you guys are rebya - you said and smiled,eye contact with a guy.'
+	'-Nothing, we have just arrived in this city soon obzhivaya- said grinning guy.'
+	'- Clear. You and I have not met.'
+	'- Call me Zhora, and my sidekick Senya, and now quickly tidy apartment.'
+
+	act 'Clean up':gt'klofdomhouse','ev4'
+
+	if sub < 30 and horny < 75:
+		act 'Escape':gt'klofdomhouse','ev3'
+	end
+end
+
+if $ARGS[0] = 'ev3':
+	cla
+	*clr
+	minut = minut+5
+	klofQW = klofQW-1
+
+	if dom > 0:dom = dom+5
+	if sub > 0:sub = sub-5
+
+	'<center><img src="images/picQW/pnx.jpg"></center>'
+	'You have decided that the guy above you just scoffs and left.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'ev4':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/klof/klof3.jpg"></center>'
+	'Remove you approached and asked Zhora:.'
+	'-Jora you promised money and entertainment, but as long as I did not see that this'
+	'-Well listen, As I said we are not in the city for a long time, Now we need is the girl for services at home'
+	'- As will become closer acquainted, to talk business.'
+	'- Now be a good girl and I served basis'
+
+	act 'Open your legs Jaurès':gt'klofdomhouse','ev5'
+end
+
+if $ARGS[0] = 'ev5':
+	cla
+	*clr
+	minut = minut+5
+	sex += 1
+	vagina += 1
+
+	'<center><img src="images/klof/klof4.jpg"></center>'
+	'Jora began to fuck your pussy, Suddenly the door opened.'
+	'I entered the room and said, Senya: "Suck me a member of the baby"'
+
+	act 'Take in the mouth Cenis':gt'klofdomhouse','ev6'
+end
+
+if $ARGS[0] = 'ev6':
+	cla
+	*clr
+	hour = hour+23
+	minut = minut+5
+	klofQW = klofQW+1
+	cla
+	*clr
+	money = money + 200
+	bj = bj + 1
+	cumface = cumface + 1
+	cumpussy = cumpussy + 1
+
+	'<center><img src="images/klof/klof5.jpg"></center>'
+	'Jora rigidly pecked in your pussy, Xian fuck you in the mouth.'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	'You are dressed and ready to go home.'
+	'To you I came up and handed the money Jora: "Earned chips"'
+
+	if bj >= anal and bj >= sex:
+		callnm = 1
+	elseif anal >= oral and anal >= sex:
+		callnm = 2
+	elseif sex >= bj and sex >= anal:
+		callnm = 3
+	end
+
+	if vaf >= 100:
+		callnm = 4
+	end
+
+	act 'Go home':gt'street'
+end
+
+if $ARGS[0] = 'start1':
+	cla
+	*clr
+	klofday = day
+	minut = minut + 5
+	gt'klofdomhouse','ev7'
+end
+
+if $ARGS[0] = 'ev7':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/klof/klof1.jpg"></center>'
+	'You went to the apartment'
+
+	act 'Say hello to the guys':gt'klofdomhouse','ev8'
+end
+
+if $ARGS[0] = 'ev8':
+	cla
+	*clr
+	minut = minut+5
+
+	'<center><img src="images/klof/klof6.jpg"></center>'
+	'-Hi baby- said the boys, baring your breasts and began to caress you.'
+	'- Hello boys missed me?- Say you and turned red'
+
+	act 'Amuse Zhora':gt'klofdomhouse','ev9'
+	act 'Amuse Senya':gt'klofdomhouse','ev10'
+	act 'Amuse both':gt'klofdomhouse','ev19'
+	act 'Talk to the works Zhora':gt'klofdomhouse','ev20'
+end
+
+if $ARGS[0] = 'ev9':
+	cla
+	*clr
+
+	act 'Writing in the pussy Jaurès':gt'klofdomhouse','ev13'
+	act 'Writing in the ass Jaurès':gt'klofdomhouse','ev14'
+	act 'Suck Jaurès':gt'klofdomhouse','ev19'
+end
+
+if $ARGS[0] = 'ev13':
+	cla
+	*clr
+	minut = minut+30
+	klofQW = klofQW+1
+	money = money + 100
+	vagina = vagina + 1
+	sex = sex + 1
+	cumpussy = cumpussy + 1
+
+	picrand = RAND(1,3)
+	if picrand = 1:'<center><img src="images/klof/klof7.jpg"></center>'
+	if picrand = 2:'<center><img src="images/klof/klof8.jpg"></center>'
+	if picrand = 3:'<center><img src="images/klof/klof9.jpg"></center>'
+
+	'Jora zhetko pecked in your pussy.'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	'<center><img src="images/klof/klof10.jpg"></center>'
+	'You feel, Jora that discharges into you.'
+	'You are dressed and ready to go home.'
+	'Jora handed you the money: "Earned chips"'
+
+	act 'Go home':gt'street'
+end
+
+if $ARGS[0] = 'ev14':
+	cla
+	*clr
+	minut = minut+30
+	klofQW = klofQW+1
+	money = money + 100
+	anal = anal + 1
+	anus = anus + 1
+	cumass = cumass + 1
+
+	picrand = RAND(1,3)
+	if picrand = 1:'<center><img src="images/klof/klof11.jpg"></center>'
+	if picrand = 2:'<center><img src="images/klof/klof12.jpg"></center>'
+	if picrand = 3:'<center><img src="images/klof/klof13.jpg"></center>'
+
+	'Jora with all his might hammer you in the ass.'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	act '...':
+		cla
+		*clr
+		'<center><img src="images/klof/klof14.jpg"></center>'
+		'Jora discharge you in the ass, and inserts the plug in the ass'
+		'You are dressed and ready to go home.'
+		'Jora handed you the money: "Earned chips"'
+
+		act 'Go home':gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev15':
+	cla
+	*clr
+	minut = minut+30
+	klofQW = klofQW+1
+	money = money + 100
+	bj = bj + 1
+	cumface = cumface + 1
+
+	picrand = RAND(1,3)
+	if picrand = 1:'<center><img src="images/klof/klof15.jpg"></center>'
+	if picrand = 2:'<center><img src="images/klof/klof16.jpg"></center>'
+	if picrand = 3:'<center><img src="images/klof/klof17.jpg"></center>'
+
+	'You are gripped with passion Zhorin member lips.'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	act '...':
+		cla
+		*clr
+
+		picrand = RAND(1,3)
+		if picrand = 1:'<center><img src="images/klof/klof18.jpg"></center>'
+		if picrand = 2:'<center><img src="images/klof/klof19.jpg"></center>'
+		if picrand = 3:'<center><img src="images/klof/klof20.jpg"></center>'
+
+		'Jora discharged in your face'
+		'You are dressed and ready to go home.'
+		'Jora handed you the money: "Earned chips"'
+
+		act 'Go home':gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev10':
+	cla
+	*clr
+
+	act 'Writing in the pussy Seine':gt'klofdomhouse','ev 16'
+	act 'Give the Seine in the ass':gt'klofdomhouse','ev 17'
+	act 'Suck Seine':gt'klofdomhouse','ev 18'
+end
+
+if $ARGS[0] = 'ev 16':
+	cla
+	*clr
+	minut = minut+30
+	klofQW = klofQW+1
+	money = money + 100
+	vagina = vagina + 1
+	sex = sex + 1
+
+	picrand = RAND(1,3)
+	if picrand = 1:'<center><img src="images/klof/klof7.jpg"></center>'
+	if picrand = 2:'<center><img src="images/klof/klof8.jpg"></center>'
+	if picrand = 3:'<center><img src="images/klof/klof9.jpg"></center>'
+
+	'Senya rigidly pecked in your pussy.'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	act '...':
+		cla
+		*clr
+		'<center><img src="images/klof/klof10.jpg"></center>'
+		'You feel, Jora that discharges into you.'
+		'You are dressed and ready to go home.'
+		'Senya handed you the money: "Earned chips"'
+
+		act 'Go home':gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev 17':
+	cla
+	*clr
+	minut = minut+30
+	klofQW = klofQW+1
+	money = money + 100
+	cumass = cumass + 1
+	anal += 1
+	anus += 1
+
+	picrand = RAND(1,3)
+	if picrand = 1:'<center><img src="images/klof/klof11.jpg"></center>'
+	if picrand = 2:'<center><img src="images/klof/klof12.jpg"></center>'
+	if picrand = 3:'<center><img src="images/klof/klof13.jpg"></center>'
+
+	'Senja with all his might hammer you in the ass.'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	act '...':
+		cla
+		*clr
+		'<center><img src="images/klof/klof14.jpg"></center>'
+		'Senya discharged you point, and inserts the plug in the ass'
+		'You are dressed and ready to go home.'
+		'Senya handed you the money: "Earned chips"'
+
+		act 'Go home':gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev 18':
+	cla
+	*clr
+	minut = minut+30
+	klofQW = klofQW+1
+	money = money + 100
+	bj += 1
+	guy = guy + 1
+	cumlip = cumlip + 1
+
+	picrand = RAND(1,3)
+	if picrand = 1:'<center><img src="images/klof/klof15.jpg"></center>'
+	if picrand = 2:'<center><img src="images/klof/klof16.jpg"></center>'
+	if picrand = 3:'<center><img src="images/klof/klof17.jpg"></center>'
+
+	'You are gripped with passion Senenin member lips.'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	act '...':
+		cla
+		*clr
+		facial += 1
+
+		picrand = RAND(1,3)
+		if picrand = 1:'<center><img src="images/klof/klof18.jpg"></center>'
+		if picrand = 2:'<center><img src="images/klof/klof19.jpg"></center>'
+		if picrand = 3:'<center><img src="images/klof/klof20.jpg"></center>'
+
+		'Senya discharged in your face'
+		'You are dressed and ready to go home.'
+		'Senya handed you the money: "Earned chips"'
+
+		act 'Go home':gt'street'
+	end
+end
+
+if $ARGS[0] = 'ev19':
+	cla
+	*clr
+	minut = minut+30
+	klofQW = klofQW+2
+	money = money + 200
+	sex += 1
+	bj = bj + 1
+	cumface = cumface + 1
+	facial += 1
+	cumpussy = cumpussy + 1
+	vagina = vagina + 1
+
+	picrand = RAND(1,3)
+	if picrand = 1:'<center><img src="images/klof/klof21.jpg"></center>'
+	if picrand = 2:'<center><img src="images/klof/klof22.jpg"></center>'
+	if picrand = 3:'<center><img src="images/klof/klof23.jpg"></center>'
+
+	'Jora brutally fuck you in the mouth, and CEnja dryuchit pussy'
+
+	horand = RAND(1,100)
+	if horand <= sex:horny = 0 & orgasm += 1 & 'You covered the orgasm'
+	if horand > sex:horny = horny + 10 & 'You were not satisfied'
+
+	'Finally they both finished, one in the pussy, the other face.'
+	'You are dressed and ready to go home.'
+	'Boys stretched you money: "Earned chips"'
+
+	act 'Go home':gt'street'
+end
+
+if $ARGS[0] = 'ev20':
+	cla
+	*clr
+	klofday = day
+	minut = minut+5
+
+	'<center><img src="images/klof/klof.jpg"></center>'
+	'If you want to talk serious business with our boss'
+
+	act 'Talk with the boss':
+		cla
+		if klofQW < 10:gt'klofdomhouse','ev21'
+		if klofQW >= 10:gt'klofdomhouse','ev22'
+	end
+end
+
+if $ARGS[0] = 'ev21':
+	cla
+	*clr
+	'<center><img src="images/klof/klof24.jpg"></center>'
+	'From the room came an ugly old man'
+	'"You climb a bit early in our affairs" - he said.'
+
+	act 'Go home':gt'street'
+end
+
+if $ARGS[0] = 'ev22':
+	cla
+	*clr
+	'<center><img src="images/klof/klof24.jpg"></center>'
+	'From the room came an ugly old man'
+	'Boss carefully looked at you and said,: "Come look at me you`re ready for the money"'
+
+	act 'Go to the boss room':gt'klofdomhouse','ev23'
+	act 'Go home':gt'street'
+end
+
+if $ARGS[0] = 'ev23':
+	cla
+	*clr
+	'<center><img src="images/klof/klof25.jpg"></center>'
+	'You went into the room the boss surprisingly it was well renovated and furnished'
+	'Well Well take off your clothes and show yourself - said boss'
+
+	act 'Show yourself':gt'klofdomhouse','ev24'
+	act 'Send it to...':gt'street'
+end
+
+if $ARGS[0] = 'ev24':
+	cla
+	*clr
+	'<center><img src="images/klof/klof26.jpg"></center>'
+	'You sat on the bed'
+
+	act 'Show the chest':gt'klofdomhouse','ev25'
+end
+
+if $ARGS[0] = 'ev25':
+	cla
+	*clr
+	'<center><img src="images/klof/klof26_1.jpg"></center>'
+	'You bared her breasts'
+
+	act 'Show ass':gt'klofdomhouse','ev26'
+end
+
+if $ARGS[0] = 'ev26':
+	cla
+	*clr
+	'<center><img src="images/klof/klof26_3.jpg"></center>'
+	'You showed her ass'
+
+	act 'Remove the dress':gt'klofdomhouse','ev27'
+end
+
+if $ARGS[0] = 'ev27':
+	cla
+	*clr
+	'<center><img src="images/klof/klof26_4.jpg"></center>'
+	'You took off her dress'
+
+	act 'Seduces boss':gt'klofdomhouse','ev28'
+end
+
+if $ARGS[0] = 'ev27':
+	cla
+	*clr
+	'<center><img src="images/klof/klof26_6.jpg"></center>'
+	'You sat on the bed and parted legs'
+
+	act 'Seduces boss':gt'klofdomhouse','ev28'
+end
+
+if $ARGS[0] = 'ev28':
+	cla
+	*clr
+	'<center><img src="images/klof/1284364hjl.jpg"></center>'
+	'You turned on its side and the boss showed her charms'
+
+	act 'Wagged his ass in front of the boss':gt'klofdomhouse','ev29'
+end
+
+if $ARGS[0] = 'ev29':
+	cla
+	*clr
+	'<center><img src="images/klof/1284365sgp.jpg"></center>'
+	'You turned on its side and the boss showed her charms'
+
+	act 'Seduces boss':gt'klofdomhouse','ev29'
+end
+--- klofdomhouse1 ---------------------------------
+

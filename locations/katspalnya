@@ -1,0 +1,82 @@
+# katspalnya
+$sexloc = $CURLOC
+
+if $ARGS[0] = 'start':
+	$metkaM = $ARGS[0]
+	$locM = $CURLOC
+
+	cls
+	gs'stat'
+
+	'<center><b><font color = maroon>Room Katie</font></b></center>'
+	'<center><img src="images/img/Kathouse/bedroom.jpg"></center>'
+	if hour >= 18 and hour < 23:'He is sitting on the couch <a href="exec:gt''katspalnya'',''kat''">Katya</a> watching TV'
+	if hour >= 23 or hour < 6:'In bed asleep <a href="exec:gt''katspalnya'',''katslip''">Katya</a>.'
+	'The large room in the middle stands a huge bed, the side a small couch.'
+
+	act 'Escape':gt'street'
+end
+
+if $ARGS[0] = 'katslip':
+	cla
+	clr
+	*clr
+	minut += 30
+	if katjob = 0 and kat > 60:gt'katspalnya','katjobs'
+
+	'<center><img src="images/img/Kathouse/kat.jpg"></center>'
+	'Kate rubs his eyes "Hello, what`s up".'
+
+	act 'Move away':gt'katspalnya','start'
+	if kat > 50:act 'Sex':gt'lezbsex','start'
+end
+
+if $ARGS[0] = 'kat':
+	cla
+	clr
+	*clr
+	minut += 30
+	if katjob = 0 and kat > 60:gt'katspalnya','katjobs'
+
+	'<center><img src="images/img/Kathouse/kat.jpg"></center>'
+	'Seeing you smile Katya "Hello, what`s up".'
+
+	act 'Move away':gt'katspalnya','start'
+	if kat > 50:act 'Sex':gt'lezbsex','start'
+	act 'Chat':
+		cla
+		clr
+		*clr
+		if telkat = 0:telkat = 1
+		kat += 1
+		minut += 30
+
+		'<center><img src="images/img/Kathouse/kat.jpg"></center>'
+		'You talked for half an hour.'
+
+		act 'Finish':gt'katspalnya','start'
+	end
+end
+
+if $ARGS[0] = 'katjobs':
+	cla
+	clr
+	*clr
+	katjob = 1
+	minut += 30
+
+	'<center><img src="images/img/Kathouse/kat.jpg"></center>'
+	'"Svetik if you want I can talk to the heads of the doctor and you take a job at the clinic".'
+
+	act 'But I`m not a nurse':
+		cla
+		'"But, I`m not a nurse." You have tried to argue.'
+		'"Oh, come on, you start with what something unpretentious, ligation will do. And there you will learn, Life safety in the school because it was."'
+		'"Yes, It was." Answer You, Thinking about what you have at that time was not interested in dressing.'
+		'"Anyway, I`ll talk and you yourself want to see come, it or not."'
+
+		act 'Good':gt'katspalnya','start'
+	end
+end
+--- katspalnya ---------------------------------
+

@@ -1,0 +1,54 @@
+# koncepod1
+set minut += 5
+gs'stat'
+
+if hour<=7 and hour>=21:
+    '<center><img src="images/pic/koncepod1.jpg" ></center>'
+    '...'
+end
+
+act '<font color = maroon>The entrance</font>':gt'krr2x1'
+	cls
+	if sick <= 72 and nude = 0:
+		xgt'dvor'
+	elseif nude = 0:
+		'<b><font color = red>YOU TOO MUCH THAT sick to walk down the street.</font></b>'
+		xgt $curloc
+	else
+		'<b><font color = red>You need to get dressed.</font></b>'
+		xgt $curloc
+	end
+
+if psiho = 1:act '<b>GO TO APARTMENT</b>':gt'koncopodxl',''
+
+if tanga = 0 and ski = 1 and hour > 6 and hour <= 20 or tanga = 0 and glamur = 1 and hour > 6 and hour <= 20:
+	nurand = RAND(0,100)
+	if nurand >= 90:
+		manna = manna - 5
+		SUB = SUB + 1
+		horny = horny + SUB
+		'You`ve heard the barely audible murmur Concierge "That bitch! He walks in a short skirt and no panties, shmonkoy creature shines!"'
+	end
+end
+
+if hour >= 21 and hour <= 7:
+    act 'No concierge':
+        cls
+        gs'stat'
+        '<center><img src="images/pic/koncepod.jpg" ></center>'
+        'Hello Beautiful.'
+            act 'Logout':gt'koncepod1'    
+    end        
+end 
+  
+if mop = 4 and hour >= 7 and hour <= 21:
+    'You`ve heard the barely audible murmur Concierge-"Oh, and now smeared, Shaw Festival in the Indian Rain.'
+end
+
+if nude = 1 and hour >= 7 and hour <= 21:
+    'The lady, and go naked then it is not necessary, do not.Shame plant...'
+    set horny -=20
+end
+
+--- koncepod1 ---------------------------------
+

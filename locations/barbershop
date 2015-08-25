@@ -1,0 +1,95 @@
+# barbershop
+if $ARGS[0] = 'start':
+	$sexloc = $CURLOC
+	frost = 0
+	cls
+	gs'stat'
+	'<center><b><font color = maroon>Barbershop</font></b></center>'
+	'<center><img src="images/qwest/alter/parikmaherskoy1.jpg"></center>'
+
+	$gpokraska = {
+		cls
+		money = money - 1000
+		gs'stat'
+		'<center><b><font color = maroon>Barbershop</font></b></center>'
+		'<center><img src="images/qwest/alter/parikmaherskoy1.jpg"></center>'
+
+		'You paid the money and sat down in the chair, girl came to you and asked what color you would like repainted.'
+		if hcol ! 0:
+			act 'Black color':
+				cla
+				minut = minut + 60
+				hcol = 0
+				gs'stat'
+				'Do you dye your hair.'
+				act 'Further':gt'barbershop','start'
+			end
+		end
+		if hcol ! 1:
+			act 'Brown color':
+				cla
+				minut = minut + 60
+				hcol = 1
+				gs'stat'
+				'Do you dye your hair.'
+				act 'Further':gt'barbershop','start'
+			end
+		end
+		if hcol ! 2:
+			act 'Red color':
+				cla
+				minut = minut + 60
+				hcol = 2
+				gs'stat'
+				'Do you dye your hair.'
+				act 'Further':gt'barbershop','start'
+			end
+		end
+		if hcol ! 3:
+			act 'Light color':
+				cla
+				minut += 60
+				hcol = 3
+				gs'stat'
+				'Do you dye your hair.'
+				act 'Further':gt'barbershop','start'
+			end
+		end
+	}
+	$gzavivka = {
+		cls
+		'<center><b><font color = maroon>Barbershop</font></b></center>'
+		'<center><img src="images/qwest/alter/parikmaherskoy1.jpg"></center>'
+		minut += 60
+		curly += 10
+		money -= 1000
+		gs'stat'
+		'You curled hair.'
+		act 'Further':gt'barbershop','start'
+	}
+	$gdshorthair = {
+		cls
+		'<center><b><font color = maroon>Barbershop</font></b></center>'
+		'<center><img src="images/qwest/alter/parikmaherskoy1.jpg"></center>'
+		minut += 60
+		money = money - 1000
+		shorthair = 1
+		shorthairday = 0
+		gs'stat'
+		'You have cut your hair very short hair making you a boy.'
+		act 'Further':gt'barbershop','start'
+	}
+
+	if money >= 1000:'<a href="exec: dynamic $gdshorthair">Short haircut - 1 th.RUB</a>'
+	if money < 1000:'Short haircut - 500 RIAD'
+
+	if money >= 1000:'<a href="exec: dynamic $gpokraska ">Dye your hair - 1 th.RUB</a>'
+	if money < 1000:'Hair coloring 1 th.RUB'
+	
+	if money >= 1000:'<a href="exec: dynamic $gzavivka ">Curl the hair - 1 th.RUB</a>'
+	if money < 1000:'Curl the hair - 1 th.RUB'
+
+	act 'Logout':gt'gorodok'
+end
+--- barbershop ---------------------------------
+

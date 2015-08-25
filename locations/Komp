@@ -1,0 +1,1261 @@
+# Komp
+if $ARGS[0] = 'start':
+	cla
+	clr
+	elektro = elektro + 5
+	gs'stat'
+	'<center><b>Notebook</b></center>'
+	'<center><img src="images/pics/komp.jpg"></center>'
+	'With the computer happily welcomes you to the starting place.'
+	
+	if karta >= 10:
+		'You may <a href="exec:GT ''Komp'',''internet_pay''">pay</a> Internet via your bank account. 1 hour internet costs 10 rubles. In the bank <<karta>> rubles.'
+	end
+	if internet > 0:
+		internet = internetM/60
+		''
+		'You have left <B><<internet>> hours</B> Internet'
+		'You can use <a href="exec:GT ''Komp'',''brows''">Browser</a>'
+	end
+	
+	if student > 0 and kursovik < 100:'<a href="exec:GT ''Komp'',''kursak''">To write a term paper</a>'
+	
+	'<a href="exec:GT ''Komp'',''pasians''">Play patience</a>'
+
+	if GameCD > 0:'<a href="exec:GT ''KGDstart''">Play Disopl</a>'
+	if GameCD2 > 0:'<a href="exec:GT ''KGZstart''">Play Sunset Dead</a>'
+	if GameCD3 > 0:'<a href="exec:GT ''FSstart''">Play Albido</a>'
+
+	act '<B>Turn off computer</B>':
+		cla
+		gt'Komp','fin'
+	end
+end
+
+if $ARGS[0] = 'brows':
+	cla
+	clr
+	*clr
+	gs'stat'
+	'<center><b>Brazuer</b></center>'
+	'<center><img src="images/pics/komp/brows.jpg"></center>'
+	'You have left <<internet>> Internet hours.'
+	''
+	'You have entered into a search engine. You can visit:'
+	'<a href="exec:GT ''Komp'',''agent''">Site agentsvo property</a>'
+	if student > 0: '<a href="exec:GT ''Komp'',''study''">The Institute for Education Measurement</a>'
+	'<a href="exec:GT ''Komp'',''remont''">Site Apartment repair</a>'
+	if housr = 1 and husband = 0:'<a href="exec:GT ''Komp'',''sale''">Site Ad</a>'
+	'<a href="exec:GT ''Komp'',''porno''">Porn site</a>'
+	'<a href="exec:GT ''Komp'',''znak''">Dating Site</a>'
+	if hour < 20 and hour > 7:'<a href="exec:GT ''Komp'',''rabota''">Jobs.su</a>'
+	'<a href="exec:GT ''Komp'',''kabtv''">Website cable TV</a>'
+	'<a href="exec:GT ''KGstart''">Online game Vertep World</a>'
+	if shantfoto > 0:'Search for photos in character <a href="exec:GT ''Komp'',''foto''">"In the ass"</a>'
+	if gor_dorm = 7:'Read <a href="exec:GT ''etoexhib'',''pos91''">letter</a> by Evgeniya'
+	if camwhore = 1:'<a href="exec:GT ''Komp'',''mfc''">MyFreeCams.org</a>'
+	
+		
+	!online video chat runetka
+	if $loc='shulga_room' and vasya_shulgin>=50 or $loc='sitr' and webcamera = 1: '<a href="exec:GT ''webcam_site''">Online video chat "Runetka"</a>'
+	
+	if internet = 0:
+		cls
+		'<center><b>Brazuer</b></center>'
+		'<center><img src="images/pics/komp/eror.jpg"></center>'
+		'You need to fill up online.'
+	end
+	
+	act '<B>Quit your browser</B>':gt'Komp','start'
+	
+end
+
+if $ARGS[0] = 'sale':
+	cla
+	clr
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	gs'stat'
+	'<center><b>Site Ad</b></center>'
+	'<center><img src="images/pics/komp/sale.jpg"></center>'
+	'You are logged in Free classified ads.'
+
+	if obkvsdam = 0 and housrA = 1:
+		act 'Post Free Ads about putting apartments':obkvsdam = 1 & gt'Komp','sale'
+	elseif obkvsdam > 0:
+		act 'Check your responses to advertisements for apartments rented':
+			cla
+			if obkvsdam = 1:
+				'No one responded to your ad'
+			elseif obkvsdam > 1:
+				if obkvsdam = 2:predsumm = 7000
+				if obkvsdam = 2:predsumm = 8000
+				if obkvsdam = 2:predsumm = 9000
+				if obkvsdam = 2:predsumm = 10000
+
+				'I want to stay in your apartment for a month <<predsumm>> RUB.'
+
+				act 'To rent':
+					sdaday = day
+					sdamonth = month+1
+					housr = 0
+					money += predsumm
+					gt'Komp','start'
+				end
+			end
+
+			act '<B>Finish</B>':gt'Komp','brows'
+		end
+	end
+
+	act '<B>Finish</B>':gt'Komp','brows'
+end
+
+if $ARGS[0] = 'remont':
+	cla
+	clr
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	gs'stat'
+	'<center><b>Site Apartment repair</b></center>'
+	'<center><img src="images/pics/komp/remont.jpg"></center>'
+	'You are logged in apartment repair.'
+
+	if housr = 1:
+		if rembedr = 0:
+			act 'Repair bedroom (50 th.RUB)':
+				if money >= 50000:
+					cla
+					rembedr = 1
+					money = money - 50000
+
+					'You pay for the repairs and you did it the same, Ravshan and Dzhumshut simple wizards.'
+				else
+					cla
+					'Unfortunately, You do not have enough money.'
+				end
+
+				act '<B>Logout</B>':gt'Komp','remont'
+			end
+		end
+		if remsitr = 0:
+			act 'Repair Facilities (50 th.RUB)':
+				if money >= 50000:
+					cla
+					remsitr = 1
+					money = money - 50000
+
+					'You pay for the repairs and you did it the same, Ravshan and Dzhumshut simple wizards.'
+				else
+					cla
+					'Unfortunately, You do not have enough money.'
+				end
+
+				act '<B>Logout</B>':gt'Komp','remont'
+			end
+		end
+		if remkorr = 0:
+			act 'Repair corridor (50 th.RUB)':
+				if money >= 50000:
+					cla
+					remkorr = 1
+					money = money - 50000
+
+					'You pay for the repairs and you did it the same, Ravshan and Dzhumshut simple wizards.'
+				else
+					cla
+					'Unfortunately, You do not have enough money.'
+				end
+
+				act '<B>Logout</B>':gt'Komp','remont'
+			end
+		end
+		if remvanr = 0:
+			act 'Repair bathroom (50 th.RUB)':
+				if money >= 50000:
+					cla
+					remvanr = 1
+					money = money - 50000
+
+					'You pay for the repairs and you did it the same, Ravshan and Dzhumshut simple wizards.'
+				else
+					cla
+					'Unfortunately, You do not have enough money.'
+				end
+
+				act '<B>Logout</B>':gt'Komp','remont'
+			end
+		end
+		if remkuhr = 0:
+			act 'Renovated kitchen (50 th.RUB)':
+				if money >= 50000:
+					cla
+					remkuhr = 1
+					money = money - 50000
+
+					'You pay for the repairs and you did it the same, Ravshan and Dzhumshut simple wizards.'
+				else
+					cla
+					'Unfortunately, You do not have enough money.'
+				end
+
+				act '<B>Logout</B>':gt'Komp','remont'
+			end
+		end
+	end
+
+	act '<B>Finish</B>':gt'Komp','brows'
+end
+
+if $ARGS[0] = 'porno':
+	cls
+	minut = minut + 60
+	internetM = internetM - 60
+	manna = manna + 5
+	elektro = elektro + 3
+	willpower = willpower + RAND(5,10)
+	manna = manna + RAND(10,50)
+	horny = horny + 30
+	internet -= 1
+	gs'stat'
+	'<center><b>Porn site</b></center>'
+	'<center><img src="images/pics/komp/porno.jpg"></center>'
+	'You entered the porn site.'
+
+	$pornomastr = {
+		cls
+		minut = minut + 15
+		sweat += 1
+		horny = horny + RAND(10,25)
+		if divanmastr = 0:divanmastr = 1 & mastr = mastr + 1
+		gs'stat'
+
+		'<center><img src="images/pics/kompmas.jpg"></center>'
+		'You get comfortable in front of the computer with one hand and began to fondle her breasts, a finger of the other hand you started rubbing and stroking a small bump between his legs that responded to touch a pleasant bliss embracing your entire body.'
+
+		if horny >= 100:
+			orgasm += 1
+			horny = 0
+			'Suddenly nice cramp brought your body and you covered powerful orgasm, from which you moan.'
+		end
+
+		act '<B>Finish</B>':divanmastr = 0 & gt'Komp','porno'
+		if horny >= 50:act 'Proceed':dynamic $pornomastr
+	}
+
+	act 'Watch porn on':
+		cla
+		'<center><img src="images/pics/komp/porno.jpg"></center>'
+
+		gt'Komp','porno'
+	end
+
+	if horny >= 50:act 'Masturbate 15 min':dynamic $pornomastr
+
+	act '<B>Finish</B>':gt'Komp','brows'
+end
+
+if $ARGS[0] = 'pasians':
+	cla
+	clr
+	*clr
+	minut = minut + 20
+	manna = manna + 5
+	elektro = elektro + 3
+	willpower = willpower + RAND(5,10)
+	manna = manna + RAND(10,50)
+	gs'stat'
+	'<center><b>Solitaire</b></center>'
+	'<center><img src="images/pics/komp/pasians.jpg"></center>'
+	'You entertained for an hour unfolding of solitaire on the computer.'
+
+	act 'Foldout more 20 minutes':gt'Komp','pasians'
+	act '<B>Close Solitaire</B>':gt'Komp','start'
+end
+
+if $ARGS[0] = 'znak':
+	cla
+	clr
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	manna = manna + 5
+	elektro = elektro + 3
+	internet -= 1
+	gs'stat'
+	'<center><b>Dating Site</b></center>'
+	'<center><img src="images/pics/komp/znak.jpg"></center>'
+	'You are logged on to a dating site.'
+	'Selection of guys only possible in the absence of boyfriend.'
+
+	if bfA <= 0:
+		act 'Choose a guy with a sweet-tempered':
+			cla
+			gs'boy'
+			gs'boyfrend','start'
+			stopboy = 0
+			harakBoyA = 0
+
+			'You wrote a guy named <<$boyA>>, We talked to him and left him telefonchik in hopes that he will call you.'
+
+			act '<B>Finish</B>':gt'Komp','brows'
+		end
+		act 'Choose a guy with an ordinary character':
+			cla
+			gs'boy'
+			gs'boyfrend','start'
+			stopboy = 0
+			harakBoyA = 1
+
+			'You wrote a guy named <<$boyA>>, We talked to him and left him telefonchik in hopes that he will call you.'
+
+			act '<B>Finish</B>':gt'Komp','brows'
+		end
+		act 'Choose a guy with a strong character':
+			cla
+			gs'boy'
+			gs'boyfrend','start'
+			stopboy = 0
+			harakBoyA = 2
+
+			'You wrote a guy named <<$boyA>>, We talked to him and left him telefonchik in hopes that he will call you.'
+
+			act '<B>Finish</B>':gt'Komp','brows'
+		end
+	end
+
+	if gor_dorm = 8:
+		act 'Choose suitors for Eugenia':
+			cla
+			gor_dorm = 9
+
+			'You shoveled dozens of profiles, Before choosing suitable candidates for all parameters and send them a letter with a proposal to meet.'
+			'Now we have to wait to get her, that-something with them or not.'
+
+			act '<B>Finish</B>':gt'Komp','brows'
+		end
+	end
+
+	act '<B>Finish</B>':gt'Komp','brows'
+end
+
+if $ARGS[0] = 'kabtv':
+	cla
+	clr
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	gs'stat'
+	'<center><b>Website cable TV</b></center>'
+	'<center><img src="images/pics/komp/kabtv.jpg"></center>'
+	'You are logged in cable TV provider.'
+
+	if kabel = 1:
+		'You have already connected the cable TV (license fee 300 rubles a month removed 25-the first day of)'
+
+		act 'Abandon cable TV':
+			cla
+			kabel = 0
+			money = money - 300
+
+			'You have disconnected the cable channels, paid for the current month'
+
+			gt'Komp','kabtv'
+		end
+	elseif kabel = 0 and TV = 1:
+		'You do not have a cable TV'
+
+		act 'Connect the cable TV':
+			cla
+			'Unfortunately for the viewing of cable TV requires a modern TV'
+
+			gt'Komp','kabtv'
+		end
+	elseif kabel = 0 and TV >= 2:
+		'You do not have a cable TV'
+
+		act 'Connect the cable TV (300 rubles per month)':
+			cla
+			kabel = 1
+
+			'You have connected the cable TV services'
+
+			gt'Komp','kabtv'
+		end
+	end
+
+	act '<B>Finish</B>':gt'Komp','brows'
+end
+
+if $ARGS[0] = 'foto':
+	cla
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	gs'stat'
+	'<center><b>Social network</b></center>'
+	'<center><img src="images/pics/komp/foto.jpg"></center>'
+	'You are logged into a social network "In the ass".'
+
+	if shantfoto > 0:
+		act 'Search':
+			cla
+			minut += 60
+
+			fotsearchrand = RAND(0,10)
+			if fotsearchrand <= 7:
+				'You did not find anyone, can, better luck later.'
+
+				act 'Finish':gt'Komp','foto'
+			end
+			if fotsearchrand > 7:
+				shantfoto -= 1
+
+				'You`ve found one photo shoot heroine'
+
+				gerofotorand = RAND(0,100)
+				if gerofotorand > 30:
+					'Judging from the photos on her page of this poor girl and bring her nothing.'
+
+					act 'Finish':gt'Komp','foto'
+				end
+				if gerofotorand >= 5 and gerofotorand <= 30:
+					shantsr += 1
+
+					'Judging from the photos on her page, a girl of the middle class do not exist. You send her photos and asked to be transferred 5000 your account.'
+
+					act 'Finish':gt'Komp','foto'
+				end
+				if gerofotorand < 5:
+					shantbog += 1
+
+					'Judging from the photos on her page, it is highly secured lady. You send her photos and asked to be transferred 30000 your account.'
+
+					act 'Finish':gt'Komp','foto'
+				end
+			end
+		end
+	end
+
+	act '<B>Finish</B>':gt'Komp','brows'
+end
+
+if $ARGS[0] = 'rabota':
+	cla
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	komprabota = RAND(0,15)
+	gs'stat'
+	'<center><b>Job search sites</b></center>'
+	'<center><img src="images/pics/komp/rabota.jpg"></center>'
+
+	if komprabota = 0 and gorodokKomp = 0:
+		'You will find ads: "Wanted girl model looks to advertise underwear, payment in cash at the end of filming 2000 RUB."'
+
+		if vnesh < 30:
+			'But you are not that description fit'
+		elseif vnesh >= 30:
+			act 'Send by address':gt'qjob','var1'
+		end
+
+		if hour < 20 and hour > 7:act 'Search More':gt'Komp','rabota'
+		act '<B>Finish</B>':gt'Komp','brows'
+	elseif komprabota = 1 and gorodokKomp = 0:
+		'You will find ads: "Requires a girl model looks for advertising underwear, payment in cash at the end of filming 2000 RUB."'
+
+		if vnesh < 30:'But you are not that description fit'
+		if vnesh >= 30:
+			act 'Send by address':gt'qjob','var2'
+		end
+
+		if hour < 20 and hour > 7:act 'Search More':gt'Komp','rabota'
+		act '<B>Finish</B>':gt'Komp','brows'
+	elseif komprabota > 1 and komprabota < 5 and gorodokKomp = 0:
+		'You will find ads: "The artist is required naturschitsa, pretty appearance, cash payment 1000 RUB."'
+
+		if vnesh < 15:
+			'But you are not that description fit'
+		elseif vnesh >= 15:
+			act 'Send by address':gt'qjob','var3'
+		end
+
+		if hour < 20 and hour > 7:act 'Search More':gt'Komp','rabota'
+		act '<B>Finish</B>':gt'Komp','brows'
+	elseif komprabota > 4 and komprabota < 8 and StoryLine > 0 and Suspeh >= 90 and camwhore = 0:
+		'You accidentally stumbled upon an ad, which states, that one of the thematic web sites require a model.'
+		act 'Interest':
+			cls
+			minut += 5
+			gs 'stat'
+			'<center><img src="images/camwhore/camwhore1.jpg"></center>'
+			'Fast walking up view of ad, you learned, that in this job you have to expose your body to clients, fulfilling their wishes.'
+			'For who, naturally, you would pay virtual currency, Leaders that will transfer to real money in your bank account.'
+			'Resource English language and registration with the CIS countries it is prohibited, so the chance, what who-then you will know in real life, very insignificant.'
+			'The amount of payment depends on the popularity of your room, the more you will be able to attract users, the more you earn, i.e, it all depends on you.'
+
+			act 'Fill out the form':
+				cls
+				camwhore =+ 1
+				minut += 20
+				gs 'stat'
+				'<center><img src="images/camwhore/camwhore2.jpg"></center>'
+				'Once logged in, you have registered yourself on it as a model. Ten minutes later the profile has already been approved and you are now able to earn a web model'
+				act 'Finish':gt'Komp','brows'  
+			end
+			act 'Return':gt'Komp','brows'  
+		end
+
+		if hour < 20 and hour > 7:act 'Search More':gt'Komp','rabota'
+		act '<B>Finish</B>':gt'Komp','brows'
+	else
+		'We did not find anything suitable.'
+
+		if hour < 20 and hour > 7:act 'Search More':gt'Komp','rabota'
+		act '<B>Finish</B>':gt'Komp','brows'
+	end
+end
+
+if $ARGS[0] = 'internet_pay':
+cla
+	'<center><b>Payment via bank account</b></center>'
+	'<center><img src="images/pics/komp/pay.jpg"></center>'
+	'Welcome to the system of remote payments.'
+	act '<B>Logout payment</B>':gt'Komp','start'
+	intinp = input ("How many hours do you want to pay for internet? (h = 10 RUB.)")
+		if intinp <= 0 or intinp*10 > karta:
+			'Not correct operation.'
+		elseif intinp*10 <= karta:
+			inttime = intinp
+			karta = karta - inttime*10
+			internetM = internetM + intinp*60
+			internet = internetM/60
+
+			'You pay <<inttime>> Internet hours, now you <<internet>> Internet hours. With your account removed <<intinp*10>> rubles.'
+		end
+end
+
+if $ARGS[0] = 'study':
+	cla
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	intel += 1
+	'<center><b>The Institute for Education Measurement</b></center>'
+	'<center><img src="images/pics/komp/study.jpg"></center>'
+	'You prozanimavshis hour, I think in your head that-then postponed.'
+	
+	act '<B>Finish</B>':gt'Komp','start'
+end
+
+if $ARGS[0] = 'kursak':
+	cla
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	manna = manna - 10
+	kursovik = kursovik + RAND(intel/20,intel/10)
+	if kursovik > 100:kursovik = 100
+	'<center><b>Coursework</b></center>'
+	'<center><img src="images/pics/komp/kursak.jpg"></center>'
+	'You were an hour over the course work and prepare it on <<kursovik>>%.'
+	
+	act '<B>Finish</B>':gt'Komp','start'
+end
+
+if $ARGS[0] = 'agent':
+	cla
+	clr
+	*clr
+	minut = minut + 60
+	internetM = internetM - 60
+	elektro = elektro + 3
+	internet -= 1
+	gs'stat'
+	'<center><b>CAit estate agency</b></center>'
+	'<center><img src="images/pics/komp/agent.jpg"></center>'
+	'You are logged in estate agency.'
+	'Here you can rent an apartment online in 6000 rubles.'
+	''
+	if ArendHouseSL > 0:'You have <B><<ArendHouseSL>> days</B> rental.'
+	if karta >= 6000 and BuyHous ! 1:
+		act 'Apartment for rent online':
+			cla
+			karta -= 6000
+			housr = 1
+			BuyHous = 2
+			ArendHouseSL += 30
+			'You get easy to rent an apartment in a residential area on the 30 days. Now you <B><<ArendHouseSL>> days</B> rental.'
+			act '<B>Finish</B>':gt'Komp','start'
+		end
+	end
+	act '<B>Finish</B>':gt'Komp','start'
+end
+
+if $ARGS[0] = 'fin':
+	gt $locM, $metkaM
+end
+
+if $ARGS[0] = 'mfc':
+	if sisterHere = 0:
+		act'Sign into the room':
+			cls
+			minut += 2
+			gs 'stat'
+			'<center><img src="images/camwhore/camwhore3.jpg"></center>'  
+			'You went to my room on the site. At this point you <<camclients>> visitors.'
+
+			act 'Further':gt'komp','startpagemfc'
+		end
+		act'Close Tab':
+			cls
+			minut += 2
+			topmfc = 1
+			backmfc = 1
+			tokens = 0
+			camclients = 0
+			gs 'stat'
+			gt'Komp','brows'
+		end
+	elseif sisterHere > 0:
+		cls
+		minut += 2
+		topmfc = 1
+		backmfc = 1
+		tokens = 0
+		camclients = 0
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore2.jpg"></center>'
+		'You are not alone in the room.'
+		act 'Close Tab':gt'Komp','brows'
+	elseif mesec > 0:
+		cls
+		minut += 2
+		topmfc = 1
+		backmfc = 1
+		tokens = 0
+		camclients = 0
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore2.jpg"></center>'
+		'You month, but because you are too unwell to show - sick, I have a stomachache, dizzy, generally, not the best time to make money with his body...'
+		act 'Close Tab':gt'Komp','brows'		
+	end
+end
+
+if $ARGS[0] = 'startpagemfc':
+	if vgape > 0 or agape > 0:
+		cls
+		gs 'stat'
+		'You feel too bad, to put on a show.'
+		act 'Close Tab':
+			karta += tokens/2
+			gt'Komp','mfc'
+		end
+	else
+		cls
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore3.jpg"></center>'   
+		'In your room <<camclients>> visitors.'
+		act'Enable the webcam':gt'komp','waitclients'	
+		act'Logout':
+			karta += tokens/2
+			gt'Komp','mfc'
+		end
+	end	
+end
+
+if $ARGS[0] = 'waitclients':
+	cls
+	minut = minut + 2
+	manna = manna - 2
+	willpower = willpower - RAND(1,3)
+	manna = manna - RAND(5,10)
+
+	if vnesh < 25:
+		if topmfc = 1 and backmfc = 1:
+			if webpopular < 15:
+				camclients += RAND(1,3)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(3,5)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(4,8)
+			elseif webpopular >= 75:
+				camclients += RAND(5,15)   
+			end
+			chancetips = RAND(0,100)
+			clientask = RAND(0,100)
+			if chancetips >= 95:
+				tokens += RAND(1,20)
+			end
+		end
+	else
+		if topmfc = 1 and backmfc = 1:
+			if webpopular < 15:
+				camclients += RAND(3,5)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(5,8)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(5,12)
+			elseif webpopular >= 75:
+				camclients += RAND(8,15)   
+			end
+			chancetips = RAND(1,100)
+			clientask = RAND(1,100)
+			if chancetips >= 95:
+				tokens += RAND(1,20)
+			end
+		end	
+	end  
+	if vnesh < 25:
+		if topmfc = 0 and backmfc = 1:
+			if webpopular < 15:
+				camclients += RAND(1,3)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(1,5)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(5,10)
+			elseif webpopular >= 75:
+				camclients += RAND(6,15)   
+			end
+			chancetips = RAND(2,90)
+			clientask = RAND(5,100)
+			if chancetips >= 85:
+				tokens += RAND(1,20)
+			end  
+		end 
+	else
+		if topmfc = 0 and backmfc = 1:
+			if webpopular < 15:
+				camclients += RAND(3,6)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(5,10)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(7,12)
+			elseif webpopular >= 75:
+				camclients += RAND(10,15)   
+			end
+			chancetips = RAND(2,90)
+			clientask = RAND(10,100)
+			if chancetips >= 85:
+				tokens += RAND(1,20)
+			end  
+		end
+	end
+	if vnesh < 25:
+		if topmfc = 1 and backmfc = 0:
+			if webpopular < 15:
+				camclients += RAND(1,3)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(2,5)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(5,15)
+			elseif webpopular >= 75:
+				camclients += RAND(5,20)
+			end
+			chancetips = RAND(4,80)
+			clientask = RAND(7,100)
+			if chancetips >= 75:
+				tokens += RAND(1,20)
+			end  
+		end  
+	else
+		if topmfc = 1 and backmfc = 0:
+			if webpopular < 15:
+				camclients += RAND(4,7)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(5,12)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(9,15)
+			elseif webpopular >= 75:
+				camclients += RAND(15,20)
+			end
+			chancetips = RAND(3,80)
+			clientask = RAND(15,100)
+			if chancetips >= 75:
+				tokens += RAND(1,20)
+			end  
+		end 
+	end
+	if vnesh < 25:
+		if topmfc = 0 and backmfc = 0:
+			if webpopular < 15:
+				camclients += RAND(1,4)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(3,10)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(10,20)
+			elseif webpopular >= 75:
+				camclients += RAND(10,30)
+			end
+			chancetips = RAND(6,50)
+			clientask = RAND(10,100)
+			if chancetips >= 45:
+				tokens += RAND(1,20)
+			end
+		end 
+	else
+		if topmfc = 0 and backmfc = 0:
+			if webpopular < 15:
+				camclients += RAND(3,8)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(3,15)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(10,20)
+			elseif webpopular >= 75:
+				camclients += RAND(10,30)
+			end
+			chancetips = RAND(4,50)
+			clientask = RAND(20,100)
+			if chancetips >= 45:
+				tokens += RAND(1,20)
+			end
+	 	end
+	end   
+	gs'stat'
+	
+	if topmfc = 1 and backmfc = 1:
+		'<center><img src="images/camwhore/camwhore3.jpg"></center>'
+	end
+	if topmfc = 0 and backmfc = 1:
+		'<center><img src="images/camwhore/camwhore4.jpg"></center>'
+	end
+	if topmfc = 1 and backmfc = 0:
+		'<center><img src="images/camwhore/camwhore5.jpg"></center>'
+	end
+	if topmfc = 0 and backmfc = 0:
+		'<center><img src="images/camwhore/camwhore6.jpg"></center>'
+	end	
+
+	'In your room <<camclients>> visitors.'
+	'You have <<tokens>> Tokens.'
+
+	act'Wait visitors':gt'komp','waitclients'
+
+	if topmfc = 1 and clientask >= 98:
+		cls
+		gs 'stat'
+		'It seems, one of the visitors are willing to pay you for, so you bared breasts...'
+		act 'Remove Bra':
+			cls
+			webpopular += 1
+			minut += 2
+			topmfc = 0
+			horny += 5
+			if webpopular < 15:
+				tokens += RAND(10,25)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(15,25)
+			elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(25,50)
+			elseif webpopular >= 75:
+				tokens += RAND(50,150)
+			end
+			gs 'stat'
+
+			'<center><img src="images/camwhore/camwhore7.jpg"></center>'
+			'You stood up and so, to the camera easier to see chest, slowly took off her bra, for which he also received tokens.'
+
+			act'Further':gt'Komp','waitclients'
+		end
+		act 'Ignore':
+			cls
+			webpopular -= 1
+			gt'Komp','waitclients'
+		end
+	end
+	if backmfc = 1 and clientask >= 96 and clientask < 98:
+		cls
+		'One of the visitors asks you to take off her panties...'
+		act 'Do':
+			cls
+			webpopular += 1
+			minut += 2
+			backmfc = 0
+			horny += 5
+			if webpopular < 15:
+				tokens += RAND(10,25)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(15,25)
+			elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(25,50)
+			elseif webpopular >= 75:
+				tokens += RAND(50,150)
+			end
+			gs 'stat'
+			 
+			'<center><img src="images/camwhore/camwhore8.jpg"></center>'
+			'You leisurely pulled off her panties, then briefly bring the camera, giving a better look at her pussy.'
+			act'Further':gt'Komp','waitclients'
+		end
+		act 'Ignore':
+			cls
+			webpopular -= 1
+			gt'Komp','waitclients'
+		end
+	end
+	if topmfc = 0 and clientask >= 94 and clientask < 96:
+		cls
+		'One of the visitors asks you to fondle her breasts...'
+		act 'Do':
+			cls
+			webpopular += 1
+			minut += 2
+			backmfc = 0
+			horny += RAND(5,10)
+			if webpopular < 15:
+				tokens += RAND(15,25)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(20,30)
+			elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(50,100)
+			elseif webpopular >= 75:
+				tokens += RAND(50,150)
+			end
+			gs 'stat'
+
+			'<center><img src="images/camwhore/camwhore10.jpg"></center>'
+			'You go back and start to knead and squeeze her breasts hands, sometimes applying the mouth to one nipple, then to a second...'
+			if horny >= 100:
+				orgasm += 1
+				horny = 0
+				manna = mannamax
+				gs 'stat'
+				'But the excitement is so great, that you are not able to resist, but because zapsukaete hand between her legs and then ends.'
+			end	   
+			act'Further':gt'Komp','waitclients'
+		end
+		act 'Ignore':
+			cls
+			webpopular -= 1
+			gt'Komp','waitclients'
+		end
+	end
+	if backmfc = 0 and clientask = 93:
+		cls
+		'One of the visitors asks you to play with her pussy...'
+		act 'Do':
+			cls
+			webpopular += 1
+			minut += 2
+			horny += RAND(5,10)
+			if webpopular < 15:
+				tokens += RAND(20,25)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(25,50)
+			elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(50,100)
+			elseif webpopular >= 75:
+				tokens += RAND(100,150)
+			end
+			gs 'stat'
+
+			'<center><img src="images/camwhore/camwhore12.jpg"></center>'
+			'You go back and missed his hand between her legs, You start to pull your fingers labia.'
+			if horny >= 100:
+				orgasm += 1
+				horny = 0
+				manna = mannamax
+				gs 'stat'
+				'While you are on notice, as the approaching wave of orgasm, and so violently ends.'
+			end		
+			act'Further':gt'Komp','waitclients'
+		end
+		act 'Ignore':
+			cls
+			webpopular -= 1
+			gt'Komp','waitclients'
+		end
+	end
+	if backmfc = 0 and clientask = 92:
+		cls
+		'One of the visitors asks you to show him your closer vagina...'
+		act 'Do':
+			cls
+			webpopular += 1
+			minut += 2
+			if webpopular < 15:
+				tokens += RAND(10,25)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(15,25)
+			elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(25,50)
+			elseif webpopular >= 75:
+				tokens += RAND(50,150)
+			end
+			gs 'stat'
+			if analplugIN = 1:
+				'<center><img src="images/camwhore/camwhore19.jpg"></center>'
+			end
+			if vagina = 0 and analplugIN = 0:
+				'<center><img src="images/camwhore/camwhore18.jpg"></center>'
+			end
+			if vagina > 0 and vagina <= 10 and analplugIN = 0:
+				'<center><img src="images/camwhore/camwhore13.jpg"></center>'
+			end
+			if vagina > 10 and vagina <= 15 and analplugIN = 0:
+				'<center><img src="images/camwhore/camwhore14.jpg"></center>'
+			end
+			if vagina > 15 and vagina <= 25 and analplugIN = 0:
+				'<center><img src="images/camwhore/camwhore15.jpg"></center>'
+			end
+			if vagina > 25 and vagina <= 35 and analplugIN = 0:
+				'<center><img src="images/camwhore/camwhore16.jpg"></center>'
+			end
+			if vagina > 35 and analplugIN = 0:
+				'<center><img src="images/camwhore/camwhore17.jpg"></center>'
+			end 
+			'You perform the client`s request for the coveted tokens.'		
+			act'Further':gt'Komp','waitclients'
+		end
+		act 'Ignore':
+			cls
+			webpopular -= 1
+			gt'Komp','waitclients'
+		end
+	end
+	if backmfc = 0 and anus >= 30 and webpopular >= 50 and clientask = 91:
+		cls
+		'One of the visitors asks you tighter ass on camera...'
+		act 'Tightly':
+			cls
+			webpopular += 2
+			sub += 2
+			minut += 2
+			backmfc = 0
+			horny -= RAND(20,30)
+			if vnesh > 25:
+				tokens += RAND(50,100)
+			else
+				tokens += RAND(40,75)
+			end
+			if webpopular < 15:
+				tokens += RAND(25,50)
+			elseif webpopular >= 15 and webpopular < 35:
+				tokens += RAND(50,100)
+			elseif webpopular >= 35 and webpopular < 75:
+				tokens += RAND(100,150)
+			elseif webpopular >= 75:
+				tokens += RAND(100,200)
+			end
+			gs 'stat'
+			if analplugIN = 0:
+				if cumanus > 0:
+					'<center><img src="images/camwhore/camwhore74.jpg"></center>'
+					'You turn to your computer and ass apart arms buttocks, push start, feeling ashamed, both from your rectum follows male sperm...'
+					'Chat torn from the vulgar, and sometimes abusive comments, so you will soon stop this degrading activity...'
+				else
+					'<center><img src="images/camwhore/camwhore20,'+rand(0,7)+'.jpg"></center>'
+					'You will melt on his knees and his hands apart buttocks, push start, feeling ashamed, how to get out out your rectum.'
+					'But greed overpowers inconvenience, so you have a couple of seconds endure, giving foreigners a better look at your ass worn...'
+				end
+			else
+				'<center><img src="images/camwhore/camwhore21.jpg"></center>'
+				'You get up out of bed and your knees bent slightly, squat opposite the door, throwing his hands behind his head Statement.'
+				'Your ass is an anal plug, so you try not to overdo it, so that it pops up...' 
+			end	   
+			act'Further':gt'Komp','waitclients'
+		end
+		act 'Ignore':
+			cls
+			gt'Komp','waitclients'
+		end
+	end
+
+	if webpopular >= 15 and anus >= 15 and clientask = 89:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if webpopular < 50 and clientask = 88:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if webpopular >= 50 and vagina >= 35 and clientask = 87:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if webpopular >= 35 and vagina >= 25 and alko >= 8 and clientask = 86:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if webpopular >= 50 and vagina > 0 and anus > 0 and alko >= 8 and sub > 50 and clientask = 85:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if backmfc = 0 and webpopular >= 25 and vagina >= 30 and anus >= 30 and alko >= 8 and clientask = 84:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if backmfc = 0 and vagina > 20 and clientask = 83:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if webpopular > 25 and backmfc = 0 and sub > 25 and vagina > 10 and prezik > 0 and clientask = 82:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if backmfc = 0 and webpopular >= 50 and anus > 25 and clientask = 81:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if backmfc = 0 and webpopular >= 50 and anus > 10 and vagina > 10 and sub > 50 and alko >= 6 and clientask = 80:
+		cls
+		gt'kompMFCtwo'
+	end
+
+	if backmfc = 0 and clientask = 90:
+		cls
+		'One of the visitors asked, do you have a vibrator or dildo...'
+		gt'kompMFC'
+	end
+
+	if topmfc = 1 and clientask < 80:
+		act'Remove Bra':
+			cls
+			minut += 2
+			topmfc = 0
+			horny += 5
+			gs 'stat'
+
+			if backmfc = 1:
+				'<center><img src="images/camwhore/camwhore4.jpg"></center>'
+			end
+			if backmfc = 0:
+				'<center><img src="images/camwhore/camwhore5.jpg"></center>'
+			end
+			'You slowly, the camera removed the bra, exposing his young girl`s breasts.'
+			act'Further':gt'Komp','waitclients'  
+		end	
+	end
+
+	if topmfc = 0 and clientask < 80:
+		act'After playing with the breast':
+			cls
+			if webpopular < 15:
+				camclients += RAND(3,6)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(5,10)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(10,20)
+			elseif webpopular >= 75:
+				camclients += RAND(15,35)
+			end
+			minut += 2
+			horny += 5
+			if alko >= 4:
+				nippain = 1
+			end
+			chancetips = RAND(0,100)
+			if chancetips >= 85:
+				tokens += RAND(2,10)
+			end	 
+			gs 'stat'
+			if alko >= 4:
+				'<center><img src="images/camwhore/camwhore80.jpg"></center>'
+			else
+				'<center><img src="images/camwhore/camwhore9.jpg"></center>'
+			end
+			'You play with your breasts, deliberately pretending, that completely forgot about the camera and fully focused on having fun.'
+			if horny >= 100:
+				webpopular -= 1
+				orgasm += 1
+				horny = 0
+				manna = mannamax
+				gs 'stat'
+				'But, It seems, You have not calculated their endurance, and therefore, unable to resist, running his hand between her legs and ended up in front <<camclients>> users for free.'
+			end
+			act'Further':gt'Komp','waitclients'
+		end
+	end
+  
+	if backmfc = 1 and clientask < 80:
+		act'Remove panties':
+			cls
+			minut += 2
+			backmfc = 0
+			horny += 5
+			gs 'stat'
+			if topmfc = 1:
+				'<center><img src="images/camwhore/camwhore5.jpg"></center>'
+			end	
+			if topmfc = 0:
+				'<center><img src="images/camwhore/camwhore6.jpg"></center>'
+			end	
+			'You slowly, on camera, She took off her panties, exposing her crotch.'
+			act'Further':gt'Komp','waitclients'  
+		end
+	end
+	if backmfc = 0 and clientask < 80:
+		act'Play with pussy':
+			cls
+			if webpopular < 15:
+				camclients += RAND(5,10)
+			elseif webpopular >= 15 and webpopular < 35:
+				camclients += RAND(10,15)
+			elseif webpopular >= 35 and webpopular < 75:
+				camclients += RAND(10,30)
+			elseif webpopular >= 75:
+				camclients += RAND(15,40)
+			end
+			minut += 2
+			horny += 5
+			chancetips = RAND(0,100)
+			if chancetips >= 75:
+				tokens += RAND(10,15)
+			end  
+			gs 'stat'
+
+			'<center><img src="images/camwhore/camwhore11.jpg"></center>'
+			'You are the one hand to play with her pussy, other typing in chat, to give you tokens for more.'
+			if horny >= 100:
+				webpopular -= 1
+				orgasm += 1
+				horny = 0
+				manna = mannamax
+				gs 'stat'
+				'But, It seems, You have not calculated their endurance, and therefore finished before <<camclients>> users for free.'
+			end
+			act'Further':gt'Komp','waitclients'
+		end
+	end
+	gs'family'
+	if sisterHere = 0:
+		act'To turn off the webcam':gt'Komp','startpagemfc'
+	elseif sisterHere > 0:
+		cls
+		topmfc = 1
+		backmfc = 1
+		karta += tokens/2
+		gs 'stat'
+		'<center><img src="images/camwhore/camwhore2.jpg"></center>'
+		'Suddenly you hear, how clacking handle locked doors, and a moment later you hear persistent  "Light, let me in!"'
+		'It seems, the show is over for today, so you start frantically to freshen up...'
+		act 'Further':gt'Komp','mfc'
+	end
+end
+--- Komp ---------------------------------
+

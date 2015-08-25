@@ -1,0 +1,75 @@
+# furi
+gs'stat'
+
+'<center><img src="images/qwest/alter/ev2/furi.jpg"></center>'
+'Paved area near the road where there are trucks.'
+
+act 'Escape':minut += 5 & gt'road'
+
+if trfatherQW = 1:
+	act 'Ask about Mikhail Kuznetsov':
+	cls
+	minut += 5
+	trfatherQW = 2
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/trfatherQW/trfatherQW_1.jpg"></center>'
+	'-Good afternoon! Do not remember, you had not worked for a man named Mikhail Kuznetsov?'
+	'-What-the familiar name, I remember this. Hell, where I could hear the name.., so it is, I used to buy food at the warehouse terminal, in the northern area of ​​the city, So you go over there and asked around there, Th and could prompt a, I do not know anymore'
+	'-Thank you, you very much, and you gleefully jumped, hoping to find his father'
+	'-Come here often, ride to the city with the wind'
+
+	act 'Move away':gt $loc, $metka
+	end
+end
+
+act 'Hitch-hiking':
+	cls
+	gs'stat'
+
+	'<center><img src="images/qwest/alter/ev2/furi.jpg"></center>'
+	if nroad = 0:'You asked the driver, whether it can give you a lift to the town.'
+	if nroad = 20:'You asked the driver, whether it can give you a lift to the city.'
+	'The driver looked at you with a grin "Hitchhiker? Heh. Of course I can. But you have to thank me for it." guy you slapped his hand on the butt.'
+
+	act 'Escape':minut += 5 & gt $curloc
+	act 'I agree':
+		cls
+		gs'stat'
+
+		'<center><img src="images/qwest/alter/ev2/furi.jpg"></center>'
+		'You said driver, that you agree. I drove there and then you asked "Do you have Gandon?"'
+
+		act 'No':
+			cls
+			gs'stat'
+
+			'You said cage ,you do not have condoms. He drove shook his head "Without a condom to fuck you, I will not, so fuck off."'
+
+			act 'Escape':minut += 5 & gt $curloc
+			act 'Persuade':
+				cls
+				gs'stat'
+
+				'You started to persuade the driver to drive you and approve, that you are clean. I drove a little thought, and he said, "Okay, to hell with you, Hop into the car."'
+
+				act 'Escape':minut += 5 & gt $curloc
+				act 'Going into the wagon':minut += 5 & furisex = 100 & gt'furisex'
+			end
+		end
+
+		if prezik > 0:
+			act 'There are':
+				cls
+				gs'stat'
+
+				'You said that you have preziki. I drove approached the wagon and opened the door for you "Then Jump in."'
+
+				act 'Escape':minut += 5 & gt $curloc
+				act 'Going into the wagon':minut += 5 & furisex = 0 & gt'furisex'
+			end
+		end
+	end
+end
+--- furi ---------------------------------
+

@@ -1,0 +1,223 @@
+# autotraidF
+if $ARGS[0] = 'start':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><b>Car market</b></center>'
+	'<center><img src="images/pic/autotraid.jpg"></center>'
+	'The machine can be purchased only with the rights. And you can not have two cars.'
+
+	if hour <= 17:
+		if car > 0:act 'To approach the buyers':gt'autotraidF','manager1'
+		act 'View car for sale':gt'autotraidF','car'
+	end
+
+	act 'Escape':gt'Nord'
+end
+
+if $ARGS[0] = 'manager1':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	'<center><b>Car market</b></center>'
+	'<center><img src="images/pic/autotraid.jpg"></center>'
+
+	gs'avb'
+
+	if cardrive = 9 and car > 0:
+		'Fence walked around the car and asked you for it <<bupay>> rubles'
+
+		act 'Sell ​​for <<bupay>> (1 h)':
+			cla
+			minut = minut + 60
+			money = money+bupay
+			car = 0
+
+			'You sold your car.'
+
+			act 'Escape':gt'Nord'
+		end
+	elseif cardrive ! 9:
+		'Fence says, that he needs to look at the car, before you put a price, and if you want, it calls for a tow truck 2500, that would bring your car to the market.'
+
+		if money >= 2500:
+			act 'Tow up market (2500 RUB 1 h)':
+				cla
+				minut = minut + 60
+				cardrive = 9
+				money = money - 2500
+
+				'You gave the money and waited for an hour and when you bring the car, Finally, you saw how to tow truck unloaded near the market.'
+
+				act 'For buyers':gt'autotraidF','manager1'
+			end
+		end
+	end
+
+	act 'Escape':gt'Nord'
+end
+
+if $ARGS[0] = 'car':
+	$metka = $ARGS[0]
+	$loc = $CURLOC
+
+	cla
+	*clr
+	minut = minut + 5
+	carT = 0
+	gs'stat'
+
+	'<center><b>Car market</b></center>'
+	'<center><img src="images/pic/autotraid.jpg"></center>'
+	'Machine so much on parking, it is possible to spend a lifetime and never inspect all cars, even if the machines on the go, you can understand their technical condition, the machine is not in the tunnels is a cat in a bag, It can be a bargain, and can be a waste of money, and do not forget, you will still deliver it to the service will need to.'
+
+	if hour <= 17:
+		act 'Inspect VAZ 2107 (underway)':
+			cla
+			*clr
+			tehNT = 200
+			tehT = RAND(10,tehNT)
+			carT = 1
+
+			'<center><b>VAZ 2107 (underway)</b></center>'
+			'<center><img src="images/picar/car.jpg"></center>'
+
+			gs'avt'
+
+			'<<$tehT>> Merchant wants <<bupay>> rubles'
+
+			act 'Escape':gt'autotraidF','car'
+
+			if car = 0 and prava = 1 and money >= bupay:
+				act 'Buy for <<bupay>> rubles':
+					cla
+					money = money - bupay
+					$car = 'VAZ 2107'
+					car = 1
+					benz = 3
+					cardrive = 9
+					teh = tehT
+					tehcar = 200
+					wrek = 0
+
+					'You paid <<bupay>> rubles and bought a car. The merchant put it near the market and warned, that there is little petrol.'
+
+					act 'Escape':gt'Nord'
+				end
+			end
+		end
+		act 'Inspect VAZ 2107 (not underway)':
+			cla
+			*clr
+			tehNT = 200
+			tehT = RAND(10,tehNT)
+			bupay = RAND(10000,50000)
+
+			'The machine is not on the move. Merchant wants <<bupay>> rubles'
+
+			gs'avt'
+
+			act 'Escape':gt'autotraidf','car'
+
+			if car = 0 and prava = 1 and money >= bupay:
+				act 'Buy for <<bupay>> rubles':
+					cla
+					money = money - bupay
+					$car = 'VAZ 2107'
+					car = 1
+					benz = 3
+					cardrive = 9
+					teh = tehT
+					tehcar = 200
+					wrek = 1
+
+					'You paid <<bupay>> rubles and bought a car. The merchant put it near the market.'
+
+					act 'Escape':gt'Nord'
+				end
+			end
+		end
+		act 'Inspect GAS 3102 (underway)':
+			cla
+			*clr
+			tehNT = 1000
+			tehT = RAND(10,tehNT)
+			carT = 2
+
+			'<center><b>GAS 3102 (underway)</b></center>'
+			'<center><img src="images/picar/car11.jpg"></center>'
+
+			gs'avt'
+
+			'<<$tehT>> Merchant wants <<bupay>> rubles'
+
+			act 'Escape':gt'autotraidf','car'
+
+			if car = 0 and prava = 1 and money >= bupay:
+				act 'Buy for <<bupay>> rubles':
+					cla
+					money = money - bupay
+					$car = 'GAS 3102'
+					car = 11
+					benz = 5
+					cardrive = 9
+					teh = tehT
+					tehcar = 1000
+					wrek = 0
+
+					'You paid <<bupay>> rubles and bought a car. The merchant put it near the market and warned, that there is little petrol.'
+
+					act 'Escape':gt'Nord'
+				end
+			end
+		end
+		act 'Inspect GAS 3110 (underway)':
+			cla
+			*clr
+			tehNT = 800
+			tehT = RAND(10,tehNT)
+			carT = 2
+
+			'<center><b>GAS 3110 (underway)</b></center>'
+			'<center><img src="images/picar/car12.jpg"></center>'
+
+			gs'avt'
+
+			'<<$tehT>> Merchant wants <<bupay>> rubles'
+
+			act 'Escape':gt'autotraidF','car'
+
+			if car = 0 and prava = 1 and money >= bupay:
+				act 'Buy for <<bupay>> rubles':
+					cla
+					money = money - bupay
+					$car = 'GAS 3110'
+					car = 12
+					benz = 5
+					cardrive = 9
+					teh = tehT
+					tehcar = 800
+					wrek = 0
+
+					'You paid <<bupay>> rubles and bought a car. The merchant put it near the market and warned, that there is little petrol.'
+
+					act 'Escape':gt'Nord'
+				end
+			end
+		end
+	end
+
+	act 'Escape':gt'Nord'
+end
+--- autotraidF ---------------------------------
+

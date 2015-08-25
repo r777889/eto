@@ -1,0 +1,332 @@
+# mitkabuh
+gs'stat'
+
+if miraingop = 0 and alko < 8:
+	'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
+	'Set in a secluded spot three village boy, Mitya kingpin, Bob Package and Kolyamba drink moonshine without snacks. Mitya brew pours into a glass and takes you.'
+	act 'Escape':gt'Gaddvor'
+	act 'Drink':
+		cls
+		minut += 30
+		alko += 4
+		gs'stat'
+
+		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
+		'You drank moonshine and everything inside burned, breathless you become zanyuhivat sleeve ,because there were no snacks. Mitya said approvingly "Good infection, wade."'
+
+		act 'Catching his breath':gt $curloc
+	end
+elseif miraingop = 0 and alko >= 8 and mirasextimes = 0:
+	'<center><img src="images/qwest/gadukino/mitka.jpg"></center>'
+	'You got drunk in the trash, leg practically no longer hold you. Mitya noticed your condition keeps you around the waist. "Well cho Svetuha, go fuck?"'
+
+	act 'Slurred mumble':
+		cls
+		minut += 15
+		if mitkasex = 0:mitkasex = 1 & guy += 1
+		$boy = 'Mitya'
+		silavag = 0
+		dick = 18
+		pose = 0
+		mitkasextimes += 1
+		gs'stat'
+		mrapic=rand(0,5)
+		'<<mrapic>>'
+		'<center><img src="images/lur/gadukino/mitka<<mrapic>>.gif"></center>'
+		'Mitya took you to his house and led to the veranda, There he laid you on the couch and began unceremoniously undressed.'
+
+		dynamic $sexstart
+		dynamic $sexstart2
+		dynamic $sexcum
+
+		'Mityai, I lay down on his side and lit "Fucking!"'
+
+		act 'Escape':gt'Gaddvor'
+	end
+elseif miraingop = 0 and alko >= 8:
+	'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
+	'You got drunk in the trash, leg practically no longer hold you. Mitya noticed your condition keeps you around the waist. It seems, to have had enough...'
+	act 'Escape':gt'Gaddvor'	
+end
+
+if miraingop = 1 and miragopQW > 0:
+	'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
+	'Set in a secluded spot, Three village boy - Mitya kingpin, Bob Package and Kolyamba - drink moonshine without snacks. You Miroslava approach them and ask, whether it is possible to join them. The guys immediately perk up and actively nod your head. Mitya immediately starts to pour brew in glasses, then delivers the one you, reporting, so, as the cup is not all lacking, then you have to drink one to two turns.'
+	if alko >= 8 and mirasextimes = 0:
+		cls
+		'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
+		'You got drunk in the trash, leg practically no longer hold you. Mitya, seeing your status, keeps you around the waist. "Well cho, Svetuha, go fuck?"'
+		act 'Slurred mumble':
+			cls
+			minut += 15
+			if mitkasex = 0:mitkasex = 1 & guy += 1
+			$boy = 'Mitya'
+			silavag = 0
+			dick = 18
+			pose = 0
+			mitkasextimes += 1
+			gs'stat'
+		 mrapic=rand(0,5)
+		 '<<mrapic>>'
+		 '<center><img src="images/lur/gadukino/mitka<<mrapic>>.gif"></center>'
+			'Mitya took you to his house and led to the veranda, There he laid you on the couch and began unceremoniously undressed.'
+
+			dynamic $sexstart
+			dynamic $sexstart2
+			dynamic $sexcum
+
+			'Mityai, I lay down on his side and lit "Fucking!"'
+
+			act 'Escape':miraingop = 0 & gt'Gaddvor'
+		end
+	elseif miralko >= 8:
+		if miragopQW = 5:
+			cls
+			minut += 10
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/drunkgirl.jpg"></center>'
+			'You already pretty drunk, but remember the words of Myrina, and therefore still trying to sort out not much. Miroslav all the time you threw significant looks, and as soon as they said goodbye to you Mitka, you have a couple of minutes and say goodbye to Vasyanya Kolyandoy and go to the house Mit`kin. Not reaching up to the house a couple of pairs of tens of meters, You already hear them softly drunken chatter. Fumbling in the dark eyes, you find a quiet place, from which you would not have seen and to get comfortable, You begin to look closely to what is happening in the yard Mit`kin....'
+			act 'Watch':
+				cls
+				mirasextimes += 1
+				miragopQW = 6
+				horny += 50
+				minut += 10
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/Mirawish1_2.jpg"></center>'
+				'Drunk naked Miroslav was lying on a wooden table, leaning against a fence, Mitya and hammering it measured his penis. With each push of his, painfully grimacing, mooing softly World, and then hit the crown of the fence, and hysterically creaking boards. Peering, you get the idea, that the world has kept its promise, - Mitki member to the most eggs served on her ass, from which sometimes sounded strange squelch, nak are, however, no one, except you, ignored. Loud slaps contacting bodies wedged into the animal musical orgy fuck the two young men, adding even more spice. Mitya ten minutes pecked ass writhing and moaning Miroslav, until finally the entire length of the latter is not a jerk drove a girl his penis and began to erupt noisily... World at this time drunken stare fumbled in the surrounding area, You probably peeping, but I did not notice. Half a minute later Mitya pulled out of her backside and lit his penis, I started watching, as the World towels wipe up the semen oozing from the anus...'
+				act 'Escape':miraingop = 0 & minut += 15 & gt'Gaddvor'
+			end
+		else
+			cls
+			mirasextimes += 1
+			minut += 10
+			gs 'stat'
+			'<center><img src="images/qwest/gadukino/drunkgirl.jpg"></center>'
+			'Miroslav drunk in the trash, feet have hardly keep her, so she leaned against derevevu and struggling to not fall. She mumbles something completely incomprehensible and hardly realizes, and that where it generally occurs around. Yes, and you are also not better - head Kuřim, land and then leaves-under the feet of all, Now what you want, is to lie down on a soft, warm bed. You, understanding, if you drink at least one more glass, then fall down right here, You decide to leave, and so say goodbye to drinking buddies and go home.'
+		act 'Escape':miraingop = 0 & gt'Gaddvor'
+		end
+	else
+		if temp = 0:
+			act 'Give a glass of Miroslava':
+				cls
+				miralko += 2
+				minut += 15
+				temp = 1
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/drinking.jpg"></center>'
+				'You give a glass of moonshine and that Miroslava, little pause, begins, coughing and curves, strain it through clenched teeth. You, meanwhile, talking animatedly with the village.'
+				act 'Further':gt $curloc
+			end
+		end
+		if temp = 0:
+			act 'To drink the most':
+				cls
+				minut += 15
+				alko += 4
+				temp = 2
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/drinking.jpg"></center>'
+				'You take a glass of moonshine and start, coughing and curves, strain it through clenched teeth. Miroslav meanwhile shyly answers questions impudent youth of the village.'
+				act 'Catching his breath':gt $curloc
+			end
+		end
+		if temp = 2:
+			act 'Give a glass of Miroslava':
+				cls
+				miralko += RAND(3,4)
+				minut += 15
+				temp = 1
+				mirapiss += RAND(0,10)
+				gs 'stat'
+				if miragopQW >= 8 and mirapiss <= 2:
+					minut += 5
+					if miragopQW < 10: miragopQW += 1
+					gs 'stat'
+					'<center><img src="images/qwest/gadukino/MiraPiss.jpg"></center>'
+					'You give a glass of moonshine Miroslava, but she wants you to wait a few minutes and goes to the nearest tree, where, lifted her skirt, begins to defecate. Vasya Kolyandoy neighing loudly and staring at ssuschuyu Mirko, and Mitya, his teeth, does indifference. Did their job, Miroslava, as if nothing had happened, He returned to the company and drink the moonshine.'
+					if miragopQW = 10:
+						cls
+						minut += 5
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/drunk.jpg"></center>'
+						'As soon as she drank, tipsy Bob, like a joke, He asks her, she looks at, that right here and now suck him Kolyamboy.'
+						if miralko >= 4:
+							'Miroslava, already fairly tipsy, only giggles in reply says, she likes this business. Mitya immediately gives a slap and says Vasyanya, not to climb it, but the answers, that she was an adult girl and can answer for itself. Kolyamba meanwhile already up and hugs flirt Miroslav, and a minute later insistently and forcefully pushing her shoulders. Of the world, drunkenly giggling, willfully resists, but after a couple of seconds before Kolyamboy ceases to her knees and looks as if spellbound, how he unzips his pants and lower a little pants...'
+							act 'Watch':
+								cls
+								horny += RAND(5,10)
+								minut += 5
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraQW10.jpg"></center>'
+								'Miroslava, seeing is not yet fully risen member, immediately swallows him gently down to the eggs and begins to crawl on his lips peel, then pulling it into itself, then releasing up to the head. Kolyamba blissfully closed his eyes, Mirkin enjoys blowjob, Bob waiting scratching eggs, Mitya and disappointed offers to roll for another, but after, you refuse to drink himself.'
+								act 'Watch':
+									cls
+									horny += RAND(10,20)
+									minut += 5
+									gs 'stat'
+									'<center><img src="images/qwest/gadukino/MiraQW10_1.jpg"></center>'
+									'A few minutes later Kolyamba roughly pushes Miroslav suck on his cock and starts to cum on her face. That, eyes closed, drunkenly bellows, trying to portray sexuality and finger smears sperm themselves in the face.'
+									act 'Watch':
+										cls
+										horny += RAND(10,25)
+										minut += 10
+										gs 'stat'
+										'<center><img src="images/qwest/gadukino/MiraQW10_2.jpg"></center>'
+										' - Well, now it`s my turn, - Bob says and goes to Miroslava. She enthusiastically sucks and he, Bob then pulls her tongue.'
+										act 'Watch':
+											cls
+											horny += RAND(10,30)
+											minut += 5
+											gs 'stat'
+											'<center><img src="images/qwest/gadukino/MiraQW10_3.jpg"></center>'
+											'Mitya, already managed to be added a pair of glasses, silence comes to Miroslava and without preamble tells her, so that she became a pose. Of the world, drunkenly staggers, obediently turns to him ass and hand pushed aside her panties, while gripping even sexual lip...'
+											act 'Watch':
+												cls
+												horny += RAND(10,35)
+												minut += 10
+												miragopQW = 11
+												mirasextimes += 3
+												gs 'stat'
+												'<center><img src="images/qwest/gadukino/MiraQW10_4.jpg"></center>'
+												'But Mitya, slapping her ass, roughly pulls her panties down to the knees and, lowered his pants, He starts to fuck her roughly. World groaning and moaning, sometimes bumping his head on a tree, of which put her hands, and tries podmahivat Mitka. You, meanwhile marking up, osyatsya how you Vasya Kolyamboy and saying goodbye, You decide to escape from harm`s way...'
+												act 'Escape':miraingop = 0 & minut += 30 & gt'Gaddvor'
+											end
+										end
+									end
+								end
+							end
+						else
+							'Miroslav only giggles in reply, Bob gets a slap on the Mitki...'
+							act 'Further':gt $curloc
+						end
+						exit
+					end
+					act 'Further':gt $curloc
+				elseif miragopQW >= 11 and mirapiss >= 3 and mirapiss < 6:
+					if miralko >= 4:
+						minut += 5
+						miragopQW += 1
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraQW11.jpg"></center>'
+						' - Well cho, Mirka, ready to work her pussy? - distributed among Kompashki drunk demanding voice.'
+						'That it-drunken giggle in response, after which readily turns his back to the company and lowered his pants, sticks his bare ass gopota.'
+						act 'Watch':
+							cls
+							minut += 5
+							gs 'stat'
+							if mirapiss = 3:
+								horny += RAND(20,50)
+								minut += 20
+								mirasextimes += 1
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraQW11_1.jpg"></center>'
+								'Kolyamba dissatisfied with frowns and takes her aside, where she tells of the work of his by a pussy. There implicitly jumps on top of him and begins to ride...'
+							elseif mirapiss = 4:
+								horny += RAND(20,50)
+								minut += 20
+								mirasextimes += 1
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraQW11_2.jpg"></center>'
+								'Mitya approving chuckles and removes drunk Miroslav aside, where it starts to fuck bestseremenno...'
+							elseif mirapiss = 5:
+								horny += RAND(20,50)
+								minut += 20
+								mirasextimes += 1
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraQW11_3.jpg"></center>'
+								'Bob takes away the World a little aside and tells her to take off her clothes, then, completely naked, dolbitee starts its member...'
+							end
+							act 'Escape':miraingop = 0 & minut += 10 & gt'Gaddvor'
+						end						
+					else
+						minut += 5
+						miragopQW += 1
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/MiraQW11_4.jpg"></center>'
+						' - Well cho, Mirka, pososesh have kids? - distributed among Kompashki drunk demanding voice.'
+						'That, blushing, nods obediently sits right there, where he was.'
+						act 'Watch':
+							cls
+							minut += 5
+							mirasextimes += 3
+							gs 'stat'
+							if mirapiss = 3:
+								horny += RAND(20,35)
+								minut += 20
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraQW11_5.jpg"></center>'
+								'The boys immediately forgetting about you, Miroslav surround and she starts to turn at all suck, loud champing lips...'
+							elseif mirapiss = 4:
+								horny += RAND(20,35)
+								minut += 20
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraQW11_6.jpg"></center>'
+								'The boys immediately forgetting about you, Miroslav surround and turns rough start to fuck her in the mouth. She constantly grunts and gags, but they do not pay any attention to it does, continuing to stick her head on his dick...'
+							elseif mirapiss = 5:
+								horny += RAND(20,35)
+								minut += 20
+								gs 'stat'
+								'<center><img src="images/qwest/gadukino/MiraQW11_7.jpg"></center>'
+								'The boys immediately forgetting about you, Miroslav surround and that in turn are beginning to have all diligently suck, at the same time a member of the hand nadrachivaya...'
+							end
+							act 'Escape':miraingop = 0 & minut += 10 & gt'Gaddvor'
+						end	
+					end
+				elseif miragopQW >= 15 and mirapiss = 6:
+					if miralko >= 4:
+						minut += 5
+						miragopQW += 1
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/drunkgirl.jpg"></center>'
+						' - Well cho, Mirka, show us the show? - cackles Kolyamba. - Let us see, you nadrachivat their holes...'
+						'Miroslav affirmative grunts in response, then undresses, ceases on all fours and ass sticking out to the side of the company, begins to fuck yourself with your fingers in both holes...'
+						act 'Watch':
+							cls
+							minut += 5
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/MiraQW15.jpg"></center>'
+							'Miroslav drunkenly yells and moaning drawl, clumsily poking his fingers holes. Bob foolishly asks you, Could you too, so, but you just snorts contemptuously at him and he immediately remains - Peace finally bring themselves to orgasm first.'
+							act 'Further':gt $curloc
+						end
+					else
+						minut += 5
+						if miragopQW < 20: miragopQW += 1
+						gs 'stat'
+						'<center><img src="images/qwest/gadukino/drunkgirl.jpg"></center>'
+						' - Well cho, Mirka, show us the show? - cackles Kolyamba. - Let us see, you nadrachivat their holes...'
+						'Miroslav shakes his head, why Gopnik nabychivayutsya immediately and begin to run into Miroslav. She refuses to meet customer requirements and offers to find a-a compromise and they agree that, she`s just a little undress naked and crawl on all fours in front of them, depicting a dog...'
+						act 'Watch':
+							cls
+							horny += RAND(25,50)
+							minut += 5
+							gs 'stat'
+							'<center><img src="images/qwest/gadukino/MiraQW15_1.jpg"></center>'
+							'Miroslav takes off all his clothes and the next fifteen minutes on all fours crawling on the ground, while constantly turning his head from side to side, not whether someone. But around thickets and trees, besides the people in the village is very small, and the dark already, so all obohoditsya safely...'
+							act 'Further':gt $curloc
+						end
+					end					
+				else
+					'<center><img src="images/qwest/gadukino/drinking.jpg"></center>'
+					'You give a glass of moonshine and that Miroslava, little pause, begins, coughing and curves, strain it through clenched teeth. You, meanwhile, talking animatedly with the village.'
+					act 'Further':gt $curloc
+				end
+			end
+		end
+		if temp = 1:
+			act 'To drink the most':
+				cls
+				minut += 15
+				alko += 4
+				temp = 2
+				gs 'stat'
+				'<center><img src="images/qwest/gadukino/drinking.jpg"></center>'
+				'You take a glass of moonshine and start, coughing and curves, strain it through clenched teeth. Miroslav meanwhile shyly answers questions impudent youth of the village.'
+				act 'Catching his breath':gt $curloc
+			end
+		end
+	end
+end
+
+--- mitkabuh ---------------------------------
+

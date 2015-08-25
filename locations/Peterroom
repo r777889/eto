@@ -1,0 +1,286 @@
+# Peterroom
+if $ARGS[0] = 'start_door':
+	cla
+	clr
+	*clr
+	minut = minut + 5
+	gs'stat'
+
+	FColor = RGB(0,0,0)
+	BColor = RGB(255,255,255)
+	LColor = RGB(106,90,205)
+
+	'<center><b><font color = maroon>Apartment Peter</font></b></center>'
+	'<center><img src="images/peter/peterdoor.jpg"></center>'
+
+	act 'Logout':
+		cla
+		minut = minut + 5
+		gt'down'
+	end
+
+	act 'Call at the door':
+		cla
+
+		if petersexday < 1:
+			petersexday += 1
+
+			'You have reached, Peter opened the door.'
+			'- Come, change. I`m.'
+
+			act 'Go to the apartment':gt'peterroom','start'
+		else
+			'You have reached the door but no one answers.'
+
+			act 'Logout':
+				cla
+				minut = minut + 5
+				gt'down'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'start':
+	cla
+	*clr
+
+	if peter > 0:
+		peterrand = RAND(1,2)
+
+		'<center><img src="images/peter/9.jpg"></center>'
+		'You get undressed, They fastened a collar and prepared. From the next room came the commanding voice of Peter: - Who are my whore?'
+
+		act 'I, my Lord...':
+			petersex = petersex+1
+
+			if analplugin = 1:gt'peterroom','klap'
+			if peterrand < 2:gt'peterroom','d1'
+			if peterrand > 1:gt'peterroom','d2'
+		end
+	elseif peter < 1:
+		petersexday += 1
+		minut = minut + 10
+
+		'<center><img src="images/peter/1.jpg"></center>'
+		'Undressed and dressed it. He put the collar in front of you you took up this narrow strip of leather with studs and thinking.'
+
+		act 'Wear':
+			*clr
+			cla
+			'<center><img src="images/peter/2.jpg"></center>'
+			'You put the collar. Peter stroked whip you on the cheek:'
+			'- Lustful girl! Arise, turn around, hands behind his back!'
+			'You run and snapped the handcuffs on his hands.'
+
+			if analplugin = 1:
+				analplugin = 0
+
+				'And what we have here ? Peter pulled the tip sticking out of the ass Tube, and pulled her'
+			end
+
+			act 'Smile':
+				cla
+				*clr
+				gs'stat'
+
+				'<center><img src="images/peter/3.jpg"></center>'
+				'Peter pulled you by the collar, He puts on his knees in front of him and ordered: - Come on bitch, Now open your mouth lascivious.'
+
+				act 'Submit':
+					cla
+					*clr
+					'<center><img src="images/peter/4.jpg"></center>'
+					'Peter unbuttoned his pants and pulled out his 25inch dick. He grabbed you by the hair and put in your mouth the head of his penis. You dutifully wrapped around her lips sucking, and caressed his tongue, feeling as it increases and strains in your mouth.'
+
+					act 'Continue to suck':
+						cla
+						*clr
+						'<center><img src="images/peter/5.jpg"></center>'
+						'And then you and Peter bent rude and impatient stuck your dick in pussy and began to fuck, like an inflatable doll. A few minutes later he stopped and pulled out a member you pushed to the floor and ordered:'
+						'- Crawl me, bitch!'
+
+						act 'Creep':gt'peterroom','klap'
+					end
+				end
+				act 'Do not submit':
+					cla
+					*clr
+					'<center><img src="images/peter/4_1.jpg"></center>'
+					'-Pridёtsya Punish - Peter with these words you tipped over the table and put you in the anus plug. - Pops up before you run spanking, will receive the same amount: - Peter became the side of you, spread whip, and began spanking. counting out loud strikes, interspersed with your sobs and outcries...'
+					'-...Ask, You fucked me, nine...will be obedient litter ?'
+
+					act 'Yes! I`ll be your whore!':gt'peterroom','klap'
+				end
+			end
+		end
+		act 'Escape':
+			gt'down'
+		end
+	end
+end
+
+if $ARGS[0] = 'klap':
+	cla
+	*clr
+	horny = horny + 10
+	gs'stat'
+
+	'<center><img src="images/peter/6.jpg"></center>'
+	'Peter brought you on a leash in the bedroom. He fell on a huge bed and tied his hands and feet.'
+	'Then deftly put in your mouth gag: - ball on the strap, and fastened it to the back of the head.'
+	'- I love, Sveta, you moan, but when you`re talking about, you start talking nonsense. So it is better Stoney, sweet...'
+
+	act 'Moo':
+		cla
+		*clr
+		'<center><img src="images/peter/7.jpg"></center>'
+		'Peter bore down on you from above. - Check how much you sweet ass? - said Peter'
+
+		if analplugin = 1:
+			analplugin = 0
+
+			', anal plug pulled'
+		end
+
+		'and put his huge excited member to your anus went into a half. You suffocated by pain, and mooing in the gag. - And I see you can not wait to get it in the ass completely - I saw your response Peter and began to fuck your ass, with each blow penetrating deeper and deeper, while his penis did not completely sink into you, eggs and hard slap on the buttocks. He fucks you so intensely, what you feel, as the knees begin to tremble, and pussies and priests of your juices flowing.'
+
+		act 'Moo':
+			cla
+			*clr
+			horny = horny + SUB - DOM + (anus-25)*3
+			anal = anal+1
+
+			'<center><img src="images/peter/8.jpg"></center>'
+			'He continues to stick you all soon, and then slows the rhythm, It makes a few deep movements and finishes filling your insides hot stream of sperm...'
+
+			if anus < 25:anus = anus + 1
+			if horny >= 100:
+				horny = 1
+				orgasm = orgasm + 1
+				analorgasm = analorgasm + 1
+
+				'in the ass it was hot and orgasm has covered you with a head.'
+			end
+
+			'Ass to squelch is released from its members. Peter sat on the bed, panting, and you are so bound and lay, feeling both from ottrahanoy ass sperm slowly flows.'
+
+			act 'Relax':gt'peterroom','end'
+		end
+	end
+end
+
+if $ARGS[0] = 'end':
+	cla
+	*clr
+	SUB = SUB + 1
+	minut = minut + 30
+	gs'stat'
+
+	'<center><img src="images/peter/vanroom.jpg"></center>'
+	'- You were great - said Peter and smacking you on the cheek, He raised his arms and carried you to the bathroom where you showered together.'
+
+	act 'Exit the bathroom':
+		cla
+		*clr
+		peter = peter + 1
+		minut = minut + 20
+
+		'<center><img src="images/peter/mash.jpg"></center>'
+		'You walked down the yard, and stopped the car of Peter. He kissed you on the lips and said,:'
+		'- Sveta, You really brightened my lonely and gray existence. Your appearance like a ray of light in the dark, or as a breath of fresh air... I really hope to see you again. But, Now excuse me, affairs. You throw?'
+
+		act 'In the center':gt'down'
+		act 'To home':dynamic $brodilr
+	end
+end
+
+if $ARGS[0] = 'd1':
+	cla
+	*clr
+	horny = horny + SUB - DOM + (anus-25)*3
+	anal = anal + 1
+	if anus < 25:anus = anus + 1
+
+	'<center><img src="images/peter/d1-1.jpg"></center>'
+	'Peter ties your hands behind your back. His hands take your hips and lift your ass, puts you cancer. You dutifully lean and Peter catches a rope on the hook.'
+
+	act 'Sucking fingers':
+		cla
+		*clr
+		'<center><img src="images/peter/d1-2.jpg"></center>'
+		'Peter pushes your arms halves drives his dick in the ass. You suffocated by pain, and mooing in the gag. - And I see you can not wait to get it in the ass completely - I saw your response Peter and began to fuck your ass, with each blow penetrating deeper and deeper, while his penis did not completely sink into you, eggs and hard slap on the buttocks.'
+
+		act 'Moan':
+			cla
+			*clr
+			'<center><img src="images/peter/d1-3.jpg"></center>'
+			'He fucks you so intensely, what you feel, as the knees begin to tremble, and the legs of pussy juice running down your.'
+
+			act 'Moan':
+				cla
+				*clr
+				'<center><img src="images/peter/d1-4.jpg"></center>'
+				'He continues to stick you all soon'
+
+				if horny >= 100:
+					orgasm = orgasm + 1
+					analorgasm = analorgasm+1
+
+					'You are very excited, It grew in the ass sweet languor, and then suddenly it becomes a hot orgasm and covered you with a head. At the same time with you, Peter ends, member driving deeper and filling your insides hot stream of sperm...'
+				elseif horny < 100:
+					'and then slows the rhythm, It makes a few deep movements and finishes filling your insides hot stream of sperm...'
+				end
+
+				'Ass to squelch is released from its members. Peter sat on the bed, panting, and you remained kneeling with protruding upward, ottrahanoy booty from which the legs dripping sperm.'
+
+				act 'Further':gt'peterroom','end'
+			end
+		end
+	end
+end
+
+if $ARGS[0] = 'd2':
+	cla
+	*clr
+	horny = horny + SUB + VAF - DOM + (throat -25)*3
+
+	'<center><img src="images/peter/d2-1.jpg"></center>'
+	'Peter put you on your knees, then raise your head, and holding her hands, with the power of your mouth planted a piston. His head slipped down his throat, but he did not rest on it, continuing to press. And his 25 centimeter count began to enter into you on.'
+
+	act 'Suck':
+		cla
+		*clr
+		'<center><img src="images/peter/d2-2.jpg"></center>'
+		'- Caxis better,whore! Centimeter by centimeter, shoving, relentlessly driving him deeper and deeper. After another jolt I feel you, your lips, what is rested. And a moment later you realize, it all inside.'
+
+		act 'Moan':
+			cla
+			*clr
+			'<center><img src="images/peter/d2-3.jpg"></center>'
+			'Tears streamed from his eyes, Peter began and slowly began to move. He took his hands away from your head, and now you`re hands grabbed his buttocks and went to sit down on his spear. You trembling, you are lost in sensation, Fire raged between the legs, nice chest ached with a sense of shamelessness and awareness of their depravity.'
+
+			act 'Moo':
+				cla
+				*clr
+				SUB = SUB + 1
+				bj = bj + 1
+				'<center><img src="images/peter/d2-4.jpg"></center>'
+				'Peter began to finish and stopped drove a member as deeply as possible, you feel, like where-In the back of your pours his sperm, and on his balls your saliva flowing...'
+
+				if horny >= 100:
+					VAF = VAF + 1
+					willpower = willpower + 15
+					lipkoef = lipkoef + 1
+					orgasm = orgasm + 1
+
+					'Suddenly, you stop yourself you started. Between the legs blazing fire and waves of pleasure covered body, You groaned and shuddered with orgasm,but Peter gripped you do not allow members to slip out of his mouth...'
+				end
+
+				act 'To swallow':gt'peterroom','end'
+			end
+		end
+	end
+end
+--- Peterroom ---------------------------------
+

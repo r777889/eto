@@ -1,0 +1,132 @@
+# gkafe
+$metka = $ARGS[0]
+$loc = $CURLOC
+
+gs'stat'
+gs'time'
+
+FColor = RGB(0,0,0)
+BColor = RGB(255,255,255)
+LColor = RGB(106,90,205)
+
+'<center><b><font color = maroon>Caff</font></b></center>'
+
+if mother_go = 1 and hour = 16:
+	'<center><img src="images/qwest/alter/gkafe.jpg"></center>'
+	'Small bedraggled, station cafe.'
+	'Door closed on the lock and the door hangs a sign "Records".'
+
+	act 'Walking around the cafe':
+		cls
+		minut += 15
+		gs'stat'
+
+		'You walked around the cafe and suddenly you come down to the weak voices, approaching the wall cafe, you heard what that poor women moaning. Going for a cafe you see old crates and on the wall a small window in which you can look if you stand on boxes.'
+
+		act 'Escape':gt'vokzalG'
+		act 'Peep out of the window':
+			cls
+			minut += 5
+			gs'stat'
+
+			'<center><img src="images/qwest/alter/placer/momslut.jpg"></center>'
+
+			if momslut >= 1:
+				'You climbed on the boxes and looked through the small window. Behind the glass you noticed, your mom does blowjob cafe owner. You have come to see, Mom enthusiastically sucks dick swallowing it up to the eggs.'
+			elseif momslut = 0:
+				momslut = 1
+
+				'You climbed on the boxes and looked through the small window. Behind the glass you noticed how some sort of a woman sitting on his haunches in front of a man and do something. And then before you came, it`s your mom doing blowjob cafe owner. You surprise goggled, and my mother, meanwhile sucking dick with great enthusiasm swallowing it up to the eggs.'
+			end
+
+			act 'Escape':gt'vokzalG'
+			act 'View more':
+				cls
+				minut += 5
+				mother_go = 0
+				gs'stat'
+
+				'<center><img src="images/qwest/alter/placer/momslut2.jpg"></center>'
+				'Your mother got to her feet and turned his big bare ass to the owner cafes. He came back and sharply drove his cock into her pussy. His movements were strong and flourish, your mother moaned and clung to the wall. Finally the owner of the cafe grabbing ass your mother groaned and finished in her pussy.'
+
+				act 'Escape':gt'vokzalG'
+			end
+		end
+	end
+else
+	if hour >= 8 and hour <= 20:
+		'<center><img src="images/qwest/alter/gkafe2.jpg"></center>'
+		'Small bedraggled, station cafe.'
+		if StoryLine > 0:'Since your mom works here, then you are fed for free.'
+
+		if week < 6:
+			if hour >= 6 and hour < 16 and StoryLine > 0:
+				'The cafe at the bar is your <a href="exec:GT ''mother''">mom</a>.'
+			else
+				'The bar is the owner of the cafe <a href="exec:GT ''motherkafeboss''">Fame</a>'
+			end
+		end
+
+		act 'Eat':
+			cla
+			*clr
+			frost = 0
+			minut = minut + 30
+			health = health + 10
+			manna = manna + 5
+			willpower = willpower + 5
+			gs'stat'
+
+			'<center><img src="images/pics/food.jpg"></center>'
+
+			if energy >= 30:
+				fat = fat + 5
+
+				'You can no longer have.'
+			elseif energy >= 20 and energy < 30:
+				fat = fat + 3
+				energy = energy + 10
+
+				'You pushed through the power of a meal.'
+			elseif energy < 20:
+				energy = energy +20
+				fat = fat + 1
+
+				'You will be happy to eat food.'
+			end
+
+			if water >= 20:
+				'Tea in you no longer climbs.'
+			elseif water < 20:
+				water = water +20
+
+				'You will be happy to drink a cup of tea.'
+			end
+
+			razvrand = RAND(1,10)
+			if razvrand > 7 and hour > 16 and hour < 20 and age < 18 and dyadyamishaevent = 0 and momslut >= 1:
+				''
+				'Past your table is going to enter adult male, where you will find Uncle Misha, who lives in the house next door, who see you, suddenly stops and tells you:'
+				'Oh, Sveta, hello. I get to know me? I see, what yes. Listen, here it is... We are your stepfather as the machine is repaired late, and then lay down on me overthrow ryumashki, and I stayed at the apartment of his luggage with tools. Can you help him to return? I`ll give a coin for ice cream.'
+
+				act 'Agree':gt'gevent','1'
+			elseif razvrand > 7 and hour > 16 and hour < 20 and dyadyamishaevent = 1 and dmishaday ! day:
+				''
+				'Suddenly you at the table sits Misha, that strips you look, looking greedy and oily eyes on your chest, and says,:'
+				'Hello, Sveta.. You can now look within me to tea..? We have fun as last time, And the donations will not hurt, and?'
+
+				act 'Agree':gt'misha','1'
+			end
+
+			act 'Get up from the table':gt'gkafe'
+		end
+	else
+		'<center><img src="images/qwest/alter/gkafe.jpg"></center>'
+		'A little bedraggled station cafe.'
+		'Cafe does not work.'
+	end
+end
+
+act 'Logout':gt'vokzalG'
+--- gkafe ---------------------------------
+

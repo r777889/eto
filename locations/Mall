@@ -1,0 +1,207 @@
+# Mall
+h = h + 1
+horny = horny + 1
+clr
+gs'stat'
+
+'<center><b>Marketplace</b></center>'
+'<center><img src="images/pic/rinok2.jpg"></center>'
+'Bustling market, you can buy on the market or to buy clothes for a place 30000 rubles and receive income from the sales outlet, but for the purchase and delivery of course you need to have a car. You can trade yourself or hire a saleswoman.'
+
+if car = 0:
+	money = money - 20
+
+	'Did you get on the bus and pay the fare 20 rubles.'
+elseif car > 0 and benzin > 0:
+	benzin = benzin - 1
+	gs'stat'
+
+	'You have reached on its <<$marka>>.'
+elseif car > 0 and benzin <= 0:
+	money = money - 20
+	gs'stat'
+
+	'You ran out of gas and you had to go by bus, paying for travel 20 rubles.'
+end
+
+act 'Buy':gt'RynokP','selection'
+act 'Going home':gt'street'
+
+if rinwork > 0 and h < 9:
+	act 'Job Salesmen':
+		cla
+		clr
+		*clr
+		h = 17
+		fat = fat + 5
+		vnesh = vnesh - 1
+		monrand = RAND(500,2000)
+		money = money + monrand
+		gs'stat'
+
+		'You all day selling things in the market and earned <<monrand>> rubles'
+
+		rinrand = RAND(1,100)
+		if rinrand < 70 and palevorin = 0 and rinhoz = 0:
+			act 'Going home':gt'street'
+		elseif rinrand >= 70 and palevorin = 0 and rinhoz = 0:
+			'To you I approached the owner of the tent and began to pester you, promising to write bonuses'
+
+			act 'Takeout':
+				cla
+				money = money - 2000
+
+				'The owner imposes on you a fine of 2000 rubles'
+
+				act 'Going home':gt'street'
+			end
+			act 'Ogle':gt'RynokHoz','beginning'
+		elseif rinrand < 60 and palevorin = 0 and rinhoz = 1:
+			act 'Going home':gt'street'
+		elseif rinrand >= 60 and palevorin = 0 and rinhoz = 1:
+			'To you I approached the owner of the tent and began to pester you, promising to write bonuses'
+
+			act 'Takeout':
+				cla
+				money = money - 2000
+
+				'The owner imposes on you a fine of 2000 rubles'
+
+				act 'Going home':gt'street'
+			end
+			act 'Ogle':gt'RynokHoz','beginning'
+		elseif rinrand < 60 and palevorin = 1:
+			'In the market there is a rumor among the sellers that you are the owner fucks tray'
+
+			act 'Going home':gt'street'
+		elseif rinrand >= 60 and palevorin = 1:
+			'To you I approached the owner of the tent and began to pester you, promising to write bonuses'
+
+			act 'Takeout':
+				cla
+				money = money - 2000
+
+				'The owner imposes on you a fine of 2000 rubles'
+
+				act 'Going home':gt'street'
+			end
+			act 'Ogle':gt'RynokHoz','beginning'
+		elseif rinrand < 40 and palevorin = 2:
+			'In the market there is a rumor among the sellers that you are the owner fucks tray buddies'
+
+			slutrand = RAND(1,100)
+			if slutrand >= 70:
+				'After work, you went and became an Armenian entice you to cocksucking.'
+
+				act 'Agree':gt'RynokHoz','opusteha2'
+			end
+			act 'Going home':gt'street'
+		elseif rinrand >= 40 and rinrand < 70 and palevorin = 2:
+			'To you I approached the owner of the tent and began to pester you, promising to write bonuses'
+
+			act 'Takeout':
+				cla
+				money = money - 2000
+
+				'The owner imposes on you a fine of 2000 rubles'
+
+				act 'Going home':gt'street'
+			end
+			act 'Ogle':gt'RynokHoz','beginning'
+		elseif rinrand >= 70 and palevorin = 2:
+			'To you approached the owner of the tent c already familiar to you guys and they started to entice you to perform oral sex, promising to write bonuses'
+
+			act 'Takeout':
+				cla
+				money = money - 2000
+
+				'The owner imposes on you a fine of 2000 rubles'
+
+				act 'Going home':gt'street'
+			end
+			act 'Ogle':gt'RynokHoz','opusteha'
+		end
+	end
+	act 'Dismissed':
+		cla
+		work = 0
+		rinwork = 0
+
+		'You are fired.'
+
+		act 'Going home':gt'street'
+	end
+end
+
+if busRinok = 0 and money >= 30000 and car > 0:
+	act 'Buy a place in the market for a month 30000 RUB':
+		cla
+		busRinok = 30
+		money = money - 30000
+
+		'You bought a place in the market for 30000 rubles. You need the goods'
+
+		act 'Going home':gt'street'
+	end
+end
+
+if busRinok > 0 and tovarR > 0 and rinhour ! number:
+	act 'Trading on their own':
+		cla
+		clr
+		fat = fat - 2
+		rinhour = number
+		torghour = 16 - rinhour
+		torgrand = RAND(1,50)
+		if tovarR >= torgrand:tovarR = tovarR - torgrand
+		if tovarR < torgrand:torgrand = tovarR & tovarR = 0
+		torgmoney = torgrand*200
+		money = money + torgmoney
+		h = 17
+		torgmoney = 0
+		gs'stat'
+
+		'You`ve earned a day <<torgmoney>> rubles, sold out <<torgrand>> piece goods, you have <<tovarR>> units sold.'
+
+		act 'Going home':gt'street'
+	end
+
+	if rinokTorg = 0 and rinhour ! number:
+		act 'Hire shop assistant':
+			cla
+			rinokTorg = 1
+
+			'You hired the shop 1000 rubles per day'
+
+			act 'Going home':gt'street'
+		end
+	elseif rinokTorg = 1 and rinhour ! number and tovarR > 0:
+		act 'Issue goods saleswoman':
+			cla
+			rinokTorgW = 1
+			rinhour = number
+			torghour = 16 - rinhour
+			torgrand = RAND(1,50)
+			if tovarR >= torgrand:tovarR = tovarR - torgrand
+			if tovarR < torgrand:torgrand = tovarR & tovarR = 0
+			torgmoney = torgrand*200
+
+			'You have given goods saleswoman, Now she can trade independently.'
+
+			act 'Going home':gt'street'
+		end
+	end
+end
+
+if rinokTorg = 1 and rinhour ! number:
+	act 'Dismiss the shop':
+		cla
+		rinokTorg = 0
+
+		'You fired the shop'
+
+		act 'Going home':gt'street'
+	end
+end
+--- Mall ---------------------------------
+
