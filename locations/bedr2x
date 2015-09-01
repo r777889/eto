@@ -23,6 +23,7 @@ LColor = RGB(106,90,205)
 
 if magik >= 6 and spellbefshild = 1 and tobiQW = 0:gt'tobiQW','start'
 	'Bright and beautiful bathroom, with modern and stylish furniture, is dominated by <a href="exec:GT ''bed'',''start''">Double</a>. At the entrance stands a modern <a href="exec:GT ''loker'',''start''">cupboard</a> Clothing. Against the wall and table <a href="exec:GT ''mirror'',''start''">mirror</a>'
+if komp = 1:'On the bedside table is yours <a href="exec:GT ''Komp'',''start''">notebook</a>.'
 
 if nude = 0:$nude = 'In the corridor'
 if nude = 1:$nude = 'Get dressed'

@@ -19,23 +19,13 @@ if streetrand >= 10 and bfa < 1:
 			gs'boyfrend','start'
 			stopboy = 0
 			'<<$boyA>> record your phone and left.'
-			act 'Complete outing':$CURLOC
+			act 'Complete outing':gt'lug'
 		end
 	end
 end
 
-$pavserjil = {
-	cls
-	cla
-	gs'stat'
-	gs'time'
-	set pavserhom = 1
-	'<center><img src="images/pic/pavserjil2.jpg" ></center>'
-    'And it is not clear why you itself drew attention to him.'
-	act 'Overnutsya':gt'lug'
-}
 
-if pavserhom = 0 and psiha = 0:
+if pavserhom = 0 and psiha = 0 and housr = 0:
     temp = RAND(1,100)
     if temp >= 90:
 	   	horny += 20

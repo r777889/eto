@@ -64,7 +64,10 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 	act 'Take a walk along the beach':
 		cls
 		minut += 60
+		willpower += 5
+		manna += 5
 		gs'stat'
+		gs'time'
 		if bikini_cloth>0 and bedra<=90:'<center><img src="images/nigma/gor/lake/lake.walk.bikini0,'+rand(0,1)+'.jpg"></center>'
 		if bikini_cloth>0 and bedra >= 90 and bedra<=110:'<center><img src="images/nigma/gor/lake/lake.walk.bikini.fat0,0.jpg"></center>'
 		if bikini_cloth>0 and bedra>=110:'<center><img src="images/nigma/gor/lake/lake.walk.bikini.fat0,1.jpg"></center>'
@@ -139,6 +142,8 @@ if temper >= 20 and month>=5 and month<=9 and hour>=6 and hour<=20:
 				minut = minut + 60
 				sweat = sweat + 1
 				manna = manna + 5
+				gs'stat'
+				gs'time'
 				'<center><img src="images/pics/zagar.jpg"></center>'
 				if nude = 1:willpower -= 5 & manna -= 5 & 'You hear the women around you whispering, I am saying that there look what bezstyzhaya Lebedev, completely lost the conscience, and the men stared rozglyaduyut your naked body.'
 				if krem = 0:

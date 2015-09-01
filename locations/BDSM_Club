@@ -55,7 +55,7 @@ if $ARGS[0] = 'start':
 		if BDSMmeet = 4 and $BDSMrole = 'r':msg'<b>A branch of the slave is not implemented on.</b>'
 		'You stand in front of BDSM-club'
 	end
-    act 'to go away':gt'psiklin','ps2'
+    act 'to go away':gt'psiklin','start'
 !	gs'taxi'
 end
 

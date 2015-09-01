@@ -466,5 +466,16 @@ if temper <= 0:
 	if frost >= 12:sick += 1
 	if sick > 0 and sickstage = 0:sickstage = 1
 end
+
+if tanga = 0:
+    sicknotanga = hour
+    sicknotanga += 1
+    if sicknotanga >= 3:
+        GerpesOnce = 1
+    end
+end
+
+
+
 --- time ---------------------------------
 

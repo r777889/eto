@@ -41,8 +41,8 @@ if TV = 2:$TV = 'huge plasma <a href="exec:GT ''TV'',''start''">TV</a>'
 if divan = 0:$divan = '<a href="exec:GT ''divan'',''start''">old sofa</a>'
 if divan = 1:$divan = 'luxurious <a href="exec:GT ''divan'',''start''">leather sofa</a>'
 
-if komp = 0:$komp = ''
-if komp = 1:$komp = 'on which the <a href="exec:GT ''Komp'',''start''">notebook</a>'
+
+if komp = 1:'a table on which is located <a href="exec:GT ''Komp'',''start''">notebook</a>'
 
 if stol = 0:$stol = 'decrepit <a href="exec:GT ''stol'',''start''">table</a>'
 if stol = 1:$stol = 'new <a href="exec:GT ''stol'',''start''">table</a>'

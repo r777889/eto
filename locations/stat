@@ -1,7 +1,7 @@
 # stat
 clr
 view
-
+gs'din_pav'
 gs'dinSex2'
 rand1=rand(0,100)
 if poSkill>1000:poSkill=1000
@@ -961,12 +961,15 @@ if manna <= 0:
 	!fat = fat + 1
 end
 
-if health < 0:
+if health < 0 or health = 0:
+    health = 0
 	over = 1
 	gt'gameover'
 	exit
 end
-if willpower < 0 and StoryLine = 0:
+
+if willpower < 0 or willpower = 0:
+    willpower = 0
 	over = 2
 	gt'gameover'
 	exit
@@ -980,6 +983,15 @@ if saloonce = 0 and opPRE = 0:
 	agilbuf = agil
 end
 
+!if horny >= 90:
+!    hornizon = hour
+!    hornizon += 1
+!    if hornizon = 1:
+!        manna -= 100
+!        willpower -= 50
+!    end
+
+end
 gs'body'
 !!!!!!!!!!!!!
 
@@ -1285,7 +1297,7 @@ if spanked >= 3:pl'<b><font color = red>Your poor <a href="exec:view''images/pic
 if spanked = 2:pl'<b><font color = red>Your <a href="exec:view''images/picb/SpankedAss1.jpg''">buttocks</a> burning fire, they are streaks otchetilivo.</font></b>'
 if spanked = 1:pl'<b><font color = red>Your <a href="exec:view''images/picb/SpankedAss.jpg''">buttocks</a> a little red from spanking and rough touch and ache.</font></b>'
 
-if Gerpes >= 3:pl'<b><font color = red>Sores on your lips. All signs of genital herpes.</font></b>'
+!if Gerpes >= 3:pl'<b><font color = red>Sores on your lips. All signs of genital herpes.</font></b>'
 if Gerpes < 10 and Gerpes >= 5:pl'<b><font color = red>Your pussy blushed and strongly itches. It genital herpes.</font></b>'
 if Gerpes >= 10:pl'<b><font color = red>On your pussy appeared sores. It genital herpes.</font></b>'
 if Gerpes >= 20:pl'<b><font color = red>Cover your ass sores of genital herpes.</font></b>'

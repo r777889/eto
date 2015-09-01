@@ -9,7 +9,7 @@ gs'time'
 'Close to the narrow <a href="exec:GT ''allea'',''start''">footpath</a> .'
 'Wander through <a href="exec:GT ''lug'',''start''">park</a> .'
 
-act 'Road':gt'psiklin','start'
+act 'Elite settlement':gt'psiklin','start'
 
 act 'Walk 1 h':
     cla
@@ -26,7 +26,7 @@ if month = 5 or month = 6 or month = 7 or month = 8 or month = 9:
 		act 'Crouch on the bench':
 			cla
         	*clr
-        	'<center><img src="images/lmps/сидит.jpg"></center>'
+        	'<center><img src="images/lmps/�?идит.jpg"></center>'
 			waiting = input ("How many minutes of sitting? (Not more 120 minutes)")
 
 			if waiting <= 0 or waiting > 120:

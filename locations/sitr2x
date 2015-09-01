@@ -27,8 +27,6 @@ LColor = RGB(106,90,205)
 
 'modern <a href="exec:GT ''stol'',''start''">curbstones</a>'
 
-if komp = 0:$komp = ''
-if komp = 1:$komp = 'on which the <a href="exec:GT ''Komp'',''start''">computer</a>'
 
 if obruch > 0:'In the corner stands a hoop.'
 if skak > 0:'On a shelf is a jump rope.'

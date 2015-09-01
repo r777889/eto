@@ -24,6 +24,7 @@ $kol_man_text_no = ''
 
 plact = 0
 gs'stat'
+gs'time'
 $textEvent = ''
 
 if place = 0:

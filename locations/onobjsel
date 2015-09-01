@@ -934,44 +934,55 @@ $objclothes = {
 		if vatnik = 2:view 'images/ode/vatnik.jpg'
 		if odetjeans > 0:
 			view 'images/ode/jeans<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<jeansH[numdress]>>, The size of the hips <<jeansB[numdress]>>)'
 		elseif odetyoga > 0:
 			view 'images/ode/yoga<<numdress>>.jpg'
 			pl'(Remaining strength <<yogaH[numdress]>>, The size of the hips <<yogaB[numdress]>>)'
 		elseif odetsarafan > 0:
 			view 'images/ode/sarafan<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<sarafanH[numdress]>>, The size of the hips <<sarafanB[numdress]>>)'
 		elseif odetshort > 0:
 			view 'images/ode/short<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<shortH[numdress]>>, The size of the hips <<shortB[numdress]>>)'
 		elseif odetskirt > 0:
 			view 'images/ode/skirt<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<skirtH[numdress]>>, The size of the hips <<skirtB[numdress]>>)'
 		elseif odetdress > 0:
 			view 'images/ode/dress<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<dressH[numdress]>>, The size of the hips <<dressB[numdress]>>)'
 		elseif odetprofi > 0:
 			view 'images/ode/profi<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<profiH[numdress]>>, The size of the hips <<profiB[numdress]>>)'
 		elseif odetpants > 0:
 			view 'images/ode/pants<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<pantsH[numdress]>>, The size of the hips <<pantsB[numdress]>>)'
 		elseif odetlatex > 0:
 			view 'images/ode/latex<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<latexH[numdress]>>, The size of the hips <<latexB[numdress]>>)'
 		elseif odethooker > 0:
 			view 'images/ode/hooker<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<hookerH[numdress]>>, The size of the hips <<hookerB[numdress]>>)'
 		elseif odetkis > 0:
 			view 'images/kis/k<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<odekisH[numdress]>>, The size of the hips <<odekisB[numdress]>>)'
 		elseif odetnewclo > 0:
 			view 'images/ode/newclo/<<numdress>>.jpg'
+			dynamic $tangans
 			pl'(Remaining strength <<newcloH[numdress]>>, The size of the hips <<newcloB[numdress]>>)'
 		end
 		if odetero > 0:view 'images/img/dress/ero<<numdress>>.jpg'
-		if cloth_vid = 1:view 'images/etogame/bimboView.jpg' & pl'You are dressed in the form of bimbos'
-		if maid_cloth=1:view 'images/nigma/gor/hotel/work/maid/maid.cloth'+rand(0,5)+'.jpg'&pl'You are dressed in maid uniforms'
+		if cloth_vid = 1:view 'images/etogame/bimboView.jpg' & pl'You are dressed in the form of bimbos'&dynamic $tangans
+		if maid_cloth=1:view 'images/nigma/gor/hotel/work/maid/maid.cloth'+rand(0,5)+'.jpg'&pl'You are dressed in maid uniforms'&dynamic $tangans
 	elseif nude = 1 and tanga = 1:
 		view 'images/ode/nude.jpg'
 		pl'You only panties'
@@ -979,6 +990,12 @@ $objclothes = {
 		view 'images/ode/nude1.jpg'
 		pl'You do not wear.'	
 	end
+}
+
+$tangans = {
+    elseif tanga = 0:
+        pl'You no panties'
+    end
 }
 
 $objtattoos = {

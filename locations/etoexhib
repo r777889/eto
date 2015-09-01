@@ -894,12 +894,19 @@ if $ARGS[0] = 'pos23':
 
 	temp = RAND(1,100)
 	if temp >= 90:
-		cls
+		cla
+		*clr
 		horny += 10
 		gs'stat'
 
 		'<center><img src="images/etogame/ptu_korr1.jpg"></center>'
 		'One of the students, He is sitting on the windowsill. You struck by her revealing outfits and cheeky behavior.'
+		act 'Wink':
+		    if zaigras = 0:set zaigras = 1
+		    zaigra += 1
+		    gt'etoexhib','pos23'
+
+		end
 
 		act 'Further':gt'etoexhib','pos23'
 	end
@@ -952,7 +959,7 @@ if $ARGS[0] = 'pos24tk':
 		act 'Escape':gt'etoexhib','pos24'
 	}
 
-    act 'Logout':gt'etoexhib','pos24'
+
 	act 'Lie down on the couch':
 		cla
 		minut += 30
@@ -969,7 +976,7 @@ if $ARGS[0] = 'pos24tk':
 	
 	    if hour >= 9 and hour <= 12 and workPTU > 2:
         temp = RAND(1,100)
-        if temp >= 90:
+        if temp >= 80:
 	    cla
 	    *clr
 	    minut += 60
@@ -979,10 +986,11 @@ if $ARGS[0] = 'pos24tk':
 	    'You are approached by a student and asked you to work out with her.'
 		act 'Do':gt'etoexhib','pos24tk'
 	end
+	end
 
-   	if hour >= 14 and hour <= 15 or hour >= 16 and hour <= 18:
+   	if hour >= 14 and hour <= 16:
         temp = RAND(1,100)
-        if temp >= 95:
+        if temp >= 90:
 	   	    cls
 		    minut += 6
 		    manna -= 10
@@ -992,7 +1000,7 @@ if $ARGS[0] = 'pos24tk':
 		    'Svetlana, you go where? You know in General, what is happening now in your class, you are obliged now to be?'
 		    'And I can tell you, there confusion, walking and, pardon the expression, Orgy.'	
 		    'Go immediately to the class calm and spend the remaining time of a lesson though as expected.'
-		    elseif DOM < SUB and izvad = 0:
+		    if SUB > DOM and izvad = 0:
 				cla
 				*clr
 				minut = minut + 5
@@ -1001,15 +1009,15 @@ if $ARGS[0] = 'pos24tk':
 				'You are trying to confused and vaguely justified, on the director with undisguised smile looking at you.'
 				act 'Further':dynamic $prositdirizv
 			end	
-			elseif DOM > SUB and izvad = 0:
+			if DOM > SUB and izvad = 0:
 				cla
 				*clr
 				minut = minut + 5
+			    teachlevel -= 2
 				gs'stat'
 				'<center><img src="images/etogame/ptu_angdir.jpg"></center>'
-				'Do you agree with his mistake, speak, that in the future will not happen again .'
-				act 'Escape':gt'etoexhib','pos24' & teachlevel -= 3
-				exit
+				'You agree with my error, say, that in the future this will not happen again  .'
+			    act 'Escape':gt'etoexhib','pos24'
 			end		
 		end	
 	end
@@ -1026,7 +1034,7 @@ if $ARGS[0] = 'pos24tk':
 		    act 'Check tests':gt'etoexhib','pos24tk'
 		end
 	end
-
+	
 	if hour >= 9 and hour <= 12:
 		temp = RAND(1,100)
 		if temp >= 90:
@@ -1041,7 +1049,7 @@ if $ARGS[0] = 'pos24tk':
 		end
 	end
 
-	act 'In the corridor':gt'etoexhib','pos24'
+	act 'Logout':gt'etoexhib','pos24'
 end
 
 if $ARGS[0] = 'pos25':
@@ -1531,9 +1539,24 @@ if $ARGS[0] = 'pos39':
 	'<center><img src="images/etogame/ptu_toilet_w.jpg"></center>'
 	'Toilet, which in theory, Teachers can use only.'
 
-	if tanga = 1:
-		act 'Remove underwear':tanga = 0 & gt $locM,$metkaM
-	end
+	if zaigras = 1 and zaigra >= 10:'You hear a discreet knock at the door.'
+
+	
+    if tanga = 1:
+        
+        act 'Remove the bottom beleё':
+            tanga = 0
+            gt'etoexhib','pos39'
+        end
+    end
+    
+    if tanga = 0:
+        
+        act 'Wear underwear beleё':
+            tanga = 1
+            gt'etoexhib','pos39'
+        end
+    end
 
 	if tampon > 0 and mesec > 0 and isprok = 0:
 		act 'Change swab':
@@ -1543,9 +1566,10 @@ if $ARGS[0] = 'pos39':
 			isprok = 1
 			minut = minut + 5
 			manna = manna - 5
+		gs'stat'
 			'<center><img src="images/pics/wash3.jpg"></center>'
 			'You have changed the swab.'
-			act 'Finish':gt $locM,$metkaM
+		act 'Finish':'etoexhib','pos39'
 		end
 	end
 

@@ -14,7 +14,7 @@ if $ARGS[0] = 'start':
 	''
 	if ArendHouseSL > 0:'You have <B><<ArendHouseSL>> days</B> rental.' 
 	if BuyHous ! 1 and money >= 6000 and ArendHouseSL = 0: '<a href="exec:GT ''agentned'',''rent''">Rent an apartment in a residential area</a>'
-	if BuyHous ! 1 and money >= 6000 and ArendHouseSL = 0: '<a href="exec:GT ''agentned'',''rent2''">Rent an apartment in the old town</a>'
+	if BuyHous ! 1 and money >= 6000 and ArendHouseSL = 0 and arnksg = 1: '<a href="exec:GT ''agentned'',''rent2''">Rent an apartment in the old town</a>'
 	if karta >= 2000000 and BuyHous < 1 or karta >= 2000000 and BuyHous > 1:'<a href="exec:GT ''agentned'',''buy''">To buy an apartment</a> for 2 million. rubles.'
 	if BuyHous = 1 and housr = 1:'<a href="exec:GT ''agentned'',''sell''">Sell ​​apartment</a> for 1 million. rubles.'
 	if karta >= 30000 and dachaest = 0:'<a href="exec:GT ''agentned'',''buy_dacha''">Buy cottage</a> for 30 th.RUB.'

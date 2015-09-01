@@ -80,7 +80,9 @@ if hour > 6 and hour < 23 and month >= 5 and month <= 10:
 	act 'Crouch on the bench':
 		cla
        	*clr
-        '<center><img src="images/lmps/сидит.jpg"></center>'
+       	gs'time'
+       	gs'stat'
+        '<center><img src="images/lmps/�?идит.jpg"></center>'
 		waiting = input ("How many minutes of sitting? (Not more 120 minutes)")
 		if alco > 0:
             act 'Sleep on a bench':
@@ -91,7 +93,8 @@ if hour > 6 and hour < 23 and month >= 5 and month <= 10:
 		        InSleep = 1
 		        cloth_vid = 0
 		        if tanga = 1:tanga = 0
-                '<center><img src="images/lmps/спитл.jpg"></center>'
+		        gs'time'
+                '<center><img src="images/lmps/�?питл.jpg"></center>'
         
                 if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
         
@@ -126,9 +129,14 @@ end
 act 'Take a walk 15 minutes':
 	cla
 	*clr
+	gs'stat'
 	minut = minut + 15
 	place = 1
 	Frend_num = 0
+	gs'stat'
+	gs'time'
+	
+
 	gt'placer'
 end
 
@@ -140,6 +148,7 @@ if hour >= 8 and hour < 22:
 		money = money + 50
 		manna = manna - 5
 		gs'stat'
+		gs'time'
 
 		'<center><img src="images/pic/flaer.jpg"></center>'
 		'You are handed out flyers for an hour park visitors. Then you got 10 rubles.'
@@ -158,6 +167,7 @@ if sport > 0 and hour > 5 and hour < 22 and daybegskver ! daystart:
 		sweat += 2
 		daybegskver = daystart
 		gs'stat'
+		gs'time'
 
 		'<center><img src="images/pic/parkbeg.jpg"></center>'
 		'You are within an hour running around the square'

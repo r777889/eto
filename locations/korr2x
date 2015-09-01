@@ -15,7 +15,22 @@ act 'The Hall':
 	gt'sitr2x'
 end
 
-act '<font color = maroon>Outside</font>':gt'liamel'
+act '<b><font color = maroon>OUTSIDE</font></b>':
+	cls
+	if sick <= 72 and nude = 0:
+		xgt'liamel'
+	elseif nude = 0:
+		'<b><font color = red>YOU TOO MUCH THAT sick to walk down the street.</font></b>'
+		xgt $curloc
+	else
+		'<b><font color = red>You need to get dressed.</font></b>'
+		xgt $curloc
+	end
+end
+
+
+
+
 
 $metkaM = $ARGS[0]
 $locM = $CURLOC
