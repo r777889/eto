@@ -82,7 +82,7 @@ if hour > 6 and hour < 23 and month >= 5 and month <= 10:
        	*clr
        	gs'time'
        	gs'stat'
-        '<center><img src="images/lmps/�?идит.jpg"></center>'
+        '<center><img src="images/lmps/rest.jpg"></center>'
 		waiting = input ("How many minutes of sitting? (Not more 120 minutes)")
 		if alco > 0:
             act 'Sleep on a bench':
@@ -94,7 +94,7 @@ if hour > 6 and hour < 23 and month >= 5 and month <= 10:
 		        cloth_vid = 0
 		        if tanga = 1:tanga = 0
 		        gs'time'
-                '<center><img src="images/lmps/�?питл.jpg"></center>'
+                '<center><img src="images/lmps/sleep.jpg"></center>'
         
                 if mop > 1:mop = 0 & vidageday = vidageday - 1 & 'Makeup smeared in the face, you think, that is harmful to the appearance of sleep with makeup, skin ages faster from this.'
         
